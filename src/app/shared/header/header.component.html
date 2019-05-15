@@ -1,0 +1,3 @@
+<header-logo-component [@loading-animation]=headerLogoAnimationState [animateLogo]=animateLogo></header-logo-component>
+<header-desktop-menu-component *ngIf=!isMobile [@loading-animation]=menuAnimationState></header-desktop-menu-component>
+<header-mobile-menu-icon-component *ngIf=isMobile [@loading-animation]=menuAnimationState (menuClicked)='menuHasBeenClicked($event)'></header-mobile-menu-icon-component>
