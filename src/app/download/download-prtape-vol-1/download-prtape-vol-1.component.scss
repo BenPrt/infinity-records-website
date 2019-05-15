@@ -1,0 +1,101 @@
+@import 'src/app/utils/_styleVariables';
+#content {
+  @media screen and (min-device-width: $mobile-size) {
+    display: flex;
+    margin: 14vh 19vw 16vh 19vw;
+    width: 62vw;
+    height: 70vh;
+  }
+  @media screen and (max-device-width: $mobile-size) {
+  }
+
+  #cover-wrapper {
+    text-align: center;
+    @media screen and (min-device-width: $mobile-size) {
+      width: 30vw;
+    }
+    @media screen and (max-device-width: $mobile-size) {
+    }
+    #cover {
+      border: 1px solid #ddd;
+      -webkit-box-shadow: -5px 10px 14px -2px rgba(0, 0, 0, 0.59);
+      -moz-box-shadow: -5px 10px 14px -2px rgba(0, 0, 0, 0.59);
+      box-shadow: -5px 10px 14px -2px rgba(0, 0, 0, 0.59);
+      @media screen and (min-device-width: $mobile-size) {
+        margin-top: 1vh;
+        height: 60vh;
+        width: 60vh;
+      }
+      @media screen and (max-device-width: $mobile-size) {
+        margin-top : 10vw;
+        height : 70vw;
+        width : 70vw;
+      }
+    }
+  }
+
+  #tracklist {
+    @media screen and (min-device-width: $mobile-size) {
+      margin-left: 5vw;
+      margin-top: 5vh;
+      width: 27vw;
+      height: 48vh;
+    }
+    @media screen and (max-device-width: $mobile-size) {
+      margin-top : 8vw;
+      margin-left : 15vw;
+      padding-left : 3vw;
+      height : 65vw;
+      width : 70vw;
+      p{
+        margin: 1vw;;
+      }
+    }
+    #tracklist-title {
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom : 2vw;
+    }
+    .tracklist-number {
+      margin-left: 5px;
+      margin-right: 2px;
+    }
+  }
+
+  #download-button-wrapper {
+    text-align: center;
+    @media screen and (min-device-width: $mobile-size) {
+      width: 32vw;
+    }
+    @media screen and (max-device-width: $mobile-size) {
+    }
+
+    #download-button {
+      background-color: #181818;
+      color: #fff;
+      text-align: center;
+      border: none;
+      border-radius: 2px;
+      -webkit-box-shadow: -2px 4px 10px -2px rgba(0, 0, 0, 0.59);
+      -moz-box-shadow: -2px 4px 10px -2px rgba(0, 0, 0, 0.59);
+      box-shadow: -2px 4px 10px -2px rgba(0, 0, 0, 0.59);
+      @media screen and (min-device-width: $mobile-size) {
+        width: 180px;
+        height: 60px;
+        cursor: pointer;
+      }
+      @media screen and (max-device-width: $mobile-size) {
+        width : 130px;
+        height : 50px;
+      }
+      p {
+        @media screen and (min-device-width: $mobile-size) {
+          font-size: 18px;
+          color: #eee;
+        }
+        @media screen and (max-device-width: $mobile-size) {
+        }
+      }
+    }
+  }
+}
