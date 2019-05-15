@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class DownloadPrtapeVol1Component {
   constructor() {}
+
+  download(path: string): void {
+    window.open(path, '_blank');
+  }
 }
