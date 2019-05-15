@@ -5,6 +5,9 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { HomePageComponent } from './home/home-page.component';
+import { DownloadPrtapeVol1Component } from './download/download-prtape-vol-1/download-prtape-vol-1.component';
+
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
     swipe: { velocity: 0.4, threshold: 20 }, // override default settings
@@ -12,7 +15,11 @@ export class MyHammerConfig extends HammerGestureConfig {
 }
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+    HomePageComponent,
+    DownloadPrtapeVol1Component,
+  ],
   imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule],
   providers: [
     {
