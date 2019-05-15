@@ -1,33 +1,24 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'mobile-menu-component',
   templateUrl: './mobile-menu.component.html',
-  styleUrls: ['./mobile-menu.component.scss']
+  styleUrls: ['./mobile-menu.component.scss'],
 })
+export class MobileMenuComponent {
+  @Output() arrowClicked: EventEmitter<boolean> = new EventEmitter();
 
-export class MobileMenuComponent implements OnInit {
-  @Output() arrowClicked = new EventEmitter();
+  menuContent = [{ name: 'Accueil', path: '/home' }, { name: 'News', path: '' }, { name: 'Contact', path: '/contact' }];
 
-  menuContent = [
-    { name: 'Accueil', path: '/home' },
-    { name: 'News', path: '' },
-    { name: 'Contact', path: '/contact' }
-  ];
+  constructor(private router: Router) {}
 
-  constructor(private router: Router) { }
-
-  ngOnInit() {
+  hideMenu(): void {
+    this.arrowClicked.emit(true);
   }
 
-  hideMenu() {
-    this.arrowClicked.emit();
-  }
-
-  goTo(item) {
-    this.arrowClicked.emit();
+  goTo(item): void {
+    this.arrowClicked.emit(true);
     this.router.navigate([item.path]);
   }
-
 }

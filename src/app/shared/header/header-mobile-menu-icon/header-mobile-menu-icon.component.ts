@@ -1,21 +1,16 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'header-mobile-menu-icon-component',
   templateUrl: './header-mobile-menu-icon.component.html',
-  styleUrls: ['./header-mobile-menu-icon.component.scss']
+  styleUrls: ['./header-mobile-menu-icon.component.scss'],
 })
-
-export class HeaderMobileMenuIconComponent implements OnInit {
+export class HeaderMobileMenuIconComponent {
   @Output() menuClicked = new EventEmitter();
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
-  displayMenu() {
+  displayMenu(): void {
     this.menuClicked.emit();
   }
-
 }

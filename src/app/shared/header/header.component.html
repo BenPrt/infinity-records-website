@@ -1,3 +1,8 @@
-<header-logo-component [@loading-animation]=headerLogoAnimationState [animateLogo]=animateLogo></header-logo-component>
-<header-desktop-menu-component *ngIf=!isMobile [@loading-animation]=menuAnimationState></header-desktop-menu-component>
-<header-mobile-menu-icon-component *ngIf=isMobile [@loading-animation]=menuAnimationState (menuClicked)='menuHasBeenClicked($event)'></header-mobile-menu-icon-component>
+<header-logo-component [@loading-animation]="headerLogoAnimationState" [animateLogo]="animateLogo"></header-logo-component>
+<header-desktop-menu-component *ngIf="!isMobile; else mobileMenu" [@loading-animation]="menuAnimationState"></header-desktop-menu-component>
+<ng-template #mobileMenu>
+  <header-mobile-menu-icon-component
+    [@loading-animation]="menuAnimationState"
+    (menuClicked)="menuHasBeenClicked($event)"
+  ></header-mobile-menu-icon-component>
+</ng-template>
