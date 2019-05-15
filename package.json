@@ -1,6 +1,6 @@
 {
   "name": "infinity-records-website",
-  "version": "0.9",
+  "version": "0.9.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
