@@ -1,9 +1,13 @@
 import { BrowserModule, HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+
+import { HomePageComponent } from './home/home-page.component';
+import { DownloadPrtapeVol1Component } from './download/download-prtape-vol-1/download-prtape-vol-1.component';
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -12,8 +16,17 @@ export class MyHammerConfig extends HammerGestureConfig {
 }
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule],
+  declarations: [
+    AppComponent,
+    HomePageComponent,
+    DownloadPrtapeVol1Component,
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+  ],
   providers: [
     {
       provide: HAMMER_GESTURE_CONFIG,
