@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
-import { animate, state, style, transition, trigger } from '@angular/animations';
-import { interval, Subscription } from 'rxjs';
 import 'hammerjs';
-
-import { DeviceUtils } from 'src/app/utils/device-utils';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
@@ -13,105 +9,63 @@ import { DeviceUtils } from 'src/app/utils/device-utils';
   animations: [
     trigger('loading-animation', [
       state(
-        'content-toFade',
+        'typo-toFade',
         style({
           opacity: 0,
         }),
       ),
       state(
-        'content-faded',
+        'typo-faded',
         style({
           opacity: 1,
         }),
       ),
-      transition('content-toFade => content-faded', animate('2s ease-in')),
-    ]),
-
-    trigger('displayMenu-animation', [
+      transition('typo-toFade => typo-faded', animate('2s ease-in-out')),
       state(
-        'hiddenMenu',
-        style({
-          left: '-70%',
-        }),
-      ),
-      state(
-        'displayedMenu',
-        style({
-          left: 0,
-        }),
-      ),
-      transition('hiddenMenu <=> displayedMenu', animate('0.4s ease-out')),
-
-      state(
-        'hiddenMenu_overlay',
+        'infos-toFade',
         style({
           opacity: 0,
-          display: 'none',
         }),
       ),
       state(
-        'displayedMenu_overlay',
+        'infos-faded',
         style({
-          opacity: 0.3,
-          display: 'block',
+          opacity: 1,
         }),
       ),
-      transition('hiddenMenu_overlay <=> displayedMenu_overlay', animate('0.4s ease-out')),
+      transition('infos-toFade => infos-faded', animate('1s ease-in-out')),
     ]),
   ],
 })
 export class AppComponent implements OnInit {
-  animateLogo: boolean = true;
-  contentAnimationState: string = 'content-toFade';
-  contentDisplayed: boolean = false;
-  menuDisplayed: boolean = false;
-  displayMenuState: string = 'hiddenMenu';
-  overlayState: string = 'hiddenMenu_overlay';
-  isMobile: boolean = false;
-  routerSubscription: Subscription;
+  typoAnimationState: string = 'typo-toFade';
+  infosAnimationState: string = 'infos-toFade';
 
-  constructor(private location: Location) {}
+  constructor() {}
 
   ngOnInit(): void {
-    this.initMobileStatus();
-    this.initAnimationState();
+    this.initAnimation();
   }
 
-  initMobileStatus(): void {
-    this.isMobile = DeviceUtils.isMobile();
+  initAnimation(): void {
+    this.drawLogo();
+    setTimeout(() => {
+      this.typoAnimationState = 'typo-faded';
+      setTimeout(() => { this.infosAnimationState = 'infos-faded'; }, 1000);
+    }, 3500);
   }
 
-  initAnimationState(): void {
-    const path = this.location.path();
-    if (path !== '/home' && path !== '') {
-      this.animateLogo = false;
-      this.contentAnimationState = 'content-faded';
-      this.contentDisplayed = true;
-    } else {
-      interval(7000).subscribe(() => {
-        this.contentAnimationState = 'content-faded';
-        this.contentDisplayed = true;
-      });
-    }
-  }
-
-  onSwipeLeft(): void {
-    this.hideMenu();
-  }
-
-  onSwipeRight(): void {
-    this.displayMenu();
-  }
-
-  displayMenu(): void {
-    this.menuDisplayed = true;
-    this.displayMenuState = 'displayedMenu';
-    this.overlayState = 'displayedMenu_overlay';
-  }
-
-  hideMenu(): void {
-    this.menuDisplayed = false;
-    this.displayMenuState = 'hiddenMenu';
-    this.overlayState = 'hiddenMenu_overlay';
+  drawLogo(): void {
+    const paths = Array.from(document.querySelectorAll('#header-logos-logo path'));
+    paths.forEach((arrayPath) => {
+      const path = <SVGPathElement>arrayPath;
+      const length = path.getTotalLength();
+      path.style.transition = path.style.webkitTransition = 'none';
+      path.style.strokeDasharray = `${length} ${length}`;
+      path.style.strokeDashoffset = String(length);
+      path.getBoundingClientRect();
+      path.style.transition = path.style.webkitTransition = 'stroke-dashoffset 4s ease-in-out';
+      path.style.strokeDashoffset = '0';
+    });
   }
 }
