@@ -56,7 +56,6 @@
     #tracklist {
       font-size: 14px;
       @media screen and (min-device-width: $tablet-size) {
-        margin-top: 1.5vw;
         width: 70%;
         margin-left: 15%;
         p {
@@ -65,9 +64,8 @@
         }
       }
       @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-        margin-top: 8vw;
+        margin-top: 5vw;
         margin-left: 25vw;
-        padding-left: 5vw;
         width: 50vw;
         p {
           margin: 1vw;
@@ -76,22 +74,49 @@
       @media screen and (max-device-width: $mobile-size) {
         margin-top: 8vw;
         margin-left: 15vw;
-        padding-left: 3vw;
         width: 70vw;
         p {
           margin: 1vw;
         }
       }
+      #release-date {
+        @media screen and (min-device-width: $tablet-size) {
+          font-size: 1.2vw;
+          margin-bottom: 1.5vw;
+        }
+        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+          text-align: center;
+          margin-bottom: 2vw;
+        }
+        @media screen and (max-device-width: $mobile-size) {
+          text-align: center;
+          margin-bottom: 2.5vw;
+        }
+      }
       #tracklist-title {
         font-weight: bold;
+        margin-bottom: 1vw;
         @media screen and (min-device-width: $tablet-size) {
           font-size: 1.3vw;
         }
-        margin-bottom: 1vw;
+        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+          margin-left: 5vw;
+        }
+        @media screen and (max-device-width: $mobile-size) {
+          margin-left: 3vw;
+        }
       }
       .tracklist-number {
-        margin-left: 5px;
         margin-right: 2px;
+        @media screen and (min-device-width: $tablet-size) {
+          margin-top: 2vw;
+        }
+        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+          margin-left: calc(5vw + 5px);
+        }
+        @media screen and (max-device-width: $mobile-size) {
+          margin-left: calc(3vw + 5px);
+        }
       }
     }
 
