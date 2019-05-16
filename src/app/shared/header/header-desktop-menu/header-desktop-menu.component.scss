@@ -1,15 +1,8 @@
-@import "../utils/_styleVariables";
+@import "../../../utils/_styleVariables";
 
 #responsive {
   @media screen and (min-device-width: $mobile-size) {
   }
   @media screen and (max-device-width: $mobile-size) {
   }
-}
-
-#home-content {
-  display: block;
-  margin: 4% auto 0 auto;
-  text-align: center;
-  width: 90%;
 }

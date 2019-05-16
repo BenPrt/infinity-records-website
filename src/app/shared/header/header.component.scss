@@ -1,0 +1,20 @@
+@import "../../utils/_styleVariables";
+
+header-logo-component {
+  display: block;
+  padding-bottom: 4%;
+}
+
+header-desktop-menu-component {
+  display: block;
+  text-align: center;
+  margin-top: 2%;
+  opacity: 0;
+}
+
+header-mobile-menu-icon-component {
+  display: block;
+  text-align: center;
+  margin-top: 2%;
+  opacity: 0;
+}
