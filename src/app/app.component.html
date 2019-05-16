@@ -1,12 +1,1 @@
-<div id="menu-layer" *ngIf="isMobile" [@displayMenu-animation]="displayMenuState">
-  <mobile-menu-component (arrowClicked)="hideMenu()" (swipeleft)="onSwipeLeft()"></mobile-menu-component>
-</div>
-
-<div id="overlay-layer" [@displayMenu-animation]="overlayState" (click)="hideMenu()" (swipeleft)="onSwipeLeft()"></div>
-
-<div id="front-layer" [ngClass]="{ blur: menuDisplayed }" (swiperight)="onSwipeRight()">
-  <header-component [animateLogo]="animateLogo" (menuClicked)="displayMenu()"></header-component>
-  <div id="page-content" *ngIf="contentDisplayed" [@loading-animation]="contentAnimationState">
-    <router-outlet> </router-outlet>
-  </div>
-</div>
+<router-outlet></router-outlet>

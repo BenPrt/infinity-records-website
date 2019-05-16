@@ -1,15 +1,47 @@
-@import "../utils/_styleVariables";
+@import 'src/app/utils/_styleVariables';
 
-#responsive {
+#header-logos-logo {
+  width: 100%;
+  height: 100%;
+}
+
+#header-logos-logoContainer {
+  height: auto;
+  display: block;
+  margin: 0 auto 0 auto;
   @media screen and (min-device-width: $mobile-size) {
+    width: 12%;
+    margin-top : 15vh;
   }
   @media screen and (max-device-width: $mobile-size) {
+    width: 40%;
+    margin-top: 25vh;
   }
 }
 
-#home-content {
-  display: block;
-  margin: 4% auto 0 auto;
+#typo-container{
+  width : 100%;
   text-align: center;
-  width: 90%;
+}
+
+#header-logos-typo {
+  @media screen and (min-device-width: $mobile-size) {
+    margin-top : 4vh;
+    width: 50%;
+  }
+  @media screen and (max-device-width: $mobile-size) {
+    margin-top : 3vh;
+    width: 95%;
+  }
+}
+
+#more-infos-text {
+  width: 100%;
+  text-align: center;
+  @media screen and (min-device-width: $mobile-size) {
+    margin-top : 10vh;
+  }
+  @media screen and (max-device-width: $mobile-size) {
+    margin-top : 5vh;
+  }
 }

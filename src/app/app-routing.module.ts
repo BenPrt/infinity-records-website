@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomePageComponent } from './home/home-page.component';
-import { ContactPageComponent } from './contact/contact-page.component';
+import { DownloadPrtapeVol1Component } from './download/download-prtape-vol-1/download-prtape-vol-1.component';
+import { DownloadPrtapeVol2Component } from './download/download-prtape-vol-2/download-prtape-vol-2.component';
 
 const routes: Routes = [
   {
@@ -15,8 +16,12 @@ const routes: Routes = [
     component: HomePageComponent,
   },
   {
-    path: 'contact',
-    component: ContactPageComponent,
+    path: 'download-prtape-vol-1',
+    component: DownloadPrtapeVol1Component,
+  },
+  {
+    path: 'download-prtape-vol-2',
+    component: DownloadPrtapeVol2Component,
   },
 ];
 

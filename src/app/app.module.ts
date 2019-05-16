@@ -1,18 +1,14 @@
 import { BrowserModule, HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 
 import { HomePageComponent } from './home/home-page.component';
-import { ContactPageComponent } from './contact/contact-page.component';
-
-import { HeaderComponent } from './shared/header/header.component';
-import { HeaderLogoComponent } from './shared/header/header-logo/header-logo.component';
-import { HeaderDesktopMenuComponent } from './shared/header/header-desktop-menu/header-desktop-menu.component';
-import { HeaderMobileMenuIconComponent } from './shared/header/header-mobile-menu-icon/header-mobile-menu-icon.component';
-import { MobileMenuComponent } from './shared/mobile-menu/mobile-menu.component';
-import { AppRoutingModule } from './app-routing.module';
+import { DownloadPrtapeVol1Component } from './download/download-prtape-vol-1/download-prtape-vol-1.component';
+import { DownloadPrtapeVol2Component } from './download/download-prtape-vol-2/download-prtape-vol-2.component';
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -24,14 +20,15 @@ export class MyHammerConfig extends HammerGestureConfig {
   declarations: [
     AppComponent,
     HomePageComponent,
-    ContactPageComponent,
-    HeaderComponent,
-    HeaderLogoComponent,
-    HeaderDesktopMenuComponent,
-    HeaderMobileMenuIconComponent,
-    MobileMenuComponent,
+    DownloadPrtapeVol1Component,
+    DownloadPrtapeVol2Component,
   ],
-  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+  ],
   providers: [
     {
       provide: HAMMER_GESTURE_CONFIG,
