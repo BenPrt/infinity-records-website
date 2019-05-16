@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { HomePageComponent } from './home/home-page.component';
 import { DownloadPrtapeVol1Component } from './download/download-prtape-vol-1/download-prtape-vol-1.component';
+import { DownloadPrtapeVol2Component } from './download/download-prtape-vol-2/download-prtape-vol-2.component';
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -20,6 +21,7 @@ export class MyHammerConfig extends HammerGestureConfig {
     AppComponent,
     HomePageComponent,
     DownloadPrtapeVol1Component,
+    DownloadPrtapeVol2Component,
   ],
   imports: [
     BrowserModule,
