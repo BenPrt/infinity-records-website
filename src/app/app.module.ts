@@ -2,6 +2,8 @@ import { BrowserModule, HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angu
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgxCaptchaModule } from 'ngx-captcha';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +20,8 @@ import { HeaderLogoComponent } from './shared/header/header-logo/header-logo.com
 import { HeaderDesktopMenuComponent } from './shared/header/header-desktop-menu/header-desktop-menu.component';
 import { HeaderMobileMenuIconComponent } from './shared/header/header-mobile-menu-icon/header-mobile-menu-icon.component';
 import { MobileMenuComponent } from './shared/mobile-menu/mobile-menu.component';
+import { ContactFormComponent } from './contact/contact-form/contact-form.component';
+import { ContactService } from './service/contact.service';
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -39,12 +43,15 @@ export class MyHammerConfig extends HammerGestureConfig {
     HeaderDesktopMenuComponent,
     HeaderMobileMenuIconComponent,
     MobileMenuComponent,
+    ContactFormComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    NgxCaptchaModule,
   ],
   providers: [
     {
