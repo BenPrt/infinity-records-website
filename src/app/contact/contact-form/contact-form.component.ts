@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { ContactService } from 'src/app/service/contact.service';
 import { Email } from 'src/app/models/e-mail';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-contact-form',
@@ -10,8 +11,8 @@ import { Email } from 'src/app/models/e-mail';
   animations: [],
 })
 export class ContactFormComponent implements OnInit {
-  protected contactFormGroup: FormGroup;
-  recaptchaToken: string = '6LeZs6QUAAAAACihintSSAc_48B3Llh3kclMBFAV';
+  contactFormGroup: FormGroup;
+  recaptchaToken: string = environment.contactFormRecaptchaKey;
 
   constructor(private formBuilder: FormBuilder, private contactService: ContactService) {}
 
