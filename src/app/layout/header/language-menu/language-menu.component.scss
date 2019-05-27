@@ -1,0 +1,73 @@
+@import 'src/app/utils/_styleVariables';
+
+#current-language {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+
+  #current-language-label {
+    display: inline-block;
+    margin-right: 12px;
+    font-weight: bold;
+  }
+  #current-language-arrow {
+    display: inline-block;
+  }
+}
+
+#selection-menu-wrapper {
+  position: absolute;
+  margin-top: 7px;
+  margin-left : 15px;
+  width: 152px;
+  &.french{
+    margin-left : 23px;
+  }
+  #selection-menu-roof {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #selection-menu-content {
+    background-color: $black;
+    color: $white;
+    padding: 12px 24px;
+  }
+
+  #selection-menu-title {
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .selection-menu-item {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $dark-grey;
+    cursor: pointer;
+
+    .selection-menu-item-icon-wrapper {
+      width: 28px;
+      .selection-menu-item-icon {
+        display: inline-block;
+        margin-right: 4px;
+      }
+    }
+
+    .selection-menu-item-label {
+      display: inline-block;
+      font-size: 16px;
+    }
+    .selected {
+      color: $gold;
+    }
+  }
+
+  .selection-menu-item:last-child {
+    border-bottom: none;
+  }
+}

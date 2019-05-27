@@ -1,6 +1,6 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Subscription } from 'rxjs';
+import { Subscription, Observable, of } from 'rxjs';
 
 export function translationFactoryResources(translationService: TranslationService) {
   return () => {
@@ -17,15 +17,25 @@ export function translationFactoryResources(translationService: TranslationServi
 })
 export class TranslationService {
   translations: any;
+  currentLanguage: string = 'en';
   frLanguagesArray: string[] = ['fr', 'fr-FR', 'fr-BE', 'fr-CA', 'fr-LU', 'fr-MC', 'fr-CH'];
-  public resourcesLoaded = new EventEmitter<boolean>();
+  resourcesLoaded: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor(private http: HttpClient) {
     if (this.frLanguagesArray.indexOf(window.navigator.language) !== -1) {
-      this.getTranslationFile('fr');
+      this.setCurrentLanguage('fr');
     } else {
-      this.getTranslationFile('en');
+      this.setCurrentLanguage('en');
     }
+  }
+
+  getCurrentLanguage(): string {
+    return this.currentLanguage;
+  }
+
+  setCurrentLanguage(languageCode: string): void {
+    this.currentLanguage = languageCode;
+    this.getTranslationFile(languageCode);
   }
 
   translate(key: string): string {

@@ -1,3 +1,7 @@
 {
-    "HOME": "Home"
+	"LANGUAGE": "LANGUAGE",
+  	"FRENCH_LANGUAGE": "Français",
+	"ENGLISH_LANGUAGE": "English",
+
+	"SOCIAL_MEDIA" : "Social Media"
 }

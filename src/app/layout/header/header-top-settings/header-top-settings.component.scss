@@ -1,0 +1,13 @@
+@import "src/app/utils/_styleVariables";
+
+:host{
+  width : 100vw;
+  height : 68px;
+}
+
+#line-container{
+  padding : 32px 70px 0px 70px;
+  width : calc(100% - 140px);
+  display : flex;
+  justify-content: space-between;
+}

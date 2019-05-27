@@ -1,9 +1,5 @@
-import { BrowserModule, HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { NgModule, APP_INITIALIZER } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
-import { NgxCaptchaModule } from 'ngx-captcha';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -18,13 +14,11 @@ import { DownloadPrtapeVol2Component } from './download/download-prtape-vol-2/do
 import { ContactPageComponent } from './contact/contact-page.component';
 
 // Elements Components Import
-import { HeaderComponent } from './shared/header/header.component';
-import { HeaderLogoComponent } from './shared/header/header-logo/header-logo.component';
-import { HeaderDesktopMenuComponent } from './shared/header/header-desktop-menu/header-desktop-menu.component';
-import { HeaderMobileMenuIconComponent } from './shared/header/header-mobile-menu-icon/header-mobile-menu-icon.component';
-import { MobileMenuComponent } from './shared/mobile-menu/mobile-menu.component';
 import { ContactFormComponent } from './contact/contact-form/contact-form.component';
 import { TranslationPipe } from './shared/pipes/translation.pipe';
+import { LayoutModule } from './layout/layout.module';
+import { MobileMenuComponent } from './shared/mobile-menu/mobile-menu.component';
+import { AngularModule } from './angular.module';
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -41,22 +35,13 @@ export class MyHammerConfig extends HammerGestureConfig {
     DownloadPrtapeVol1Component,
     DownloadPrtapeVol2Component,
     // Elements Components
-    HeaderComponent,
-    HeaderLogoComponent,
-    HeaderDesktopMenuComponent,
-    HeaderMobileMenuIconComponent,
-    MobileMenuComponent,
     ContactFormComponent,
-    // Pipes
-    TranslationPipe,
+    MobileMenuComponent,
   ],
   imports: [
-    BrowserModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
     AppRoutingModule,
-    ReactiveFormsModule,
-    NgxCaptchaModule,
+    AngularModule,
+    LayoutModule,
   ],
   providers: [
     {

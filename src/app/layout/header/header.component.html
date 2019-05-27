@@ -1,0 +1,5 @@
+<header-desktop-menu-component *ngIf="!isMobile; else mobileHeader"></header-desktop-menu-component>
+
+<ng-template #mobileHeader>
+  <header-mobile-menu-component (menuClicked)="menuHasBeenClicked($event)"></header-mobile-menu-component>
+</ng-template>

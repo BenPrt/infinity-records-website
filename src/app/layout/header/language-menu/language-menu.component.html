@@ -1,0 +1,24 @@
+<div id="current-language" (click)="toggleMenu($event)">
+  <p id="current-language-label">{{ currentLanguage.label | translation }}</p>
+  <img id="current-language-arrow" [@arrowRotation]="arrowState" alt="arrow down icon" src="assets/icons/arrow_down.svg" />
+</div>
+
+<div id="selection-menu-wrapper" *ngIf="menuIsDisplayed" [@displayMenu] [ngClass]="{ french: currentLanguage.code === 'fr' }">
+  <img id="selection-menu-roof" alt="tootltip roof" src="assets/icons/tooltip-roof_black.svg" />
+  <div id="selection-menu-content">
+    <p id="selection-menu-title">{{ 'LANGUAGE' | translation }}</p>
+    <div class="selection-menu-item" *ngFor="let language of languageList" (click)="selectLanguage(language)">
+      <div class="selection-menu-item-icon-wrapper">
+        <img
+          class="selection-menu-item-icon"
+          *ngIf="isSelected(language)"
+          alt="Check Icon"
+          src="assets/icons/check_gold.svg"
+        />
+      </div>
+      <p class="selection-menu-item-label" [ngClass]="{ selected: isSelected(language) }">
+        {{ language.label | translation }}
+      </p>
+    </div>
+  </div>
+</div>
