@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
-import { ContactService } from 'src/app/service/contact.service';
+import { ContactService } from 'src/app/shared/services/contact.service';
 import { Email } from 'src/app/models/e-mail';
 import { environment } from 'src/environments/environment.prod';
 
