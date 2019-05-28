@@ -1,5 +1,10 @@
 @import "src/app/utils/_styleVariables";
 
+#page-content{
+  width : 100vw;
+  border-top: 1px solid $light-grey;
+}
+
 .blur {
   filter: blur(4px);
 }

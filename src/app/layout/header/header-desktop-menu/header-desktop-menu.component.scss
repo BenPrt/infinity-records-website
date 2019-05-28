@@ -1,9 +1,13 @@
 @import 'src/app/utils/_styleVariables';
 
+#desktop-settings-wrapper{
+  width: 100vw;
+  height: 68px;
+}
+
 #menu-wrapper {
   width: 100vw;
   height: 204px;
-  border-bottom: 1px solid $light-grey;
 
   #menu-container {
     width: 1300px;
@@ -11,8 +15,8 @@
     padding-top: 32px;
     margin-left: calc((100vw - 1300px) / 2);
     display: flex;
-    justify-content: space-between;
-    align-content: center;
+    justify-content: center;
+    align-items: center;
 
     #menu-left-part,
     #menu-right-part {
@@ -36,7 +40,6 @@
       }
       .selected {
         font-weight: bold;
-
       }
 
       #menu-indicator {
@@ -52,6 +55,13 @@
 
     #menu-logo {
       width: 300px;
+      text-align : center;
+
+      #menu-logo-typo{
+        user-select : none;
+        margin-left : 5px;
+        margin-top : 9px;
+      }
     }
   }
 }

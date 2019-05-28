@@ -1,23 +1,26 @@
-<ng-container *ngIf='!reloading'>
-<ng-container *ngIf="isMobile; else desktopVersion">
-<div id="menu-layer" >
-  <mobile-menu-component (arrowClicked)="hideMenu()" (swipeleft)="hideMenu()"></mobile-menu-component>
-</div>
+<ng-container *ngIf="!reloading">
+  <ng-container *ngIf="isMobile; else desktopVersion">
+    <div id="menu-layer">
+      <mobile-menu-component (arrowClicked)="hideMenu()" (swipeleft)="hideMenu()"></mobile-menu-component>
+    </div>
 
-<div id="overlay-layer" (click)="hideMenu()" (swipeleft)="hideMenu()"></div>
+    <div id="overlay-layer" (click)="hideMenu()" (swipeleft)="hideMenu()"></div>
 
-<div id="front-layer" [ngClass]="{ blur: menuDisplayed }" (swiperight)="displayMenu()">
-  <header-component (menuClicked)="displayMenu()"></header-component>
-  <div id="page-content" *ngIf="contentDisplayed">
-    <router-outlet> </router-outlet>
-  </div>
-</div>
-</ng-container>
+    <div id="front-layer" [ngClass]="{ blur: mobileMenuIsDisplayed }" (swiperight)="displayMenu()">
+      <div id="page-content" *ngIf="contentIsDisplayed">
+        <router-outlet> </router-outlet>
+      </div>
+    </div>
+  </ng-container>
 
-<ng-template #desktopVersion>
-  <header-component ></header-component>
-  <div id="page-content">
-    <router-outlet> </router-outlet>
-  </div>
-</ng-template>
+  <ng-template #desktopVersion>
+    <header-desktop-menu-component
+      [scaleState]="scaleState"
+      [typoState]="typoState"
+      [menuIsDisplayed]="menuIsDisplayed"
+    ></header-desktop-menu-component>
+    <div id="page-content" [@contentFade] *ngIf="contentIsDisplayed">
+      <router-outlet> </router-outlet>
+    </div>
+  </ng-template>
 </ng-container>

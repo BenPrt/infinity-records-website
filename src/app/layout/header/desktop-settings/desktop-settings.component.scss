@@ -19,6 +19,7 @@
 
     #social-media-title{
       margin-right : 16px;
+      user-select: none;
     }
 
     #social-media-separator{
@@ -29,8 +30,11 @@
       background-color : $gold;
     }
 
-    .social-media-icons{
+    .social-media-link{
+      user-select : none;
+      .social-media-icons{
       margin-right : 4px;
+    }
     }
   }
 }
