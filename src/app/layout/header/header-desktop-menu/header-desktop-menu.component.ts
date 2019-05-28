@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'header-desktop-menu-component',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./header-desktop-menu.component.scss'],
 })
 export class HeaderDesktopMenuComponent {
-  constructor() {}
+  constructor(private location: Location) {}
+
+  isPageActive(page: string): boolean {
+    if (this.location.path() === `/${page}`) {
+      return true;
+    }
+    return false;
+  }
 }

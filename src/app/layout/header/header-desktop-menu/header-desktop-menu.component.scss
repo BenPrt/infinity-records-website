@@ -1,8 +1,56 @@
-@import "../../../utils/_styleVariables";
+@import 'src/app/utils/_styleVariables';
 
-#responsive {
-  @media screen and (min-device-width: $mobile-size) {
-  }
-  @media screen and (max-device-width: $mobile-size) {
+#menu-wrapper {
+  width: 100vw;
+  height: 204px;
+  border-bottom: 1px solid $light-grey;
+
+  #menu-container {
+    width: 1300px;
+    height: 116px;
+    padding-top: 32px;
+    margin-left: calc((100vw - 1300px) / 2);
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+    #menu-left-part,
+    #menu-right-part {
+      width: 500px;
+      height: 116px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .menu-item {
+      display: flex;
+      flex-direction: column;
+      .menu-link {
+        cursor: pointer;
+        user-select: none;
+        text-decoration: none;
+        font-size: 20px;
+        color: $black;
+        letter-spacing: 3px;
+      }
+      .selected {
+        font-weight: bold;
+        margin-top: 13px;
+      }
+
+      #menu-indicator {
+        margin: 9px 0 0 0;
+        align-self: flex-end;
+        width: 72px;
+        height: 4px;
+        background-color: $gold;
+        border: none;
+      }
+    }
+
+    #menu-logo {
+      width: 300px;
+    }
   }
 }

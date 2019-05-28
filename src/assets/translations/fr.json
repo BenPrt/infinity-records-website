@@ -3,5 +3,10 @@
 	"FRENCH_LANGUAGE": "Français",
 	"ENGLISH_LANGUAGE": "English",
 
-    "SOCIAL_MEDIA": "Réseaux sociaux"
+    "SOCIAL_MEDIA": "Réseaux sociaux",
+	
+	"HOME" : "ACCUEIL",
+	"LABEL" : "LE LABEL",
+	"ARTISTS" : "LES ARTISTES",
+	"MERCH" : "MERCH"
 }

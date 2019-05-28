@@ -4,21 +4,22 @@ import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-// Services Import
+// Translation service Import
 import { TranslationService, translationFactoryResources } from './shared/services/translation.service';
 
-// Pages Components Import
-import { HomePageComponent } from './home/home-page.component';
-import { DownloadPrtapeVol1Component } from './download/download-prtape-vol-1/download-prtape-vol-1.component';
-import { DownloadPrtapeVol2Component } from './download/download-prtape-vol-2/download-prtape-vol-2.component';
-import { ContactPageComponent } from './contact/contact-page.component';
+// Modules Import
+import { AngularModule } from './angular.module';
+import { LayoutModule } from './layout/layout.module';
+import { HomeModule } from './home-page/home.module';
+import { LabelModule } from './label-page/label.module';
+import { ArtistsModule } from './artists-page/artists.module';
+import { MerchModule } from './merch-page/merch.module';
+import { DownloadModule } from './download-pages/download.module';
 
 // Elements Components Import
 import { ContactFormComponent } from './contact/contact-form/contact-form.component';
-import { TranslationPipe } from './shared/pipes/translation.pipe';
-import { LayoutModule } from './layout/layout.module';
 import { MobileMenuComponent } from './shared/mobile-menu/mobile-menu.component';
-import { AngularModule } from './angular.module';
+import { ContactPageComponent } from './contact/contact-page.component';
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -29,19 +30,20 @@ export class MyHammerConfig extends HammerGestureConfig {
 @NgModule({
   declarations: [
     AppComponent,
-    // Pages Components
-    HomePageComponent,
-    ContactPageComponent,
-    DownloadPrtapeVol1Component,
-    DownloadPrtapeVol2Component,
     // Elements Components
     ContactFormComponent,
     MobileMenuComponent,
+    ContactPageComponent,
   ],
   imports: [
     AppRoutingModule,
     AngularModule,
     LayoutModule,
+    HomeModule,
+    LabelModule,
+    ArtistsModule,
+    MerchModule,
+    DownloadModule,
   ],
   providers: [
     {
