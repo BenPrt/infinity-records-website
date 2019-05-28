@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, HostListener } from '@angular/core';
 import { Location } from '@angular/common';
 import { animate, style, transition, trigger } from '@angular/animations';
 import 'hammerjs';
@@ -11,9 +11,7 @@ import { TranslationService } from './shared/services/translation.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   animations: [
-    trigger('contentFade', [
-      transition(':enter', [style({ opacity: 0 }), animate('1s', style({ opacity: 1 }))]),
-    ]),
+    trigger('contentFade', [transition(':enter', [style({ opacity: 0 }), animate('1s', style({ opacity: 1 }))])]),
   ],
 })
 export class AppComponent implements OnInit {
@@ -28,8 +26,15 @@ export class AppComponent implements OnInit {
   typoState: string = 'displayed';
   menuIsDisplayed: boolean = true;
   contentIsDisplayed: boolean = true;
+  // Number of pixels scrolled
+  scrolledAmount: number = 0;
   // Boolean defining if the mobile menu is displayed
   mobileMenuIsDisplayed: boolean = false;
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(event : Event) {
+    this.scrolledAmount = window.pageYOffset;
+  }
 
   constructor(
     private location: Location,

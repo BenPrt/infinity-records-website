@@ -1,11 +1,11 @@
-<div id="desktop-settings-wrapper">
+<div id="desktop-settings-wrapper" [ngStyle]="settingsStyle">
   <div id="desktop-settings-container" [@menuFade] *ngIf="menuIsDisplayed">
     <desktop-settings-component></desktop-settings-component>
   </div>
 </div>
 
-<div id="menu-wrapper">
-  <div id="menu-container">
+<div id="menu-wrapper" [ngStyle]='menuWrapperStyle'>
+  <div id="menu-container" [ngStyle]='menuContainerStyle'>
     <div id="menu-left-part" [@menuFade] *ngIf="menuIsDisplayed">
       <div class="menu-item">
         <a
@@ -95,6 +95,7 @@
           </svg>
       <img
         id="menu-logo-typo"
+        [ngStyle]="menuLogoTypoStyle"
         [@typoFade]="typoState"
         alt="Infinity Records Typo"
         src="assets/img/InfinityRecords_Logo_Typo.svg"

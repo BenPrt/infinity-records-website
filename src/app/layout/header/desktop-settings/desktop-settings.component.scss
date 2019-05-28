@@ -1,12 +1,12 @@
 @import 'src/app/utils/_styleVariables';
 
 :host {
-  width: 100vw;
+  width: 100%;
   height: 68px;
 }
 
 #line-container {
-  margin-left : calc((100vw - 1300px) / 2);
+  margin-left : calc((100% - 1300px) / 2);
   width: 1300px;
   padding-top: 32px;
   display: flex;

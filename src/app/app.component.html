@@ -18,9 +18,11 @@
       [scaleState]="scaleState"
       [typoState]="typoState"
       [menuIsDisplayed]="menuIsDisplayed"
+      [scrolledAmount]="scrolledAmount"
     ></header-desktop-menu-component>
     <div id="page-content" [@contentFade] *ngIf="contentIsDisplayed">
       <router-outlet> </router-outlet>
     </div>
   </ng-template>
+  
 </ng-container>

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { Location } from '@angular/common';
 import { trigger, transition, style, animate, state } from '@angular/animations';
 
@@ -11,9 +11,7 @@ import { trigger, transition, style, animate, state } from '@angular/animations'
       transition(':enter', [style({ opacity: 0 }), animate('300ms', style({ opacity: 1 }))]),
       transition(':leave', [style({ opacity: 1 }), animate('300ms', style({ opacity: 0 }))]),
     ]),
-    trigger('logoFade', [
-      transition(':enter', [style({ opacity: 0 }), animate('800ms', style({ opacity: 1 }))]),
-    ]),
+    trigger('logoFade', [transition(':enter', [style({ opacity: 0 }), animate('800ms', style({ opacity: 1 }))])]),
     trigger('menuFade', [
       transition(':enter', [style({ opacity: 0 }), animate('1s', style({ opacity: 1 }))]),
       transition(':leave', [style({ opacity: 1 }), animate('1s', style({ opacity: 0 }))]),
@@ -24,20 +22,41 @@ import { trigger, transition, style, animate, state } from '@angular/animations'
       transition('hidden <=> displayed', [animate('900ms')]),
     ]),
     trigger('scaleLogo', [
-      state('upscaled', style({ marginTop : '200px', transform: 'scale(2)' })),
-      state('normal', style({ marginTop : '0', transform: 'scale(1)' })),
+      state('upscaled', style({ marginTop: '200px', transform: 'scale(2)' })),
+      state('normal', style({ marginTop: '0', transform: 'scale(1)' })),
       transition('upscaled => normal', [animate('1000ms')]),
     ]),
   ],
 })
-export class HeaderDesktopMenuComponent {
+export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
   constructor(private location: Location) {}
   @Input() menuIsDisplayed: boolean;
   @Input() typoState: string;
   @Input() scaleState: string;
+  @Input() scrolledAmount: number;
+
+  settingsStyle: any = { display: 'block' };
+
+  menuWrapperStyle: any = {
+    position: 'initial',
+    height: '204px',
+  };
+
+  menuContainerStyle: any = {
+    paddingBottom: '32px',
+  };
+
+  menuLogoTypoStyle: any = {
+    height: '17px',
+    marginTop: '9px',
+  };
 
   ngOnInit(): void {
     this.initAnimation();
+  }
+
+  ngOnChanges(): void {
+    this.manageScrollAndClasses(this.scrolledAmount);
   }
 
   initAnimation(): void {
@@ -65,5 +84,107 @@ export class HeaderDesktopMenuComponent {
       path.style.transition = path.style.webkitTransition = 'stroke-dashoffset 4s ease-in-out';
       path.style.strokeDashoffset = '0';
     });
+  }
+
+  manageScrollAndClasses(scroll: number): void {
+    if (scroll > 0 && scroll <= 68) {
+      this.settingsStyle = { display: 'block' };
+      this.menuWrapperStyle = {
+        position: 'initial',
+        height : '204px',
+        borderBottom : 'none',
+      };
+      this.menuContainerStyle = {
+        paddingTop: '32px',
+      };
+      this.menuLogoTypoStyle = {
+        height: '17px',
+        marginTop: '9px',
+      };
+
+    } else if (scroll > 68 && scroll <= 104) {
+      this.settingsStyle = { display: 'none' };
+      this.menuWrapperStyle = {
+        position: 'fixed',
+        height : `calc(204px - (${Math.round(scroll)}px - 68px))`,
+        borderBottom: '1px solid #D8D8D8',
+      };
+      this.menuContainerStyle = {
+        paddingTop: '32px',
+      };
+      this.menuLogoTypoStyle = {
+        height: '17px',
+        marginTop: '9px',
+      };
+
+    } else if (scroll > 104 && scroll <= 124) {
+      this.settingsStyle = { display: 'none' };
+      this.menuWrapperStyle = {
+        position: 'fixed',
+        height : `calc(204px - (${Math.round(scroll)}px - 68px))`,
+        borderBottom: '1px solid #D8D8D8',
+      };
+      this.menuContainerStyle = {
+        paddingTop : '32px',
+      };
+      this.menuLogoTypoStyle = {
+        height: `calc(17px - ((${Math.round(scroll)}px - 104px) / 2))`,
+        marginTop: '9px',
+      };
+
+
+    } else if (scroll > 124 && scroll <= 130) {
+      this.settingsStyle = { display: 'none' };
+      this.menuWrapperStyle = {
+        position: 'fixed',
+        height : `calc(204px - (${Math.round(scroll)}px - 68px))`,
+        borderBottom: '1px solid #D8D8D8',
+      };
+      this.menuContainerStyle = {
+        paddingTop : `calc(32px - (${Math.round(scroll)}px - 124px))`,
+      };
+
+      this.menuLogoTypoStyle = {
+        height: `calc(17px - ((${Math.round(scroll)}px - 104px) / 2))`,
+        marginTop: '9px',
+      };
+
+    } else if (scroll > 130 && scroll <= 156) {
+      this.settingsStyle = { display: 'none' };
+
+      this.menuWrapperStyle = {
+        position: 'fixed',
+        height : `calc(204px - (${Math.round(scroll)}px - 68px))`,
+        borderBottom: '1px solid #D8D8D8',
+      };
+
+      this.menuContainerStyle = {
+        paddingTop : `calc(32px - (${Math.round(scroll)}px - 124px))`,
+      };
+
+      this.menuLogoTypoStyle = {
+        height: '0px',
+        marginTop: '0px',
+        display : 'none',
+      };
+    } else if (scroll > 156) {
+      this.settingsStyle = { display: 'none' };
+
+      this.menuWrapperStyle = {
+        position: 'fixed',
+        borderBottom: '1px solid #D8D8D8',
+        height: '116px',
+      };
+
+      this.menuContainerStyle = {
+        paddingTop: '0px',
+      };
+
+      this.menuLogoTypoStyle = {
+        height: '0px',
+        marginTop: '0px',
+        display : 'none',
+      };
+    }
   }
 }
