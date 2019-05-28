@@ -1,13 +1,36 @@
-@import "src/app/utils/_styleVariables";
+@import 'src/app/utils/_styleVariables';
 
-:host{
-  width : 100vw;
-  height : 68px;
+:host {
+  width: 100vw;
+  height: 68px;
 }
 
-#line-container{
-  padding : 32px 70px 0px 70px;
-  width : calc(100% - 140px);
-  display : flex;
+#line-container {
+  margin-left : calc((100vw - 1300px) / 2);
+  width: 1300px;
+  padding-top: 32px;
+  display: flex;
   justify-content: space-between;
+
+  #social-media-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    #social-media-title{
+      margin-right : 16px;
+    }
+
+    #social-media-separator{
+      width : 80px;
+      height : 2px;
+      border: none;
+      margin : 2px 4px 0px 0px;
+      background-color : $gold;
+    }
+
+    .social-media-icons{
+      margin-right : 4px;
+    }
+  }
 }
