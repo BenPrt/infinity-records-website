@@ -1,13 +1,18 @@
 <ng-container *ngIf="!reloading">
   <ng-container *ngIf="isMobile; else desktopVersion">
-    <header-mobile-menu-component></header-mobile-menu-component>
-    <div id="mobile-page-content" (swipeRight)="openMobileMenu()">
+    <header-mobile-menu-component
+      [scaleState]="scaleState"
+      [typoState]="typoState"
+      [mobileMenuIsDisplayed]="menuIsDisplayed"
+    ></header-mobile-menu-component>
+
+    <div id="mobile-page-content" [@contentFade] *ngIf="contentIsDisplayed" (swipeRight)="openMobileMenu()">
       <router-outlet> </router-outlet>
     </div>
 
     <div
       id="menu-overlay"
-      *ngIf="mobileMenuIsDisplayed"
+      *ngIf="contentIsDisplayed && mobileMenuIsDisplayed"
       [@overlayFade]
       (swipeLeft)="closeMobileMenu()"
       (click)="closeMobileMenu()"

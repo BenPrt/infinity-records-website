@@ -19,9 +19,24 @@
 
   #header-logo-container{
     margin-left : calc(((100% - 124px) /2) - 56px);
+
     #header-logo{
       width : 124px;
       height : 48px;
+      #header-logo-logo{
+        display : block;
+        margin-left : auto;
+        margin-right : auto;
+        height : 35px;
+      }
+      #header-logo-typo{
+        display : block;
+        margin : 5px auto 0px auto;
+        padding-left : 2px;
+        height : 7px;
+      }
     }
   }
+
+
 }
