@@ -5,6 +5,7 @@ import 'hammerjs';
 
 import { DeviceUtils } from 'src/app/utils/device-utils';
 import { TranslationService } from 'src/app/shared/services/translation.service';
+import { MobileMenuEventsService } from './shared/services/mobile-menu-events.service';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,14 @@ import { TranslationService } from 'src/app/shared/services/translation.service'
   styleUrls: ['./app.component.scss'],
   animations: [
     trigger('contentFade', [transition(':enter', [style({ opacity: 0 }), animate('1s', style({ opacity: 1 }))])]),
+    trigger('overlayFade', [
+      transition(':enter', [style({ opacity: '0' }), animate('300ms', style({ opacity: '0.6' }))]),
+      transition(':leave', [style({ opacity: '0.6' }), animate('300ms', style({ opacity: '0' }))]),
+    ]),
+    trigger('mobileMenuFade', [
+      transition(':enter', [style({ left: '-346px' }), animate('300ms', style({ left: '0' }))]),
+      transition(':leave', [style({ left: '0' }), animate('300ms', style({ left: '-346px' }))]),
+    ]),
   ],
 })
 export class AppComponent implements OnInit {
@@ -28,9 +37,11 @@ export class AppComponent implements OnInit {
   contentIsDisplayed: boolean = true;
   // Number of pixels scrolled
   scrolledAmount: number = 0;
+  // Boolean defining if the mobile menu is displayed
+  mobileMenuIsDisplayed: boolean = false;
 
   @HostListener('window:scroll', ['$event'])
-  onWindowScroll(event : Event) {
+  onWindowScroll(event: Event) {
     this.scrolledAmount = window.pageYOffset;
   }
 
@@ -38,12 +49,14 @@ export class AppComponent implements OnInit {
     private location: Location,
     private cd: ChangeDetectorRef,
     private translationService: TranslationService,
+    private mobileMenuService: MobileMenuEventsService,
   ) {}
 
   ngOnInit(): void {
     this.initMobileStatus();
     this.initAnimationState();
-    this.subscribeToLanguageChange();
+    this.initLanguageChangeSubscription();
+    this.initMobileMenuSubscription();
   }
 
   initMobileStatus(): void {
@@ -77,7 +90,7 @@ export class AppComponent implements OnInit {
     }, 5000);
   }
 
-  subscribeToLanguageChange() {
+  initLanguageChangeSubscription(): void {
     this.translationService.resourcesLoaded.subscribe(() => {
       this.reloading = true;
       this.cd.detectChanges();
@@ -88,4 +101,17 @@ export class AppComponent implements OnInit {
     });
   }
 
+  initMobileMenuSubscription(): void {
+    this.mobileMenuService.toggleMobileMenu.subscribe((displayValue: boolean) => {
+      this.mobileMenuIsDisplayed = displayValue;
+    });
+  }
+
+  openMobileMenu():void {
+    this.mobileMenuService.toggleMenu(true);
+  }
+
+  closeMobileMenu():void {
+    this.mobileMenuService.toggleMenu(false);
+  }
 }

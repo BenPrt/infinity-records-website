@@ -18,7 +18,6 @@ import { DownloadModule } from './download-pages/download.module';
 
 // Elements Components Import
 import { ContactFormComponent } from './contact/contact-form/contact-form.component';
-import { MobileMenuComponent } from './shared/mobile-menu/mobile-menu.component';
 import { ContactPageComponent } from './contact/contact-page.component';
 
 export class MyHammerConfig extends HammerGestureConfig {
@@ -32,7 +31,6 @@ export class MyHammerConfig extends HammerGestureConfig {
     AppComponent,
     // Elements Components
     ContactFormComponent,
-    MobileMenuComponent,
     ContactPageComponent,
   ],
   imports: [

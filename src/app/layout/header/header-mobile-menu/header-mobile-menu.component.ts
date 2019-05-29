@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MobileMenuEventsService } from 'src/app/shared/services/mobile-menu-events.service';
 
 @Component({
   selector: 'header-mobile-menu-component',
@@ -6,9 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./header-mobile-menu.component.scss'],
 })
 export class HeaderMobileMenuComponent {
-  constructor() {}
+  constructor(private mobileMenuService: MobileMenuEventsService) {}
 
   openMenu(): void {
-    console.log('open menu');
+    this.mobileMenuService.toggleMenu(true);
   }
 }

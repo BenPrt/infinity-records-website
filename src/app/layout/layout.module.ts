@@ -8,6 +8,7 @@ import { DesktopSettingsComponent } from './header/desktop-settings/desktop-sett
 import { HeaderDesktopMenuComponent } from './header/header-desktop-menu/header-desktop-menu.component';
 import { HeaderMobileMenuComponent } from './header/header-mobile-menu/header-mobile-menu.component';
 import { LanguageMenuComponent } from './header/language-menu/language-menu.component';
+import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 
 @NgModule({
   imports: [CommonModule, AngularModule, RouterModule],
@@ -16,12 +17,14 @@ import { LanguageMenuComponent } from './header/language-menu/language-menu.comp
     DesktopSettingsComponent,
     LanguageMenuComponent,
     HeaderMobileMenuComponent,
+    MobileMenuComponent,
   ],
   exports: [
     HeaderDesktopMenuComponent,
     DesktopSettingsComponent,
     LanguageMenuComponent,
     HeaderMobileMenuComponent,
+    MobileMenuComponent,
   ],
   providers: [],
 })

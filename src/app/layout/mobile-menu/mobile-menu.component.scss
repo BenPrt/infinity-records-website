@@ -1,0 +1,10 @@
+@import 'src/app/utils/_styleVariables';
+:host {
+  width: 346px;
+  height: 100vh;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background-color : $white;
+}
