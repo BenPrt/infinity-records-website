@@ -117,7 +117,7 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
         marginTop: '9px',
       };
 
-    } else if (scroll > 104 && scroll <= 124) {
+    } else if (scroll > 104 && scroll <= 130) {
       this.settingsStyle = { display: 'none' };
       this.menuWrapperStyle = {
         position: 'fixed',
@@ -125,28 +125,11 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
         borderBottom: '1px solid #D8D8D8',
       };
       this.menuContainerStyle = {
-        paddingTop : '32px',
+        paddingTop : `calc(32px - ((${Math.round(scroll)}px - 104px) / 1.625)`,
       };
       this.menuLogoTypoStyle = {
-        height: `calc(17px - ((${Math.round(scroll)}px - 104px) / 2))`,
-        marginTop: '9px',
-      };
-
-
-    } else if (scroll > 124 && scroll <= 130) {
-      this.settingsStyle = { display: 'none' };
-      this.menuWrapperStyle = {
-        position: 'fixed',
-        height : `calc(204px - (${Math.round(scroll)}px - 68px))`,
-        borderBottom: '1px solid #D8D8D8',
-      };
-      this.menuContainerStyle = {
-        paddingTop : `calc(32px - (${Math.round(scroll)}px - 124px))`,
-      };
-
-      this.menuLogoTypoStyle = {
-        height: `calc(17px - ((${Math.round(scroll)}px - 104px) / 2))`,
-        marginTop: '9px',
+        height: `calc(17px - ((${Math.round(scroll)}px - 104px) / 1.53))`,
+        marginTop: `calc(9px - ((${Math.round(scroll)}px - 104px) / 2.88))`,
       };
 
     } else if (scroll > 130 && scroll <= 156) {
@@ -159,7 +142,7 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
       };
 
       this.menuContainerStyle = {
-        paddingTop : `calc(32px - (${Math.round(scroll)}px - 124px))`,
+        paddingTop : `calc(32px - ((${Math.round(scroll)}px - 104px) / 1.625)`,
       };
 
       this.menuLogoTypoStyle = {
