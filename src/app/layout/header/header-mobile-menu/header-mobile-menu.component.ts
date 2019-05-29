@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'header-mobile-menu-component',
@@ -6,11 +6,9 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./header-mobile-menu.component.scss'],
 })
 export class HeaderMobileMenuComponent {
-  @Output() menuClicked = new EventEmitter();
-
   constructor() {}
 
-  displayMenu(): void {
-    this.menuClicked.emit();
+  openMenu(): void {
+    console.log('open menu');
   }
 }

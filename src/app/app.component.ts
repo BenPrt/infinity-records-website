@@ -4,7 +4,7 @@ import { animate, style, transition, trigger } from '@angular/animations';
 import 'hammerjs';
 
 import { DeviceUtils } from 'src/app/utils/device-utils';
-import { TranslationService } from './shared/services/translation.service';
+import { TranslationService } from 'src/app/shared/services/translation.service';
 
 @Component({
   selector: 'app-root',
@@ -28,8 +28,6 @@ export class AppComponent implements OnInit {
   contentIsDisplayed: boolean = true;
   // Number of pixels scrolled
   scrolledAmount: number = 0;
-  // Boolean defining if the mobile menu is displayed
-  mobileMenuIsDisplayed: boolean = false;
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event : Event) {
@@ -90,11 +88,4 @@ export class AppComponent implements OnInit {
     });
   }
 
-  displayMobileMenu(): void {
-    this.mobileMenuIsDisplayed = true;
-  }
-
-  hideMobileMenu(): void {
-    this.mobileMenuIsDisplayed = false;
-  }
 }

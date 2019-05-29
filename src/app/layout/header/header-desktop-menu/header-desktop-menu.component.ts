@@ -91,8 +91,8 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
       this.settingsStyle = { display: 'block' };
       this.menuWrapperStyle = {
         position: 'initial',
-        height : '204px',
-        borderBottom : 'none',
+        height: '204px',
+        borderBottom: 'none',
       };
       this.menuContainerStyle = {
         paddingTop: '32px',
@@ -101,12 +101,11 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
         height: '17px',
         marginTop: '9px',
       };
-
     } else if (scroll > 68 && scroll <= 104) {
       this.settingsStyle = { display: 'none' };
       this.menuWrapperStyle = {
         position: 'fixed',
-        height : `calc(204px - (${Math.round(scroll)}px - 68px))`,
+        height: `calc(204px - (${Math.round(scroll)}px - 68px))`,
         borderBottom: '1px solid #D8D8D8',
       };
       this.menuContainerStyle = {
@@ -116,57 +115,49 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
         height: '17px',
         marginTop: '9px',
       };
-
     } else if (scroll > 104 && scroll <= 130) {
       this.settingsStyle = { display: 'none' };
       this.menuWrapperStyle = {
         position: 'fixed',
-        height : `calc(204px - (${Math.round(scroll)}px - 68px))`,
+        height: `calc(204px - (${Math.round(scroll)}px - 68px))`,
         borderBottom: '1px solid #D8D8D8',
       };
       this.menuContainerStyle = {
-        paddingTop : `calc(32px - ((${Math.round(scroll)}px - 104px) / 1.625)`,
+        paddingTop: `calc(32px - ((${Math.round(scroll)}px - 104px) / 1.625)`,
       };
       this.menuLogoTypoStyle = {
         height: `calc(17px - ((${Math.round(scroll)}px - 104px) / 1.53))`,
         marginTop: `calc(9px - ((${Math.round(scroll)}px - 104px) / 2.88))`,
       };
-
     } else if (scroll > 130 && scroll <= 156) {
       this.settingsStyle = { display: 'none' };
-
       this.menuWrapperStyle = {
         position: 'fixed',
-        height : `calc(204px - (${Math.round(scroll)}px - 68px))`,
+        height: `calc(204px - (${Math.round(scroll)}px - 68px))`,
         borderBottom: '1px solid #D8D8D8',
       };
-
       this.menuContainerStyle = {
-        paddingTop : `calc(32px - ((${Math.round(scroll)}px - 104px) / 1.625)`,
+        paddingTop: `calc(32px - ((${Math.round(scroll)}px - 104px) / 1.625)`,
       };
-
       this.menuLogoTypoStyle = {
         height: '0px',
         marginTop: '0px',
-        display : 'none',
+        display: 'none',
       };
     } else if (scroll > 156) {
       this.settingsStyle = { display: 'none' };
-
       this.menuWrapperStyle = {
         position: 'fixed',
         borderBottom: '1px solid #D8D8D8',
         height: '116px',
       };
-
       this.menuContainerStyle = {
         paddingTop: '0px',
       };
-
       this.menuLogoTypoStyle = {
         height: '0px',
         marginTop: '0px',
-        display : 'none',
+        display: 'none',
       };
     }
   }

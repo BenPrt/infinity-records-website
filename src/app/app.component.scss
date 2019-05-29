@@ -1,6 +1,15 @@
 @import "src/app/utils/_styleVariables";
 
-#page-content{
+#mobile-page-content{
+  margin-top : 81px;
+  width : 100%;
+  height : calc(100vh - 81px);
+  position : fixed;
+  z-index : 0;
+  overflow-y: auto;
+}
+
+#desktop-page-content{
   width : 100%;
   border-top: 1px solid $light-grey;
 }
