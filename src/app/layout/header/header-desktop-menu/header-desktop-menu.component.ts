@@ -7,6 +7,11 @@ import { trigger, transition, style, animate, state } from '@angular/animations'
   templateUrl: './header-desktop-menu.component.html',
   styleUrls: ['./header-desktop-menu.component.scss'],
   animations: [
+    trigger('menuBorderFade', [
+      state('hidden', style({ borderBottom: '1px solid #FFFFFF' })),
+      state('displayed', style({ borderBottom: '1px solid #D8D8D8' })),
+      transition('hidden <=> displayed', [animate('500ms')]),
+    ]),
     trigger('indicatorFade', [
       transition(':enter', [style({ opacity: 0 }), animate('300ms', style({ opacity: 1 }))]),
       transition(':leave', [style({ opacity: 1 }), animate('300ms', style({ opacity: 0 }))]),
@@ -34,6 +39,7 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
   @Input() typoState: string;
   @Input() scaleState: string;
   @Input() scrolledAmount: number;
+  menuBorderState: string = 'displayed';
 
   settingsStyle: any = { display: 'block' };
 
@@ -57,6 +63,7 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
 
   ngOnChanges(): void {
     this.manageScrollAndClasses(this.scrolledAmount);
+    this.menuBorderState = this.menuIsDisplayed ? 'displayed' : 'hidden';
   }
 
   initAnimation(): void {
@@ -87,12 +94,80 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
   }
 
   manageScrollAndClasses(scroll: number): void {
-    if (scroll > 0 && scroll <= 68) {
+    if (document.body.clientHeight < document.body.scrollHeight) {
+      if (scroll > 0 && scroll <= 68) {
+        this.settingsStyle = { display: 'block' };
+        this.menuWrapperStyle = {
+          position: 'initial',
+          height: '204px',
+        };
+        this.menuContainerStyle = {
+          paddingTop: '32px',
+        };
+        this.menuLogoTypoStyle = {
+          height: '17px',
+          marginTop: '9px',
+        };
+      } else if (scroll > 68 && scroll <= 104) {
+        this.settingsStyle = { display: 'none' };
+        this.menuWrapperStyle = {
+          position: 'fixed',
+          height: `calc(204px - (${Math.round(scroll)}px - 68px))`,
+        };
+        this.menuContainerStyle = {
+          paddingTop: '32px',
+        };
+        this.menuLogoTypoStyle = {
+          height: '17px',
+          marginTop: '9px',
+        };
+      } else if (scroll > 104 && scroll <= 130) {
+        this.settingsStyle = { display: 'none' };
+        this.menuWrapperStyle = {
+          position: 'fixed',
+          height: `calc(204px - (${Math.round(scroll)}px - 68px))`,
+        };
+        this.menuContainerStyle = {
+          paddingTop: `calc(32px - ((${Math.round(scroll)}px - 104px) / 1.625)`,
+        };
+        this.menuLogoTypoStyle = {
+          height: `calc(17px - ((${Math.round(scroll)}px - 104px) / 1.53))`,
+          marginTop: `calc(9px - ((${Math.round(scroll)}px - 104px) / 2.88))`,
+        };
+      } else if (scroll > 130 && scroll <= 156) {
+        this.settingsStyle = { display: 'none' };
+        this.menuWrapperStyle = {
+          position: 'fixed',
+          height: `calc(204px - (${Math.round(scroll)}px - 68px))`,
+        };
+        this.menuContainerStyle = {
+          paddingTop: `calc(32px - ((${Math.round(scroll)}px - 104px) / 1.625)`,
+        };
+        this.menuLogoTypoStyle = {
+          height: '0px',
+          marginTop: '0px',
+          display: 'none',
+        };
+      } else if (scroll > 156) {
+        this.settingsStyle = { display: 'none' };
+        this.menuWrapperStyle = {
+          position: 'fixed',
+          height: '116px',
+        };
+        this.menuContainerStyle = {
+          paddingTop: '0px',
+        };
+        this.menuLogoTypoStyle = {
+          height: '0px',
+          marginTop: '0px',
+          display: 'none',
+        };
+      }
+    } else {
       this.settingsStyle = { display: 'block' };
       this.menuWrapperStyle = {
         position: 'initial',
         height: '204px',
-        borderBottom: 'none',
       };
       this.menuContainerStyle = {
         paddingTop: '32px',
@@ -100,64 +175,6 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
       this.menuLogoTypoStyle = {
         height: '17px',
         marginTop: '9px',
-      };
-    } else if (scroll > 68 && scroll <= 104) {
-      this.settingsStyle = { display: 'none' };
-      this.menuWrapperStyle = {
-        position: 'fixed',
-        height: `calc(204px - (${Math.round(scroll)}px - 68px))`,
-        borderBottom: '1px solid #D8D8D8',
-      };
-      this.menuContainerStyle = {
-        paddingTop: '32px',
-      };
-      this.menuLogoTypoStyle = {
-        height: '17px',
-        marginTop: '9px',
-      };
-    } else if (scroll > 104 && scroll <= 130) {
-      this.settingsStyle = { display: 'none' };
-      this.menuWrapperStyle = {
-        position: 'fixed',
-        height: `calc(204px - (${Math.round(scroll)}px - 68px))`,
-        borderBottom: '1px solid #D8D8D8',
-      };
-      this.menuContainerStyle = {
-        paddingTop: `calc(32px - ((${Math.round(scroll)}px - 104px) / 1.625)`,
-      };
-      this.menuLogoTypoStyle = {
-        height: `calc(17px - ((${Math.round(scroll)}px - 104px) / 1.53))`,
-        marginTop: `calc(9px - ((${Math.round(scroll)}px - 104px) / 2.88))`,
-      };
-    } else if (scroll > 130 && scroll <= 156) {
-      this.settingsStyle = { display: 'none' };
-      this.menuWrapperStyle = {
-        position: 'fixed',
-        height: `calc(204px - (${Math.round(scroll)}px - 68px))`,
-        borderBottom: '1px solid #D8D8D8',
-      };
-      this.menuContainerStyle = {
-        paddingTop: `calc(32px - ((${Math.round(scroll)}px - 104px) / 1.625)`,
-      };
-      this.menuLogoTypoStyle = {
-        height: '0px',
-        marginTop: '0px',
-        display: 'none',
-      };
-    } else if (scroll > 156) {
-      this.settingsStyle = { display: 'none' };
-      this.menuWrapperStyle = {
-        position: 'fixed',
-        borderBottom: '1px solid #D8D8D8',
-        height: '116px',
-      };
-      this.menuContainerStyle = {
-        paddingTop: '0px',
-      };
-      this.menuLogoTypoStyle = {
-        height: '0px',
-        marginTop: '0px',
-        display: 'none',
       };
     }
   }

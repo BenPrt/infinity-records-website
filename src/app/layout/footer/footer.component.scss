@@ -1,0 +1,10 @@
+@import 'src/app/utils/_styleVariables';
+
+:host {
+  width: 100%;
+
+  #footer{
+    height: 200px;
+    background-color : $white;
+  }
+}

@@ -1,0 +1,64 @@
+@import 'src/app/utils/_styleVariables';
+
+:host {
+  #contact-form-container {
+    padding-left: calc((100vw - 1300px) / 2);
+    padding-right: calc((100vw - 1300px) / 2);
+    width: 1300px;
+    display: flex;
+    justify-content: space-around;
+    background-color: $black;
+
+    #contact-description {
+      width: 301px;
+      margin-top: 80px;
+      #contact-description-title {
+        color: $white;
+        font-size: 40px;
+      }
+      #contact-description-content {
+        margin-top: 40px;
+        width: 275px;
+        padding-left: 24px;
+        border-left: 2px solid $gold;
+        color: $white;
+        font-size: 16px;
+      }
+    }
+
+    #contact-form {
+      width: 634px;
+      margin-top: 137px;
+      outline: 1px solid blue;
+
+
+      // Field Label Color
+      ::ng-deep .mat-form-field-label {
+        color: $grey;
+      }
+      // Underline when not selected
+      ::ng-deep .mat-form-field-underline {
+        background-color: $grey;
+      }
+      // Error message
+      ::ng-deep .mat-error{
+        color : red;
+      }
+      // Underline on error
+      ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-ripple{
+        background-color : red;
+      }
+      // Label when focused
+      ::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+        color: $gold;
+      }
+      // Underline when focused
+      ::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple{
+        background-color : $gold;
+      }
+      input {
+        color : $white;
+      }
+    }
+  }
+}

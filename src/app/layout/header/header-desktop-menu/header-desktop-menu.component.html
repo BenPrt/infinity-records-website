@@ -4,7 +4,7 @@
   </div>
 </div>
 
-<div id="menu-wrapper" [ngStyle]='menuWrapperStyle'>
+<div id="menu-wrapper" [ngStyle]='menuWrapperStyle' [@menuBorderFade]="menuBorderState">
   <div id="menu-container" [ngStyle]='menuContainerStyle'>
     <div id="menu-left-part" [@menuFade] *ngIf="menuIsDisplayed">
       <div class="menu-item">

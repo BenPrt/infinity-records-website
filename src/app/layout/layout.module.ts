@@ -9,15 +9,20 @@ import { HeaderDesktopMenuComponent } from './header/header-desktop-menu/header-
 import { HeaderMobileMenuComponent } from './header/header-mobile-menu/header-mobile-menu.component';
 import { LanguageMenuComponent } from './header/language-menu/language-menu.component';
 import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
+import { FooterComponent } from './footer/footer.component';
+import { ContactFormComponent } from './footer/contact-form/contact-form.component';
+import { MaterialModule } from 'src/app/material.module';
 
 @NgModule({
-  imports: [CommonModule, AngularModule, RouterModule],
+  imports: [CommonModule, AngularModule, RouterModule, MaterialModule],
   declarations: [
     HeaderDesktopMenuComponent,
     DesktopSettingsComponent,
     LanguageMenuComponent,
     HeaderMobileMenuComponent,
     MobileMenuComponent,
+    FooterComponent,
+    ContactFormComponent,
   ],
   exports: [
     HeaderDesktopMenuComponent,
@@ -25,6 +30,8 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
     LanguageMenuComponent,
     HeaderMobileMenuComponent,
     MobileMenuComponent,
+    FooterComponent,
+    ContactFormComponent,
   ],
   providers: [],
 })

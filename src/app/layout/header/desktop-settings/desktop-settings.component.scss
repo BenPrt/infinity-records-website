@@ -6,35 +6,35 @@
 }
 
 #line-container {
-  margin-left : calc((100% - 1300px) / 2);
+  margin-left: calc((100% - 1300px) / 2);
   width: 1300px;
   padding-top: 32px;
   display: flex;
   justify-content: space-between;
 
-  #social-media-wrapper{
+  #social-media-wrapper {
     display: flex;
     align-items: center;
     justify-content: flex-end;
 
-    #social-media-title{
-      margin-right : 16px;
+    #social-media-title {
+      margin-right: 16px;
       user-select: none;
     }
 
-    #social-media-separator{
-      width : 80px;
-      height : 2px;
+    #social-media-separator {
+      width: 80px;
+      height: 2px;
       border: none;
-      margin : 2px 4px 0px 0px;
-      background-color : $gold;
+      margin: 2px 4px 0px 0px;
+      background-color: $gold;
     }
 
-    .social-media-link{
-      user-select : none;
-      .social-media-icons{
-      margin-right : 4px;
-    }
+    .social-media-link {
+      user-select: none;
+      .social-media-icons {
+        margin-right: 4px;
+      }
     }
   }
 }

@@ -18,8 +18,8 @@ import { MobileMenuEventsService } from './shared/services/mobile-menu-events.se
       transition(':leave', [style({ opacity: '0.6' }), animate('300ms', style({ opacity: '0' }))]),
     ]),
     trigger('mobileMenuFade', [
-      transition(':enter', [style({ left: '-346px' }), animate('300ms', style({ left: '0' }))]),
-      transition(':leave', [style({ left: '0' }), animate('300ms', style({ left: '-346px' }))]),
+      transition(':enter', [style({ left: '-346px' }), animate('350ms', style({ left: '0' }))]),
+      transition(':leave', [style({ left: '0' }), animate('350ms', style({ left: '-346px' }))]),
     ]),
   ],
 })

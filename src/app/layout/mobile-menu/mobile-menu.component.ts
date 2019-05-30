@@ -7,6 +7,9 @@ import { MobileMenuEventsService } from 'src/app/shared/services/mobile-menu-eve
   styleUrls: ['./mobile-menu.component.scss'],
 })
 export class MobileMenuComponent {
+  menuIsDisplayed: boolean;
+  arrowState: string;
+
   constructor(private mobileMenuService: MobileMenuEventsService) {}
 
   closeMenu(): void {

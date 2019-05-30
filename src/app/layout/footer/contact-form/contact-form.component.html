@@ -1,0 +1,57 @@
+<div id="contact-form-container">
+  <div id="contact-description">
+    <p id="contact-description-title">
+      {{ 'CONTACT_TITLE' | translation }}
+    </p>
+    <p id="contact-description-content">
+      {{ 'CONTACT_DESCRIPTION' | translation }}
+    </p>
+  </div>
+
+  <form id="contact-form" [formGroup]="contactFormGroup" (ngSubmit)="submitContactForm()">
+    <mat-form-field>
+      <mat-label>{{ 'NAME' | translation }}</mat-label>
+      <input matInput type="text" formControlName="name" />
+      <mat-error *ngIf="contactFormGroup.controls.name.hasError('required')">
+        {{ 'NAME_REQUIRED' | translation }}
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>{{ 'EMAIL' | translation }}</mat-label>
+      <input matInput type="email" formControlName="address" />
+      <mat-error *ngIf="contactFormGroup.controls.address.hasError('email') && !address.hasError('required')">
+        {{ 'EMAIL_INCORRECT' | translation }}
+      </mat-error>
+      <mat-error *ngIf="contactFormGroup.controls.address.hasError('required')">
+        {{ 'EMAIL_REQUIRED' | translation }}
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>{{ 'MESSAGE' | translation }}</mat-label>
+      <textarea
+        matInput
+        cdkTextareaAutosize
+        #autosize="cdkTextareaAutosize"
+        cdkAutosizeMinRows="1"
+        formControlName="body"
+      ></textarea>
+      <mat-error *ngIf="contactFormGroup.controls.body.hasError('required')">
+        {{ 'MESSAGE_REQUIRED' | translation }}
+      </mat-error>
+    </mat-form-field>
+
+    <ngx-recaptcha2
+      #captchaElem
+      [siteKey]="recaptchaToken"
+      [useGlobalDomain]="false"
+      [theme]="'dark'"
+      [type]="'image'"
+      formControlName="recaptcha"
+    >
+    </ngx-recaptcha2>
+
+    <button [disabled]="!contactFormGroup.valid">Send</button>
+  </form>
+</div>

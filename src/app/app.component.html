@@ -8,8 +8,10 @@
 
     <div id="mobile-page-content" [@contentFade] *ngIf="contentIsDisplayed" (swipeRight)="openMobileMenu()">
       <router-outlet> </router-outlet>
-    </div>
 
+    </div>
+    <footer-component [@contentFade]></footer-component>
+    
     <div
       id="menu-overlay"
       *ngIf="contentIsDisplayed && mobileMenuIsDisplayed"
@@ -32,8 +34,10 @@
       [menuIsDisplayed]="menuIsDisplayed"
       [scrolledAmount]="scrolledAmount"
     ></header-desktop-menu-component>
-    <div id="desktop-page-content" [@contentFade] *ngIf="contentIsDisplayed">
+    <div id="desktop-page-content"  *ngIf="contentIsDisplayed">
       <router-outlet> </router-outlet>
+      <footer-component></footer-component>
     </div>
+ 
   </ng-template>
 </ng-container>

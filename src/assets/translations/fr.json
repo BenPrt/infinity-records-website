@@ -8,5 +8,20 @@
 	"HOME" : "ACCUEIL",
 	"LABEL" : "LE LABEL",
 	"ARTISTS" : "LES ARTISTES",
-	"MERCH" : "MERCH"
+	"MERCH" : "MERCH",
+	
+	"MENU" : "Menu",
+	
+	"CONTACT_TITLE" : "Get in touch",
+	"CONTACT_DESCRIPTION" : "Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem. Nam dapibus nisl vitae elit fringilla rutrum.",
+	
+	"NAME" : "NOM",
+	"NAME_REQUIRED" : "Votre nom est requis",
+	"EMAIL" : "EMAIL",
+	"EMAIL_INCORRECT" : "Adresse email incorrecte",
+	"EMAIL_REQUIRED" : "Votre adresse email est requise",
+	"MESSAGE" : "MESSAGE",
+	"MESSAGE_REQUIRED" : "Votre message est requis",
+	"SEND" : "ENVOYER"
+	
 }

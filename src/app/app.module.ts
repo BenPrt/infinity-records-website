@@ -19,6 +19,7 @@ import { DownloadModule } from './download-pages/download.module';
 // Elements Components Import
 import { ContactFormComponent } from './contact/contact-form/contact-form.component';
 import { ContactPageComponent } from './contact/contact-page.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -36,6 +37,7 @@ export class MyHammerConfig extends HammerGestureConfig {
   imports: [
     AppRoutingModule,
     AngularModule,
+    BrowserAnimationsModule,
     LayoutModule,
     HomeModule,
     LabelModule,
