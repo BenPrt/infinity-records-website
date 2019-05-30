@@ -3,8 +3,39 @@
 :host {
   width: 100%;
 
-  #footer{
-    height: 200px;
-    background-color : $white;
+  #footer-wrapper {
+    height: 152px;
+    background-color: $white;
+
+    #footer-container {
+      height: 152px;
+      width: 1300px;
+      margin-left: calc((100% - 1300px) / 2);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      #logo-line{
+        width : 388px
+      }
+      #social-part{
+        .social-media-link{
+          width : 40px;
+          height : 40px;
+          margin-right : 16px;
+          .social-media-icon{
+            width : 40px;
+            height : 40px;    
+          }
+        }
+        :last-child{
+          margin-right : 0px;
+        }
+      }
+      #rights-part{
+        width : 388px;
+        font-size : 14px;
+        color : $grey;
+      }
+    }
   }
 }

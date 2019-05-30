@@ -2,8 +2,8 @@
 
 :host {
   #contact-form-container {
-    padding-left: calc((100vw - 1300px) / 2);
-    padding-right: calc((100vw - 1300px) / 2);
+    padding-left: calc((100% - 1300px) / 2);
+    padding-right: calc((100% - 1300px) / 2);
     width: 1300px;
     display: flex;
     justify-content: space-around;

@@ -94,7 +94,7 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
   }
 
   manageScrollAndClasses(scroll: number): void {
-    if (document.body.clientHeight < document.body.scrollHeight) {
+    if (document.body.clientHeight < (document.body.scrollHeight + 68)) {
       if (scroll > 0 && scroll <= 68) {
         this.settingsStyle = { display: 'block' };
         this.menuWrapperStyle = {

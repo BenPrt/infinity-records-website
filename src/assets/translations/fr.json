@@ -23,6 +23,8 @@
 	"MESSAGE" : "MESSAGE",
 	"MESSAGE_REQUIRED" : "Votre message est requis",
 	"SEND" : "ENVOYER",
-	"MESSAGE_SENT" : "Message envoyé"
+	"MESSAGE_SENT" : "Message envoyé",
 	
+	"COPYRIGHT_1" : "Copyright © ",
+	"COPYRIGHT_2" : " Infinity Records. Tous droits Réservés."	
 }

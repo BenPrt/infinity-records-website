@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   animations: [],
 })
 export class FooterComponent {
+  actualYear : number = new Date().getFullYear();
   constructor() {}
 }
