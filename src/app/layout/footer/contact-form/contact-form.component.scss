@@ -2,33 +2,64 @@
 
 :host {
   #contact-form-container {
-    padding-left: calc((100% - 1300px) / 2);
-    padding-right: calc((100% - 1300px) / 2);
-    width: 1300px;
-    display: flex;
-    justify-content: space-around;
-    background-color: $black;
+    @media screen and (min-device-width: $tablet-size) {
+      padding-left: calc((100% - 1300px) / 2);
+      padding-right: calc((100% - 1300px) / 2);
+      width: 1300px;
+      display: flex;
+      justify-content: space-around;
+      background-color: $black;
+    }
+    @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+    }
+    @media screen and (max-device-width: $mobile-size) {
+    }
 
     #contact-description {
-      width: 301px;
-      margin-top: 80px;
+      @media screen and (min-device-width: $tablet-size) {
+        width: 301px;
+        margin-top: 80px;
+      }
+      @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+      }
+      @media screen and (max-device-width: $mobile-size) {
+      }
+
       #contact-description-title {
-        color: $white;
-        font-size: 40px;
+        @media screen and (min-device-width: $tablet-size) {
+          color: $white;
+          font-size: 40px;
+        }
+        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+        }
+        @media screen and (max-device-width: $mobile-size) {
+        }
       }
       #contact-description-content {
-        margin-top: 40px;
-        width: 275px;
-        padding-left: 24px;
-        border-left: 2px solid $gold;
-        color: $white;
-        font-size: 16px;
+        @media screen and (min-device-width: $tablet-size) {
+          margin-top: 40px;
+          width: 275px;
+          padding-left: 24px;
+          border-left: 2px solid $gold;
+          color: $white;
+          font-size: 16px;
+        }
+        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+        }
+        @media screen and (max-device-width: $mobile-size) {
+        }
       }
     }
 
     #contact-form {
-      width: 634px;
-      margin-top: 137px;
+      @media screen and (min-device-width: $tablet-size) {
+        width: 634px;
+        margin-top: 137px;
+      }
+      @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+      }
+      @media screen and (max-device-width: $mobile-size) {
+      }
 
       // Field Label Color
       ::ng-deep .mat-form-field-label {
@@ -65,46 +96,95 @@
       }
 
       #name-field {
-        width: 301px;
-        margin-right: 32px;
+        @media screen and (min-device-width: $tablet-size) {
+          width: 301px;
+          margin-right: 32px;
+        }
+        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+        }
+        @media screen and (max-device-width: $mobile-size) {
+        }
       }
       #email-field {
-        width: 301px;
+        @media screen and (min-device-width: $tablet-size) {
+          width: 301px;
+        }
+        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+        }
+        @media screen and (max-device-width: $mobile-size) {
+        }
       }
       #message-field {
-        width: 100%;
-        margin-top: 32px;
+        @media screen and (min-device-width: $tablet-size) {
+          width: 100%;
+          margin-top: 32px;
+        }
+        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+        }
+        @media screen and (max-device-width: $mobile-size) {
+        }
       }
       #captcha-and-submit-container {
-        display: flex;
-        width: 100%;
-        align-items: center;
-        justify-content: space-between;
-        margin: 48px 0px 80px 0px;
+        @media screen and (min-device-width: $tablet-size) {
+          display: flex;
+          width: 100%;
+          align-items: center;
+          justify-content: space-between;
+          margin: 48px 0px 80px 0px;
+        }
+        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+        }
+        @media screen and (max-device-width: $mobile-size) {
+        }
+
         #submit-button {
-          width: 128px;
-          height: 40px;
-          line-height: 40px;
-          border: 1px solid $white;
-          background-color: $black;
-          color: $white;
-          border-radius: 0;
-          font-size: 16px;
-          letter-spacing: 2px;
-          font-weight: bold;
-          cursor: pointer;
+          @media screen and (min-device-width: $tablet-size) {
+            width: 128px;
+            height: 40px;
+            line-height: 40px;
+            border: 1px solid $white;
+            background-color: $black;
+            color: $white;
+            border-radius: 0;
+            font-size: 16px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            cursor: pointer;
+          }
+          @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+          }
+          @media screen and (max-device-width: $mobile-size) {
+          }
         }
         #success-message {
-          width: 160px;
-          height: 40px;
-          line-height: 40px;
-          display: flex;
+          @media screen and (min-device-width: $tablet-size) {
+            width: 160px;
+            height: 40px;
+            line-height: 40px;
+            display: flex;
+          }
+          @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+          }
+          @media screen and (max-device-width: $mobile-size) {
+          }
           #success-message-icon {
-            margin-right: 4px;
+            @media screen and (min-device-width: $tablet-size) {
+              margin-right: 4px;
+            }
+            @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+            }
+            @media screen and (max-device-width: $mobile-size) {
+            }
           }
           #success-message-message {
-            color: $gold;
-            font-size: 16px;
+            @media screen and (min-device-width: $tablet-size) {
+              color: $gold;
+              font-size: 16px;
+            }
+            @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+            }
+            @media screen and (max-device-width: $mobile-size) {
+            }
           }
         }
       }

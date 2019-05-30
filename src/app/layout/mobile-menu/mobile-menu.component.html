@@ -5,16 +5,24 @@
 
 <div id="menu-content">
   <div class="menu-item">
-    <a class="menu-link" routerLink="/home" routerLinkActive="active">{{ 'HOME' | translation }}</a>
+    <a class="menu-link" routerLink="/home" routerLinkActive="active" (click)="closeMenu()">{{
+      'HOME' | translation
+    }}</a>
   </div>
   <div class="menu-item">
-    <a class="menu-link" routerLink="/label" routerLinkActive="active">{{ 'LABEL' | translation }}</a>
+    <a class="menu-link" routerLink="/label" routerLinkActive="active" (click)="closeMenu()">{{
+      'LABEL' | translation
+    }}</a>
   </div>
   <div class="menu-item">
-    <a class="menu-link" routerLink="/artists" routerLinkActive="active">{{ 'ARTISTS' | translation }}</a>
+    <a class="menu-link" routerLink="/artists" routerLinkActive="active" (click)="closeMenu()">{{
+      'ARTISTS' | translation
+    }}</a>
   </div>
   <div class="menu-item">
-    <a class="menu-link" routerLink="/merch" routerLinkActive="active">{{ 'MERCH' | translation }}</a>
+    <a class="menu-link" routerLink="/merch" routerLinkActive="active" (click)="closeMenu()">{{
+      'MERCH' | translation
+    }}</a>
   </div>
   <language-menu-component id="language-menu"></language-menu-component>
 </div>
