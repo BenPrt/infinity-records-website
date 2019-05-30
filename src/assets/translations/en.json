@@ -22,5 +22,6 @@
 	"EMAIL_REQUIRED" : "Email is required",
 	"MESSAGE" : "MESSAGE",
 	"MESSAGE_REQUIRED" : "Message is required",
-	"SEND" : "SEND"
+	"SEND" : "SEND",
+	"MESSAGE_SENT" : "Message sent"
 }

@@ -22,6 +22,7 @@
 	"EMAIL_REQUIRED" : "Votre adresse email est requise",
 	"MESSAGE" : "MESSAGE",
 	"MESSAGE_REQUIRED" : "Votre message est requis",
-	"SEND" : "ENVOYER"
+	"SEND" : "ENVOYER",
+	"MESSAGE_SENT" : "Message envoyé"
 	
 }
