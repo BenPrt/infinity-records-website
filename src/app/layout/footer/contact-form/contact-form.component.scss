@@ -80,30 +80,31 @@
         width: 100%;
         align-items: center;
         justify-content: space-between;
-        margin : 48px 0px 80px 0px;
+        margin: 48px 0px 80px 0px;
         #submit-button {
           width: 128px;
           height: 40px;
           line-height: 40px;
           border: 1px solid $white;
           background-color: $black;
-          color : $white;
+          color: $white;
           border-radius: 0;
-          font-size : 16px;
+          font-size: 16px;
           letter-spacing: 2px;
-          font-weight : bold;
-          cursor : pointer;
+          font-weight: bold;
+          cursor: pointer;
         }
-        #success-message{
-          width : 160px;
-          height : 40px;
-          line-height : 40px;
-          #success-message-icon{
-            margin-right : 4px;
+        #success-message {
+          width: 160px;
+          height: 40px;
+          line-height: 40px;
+          display: flex;
+          #success-message-icon {
+            margin-right: 4px;
           }
-          #success-message-message{
-            color : $gold;
-            font-size : 16px;
+          #success-message-message {
+            color: $gold;
+            font-size: 16px;
           }
         }
       }

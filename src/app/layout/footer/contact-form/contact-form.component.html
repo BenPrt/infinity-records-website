@@ -20,7 +20,11 @@
     <mat-form-field id="email-field">
       <mat-label>{{ 'EMAIL' | translation }}</mat-label>
       <input matInput type="email" formControlName="address" />
-      <mat-error *ngIf="contactFormGroup.controls.address.hasError('email') && !address.hasError('required')">
+      <mat-error
+        *ngIf="
+          contactFormGroup.controls.address.hasError('email') && !contactFormGroup.controls.address.hasError('required')
+        "
+      >
         {{ 'EMAIL_INCORRECT' | translation }}
       </mat-error>
       <mat-error *ngIf="contactFormGroup.controls.address.hasError('required')">
@@ -56,7 +60,7 @@
       </div>
 
       <ng-container *ngIf="!formHasBeenSubmitted; else successMessage">
-        <button id="submit-button" [@submitButtonFade]  [disabled]="!contactFormGroup.valid">
+        <button id="submit-button" [@submitButtonFade] [disabled]="!contactFormGroup.valid">
           {{ 'SEND' | translation }}
         </button>
       </ng-container>
