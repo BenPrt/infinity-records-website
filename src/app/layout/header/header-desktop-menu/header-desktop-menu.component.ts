@@ -112,6 +112,7 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
         this.settingsStyle = { display: 'none' };
         this.menuWrapperStyle = {
           position: 'fixed',
+          zIndex : '1',
           height: `calc(204px - (${Math.round(scroll)}px - 68px))`,
         };
         this.menuContainerStyle = {
@@ -125,6 +126,7 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
         this.settingsStyle = { display: 'none' };
         this.menuWrapperStyle = {
           position: 'fixed',
+          zIndex : '1',
           height: `calc(204px - (${Math.round(scroll)}px - 68px))`,
         };
         this.menuContainerStyle = {
@@ -138,6 +140,7 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
         this.settingsStyle = { display: 'none' };
         this.menuWrapperStyle = {
           position: 'fixed',
+          zIndex : '1',
           height: `calc(204px - (${Math.round(scroll)}px - 68px))`,
         };
         this.menuContainerStyle = {
@@ -152,6 +155,7 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
         this.settingsStyle = { display: 'none' };
         this.menuWrapperStyle = {
           position: 'fixed',
+          zIndex : '1',
           height: '116px',
         };
         this.menuContainerStyle = {
