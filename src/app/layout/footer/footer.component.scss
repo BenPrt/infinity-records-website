@@ -28,41 +28,30 @@
       }
 
       #logo-line {
-        #footer-container {
+        @media screen and (min-device-width: $tablet-size) {
+          width: 388px;
+        }
+        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+        }
+        @media screen and (max-device-width: $mobile-size) {
+        }
+      }
+      #social-part {
+        .social-media-link {
           @media screen and (min-device-width: $tablet-size) {
-            width: 388px;
+            width: 40px;
+            height: 40px;
+            margin-right: 16px;
           }
           @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
           }
           @media screen and (max-device-width: $mobile-size) {
           }
-        }
-        #social-part {
-          .social-media-link {
+
+          .social-media-icon {
             @media screen and (min-device-width: $tablet-size) {
               width: 40px;
               height: 40px;
-              margin-right: 16px;
-            }
-            @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-            }
-            @media screen and (max-device-width: $mobile-size) {
-            }
-
-            .social-media-icon {
-              @media screen and (min-device-width: $tablet-size) {
-                width: 40px;
-                height: 40px;
-              }
-              @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-              }
-              @media screen and (max-device-width: $mobile-size) {
-              }
-            }
-          }
-          :last-child {
-            @media screen and (min-device-width: $tablet-size) {
-              margin-right: 0px;
             }
             @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
             }
@@ -70,16 +59,25 @@
             }
           }
         }
-        #rights-part {
+        :last-child {
           @media screen and (min-device-width: $tablet-size) {
-            width: 388px;
-            font-size: 14px;
-            color: $grey;
+            margin-right: 0px;
           }
           @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
           }
           @media screen and (max-device-width: $mobile-size) {
           }
+        }
+      }
+      #rights-part {
+        @media screen and (min-device-width: $tablet-size) {
+          width: 388px;
+          font-size: 14px;
+          color: $grey;
+        }
+        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+        }
+        @media screen and (max-device-width: $mobile-size) {
         }
       }
     }

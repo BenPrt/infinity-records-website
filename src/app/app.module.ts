@@ -1,6 +1,6 @@
 import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { NgModule, APP_INITIALIZER } from '@angular/core';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -16,11 +16,6 @@ import { ArtistsModule } from './artists-page/artists.module';
 import { MerchModule } from './merch-page/merch.module';
 import { DownloadModule } from './download-pages/download.module';
 
-// Elements Components Import
-import { ContactFormComponent } from './contact/contact-form/contact-form.component';
-import { ContactPageComponent } from './contact/contact-page.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
     swipe: { velocity: 0.4, threshold: 20 }, // override default settings
@@ -28,12 +23,7 @@ export class MyHammerConfig extends HammerGestureConfig {
 }
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    // Elements Components
-    ContactFormComponent,
-    ContactPageComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     AppRoutingModule,
     AngularModule,
