@@ -9,7 +9,6 @@ import { TranslationPipe } from './shared/pipes/translation.pipe';
 
 @NgModule({
   declarations: [
-    // Pipes
     TranslationPipe,
   ],
   imports: [

@@ -59,17 +59,14 @@
         </ngx-recaptcha2>
       </div>
 
-      <ng-container *ngIf="!formHasBeenSubmitted; else successMessage">
-        <button id="submit-button" [@submitButtonFade] [disabled]="!contactFormGroup.valid">
+        <button id="submit-button" *ngIf="!formHasBeenSubmitted" [disabled]="!contactFormGroup.valid">
           {{ 'SEND' | translation }}
         </button>
-      </ng-container>
-      <ng-template #successMessage>
-        <div id="success-message" [@successMessageFade]>
+        <i id="sending-message-loader" *ngIf="messageSendingLoading" class="fas fa-circle-notch fa-spin"></i>
+        <div id="success-message" *ngIf="messageHasBeenSent" >
           <img id="success-message-icon" alt="Success Icon" src="assets/icons/check_gold.svg" />
           <p id="success-message-message">{{ 'MESSAGE_SENT' | translation }}</p>
         </div>
-      </ng-template>
     </div>
   </form>
 </div>

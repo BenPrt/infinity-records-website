@@ -9,19 +9,14 @@ import { trigger, transition, style, animate } from '@angular/animations';
   selector: 'contact-form-component',
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.scss'],
-  animations: [
-    trigger('submitButtonFade', [
-      transition(':leave', [style({ opacity: 1 }), animate('300ms', style({ opacity: 0 }))]),
-    ]),
-    trigger('successMessageFade', [
-      transition(':enter', [style({ opacity: 0 }), animate('300ms', style({ opacity: 1 }))]),
-    ]),
-  ],
+  animations: [],
 })
 export class ContactFormComponent {
   contactFormGroup: FormGroup;
   recaptchaToken: string = environment.contactFormRecaptchaKey;
   formHasBeenSubmitted: boolean = false;
+  messageSendingLoading: boolean = false;
+  messageHasBeenSent: boolean = false;
 
   constructor(private formBuilder: FormBuilder, private contactService: ContactService) {}
 
@@ -40,10 +35,12 @@ export class ContactFormComponent {
 
   submitContactForm(): void {
     this.contactFormGroup.disable();
+    this.formHasBeenSubmitted = true;
+    this.messageSendingLoading = true;
     const email: Email = this.contactFormGroup.value;
-    this.contactService.sendEmail(email).subscribe((res) => {
-      this.formHasBeenSubmitted = true;
+    this.contactService.sendEmail(email).subscribe(() => {
+      this.messageSendingLoading = false;
+      this.messageHasBeenSent = true;
     });
   }
-
 }
