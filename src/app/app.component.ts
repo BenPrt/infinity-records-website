@@ -39,10 +39,17 @@ export class AppComponent implements OnInit {
   scrolledAmount: number = 0;
   // Boolean defining if the mobile menu is displayed
   mobileMenuIsDisplayed: boolean = false;
+  // Offset amount to add to the page content when the header is sticky
+  contentOffset: string = '0';
 
   @HostListener('window:scroll', ['$event'])
-  onWindowScroll(event: Event) {
+  onWindowScroll() {
     this.scrolledAmount = window.pageYOffset;
+    if (this.scrolledAmount > 0 && this.scrolledAmount <= 68) {
+      this.contentOffset = '0';
+    } else if (this.scrolledAmount > 68 && this.scrolledAmount <= 156) {
+      this.contentOffset = '273px';
+    }
   }
 
   constructor(
@@ -107,11 +114,11 @@ export class AppComponent implements OnInit {
     });
   }
 
-  openMobileMenu():void {
+  openMobileMenu(): void {
     this.mobileMenuService.toggleMenu(true);
   }
 
-  closeMobileMenu():void {
+  closeMobileMenu(): void {
     this.mobileMenuService.toggleMenu(false);
   }
 }

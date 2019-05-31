@@ -73,21 +73,23 @@
         margin-top: 48px;
       }
 
-      // Field Label Color
+      // padding inside field
+      ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-infix{
+        padding : 0.4em 0;
+      }
+      // Field Label
       ::ng-deep .mat-form-field-label {
         color: $grey;
+        font-size: 14px;
+        letter-spacing: 1px;
       }
-      // Underline when not selected
-      ::ng-deep .mat-form-field-underline {
-        background-color: $grey;
+      // Label when filled
+      ::ng-deep .mat-form-field .mat-form-field-label {
+        font-size: 14px;
       }
-      // Error message
-      ::ng-deep .mat-error {
-        color: red;
-      }
-      // Underline on error
-      ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-ripple {
-        background-color: red;
+      // Label when empty
+      ::ng-deep .mat-form-field.mat-form-field-empty .mat-form-field-label {
+        font-size : 16px;
       }
       // Label when error
       ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
@@ -97,6 +99,15 @@
       ::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
         color: $gold;
       }
+
+      // Underline when not selected
+      ::ng-deep .mat-form-field-underline {
+        background-color: $grey;
+      }
+      // Underline on error
+      ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-ripple {
+        background-color: red;
+      }
       // Underline when focused
       ::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
         background-color: $gold;
@@ -105,6 +116,10 @@
       input,
       textarea {
         color: $white;
+      }
+      // Error message
+      ::ng-deep .mat-error {
+        color: red;
       }
 
       #name-field {
@@ -156,7 +171,7 @@
           width: 100%;
         }
 
-        #captcha-field{
+        #captcha-field {
           @media screen and (max-device-width: $mobile-size) {
             width: 100%;
           }
@@ -182,8 +197,8 @@
           }
           @media screen and (max-device-width: $mobile-size) {
             width: 100%;
-            margin-top : 40px;
-            margin-bottom : 56px;
+            margin-top: 40px;
+            margin-bottom: 56px;
           }
         }
         #success-message {

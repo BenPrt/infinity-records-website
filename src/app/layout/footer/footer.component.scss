@@ -71,6 +71,7 @@
           @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
           }
           @media screen and (max-device-width: $mobile-size) {
+            margin-right : 0px;
           }
         }
       }
