@@ -19,6 +19,8 @@ import { DownloadModule } from './download-pages/download.module';
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
     swipe: { velocity: 0.4, threshold: 20 }, // override default settings
+    pinch: { enable: false },
+    rotate: { enable: false },
   };
 }
 
