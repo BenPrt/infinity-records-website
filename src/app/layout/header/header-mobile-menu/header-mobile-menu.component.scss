@@ -1,0 +1,42 @@
+@import 'src/app/utils/_styleVariables';
+
+#header-container{
+  width : 100%;
+  height : 80px;
+  border-bottom : 1px solid $light-grey;
+  display : flex;
+  align-items: center;
+  position : fixed;
+  background-color : $white;
+  z-index : 1;
+
+  #burger-button{
+    width : 56px;
+    #burger-button-icon{
+      margin-left : 16px; 
+    }
+  }
+
+  #header-logo-container{
+    margin-left : calc(((100% - 124px) /2) - 56px);
+
+    #header-logo{
+      width : 124px;
+      height : 48px;
+      #header-logo-logo{
+        display : block;
+        margin-left : auto;
+        margin-right : auto;
+        height : 35px;
+      }
+      #header-logo-typo{
+        display : block;
+        margin : 5px auto 0px auto;
+        padding-left : 2px;
+        height : 7px;
+      }
+    }
+  }
+
+
+}

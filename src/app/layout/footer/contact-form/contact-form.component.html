@@ -1,0 +1,72 @@
+<div id="contact-form-container">
+  <div id="contact-description">
+    <p id="contact-description-title">
+      {{ 'CONTACT_TITLE' | translation }}
+    </p>
+    <p id="contact-description-content">
+      {{ 'CONTACT_DESCRIPTION' | translation }}
+    </p>
+  </div>
+
+  <form id="contact-form" [formGroup]="contactFormGroup" (ngSubmit)="submitContactForm()">
+    <mat-form-field id="name-field">
+      <mat-label>{{ 'NAME' | translation }}</mat-label>
+      <input matInput type="text" formControlName="name" />
+      <mat-error *ngIf="contactFormGroup.controls.name.hasError('required')">
+        {{ 'NAME_REQUIRED' | translation }}
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field id="email-field">
+      <mat-label>{{ 'EMAIL' | translation }}</mat-label>
+      <input matInput type="email" formControlName="address" />
+      <mat-error
+        *ngIf="
+          contactFormGroup.controls.address.hasError('email') && !contactFormGroup.controls.address.hasError('required')
+        "
+      >
+        {{ 'EMAIL_INCORRECT' | translation }}
+      </mat-error>
+      <mat-error *ngIf="contactFormGroup.controls.address.hasError('required')">
+        {{ 'EMAIL_REQUIRED' | translation }}
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field id="message-field">
+      <mat-label>{{ 'MESSAGE' | translation }}</mat-label>
+      <textarea
+        matInput
+        cdkTextareaAutosize
+        #autosize="cdkTextareaAutosize"
+        cdkAutosizeMinRows="1"
+        formControlName="body"
+      ></textarea>
+      <mat-error *ngIf="contactFormGroup.controls.body.hasError('required')">
+        {{ 'MESSAGE_REQUIRED' | translation }}
+      </mat-error>
+    </mat-form-field>
+
+    <div id="captcha-and-submit-container">
+      <div id="captcha-field">
+        <ngx-recaptcha2
+          #captchaElem
+          [siteKey]="recaptchaToken"
+          [useGlobalDomain]="false"
+          [theme]="'dark'"
+          [type]="'image'"
+          formControlName="recaptcha"
+        >
+        </ngx-recaptcha2>
+      </div>
+
+        <button id="submit-button" *ngIf="!formHasBeenSubmitted" [disabled]="!contactFormGroup.valid">
+          {{ 'SEND' | translation }}
+        </button>
+        <i id="sending-message-loader" *ngIf="messageSendingLoading" class="fas fa-circle-notch fa-spin"></i>
+        <div id="success-message" *ngIf="messageHasBeenSent" >
+          <img id="success-message-icon" alt="Success Icon" src="assets/icons/check_gold.svg" />
+          <p id="success-message-message">{{ 'MESSAGE_SENT' | translation }}</p>
+        </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,30 @@
+{
+	"LANGUAGE": "LANGUE",
+	"FRENCH_LANGUAGE": "Français",
+	"ENGLISH_LANGUAGE": "English",
+
+    "SOCIAL_MEDIA": "Réseaux sociaux",
+	
+	"HOME" : "ACCUEIL",
+	"LABEL" : "LE LABEL",
+	"ARTISTS" : "LES ARTISTES",
+	"MERCH" : "MERCH",
+	
+	"MENU" : "Menu",
+	
+	"CONTACT_TITLE" : "Get in touch",
+	"CONTACT_DESCRIPTION" : "T'as des questions? T'as flashé sur un beat? Une collab t'intéresse? Envoie-nous un message via ce formulaire et on te recontactera dès que possible!",
+	
+	"NAME" : "NOM",
+	"NAME_REQUIRED" : "Votre nom est requis",
+	"EMAIL" : "EMAIL",
+	"EMAIL_INCORRECT" : "Adresse email incorrecte",
+	"EMAIL_REQUIRED" : "Votre adresse email est requise",
+	"MESSAGE" : "MESSAGE",
+	"MESSAGE_REQUIRED" : "Votre message est requis",
+	"SEND" : "ENVOYER",
+	"MESSAGE_SENT" : "Message envoyé",
+	
+	"COPYRIGHT_1" : "Copyright © ",
+	"COPYRIGHT_2" : " Infinity Records. Tous droits Réservés."	
+}

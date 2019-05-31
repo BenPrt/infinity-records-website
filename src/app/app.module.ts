@@ -1,14 +1,20 @@
-import { BrowserModule, HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-import { HomePageComponent } from './home/home-page.component';
-import { DownloadPrtapeVol1Component } from './download/download-prtape-vol-1/download-prtape-vol-1.component';
-import { DownloadPrtapeVol2Component } from './download/download-prtape-vol-2/download-prtape-vol-2.component';
+// Translation service Import
+import { TranslationService, translationFactoryResources } from './shared/services/translation.service';
+
+// Modules Import
+import { AngularModule } from './angular.module';
+import { LayoutModule } from './layout/layout.module';
+import { HomeModule } from './home-page/home.module';
+import { LabelModule } from './label-page/label.module';
+import { ArtistsModule } from './artists-page/artists.module';
+import { MerchModule } from './merch-page/merch.module';
+import { DownloadModule } from './download-pages/download.module';
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -17,22 +23,28 @@ export class MyHammerConfig extends HammerGestureConfig {
 }
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomePageComponent,
-    DownloadPrtapeVol1Component,
-    DownloadPrtapeVol2Component,
-  ],
+  declarations: [AppComponent],
   imports: [
-    BrowserModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
     AppRoutingModule,
+    AngularModule,
+    BrowserAnimationsModule,
+    LayoutModule,
+    HomeModule,
+    LabelModule,
+    ArtistsModule,
+    MerchModule,
+    DownloadModule,
   ],
   providers: [
     {
       provide: HAMMER_GESTURE_CONFIG,
       useClass: MyHammerConfig,
+    },
+    {
+      provide: APP_INITIALIZER,
+      useFactory: translationFactoryResources,
+      deps: [TranslationService],
+      multi: true,
     },
   ],
   bootstrap: [AppComponent],

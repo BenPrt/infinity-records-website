@@ -1,0 +1,247 @@
+@import 'src/app/utils/_styleVariables';
+
+:host {
+  #contact-form-container {
+    background-color: $black;
+
+    @media screen and (min-device-width: $tablet-size) {
+      padding-left: calc((100% - 1300px) / 2);
+      padding-right: calc((100% - 1300px) / 2);
+      width: 1300px;
+      display: flex;
+      justify-content: space-around;
+    }
+    @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+    }
+    @media screen and (max-device-width: $mobile-size) {
+      width: 304px;
+      padding-left: calc((100% - 304px) / 2);
+      padding-right: calc((100% - 304px) / 2);
+    }
+
+    #contact-description {
+      @media screen and (min-device-width: $tablet-size) {
+        width: 301px;
+        margin-top: 80px;
+      }
+      @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+      }
+      @media screen and (max-device-width: $mobile-size) {
+        width: 100%;
+        padding-top: 48px;
+      }
+
+      #contact-description-title {
+        color: $white;
+        @media screen and (min-device-width: $tablet-size) {
+          font-size: 40px;
+        }
+        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+        }
+        @media screen and (max-device-width: $mobile-size) {
+          font-size: 32px;
+        }
+      }
+      #contact-description-content {
+        border-left: 2px solid $gold;
+        color: $white;
+        font-size: 16px;
+        @media screen and (min-device-width: $tablet-size) {
+          margin-top: 40px;
+          width: 275px;
+          padding-left: 24px;
+        }
+        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+        }
+        @media screen and (max-device-width: $mobile-size) {
+          margin-top: 32px;
+          width: calc(100% - 22px);
+          padding-left: 22px;
+        }
+      }
+    }
+
+    #contact-form {
+      @media screen and (min-device-width: $tablet-size) {
+        width: 634px;
+        margin-top: 137px;
+      }
+      @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+      }
+      @media screen and (max-device-width: $mobile-size) {
+        width: 100%;
+        margin-top: 48px;
+      }
+
+      // padding inside field
+      ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-infix {
+        padding: 0.4em 0;
+      }
+      // Field Label
+      ::ng-deep .mat-form-field-label {
+        color: $grey;
+        font-size: 14px;
+        letter-spacing: 1px;
+      }
+      // Label when filled
+      ::ng-deep .mat-form-field .mat-form-field-label {
+        font-size: 14px;
+      }
+      // Label when empty
+      ::ng-deep .mat-form-field.mat-form-field-empty .mat-form-field-label {
+        font-size: 16px;
+      }
+      // Label when error
+      ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+        color: red;
+      }
+      // Label when focused
+      ::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+        color: $gold;
+      }
+
+      // Underline when not selected
+      ::ng-deep .mat-form-field-underline {
+        background-color: $grey;
+      }
+      // Underline on error
+      ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-ripple {
+        background-color: red;
+      }
+      // Underline when focused
+      ::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+        background-color: $gold;
+      }
+      // Input text color
+      input,
+      textarea {
+        color: $white;
+      }
+      // Error message
+      ::ng-deep .mat-error {
+        color: red;
+      }
+
+      #name-field {
+        @media screen and (min-device-width: $tablet-size) {
+          width: 301px;
+          margin-right: 32px;
+        }
+        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+        }
+        @media screen and (max-device-width: $mobile-size) {
+          width: 100%;
+        }
+      }
+      #email-field {
+        @media screen and (min-device-width: $tablet-size) {
+          width: 301px;
+        }
+        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+        }
+        @media screen and (max-device-width: $mobile-size) {
+          width: 100%;
+          margin-top: 24px;
+        }
+      }
+      #message-field {
+        @media screen and (min-device-width: $tablet-size) {
+          width: 100%;
+          margin-top: 32px;
+        }
+        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+        }
+        @media screen and (max-device-width: $mobile-size) {
+          width: 100%;
+          margin-top: 24px;
+        }
+      }
+      #captcha-and-submit-container {
+        @media screen and (min-device-width: $tablet-size) {
+          display: flex;
+          width: 100%;
+          align-items: center;
+          justify-content: space-between;
+          margin: 48px 0px 80px 0px;
+        }
+        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+        }
+        @media screen and (max-device-width: $mobile-size) {
+          margin-top: 32px;
+          width: 100%;
+        }
+
+        #captcha-field {
+          @media screen and (max-device-width: $mobile-size) {
+            width: 100%;
+          }
+        }
+
+        #submit-button {
+          border: 1px solid $white;
+          background-color: $black;
+          color: $white;
+          border-radius: 0;
+          font-size: 16px;
+          letter-spacing: 2px;
+          font-weight: bold;
+          height: 40px;
+          line-height: 40px;
+
+          @media screen and (min-device-width: $tablet-size) {
+            width: 128px;
+
+            cursor: pointer;
+          }
+          @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+          }
+          @media screen and (max-device-width: $mobile-size) {
+            width: 100%;
+            margin-top: 40px;
+            margin-bottom: 56px;
+          }
+        }
+        #sending-message-loader {
+          color: $gold;
+          font-size: 25px;
+          @media screen and (min-device-width: $tablet-size) {
+            margin-right: 50px;
+          }
+          @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+          }
+          @media screen and (max-device-width: $mobile-size) {
+            width: 100%;
+            height : 40px;
+            line-height : 40px;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 56px;
+          }
+        }
+        #success-message {
+          height: 40px;
+          line-height: 40px;
+          display: flex;
+          @media screen and (min-device-width: $tablet-size) {
+            width: 160px;
+          }
+          @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+          }
+          @media screen and (max-device-width: $mobile-size) {
+            margin-top: 40px;
+            padding-bottom: 56px;
+            width: 100%;
+            justify-content: center;
+          }
+          #success-message-icon {
+            margin-right: 4px;
+          }
+          #success-message-message {
+            color: $gold;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

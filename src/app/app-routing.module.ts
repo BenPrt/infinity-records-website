@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { HomePageComponent } from './home/home-page.component';
-import { DownloadPrtapeVol1Component } from './download/download-prtape-vol-1/download-prtape-vol-1.component';
-import { DownloadPrtapeVol2Component } from './download/download-prtape-vol-2/download-prtape-vol-2.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { LabelPageComponent } from './label-page/label-page.component';
+import { ArtistsPageComponent } from './artists-page/artists-page.component';
+import { MerchPageComponent } from './merch-page/merch-page.component';
+import { DownloadPrtapeVol1Component } from './download-pages/download-prtape-vol-1/download-prtape-vol-1.component';
+import { DownloadPrtapeVol2Component } from './download-pages/download-prtape-vol-2/download-prtape-vol-2.component';
 
 const routes: Routes = [
   {
@@ -14,6 +17,18 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomePageComponent,
+  },
+  {
+    path: 'label',
+    component: LabelPageComponent,
+  },
+  {
+    path: 'artists',
+    component: ArtistsPageComponent,
+  },
+  {
+    path: 'merch',
+    component: MerchPageComponent,
   },
   {
     path: 'download-prtape-vol-1',
