@@ -68,12 +68,6 @@ export class AppComponent implements OnInit {
     this.initAnimationState();
     this.initLanguageChangeSubscription();
     this.initMobileMenuSubscription();
-    setTimeout(() => {
-      console.log('coucou');
-      setTimeout(() => {
-        console.log('beuh');
-      }, 10000);
-    }, 5000);
   }
 
   initScrollOnRouteChange(): void {
