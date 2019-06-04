@@ -1,9 +1,11 @@
 <ng-container *ngIf="!reloading">
   <ng-container *ngIf="isMobile; else desktopVersion">
+    <div id="behind-header"></div>
     <header-mobile-menu-component
       [scaleState]="scaleState"
       [typoState]="typoState"
       [mobileMenuIsDisplayed]="menuIsDisplayed"
+      [@menuBorderFade]="menuIsDisplayed"
     ></header-mobile-menu-component>
 
     <div id="mobile-page-content" [@contentFade] *ngIf="contentIsDisplayed" (swipeRight)="openMobileMenu()">
@@ -33,7 +35,7 @@
       [menuIsDisplayed]="menuIsDisplayed"
       [scrolledAmount]="scrolledAmount"
     ></header-desktop-menu-component>
-    <div id="desktop-page-content" *ngIf="contentIsDisplayed" [ngStyle]="{'paddingTop' : contentOffset}">
+    <div id="desktop-page-content" *ngIf="contentIsDisplayed" [ngStyle]="{ paddingTop: contentOffset }">
       <router-outlet> </router-outlet>
       <footer-component></footer-component>
     </div>

@@ -94,8 +94,8 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
   }
 
   manageScrollAndClasses(scroll: number): void {
-    if (document.body.clientHeight < (document.body.scrollHeight + 68)) {
-      if (scroll > 0 && scroll <= 68) {
+    if (document.body.clientHeight < document.body.scrollHeight + 68) {
+      if (scroll >= 0 && scroll <= 68) {
         this.settingsStyle = { display: 'block' };
         this.menuWrapperStyle = {
           position: 'initial',
@@ -112,7 +112,7 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
         this.settingsStyle = { display: 'none' };
         this.menuWrapperStyle = {
           position: 'fixed',
-          zIndex : '1',
+          zIndex: '1',
           height: `calc(204px - (${Math.round(scroll)}px - 68px))`,
         };
         this.menuContainerStyle = {
@@ -126,7 +126,7 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
         this.settingsStyle = { display: 'none' };
         this.menuWrapperStyle = {
           position: 'fixed',
-          zIndex : '1',
+          zIndex: '1',
           height: `calc(204px - (${Math.round(scroll)}px - 68px))`,
         };
         this.menuContainerStyle = {
@@ -140,7 +140,7 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
         this.settingsStyle = { display: 'none' };
         this.menuWrapperStyle = {
           position: 'fixed',
-          zIndex : '1',
+          zIndex: '1',
           height: `calc(204px - (${Math.round(scroll)}px - 68px))`,
         };
         this.menuContainerStyle = {
@@ -155,7 +155,7 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
         this.settingsStyle = { display: 'none' };
         this.menuWrapperStyle = {
           position: 'fixed',
-          zIndex : '1',
+          zIndex: '1',
           height: '116px',
         };
         this.menuContainerStyle = {

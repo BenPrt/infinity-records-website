@@ -8,10 +8,10 @@
     </p>
   </div>
 
-  <form id="contact-form" [formGroup]="contactFormGroup" (ngSubmit)="submitContactForm()">
+  <form id="contact-form" [formGroup]="contactFormGroup" autocomplete="off" (ngSubmit)="submitContactForm()">
     <mat-form-field id="name-field">
       <mat-label>{{ 'NAME' | translation }}</mat-label>
-      <input matInput type="text" formControlName="name" />
+      <input matInput type="text" autocomplete="off" formControlName="name" />
       <mat-error *ngIf="contactFormGroup.controls.name.hasError('required')">
         {{ 'NAME_REQUIRED' | translation }}
       </mat-error>
@@ -19,7 +19,7 @@
 
     <mat-form-field id="email-field">
       <mat-label>{{ 'EMAIL' | translation }}</mat-label>
-      <input matInput type="email" formControlName="address" />
+      <input matInput type="email"  autocomplete="off" formControlName="address" />
       <mat-error
         *ngIf="
           contactFormGroup.controls.address.hasError('email') && !contactFormGroup.controls.address.hasError('required')
