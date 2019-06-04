@@ -3,12 +3,12 @@
 :host {
   margin-bottom : 200px;
   #desktop-settings-wrapper {
-    width: 100%;
+    width: 100vw;
     height: 68px;
   }
 
   #menu-wrapper {
-    width: 100%;
+    width: 100vw;
     height: 204px;
     background-color : $white;
     border-bottom : 1px solid $light-grey;

@@ -1,11 +1,13 @@
 import { Component, OnInit, ChangeDetectorRef, HostListener } from '@angular/core';
 import { Location } from '@angular/common';
+import { Router, RouterEvent } from '@angular/router';
 import { animate, style, transition, trigger } from '@angular/animations';
 import 'hammerjs';
 
 import { DeviceUtils } from 'src/app/utils/device-utils';
 import { TranslationService } from 'src/app/shared/services/translation.service';
 import { MobileMenuEventsService } from './shared/services/mobile-menu-events.service';
+import { interval, Subscriber, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -45,7 +47,7 @@ export class AppComponent implements OnInit {
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
     this.scrolledAmount = window.pageYOffset;
-    if (this.scrolledAmount > 0 && this.scrolledAmount <= 68) {
+    if (this.scrolledAmount >= 0 && this.scrolledAmount <= 68) {
       this.contentOffset = '0';
     } else if (this.scrolledAmount > 68 && this.scrolledAmount <= 156) {
       this.contentOffset = '273px';
@@ -53,6 +55,7 @@ export class AppComponent implements OnInit {
   }
 
   constructor(
+    private router: Router,
     private location: Location,
     private cd: ChangeDetectorRef,
     private translationService: TranslationService,
@@ -60,10 +63,31 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.initScrollOnRouteChange();
     this.initMobileStatus();
     this.initAnimationState();
     this.initLanguageChangeSubscription();
     this.initMobileMenuSubscription();
+    setTimeout(() => {
+      console.log('coucou');
+      setTimeout(() => {
+        console.log('beuh');
+      }, 10000);
+    }, 5000);
+  }
+
+  initScrollOnRouteChange(): void {
+    this.router.events.subscribe((evt: RouterEvent) => {
+      let scrollTo: number;
+      const scrollInterval = setInterval(() => {
+        if (this.scrolledAmount > 0) {
+          scrollTo = this.scrolledAmount - this.scrolledAmount / 4;
+          window.scrollTo(0, scrollTo);
+        } else {
+          clearInterval(scrollInterval);
+        }
+      }, 10);
+    });
   }
 
   initMobileStatus(): void {
@@ -82,13 +106,13 @@ export class AppComponent implements OnInit {
     this.typoState = 'hidden';
     this.menuIsDisplayed = false;
     this.contentIsDisplayed = false;
-    setInterval(() => {
+    setTimeout(() => {
       // We display the typo
       this.typoState = 'displayed';
-      setInterval(() => {
+      setTimeout(() => {
         // We unscale the logo
         this.scaleState = 'normal';
-        setInterval(() => {
+        setTimeout(() => {
           // We display menu and content
           this.menuIsDisplayed = true;
           this.contentIsDisplayed = true;
@@ -102,7 +126,7 @@ export class AppComponent implements OnInit {
       this.reloading = true;
       this.cd.detectChanges();
       this.cd.markForCheck();
-      setInterval(() => {
+      setTimeout(() => {
         this.reloading = false;
       }, 500);
     });
