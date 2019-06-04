@@ -1,13 +1,12 @@
 import { Component, OnInit, ChangeDetectorRef, HostListener } from '@angular/core';
 import { Location } from '@angular/common';
 import { Router, RouterEvent } from '@angular/router';
-import { animate, style, transition, trigger } from '@angular/animations';
+import { animate, style, transition, trigger, state } from '@angular/animations';
 import 'hammerjs';
 
 import { DeviceUtils } from 'src/app/utils/device-utils';
 import { TranslationService } from 'src/app/shared/services/translation.service';
 import { MobileMenuEventsService } from './shared/services/mobile-menu-events.service';
-import { interval, Subscriber, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +21,11 @@ import { interval, Subscriber, Subscription } from 'rxjs';
     trigger('mobileMenuFade', [
       transition(':enter', [style({ left: '-346px' }), animate('350ms', style({ left: '0' }))]),
       transition(':leave', [style({ left: '0' }), animate('350ms', style({ left: '-346px' }))]),
+    ]),
+    trigger('menuBorderFade', [
+      state('false', style({ borderBottom: '1px solid #FFFFFF' })),
+      state('true', style({ borderBottom: '1px solid #D8D8D8' })),
+      transition('false <=> true', [animate('500ms')]),
     ]),
   ],
 })
@@ -65,6 +69,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.initScrollOnRouteChange();
     this.initMobileStatus();
+    this.initMobileSizing();
     this.initAnimationState();
     this.initLanguageChangeSubscription();
     this.initMobileMenuSubscription();
@@ -86,6 +91,15 @@ export class AppComponent implements OnInit {
 
   initMobileStatus(): void {
     this.isMobile = DeviceUtils.isMobile();
+  }
+
+  initMobileSizing(): void {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    window.addEventListener('resize', () => {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
   }
 
   initAnimationState(): void {

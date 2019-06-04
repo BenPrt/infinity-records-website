@@ -8,11 +8,6 @@ import { trigger, transition, style, animate, state } from '@angular/animations'
   styleUrls: ['./header-mobile-menu.component.scss'],
   animations: [
     trigger('logoFade', [transition(':enter', [style({ opacity: 0 }), animate('800ms', style({ opacity: 1 }))])]),
-    trigger('menuBorderFade', [
-      state('hidden', style({ borderBottom: '1px solid #FFFFFF' })),
-      state('displayed', style({ borderBottom: '1px solid #D8D8D8' })),
-      transition('hidden <=> displayed', [animate('500ms')]),
-    ]),
     trigger('menuIconFade', [
       state('hidden', style({ opacity: '0' })),
       state('displayed', style({ opacity: '1' })),
@@ -34,7 +29,6 @@ export class HeaderMobileMenuComponent implements OnInit, OnChanges {
   @Input() mobileMenuIsDisplayed: boolean;
   @Input() typoState: string;
   @Input() scaleState: string;
-  menuBorderState: string = 'displayed';
   menuIconState: string = 'displayed';
 
   constructor(private mobileMenuService: MobileMenuEventsService) {}
@@ -44,7 +38,6 @@ export class HeaderMobileMenuComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(): void {
-    this.menuBorderState = this.mobileMenuIsDisplayed ? 'displayed' : 'hidden';
     this.menuIconState = this.mobileMenuIsDisplayed ? 'displayed' : 'hidden';
   }
 

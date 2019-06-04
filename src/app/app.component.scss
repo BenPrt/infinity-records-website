@@ -1,10 +1,15 @@
 @import "src/app/utils/_styleVariables";
 
+#behind-header{
+  height : 81px;
+  width : 100%;
+  background-color : red;
+}
+
 #mobile-page-content{
-  margin-top : 81px;
   width : 100%;
   height : calc(100vh - 81px);
-  z-index : 0;
+  height: calc((var(--vh, 1vh) * 100) - 81px);
   overflow-y: auto;
 }
 
@@ -14,6 +19,7 @@
   z-index : 1;
   width : 100%;
   height : 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   background-color : $dark-grey;
   opacity : 0.6;
 }
