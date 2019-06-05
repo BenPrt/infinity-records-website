@@ -125,6 +125,8 @@
       }
 
       #name-field {
+        font-family : 'Montserrat';
+        font-size : 16px;
         @media screen and (min-device-width: $tablet-size) {
           width: 301px;
           margin-right: 32px;
@@ -136,6 +138,8 @@
         }
       }
       #email-field {
+        font-family : 'Montserrat';
+        font-size : 16px;
         @media screen and (min-device-width: $tablet-size) {
           width: 301px;
         }
@@ -147,6 +151,9 @@
         }
       }
       #message-field {
+        font-family : 'Montserrat';
+        font-size : 16px;
+        line-height : 20px;
         @media screen and (min-device-width: $tablet-size) {
           width: 100%;
           margin-top: 32px;
