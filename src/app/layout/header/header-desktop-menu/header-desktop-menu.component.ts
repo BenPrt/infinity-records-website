@@ -13,8 +13,8 @@ import { trigger, transition, style, animate, state } from '@angular/animations'
       transition('hidden <=> displayed', [animate('500ms')]),
     ]),
     trigger('indicatorFade', [
-      transition(':enter', [style({ opacity: 0 }), animate('300ms', style({ opacity: 1 }))]),
-      transition(':leave', [style({ opacity: 1 }), animate('300ms', style({ opacity: 0 }))]),
+      transition(':enter', [style({ opacity: 0, width: 0 }), animate('300ms', style({ opacity: 1, width: '72px' }))]),
+      transition(':leave', [style({ opacity: 1, width: '72px' }), animate('300ms', style({ opacity: 0, width: 0 }))]),
     ]),
     trigger('logoFade', [transition(':enter', [style({ opacity: 0 }), animate('800ms', style({ opacity: 1 }))])]),
     trigger('menuFade', [
