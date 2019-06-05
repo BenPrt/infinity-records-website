@@ -1,4 +1,5 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import 'src/app/utils/_styleVariables';
 
 /* You can add global styles to this file, and also import other style files */
 body {
@@ -14,16 +15,4 @@ body {
 
 p {
   margin: 0;
-}
-
-@media screen and (min-aspect-ratio: 13/9){
-  html {
-    transform: rotate(-90deg);
-    transform-origin: left top;
-    width: 100vh;
-    overflow-x: hidden;
-    position: absolute;
-    top: 100%;
-    left: 0;
-  }
 }
