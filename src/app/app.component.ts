@@ -77,15 +77,20 @@ export class AppComponent implements OnInit {
 
   initScrollOnRouteChange(): void {
     this.router.events.subscribe((evt: RouterEvent) => {
-      let scrollTo: number;
-      const scrollInterval = setInterval(() => {
-        if (this.scrolledAmount > 0) {
-          scrollTo = this.scrolledAmount - this.scrolledAmount / 4;
-          window.scrollTo(0, scrollTo);
-        } else {
-          clearInterval(scrollInterval);
-        }
-      }, 10);
+      if (this.isMobile) {
+        const scrollableElement = document.querySelector('#mobile-page-content');
+        scrollableElement.scrollTo(0, 0);
+      } else {
+        let scrollTo: number;
+        const scrollInterval = setInterval(() => {
+          if (this.scrolledAmount > 0) {
+            scrollTo = this.scrolledAmount - this.scrolledAmount / 4;
+            window.scrollTo(0, scrollTo);
+          } else {
+            clearInterval(scrollInterval);
+          }
+        }, 10);
+      }
     });
   }
 
