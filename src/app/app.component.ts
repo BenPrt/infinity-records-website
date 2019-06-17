@@ -70,6 +70,7 @@ export class AppComponent implements OnInit {
     this.initScrollOnRouteChange();
     this.initMobileStatus();
     this.initMobileSizing();
+    this.disableIOSBouncingEffect();
     this.initAnimationState();
     this.initLanguageChangeSubscription();
     this.initMobileMenuSubscription();
@@ -79,7 +80,9 @@ export class AppComponent implements OnInit {
     this.router.events.subscribe((evt: RouterEvent) => {
       if (this.isMobile) {
         const scrollableElement = document.querySelector('#mobile-page-content');
-        scrollableElement.scrollTo(0, 0);
+        if (scrollableElement) {
+          scrollableElement.scrollTo(0, 0);
+        }
       } else {
         let scrollTo: number;
         const scrollInterval = setInterval(() => {
@@ -108,6 +111,12 @@ export class AppComponent implements OnInit {
       document.documentElement.style.setProperty('--vh', `${vh}px`);
       const contentvh = (window.innerHeight - 81) * 0.01;
       document.documentElement.style.setProperty('--contentvh', `${contentvh}px`);
+    });
+  }
+
+  disableIOSBouncingEffect(): void {
+    document.addEventListener('touchmove', (event) => {
+      event.preventDefault();
     });
   }
 
