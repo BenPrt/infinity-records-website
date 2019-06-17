@@ -7,7 +7,6 @@
       [@menuBorderFade]="menuIsDisplayed"
     ></header-mobile-menu-component>
 
-    <div id="behind-header"></div>
     <div id="mobile-page-content" [@contentFade] *ngIf="contentIsDisplayed" (swipeRight)="openMobileMenu()">
       <router-outlet> </router-outlet>
       <footer-component [@contentFade]></footer-component>

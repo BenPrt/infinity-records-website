@@ -1,13 +1,9 @@
 @import "src/app/utils/_styleVariables";
 
-#behind-header{
-  height : 81px;
-  width : 100%;
-}
-
 #mobile-page-content{
+  margin-top : 81px;
   width : 100%;
-  height : calc(100vh - 81px);
+  height : 100vh;
   height: calc(var(--contentvh, 1vh) * 100);
   overflow-y: auto;
 }
