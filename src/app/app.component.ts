@@ -102,16 +102,21 @@ export class AppComponent implements OnInit {
   }
 
   initMobileSizing(): void {
-    const vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-    const contentvh = (window.innerHeight - 81) * 0.01;
-    document.documentElement.style.setProperty('--contentvh', `${contentvh}px`);
-    window.addEventListener('resize', () => {
+    if (this.isMobile) {
       const vh = window.innerHeight * 0.01;
       document.documentElement.style.setProperty('--vh', `${vh}px`);
       const contentvh = (window.innerHeight - 81) * 0.01;
       document.documentElement.style.setProperty('--contentvh', `${contentvh}px`);
-    });
+      window.addEventListener('resize', () => {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+        const contentvh = (window.innerHeight - 81) * 0.01;
+        document.documentElement.style.setProperty('--contentvh', `${contentvh}px`);
+      });
+
+      const bodyElement = document.body;
+      bodyElement.classList.add('mobile-body');
+    }
   }
 
   disableIOSBouncingEffect(): void {
