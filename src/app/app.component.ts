@@ -80,7 +80,9 @@ export class AppComponent implements OnInit {
     this.router.events.subscribe((evt: RouterEvent) => {
       if (this.isMobile) {
         const scrollableElement = document.querySelector('#mobile-page-content');
-        scrollableElement.scrollTo(0, 0);
+        if (scrollableElement) {
+          scrollableElement.scrollTo(0, 0);
+        }
       } else {
         let scrollTo: number;
         const scrollInterval = setInterval(() => {
