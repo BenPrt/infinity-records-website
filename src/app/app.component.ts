@@ -70,7 +70,6 @@ export class AppComponent implements OnInit {
     this.initScrollOnRouteChange();
     this.initMobileStatus();
     this.initMobileSizing();
-    this.disableIOSBouncingEffect();
     this.initAnimationState();
     this.initLanguageChangeSubscription();
     this.initMobileMenuSubscription();
@@ -117,12 +116,6 @@ export class AppComponent implements OnInit {
       const bodyElement = document.body;
       bodyElement.classList.add('mobile-body');
     }
-  }
-
-  disableIOSBouncingEffect(): void {
-    document.addEventListener('touchmove', (event) => {
-      event.preventDefault();
-    });
   }
 
   initAnimationState(): void {
