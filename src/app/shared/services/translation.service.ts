@@ -1,6 +1,7 @@
-import { Injectable, EventEmitter } from '@angular/core';
+import { Injectable, EventEmitter, Inject, PLATFORM_ID } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Subscription, Observable, of } from 'rxjs';
+import { isPlatformBrowser } from '@angular/common';
 
 export function translationFactoryResources(translationService: TranslationService) {
   return () => {
@@ -16,14 +17,20 @@ export function translationFactoryResources(translationService: TranslationServi
   providedIn: 'root',
 })
 export class TranslationService {
+  isBrowser: boolean;
   translations: any;
   currentLanguage: string = 'en';
   frLanguagesArray: string[] = ['fr', 'fr-FR', 'fr-BE', 'fr-CA', 'fr-LU', 'fr-MC', 'fr-CH'];
   resourcesLoaded: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  constructor(private http: HttpClient) {
-    if (this.frLanguagesArray.indexOf(window.navigator.language) !== -1) {
-      this.setCurrentLanguage('fr');
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private http: HttpClient) {
+    this.isBrowser = isPlatformBrowser(platformId);
+    if (this.isBrowser) {
+      if (this.frLanguagesArray.indexOf(window.navigator.language) !== -1) {
+        this.setCurrentLanguage('fr');
+      } else {
+        this.setCurrentLanguage('en');
+      }
     } else {
       this.setCurrentLanguage('en');
     }

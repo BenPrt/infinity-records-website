@@ -29,7 +29,7 @@ export class MyHammerConfig extends HammerGestureConfig {
   imports: [
     AppRoutingModule,
     AngularModule,
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     LayoutModule,
     HomeModule,

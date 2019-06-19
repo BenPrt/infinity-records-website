@@ -2,7 +2,6 @@ import { Component, OnInit, ChangeDetectorRef, HostListener } from '@angular/cor
 import { Location } from '@angular/common';
 import { Router, RouterEvent } from '@angular/router';
 import { animate, style, transition, trigger, state } from '@angular/animations';
-import 'hammerjs';
 
 import { DeviceUtils } from 'src/app/utils/device-utils';
 import { TranslationService } from 'src/app/shared/services/translation.service';
