@@ -1,5 +1,5 @@
-import { Component, Input, OnInit, OnChanges, SimpleChanges } from '@angular/core';
-import { Location } from '@angular/common';
+import { Component, Input, OnInit, OnChanges, SimpleChanges, Inject, PLATFORM_ID } from '@angular/core';
+import { Location, isPlatformBrowser } from '@angular/common';
 import { trigger, transition, style, animate, state } from '@angular/animations';
 
 @Component({
@@ -34,7 +34,7 @@ import { trigger, transition, style, animate, state } from '@angular/animations'
   ],
 })
 export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
-  constructor(private location: Location) {}
+  isBrowser: boolean;
   @Input() menuIsDisplayed: boolean;
   @Input() typoState: string;
   @Input() scaleState: string;
@@ -56,6 +56,10 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
     height: '17px',
     marginTop: '9px',
   };
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private location: Location) {
+    this.isBrowser = isPlatformBrowser(platformId);
+  }
 
   ngOnInit(): void {
     this.initAnimation();
@@ -80,22 +84,97 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
   }
 
   drawLogo(): void {
-    const paths = Array.from(document.querySelectorAll('#menu-logo-logo path'));
-    paths.forEach((arrayPath) => {
-      const path = <SVGPathElement>arrayPath;
-      const length = path.getTotalLength();
-      path.style.transition = path.style.webkitTransition = 'none';
-      path.style.strokeDasharray = `${length} ${length}`;
-      path.style.strokeDashoffset = String(length);
-      path.getBoundingClientRect();
-      path.style.transition = path.style.webkitTransition = 'stroke-dashoffset 4s ease-in-out';
-      path.style.strokeDashoffset = '0';
-    });
+    if (this.isBrowser) {
+      const paths = Array.from(document.querySelectorAll('#menu-logo-logo path'));
+      paths.forEach((arrayPath) => {
+        const path = <SVGPathElement>arrayPath;
+        const length = path.getTotalLength();
+        path.style.transition = path.style.webkitTransition = 'none';
+        path.style.strokeDasharray = `${length} ${length}`;
+        path.style.strokeDashoffset = String(length);
+        path.getBoundingClientRect();
+        path.style.transition = path.style.webkitTransition = 'stroke-dashoffset 4s ease-in-out';
+        path.style.strokeDashoffset = '0';
+      });
+    }
   }
 
   manageScrollAndClasses(scroll: number): void {
-    if (document.body.clientHeight < document.body.scrollHeight + 68) {
-      if (scroll >= 0 && scroll <= 68) {
+    if (this.isBrowser) {
+      if (document.body.clientHeight < document.body.scrollHeight + 68) {
+        if (scroll >= 0 && scroll <= 68) {
+          this.settingsStyle = { display: 'block' };
+          this.menuWrapperStyle = {
+            position: 'initial',
+            height: '204px',
+          };
+          this.menuContainerStyle = {
+            paddingTop: '32px',
+          };
+          this.menuLogoTypoStyle = {
+            height: '17px',
+            marginTop: '9px',
+          };
+        } else if (scroll > 68 && scroll <= 104) {
+          this.settingsStyle = { display: 'none' };
+          this.menuWrapperStyle = {
+            position: 'fixed',
+            zIndex: '1',
+            height: `calc(204px - (${Math.round(scroll)}px - 68px))`,
+          };
+          this.menuContainerStyle = {
+            paddingTop: '32px',
+          };
+          this.menuLogoTypoStyle = {
+            height: '17px',
+            marginTop: '9px',
+          };
+        } else if (scroll > 104 && scroll <= 130) {
+          this.settingsStyle = { display: 'none' };
+          this.menuWrapperStyle = {
+            position: 'fixed',
+            zIndex: '1',
+            height: `calc(204px - (${Math.round(scroll)}px - 68px))`,
+          };
+          this.menuContainerStyle = {
+            paddingTop: `calc(32px - ((${Math.round(scroll)}px - 104px) / 1.625)`,
+          };
+          this.menuLogoTypoStyle = {
+            height: `calc(17px - ((${Math.round(scroll)}px - 104px) / 1.53))`,
+            marginTop: `calc(9px - ((${Math.round(scroll)}px - 104px) / 2.88))`,
+          };
+        } else if (scroll > 130 && scroll <= 156) {
+          this.settingsStyle = { display: 'none' };
+          this.menuWrapperStyle = {
+            position: 'fixed',
+            zIndex: '1',
+            height: `calc(204px - (${Math.round(scroll)}px - 68px))`,
+          };
+          this.menuContainerStyle = {
+            paddingTop: `calc(32px - ((${Math.round(scroll)}px - 104px) / 1.625)`,
+          };
+          this.menuLogoTypoStyle = {
+            height: '0px',
+            marginTop: '0px',
+            display: 'none',
+          };
+        } else if (scroll > 156) {
+          this.settingsStyle = { display: 'none' };
+          this.menuWrapperStyle = {
+            position: 'fixed',
+            zIndex: '1',
+            height: '116px',
+          };
+          this.menuContainerStyle = {
+            paddingTop: '0px',
+          };
+          this.menuLogoTypoStyle = {
+            height: '0px',
+            marginTop: '0px',
+            display: 'none',
+          };
+        }
+      } else {
         this.settingsStyle = { display: 'block' };
         this.menuWrapperStyle = {
           position: 'initial',
@@ -108,78 +187,7 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
           height: '17px',
           marginTop: '9px',
         };
-      } else if (scroll > 68 && scroll <= 104) {
-        this.settingsStyle = { display: 'none' };
-        this.menuWrapperStyle = {
-          position: 'fixed',
-          zIndex: '1',
-          height: `calc(204px - (${Math.round(scroll)}px - 68px))`,
-        };
-        this.menuContainerStyle = {
-          paddingTop: '32px',
-        };
-        this.menuLogoTypoStyle = {
-          height: '17px',
-          marginTop: '9px',
-        };
-      } else if (scroll > 104 && scroll <= 130) {
-        this.settingsStyle = { display: 'none' };
-        this.menuWrapperStyle = {
-          position: 'fixed',
-          zIndex: '1',
-          height: `calc(204px - (${Math.round(scroll)}px - 68px))`,
-        };
-        this.menuContainerStyle = {
-          paddingTop: `calc(32px - ((${Math.round(scroll)}px - 104px) / 1.625)`,
-        };
-        this.menuLogoTypoStyle = {
-          height: `calc(17px - ((${Math.round(scroll)}px - 104px) / 1.53))`,
-          marginTop: `calc(9px - ((${Math.round(scroll)}px - 104px) / 2.88))`,
-        };
-      } else if (scroll > 130 && scroll <= 156) {
-        this.settingsStyle = { display: 'none' };
-        this.menuWrapperStyle = {
-          position: 'fixed',
-          zIndex: '1',
-          height: `calc(204px - (${Math.round(scroll)}px - 68px))`,
-        };
-        this.menuContainerStyle = {
-          paddingTop: `calc(32px - ((${Math.round(scroll)}px - 104px) / 1.625)`,
-        };
-        this.menuLogoTypoStyle = {
-          height: '0px',
-          marginTop: '0px',
-          display: 'none',
-        };
-      } else if (scroll > 156) {
-        this.settingsStyle = { display: 'none' };
-        this.menuWrapperStyle = {
-          position: 'fixed',
-          zIndex: '1',
-          height: '116px',
-        };
-        this.menuContainerStyle = {
-          paddingTop: '0px',
-        };
-        this.menuLogoTypoStyle = {
-          height: '0px',
-          marginTop: '0px',
-          display: 'none',
-        };
       }
-    } else {
-      this.settingsStyle = { display: 'block' };
-      this.menuWrapperStyle = {
-        position: 'initial',
-        height: '204px',
-      };
-      this.menuContainerStyle = {
-        paddingTop: '32px',
-      };
-      this.menuLogoTypoStyle = {
-        height: '17px',
-        marginTop: '9px',
-      };
     }
   }
 }
