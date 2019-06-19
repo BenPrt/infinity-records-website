@@ -16,7 +16,7 @@
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
     "build:client-and-server-bundles": "ng build --prod && ng run infinity-records-website:server:production",
     "start:ssr": "ng lint && npm run build:ssr && npm run serve:ssr",
-    "build_prod:ssr": "ng lint && npm run build:client-and-server-bundles",
+    "build_prod:ssr": "ng lint && npm run build:client-and-server-bundles && npm run compile:server",
     "start_server": "pm2 start server.js --name infinity-records_uat && pm2 logs infinity-records_uat --lines 100 &",
     "restart_server": "pm2 restart infinity-records_uat  && pm2 logs infinity-records_uat",
     "flush_server_logs": "pm2 flush",
