@@ -12,14 +12,12 @@ import { TranslationPipe } from './shared/pipes/translation.pipe';
     TranslationPipe,
   ],
   imports: [
-    BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
     NgxCaptchaModule,
   ],
   exports: [
-    BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
