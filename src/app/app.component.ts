@@ -1,7 +1,8 @@
 import { Component, OnInit, ChangeDetectorRef, HostListener, Inject, PLATFORM_ID } from '@angular/core';
 import { Location, isPlatformBrowser } from '@angular/common';
-import { Router, RouterEvent } from '@angular/router';
+import { Router, RouterEvent, NavigationEnd } from '@angular/router';
 import { animate, style, transition, trigger, state } from '@angular/animations';
+import { filter, first } from 'rxjs/operators';
 
 import { TranslationService } from 'src/app/shared/services/translation.service';
 import { MobileMenuEventsService } from './shared/services/mobile-menu-events.service';
@@ -70,12 +71,26 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.initDisplay();
     this.initScrollOnRouteChange();
     this.initMobileStatus();
     this.initMobileSizing();
     this.initAnimationState();
     this.initLanguageChangeSubscription();
     this.initMobileMenuSubscription();
+  }
+
+  initDisplay(): void {
+    this.router.events
+      .pipe(
+        filter(event => event instanceof NavigationEnd),
+        first(),
+      )
+      .subscribe(() => {
+        if (this.isBrowser) {
+          document.getElementsByTagName('body')[0].style.visibility = 'initial';
+        }
+      });
   }
 
   initScrollOnRouteChange(): void {
