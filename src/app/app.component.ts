@@ -140,23 +140,25 @@ export class AppComponent implements OnInit {
   }
 
   initMenuAnimation(): void {
-    this.scaleState = 'upscaled';
-    this.typoState = 'hidden';
-    this.menuIsDisplayed = false;
-    this.contentIsDisplayed = false;
-    setTimeout(() => {
-      // We display the typo
-      this.typoState = 'displayed';
+    if (this.isBrowser) {
+      this.scaleState = 'upscaled';
+      this.typoState = 'hidden';
+      this.menuIsDisplayed = false;
+      this.contentIsDisplayed = false;
       setTimeout(() => {
-        // We unscale the logo
-        this.scaleState = 'normal';
+        // We display the typo
+        this.typoState = 'displayed';
         setTimeout(() => {
-          // We display menu and content
-          this.menuIsDisplayed = true;
-          this.contentIsDisplayed = true;
-        }, 1050);
-      }, 1000);
-    }, 5000);
+          // We unscale the logo
+          this.scaleState = 'normal';
+          setTimeout(() => {
+            // We display menu and content
+            this.menuIsDisplayed = true;
+            this.contentIsDisplayed = true;
+          }, 1050);
+        }, 1000);
+      }, 5000);
+    }
   }
 
   initLanguageChangeSubscription(): void {
@@ -164,9 +166,13 @@ export class AppComponent implements OnInit {
       this.reloading = true;
       this.cd.detectChanges();
       this.cd.markForCheck();
-      setTimeout(() => {
+      if (this.isBrowser) {
+        setTimeout(() => {
+          this.reloading = false;
+        }, 500);
+      } else {
         this.reloading = false;
-      }, 500);
+      }
     });
   }
 
