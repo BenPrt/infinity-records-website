@@ -1,10 +1,9 @@
-import { Component, OnInit, ChangeDetectorRef, HostListener } from '@angular/core';
-import { Location } from '@angular/common';
-import { Router, RouterEvent } from '@angular/router';
+import { Component, OnInit, ChangeDetectorRef, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { Location, isPlatformBrowser } from '@angular/common';
+import { Router, RouterEvent, NavigationEnd } from '@angular/router';
 import { animate, style, transition, trigger, state } from '@angular/animations';
-import 'hammerjs';
+import { filter, first } from 'rxjs/operators';
 
-import { DeviceUtils } from 'src/app/utils/device-utils';
 import { TranslationService } from 'src/app/shared/services/translation.service';
 import { MobileMenuEventsService } from './shared/services/mobile-menu-events.service';
 
@@ -30,6 +29,8 @@ import { MobileMenuEventsService } from './shared/services/mobile-menu-events.se
   ],
 })
 export class AppComponent implements OnInit {
+  // Boolean defining if the app is executed by browser and not by server
+  isBrowser: boolean;
   // Boolean defining if the page is reloading (due to instant translation)
   reloading: boolean = false;
   // Boolean defining if the device is a mobile device or not
@@ -59,14 +60,18 @@ export class AppComponent implements OnInit {
   }
 
   constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
     private router: Router,
     private location: Location,
     private cd: ChangeDetectorRef,
     private translationService: TranslationService,
     private mobileMenuService: MobileMenuEventsService,
-  ) {}
+  ) {
+    this.isBrowser = isPlatformBrowser(platformId);
+  }
 
   ngOnInit(): void {
+    this.initDisplay();
     this.initScrollOnRouteChange();
     this.initMobileStatus();
     this.initMobileSizing();
@@ -75,46 +80,70 @@ export class AppComponent implements OnInit {
     this.initMobileMenuSubscription();
   }
 
-  initScrollOnRouteChange(): void {
-    this.router.events.subscribe((evt: RouterEvent) => {
-      if (this.isMobile) {
-        const scrollableElement = document.querySelector('#mobile-page-content');
-        if (scrollableElement) {
-          scrollableElement.scrollTo(0, 0);
+  initDisplay(): void {
+    this.router.events
+      .pipe(
+        filter(event => event instanceof NavigationEnd),
+        first(),
+      )
+      .subscribe(() => {
+        if (this.isBrowser) {
+          document.getElementsByTagName('body')[0].style.visibility = 'initial';
         }
-      } else {
-        let scrollTo: number;
-        const scrollInterval = setInterval(() => {
-          if (this.scrolledAmount > 0) {
-            scrollTo = this.scrolledAmount - this.scrolledAmount / 4;
-            window.scrollTo(0, scrollTo);
-          } else {
-            clearInterval(scrollInterval);
+      });
+  }
+
+  initScrollOnRouteChange(): void {
+    if (this.isBrowser) {
+      this.router.events.subscribe((evt: RouterEvent) => {
+        if (this.isMobile) {
+          const scrollableElement = document.querySelector('#mobile-page-content');
+          if (scrollableElement) {
+            scrollableElement.scrollTo(0, 0);
           }
-        }, 10);
-      }
-    });
+        } else {
+          let scrollTo: number;
+          const scrollInterval = setInterval(() => {
+            if (this.scrolledAmount > 0) {
+              scrollTo = this.scrolledAmount - this.scrolledAmount / 4;
+              window.scrollTo(0, scrollTo);
+            } else {
+              clearInterval(scrollInterval);
+            }
+          }, 10);
+        }
+      });
+    }
   }
 
   initMobileStatus(): void {
-    this.isMobile = DeviceUtils.isMobile();
+    if (this.isBrowser) {
+      const userAgent = navigator.userAgent;
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(userAgent)) {
+        this.isMobile = true;
+      } else {
+        this.isMobile = false;
+      }
+    }
   }
 
   initMobileSizing(): void {
-    if (this.isMobile) {
-      const vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-      const contentvh = (window.innerHeight - 81) * 0.01;
-      document.documentElement.style.setProperty('--contentvh', `${contentvh}px`);
-      window.addEventListener('resize', () => {
+    if (this.isBrowser) {
+      if (this.isMobile) {
         const vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
         const contentvh = (window.innerHeight - 81) * 0.01;
         document.documentElement.style.setProperty('--contentvh', `${contentvh}px`);
-      });
+        window.addEventListener('resize', () => {
+          const vh = window.innerHeight * 0.01;
+          document.documentElement.style.setProperty('--vh', `${vh}px`);
+          const contentvh = (window.innerHeight - 81) * 0.01;
+          document.documentElement.style.setProperty('--contentvh', `${contentvh}px`);
+        });
 
-      const bodyElement = document.body;
-      bodyElement.classList.add('mobile-body');
+        const bodyElement = document.body;
+        bodyElement.classList.add('mobile-body');
+      }
     }
   }
 
@@ -126,23 +155,25 @@ export class AppComponent implements OnInit {
   }
 
   initMenuAnimation(): void {
-    this.scaleState = 'upscaled';
-    this.typoState = 'hidden';
-    this.menuIsDisplayed = false;
-    this.contentIsDisplayed = false;
-    setTimeout(() => {
-      // We display the typo
-      this.typoState = 'displayed';
+    if (this.isBrowser) {
+      this.scaleState = 'upscaled';
+      this.typoState = 'hidden';
+      this.menuIsDisplayed = false;
+      this.contentIsDisplayed = false;
       setTimeout(() => {
-        // We unscale the logo
-        this.scaleState = 'normal';
+        // We display the typo
+        this.typoState = 'displayed';
         setTimeout(() => {
-          // We display menu and content
-          this.menuIsDisplayed = true;
-          this.contentIsDisplayed = true;
-        }, 1050);
-      }, 1000);
-    }, 5000);
+          // We unscale the logo
+          this.scaleState = 'normal';
+          setTimeout(() => {
+            // We display menu and content
+            this.menuIsDisplayed = true;
+            this.contentIsDisplayed = true;
+          }, 1050);
+        }, 1000);
+      }, 5000);
+    }
   }
 
   initLanguageChangeSubscription(): void {
@@ -150,9 +181,13 @@ export class AppComponent implements OnInit {
       this.reloading = true;
       this.cd.detectChanges();
       this.cd.markForCheck();
-      setTimeout(() => {
+      if (this.isBrowser) {
+        setTimeout(() => {
+          this.reloading = false;
+        }, 500);
+      } else {
         this.reloading = false;
-      }, 500);
+      }
     });
   }
 

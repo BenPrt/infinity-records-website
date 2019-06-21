@@ -19,7 +19,7 @@
 
     <mat-form-field id="email-field">
       <mat-label>{{ 'EMAIL' | translation }}</mat-label>
-      <input matInput type="email"  autocomplete="off" formControlName="address" />
+      <input matInput type="email" autocomplete="off" formControlName="address" />
       <mat-error
         *ngIf="
           contactFormGroup.controls.address.hasError('email') && !contactFormGroup.controls.address.hasError('required')
@@ -49,6 +49,7 @@
     <div id="captcha-and-submit-container">
       <div id="captcha-field">
         <ngx-recaptcha2
+          *ngIf="isBrowser"
           #captchaElem
           [siteKey]="recaptchaToken"
           [useGlobalDomain]="false"
@@ -59,14 +60,14 @@
         </ngx-recaptcha2>
       </div>
 
-        <button id="submit-button" *ngIf="!formHasBeenSubmitted" [disabled]="!contactFormGroup.valid">
-          {{ 'SEND' | translation }}
-        </button>
-        <i id="sending-message-loader" *ngIf="messageSendingLoading" class="fas fa-circle-notch fa-spin"></i>
-        <div id="success-message" *ngIf="messageHasBeenSent" >
-          <img id="success-message-icon" alt="Success Icon" src="assets/icons/check_gold.svg" />
-          <p id="success-message-message">{{ 'MESSAGE_SENT' | translation }}</p>
-        </div>
+      <button id="submit-button" *ngIf="!formHasBeenSubmitted" [disabled]="!contactFormGroup.valid">
+        {{ 'SEND' | translation }}
+      </button>
+      <i id="sending-message-loader" *ngIf="messageSendingLoading" class="fas fa-circle-notch fa-spin"></i>
+      <div id="success-message" *ngIf="messageHasBeenSent">
+        <img id="success-message-icon" alt="Success Icon" src="assets/icons/check_gold.svg" />
+        <p id="success-message-message">{{ 'MESSAGE_SENT' | translation }}</p>
+      </div>
     </div>
   </form>
 </div>

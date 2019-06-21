@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { environment } from 'src/environments/environment';
 import { ContactService } from 'src/app/shared/services/contact.service';
 import { Email } from 'src/app/models/e-mail';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'contact-form-component',
@@ -12,13 +13,20 @@ import { trigger, transition, style, animate } from '@angular/animations';
   animations: [],
 })
 export class ContactFormComponent {
+  isBrowser: boolean;
   contactFormGroup: FormGroup;
   recaptchaToken: string = environment.contactFormRecaptchaKey;
   formHasBeenSubmitted: boolean = false;
   messageSendingLoading: boolean = false;
   messageHasBeenSent: boolean = false;
 
-  constructor(private formBuilder: FormBuilder, private contactService: ContactService) {}
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private formBuilder: FormBuilder,
+    private contactService: ContactService,
+  ) {
+    this.isBrowser = isPlatformBrowser(platformId);
+  }
 
   ngOnInit(): void {
     this.initForm();
