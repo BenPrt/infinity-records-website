@@ -26,5 +26,8 @@
 	"MESSAGE_SENT" : "Message envoyé",
 	
 	"COPYRIGHT_1" : "Copyright © ",
-	"COPYRIGHT_2" : " Infinity Records. Tous droits Réservés."	
+	"COPYRIGHT_2" : " Infinity Records. Tous droits Réservés.",
+	
+	"MERCH_BANNER_SUBTITLE" : "Made in Infinity Records",
+	"MERCH_BANNER_DESCRIPTION" : "Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus."
 }
