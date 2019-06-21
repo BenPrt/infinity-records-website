@@ -80,11 +80,11 @@ export class MerchDescriptionComponent implements OnInit, OnDestroy {
 
   scrollToPreview(): void {
     if (this.isBrowser) {
-      console.log(window);
-      console.log(document.getElementById('first-layer'));
-      console.log(document.getElementById('first-layer').clientHeight);
-      console.log(document.getElementById('first-layer').scrollTop);
-      window.scrollTo(0, 1590);
+      if (this.isMobile) {
+        document.getElementById('mobile-page-content').scrollTo(0, 1366);
+      } else {
+        window.scrollTo(0, 1590);
+      }
     }
   }
 }

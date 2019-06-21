@@ -2,26 +2,66 @@
 
 :host {
   #first-layer {
-    width: 87.5%;
-    height: 683px;
     background-color: $white;
-    border-right: 1px solid $very-light-grey;
+    border-right: 2px solid $very-light-grey;
+    @media screen and (min-device-width: $tablet-size) {
+      width: 87.5%;
+      height: 683px;
+    }
+    @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+    }
+    @media screen and (max-device-width: $mobile-size) {
+      width: 87%;
+      height: 865px;
+    }
+
     #second-layer {
-      width: calc(100% - 301px);
-      height: calc(683px - 80px);
-      padding-top: 80px;
       background-color: $very-light-grey;
+      @media screen and (min-device-width: $tablet-size) {
+        width: calc(100% - 301px);
+        height: calc(683px - 80px);
+        padding-top: 80px;
+      }
+      @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+      }
+      @media screen and (max-device-width: $mobile-size) {
+        width: calc(100% - 50px);
+        height: calc(865px - 56px);
+        padding-top: 56px;
+      }
 
       #text-zone {
-        width: 412px;
-        margin-left: calc((100vw - 1300px) / 2);
+        @media screen and (min-device-width: $tablet-size) {
+          width: 412px;
+          margin-left: calc((100vw - 1300px) / 2);
+        }
+        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+        }
+        @media screen and (max-device-width: $mobile-size) {
+          width: 100%;
+          margin-left: 16px;
+        }
         #description-title {
-          font-size: 44px;
           line-height: 1.27;
           font-weight: normal;
+          @media screen and (min-device-width: $tablet-size) {
+            font-size: 44px;
+          }
+          @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+          }
+          @media screen and (max-device-width: $mobile-size) {
+            font-size: 32px;
+          }
         }
         #products-indicators {
-          margin-top: 32px;
+          @media screen and (min-device-width: $tablet-size) {
+            margin-top: 32px;
+          }
+          @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+          }
+          @media screen and (max-device-width: $mobile-size) {
+            margin-top: 24px;
+          }
           .products-indicator {
             display: inline-block;
             cursor: pointer;
@@ -38,24 +78,44 @@
           }
         }
         #product-title {
+          @media screen and (min-device-width: $tablet-size) {
+            margin-top: 56px;
+          }
+          @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+          }
+          @media screen and (max-device-width: $mobile-size) {
+            margin-top: 287px;
+          }
           font-size: 32px;
           font-weight: bold;
-          margin-top: 56px;
         }
         #product-informations {
           list-style-type: none;
           padding: 0;
           margin: 24px 0 0 0;
-          height: 94px;
-          width: 480px;
-          columns: 2;
-          -webkit-columns: 2;
-          -moz-columns: 2;
+          @media screen and (min-device-width: $tablet-size) {
+            height: 94px;
+            width: 480px;
+            columns: 2;
+            -webkit-columns: 2;
+            -moz-columns: 2;
+          }
+          @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+          }
+          @media screen and (max-device-width: $mobile-size) {
+          }
           .product-information {
-            margin: 0 0 8px 16px;
             font-size: 16px;
             line-height: 1.63;
-            width: 230px;
+            @media screen and (min-device-width: $tablet-size) {
+              width: 230px;
+              margin: 0 0 8px 16px;
+            }
+            @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+            }
+            @media screen and (max-device-width: $mobile-size) {
+              margin: 0 0 8px 0;
+            }
             span {
               color: $gold;
               margin-right: 5px;
@@ -63,12 +123,21 @@
           }
         }
         #product-colors {
-          width: 440px;
           height: 24px;
-          margin-top: 50px;
           display: flex;
           justify-content: space-between;
           align-items: center;
+          @media screen and (min-device-width: $tablet-size) {
+            width: 440px;
+            margin-top: 50px;
+          }
+          @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+          }
+          @media screen and (max-device-width: $mobile-size) {
+            width: calc(100% - 16px - 40px);
+            margin-top: 40px;
+          }
+
           #black-square {
             width: 24px;
             height: 24px;
@@ -80,18 +149,24 @@
             background-color: $white;
           }
           #gold-separator {
-            width: 185px;
             height: 1px;
             border: none;
             margin: 0;
             background-color: $gold;
+            @media screen and (min-device-width: $tablet-size) {
+              width: 185px;
+            }
+            @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+            }
+            @media screen and (max-device-width: $mobile-size) {
+              width: 72px;
+            }
           }
           #color-text {
             font-size: 14px;
           }
         }
         #see-more-button {
-          margin-top: 72px;
           width: 140px;
           height: 40px;
           border: 1px solid $black;
@@ -99,21 +174,83 @@
           background-color: $very-light-grey;
           text-align: center;
           font-size: 16px;
-          font-weight : bold;
+          font-weight: bold;
           letter-spacing: 2px;
           cursor: pointer;
 
-          &:focus{
-              outline : none;
+          @media screen and (min-device-width: $tablet-size) {
+            margin-top: 72px;
+          }
+          @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+          }
+          @media screen and (max-device-width: $mobile-size) {
+            margin-top: 48px;
+          }
+          &:focus {
+            outline: none;
           }
         }
       }
-      #product-picture{
-          position : absolute;
-          width : 634px;
-          height : 475px;
-          margin-top : -465px;
-          right : 12.5%;
+    }
+    #product-picture-container {
+      @media screen and (min-device-width: $tablet-size) {
+        position: relative;
+        margin-top : -545px;
+        margin-left : calc(100% - 633px);
+        width: 634px;
+        height: 475px;
+      }
+      @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+      }
+      @media screen and (max-device-width: $mobile-size) {
+        position: relative;
+        margin-top : -683px;
+        margin-left : calc(100% - 283px);
+        width: 284px;
+        height: 213px;
+      }
+
+      #product-picture {
+        @media screen and (min-device-width: $tablet-size) {
+          width: 634px;
+          height: 475px;
+        }
+        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+        }
+        @media screen and (max-device-width: $mobile-size) {
+          width: 284px;
+          height: 213px;
+        }
+      }
+      #page-navigator {
+        position: absolute;
+        width: 105px;
+        height: 52px;
+        margin-top : -56px;
+        right : -1px;
+        background-color: $white;
+        display: flex;
+        justify-content: space-between;
+
+        .page-button {
+          height: 52px;
+          width: 52px;
+          cursor: pointer;
+          background-color: $very-light-grey;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          user-select: none;
+          .navigation-arrow {
+            width: 14px;
+            height: 14px;
+          }
+        }
+
+        .disabled {
+          background-color: $white;
+          cursor: default;
+        }
       }
     }
   }

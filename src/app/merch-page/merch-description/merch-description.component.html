@@ -3,22 +3,57 @@
     <div id="text-zone">
       <p id="description-title">{{ 'MERCH_PRODUCTS_TITLE' | translation }}</p>
       <div id="products-indicators">
-        <p class="products-indicator" [ngClass]="{'selected' : isCurrentProduct(0)}" (click)="goToProduct(0)">01</p>
-        <p class="products-indicator" [ngClass]="{'selected' : isCurrentProduct(1)}" (click)="goToProduct(1)">02</p>
-        <p class="products-indicator" [ngClass]="{'selected' : isCurrentProduct(2)}" (click)="goToProduct(2)">03</p>
+        <p class="products-indicator" [ngClass]="{ selected: isCurrentProduct(0) }" (click)="goToProduct(0)">01</p>
+        <p class="products-indicator" [ngClass]="{ selected: isCurrentProduct(1) }" (click)="goToProduct(1)">02</p>
+        <p class="products-indicator" [ngClass]="{ selected: isCurrentProduct(2) }" (click)="goToProduct(2)">03</p>
       </div>
-      <p id="product-title">{{currentProduct.title | translation}}</p>
+      <p id="product-title">{{ currentProduct.title | translation }}</p>
       <ul id="product-informations">
-          <li *ngFor="let info of currentProduct.informations" class="product-information"><span>&diams;</span> {{info |translation}}</li>
+        <li *ngFor="let info of currentProduct.informations" class="product-information">
+          <span>&diams;</span> {{ info | translation }}
+        </li>
       </ul>
       <div id="product-colors">
-          <div id="black-square"></div>
-          <div id="white-square"></div>
-          <hr id="gold-separator"/>
-          <p id="color-text">{{"MERCH_TWO_COLORS"|translation}}</p>
+        <div id="black-square"></div>
+        <div id="white-square"></div>
+        <hr id="gold-separator" />
+        <p id="color-text" *ngIf="isMobile">{{ 'MERCH_TWO_COLORS_MIN' | translation }}</p>
+        <p id="color-text" *ngIf="!isMobile">{{ 'MERCH_TWO_COLORS' | translation }}</p>
       </div>
-      <button id="see-more-button" (click)="scrollToPreview()">{{"MERCH_SEE_MORE" | translation}}</button>
+      <button id="see-more-button" (click)="scrollToPreview()">{{ 'MERCH_SEE_MORE' | translation }}</button>
     </div>
-    <img id="product-picture" alt="{{currentProduct.title}} picture" [src]="currentProduct.picture"/>
   </div>
+  <div id="product-picture-container">
+        <img id="product-picture" alt="{{ currentProduct.title }} picture" [src]="currentProduct.picture" />
+        <div id="page-navigator" *ngIf="isMobile">
+              <div class="page-button" [ngClass]="{ disabled: isDisabled('previous') }" (click)="goToPreviousPage()">
+                <img
+                  *ngIf="!isDisabled('previous')"
+                  class="navigation-arrow"
+                  alt="Previous Arrow Enabled"
+                  src="assets/icons/merch_arrow_left_dark-grey.svg"
+                />
+                <img
+                  *ngIf="isDisabled('previous')"
+                  class="navigation-arrow"
+                  alt="Previous Arrow Disabled"
+                  src="assets/icons/merch_arrow_left_light-grey.svg"
+                />
+              </div>
+              <div class="page-button" [ngClass]="{ disabled: isDisabled('next') }" (click)="goToNextPage()">
+                <img
+                  *ngIf="!isDisabled('next')"
+                  class="navigation-arrow"
+                  alt="Next Arrow Enabled"
+                  src="assets/icons/merch_arrow_right_dark-grey.svg"
+                />
+                <img
+                  *ngIf="isDisabled('next')"
+                  class="navigation-arrow"
+                  alt="Next Arrow Disabled"
+                  src="assets/icons/merch_arrow_right_light-grey.svg"
+                />
+              </div>
+            </div>
+      </div>
 </div>
