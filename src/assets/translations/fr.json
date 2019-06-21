@@ -29,5 +29,22 @@
 	"COPYRIGHT_2" : " Infinity Records. Tous droits Réservés.",
 	
 	"MERCH_BANNER_SUBTITLE" : "Made in Infinity Records",
-	"MERCH_BANNER_DESCRIPTION" : "Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus."
+	"MERCH_BANNER_DESCRIPTION" : "Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus.",
+	"MERCH_PRODUCTS_TITLE" : "Nos Produits",
+	"MERCH_TITLE_HOODIES" : "Hoodies",
+	"MERCH_TITLE_TSHIRTS" : "T-Shirts",
+	"MERCH_TITLE_CREWNECKS" : "Crewnecks",
+	
+	"MERCH_INFOS_DIGITAL_PRINTING" : "Impression digitale",
+	"MERCH_INFOS_FULL_COTTON" : "100% coton",
+	"MERCH_INFOS_COTTON_POLYESTER" : "80% coton / 20% Polyester",
+	"MERCH_INFOS_CLASSICAL_CUT" : "Coupe classique",
+	"MERCH_INFOS_CLASSICAT_CUT_ROUND" : "Coupe classique / Col rond",
+	"MERCH_INFOS_GRAMMING_180" : "Grammage : 180gr/m²",
+	"MERCH_INFOS_GRAMMING_280" : "Grammage : 280gr/m²",
+	"MERCH_INFOS_MACHINE_WASHABLE" : "Lavable en machine",
+	
+	"MERCH_TWO_COLORS" : "Existent en 2 couleurs",
+	
+	"MERCH_SEE_MORE" : "VOIR PLUS"
 }

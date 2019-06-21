@@ -1,0 +1,120 @@
+@import 'src/app/utils/_styleVariables';
+
+:host {
+  #first-layer {
+    width: 87.5%;
+    height: 683px;
+    background-color: $white;
+    border-right: 1px solid $very-light-grey;
+    #second-layer {
+      width: calc(100% - 301px);
+      height: calc(683px - 80px);
+      padding-top: 80px;
+      background-color: $very-light-grey;
+
+      #text-zone {
+        width: 412px;
+        margin-left: calc((100vw - 1300px) / 2);
+        #description-title {
+          font-size: 44px;
+          line-height: 1.27;
+          font-weight: normal;
+        }
+        #products-indicators {
+          margin-top: 32px;
+          .products-indicator {
+            display: inline-block;
+            cursor: pointer;
+            color: $grey;
+            margin-right: 24px;
+            font-size: 18px;
+            line-height: 1.56;
+            user-select: none;
+          }
+          .selected {
+            color: $black;
+            font-weight: bold;
+            border-bottom: 2px solid $black;
+          }
+        }
+        #product-title {
+          font-size: 32px;
+          font-weight: bold;
+          margin-top: 56px;
+        }
+        #product-informations {
+          list-style-type: none;
+          padding: 0;
+          margin: 24px 0 0 0;
+          height: 94px;
+          width: 480px;
+          columns: 2;
+          -webkit-columns: 2;
+          -moz-columns: 2;
+          .product-information {
+            margin: 0 0 8px 16px;
+            font-size: 16px;
+            line-height: 1.63;
+            width: 230px;
+            span {
+              color: $gold;
+              margin-right: 5px;
+            }
+          }
+        }
+        #product-colors {
+          width: 440px;
+          height: 24px;
+          margin-top: 50px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          #black-square {
+            width: 24px;
+            height: 24px;
+            background-color: $black;
+          }
+          #white-square {
+            width: 24px;
+            height: 24px;
+            background-color: $white;
+          }
+          #gold-separator {
+            width: 185px;
+            height: 1px;
+            border: none;
+            margin: 0;
+            background-color: $gold;
+          }
+          #color-text {
+            font-size: 14px;
+          }
+        }
+        #see-more-button {
+          margin-top: 72px;
+          width: 140px;
+          height: 40px;
+          border: 1px solid $black;
+          color: $black;
+          background-color: $very-light-grey;
+          text-align: center;
+          font-size: 16px;
+          font-weight : bold;
+          letter-spacing: 2px;
+          cursor: pointer;
+
+          &:focus{
+              outline : none;
+          }
+        }
+      }
+      #product-picture{
+          position : absolute;
+          width : 634px;
+          height : 475px;
+          margin-top : -465px;
+          right : 12.5%;
+      }
+    }
+  }
+}
