@@ -7,7 +7,7 @@
     <p id="text-subtitle">{{ 'MERCH_BANNER_SUBTITLE' | translation }}</p>
     <p id="text-description">{{ 'MERCH_BANNER_DESCRIPTION' | translation }}</p>
   </div>
-  <div id="page-navigator">
+  <div id="page-navigator" *ngIf="!isMobile">
     <div class="page-button" [ngClass]="{ disabled: isDisabled('previous') }" (click)="goToPreviousPage()">
       <img
         *ngIf="!isDisabled('previous')"

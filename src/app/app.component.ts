@@ -6,6 +6,7 @@ import { filter, first } from 'rxjs/operators';
 
 import { TranslationService } from 'src/app/shared/services/translation.service';
 import { MobileMenuEventsService } from './shared/services/mobile-menu-events.service';
+import { DeviceService } from './shared/services/device.service';
 
 @Component({
   selector: 'app-root',
@@ -64,6 +65,7 @@ export class AppComponent implements OnInit {
     private router: Router,
     private location: Location,
     private cd: ChangeDetectorRef,
+    private deviceService : DeviceService,
     private translationService: TranslationService,
     private mobileMenuService: MobileMenuEventsService,
   ) {
@@ -124,6 +126,7 @@ export class AppComponent implements OnInit {
       } else {
         this.isMobile = false;
       }
+      this.deviceService.setDeviceIsMobile(this.isMobile);
     }
   }
 

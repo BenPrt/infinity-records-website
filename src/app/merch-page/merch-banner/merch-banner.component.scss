@@ -1,83 +1,129 @@
 @import 'src/app/utils/_styleVariables';
 
 :host {
-  width: 100%;
-  height: 751px;
   display: block;
+  width: 100%;
+  position : relative;
+  @media screen and (min-device-width: $tablet-size) {
+    height: 751px;
+  }
+  @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+  }
+  @media screen and (max-device-width: $mobile-size) {
+    height: 501px;
+  }
 
   #banner-image-container {
     position: absolute;
     z-index: 0;
     width: 100%;
-    height: 751px;
     overflow-y: hidden;
+    @media screen and (min-device-width: $tablet-size) {
+      height: 751px;
+    }
+    @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+    }
+    @media screen and (max-device-width: $mobile-size) {
+      display: flex;
+      justify-content: center;
+      height: 501px;
+    }
+
     #banner-image {
-      width: 100%;
-      // change margin to recenter image in container
-      margin: 0;
+      @media screen and (min-device-width: $tablet-size) {
+        width: 100%;
+        // change margin to recenter image in container
+        margin: 0;
+      }
+      @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+      }
+      @media screen and (max-device-width: $mobile-size) {
+        height: 501px;
+      }
     }
   }
   #content-over-image {
     position: absolute;
     z-index: 1;
     width: 100%;
-    height: 751px;
-    display : flex;
+    display: flex;
     align-items: flex-end;
-
-    #text-container{
-        width : 412px;
-        text-align : center;
-        display : block;
-        margin : 0 auto 216px auto;
-        color : $white;
-        #text-title{
-            font-size : 16px;
-            font-weight : bold;
-            letter-spacing : 2px;
+    @media screen and (min-device-width: $tablet-size) {
+      height: 751px;
+    }
+    @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+    }
+    @media screen and (max-device-width: $mobile-size) {
+      height: 501px;
+    }
+    #text-container {
+      text-align: center;
+      display: block;
+      color: $white;
+      @media screen and (min-device-width: $tablet-size) {
+        width: 412px;
+        margin: 0 auto 216px auto;
+      }
+      @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+      }
+      @media screen and (max-device-width: $mobile-size) {
+        width: 344px;
+        margin: 0 auto 59px auto;
+      }
+      #text-title {
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+      #text-subtitle {
+        margin-top: 10px;
+        line-height: 1.27;
+        font-weight: normal;
+        @media screen and (min-device-width: $tablet-size) {
+          font-size: 44px;
         }
-        #text-subtitle{
-            margin-top : 10px;
-            font-size : 44px;
-            line-height : 1.27;
-            font-weight : normal;
+        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
         }
-        #text-description{
-            margin-top : 15px;
-            font-size : 18px;
-            font-weight : 500;
-            line-height: 1.56;
+        @media screen and (max-device-width: $mobile-size) {
+          font-size: 32px;
         }
+      }
+      #text-description {
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.56;
+      }
     }
 
-    #page-navigator{
-        position : absolute;
-        width : 301px;
-        height : 150px;
-        right : 12.5%;
-        background-color : $white;
-        display : flex;
-        justify-content: space-between;
+    #page-navigator {
+      position: absolute;
+      width: 301px;
+      height: 150px;
+      right: 12.5%;
+      background-color: $white;
+      display: flex;
+      justify-content: space-between;
 
-        .page-button{
-            height : 150px;
-            width : 150px;
-            cursor : pointer;
-            background-color : $light-grey;
-            display : flex;
-            align-items: center;
-            justify-content: center;
-            user-select : none;
-            .navigation-arrow{
-                width : 40px;
-                height : 40px;
-            }
+      .page-button {
+        height: 150px;
+        width: 150px;
+        cursor: pointer;
+        background-color: $light-grey;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+        .navigation-arrow {
+          width: 40px;
+          height: 40px;
         }
+      }
 
-        .disabled {
-            background-color : $white;
-            cursor : default;
-        }
+      .disabled {
+        background-color: $white;
+        cursor: default;
+      }
     }
   }
 }

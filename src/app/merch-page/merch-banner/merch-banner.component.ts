@@ -2,6 +2,7 @@ import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { MerchService } from 'src/app/shared/services/merch.service';
 import { Subscription } from 'rxjs';
 import { merchInfos } from 'src/assets/content/merch-content';
+import { DeviceService } from 'src/app/shared/services/device.service';
 
 @Component({
   selector: 'merch-banner',
@@ -11,21 +12,32 @@ import { merchInfos } from 'src/assets/content/merch-content';
 export class MerchBannerComponent implements OnInit, OnDestroy {
   currentProductId: number;
   currentIdSubscription: Subscription;
-  constructor(private merchService: MerchService) {}
+  isMobile: boolean;
+  deviceTypeSubscription: Subscription;
+  constructor(private merchService: MerchService, private deviceService: DeviceService) {}
 
   ngOnInit(): void {
     this.initCurrentProductId();
+    this.initDeviceType();
   }
 
   initCurrentProductId(): void {
     this.currentProductId = this.merchService.getCurrentPageId();
-    this.currentIdSubscription = this.merchService.currentPageIdHasChanged.subscribe((currentId) => {
+    this.currentIdSubscription = this.merchService.currentPageIdHasChanged.subscribe((currentId: number) => {
       this.currentProductId = currentId;
+    });
+  }
+
+  initDeviceType(): void {
+    this.isMobile = this.deviceService.getIsMobile();
+    this.deviceTypeSubscription = this.deviceService.deviceIsMobileHasChanged.subscribe((isMobile: boolean) => {
+      this.isMobile = isMobile;
     });
   }
 
   ngOnDestroy(): void {
     this.currentIdSubscription.unsubscribe();
+    this.deviceTypeSubscription.unsubscribe();
   }
 
   isDisabled(direction: string): boolean {
