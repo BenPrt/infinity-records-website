@@ -88,8 +88,8 @@
             ],
             "scripts": [],
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {"glob": "robots.txt", "input": "src/assets", "output": "/"}
             ]
           }
         },
