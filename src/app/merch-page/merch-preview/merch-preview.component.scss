@@ -1,0 +1,127 @@
+@import 'src/app/utils/_styleVariables';
+
+:host {
+  #first-layer {
+    width: calc(75% - 2px);
+    margin-left: 12.5%;
+    height: 729px;
+    border-left: 2px solid $very-light-grey;
+    border-right: 2px solid $very-light-grey;
+  }
+
+  #page-navigator-container {
+    width: 297px;
+    height: 625px;
+    border-right: 2px solid $very-light-grey;
+    #product-title {
+      width: 120px;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      transform: rotate(90deg);
+      position: absolute;
+      margin-left: -45px;
+      margin-top: 151px;
+    }
+    #page-navigator {
+      position: absolute;
+      margin-top: calc(625px - 150px);
+      margin-left: -2px;
+      width: 301px;
+      height: 150px;
+      background-color: $grey;
+      display: flex;
+      justify-content: space-between;
+
+      .page-button {
+        height: 150px;
+        width: 150px;
+        cursor: pointer;
+        background-color: $dark-grey;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+        .navigation-arrow {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      .disabled {
+        background-color: $grey;
+        cursor: default;
+      }
+    }
+  }
+  #second-layer {
+    position: absolute;
+    width: 412px;
+    height: 625px;
+    margin-top: -625px;
+    margin-left: calc(75% - 301px - 2px);
+    background-color: $very-light-grey;
+  }
+  #previews {
+    position: absolute;
+    width: 67.2%;
+    height: 302px;
+    margin-top: calc(-625px + 104px);
+    margin-left: calc(75% - 301px - 2px + 412px - 67.2%);
+    display: flex;
+    justify-content: space-between;
+    .preview {
+      height: 301px;
+      width: 301px;
+      .preview-picture {
+        height: 301px;
+        width: 301px;
+      }
+      .details-overlay {
+        visibility:hidden;
+        position: relative;
+        height: 301px;
+        width: 301px;
+        margin-top: -305px;
+        .overlay {
+          height: 301px;
+          width: 301px;
+          background-color: $black;
+          opacity: 0.8;
+        }
+        .description {
+          color: $white;
+          position: relative;
+          margin-top: -305px;
+          height: 301px;
+          width: 301px;
+          .description-title {
+            margin-left: 32px;
+            margin-top: 109px;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+          }
+          .description-color {
+            margin-left: 32px;
+            height: 32px;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 1.33;
+          }
+          .sold-out-banner {
+            width: 100%;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 40px;
+            background-color: $black;
+          }
+        }
+      }
+    }
+  }
+}

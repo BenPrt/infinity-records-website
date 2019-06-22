@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TranslationService } from 'src/app/shared/services/translation.service';
 import { LanguageOption } from 'src/app/models/translation';
 import { trigger, state, style, transition, animate } from '@angular/animations';

@@ -47,6 +47,12 @@
 	"MERCH_TWO_COLORS" : "Exist in 2 colors",
 	"MERCH_TWO_COLORS_MIN" : "2 colors",
 	
-	"MERCH_SEE_MORE" : "SEE MORE"
+	"MERCH_SEE_MORE" : "SEE MORE",
+	
+	"MERCH_MAIN_BLACK" : "Black fabric",
+	"MERCH_MAIN_WHITE" : "White fabric",
+	"MERCH_LOGO_GOLD" : "Golden logo",
+	"MERCH_LOGO_WHITE" : "White logo",
+	"MERCH_LOGO_BLACK" : "Black logo"
 	
 }

@@ -47,5 +47,13 @@
 	"MERCH_TWO_COLORS" : "Existent en 2 couleurs",
 	"MERCH_TWO_COLORS_MIN" : "2 couleurs",
 	
-	"MERCH_SEE_MORE" : "VOIR PLUS"
+	"MERCH_SEE_MORE" : "VOIR PLUS",
+	
+	"MERCH_MAIN_BLACK" : "Tissu noir",
+	"MERCH_MAIN_WHITE" : "Tissu blanc",
+	"MERCH_LOGO_GOLD" : "Logo doré",
+	"MERCH_LOGO_WHITE" : "Logo blanc",
+	"MERCH_LOGO_BLACK" : "Logo noir",
+	
+	"MERCH_COMING_SOON" : "BIENTÔT DISPONIBLE"
 }

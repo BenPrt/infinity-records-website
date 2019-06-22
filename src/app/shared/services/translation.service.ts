@@ -1,6 +1,6 @@
 import { Injectable, EventEmitter, Inject, PLATFORM_ID } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Subscription, Observable, of } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { isPlatformBrowser } from '@angular/common';
 
 export function translationFactoryResources(translationService: TranslationService) {

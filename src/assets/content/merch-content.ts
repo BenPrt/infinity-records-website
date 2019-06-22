@@ -11,7 +11,12 @@ export const merchInfos: MerchInfo[] = [
       'MERCH_INFOS_GRAMMING_280',
       'MERCH_INFOS_MACHINE_WASHABLE',
     ],
-    picture : 'assets/img/merch_hoodie_image.png',
+    picture: 'assets/img/merch_hoodie_image.png',
+    declinations: [
+      { mainColor: 'MERCH_MAIN_BLACK', logoColor: 'MERCH_LOGO_GOLD', picture: 'assets/img/merch_preview.png' },
+      { mainColor: 'MERCH_MAIN_BLACK', logoColor: 'MERCH_LOGO_WHITE', picture: 'assets/img/merch_preview.png' },
+      { mainColor: 'MERCH_MAIN_WHITE', logoColor: 'MERCH_LOGO_BLACK', picture: 'assets/img/merch_preview.png' },
+    ],
   },
   {
     id: 1,
@@ -23,7 +28,12 @@ export const merchInfos: MerchInfo[] = [
       'MERCH_INFOS_GRAMMING_180',
       'MERCH_INFOS_MACHINE_WASHABLE',
     ],
-    picture : 'assets/img/merch_hoodie_image.png',
+    picture: 'assets/img/merch_hoodie_image.png',
+    declinations: [
+      { mainColor: 'MERCH_MAIN_BLACK', logoColor: 'MERCH_LOGO_GOLD', picture: 'assets/img/merch_preview.png' },
+      { mainColor: 'MERCH_MAIN_BLACK', logoColor: 'MERCH_LOGO_WHITE', picture: 'assets/img/merch_preview.png' },
+      { mainColor: 'MERCH_MAIN_WHITE', logoColor: 'MERCH_LOGO_BLACK', picture: 'assets/img/merch_preview.png' },
+    ],
   },
   {
     id: 2,
@@ -35,6 +45,11 @@ export const merchInfos: MerchInfo[] = [
       'MERCH_INFOS_GRAMMING_280',
       'MERCH_INFOS_MACHINE_WASHABLE',
     ],
-    picture : 'assets/img/merch_hoodie_image.png',
+    picture: 'assets/img/merch_hoodie_image.png',
+    declinations: [
+      { mainColor: 'MERCH_MAIN_BLACK', logoColor: 'MERCH_LOGO_GOLD', picture: 'assets/img/merch_preview.png' },
+      { mainColor: 'MERCH_MAIN_BLACK', logoColor: 'MERCH_LOGO_WHITE', picture: 'assets/img/merch_preview.png' },
+      { mainColor: 'MERCH_MAIN_WHITE', logoColor: 'MERCH_LOGO_BLACK', picture: 'assets/img/merch_preview.png' },
+    ],
   },
 ];

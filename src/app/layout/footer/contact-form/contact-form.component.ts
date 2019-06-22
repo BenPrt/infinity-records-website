@@ -3,7 +3,6 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { environment } from 'src/environments/environment';
 import { ContactService } from 'src/app/shared/services/contact.service';
 import { Email } from 'src/app/models/e-mail';
-import { trigger, transition, style, animate } from '@angular/animations';
 import { isPlatformBrowser } from '@angular/common';
 
 @Component({
