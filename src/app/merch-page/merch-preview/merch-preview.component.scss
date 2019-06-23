@@ -70,58 +70,5 @@
     margin-left: calc(75% - 301px - 2px + 412px - 67.2%);
     display: flex;
     justify-content: space-between;
-    .preview {
-      height: 301px;
-      width: 301px;
-      .preview-picture {
-        height: 301px;
-        width: 301px;
-      }
-      .details-overlay {
-        visibility:hidden;
-        position: relative;
-        height: 301px;
-        width: 301px;
-        margin-top: -305px;
-        .overlay {
-          height: 301px;
-          width: 301px;
-          background-color: $black;
-          opacity: 0.8;
-        }
-        .description {
-          color: $white;
-          position: relative;
-          margin-top: -305px;
-          height: 301px;
-          width: 301px;
-          .description-title {
-            margin-left: 32px;
-            margin-top: 109px;
-            font-size: 14px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            margin-bottom: 8px;
-          }
-          .description-color {
-            margin-left: 32px;
-            height: 32px;
-            font-size: 24px;
-            font-weight: bold;
-            line-height: 1.33;
-          }
-          .sold-out-banner {
-            width: 100%;
-            text-align: center;
-            height: 40px;
-            line-height: 40px;
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 40px;
-            background-color: $black;
-          }
-        }
-      }
-    }
   }
 }

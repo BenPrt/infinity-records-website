@@ -12,21 +12,6 @@
   </div>
   <div id="second-layer"></div>
   <div id="previews">
-    <div *ngFor="let decli of currentProduct.declinations" class="preview">
-      <img
-        class="preview-picture"
-        alt="{{ currentProduct.title | translation }} preview {{ currentProduct.declinations.indexOf(decli) + 1 }}"
-        [src]="decli.picture"
-      />
-      <div class="details-overlay">
-        <div class="overlay"></div>
-        <div class="description">
-          <p class="description-title">{{ currentProduct.title | translation }}</p>
-          <p class="description-color">{{ decli.mainColor | translation }}</p>
-          <p class="description-color">{{ decli.logoColor | translation }}</p>
-          <p class="sold-out-banner">{{ 'MERCH_COMING_SOON' | translation }}</p>
-        </div>
-      </div>
-    </div>
+    <merch-preview-image *ngFor="let decli of currentProduct.declinations" [declination]="decli" [currentProduct]="currentProduct"></merch-preview-image>
   </div>
 </div>

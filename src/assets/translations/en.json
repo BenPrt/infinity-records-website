@@ -53,6 +53,8 @@
 	"MERCH_MAIN_WHITE" : "White fabric",
 	"MERCH_LOGO_GOLD" : "Golden logo",
 	"MERCH_LOGO_WHITE" : "White logo",
-	"MERCH_LOGO_BLACK" : "Black logo"
+	"MERCH_LOGO_BLACK" : "Black logo",
+	
+	"MERCH_COMING_SOON" : "COMING SOON"
 	
 }
