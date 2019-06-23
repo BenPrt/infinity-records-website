@@ -9,7 +9,6 @@
     alt="{{ currentProduct.title | translation }} preview {{ currentProduct.declinations.indexOf(declination) + 1 }}"
     [src]="declination.picture"
     [ngClass]="{ blurred: detailsAreDisplayed }"
-    (mouseOver)="displayDetails(true)"
   />
   <div class="details-overlay" *ngIf="detailsAreDisplayed" [@details-fade]>
     <div class="overlay"></div>

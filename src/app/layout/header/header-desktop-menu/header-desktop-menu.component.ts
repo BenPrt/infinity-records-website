@@ -1,6 +1,8 @@
 import { Component, Input, OnInit, OnChanges, Inject, PLATFORM_ID } from '@angular/core';
 import { Location, isPlatformBrowser } from '@angular/common';
 import { trigger, transition, style, animate, state } from '@angular/animations';
+import { Subscription } from 'rxjs';
+import { ScrollService } from 'src/app/shared/services/scroll.service';
 
 @Component({
   selector: 'header-desktop-menu-component',
@@ -38,7 +40,8 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
   @Input() menuIsDisplayed: boolean;
   @Input() typoState: string;
   @Input() scaleState: string;
-  @Input() scrolledAmount: number;
+  scrolledAmount: number;
+  scrollSubscription: Subscription;
   menuBorderState: string = 'displayed';
 
   settingsStyle: any = { display: 'block' };
@@ -57,12 +60,17 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
     marginTop: '9px',
   };
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object, private location: Location) {
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private location: Location,
+    private scrollService: ScrollService,
+  ) {
     this.isBrowser = isPlatformBrowser(platformId);
   }
 
   ngOnInit(): void {
     this.initAnimation();
+    this.initScrollSubscription();
   }
 
   ngOnChanges(): void {
@@ -70,10 +78,21 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
     this.menuBorderState = this.menuIsDisplayed ? 'displayed' : 'hidden';
   }
 
+  ngOnDestroy(): void {
+    this.scrollSubscription.unsubscribe();
+  }
+
   initAnimation(): void {
     if (!this.menuIsDisplayed) {
       this.drawLogo();
     }
+  }
+
+  initScrollSubscription() {
+    this.scrollSubscription = this.scrollService.scrollHappened.subscribe((amount: number) => {
+      this.scrolledAmount = amount;
+      this.manageScrollAndClasses(this.scrolledAmount);
+    });
   }
 
   isPageActive(page: string): boolean {

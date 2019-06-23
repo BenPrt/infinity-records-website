@@ -1,9 +1,10 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ElementRef } from '@angular/core';
 import { MerchService } from 'src/app/shared/services/merch.service';
 import { Subscription } from 'rxjs';
 import { merchInfos } from 'src/assets/content/merch-content';
 import { DeviceService } from 'src/app/shared/services/device.service';
 import { MerchInfo } from 'src/app/models/merch-info';
+import { ScrollService } from 'src/app/shared/services/scroll.service';
 
 @Component({
   selector: 'merch-preview',
@@ -15,11 +16,20 @@ export class MerchPreviewComponent implements OnInit, OnDestroy {
   currentIdSubscription: Subscription;
   isMobile: boolean;
   deviceTypeSubscription: Subscription;
-  constructor(private merchService: MerchService, private deviceService: DeviceService) {}
+  scrolledAmount: number;
+  scrollSubscription: Subscription;
+  titleStyle = {};
+  constructor(
+    private merchService: MerchService,
+    private deviceService: DeviceService,
+    private scrollService: ScrollService,
+    private elRef: ElementRef,
+  ) {}
 
   ngOnInit(): void {
     this.initCurrentProductId();
     this.initDeviceType();
+    this.initScrollSubscription();
   }
 
   initCurrentProductId(): void {
@@ -36,9 +46,17 @@ export class MerchPreviewComponent implements OnInit, OnDestroy {
     });
   }
 
+  initScrollSubscription() {
+    this.scrollSubscription = this.scrollService.scrollHappened.subscribe((amount: number) => {
+      this.scrolledAmount = amount;
+      this.manageTitlePositioning(this.scrolledAmount);
+    });
+  }
+
   ngOnDestroy(): void {
     this.currentIdSubscription.unsubscribe();
     this.deviceTypeSubscription.unsubscribe();
+    this.scrollSubscription.unsubscribe();
   }
 
   isDisabled(direction: string): boolean {
@@ -57,5 +75,23 @@ export class MerchPreviewComponent implements OnInit, OnDestroy {
 
   goToNextPage(): void {
     this.merchService.goToNextPage();
+  }
+
+  manageTitlePositioning(scroll: number): void {
+    if (this.isMobile) {
+      if (scroll <= 1366) {
+        this.titleStyle = {
+          marginTop: '111px',
+        };
+      } else if (scroll > 1366 && scroll <= 1922) {
+        this.titleStyle = {
+          marginTop: `${scroll - 1366 + 111}px`,
+        };
+      } else if (scroll > 1922) {
+        this.titleStyle = {
+          marginTop: `${1922 - 1366 + 111}px`,
+        };
+      }
+    }
   }
 }

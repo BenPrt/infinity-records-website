@@ -1,4 +1,14 @@
-import { Component, OnInit, ChangeDetectorRef, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ChangeDetectorRef,
+  HostListener,
+  Inject,
+  PLATFORM_ID,
+  OnChanges,
+  AfterViewChecked,
+  AfterViewInit,
+} from '@angular/core';
 import { Location, isPlatformBrowser } from '@angular/common';
 import { Router, RouterEvent, NavigationEnd } from '@angular/router';
 import { animate, style, transition, trigger, state } from '@angular/animations';
@@ -7,6 +17,7 @@ import { filter, first } from 'rxjs/operators';
 import { TranslationService } from 'src/app/shared/services/translation.service';
 import { MobileMenuEventsService } from './shared/services/mobile-menu-events.service';
 import { DeviceService } from './shared/services/device.service';
+import { ScrollService } from './shared/services/scroll.service';
 
 @Component({
   selector: 'app-root',
@@ -29,7 +40,7 @@ import { DeviceService } from './shared/services/device.service';
     ]),
   ],
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewInit {
   // Boolean defining if the app is executed by browser and not by server
   isBrowser: boolean;
   // Boolean defining if the page is reloading (due to instant translation)
@@ -53,6 +64,7 @@ export class AppComponent implements OnInit {
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
     this.scrolledAmount = window.pageYOffset;
+    this.scrollService.setScrolledAmount(this.scrolledAmount);
     if (this.scrolledAmount >= 0 && this.scrolledAmount <= 68) {
       this.contentOffset = '0';
     } else if (this.scrolledAmount > 68 && this.scrolledAmount <= 156) {
@@ -65,9 +77,10 @@ export class AppComponent implements OnInit {
     private router: Router,
     private location: Location,
     private cd: ChangeDetectorRef,
-    private deviceService : DeviceService,
+    private deviceService: DeviceService,
     private translationService: TranslationService,
     private mobileMenuService: MobileMenuEventsService,
+    private scrollService: ScrollService,
   ) {
     this.isBrowser = isPlatformBrowser(platformId);
   }
@@ -80,6 +93,10 @@ export class AppComponent implements OnInit {
     this.initAnimationState();
     this.initLanguageChangeSubscription();
     this.initMobileMenuSubscription();
+  }
+
+  ngAfterViewInit(): void {
+    this.initMobileScroll();
   }
 
   initDisplay(): void {
@@ -123,10 +140,23 @@ export class AppComponent implements OnInit {
       const userAgent = navigator.userAgent;
       if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(userAgent)) {
         this.isMobile = true;
+        this.initMobileScroll();
       } else {
         this.isMobile = false;
       }
       this.deviceService.setDeviceIsMobile(this.isMobile);
+    }
+  }
+
+  initMobileScroll(): void {
+    if (this.isBrowser && this.isMobile) {
+      const mobilePageEl = document.getElementById('mobile-page-content');
+      if (mobilePageEl) {
+        mobilePageEl.addEventListener('scroll', () => {
+          this.scrolledAmount = mobilePageEl.scrollTop;
+          this.scrollService.setScrolledAmount(this.scrolledAmount);
+        });
+      }
     }
   }
 

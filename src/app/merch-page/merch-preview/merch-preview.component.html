@@ -1,7 +1,7 @@
 <div id="first-layer">
   <div id="page-navigator-container">
     <div id="product-title-wrapper">
-      <p id="product-title">{{ currentProduct.title | translation }}</p>
+      <p id="product-title" [ngStyle]='titleStyle'>{{ currentProduct.title | translation }}</p>
     </div>
     <div id="page-navigator-wrapper">
       <div id="page-navigator">
