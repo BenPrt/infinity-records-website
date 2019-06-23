@@ -45,6 +45,7 @@
       #contact-description-content {
         border-left: 2px solid $gold;
         color: $white;
+        line-height : 1.63;
         font-size: 16px;
         @media screen and (min-device-width: $tablet-size) {
           margin-top: 40px;

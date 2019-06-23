@@ -26,5 +26,35 @@
 	"MESSAGE_SENT" : "Message sent",
 	
 	"COPYRIGHT_1" : "Copyright © ",
-	"COPYRIGHT_2" : " Infinity Records. All rights reserved."
+	"COPYRIGHT_2" : " Infinity Records. All rights reserved.",
+	
+	"MERCH_BANNER_SUBTITLE" : "Made in Infinity Records",
+	"MERCH_BANNER_DESCRIPTION" : "Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus.",
+	"MERCH_PRODUCTS_TITLE" : "Our Products",
+	"MERCH_TITLE_HOODIES" : "Hoodies",
+	"MERCH_TITLE_TSHIRTS" : "T-Shirts",
+	"MERCH_TITLE_CREWNECKS" : "Crewnecks",
+	
+	"MERCH_INFOS_DIGITAL_PRINTING" : "Digital printing",
+	"MERCH_INFOS_FULL_COTTON" : "100% cotton",
+	"MERCH_INFOS_COTTON_POLYESTER" : "80% cotton / 20% polyester",
+	"MERCH_INFOS_CLASSICAL_CUT" : "Classic fit",
+	"MERCH_INFOS_CLASSICAT_CUT_ROUND" : "Classic fit / Round collar",
+	"MERCH_INFOS_GRAMMING_180" : "Weight : 180g/m²",
+	"MERCH_INFOS_GRAMMING_280" : "Weight : 280g/m²",
+	"MERCH_INFOS_MACHINE_WASHABLE" : "Machine washable",
+	
+	"MERCH_TWO_COLORS" : "Exist in 2 colors",
+	"MERCH_TWO_COLORS_MIN" : "2 colors",
+	
+	"MERCH_SEE_MORE" : "SEE MORE",
+	
+	"MERCH_MAIN_BLACK" : "Black fabric",
+	"MERCH_MAIN_WHITE" : "White fabric",
+	"MERCH_LOGO_GOLD" : "Golden logo",
+	"MERCH_LOGO_WHITE" : "White logo",
+	"MERCH_LOGO_BLACK" : "Black logo",
+	
+	"MERCH_COMING_SOON" : "COMING SOON"
+	
 }

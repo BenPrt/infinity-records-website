@@ -1,0 +1,29 @@
+<div id="first-layer">
+  <div id="page-navigator-container">
+    <div id="product-title-wrapper">
+      <p id="product-title" [ngStyle]='titleStyle'>{{ currentProduct.title | translation }}</p>
+    </div>
+    <div id="page-navigator-wrapper">
+      <div id="page-navigator">
+        <div class="page-button" [ngClass]="{ disabled: isDisabled('previous') }" (click)="goToPreviousPage()">
+          <img class="navigation-arrow" alt="Previous Arrow" src="assets/icons/merch_arrow_left_white.svg" />
+        </div>
+        <div class="page-button" [ngClass]="{ disabled: isDisabled('next') }" (click)="goToNextPage()">
+          <img class="navigation-arrow" alt="Next Arrow" src="assets/icons/merch_arrow_right_white.svg" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="second-layer-wrapper">
+    <div id="second-layer"></div>
+  </div>
+  <div id="previews-wrapper">
+    <div id="previews">
+      <merch-preview-image
+        *ngFor="let decli of currentProduct.declinations"
+        [declination]="decli"
+        [currentProduct]="currentProduct"
+      ></merch-preview-image>
+    </div>
+  </div>
+</div>

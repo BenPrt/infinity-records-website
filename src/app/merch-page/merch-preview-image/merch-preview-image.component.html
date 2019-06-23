@@ -1,0 +1,22 @@
+<div
+  id="preview-image-wrapper"
+  (mouseover)="displayDetails($event, true)"
+  (mouseleave)="displayDetails($event, false)"
+  (click)="displayDetails($event)"
+>
+  <img
+    class="preview-picture"
+    alt="{{ currentProduct.title | translation }} preview {{ currentProduct.declinations.indexOf(declination) + 1 }}"
+    [src]="declination.picture"
+    [ngClass]="{ blurred: detailsAreDisplayed }"
+  />
+  <div class="details-overlay" *ngIf="detailsAreDisplayed" [@details-fade]>
+    <div class="overlay"></div>
+    <div class="description">
+      <p class="description-title">{{ getProductTitle() | translation }}</p>
+      <p class="description-color">{{ declination.mainColor | translation }}</p>
+      <p class="description-color">{{ declination.logoColor | translation }}</p>
+      <p class="sold-out-banner">{{ 'MERCH_COMING_SOON' | translation }}</p>
+    </div>
+  </div>
+</div>

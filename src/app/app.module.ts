@@ -28,9 +28,10 @@ export class MyHammerConfig extends HammerGestureConfig {
   declarations: [AppComponent],
   imports: [
     AppRoutingModule,
-    AngularModule,
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
+
+    AngularModule,
     LayoutModule,
     HomeModule,
     LabelModule,
