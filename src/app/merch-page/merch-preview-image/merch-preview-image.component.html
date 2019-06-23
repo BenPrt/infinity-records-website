@@ -1,9 +1,14 @@
-<div id="preview-image-wrapper" (mouseover)="displayDetails(true)" (mouseleave)="displayDetails(false)">
+<div
+  id="preview-image-wrapper"
+  (mouseover)="displayDetails($event, true)"
+  (mouseleave)="displayDetails($event, false)"
+  (click)="displayDetails($event)"
+>
   <img
     class="preview-picture"
     alt="{{ currentProduct.title | translation }} preview {{ currentProduct.declinations.indexOf(declination) + 1 }}"
     [src]="declination.picture"
-    [ngClass]="{'blurred' : detailsAreDisplayed}"
+    [ngClass]="{ blurred: detailsAreDisplayed }"
     (mouseOver)="displayDetails(true)"
   />
   <div class="details-overlay" *ngIf="detailsAreDisplayed" [@details-fade]>

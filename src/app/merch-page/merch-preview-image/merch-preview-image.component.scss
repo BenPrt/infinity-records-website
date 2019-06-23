@@ -1,40 +1,91 @@
 @import 'src/app/utils/_styleVariables';
 
 #preview-image-wrapper {
-  height: 301px;
-  width: 301px;
-  overflow : hidden;
-  .preview-picture {
+  overflow: hidden;
+  @media screen and (min-device-width: $tablet-size) {
     height: 301px;
     width: 301px;
   }
-  .blurred{
-    filter : blur(5px);
+  @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+  }
+  @media screen and (max-device-width: $mobile-size) {
+    height: 254px;
+    width: 254px;
+  }
+  .preview-picture {
+    @media screen and (min-device-width: $tablet-size) {
+      height: 301px;
+      width: 301px;
+    }
+    @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+    }
+    @media screen and (max-device-width: $mobile-size) {
+      height: 254px;
+      width: 254px;
+    }
+  }
+  .blurred {
+    filter: blur(5px);
   }
   .details-overlay {
     position: relative;
-    height: 301px;
-    width: 301px;
-    margin-top: -305px;
-    .overlay {
+    @media screen and (min-device-width: $tablet-size) {
       height: 301px;
       width: 301px;
-      background-color: $black;
+      margin-top: -305px;
+    }
+    @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+    }
+    @media screen and (max-device-width: $mobile-size) {
+      height: 254px;
+      width: 254px;
+      margin-top: -258px;
+    }
+    .overlay {
       opacity: 0.6;
+      background-color: $black;
+      @media screen and (min-device-width: $tablet-size) {
+        height: 301px;
+        width: 301px;
+      }
+      @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+      }
+      @media screen and (max-device-width: $mobile-size) {
+        height: 254px;
+        width: 254px;
+      }
     }
     .description {
       color: $white;
       position: relative;
-      margin-top: -305px;
-      height: 301px;
-      width: 301px;
+      user-select : none;
+      @media screen and (min-device-width: $tablet-size) {
+        height: 301px;
+        width: 301px;
+        margin-top: -305px;
+      }
+      @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+      }
+      @media screen and (max-device-width: $mobile-size) {
+        height: 254px;
+        width: 254px;
+        margin-top: -258px;
+      }
       .description-title {
         margin-left: 32px;
-        margin-top: 109px;
         font-size: 14px;
-        font-weight: bold;
-        letter-spacing: 2px;
-        margin-bottom: 8px;
+          font-weight: bold;
+          letter-spacing: 2px;
+        @media screen and (min-device-width: $tablet-size) {
+          margin-top: 109px;
+          margin-bottom: 8px;
+        }
+        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+        }
+        @media screen and (max-device-width: $mobile-size) {
+          margin-top: 70px;
+          margin-bottom: 5px;
+        }
       }
       .description-color {
         margin-left: 32px;
@@ -50,9 +101,16 @@
         line-height: 40px;
         font-size: 18px;
         font-weight: bold;
-        margin-top: 40px;
         background-color: $black;
-        color : $gold;
+        color: $gold;
+        @media screen and (min-device-width: $tablet-size) {
+          margin-top: 40px;
+        }
+        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+        }
+        @media screen and (max-device-width: $mobile-size) {
+          margin-top: 35px;
+        }
       }
     }
   }

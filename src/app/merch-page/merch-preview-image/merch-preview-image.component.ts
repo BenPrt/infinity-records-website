@@ -1,15 +1,19 @@
-import { Component, OnInit, OnDestroy, Input } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input, Inject, PLATFORM_ID, ElementRef } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { DeviceService } from 'src/app/shared/services/device.service';
 import { MerchInfo, MerchDeclination } from 'src/app/models/merch-info';
 import { TranslationPipe } from 'src/app/shared/pipes/translation.pipe';
 import { TranslationService } from 'src/app/shared/services/translation.service';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'merch-preview-image',
   templateUrl: './merch-preview-image.component.html',
   styleUrls: ['./merch-preview-image.component.scss'],
+  host: {
+    '(window:click)': 'displayDetails($event, false)',
+  },
   animations: [
     trigger('details-fade', [
       transition(':enter', [style({ opacity: 0 }), animate('200ms', style({ opacity: 1 }))]),
@@ -20,10 +24,18 @@ import { trigger, transition, style, animate } from '@angular/animations';
 export class MerchPreviewImageComponent implements OnInit, OnDestroy {
   @Input() declination: MerchDeclination;
   @Input() currentProduct: MerchInfo;
+  isBrowser: boolean;
   detailsAreDisplayed: boolean;
   isMobile: boolean;
   deviceTypeSubscription: Subscription;
-  constructor(private deviceService: DeviceService, private translationService: TranslationService) {}
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private elRef: ElementRef,
+    private deviceService: DeviceService,
+    private translationService: TranslationService,
+  ) {
+    this.isBrowser = isPlatformBrowser(platformId);
+  }
 
   ngOnInit(): void {
     this.initDeviceType();
@@ -40,8 +52,22 @@ export class MerchPreviewImageComponent implements OnInit, OnDestroy {
     this.deviceTypeSubscription.unsubscribe();
   }
 
-  displayDetails(displayValue: boolean): void {
-    this.detailsAreDisplayed = displayValue;
+  displayDetails(event: MouseEvent, displayValue?: boolean): void {
+    if (this.isBrowser) {
+      if (this.isMobile) {
+        if (event.target === this.elRef.nativeElement || this.elRef.nativeElement.contains(event.target as Node)) {
+          this.detailsAreDisplayed = true;
+        } else {
+          this.detailsAreDisplayed = false;
+        }
+      } else {
+        if (event.type !== 'click') {
+          if (displayValue !== undefined) {
+            this.detailsAreDisplayed = displayValue;
+          }
+        }
+      }
+    }
   }
 
   getProductTitle(): string {

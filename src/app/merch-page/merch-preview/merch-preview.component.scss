@@ -2,49 +2,106 @@
 
 :host {
   #first-layer {
-    width: calc(75% - 2px);
-    margin-left: 12.5%;
-    height: 729px;
     border-left: 2px solid $very-light-grey;
     border-right: 2px solid $very-light-grey;
+    @media screen and (min-device-width: $tablet-size) {
+      width: calc(75% - 2px);
+      margin-left: 12.5%;
+      height: 729px;
+    }
+    @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+    }
+    @media screen and (max-device-width: $mobile-size) {
+      width: calc(76% - 5px);
+      margin-left: 12%;
+      height: 1070px;
+    }
   }
 
   #page-navigator-container {
-    width: 297px;
-    height: 625px;
     border-right: 2px solid $very-light-grey;
-    #product-title {
-      width: 120px;
-      font-size: 18px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      transform: rotate(90deg);
-      position: absolute;
-      margin-left: -45px;
-      margin-top: 151px;
+    @media screen and (min-device-width: $tablet-size) {
+      width: 297px;
+      height: 625px;
     }
-    #page-navigator {
-      position: absolute;
-      margin-top: calc(625px - 150px);
-      margin-left: -2px;
-      width: 301px;
-      height: 150px;
-      background-color: $grey;
-      display: flex;
-      justify-content: space-between;
-
+    @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+    }
+    @media screen and (max-device-width: $mobile-size) {
+      width: 102px;
+      height: 1070px;
+    }
+    #product-title-wrapper {
+      position: relative;
+      #product-title {
+        width: 120px;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        transform: rotate(90deg);
+        position: absolute;
+        @media screen and (min-device-width: $tablet-size) {
+          margin-left: -45px;
+          margin-top: 151px;
+        }
+        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+        }
+        @media screen and (max-device-width: $mobile-size) {
+          margin-top: 111px;
+          margin-left: -47px;
+        }
+      }
+    }
+    #page-navigator-wrapper {
+      position: relative;
+      #page-navigator {
+        position: absolute;
+        background-color: $grey;
+        display: flex;
+        justify-content: space-between;
+        @media screen and (min-device-width: $tablet-size) {
+          margin-top: calc(625px - 150px);
+          margin-left: -2px;
+          width: 301px;
+          height: 150px;
+        }
+        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+        }
+        @media screen and (max-device-width: $mobile-size) {
+          margin-top: 914px;
+          margin-left: -2px;
+          width: 105px;
+          height: 52px;
+        }
+      }
       .page-button {
-        height: 150px;
-        width: 150px;
         cursor: pointer;
         background-color: $dark-grey;
         display: flex;
         align-items: center;
         justify-content: center;
         user-select: none;
+
+        @media screen and (min-device-width: $tablet-size) {
+          height: 150px;
+          width: 150px;
+        }
+        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+        }
+        @media screen and (max-device-width: $mobile-size) {
+          height: 52px;
+          width: 52px;
+        }
         .navigation-arrow {
-          width: 40px;
-          height: 40px;
+          @media screen and (min-device-width: $tablet-size) {
+            width: 40px;
+            height: 40px;
+          }
+          @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+          }
+          @media screen and (max-device-width: $mobile-size) {
+            height: 14px;
+            width: 14px;
+          }
         }
       }
 
@@ -54,21 +111,61 @@
       }
     }
   }
-  #second-layer {
-    position: absolute;
-    width: 412px;
-    height: 625px;
-    margin-top: -625px;
-    margin-left: calc(75% - 301px - 2px);
-    background-color: $very-light-grey;
+
+  #second-layer-wrapper {
+    @media screen and (min-device-width: $tablet-size) {
+    }
+    @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+    }
+    @media screen and (max-device-width: $mobile-size) {
+      position: relative;
+    }
+    #second-layer {
+      position: absolute;
+      background-color: $very-light-grey;
+      @media screen and (min-device-width: $tablet-size) {
+        width: 412px;
+        height: 625px;
+        margin-top: -625px;
+        margin-left: calc(75% - 301px - 2px);
+      }
+      @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+      }
+      @media screen and (max-device-width: $mobile-size) {
+        width: 106px;
+        height: 966px;
+        margin-top: -1070px;
+        left: calc(100vw - 106px - 12% - 6px);
+      }
+    }
   }
-  #previews {
-    position: absolute;
-    width: 67.2%;
-    height: 302px;
-    margin-top: calc(-625px + 104px);
-    margin-left: calc(75% - 301px - 2px + 412px - 67.2%);
-    display: flex;
-    justify-content: space-between;
+  #previews-wrapper {
+    @media screen and (min-device-width: $tablet-size) {
+    }
+    @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+    }
+    @media screen and (max-device-width: $mobile-size) {
+      position: relative;
+    }
+    #previews {
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      @media screen and (min-device-width: $tablet-size) {
+        width: 67.2%;
+        height: 302px;
+        margin-top: calc(-625px + 104px);
+        margin-left: calc(75% - 301px - 2px + 412px - 67.2%);
+      }
+      @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+      }
+      @media screen and (max-device-width: $mobile-size) {
+        width: 254px;
+        height: 810px;
+        margin-top: calc(-1070px + 64px);
+        margin-left: 58px;
+        flex-direction: column;
+      }
+    }
   }
 }
