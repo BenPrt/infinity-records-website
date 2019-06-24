@@ -116,20 +116,12 @@ export class AppComponent implements OnInit, AfterViewInit {
     if (this.isBrowser) {
       this.router.events.subscribe((evt: RouterEvent) => {
         if (this.isMobile) {
-          const scrollableElement = document.querySelector('#mobile-page-content');
+          const scrollableElement: HTMLElement = document.querySelector('#mobile-page-content');
           if (scrollableElement) {
             scrollableElement.scrollTo(0, 0);
           }
         } else {
-          let scrollTo: number;
-          const scrollInterval = setInterval(() => {
-            if (this.scrolledAmount > 0) {
-              scrollTo = this.scrolledAmount - this.scrolledAmount / 4;
-              window.scrollTo(0, scrollTo);
-            } else {
-              clearInterval(scrollInterval);
-            }
-          }, 10);
+          window.scrollTo(0, 0);
         }
       });
     }
