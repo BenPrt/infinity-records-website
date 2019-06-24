@@ -50,7 +50,9 @@ export class MerchDescriptionComponent implements OnInit, AfterViewInit, OnDestr
 
   initcontainerHeight(): void {
     if (this.isBrowser && this.isMobile) {
-      document.getElementById('first-layer').style.height = `${document.getElementById('second-layer').offsetHeight}px`;
+      document.getElementById('description-first-layer').style.height = `${
+        document.getElementById('description-second-layer').offsetHeight
+      }px`;
     }
   }
 
@@ -90,10 +92,13 @@ export class MerchDescriptionComponent implements OnInit, AfterViewInit, OnDestr
 
   scrollToPreview(): void {
     if (this.isBrowser) {
+      const previewElement = document.getElementById('preview-first-layer');
+      const previewElementDesktopOffset = previewElement.offsetTop - 116;
+      const previewElementMobileOffset = previewElement.offsetTop - 81;
       if (this.isMobile) {
-        document.getElementById('mobile-page-content').scrollTo(0, 1366);
+        document.getElementById('mobile-page-content').scrollTo(0, previewElementMobileOffset);
       } else {
-        window.scrollTo(0, 1590);
+        window.scrollTo(0, previewElementDesktopOffset);
       }
     }
   }

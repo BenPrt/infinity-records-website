@@ -1,7 +1,7 @@
 @import 'src/app/utils/_styleVariables';
 
 :host {
-  #first-layer {
+  #preview-first-layer {
     border-left: 2px solid $very-light-grey;
     border-right: 2px solid $very-light-grey;
     @media screen and (min-device-width: $tablet-size) {
@@ -112,7 +112,7 @@
     }
   }
 
-  #second-layer-wrapper {
+  #preview-second-layer-wrapper {
     @media screen and (min-device-width: $tablet-size) {
     }
     @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
@@ -120,7 +120,7 @@
     @media screen and (max-device-width: $mobile-size) {
       position: relative;
     }
-    #second-layer {
+    #preview-second-layer {
       position: absolute;
       background-color: $very-light-grey;
       @media screen and (min-device-width: $tablet-size) {
