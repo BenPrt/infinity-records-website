@@ -1,6 +1,6 @@
 @import 'src/app/utils/_styleVariables';
 
-$totalHeight : 865px;
+$totalHeight: 865px;
 :host {
   #description-first-layer {
     background-color: $white;
@@ -64,16 +64,11 @@ $totalHeight : 865px;
           .products-indicator {
             display: inline-block;
             cursor: pointer;
-            color: $grey;
+            color: $black;
             margin-right: 24px;
             font-size: 18px;
             line-height: 1.56;
             user-select: none;
-          }
-          .selected {
-            color: $black;
-            font-weight: bold;
-            border-bottom: 2px solid $black;
           }
         }
         #product-title {
@@ -84,7 +79,7 @@ $totalHeight : 865px;
           }
           @media screen and (max-device-width: $mobile-size) {
             margin-top: calc(32px + 56.65vw + 40px);
-            height : 40px;
+            height: 40px;
           }
           font-size: 32px;
           font-weight: bold;
@@ -196,8 +191,8 @@ $totalHeight : 865px;
     #product-picture-container {
       @media screen and (min-device-width: $tablet-size) {
         position: relative;
-        margin-top : -545px;
-        margin-left : calc(100% - 633px);
+        margin-top: -545px;
+        margin-left: calc(100% - 633px);
         width: 634px;
         height: 475px;
       }
@@ -205,8 +200,8 @@ $totalHeight : 865px;
       }
       @media screen and (max-device-width: $mobile-size) {
         position: relative;
-        margin-top : -683px;
-        margin-left : calc(((100vw - 75.53vw) / 2) - 1px);
+        margin-top: -683px;
+        margin-left: calc(((100vw - 75.53vw) / 2) - 1px);
         width: 75.53vw;
         height: 213px;
       }
@@ -227,8 +222,8 @@ $totalHeight : 865px;
         position: absolute;
         width: 105px;
         height: 52px;
-        margin-top : -56px;
-        right : -1px;
+        margin-top: -56px;
+        right: -1px;
         background-color: $white;
         display: flex;
         justify-content: space-between;
@@ -256,3 +251,96 @@ $totalHeight : 865px;
     }
   }
 }
+
+
+// Animations part
+.hidden {
+  animation: fadeOut 300ms linear;
+}
+.hidden-next {
+  animation: fadeOutNext 300ms linear;
+}
+.hidden-previous {
+  animation: fadeOutPrevious 300ms linear;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    visibility: initial;
+  }
+  100% {
+    opacity: 0.2;
+    visibility: hidden;
+  }
+}
+@keyframes fadeOutNext {
+  0% {
+    opacity: 1;
+    visibility: initial;
+    margin-left: 0;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    margin-left: -16px;
+  }
+}
+@keyframes fadeOutPrevious {
+  0% {
+    opacity: 1;
+    visibility: initial;
+    margin-left: 0;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    margin-left: 16px;
+  }
+}
+
+
+.visible{
+  animation: fadeIn 300ms linear;  
+}
+.visible-next {
+  animation: fadeInNext 300ms linear;
+}
+.visible-previous {
+  animation: fadeInPrevious 300ms linear;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0.2;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: initial;
+  }
+}
+@keyframes fadeInNext {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    margin-left: 16px;
+  }
+  100% {
+    opacity: 1;
+    visibility: initial;
+    margin-left: 0;
+  }
+}
+@keyframes fadeInPrevious {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    margin-left: -16px;
+  }
+  100% {
+    opacity: 1;
+    visibility: initial;
+    margin-left: 0;
+  }
+}
+
+

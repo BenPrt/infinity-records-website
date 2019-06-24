@@ -5,18 +5,42 @@ import { merchInfos } from 'src/assets/content/merch-content';
 import { DeviceService } from 'src/app/shared/services/device.service';
 import { MerchInfo } from 'src/app/models/merch-info';
 import { isPlatformBrowser } from '@angular/common';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'merch-description',
   templateUrl: './merch-description.component.html',
   styleUrls: ['./merch-description.component.scss'],
+  animations: [
+    trigger('indicatorAnimation', [
+      state(
+        'true',
+        style({
+          opacity: '1',
+          fontWeight: 'bold',
+          borderBottom: '2px solid black',
+        }),
+      ),
+      state(
+        'false',
+        style({
+          opacity: '0.39',
+          fontWeight: 'initial',
+          borderBottom: '2px solid #F5F5F5',
+        }),
+      ),
+      transition('true <=> false', [animate('300ms')]),
+    ]),
+  ],
 })
 export class MerchDescriptionComponent implements OnInit, AfterViewInit, OnDestroy {
+  loading: string = 'initial';
   isBrowser: boolean;
   currentProduct: MerchInfo;
   currentIdSubscription: Subscription;
   isMobile: boolean;
   deviceTypeSubscription: Subscription;
+  allProducts: MerchInfo[] = merchInfos;
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
     private merchService: MerchService,
@@ -37,7 +61,15 @@ export class MerchDescriptionComponent implements OnInit, AfterViewInit, OnDestr
   initCurrentProductId(): void {
     this.currentProduct = merchInfos[this.merchService.getCurrentPageId()];
     this.currentIdSubscription = this.merchService.currentPageIdHasChanged.subscribe((currentId: number) => {
-      this.currentProduct = merchInfos[currentId];
+      if (this.isBrowser) {
+        this.loading = currentId > this.currentProduct.id ? 'loading-next' : 'loading-previous';
+        setTimeout(() => {
+          this.currentProduct = merchInfos[currentId];
+          this.loading = this.loading === 'loading-next' ? 'loaded-next' : 'loaded-previous';
+        }, 300);
+      } else {
+        this.currentProduct = merchInfos[currentId];
+      }
     });
   }
 
@@ -87,7 +119,9 @@ export class MerchDescriptionComponent implements OnInit, AfterViewInit, OnDestr
   }
 
   goToProduct(id: number): void {
-    this.merchService.setCurrentPageId(id);
+    if (id !== this.currentProduct.id) {
+      this.merchService.setCurrentPageId(id);
+    }
   }
 
   scrollToPreview(): void {

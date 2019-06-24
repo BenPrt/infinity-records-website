@@ -13,6 +13,7 @@ import { isPlatformBrowser } from '@angular/common';
   styleUrls: ['./merch-preview.component.scss'],
 })
 export class MerchPreviewComponent implements OnInit, AfterViewInit, OnDestroy {
+  loading : boolean;
   isBrowser: boolean;
   currentProduct: MerchInfo;
   currentIdSubscription: Subscription;
@@ -43,7 +44,15 @@ export class MerchPreviewComponent implements OnInit, AfterViewInit, OnDestroy {
   initCurrentProductId(): void {
     this.currentProduct = merchInfos[this.merchService.getCurrentPageId()];
     this.currentIdSubscription = this.merchService.currentPageIdHasChanged.subscribe((currentId: number) => {
-      this.currentProduct = merchInfos[currentId];
+      if (this.isBrowser) {
+        this.loading = true;
+        setTimeout(() => {
+          this.currentProduct = merchInfos[currentId];
+          this.loading = false;
+        }, 300);
+      } else {
+        this.currentProduct = merchInfos[currentId];
+      }
     });
   }
 
@@ -97,7 +106,6 @@ export class MerchPreviewComponent implements OnInit, AfterViewInit, OnDestroy {
           marginTop: '111px',
         };
       } else if (scroll > containerOffset && scroll <= thirdPreviewOffset) {
-        console.log(scroll);
         this.titleStyle = {
           marginTop: `${scroll - containerOffset + 111}px`,
         };
