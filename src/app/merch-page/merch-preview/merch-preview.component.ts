@@ -94,6 +94,7 @@ export class MerchPreviewComponent implements OnInit, OnDestroy {
           marginTop: '111px',
         };
       } else if (scroll > containerOffset && scroll <= thirdPreviewOffset) {
+        console.log(scroll);
         this.titleStyle = {
           marginTop: `${scroll - containerOffset + 111}px`,
         };
