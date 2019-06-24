@@ -20,7 +20,8 @@
   <div id="previews-wrapper">
     <div id="previews">
       <merch-preview-image
-        *ngFor="let decli of currentProduct.declinations"
+        *ngFor="let decli of currentProduct.declinations; let i = index"
+        id="{{'preview-image-' + i}}"
         [declination]="decli"
         [currentProduct]="currentProduct"
       ></merch-preview-image>

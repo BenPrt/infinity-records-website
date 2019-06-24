@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID, AfterViewInit } from '@angular/core';
 import { MerchService } from 'src/app/shared/services/merch.service';
 import { Subscription } from 'rxjs';
 import { merchInfos } from 'src/assets/content/merch-content';
@@ -11,7 +11,7 @@ import { isPlatformBrowser } from '@angular/common';
   templateUrl: './merch-description.component.html',
   styleUrls: ['./merch-description.component.scss'],
 })
-export class MerchDescriptionComponent implements OnInit, OnDestroy {
+export class MerchDescriptionComponent implements OnInit, AfterViewInit, OnDestroy {
   isBrowser: boolean;
   currentProduct: MerchInfo;
   currentIdSubscription: Subscription;
@@ -30,6 +30,10 @@ export class MerchDescriptionComponent implements OnInit, OnDestroy {
     this.initDeviceType();
   }
 
+  ngAfterViewInit(): void {
+    this.initcontainerHeight();
+  }
+
   initCurrentProductId(): void {
     this.currentProduct = merchInfos[this.merchService.getCurrentPageId()];
     this.currentIdSubscription = this.merchService.currentPageIdHasChanged.subscribe((currentId: number) => {
@@ -42,6 +46,12 @@ export class MerchDescriptionComponent implements OnInit, OnDestroy {
     this.deviceTypeSubscription = this.deviceService.deviceIsMobileHasChanged.subscribe((isMobile: boolean) => {
       this.isMobile = isMobile;
     });
+  }
+
+  initcontainerHeight(): void {
+    if (this.isBrowser && this.isMobile) {
+      document.getElementById('first-layer').style.height = `${document.getElementById('second-layer').offsetHeight}px`;
+    }
   }
 
   ngOnDestroy(): void {
