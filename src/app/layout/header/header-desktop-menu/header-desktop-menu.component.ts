@@ -55,6 +55,10 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
     paddingBottom: '32px',
   };
 
+  menuLogoStyle: any = {
+    height: '90px',
+  };
+
   menuLogoTypoStyle: any = {
     height: '17px',
     marginTop: '9px',
@@ -130,6 +134,9 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
           this.menuContainerStyle = {
             paddingTop: '32px',
           };
+          this.menuLogoStyle = {
+            height: '90px',
+          };
           this.menuLogoTypoStyle = {
             height: '17px',
             marginTop: '9px',
@@ -143,6 +150,9 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
           };
           this.menuContainerStyle = {
             paddingTop: '32px',
+          };
+          this.menuLogoStyle = {
+            height: '90px',
           };
           this.menuLogoTypoStyle = {
             height: '17px',
@@ -158,6 +168,9 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
           this.menuContainerStyle = {
             paddingTop: `calc(32px - ((${Math.round(scroll)}px - 104px) / 1.625)`,
           };
+          this.menuLogoStyle = {
+            height: '90px',
+          };
           this.menuLogoTypoStyle = {
             height: `calc(17px - ((${Math.round(scroll)}px - 104px) / 1.53))`,
             marginTop: `calc(9px - ((${Math.round(scroll)}px - 104px) / 2.88))`,
@@ -171,6 +184,9 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
           };
           this.menuContainerStyle = {
             paddingTop: `calc(32px - ((${Math.round(scroll)}px - 104px) / 1.625)`,
+          };
+          this.menuLogoStyle = {
+            height: `calc(90px - ((${Math.round(scroll)}px - 130px) / 1.18)`,
           };
           this.menuLogoTypoStyle = {
             height: '0px',
@@ -186,6 +202,9 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
           };
           this.menuContainerStyle = {
             paddingTop: '0px',
+          };
+          this.menuLogoStyle = {
+            height: '68px',
           };
           this.menuLogoTypoStyle = {
             height: '0px',
