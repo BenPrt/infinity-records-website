@@ -1,10 +1,11 @@
-import { Component, OnInit, OnDestroy, ElementRef } from '@angular/core';
+import { Component, OnInit, OnDestroy, ElementRef, Inject, PLATFORM_ID } from '@angular/core';
 import { MerchService } from 'src/app/shared/services/merch.service';
 import { Subscription } from 'rxjs';
 import { merchInfos } from 'src/assets/content/merch-content';
 import { DeviceService } from 'src/app/shared/services/device.service';
 import { MerchInfo } from 'src/app/models/merch-info';
 import { ScrollService } from 'src/app/shared/services/scroll.service';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'merch-preview',
@@ -12,6 +13,7 @@ import { ScrollService } from 'src/app/shared/services/scroll.service';
   styleUrls: ['./merch-preview.component.scss'],
 })
 export class MerchPreviewComponent implements OnInit, OnDestroy {
+  isBrowser: boolean;
   currentProduct: MerchInfo;
   currentIdSubscription: Subscription;
   isMobile: boolean;
@@ -20,11 +22,14 @@ export class MerchPreviewComponent implements OnInit, OnDestroy {
   scrollSubscription: Subscription;
   titleStyle = {};
   constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
     private merchService: MerchService,
     private deviceService: DeviceService,
     private scrollService: ScrollService,
     private elRef: ElementRef,
-  ) {}
+  ) {
+    this.isBrowser = isPlatformBrowser(platformId);
+  }
 
   ngOnInit(): void {
     this.initCurrentProductId();
@@ -78,18 +83,23 @@ export class MerchPreviewComponent implements OnInit, OnDestroy {
   }
 
   manageTitlePositioning(scroll: number): void {
-    if (this.isMobile) {
-      if (scroll <= 1366) {
+    if (this.isMobile && this.isBrowser) {
+      const containerOffset = this.elRef.nativeElement.offsetTop - 81;
+      const thirdPreviewElement = document.getElementById(
+        `preview-image-${this.currentProduct.declinations.length - 1}`,
+      );
+      const thirdPreviewOffset = containerOffset + thirdPreviewElement.offsetTop;
+      if (scroll <= containerOffset) {
         this.titleStyle = {
           marginTop: '111px',
         };
-      } else if (scroll > 1366 && scroll <= 1922) {
+      } else if (scroll > containerOffset && scroll <= thirdPreviewOffset) {
         this.titleStyle = {
-          marginTop: `${scroll - 1366 + 111}px`,
+          marginTop: `${scroll - containerOffset + 111}px`,
         };
-      } else if (scroll > 1922) {
+      } else if (scroll > thirdPreviewOffset) {
         this.titleStyle = {
-          marginTop: `${1922 - 1366 + 111}px`,
+          marginTop: `${thirdPreviewOffset - containerOffset + 111}px`,
         };
       }
     }

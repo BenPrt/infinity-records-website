@@ -1,5 +1,6 @@
 @import 'src/app/utils/_styleVariables';
 
+$totalHeight : 865px;
 :host {
   #first-layer {
     background-color: $white;
@@ -11,8 +12,7 @@
     @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
     }
     @media screen and (max-device-width: $mobile-size) {
-      width: 87%;
-      height: 865px;
+      width: calc(100vw - 12.23vw - 2px);
     }
 
     #second-layer {
@@ -26,7 +26,6 @@
       }
       @media screen and (max-device-width: $mobile-size) {
         width: calc(100% - 50px);
-        height: calc(865px - 56px);
         padding-top: 56px;
       }
 
@@ -38,7 +37,7 @@
         @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
         }
         @media screen and (max-device-width: $mobile-size) {
-          width: 100%;
+          width: calc(100% - 16px);
           margin-left: 16px;
         }
         #description-title {
@@ -84,7 +83,8 @@
           @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
           }
           @media screen and (max-device-width: $mobile-size) {
-            margin-top: 287px;
+            margin-top: calc(32px + 56.65vw + 40px);
+            height : 40px;
           }
           font-size: 32px;
           font-weight: bold;
@@ -134,7 +134,7 @@
           @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
           }
           @media screen and (max-device-width: $mobile-size) {
-            width: calc(100% - 16px - 40px);
+            width: calc(100% - 10px);
             margin-top: 40px;
           }
 
@@ -159,7 +159,7 @@
             @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
             }
             @media screen and (max-device-width: $mobile-size) {
-              width: 72px;
+              width: 17vw;
             }
           }
           #color-text {
@@ -185,6 +185,7 @@
           }
           @media screen and (max-device-width: $mobile-size) {
             margin-top: 48px;
+            margin-bottom: 56px;
           }
           &:focus {
             outline: none;
@@ -205,8 +206,8 @@
       @media screen and (max-device-width: $mobile-size) {
         position: relative;
         margin-top : -683px;
-        margin-left : calc(100% - 283px);
-        width: 284px;
+        margin-left : calc(((100vw - 75.53vw) / 2) - 1px);
+        width: 75.53vw;
         height: 213px;
       }
 
@@ -218,8 +219,8 @@
         @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
         }
         @media screen and (max-device-width: $mobile-size) {
-          width: 284px;
-          height: 213px;
+          width: 75.53vw;
+          height: 56.65vw;
         }
       }
       #page-navigator {

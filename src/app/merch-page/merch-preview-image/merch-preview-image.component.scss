@@ -9,8 +9,8 @@
   @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
   }
   @media screen and (max-device-width: $mobile-size) {
-    height: 254px;
-    width: 254px;
+    height: 67.5vw;
+    width: 67.5vw;
   }
   .preview-picture {
     @media screen and (min-device-width: $tablet-size) {
@@ -20,8 +20,8 @@
     @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
     }
     @media screen and (max-device-width: $mobile-size) {
-      height: 254px;
-      width: 254px;
+      height: 67.5vw;
+      width: 67.5vw;
     }
   }
   .blurred {
@@ -37,9 +37,9 @@
     @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
     }
     @media screen and (max-device-width: $mobile-size) {
-      height: 254px;
-      width: 254px;
-      margin-top: -258px;
+      height: 67.5vw;
+      width: 67.5vw;
+      margin-top: calc(-67.5vw - 4px);
     }
     .overlay {
       opacity: 0.6;
@@ -51,14 +51,14 @@
       @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
       }
       @media screen and (max-device-width: $mobile-size) {
-        height: 254px;
-        width: 254px;
+        height: 67.5vw;
+        width: 67.5vw;
       }
     }
     .description {
       color: $white;
       position: relative;
-      user-select : none;
+      user-select: none;
       @media screen and (min-device-width: $tablet-size) {
         height: 301px;
         width: 301px;
@@ -67,15 +67,15 @@
       @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
       }
       @media screen and (max-device-width: $mobile-size) {
-        height: 254px;
-        width: 254px;
-        margin-top: -258px;
+        height: 67.5vw;
+        width: 67.5vw;
+        margin-top: calc(-67.5vw - 4px);
       }
       .description-title {
         margin-left: 32px;
         font-size: 14px;
-          font-weight: bold;
-          letter-spacing: 2px;
+        font-weight: bold;
+        letter-spacing: 2px;
         @media screen and (min-device-width: $tablet-size) {
           margin-top: 109px;
           margin-bottom: 8px;
@@ -83,7 +83,7 @@
         @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
         }
         @media screen and (max-device-width: $mobile-size) {
-          margin-top: 70px;
+          margin-top: 18vw;
           margin-bottom: 5px;
         }
       }
@@ -109,7 +109,10 @@
         @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
         }
         @media screen and (max-device-width: $mobile-size) {
-          margin-top: 35px;
+          height: 10vw;
+          line-height: 10vw;
+          font-size: 0.8em;
+          margin-top: 9vw;
         }
       }
     }
