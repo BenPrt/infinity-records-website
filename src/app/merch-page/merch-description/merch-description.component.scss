@@ -95,7 +95,7 @@
           margin: 24px 0 0 0;
           @media screen and (min-device-width: $tablet-size) {
             height: 94px;
-            width: 480px;
+            width: 500px;
             columns: 2;
             -webkit-columns: 2;
             -moz-columns: 2;
@@ -108,8 +108,8 @@
             font-size: 16px;
             line-height: 1.63;
             @media screen and (min-device-width: $tablet-size) {
-              width: 230px;
-              margin: 0 0 8px 16px;
+              width: 250px;
+              margin: 0 0 8px 0;
             }
             @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
             }

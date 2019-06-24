@@ -10,7 +10,7 @@
       <p id="product-title">{{ currentProduct.title | translation }}</p>
       <ul id="product-informations">
         <li *ngFor="let info of currentProduct.informations" class="product-information">
-          <span>&diams;</span> {{ info | translation }}
+          <span><img alt="Golden bullet point" src="assets/icons/list_bullet.svg"/></span> {{ info | translation }}
         </li>
       </ul>
       <div id="product-colors">
