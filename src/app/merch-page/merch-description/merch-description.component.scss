@@ -2,7 +2,7 @@
 
 $totalHeight : 865px;
 :host {
-  #first-layer {
+  #description-first-layer {
     background-color: $white;
     border-right: 2px solid $very-light-grey;
     @media screen and (min-device-width: $tablet-size) {
@@ -15,7 +15,7 @@ $totalHeight : 865px;
       width: calc(100vw - 12.23vw - 2px);
     }
 
-    #second-layer {
+    #description-second-layer {
       background-color: $very-light-grey;
       @media screen and (min-device-width: $tablet-size) {
         width: calc(100% - 301px);

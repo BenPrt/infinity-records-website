@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, ElementRef, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, OnInit, OnDestroy, ElementRef, Inject, PLATFORM_ID, AfterViewInit } from '@angular/core';
 import { MerchService } from 'src/app/shared/services/merch.service';
 import { Subscription } from 'rxjs';
 import { merchInfos } from 'src/assets/content/merch-content';
@@ -12,7 +12,7 @@ import { isPlatformBrowser } from '@angular/common';
   templateUrl: './merch-preview.component.html',
   styleUrls: ['./merch-preview.component.scss'],
 })
-export class MerchPreviewComponent implements OnInit, OnDestroy {
+export class MerchPreviewComponent implements OnInit, AfterViewInit, OnDestroy {
   isBrowser: boolean;
   currentProduct: MerchInfo;
   currentIdSubscription: Subscription;
@@ -34,6 +34,9 @@ export class MerchPreviewComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.initCurrentProductId();
     this.initDeviceType();
+  }
+
+  ngAfterViewInit():void {
     this.initScrollSubscription();
   }
 
@@ -94,6 +97,7 @@ export class MerchPreviewComponent implements OnInit, OnDestroy {
           marginTop: '111px',
         };
       } else if (scroll > containerOffset && scroll <= thirdPreviewOffset) {
+        console.log(scroll);
         this.titleStyle = {
           marginTop: `${scroll - containerOffset + 111}px`,
         };
