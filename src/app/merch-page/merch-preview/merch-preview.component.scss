@@ -169,3 +169,33 @@
     }
   }
 }
+
+
+// Animations part
+.hidden {
+  animation: fadeOut 300ms linear;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    visibility: initial;
+  }
+  100% {
+    opacity: 0.2;
+    visibility: hidden;
+  }
+}
+
+.visible{
+  animation: fadeIn 300ms linear;  
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0.2;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: initial;
+  }
+}

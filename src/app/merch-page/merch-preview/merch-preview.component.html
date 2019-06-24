@@ -1,7 +1,16 @@
 <div id="preview-first-layer">
   <div id="page-navigator-container">
     <div id="product-title-wrapper">
-      <p id="product-title" [ngStyle]='titleStyle'>{{ currentProduct.title | translation }}</p>
+      <p
+        id="product-title"
+        [ngClass]="{
+          hidden: loading,
+          visible: !loading
+        }"
+        [ngStyle]="titleStyle"
+      >
+        {{ currentProduct.title | translation }}
+      </p>
     </div>
     <div id="page-navigator-wrapper">
       <div id="page-navigator">
@@ -18,10 +27,16 @@
     <div id="preview-second-layer"></div>
   </div>
   <div id="previews-wrapper">
-    <div id="previews">
+    <div
+      id="previews"
+      [ngClass]="{
+        hidden: loading,
+        visible: !loading
+      }"
+    >
       <merch-preview-image
         *ngFor="let decli of currentProduct.declinations; let i = index"
-        id="{{'preview-image-' + i}}"
+        id="{{ 'preview-image-' + i }}"
         [declination]="decli"
         [currentProduct]="currentProduct"
       ></merch-preview-image>
