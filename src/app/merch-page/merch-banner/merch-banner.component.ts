@@ -51,10 +51,14 @@ export class MerchBannerComponent implements OnInit, OnDestroy {
   }
 
   goToPreviousPage(): void {
-    this.merchService.goToPreviousPage();
+    if (this.currentProductId > 0) {
+      this.merchService.goToPreviousPage();
+    }
   }
 
   goToNextPage(): void {
-    this.merchService.goToNextPage();
+    if (this.currentProductId < merchInfos.length - 1) {
+      this.merchService.goToNextPage();
+    }
   }
 }

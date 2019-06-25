@@ -59,16 +59,16 @@ export class MerchDescriptionComponent implements OnInit, AfterViewInit, OnDestr
   }
 
   initCurrentProductId(): void {
-    this.currentProduct = merchInfos[this.merchService.getCurrentPageId()];
+    this.currentProduct = this.allProducts[this.merchService.getCurrentPageId()];
     this.currentIdSubscription = this.merchService.currentPageIdHasChanged.subscribe((currentId: number) => {
       if (this.isBrowser) {
         this.loading = currentId > this.currentProduct.id ? 'loading-next' : 'loading-previous';
         setTimeout(() => {
-          this.currentProduct = merchInfos[currentId];
+          this.currentProduct = this.allProducts[currentId];
           this.loading = this.loading === 'loading-next' ? 'loaded-next' : 'loaded-previous';
         }, 300);
       } else {
-        this.currentProduct = merchInfos[currentId];
+        this.currentProduct = this.allProducts[currentId];
       }
     });
   }
@@ -96,7 +96,7 @@ export class MerchDescriptionComponent implements OnInit, AfterViewInit, OnDestr
   isDisabled(direction: string): boolean {
     if (
       (direction === 'previous' && this.currentProduct.id === 0) ||
-      (direction === 'next' && this.currentProduct.id === merchInfos.length - 1)
+      (direction === 'next' && this.currentProduct.id === this.allProducts.length - 1)
     ) {
       return true;
     }
@@ -104,11 +104,15 @@ export class MerchDescriptionComponent implements OnInit, AfterViewInit, OnDestr
   }
 
   goToPreviousPage(): void {
-    this.merchService.goToPreviousPage();
+    if (this.currentProduct.id > 0) {
+      this.merchService.goToPreviousPage();
+    }
   }
 
   goToNextPage(): void {
-    this.merchService.goToNextPage();
+    if (this.currentProduct.id < this.allProducts.length - 1) {
+      this.merchService.goToNextPage();
+    }
   }
 
   isCurrentProduct(id: number): boolean {

@@ -13,7 +13,7 @@ import { isPlatformBrowser } from '@angular/common';
   styleUrls: ['./merch-preview.component.scss'],
 })
 export class MerchPreviewComponent implements OnInit, AfterViewInit, OnDestroy {
-  loading : boolean;
+  loading: boolean;
   isBrowser: boolean;
   currentProduct: MerchInfo;
   currentIdSubscription: Subscription;
@@ -37,7 +37,7 @@ export class MerchPreviewComponent implements OnInit, AfterViewInit, OnDestroy {
     this.initDeviceType();
   }
 
-  ngAfterViewInit():void {
+  ngAfterViewInit(): void {
     this.initScrollSubscription();
   }
 
@@ -87,11 +87,15 @@ export class MerchPreviewComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   goToPreviousPage(): void {
-    this.merchService.goToPreviousPage();
+    if (this.currentProduct.id > 0) {
+      this.merchService.goToPreviousPage();
+    }
   }
 
   goToNextPage(): void {
-    this.merchService.goToNextPage();
+    if (this.currentProduct.id < merchInfos.length - 1) {
+      this.merchService.goToNextPage();
+    }
   }
 
   manageTitlePositioning(scroll: number): void {
