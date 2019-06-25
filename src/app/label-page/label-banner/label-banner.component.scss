@@ -10,9 +10,8 @@
   @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
   }
   @media screen and (max-device-width: $mobile-size) {
-    width: 87.77vw;
+    width: calc(87.77vw - 2px);
     margin-left: 12.23vw;
-    margin-bottom : 1px;
   }
   #banner-picture-wrapper {
     overflow: hidden;
@@ -24,7 +23,7 @@
     @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
     }
     @media screen and (max-device-width: $mobile-size) {
-      margin-left: -12.23vw;
+      margin-left: calc(-12.23vw - 2px);
       width: 100vw;
       height: 75vw;
     }
@@ -55,7 +54,7 @@
       width: calc(67.55% - 32px - 32px);
       padding: 40px 32px;
       margin-top: -40px;
-      margin-left: 30px;
+      left: calc(100% - 67.55% - 12.23vw);
     }
     #banner-page-title {
       font-size: 16px;
