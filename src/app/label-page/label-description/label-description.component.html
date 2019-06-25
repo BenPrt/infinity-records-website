@@ -1,16 +1,28 @@
 <div id="description-left-layer">
   <div id="left-content">
-      <div id="left-pictures-wrapper">
-          <img class="left-picture" alt="Infinity Records Microphone Picture" src="assets/img/label/label_microphone.jpg"/>
-          <img class="left-picture" alt="Infinity Records Desktop Picture" src="assets/img/label/label_desktop.jpg"/>
-      </div>
-          <p id="left-description">{{"LABEL_TOP_DESCRIPTION" | translation}}</p>
-          <ul id="left-description-list">
-            <li><span><img alt="Creation pictogram" src="assets/icons/label_creation_icon.svg"></span>{{"LABEL_TOP_CREATION" | translation}}</li>
-            <li><span><img alt="Recording pictogram" src="assets/icons/label_recording_icon.svg"></span>{{"LABEL_TOP_RECORDING" | translation}}</li>
-            <li><span><img alt="Mixing pictogram" src="assets/icons/label_mixing_icon.svg"></span>{{"LABEL_TOP_MIXING" | translation}}</li>
-            <li><span><img alt="Mastering pictogram" src="assets/icons/label_mastering_icon.svg"></span>{{"LABEL_TOP_MASTERING" | translation}}</li>
-          </ul>
+    <div id="left-pictures-wrapper">
+      <img class="left-picture" alt="Infinity Records Microphone Picture" src="assets/img/label/label_microphone.jpg" />
+      <img class="left-picture" alt="Infinity Records Desktop Picture" src="assets/img/label/label_desktop.jpg" />
+    </div>
+    <p id="left-description">{{ 'LABEL_TOP_DESCRIPTION' | translation }}</p>
+    <ul id="left-description-list">
+      <li>
+        <span><img alt="Creation pictogram" src="assets/icons/label_creation_icon.svg"/></span
+        >{{ 'LABEL_TOP_CREATION' | translation }}
+      </li>
+      <li>
+        <span><img alt="Recording pictogram" src="assets/icons/label_recording_icon.svg"/></span
+        >{{ 'LABEL_TOP_RECORDING' | translation }}
+      </li>
+      <li>
+        <span><img alt="Mixing pictogram" src="assets/icons/label_mixing_icon.svg"/></span
+        >{{ 'LABEL_TOP_MIXING' | translation }}
+      </li>
+      <li>
+        <span><img alt="Mastering pictogram" src="assets/icons/label_mastering_icon.svg"/></span
+        >{{ 'LABEL_TOP_MASTERING' | translation }}
+      </li>
+    </ul>
   </div>
 </div>
 <div id="description-right-layer">
@@ -19,4 +31,9 @@
 </div>
 <div id="description-bottom-wrapper">
   <img id="description-bottom-picture" alt="Infinity Records Studio Picture" src="assets/img/label/label_studio.jpg" />
+  <div id="bottom-picture-overlay"></div>
+  <div id="bottom-picture-content">
+    <hr id="bottom-picture-separator" />
+    <p id="bottom-picture-description">{{ 'LABEL_WHERE_THE_MAGIC' | translation }}</p>
+  </div>
 </div>

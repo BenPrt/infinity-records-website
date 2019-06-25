@@ -35,29 +35,28 @@
       }
 
       #left-description {
-        width : 24.16vw;
-        margin-left : calc((100% - 24.16vw) / 2);
-        margin-top : 56px;
-        font-size : 18px;
-        line-height : 1.56;
-
+        width: 24.16vw;
+        margin-left: calc((100% - 24.16vw) / 2);
+        margin-top: 56px;
+        font-size: 18px;
+        line-height: 1.56;
       }
       #left-description-list {
         list-style-type: none;
-        margin-top : 24px;
-        width : 24.16vw;
-        margin-left : calc((100% - 24.16vw) / 2);
-        padding : 0;
+        margin-top: 24px;
+        width: 24.16vw;
+        margin-left: calc((100% - 24.16vw) / 2);
+        padding: 0;
         li {
-          margin : 0;
-          height : 32px;
-          display : flex;
+          margin: 0;
+          height: 32px;
+          display: flex;
           align-items: center;
-          margin-bottom : 16px;
-          font-size : 16px;
-          font-weight : bold;
+          margin-bottom: 16px;
+          font-size: 16px;
+          font-weight: bold;
           span {
-            margin-right : 8px;
+            margin-right: 8px;
             img {
               width: 32px;
               height: 32px;
@@ -86,7 +85,7 @@
     #right-description {
       width: 230px;
       margin-left: calc(100% - 237px);
-      margin-top: 6px;
+      margin-top: 8px;
       font-size: 24px;
       font-weight: bold;
       line-height: 1.33;
@@ -95,8 +94,44 @@
 
   #description-bottom-wrapper {
     width: 100vw;
+    height : 56.25vw;
     #description-bottom-picture {
       width: 100vw;
+    }
+    #bottom-picture-overlay {
+      position : relative;
+      margin-top : calc(-120px - 9.44vw - 32px);
+      height: 120px;
+      width: 29.72vw;
+      padding: 32px 16px 32px 0px;
+      background-color : black;
+      opacity : 0.5;
+    }
+    #bottom-picture-content {
+      position : relative;
+      margin-top : -152px;
+      height: 120px;
+      width: 29.72vw;
+      #bottom-picture-separator {
+        display : inline-block;
+        vertical-align: top;
+        height: 4px;
+        border: none;
+        margin: 0;
+        background-color: $gold;
+        width: calc(18.05vw - 16px);
+        margin-top : 20px;
+        margin-right : 16px;
+      }
+      #bottom-picture-description {
+        width : calc(29.72vw - 18.05vw);
+        display : inline-block;
+        vertical-align: top;
+        font-size : 32px;
+        line-height : 1.25;
+        font-weight : bold;
+        color : $white;
+      }
     }
   }
 }
