@@ -1,0 +1,10 @@
+@import 'src/app/utils/_styleVariables';
+
+:host {
+  @media screen and (min-device-width: $tablet-size) {
+  }
+  @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+  }
+  @media screen and (max-device-width: $mobile-size) {
+  }
+}

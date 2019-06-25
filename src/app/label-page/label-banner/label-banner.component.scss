@@ -1,0 +1,43 @@
+@import 'src/app/utils/_styleVariables';
+
+:host {
+  @media screen and (min-device-width: $tablet-size) {
+  }
+  @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+  }
+  @media screen and (max-device-width: $mobile-size) {
+  }
+
+  #background-layer {
+      width : 87.3%;
+      border-right : 2px solid $very-light-grey;
+    #banner-picture {
+      width: 72vw;
+      height: 48vw;
+    }
+    #banner-content {
+      position: relative;
+      width: calc(44vw - 80px - 80px);
+      margin-left: 43.4vw;
+      margin-top: -14.66vw;
+      padding: 80px;
+      background-color: $very-light-grey;
+      #banner-page-title {
+        font-size: 16px;
+        line-height: 1.63;
+        letter-spacing: 2px;
+        font-weight: bold;
+      }
+      #banner-title {
+        font-size: 44px;
+        line-height: 1.27;
+      }
+      #banner-description {
+        margin-top: 16px;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.56;
+      }
+    }
+  }
+}

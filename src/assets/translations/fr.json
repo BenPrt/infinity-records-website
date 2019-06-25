@@ -55,5 +55,8 @@
 	"MERCH_LOGO_WHITE" : "Logo blanc",
 	"MERCH_LOGO_BLACK" : "Logo noir",
 	
-	"MERCH_COMING_SOON" : "BIENTÔT DISPONIBLE"
+	"MERCH_COMING_SOON" : "BIENTÔT DISPONIBLE",
+	
+	"LABEL_BANNER_TITLE" : "A propos d'Infinity Records",
+	"LABEL_BANNER_DESCRIPTION" : "Créé en 2017, Infinity Records est un label indépendant de production musicale basé en France."
 }

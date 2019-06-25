@@ -55,6 +55,9 @@
 	"MERCH_LOGO_WHITE" : "White logo",
 	"MERCH_LOGO_BLACK" : "Black logo",
 	
-	"MERCH_COMING_SOON" : "COMING SOON"
+	"MERCH_COMING_SOON" : "COMING SOON",
+	
+	"LABEL_BANNER_TITLE" : "About Infinity Records",
+	"LABEL_BANNER_DESCRIPTION" : "Founded in 2017, Infinity Records is an independant record-label based in France."
 	
 }
