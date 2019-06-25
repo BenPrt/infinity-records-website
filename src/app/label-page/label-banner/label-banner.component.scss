@@ -9,16 +9,19 @@
   }
 
   #background-layer {
-      width : 87.3%;
+      width : 74.6vw;
+      margin-left : 12.7vw;
+      border-left : 2px solid $very-light-grey;
       border-right : 2px solid $very-light-grey;
     #banner-picture {
+        margin-left : calc(-12.7vw - 2px);
       width: 72vw;
       height: 48vw;
     }
     #banner-content {
       position: relative;
       width: calc(44vw - 80px - 80px);
-      margin-left: 43.4vw;
+      margin-left: 30.7vw;
       margin-top: -14.66vw;
       padding: 80px;
       background-color: $very-light-grey;
