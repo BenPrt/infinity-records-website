@@ -266,34 +266,28 @@ $totalHeight: 865px;
 @keyframes fadeOut {
   0% {
     opacity: 1;
-    visibility: initial;
   }
   100% {
     opacity: 0.2;
-    visibility: hidden;
   }
 }
 @keyframes fadeOutNext {
   0% {
     opacity: 1;
-    visibility: initial;
     margin-left: 0;
   }
   100% {
     opacity: 0;
-    visibility: hidden;
     margin-left: -16px;
   }
 }
 @keyframes fadeOutPrevious {
   0% {
     opacity: 1;
-    visibility: initial;
     margin-left: 0;
   }
   100% {
     opacity: 0;
-    visibility: hidden;
     margin-left: 16px;
   }
 }
@@ -311,34 +305,28 @@ $totalHeight: 865px;
 @keyframes fadeIn {
   0% {
     opacity: 0.2;
-    visibility: hidden;
   }
   100% {
     opacity: 1;
-    visibility: initial;
   }
 }
 @keyframes fadeInNext {
   0% {
     opacity: 0;
-    visibility: hidden;
     margin-left: 16px;
   }
   100% {
     opacity: 1;
-    visibility: initial;
     margin-left: 0;
   }
 }
 @keyframes fadeInPrevious {
   0% {
     opacity: 0;
-    visibility: hidden;
     margin-left: -16px;
   }
   100% {
     opacity: 1;
-    visibility: initial;
     margin-left: 0;
   }
 }
