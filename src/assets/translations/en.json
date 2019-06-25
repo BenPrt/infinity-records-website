@@ -58,6 +58,14 @@
 	"MERCH_COMING_SOON" : "COMING SOON",
 	
 	"LABEL_BANNER_TITLE" : "About Infinity Records",
-	"LABEL_BANNER_DESCRIPTION" : "Founded in 2017, Infinity Records is an independant record-label based in France."
+	"LABEL_BANNER_DESCRIPTION" : "Founded in 2017, Infinity Records is an independant record-label based in France.",
+	
+	"LABEL_TOP_DESCRIPTION" : "Dragged by the wish to produce our own music form A to Z, we assist the artists in every step of their development.",
+	"LABEL_TOP_CREATION" :"Creation",
+	"LABEL_TOP_RECORDING" :"Recording",
+	"LABEL_TOP_MIXING" :"Mixing",
+	"LABEL_TOP_MASTERING" :"Mastering",
+	
+	"LABEL_RIGHT_DESCRIPTION": "We are also commited to advising and providing guidance to improve and develop the identity, communication and potential of our artists."
 	
 }

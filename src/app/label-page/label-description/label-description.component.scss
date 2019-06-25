@@ -7,4 +7,96 @@
   }
   @media screen and (max-device-width: $mobile-size) {
   }
+  #description-left-layer {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(53.96vw - 4px);
+    margin-left: 12.7vw;
+    border-left: 2px solid $very-light-grey;
+    border-right: 2px solid $very-light-grey;
+
+    #left-content {
+      position: relative;
+      width: calc(30.83vw - 1px);
+      padding-top: 80px;
+      height: calc(20.9vw + 56px + 112px + 24px + 32px + 16px + 32px + 16px + 32px + 16px + 32px + 104px);
+      background-color: $very-light-grey;
+
+      #left-pictures-wrapper {
+        height: 20.9vw;
+        width: calc(20.9vw + 32px + 20.9vw);
+        margin-left: calc((100% - 20.9vw - 32px - 20.9vw) / 2);
+        display: flex;
+        justify-content: space-between;
+        .left-picture {
+          height: 20.9vw;
+          width: 20.9vw;
+        }
+      }
+
+      #left-description {
+        width : 24.16vw;
+        margin-left : calc((100% - 24.16vw) / 2);
+        margin-top : 56px;
+        font-size : 18px;
+        line-height : 1.56;
+
+      }
+      #left-description-list {
+        list-style-type: none;
+        margin-top : 24px;
+        width : 24.16vw;
+        margin-left : calc((100% - 24.16vw) / 2);
+        padding : 0;
+        li {
+          margin : 0;
+          height : 32px;
+          display : flex;
+          align-items: center;
+          margin-bottom : 16px;
+          font-size : 16px;
+          font-weight : bold;
+          span {
+            margin-right : 8px;
+            img {
+              width: 32px;
+              height: 32px;
+            }
+          }
+        }
+      }
+    }
+  }
+  #description-right-layer {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(20.9vw - 2px);
+    border-right: 2px solid $very-light-grey;
+    padding-top: calc(80px + (20.9vw / 2));
+
+    #right-separator {
+      height: 4px;
+      border: none;
+      margin: 0;
+      background-color: $gold;
+      width: 2.78vw;
+      margin-left: calc(100% - 237px);
+    }
+
+    #right-description {
+      width: 230px;
+      margin-left: calc(100% - 237px);
+      margin-top: 6px;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1.33;
+    }
+  }
+
+  #description-bottom-wrapper {
+    width: 100vw;
+    #description-bottom-picture {
+      width: 100vw;
+    }
+  }
 }
