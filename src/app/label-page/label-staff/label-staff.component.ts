@@ -37,11 +37,15 @@ export class LabelStaffComponent implements OnInit, AfterViewInit, OnDestroy {
 
   initcontainerHeight(): void {
     if (this.isBrowser) {
-      const secondLayerHeight = document.getElementById('staff-second-layer').offsetHeight;
       if (!this.isMobile) {
+        const secondLayerHeight = document.getElementById('staff-second-layer').offsetHeight;
         document.getElementById('staff-first-layer').style.height = `${secondLayerHeight}px`;
       } else {
-
+        const cardWrapper = document.getElementById('staff-cards-wrapper');
+        cardWrapper.style.marginTop = `-${cardWrapper.offsetHeight + 72}px`;
+        const secondLayer = document.getElementById('staff-second-layer');
+        secondLayer.style.height = `${40 + 24 + cardWrapper.offsetHeight}px`;
+        document.getElementById('staff-first-layer').style.height = `${secondLayer.offsetHeight}px`;
       }
     }
   }
