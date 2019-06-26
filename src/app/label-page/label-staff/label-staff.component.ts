@@ -2,6 +2,8 @@ import { Component, AfterViewInit, OnDestroy, OnInit, Inject, PLATFORM_ID } from
 import { Subscription } from 'rxjs';
 import { DeviceService } from 'src/app/shared/services/device.service';
 import { isPlatformBrowser } from '@angular/common';
+import { staffInfos } from 'src/assets/content/label-staff-content';
+import { StaffInfo } from 'src/app/models/staff-info';
 
 @Component({
   selector: 'label-staff',
@@ -11,6 +13,7 @@ import { isPlatformBrowser } from '@angular/common';
 export class LabelStaffComponent implements OnInit, AfterViewInit, OnDestroy {
   isBrowser: boolean;
   isMobile: boolean;
+  staffMembers: StaffInfo[] = staffInfos;
   deviceTypeSubscription: Subscription;
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object, private deviceService: DeviceService) {

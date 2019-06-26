@@ -7,11 +7,24 @@ import { LabelPageComponent } from './label-page.component';
 import { LabelBannerComponent } from './label-banner/label-banner.component';
 import { LabelDescriptionComponent } from './label-description/label-description.component';
 import { LabelStaffComponent } from './label-staff/label-staff.component';
+import { LabelStaffCardComponent } from './label-staff-card/label-staff-card.component';
 
 @NgModule({
   imports: [CommonModule, AngularModule],
-  declarations: [LabelPageComponent, LabelBannerComponent, LabelDescriptionComponent, LabelStaffComponent],
-  exports: [LabelPageComponent, LabelBannerComponent, LabelDescriptionComponent, LabelStaffComponent],
+  declarations: [
+    LabelPageComponent,
+    LabelBannerComponent,
+    LabelDescriptionComponent,
+    LabelStaffComponent,
+    LabelStaffCardComponent,
+  ],
+  exports: [
+    LabelPageComponent,
+    LabelBannerComponent,
+    LabelDescriptionComponent,
+    LabelStaffComponent,
+    LabelStaffCardComponent,
+  ],
   providers: [],
 })
 export class LabelModule {}

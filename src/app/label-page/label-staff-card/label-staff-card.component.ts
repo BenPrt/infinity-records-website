@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { StaffInfo } from 'src/app/models/staff-info';
 
 @Component({
   selector: 'label-staff-card',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./label-staff-card.component.scss'],
 })
 export class LabelStaffCardComponent {
+  @Input() member: StaffInfo;
   constructor() {}
 }

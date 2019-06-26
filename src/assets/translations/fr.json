@@ -79,5 +79,7 @@
 	"LABEL_ROLE_SOFTWARE_ENGINEER" : "Ingénieur Logiciel",
     "LABEL_ROLE_DESIGNER" : "Designer",
 	"LABEL_ROLE_PHOTOGRAPHER" : "Photographe",
-	"LABEL_ROLE_VIDEOGRAPHER" : "Vidéaste"
+	"LABEL_ROLE_VIDEOGRAPHER" : "Vidéaste",
+	
+	"LABEL_BUT_ALSO" : "mais aussi... "
 }

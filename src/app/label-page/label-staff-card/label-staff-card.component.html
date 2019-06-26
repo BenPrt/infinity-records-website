@@ -1,3 +1,13 @@
 <div id="staff-card-wrapper">
-
+  <h1 id="member-name">
+    {{ member.name }}
+  </h1>
+  <div id="member-picture-wrapper">
+    <img id="member-picture" alt="{{ member.name }}\'s picture" src="{{ member.picture }}" />
+  </div>
+  <div id="roles-wrapper">
+      <h1 id="member-main-role">{{member.mainRole | translation | uppercase}}</h1>
+      <p id="but-also-separator">{{"LABEL_BUT_ALSO" | translation }}</p>
+      <h2 *ngFor="let role of member.otherRoles" class="additional-role">{{role |translation}}</h2>
+  </div>
 </div>
