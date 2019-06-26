@@ -1,13 +1,18 @@
-<div
-  id="staff-card-wrapper"
-  (mouseover)="displayQuote($event, true)"
-  (mouseleave)="displayQuote($event, false)"
-  (click)="displayQuote($event)"
->
-  <h1 id="member-name">
+<div id="staff-card-wrapper">
+  <h1
+    id="member-name"
+    (mouseover)="displayQuote($event, true)"
+    (mouseleave)="displayQuote($event, false)"
+    (click)="displayQuote($event)"
+  >
     {{ member.name }}
   </h1>
-  <div id="member-picture-wrapper">
+  <div
+    id="member-picture-wrapper"
+    (mouseover)="displayQuote($event, true)"
+    (mouseleave)="displayQuote($event, false)"
+    (click)="displayQuote($event)"
+  >
     <img
       id="member-picture"
       alt="{{ member.name }}\'s picture"
