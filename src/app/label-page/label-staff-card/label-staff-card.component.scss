@@ -13,6 +13,7 @@
 
     #member-name {
       position: relative;
+      z-index : 3;
       background-color: $black;
       color: $white;
       font-size: 24px;
@@ -33,33 +34,90 @@
         width: 28.61vw;
         height: 21.46vw;
       }
+      .blurred {
+        filter: blur(5px);
+      }
+      #quote-overlay {
+        position: relative;
+        width: 28.61vw;
+        height: 21.46vw;
+        margin-top: calc(-21.46vw - 4px);
+        #overlay {
+          position : relative;
+          z-index : 1;
+          opacity: 0.6;
+          background-color: $black;
+          height: 21.46vw;
+          width: 28.61vw;
+        }
+        #quote-container{
+          position : relative;
+          z-index : 2;
+          display : flex;
+          flex-direction: column;
+          justify-content  : flex-end;
+          height: 21.46vw;
+          width: calc(28.61vw - 7.71vw);
+          margin-left : 7.71vw;
+          margin-top : -21.46vw;  
+ 
+
+          #quote{
+            margin-top : 50px;
+            margin-left : 24px;
+            font-family : 'Hesterica';
+            color : $gold;
+            font-size : 40px;
+            width : 17.57vw;
+          }
+          #quote-author{
+            display : flex;
+            align-items: center;
+            height : 24px;
+            width : calc(17.57vw + 24px);
+            margin-top : 12px;
+            color : $white;
+            font-size : 14px;
+            margin-bottom : calc(51px + 32px);
+            #author-separator{
+              border: none;
+              margin: 0;
+              background-color: $gold;
+              height : 1px;
+              width : 16px;
+              margin-right : 8px;
+            }
+          }
+        }
+      }
     }
-    #roles-wrapper{
-      position : relative;
-      margin-top : -51px;
-      margin-left : 7.71vw;
-      padding : 24px;
-      width : calc(-24px + 19.24vw - 24px);
-      height : calc(-24px + 218px - 24px);
-      background-color : $white; 
-      #member-main-role{
-        margin : 0;
-        font-size : 16px;
-        font-weight : bold;
-        line-height : 1.63;
-        letter-spacing : 2px;
+    #roles-wrapper {
+      position: relative;
+      z-index : 3;
+      margin-top: -51px;
+      margin-left: 7.71vw;
+      padding: 24px;
+      width: calc(-24px + 19.24vw - 24px);
+      height: calc(-24px + 218px - 24px);
+      background-color: $white;
+      #member-main-role {
+        margin: 0;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1.63;
+        letter-spacing: 2px;
       }
-      #but-also-separator{
-        margin-top : 16px;
-        font-size : 14px;
-        color : $grey;
-        line-height : 1.71;
+      #but-also-separator {
+        margin-top: 16px;
+        font-size: 14px;
+        color: $grey;
+        line-height: 1.71;
       }
-      .additional-role{
-        margin : 0;
-        font-size : 16px;
-        font-weight : normal;
-        line-height : 1.63; 
+      .additional-role {
+        margin: 0;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 1.63;
       }
     }
   }

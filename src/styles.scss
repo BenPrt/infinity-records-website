@@ -1,4 +1,4 @@
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @import 'src/app/utils/_styleVariables';
 
 /* You can add global styles to this file, and also import other style files */
@@ -25,3 +25,9 @@ body {
 p {
   margin: 0;
 }
+
+@font-face {
+  font-family: 'Hesterica';
+  src: url('assets/fonts/Hesterica.otf') format('opentype'),
+         url('assets/fonts/Hesterica.ttf') format('truetype');
+ }
