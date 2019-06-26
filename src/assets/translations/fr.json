@@ -70,5 +70,14 @@
 
 	"LABEL_WHERE_THE_MAGIC": "Where the magic happens.",
 	
-	"LABEL_STAFF_TITLE" : "L'équipe"
+	"LABEL_STAFF_TITLE" : "L'équipe",
+	
+	"LABEL_ROLE_HEADMASTER" : "Président",
+	"LABEL_ROLE_PRODUCER" : "Producteur",
+	"LABEL_ROLE_ARTIST" : "Artiste",
+	"LABEL_ROLE_COMMUNITY_MANAGER" : "Community Manager",
+	"LABEL_ROLE_SOFTWARE_ENGINEER" : "Ingénieur Logiciel",
+    "LABEL_ROLE_DESIGNER" : "Designer",
+	"LABEL_ROLE_PHOTOGRAPHER" : "Photographe",
+	"LABEL_ROLE_VIDEOGRAPHER" : "Vidéaste"
 }

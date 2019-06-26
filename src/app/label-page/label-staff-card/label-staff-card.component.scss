@@ -7,4 +7,9 @@
   }
   @media screen and (max-device-width: $mobile-size) {
   }
+  #staff-card-container{
+    outline : 1px solid red;
+    width : 28.61vw;
+    height : calc(12px + 21.46vw + 167px);
+  }
 }
