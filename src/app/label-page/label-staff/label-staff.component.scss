@@ -1,0 +1,41 @@
+@import 'src/app/utils/_styleVariables';
+
+:host {
+  @media screen and (min-device-width: $tablet-size) {
+  }
+  @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+  }
+  @media screen and (max-device-width: $mobile-size) {
+  }
+  #staff-first-layer{
+    width : calc(100vw - 12.57vw - 2px);
+    border-left : 2px solid $very-light-grey;
+    margin-left: 12.57vw;
+    height : 100px;
+    #staff-second-layer{
+      position : relative;
+      background-color : $very-light-grey;
+      width : 32.39vw;
+      height : calc(56px + 48px + 12px + 21.46vw + 167px);
+      margin-top : -48px;
+      padding : 104px 48px;
+      margin-left : calc(100vw - 12.57vw - 2px - 48px - 32.39vw - 48px - 4.86vw);
+      #staff-title{
+        font-size : 44px;
+        height : 56px;
+        line-height : 1.27;
+        font-weight : normal;
+        margin : 0;
+      }
+    }
+    #staff-cards-wrapper{
+      position : relative;
+      width : calc(100vw - 4.86vw - 4.86vw);
+      height : calc(12px + 21.46vw + 167px);
+      margin-top : calc(-12px - 21.46vw - 167px - 104px);
+      margin-left : calc(-12.57vw - 2px + 4.86vw);
+      display :flex;
+      justify-content: space-between;
+    }
+  }
+}
