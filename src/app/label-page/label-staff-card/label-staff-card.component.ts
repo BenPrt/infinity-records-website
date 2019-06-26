@@ -52,7 +52,10 @@ export class LabelStaffCardComponent {
   displayQuote(event: MouseEvent, displayValue?: boolean): void {
     if (this.isBrowser) {
       if (this.isMobile) {
-        if (event.target === this.elRef.nativeElement || this.elRef.nativeElement.contains(event.target as Node)) {
+        if (
+          document.getElementById('member-picture-wrapper').contains(event.target as Node) ||
+          document.getElementById('member-name').contains(event.target as Node)
+        ) {
           this.quoteIsDisplayed = true;
         } else {
           this.quoteIsDisplayed = false;
