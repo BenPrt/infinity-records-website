@@ -1,7 +1,7 @@
 @import 'src/app/utils/_styleVariables';
 
 :host {
-  margin-bottom : 200px;
+  margin-bottom: 200px;
   #desktop-settings-wrapper {
     width: 100vw;
     height: 68px;
@@ -10,8 +10,8 @@
   #menu-wrapper {
     width: 100vw;
     height: 204px;
-    background-color : $white;
-    border-bottom : 1px solid $light-grey;
+    background-color: $white;
+    border-bottom: 1px solid $light-grey;
 
     #menu-container {
       width: 1300px;
@@ -35,29 +35,99 @@
         align-items: center;
       }
 
-      .menu-item {
+      .menu-link {
         display: flex;
         flex-direction: column;
-        .menu-link {
+        text-decoration: none;
+
+        .menu-item {
           cursor: pointer;
           user-select: none;
-          text-decoration: none;
           font-size: 18px;
+          font-weight: 500;
           color: $black;
           letter-spacing: 3px;
+          line-height: 1.56;
+          height: 28px;
+          margin-top: 10px;
         }
         .selected {
-          font-weight: bold;
+          font-weight: 700;
+          animation: bold-in 300ms linear;
+        }
+        .unselected {
+          font-weight: 500;
+          animation: bold-out 300ms linear;
+        }
+        @keyframes bold-in {
+          0% {
+            font-weight: 500;
+          }
+          100% {
+            font-weight: 700;
+          }
+        }
+        @keyframes bold-out {
+          0% {
+            font-weight: 700;
+          }
+          100% {
+            font-weight: 500;
+          }
         }
 
         #menu-indicator {
-          margin-top: 30px;
-          position: absolute;
-          align-self: flex-end;
+          position: relative;
           width: 72px;
           height: 4px;
           background-color: $gold;
           border: none;
+          margin: 0;
+          margin-left: calc(100% - 72px);
+          margin-top: 6px;
+          &.indicated {
+            visibility: initial;
+            animation: indicator-in 300ms linear;
+          }
+          &.hidden {
+            visibility: hidden;
+            animation: indicator-out 300ms linear;
+          }
+        }
+
+        @keyframes indicator-in {
+          0% {
+            opacity: 0;
+            width: 0;
+            visibility: hidden;
+          }
+          50% {
+            opacity: 1;
+            width: 30px;
+            visibility: initial;
+          }
+          100% {
+            opacity: 1;
+            width: 72px;
+            visibility: initial;
+          }
+        }
+        @keyframes indicator-out {
+          0% {
+            opacity: 1;
+            width: 72px;
+            visibility: initial;
+          }
+          50% {
+            opacity: 1;
+            width: 30px;
+            visibility: initial;
+          }
+          100% {
+            opacity: 0;
+            width: 0;
+            visibility: hidden;
+          }
         }
       }
 
@@ -69,9 +139,10 @@
           width: 100%;
         }
         #menu-logo-typo {
+          font-weight : normal;
+          letter-spacing:0.177em; 
+          font-size : 21px;
           user-select: none;
-          padding-left: 5px;
-          margin: 9px auto 0px auto;
           display: block;
         }
       }

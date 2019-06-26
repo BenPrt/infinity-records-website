@@ -4,126 +4,118 @@
   </div>
 </div>
 
-<div id="menu-wrapper" [ngStyle]='menuWrapperStyle' [@menuBorderFade]="menuBorderState">
-  <div id="menu-container" [ngStyle]='menuContainerStyle'>
+<div id="menu-wrapper" [ngStyle]="menuWrapperStyle" [@menuBorderFade]="menuBorderState">
+  <div id="menu-container" [ngStyle]="menuContainerStyle">
     <div id="menu-left-part" [@menuFade] *ngIf="menuIsDisplayed">
-      <div class="menu-item">
-        <a
-          class="menu-link"
-          [ngClass]="{ selected: isPageActive('home') }"
-          routerLink="/home"
-          routerLinkActive="active"
-          >{{ 'HOME' | translation }}</a
-        >
-        <hr id="menu-indicator" [@indicatorFade] *ngIf="isPageActive('home')" />
-      </div>
+      
+      <a class="menu-link" routerLink="/home" routerLinkActive="active">
+        <h2 class="menu-item" [ngClass]="{ selected: isPageActive('home'), unselected: !isPageActive('home') }">
+          {{ 'HOME' | translation }}
+        </h2>
+        <hr id="menu-indicator" [ngClass]="{indicated: isPageActive('home'), hidden: !isPageActive('home')}" />
+      </a>
 
-      <div class="menu-item">
-        <a
-          class="menu-link"
-          [ngClass]="{ selected: isPageActive('label') }"
-          routerLink="/label"
-          routerLinkActive="active"
-          >{{ 'LABEL' | translation }}</a
-        >
-        <hr id="menu-indicator" [@indicatorFade] *ngIf="isPageActive('label')" />
-      </div>
+      <a class="menu-link" routerLink="/label" routerLinkActive="active">
+        <h2 class="menu-item" [ngClass]="{ selected: isPageActive('label'), unselected: !isPageActive('label') }">
+          {{ 'LABEL' | translation }}
+        </h2>
+        <hr id="menu-indicator" [ngClass]="{indicated: isPageActive('label'), hidden: !isPageActive('label')}" />
+      </a>
     </div>
 
-    <div id="menu-logo" [@logoFade] [@scaleLogo]='scaleState'>
-      <svg id="menu-logo-logo"  width="109" height="90" [ngStyle]='menuLogoStyle' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 109 90">
-            <path
-              stroke="#000"
-              stroke-dashoffset="0"
-              fill="none"
-              stroke-width="2"
-              d="M77.8,20.4l0.7-0.7c2.9-2.8,6.7-4.4,10.7-4.4c8.5,0,15.4,6.9,15.4,15.4c0,4.4-1.9,8.5-5.3,11.7
+    <div id="menu-logo" [@logoFade] [@scaleLogo]="scaleState">
+      <svg
+        id="menu-logo-logo"
+        width="109"
+        height="90"
+        [ngStyle]="menuLogoStyle"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 109 90"
+      >
+        <path
+          stroke="#000"
+          stroke-dashoffset="0"
+          fill="none"
+          stroke-width="2"
+          d="M77.8,20.4l0.7-0.7c2.9-2.8,6.7-4.4,10.7-4.4c8.5,0,15.4,6.9,15.4,15.4c0,4.4-1.9,8.5-5.3,11.7
             l-20.2,20l0,0L77.7,61L98,40.9c3-2.8,4.6-6.4,4.6-10.2c0-7.4-6-13.4-13.4-13.4c-3.5,0-6.8,1.3-9.3,3.8l-0.7,0.7"
-              id="svg_1"
-            />
-            <path
-              stroke="#000"
-              stroke-dashoffset="0"
-              fill="none"
-              stroke-width="2"
-              d="M9,42.1l-0.7-0.8C5.5,38.3,4,34.5,4,30.6c0-8.5,6.9-15.4,15.4-15.4c4.1,0,8,1.6,11,4.6l20.8,20.8
+          id="svg_1"
+        />
+        <path
+          stroke="#000"
+          stroke-dashoffset="0"
+          fill="none"
+          stroke-width="2"
+          d="M9,42.1l-0.7-0.8C5.5,38.3,4,34.5,4,30.6c0-8.5,6.9-15.4,15.4-15.4c4.1,0,8,1.6,11,4.6l20.8,20.8
             L49.8,42L29,21.2c-2.6-2.6-5.9-4-9.5-4c-7.4,0-13.8,5.8-13.8,13.2c0,4.3,2.3,7.7,4,9.6l0.7,0.7"
-              id="svg_2"
-            />
-            <path
-              stroke="#000"
-              stroke-dashoffset="0"
-              fill="none"
-              stroke-width="2"
-              d="M17.9,48.2l36.4,36.2l15.8-15.9l1.4,1.3L54.3,87.2L16.6,49.6"
-              id="svg_3"
-            />
-            <path
-              stroke="#000"
-              stroke-dashoffset="0"
-              fill="none"
-              stroke-width="2"
-              d="M99.4,48.1l0.8,0.8c2.8,3,4.3,6.8,4.3,10.7c0.1,8.5-6.9,15.4-15.4,15.4c-4.1,0-8-1.6-11-4.6
+          id="svg_2"
+        />
+        <path
+          stroke="#000"
+          stroke-dashoffset="0"
+          fill="none"
+          stroke-width="2"
+          d="M17.9,48.2l36.4,36.2l15.8-15.9l1.4,1.3L54.3,87.2L16.6,49.6"
+          id="svg_3"
+        />
+        <path
+          stroke="#000"
+          stroke-dashoffset="0"
+          fill="none"
+          stroke-width="2"
+          d="M99.4,48.1l0.8,0.8c2.8,3,4.3,6.8,4.3,10.7c0.1,8.5-6.9,15.4-15.4,15.4c-4.1,0-8-1.6-11-4.6
             L57.3,49.6l1.4-1.4L79.5,69c2.6,2.6,6.1,4,9.7,4c7.4,0,13.4-6,13.4-13.4c0-4.3-2.2-7.6-3.9-9.4L98,49.5"
-              id="svg_4"
-            />
-            <path
-              stroke="#000"
-              stroke-dashoffset="0"
-              fill="none"
-              stroke-width="2"
-              d="M90.5,42L54.3,5.8L38.4,21.7L37,20.3L54.3,3l37.6,37.6"
-              id="svg_5"
-            />
-            <path
-              stroke="#000"
-              stroke-dashoffset="0"
-              fill="none"
-              stroke-width="2"
-              d="M53.2,44.8l17-17l1.4,1.4L38.4,62.4L37,61L53.2,44.8"
-              id="svg_6"
-            />
-            <path
-              stroke="#000"
-              stroke-dashoffset="0"
-              fill="none"
-              stroke-width="2"
-              d="M30.7,69.8L30,70.5c-2.8,3-6.6,4.5-10.6,4.5C10.9,75,4,68.1,4,59.6c0-4.4,1.9-8.5,5.3-11.7
+          id="svg_4"
+        />
+        <path
+          stroke="#000"
+          stroke-dashoffset="0"
+          fill="none"
+          stroke-width="2"
+          d="M90.5,42L54.3,5.8L38.4,21.7L37,20.3L54.3,3l37.6,37.6"
+          id="svg_5"
+        />
+        <path
+          stroke="#000"
+          stroke-dashoffset="0"
+          fill="none"
+          stroke-width="2"
+          d="M53.2,44.8l17-17l1.4,1.4L38.4,62.4L37,61L53.2,44.8"
+          id="svg_6"
+        />
+        <path
+          stroke="#000"
+          stroke-dashoffset="0"
+          fill="none"
+          stroke-width="2"
+          d="M30.7,69.8L30,70.5c-2.8,3-6.6,4.5-10.6,4.5C10.9,75,4,68.1,4,59.6c0-4.4,1.9-8.5,5.3-11.7
             l20.1-20.1l1.4,1.4L10.6,49.3c-3,2.8-4.7,6.4-4.7,10.2c0,7.4,6,13.7,13.4,13.7c3.5,0,6.9-1.5,9.4-4l0.7-0.7"
-              id="svg_7"
-            />
-          </svg>
-      <img
+          id="svg_7"
+        />
+      </svg>
+      <h1
         id="menu-logo-typo"
         [ngStyle]="menuLogoTypoStyle"
         [@typoFade]="typoState"
-        alt="Infinity Records Typo"
-        src="assets/img/InfinityRecords_Logo_Typo.svg"
-      />
+        >INFINITY RECORDS</h1>
+        
     </div>
 
     <div id="menu-right-part" [@menuFade] *ngIf="menuIsDisplayed">
-      <div class="menu-item">
-        <a
-          class="menu-link"
-          [ngClass]="{ selected: isPageActive('artists') }"
-          routerLink="/artists"
-          routerLinkActive="active"
-          >{{ 'ARTISTS' | translation }}</a
-        >
-        <hr id="menu-indicator" [@indicatorFade] *ngIf="isPageActive('artists')" />
-      </div>
+      <a class="menu-link" routerLink="/artists" routerLinkActive="active">
+        <h2 class="menu-item" [ngClass]="{ selected: isPageActive('artists'), unselected: !isPageActive('artists')}">
+          {{ 'ARTISTS' | translation }}
+        </h2>
+        <hr id="menu-indicator" [ngClass]="{indicated: isPageActive('artists'), hidden: !isPageActive('artists')}" />
+      </a>
 
-      <div class="menu-item">
-        <a
-          class="menu-link"
-          [ngClass]="{ selected: isPageActive('merch') }"
-          routerLink="/merch"
-          routerLinkActive="active"
-          >{{ 'MERCH' | translation }}</a
-        >
-        <hr id="menu-indicator" [@indicatorFade] *ngIf="isPageActive('merch')" />
-      </div>
+      <a class="menu-link" routerLink="/merch" routerLinkActive="active">
+        <h2 class="menu-item" [ngClass]="{ selected: isPageActive('merch'), unselected: !isPageActive('merch') }">
+          {{ 'MERCH' | translation }}
+        </h2>
+        <hr id="menu-indicator" [ngClass]="{indicated: isPageActive('merch'), hidden: !isPageActive('merch')}" />
+      </a>
+
     </div>
   </div>
 </div>
