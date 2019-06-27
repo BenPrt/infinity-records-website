@@ -5,8 +5,6 @@ import {
   HostListener,
   Inject,
   PLATFORM_ID,
-  OnChanges,
-  AfterViewChecked,
   AfterViewInit,
 } from '@angular/core';
 import { Location, isPlatformBrowser } from '@angular/common';

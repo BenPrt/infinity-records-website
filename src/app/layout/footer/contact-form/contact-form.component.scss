@@ -161,13 +161,17 @@
           justify-content: space-between;
           margin: 48px 0px 80px 0px;
         }
+
         @media screen and (max-device-width: $desktop-size) {
           margin-top: 32px;
           width: 100%;
         }
 
         #captcha-field {
-          @media screen and (max-device-width: $mobile-size) {
+          @media screen and (max-device-width: $desktop-size)and (min-device-width: $tablet-size) {
+            padding-left: calc((100% - 304px) / 2);
+          }
+          @media screen and (max-device-width: $tablet-size) {
             width: 100%;
           }
         }
@@ -186,7 +190,11 @@
             width: 128px;
             cursor: pointer;
           }
-          @media screen and (max-device-width: $desktop-size) {
+          @media screen and (max-device-width: $desktop-size)and (min-device-width: $tablet-size) {
+            margin : 40px 0px 56px calc((100% - 250px) / 2);
+            width : 250px;
+          }
+          @media screen and (max-device-width: $tablet-size) {
             width: 100%;
             margin-top: 40px;
             margin-bottom: 56px;
