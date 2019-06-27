@@ -33,6 +33,7 @@
 
       #contact-description-title {
         color: $white;
+        font-weight : normal;
         @media screen and (min-device-width: $tablet-size) {
           font-size: 40px;
         }
@@ -83,7 +84,7 @@
         color: $grey;
         font-size: 14px;
         font-family : 'Montserrat';
-        font-weight : bold;
+        font-weight : 600;
         letter-spacing: 1px;
       }
       // Label when filled
@@ -119,6 +120,7 @@
       input,
       textarea {
         color: $white;
+        font-weight : normal;
       }
       // Error message
       ::ng-deep .mat-error {
@@ -194,12 +196,11 @@
           border-radius: 0;
           font-size: 16px;
           letter-spacing: 2px;
-          font-weight: bold;
+          font-weight: 500;
           height: 40px;
 
           @media screen and (min-device-width: $tablet-size) {
             width: 128px;
-
             cursor: pointer;
           }
           @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
