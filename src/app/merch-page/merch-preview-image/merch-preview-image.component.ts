@@ -12,6 +12,7 @@ import { isPlatformBrowser } from '@angular/common';
   templateUrl: './merch-preview-image.component.html',
   styleUrls: ['./merch-preview-image.component.scss'],
   host: {
+    '(document:touchend)': 'displayQuote($event, false)',
     '(window:click)': 'displayDetails($event, false)',
   },
   animations: [

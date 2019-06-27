@@ -10,6 +10,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './label-staff-card.component.html',
   styleUrls: ['./label-staff-card.component.scss'],
   host: {
+    '(document:touchend)': 'displayQuote($event, false)',
     '(window:click)': 'displayQuote($event, false)',
   },
   animations: [
