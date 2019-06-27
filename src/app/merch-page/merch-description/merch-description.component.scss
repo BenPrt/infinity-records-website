@@ -5,60 +5,54 @@ $totalHeight: 865px;
   #description-first-layer {
     background-color: $white;
     border-right: 2px solid $very-light-grey;
-    @media screen and (min-device-width: $tablet-size) {
+    @media screen and (min-device-width: $desktop-size) {
       width: 87.5%;
       height: 683px;
     }
-    @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-    }
-    @media screen and (max-device-width: $mobile-size) {
+    @media screen and (max-device-width: $desktop-size) {
       width: calc(100vw - 12.23vw - 2px);
     }
 
     #description-second-layer {
       background-color: $very-light-grey;
-      @media screen and (min-device-width: $tablet-size) {
+      @media screen and (min-device-width: $desktop-size) {
         width: calc(100% - 301px);
         height: calc(683px - 80px);
         padding-top: 80px;
       }
-      @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-      }
-      @media screen and (max-device-width: $mobile-size) {
+      @media screen and (max-device-width: $desktop-size) {
         width: calc(100% - 50px);
         padding-top: 56px;
       }
 
       #text-zone {
-        @media screen and (min-device-width: $tablet-size) {
+        @media screen and (min-device-width: $desktop-size) {
           width: 412px;
           margin-left: calc((100vw - 1300px) / 2);
         }
-        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+        @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
+          width: calc(100% - 32px);
+          margin-left: 32px;
         }
-        @media screen and (max-device-width: $mobile-size) {
+        @media screen and (max-device-width: $tablet-size) {
           width: calc(100% - 16px);
           margin-left: 16px;
         }
         #description-title {
           line-height: 1.27;
           font-weight: normal;
-          @media screen and (min-device-width: $tablet-size) {
+          @media screen and (min-device-width: $desktop-size) {
             font-size: 44px;
           }
-          @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-          }
-          @media screen and (max-device-width: $mobile-size) {
+          @media screen and (max-device-width: $desktop-size) {
             font-size: 32px;
           }
         }
         #products-indicators {
-          @media screen and (min-device-width: $tablet-size) {
+          @media screen and (min-device-width: $desktop-size) {
             margin-top: 32px;
           }
-          @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-          }
-          @media screen and (max-device-width: $mobile-size) {
+          @media screen and (max-device-width: $desktop-size) {
             margin-top: 24px;
           }
           .products-indicator {
@@ -74,12 +68,10 @@ $totalHeight: 865px;
         #product-title {
           font-size: 32px;
           font-weight: 600;
-          @media screen and (min-device-width: $tablet-size) {
+          @media screen and (min-device-width: $desktop-size) {
             margin-top: 56px;
           }
-          @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-          }
-          @media screen and (max-device-width: $mobile-size) {
+          @media screen and (max-device-width: $desktop-size) {
             margin-top: calc(32px + 56.65vw + 40px);
             height: 40px;
           }
@@ -88,27 +80,21 @@ $totalHeight: 865px;
           list-style-type: none;
           padding: 0;
           margin: 24px 0 0 0;
-          @media screen and (min-device-width: $tablet-size) {
+          @media screen and (min-device-width: $desktop-size) {
             height: 94px;
             width: 500px;
             columns: 2;
             -webkit-columns: 2;
             -moz-columns: 2;
           }
-          @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-          }
-          @media screen and (max-device-width: $mobile-size) {
-          }
           .product-information {
             font-size: 16px;
             line-height: 1.63;
-            @media screen and (min-device-width: $tablet-size) {
+            @media screen and (min-device-width: $desktop-size) {
               width: 250px;
               margin: 0 0 8px 0;
             }
-            @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-            }
-            @media screen and (max-device-width: $mobile-size) {
+            @media screen and (max-device-width: $desktop-size) {
               margin: 0 0 8px 0;
             }
             span {
@@ -122,13 +108,16 @@ $totalHeight: 865px;
           display: flex;
           justify-content: space-between;
           align-items: center;
-          @media screen and (min-device-width: $tablet-size) {
+          @media screen and (min-device-width: $desktop-size) {
             width: 440px;
             margin-top: 50px;
           }
-          @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+          @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
+            width: 59.04vw;
+            max-width: 335px;
+            margin-top: 40px;
           }
-          @media screen and (max-device-width: $mobile-size) {
+          @media screen and (max-device-width: $tablet-size) {
             width: calc(100% - 10px);
             margin-top: 40px;
           }
@@ -148,12 +137,10 @@ $totalHeight: 865px;
             border: none;
             margin: 0;
             background-color: $gold;
-            @media screen and (min-device-width: $tablet-size) {
+            @media screen and (min-device-width: $desktop-size) {
               width: 185px;
             }
-            @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-            }
-            @media screen and (max-device-width: $mobile-size) {
+            @media screen and (max-device-width: $desktop-size) {
               width: 17vw;
             }
           }
@@ -173,12 +160,10 @@ $totalHeight: 865px;
           letter-spacing: 2px;
           cursor: pointer;
 
-          @media screen and (min-device-width: $tablet-size) {
+          @media screen and (min-device-width: $desktop-size) {
             margin-top: 72px;
           }
-          @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-          }
-          @media screen and (max-device-width: $mobile-size) {
+          @media screen and (max-device-width: $desktop-size) {
             margin-top: 48px;
             margin-bottom: 56px;
           }
@@ -189,16 +174,21 @@ $totalHeight: 865px;
       }
     }
     #product-picture-container {
-      @media screen and (min-device-width: $tablet-size) {
+      @media screen and (min-device-width: $desktop-size) {
         position: relative;
         margin-top: -545px;
         margin-left: calc(100% - 633px);
         width: 634px;
         height: 475px;
       }
-      @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+      @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
+        position: relative;
+        margin-top: -1052px;
+        margin-left: calc(((100vw - 75.53vw) / 2) - 1px);
+        width: 75.53vw;
+        height: 213px;
       }
-      @media screen and (max-device-width: $mobile-size) {
+      @media screen and (max-device-width: $tablet-size) {
         position: relative;
         margin-top: -683px;
         margin-left: calc(((100vw - 75.53vw) / 2) - 1px);
@@ -207,13 +197,11 @@ $totalHeight: 865px;
       }
 
       #product-picture {
-        @media screen and (min-device-width: $tablet-size) {
+        @media screen and (min-device-width: $desktop-size) {
           width: 634px;
           height: 475px;
         }
-        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-        }
-        @media screen and (max-device-width: $mobile-size) {
+        @media screen and (max-device-width: $desktop-size) {
           width: 75.53vw;
           height: 56.65vw;
         }
@@ -251,7 +239,6 @@ $totalHeight: 865px;
     }
   }
 }
-
 
 // Animations part
 .hidden {
@@ -292,9 +279,8 @@ $totalHeight: 865px;
   }
 }
 
-
-.visible{
-  animation: fadeIn 300ms linear;  
+.visible {
+  animation: fadeIn 300ms linear;
 }
 .visible-next {
   animation: fadeInNext 300ms linear;
@@ -330,5 +316,3 @@ $totalHeight: 865px;
     margin-left: 0;
   }
 }
-
-
