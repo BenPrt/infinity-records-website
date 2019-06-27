@@ -1,7 +1,7 @@
 <div id="description-first-layer">
   <div id="description-second-layer">
     <div id="text-zone">
-      <p id="description-title">{{ 'MERCH_PRODUCTS_TITLE' | translation }}</p>
+      <h2 id="description-title">{{ 'MERCH_PRODUCTS_TITLE' | translation }}</h2>
       <div id="products-indicators">
         <p
           class="products-indicator"
@@ -12,7 +12,7 @@
           {{ '0' + (product.id + 1) }}
         </p>
       </div>
-      <p
+      <h3
         id="product-title"
         [ngClass]="{
           'hidden-next': loading === 'loading-next',
@@ -21,8 +21,8 @@
           'visible-previous': loading === 'loaded-previous'
         }"
       >
-        {{ currentProduct.title | translation }}
-      </p>
+        {{ currentProduct.title | translation}}
+      </h3>
       <ul
         id="product-informations"
         [ngClass]="{
