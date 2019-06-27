@@ -41,6 +41,7 @@
         text-decoration: none;
         width: 132px;
         align-items: flex-end;
+        &:focus {outline : none;}
 
         .menu-item {
           cursor: pointer;
