@@ -29,7 +29,7 @@
       background-color: $black;
       color: $white;
       font-size: 24px;
-      font-weight: bold;
+      font-weight: 600;
       margin: 0;
       @media screen and (min-device-width: $tablet-size) {
         width: calc(7.36vw - 16px);
@@ -132,6 +132,7 @@
             font-family: 'Hesterica';
             color: $gold;
             font-size: 40px;
+            font-weight : normal;
             @media screen and (min-device-width: $tablet-size) {
               width: 17.57vw;
             }
@@ -148,6 +149,7 @@
             margin-top: 12px;
             color: $white;
             font-size: 14px;
+            font-weight : normal;
             @media screen and (min-device-width: $tablet-size) {
               width: calc(17.57vw + 24px);
               margin-bottom: calc(51px + 32px);

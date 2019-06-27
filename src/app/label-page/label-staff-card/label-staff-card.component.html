@@ -1,12 +1,12 @@
 <div id="staff-card-wrapper">
-  <h1
+  <h3
     id="member-name"
     (mouseover)="displayQuote($event, true)"
     (mouseleave)="displayQuote($event, false)"
     (click)="displayQuote($event)"
   >
     {{ member.name }}
-  </h1>
+  </h3>
   <div
     id="member-picture-wrapper"
     (mouseover)="displayQuote($event, true)"
@@ -22,16 +22,16 @@
     <div id="quote-overlay" *ngIf="quoteIsDisplayed" [@quote-fade]>
       <div id="overlay"></div>
       <div id="quote-container">
-        <p id="quote">{{ member.quote }}</p>
-        <p id="quote-author">
+        <h4 id="quote">{{ member.quote }}</h4>
+        <h4 id="quote-author">
           <span><hr id="author-separator"/></span>{{ member.quoteAuthor }}
-        </p>
+        </h4>
       </div>
     </div>
   </div>
   <div id="roles-wrapper">
-    <h1 id="member-main-role">{{ member.mainRole | translation | uppercase }}</h1>
+    <h4 id="member-main-role">{{ member.mainRole | translation | uppercase }}</h4>
     <p id="but-also-separator">{{ 'LABEL_BUT_ALSO' | translation }}</p>
-    <h2 *ngFor="let role of member.otherRoles" class="additional-role">{{ role | translation }}</h2>
+    <h5 *ngFor="let role of member.otherRoles" class="additional-role">{{ role | translation }}</h5>
   </div>
 </div>
