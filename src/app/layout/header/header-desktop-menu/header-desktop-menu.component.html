@@ -7,19 +7,18 @@
 <div id="menu-wrapper" [ngStyle]="menuWrapperStyle" [@menuBorderFade]="menuBorderState">
   <div id="menu-container" [ngStyle]="menuContainerStyle">
     <div id="menu-left-part" [@menuFade] *ngIf="menuIsDisplayed">
-      
       <a class="menu-link" routerLink="/home" routerLinkActive="active">
         <h2 class="menu-item" [ngClass]="{ selected: isPageActive('home'), unselected: !isPageActive('home') }">
           {{ 'HOME' | translation }}
         </h2>
-        <hr id="menu-indicator" [ngClass]="{indicated: isPageActive('home'), hidden: !isPageActive('home')}" />
+        <hr id="menu-indicator" [ngClass]="{ indicated: isPageActive('home'), hidden: !isPageActive('home') }" />
       </a>
 
       <a class="menu-link" routerLink="/label" routerLinkActive="active">
         <h2 class="menu-item" [ngClass]="{ selected: isPageActive('label'), unselected: !isPageActive('label') }">
           {{ 'LABEL' | translation }}
         </h2>
-        <hr id="menu-indicator" [ngClass]="{indicated: isPageActive('label'), hidden: !isPageActive('label')}" />
+        <hr id="menu-indicator" [ngClass]="{ indicated: isPageActive('label'), hidden: !isPageActive('label') }" />
       </a>
     </div>
 
@@ -93,29 +92,23 @@
           id="svg_7"
         />
       </svg>
-      <h1
-        id="menu-logo-typo"
-        [ngStyle]="menuLogoTypoStyle"
-        [@typoFade]="typoState"
-        >INFINITY RECORDS</h1>
-        
+      <h1 id="menu-logo-typo" [ngStyle]="menuLogoTypoStyle" [@typoFade]="typoState">INFINITY RECORDS</h1>
     </div>
 
     <div id="menu-right-part" [@menuFade] *ngIf="menuIsDisplayed">
       <a class="menu-link" routerLink="/artists" routerLinkActive="active">
-        <h2 class="menu-item" [ngClass]="{ selected: isPageActive('artists'), unselected: !isPageActive('artists')}">
+        <h2 class="menu-item" [ngClass]="{ selected: isPageActive('artists'), unselected: !isPageActive('artists') }">
           {{ 'ARTISTS' | translation }}
         </h2>
-        <hr id="menu-indicator" [ngClass]="{indicated: isPageActive('artists'), hidden: !isPageActive('artists')}" />
+        <hr id="menu-indicator" [ngClass]="{ indicated: isPageActive('artists'), hidden: !isPageActive('artists') }" />
       </a>
 
       <a class="menu-link" routerLink="/merch" routerLinkActive="active">
         <h2 class="menu-item" [ngClass]="{ selected: isPageActive('merch'), unselected: !isPageActive('merch') }">
           {{ 'MERCH' | translation }}
         </h2>
-        <hr id="menu-indicator" [ngClass]="{indicated: isPageActive('merch'), hidden: !isPageActive('merch')}" />
+        <hr id="menu-indicator" [ngClass]="{ indicated: isPageActive('merch'), hidden: !isPageActive('merch') }" />
       </a>
-
     </div>
   </div>
 </div>

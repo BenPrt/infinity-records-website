@@ -60,8 +60,8 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
   };
 
   menuLogoTypoStyle: any = {
-    height: '17px',
-    marginTop: '9px',
+    fontSize : '20px',
+    marginTop: '6px',
   };
 
   constructor(
@@ -138,8 +138,9 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
             height: '90px',
           };
           this.menuLogoTypoStyle = {
-            height: '17px',
-            marginTop: '9px',
+            height : '28px',
+            fontSize : '20px',
+            marginTop: '6px',
           };
         } else if (scroll > 68 && scroll <= 104) {
           this.settingsStyle = { display: 'none' };
@@ -155,8 +156,9 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
             height: '90px',
           };
           this.menuLogoTypoStyle = {
-            height: '17px',
-            marginTop: '9px',
+            height : '28px',
+            fontSize : '20px',
+            marginTop: '6px',
           };
         } else if (scroll > 104 && scroll <= 130) {
           this.settingsStyle = { display: 'none' };
@@ -172,8 +174,9 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
             height: '90px',
           };
           this.menuLogoTypoStyle = {
-            height: `calc(17px - ((${Math.round(scroll)}px - 104px) / 1.53))`,
-            marginTop: `calc(9px - ((${Math.round(scroll)}px - 104px) / 2.88))`,
+            height : `calc(28px - ((${Math.round(scroll)}px - 104px) / 0.93))`,
+            fontSize: `calc(20px - ((${Math.round(scroll)}px - 104px) / 1.3))`,
+            marginTop: `calc(6px - ((${Math.round(scroll)}px - 104px) / 4.33))`,
           };
         } else if (scroll > 130 && scroll <= 156) {
           this.settingsStyle = { display: 'none' };
@@ -189,7 +192,8 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
             height: `calc(90px - ((${Math.round(scroll)}px - 130px) / 1.18)`,
           };
           this.menuLogoTypoStyle = {
-            height: '0px',
+            height : '0px',
+            fontSize: '0px',
             marginTop: '0px',
             display: 'none',
           };
@@ -207,7 +211,8 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
             height: '68px',
           };
           this.menuLogoTypoStyle = {
-            height: '0px',
+            height : '0px',
+            fontSize: '0px',
             marginTop: '0px',
             display: 'none',
           };
@@ -222,8 +227,9 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
           paddingTop: '32px',
         };
         this.menuLogoTypoStyle = {
-          height: '17px',
-          marginTop: '9px',
+          height : '28px',
+          fontSize : '20px',
+          marginTop: '6px',
         };
       }
     }

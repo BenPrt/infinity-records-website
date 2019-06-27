@@ -39,39 +39,46 @@
         display: flex;
         flex-direction: column;
         text-decoration: none;
+        width: 132px;
+        align-items: flex-end;
 
         .menu-item {
           cursor: pointer;
           user-select: none;
-          font-size: 18px;
-          font-weight: 500;
           color: $black;
-          letter-spacing: 3px;
+          letter-spacing: 0.15em;
           line-height: 1.56;
           height: 28px;
           margin-top: 10px;
         }
+        $size : 1.01em;
         .selected {
+          font-size: $size;
           font-weight: 700;
           animation: bold-in 300ms linear;
         }
         .unselected {
+          font-size: 1em;
           font-weight: 500;
           animation: bold-out 300ms linear;
         }
         @keyframes bold-in {
           0% {
+            font-size: 1em;
             font-weight: 500;
           }
           100% {
+            font-size: $size;
             font-weight: 700;
           }
         }
         @keyframes bold-out {
           0% {
+            font-size: 19px;
             font-weight: 700;
           }
           100% {
+            font-size: 1em;
             font-weight: 500;
           }
         }
@@ -138,12 +145,17 @@
         #menu-logo-logo {
           width: 100%;
         }
+
         #menu-logo-typo {
-          font-weight : normal;
-          letter-spacing:0.177em; 
-          font-size : 21px;
+          font-family: Kano;
+          font-weight: normal;
+          letter-spacing: 0.228em;
+          font-size: 20px;
           user-select: none;
           display: block;
+          margin-top : 6px;
+          height : 28px;
+          line-height : 1.4;
         }
       }
     }
