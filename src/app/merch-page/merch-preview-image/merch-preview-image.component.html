@@ -13,7 +13,7 @@
   <div class="details-overlay" *ngIf="detailsAreDisplayed" [@details-fade]>
     <div class="overlay"></div>
     <div class="description">
-      <p class="description-title">{{ getProductTitle() | translation }}</p>
+      <h3 class="description-title">{{ getProductTitle() | translation | uppercase}}</h3>
       <p class="description-color">{{ declination.mainColor | translation }}</p>
       <p class="description-color">{{ declination.logoColor | translation }}</p>
       <p class="sold-out-banner">{{ 'MERCH_COMING_SOON' | translation }}</p>

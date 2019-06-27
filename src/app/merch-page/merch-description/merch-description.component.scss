@@ -72,6 +72,8 @@ $totalHeight: 865px;
           }
         }
         #product-title {
+          font-size: 32px;
+          font-weight: 600;
           @media screen and (min-device-width: $tablet-size) {
             margin-top: 56px;
           }
@@ -81,8 +83,6 @@ $totalHeight: 865px;
             margin-top: calc(32px + 56.65vw + 40px);
             height: 40px;
           }
-          font-size: 32px;
-          font-weight: bold;
         }
         #product-informations {
           list-style-type: none;
@@ -169,7 +169,7 @@ $totalHeight: 865px;
           background-color: $very-light-grey;
           text-align: center;
           font-size: 16px;
-          font-weight: bold;
+          font-weight: 500;
           letter-spacing: 2px;
           cursor: pointer;
 

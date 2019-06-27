@@ -114,6 +114,11 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   initScrollOnRouteChange(): void {
     if (this.isBrowser) {
+      if (navigator.userAgent.indexOf('Firefox') > -1) {
+        document.getElementsByTagName('body')[0].style.scrollBehavior = 'smooth';
+      } else {
+        document.querySelector('html').style.scrollBehavior = 'smooth';
+      }
       this.router.events.subscribe((evt: RouterEvent) => {
         if (this.isMobile) {
           const scrollableElement: HTMLElement = document.querySelector('#mobile-page-content');

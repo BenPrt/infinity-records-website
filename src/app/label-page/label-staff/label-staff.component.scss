@@ -1,77 +1,69 @@
 @import 'src/app/utils/_styleVariables';
 
-:host {
+#staff-first-layer {
+  border-left: 2px solid $very-light-grey;
   @media screen and (min-device-width: $tablet-size) {
+    width: calc(100vw - 12.57vw - 2px);
+    margin-left: 12.57vw;
   }
   @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
   }
   @media screen and (max-device-width: $mobile-size) {
+    width: calc(100vw - 12.23vw - 2px);
+    margin-left: 12.23vw;
+    margin-bottom: 1px;
   }
-  #staff-first-layer {
-    border-left: 2px solid $very-light-grey;
+  #staff-second-layer {
+    position: relative;
+    background-color: $very-light-grey;
     @media screen and (min-device-width: $tablet-size) {
-      width: calc(100vw - 12.57vw - 2px);
-      margin-left: 12.57vw;
+      width: 32.39vw;
+      height: calc(56px + 48px + 12px + 21.46vw + 167px);
+      margin-top: -48px;
+      padding: 104px 48px;
+      margin-left: calc(100vw - 12.57vw - 2px - 48px - 32.39vw - 48px - 4.86vw);
     }
     @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
     }
     @media screen and (max-device-width: $mobile-size) {
-      width: calc(100vw - 12.23vw - 2px);
-      margin-left: 12.23vw;
-      margin-bottom: 1px;
+      width: calc(51.59vw - 48px);
+      margin-left: calc(100vw - 51.59vw - 12.23vw - 16px);
+      margin-top: -24px;
+      padding: 72px 24px;
     }
-    #staff-second-layer {
-      position: relative;
-      background-color: $very-light-grey;
+    #staff-title {
+      font-weight: normal;
+      margin: 0;
       @media screen and (min-device-width: $tablet-size) {
-        width: 32.39vw;
-        height: calc(56px + 48px + 12px + 21.46vw + 167px);
-        margin-top: -48px;
-        padding: 104px 48px;
-        margin-left: calc(100vw - 12.57vw - 2px - 48px - 32.39vw - 48px - 4.86vw);
+        font-size: 44px;
+        height: 56px;
+        line-height: 1.27;
       }
       @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
       }
       @media screen and (max-device-width: $mobile-size) {
-        width: calc(51.59vw - 48px);
-        margin-left: calc(100vw - 51.59vw - 12.23vw - 16px);
-        margin-top: -24px;
-        padding: 72px 24px;
-      }
-      #staff-title {
-        font-weight: normal;
-        margin: 0;
-        @media screen and (min-device-width: $tablet-size) {
-          font-size: 44px;
-          height: 56px;
-          line-height: 1.27;
-        }
-        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-        }
-        @media screen and (max-device-width: $mobile-size) {
-          font-size: 32px;
-          height: 40px;
-          line-height: 1.25;
-        }
+        font-size: 32px;
+        height: 40px;
+        line-height: 1.25;
       }
     }
-    #staff-cards-wrapper {
-      position: relative;
-      display: flex;
-      justify-content: space-between;
-      @media screen and (min-device-width: $tablet-size) {
-        width: calc(100vw - 4.86vw - 4.86vw);
-        height: calc(12px + 21.46vw + 167px);
-        margin-top: calc(-12px - 21.46vw - 167px - 104px);
-        margin-left: calc(-12.57vw - 2px + 4.86vw);
-      }
-      @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-      }
-      @media screen and (max-device-width: $mobile-size) {
-        flex-direction: column;
-        width: calc(-16px + 100vw  - 16px);
-        margin-left : calc(-12.23vw - 2px + 16px);
-      }
+  }
+  #staff-cards-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (min-device-width: $tablet-size) {
+      width: calc(100vw - 4.86vw - 4.86vw);
+      height: calc(12px + 21.46vw + 167px);
+      margin-top: calc(-12px - 21.46vw - 167px - 104px);
+      margin-left: calc(-12.57vw - 2px + 4.86vw);
+    }
+    @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+    }
+    @media screen and (max-device-width: $mobile-size) {
+      flex-direction: column;
+      width: calc(-16px + 100vw - 16px);
+      margin-left: calc(-12.23vw - 2px + 16px);
     }
   }
 }

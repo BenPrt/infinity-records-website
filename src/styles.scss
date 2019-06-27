@@ -2,24 +2,33 @@
 @import 'src/app/utils/_styleVariables';
 
 /* You can add global styles to this file, and also import other style files */
-html{
-  scroll-behavior: smooth;
-}
-
 body {
   width: 100%;
   height: 100vh;
   margin: 0;
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
-  overflow : overlay;
-  overflow-x : hidden; 
+  overflow: overlay;
+  overflow-x: hidden;
   visibility: hidden;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .mobile-body {
-  position : fixed;
-  overflow : hidden;   
+  position: fixed;
+  overflow: hidden;
 }
 
 p {
@@ -28,6 +37,9 @@ p {
 
 @font-face {
   font-family: 'Hesterica';
-  src: url('assets/fonts/Hesterica.otf') format('opentype'),
-         url('assets/fonts/Hesterica.ttf') format('truetype');
- }
+  src: url('assets/fonts/Hesterica.otf') format('opentype'), url('assets/fonts/Hesterica.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Kano';
+  src: url('assets/fonts/Kano.otf') format('opentype');
+}

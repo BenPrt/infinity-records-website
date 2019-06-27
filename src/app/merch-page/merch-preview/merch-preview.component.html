@@ -1,7 +1,7 @@
 <div id="preview-first-layer">
   <div id="page-navigator-container">
     <div id="product-title-wrapper">
-      <p
+      <h3
         id="product-title"
         [ngClass]="{
           hidden: loading,
@@ -9,8 +9,8 @@
         }"
         [ngStyle]="titleStyle"
       >
-        {{ currentProduct.title | translation }}
-      </p>
+        {{ currentProduct.title | translation | uppercase }}
+      </h3>
     </div>
     <div id="page-navigator-wrapper">
       <div id="page-navigator">

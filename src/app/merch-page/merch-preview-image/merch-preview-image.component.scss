@@ -78,7 +78,7 @@
         letter-spacing: 2px;
         @media screen and (min-device-width: $tablet-size) {
           margin-top: 109px;
-          margin-bottom: 8px;
+          margin-bottom: 3px;
         }
         @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
         }
@@ -91,7 +91,7 @@
         margin-left: 32px;
         height: 32px;
         font-size: 24px;
-        font-weight: bold;
+        font-weight: 600;
         line-height: 1.33;
       }
       .sold-out-banner {
@@ -100,7 +100,7 @@
         height: 40px;
         line-height: 40px;
         font-size: 18px;
-        font-weight: bold;
+        font-weight: 600;
         background-color: $black;
         color: $gold;
         @media screen and (min-device-width: $tablet-size) {
