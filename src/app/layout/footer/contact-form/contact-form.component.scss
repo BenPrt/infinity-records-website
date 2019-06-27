@@ -4,29 +4,26 @@
   #contact-form-container {
     background-color: $black;
 
-    @media screen and (min-device-width: $tablet-size) {
+    @media screen and (min-device-width: $desktop-size) {
       padding-left: calc((100% - 1300px) / 2);
       padding-right: calc((100% - 1300px) / 2);
       width: 1300px;
       display: flex;
       justify-content: space-around;
     }
-    @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-    }
-    @media screen and (max-device-width: $mobile-size) {
-      width: 304px;
-      padding-left: calc((100% - 304px) / 2);
-      padding-right: calc((100% - 304px) / 2);
+    @media screen and (max-device-width: $desktop-size) {
+      width: 80.85vw;
+      min-width: 304px;
+      padding-left: calc((100% - 80.85vw) / 2);
+      padding-right: calc((100% - 80.85vw) / 2);
     }
 
     #contact-description {
-      @media screen and (min-device-width: $tablet-size) {
+      @media screen and (min-device-width: $desktop-size) {
         width: 301px;
         margin-top: 80px;
       }
-      @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-      }
-      @media screen and (max-device-width: $mobile-size) {
+      @media screen and (max-device-width: $desktop-size) {
         width: 100%;
         padding-top: 48px;
       }
@@ -34,12 +31,10 @@
       #contact-description-title {
         color: $white;
         font-weight : normal;
-        @media screen and (min-device-width: $tablet-size) {
+        @media screen and (min-device-width: $desktop-size) {
           font-size: 40px;
         }
-        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-        }
-        @media screen and (max-device-width: $mobile-size) {
+        @media screen and (max-device-width: $desktop-size) {
           font-size: 32px;
         }
       }
@@ -48,14 +43,12 @@
         color: $white;
         line-height : 1.63;
         font-size: 16px;
-        @media screen and (min-device-width: $tablet-size) {
+        @media screen and (min-device-width: $desktop-size) {
           margin-top: 40px;
           width: 275px;
           padding-left: 24px;
         }
-        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-        }
-        @media screen and (max-device-width: $mobile-size) {
+        @media screen and (max-device-width: $desktop-size) {
           margin-top: 32px;
           width: calc(100% - 22px);
           padding-left: 22px;
@@ -64,13 +57,11 @@
     }
 
     #contact-form {
-      @media screen and (min-device-width: $tablet-size) {
-        width: 634px;
+      @media screen and (min-device-width: $desktop-size) {
+        width: 44.03vw;
         margin-top: 137px;
       }
-      @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-      }
-      @media screen and (max-device-width: $mobile-size) {
+      @media screen and (max-device-width: $desktop-size) {
         width: 100%;
         margin-top: 48px;
       }
@@ -130,25 +121,21 @@
       #name-field {
         font-family : 'Montserrat';
         font-size : 16px;
-        @media screen and (min-device-width: $tablet-size) {
+        @media screen and (min-device-width: $desktop-size) {
           width: 301px;
           margin-right: 32px;
         }
-        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-        }
-        @media screen and (max-device-width: $mobile-size) {
+        @media screen and (max-device-width: $desktop-size) {
           width: 100%;
         }
       }
       #email-field {
         font-family : 'Montserrat';
         font-size : 16px;
-        @media screen and (min-device-width: $tablet-size) {
+        @media screen and (min-device-width: $desktop-size) {
           width: 301px;
         }
-        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-        }
-        @media screen and (max-device-width: $mobile-size) {
+        @media screen and (max-device-width: $desktop-size) {
           width: 100%;
           margin-top: 24px;
         }
@@ -157,28 +144,24 @@
         font-family : 'Montserrat';
         font-size : 16px;
         line-height : 20px;
-        @media screen and (min-device-width: $tablet-size) {
+        @media screen and (min-device-width: $desktop-size) {
           width: 100%;
           margin-top: 32px;
         }
-        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-        }
-        @media screen and (max-device-width: $mobile-size) {
+        @media screen and (max-device-width: $desktop-size) {
           width: 100%;
           margin-top: 24px;
         }
       }
       #captcha-and-submit-container {
-        @media screen and (min-device-width: $tablet-size) {
+        @media screen and (min-device-width: $desktop-size) {
           display: flex;
           width: 100%;
           align-items: center;
           justify-content: space-between;
           margin: 48px 0px 80px 0px;
         }
-        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-        }
-        @media screen and (max-device-width: $mobile-size) {
+        @media screen and (max-device-width: $desktop-size) {
           margin-top: 32px;
           width: 100%;
         }
@@ -199,13 +182,11 @@
           font-weight: 500;
           height: 40px;
 
-          @media screen and (min-device-width: $tablet-size) {
+          @media screen and (min-device-width: $desktop-size) {
             width: 128px;
             cursor: pointer;
           }
-          @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-          }
-          @media screen and (max-device-width: $mobile-size) {
+          @media screen and (max-device-width: $desktop-size) {
             width: 100%;
             margin-top: 40px;
             margin-bottom: 56px;
@@ -214,12 +195,10 @@
         #sending-message-loader {
           color: $gold;
           font-size: 25px;
-          @media screen and (min-device-width: $tablet-size) {
+          @media screen and (min-device-width: $desktop-size) {
             margin-right: 50px;
           }
-          @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-          }
-          @media screen and (max-device-width: $mobile-size) {
+          @media screen and (max-device-width: $desktop-size) {
             width: 100%;
             height : 40px;
             line-height : 40px;
@@ -232,12 +211,10 @@
           height: 40px;
           line-height: 40px;
           display: flex;
-          @media screen and (min-device-width: $tablet-size) {
+          @media screen and (min-device-width: $desktop-size) {
             width: 160px;
           }
-          @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-          }
-          @media screen and (max-device-width: $mobile-size) {
+          @media screen and (max-device-width: $desktop-size) {
             margin-top: 40px;
             padding-bottom: 56px;
             width: 100%;

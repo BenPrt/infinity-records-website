@@ -5,17 +5,15 @@
 
   #footer-wrapper {
     background-color: $white;
-    @media screen and (min-device-width: $tablet-size) {
+    @media screen and (min-device-width: $desktop-size) {
       height: 152px;
     }
-    @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-    }
-    @media screen and (max-device-width: $mobile-size) {
+    @media screen and (max-device-width: $desktop-size) {
       width: 100%;
     }
 
     #footer-container {
-      @media screen and (min-device-width: $tablet-size) {
+      @media screen and (min-device-width: $desktop-size) {
         height: 152px;
         width: 1300px;
         margin-left: calc((100% - 1300px) / 2);
@@ -23,46 +21,38 @@
         align-items: center;
         justify-content: space-between;
       }
-      @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-      }
-      @media screen and (max-device-width: $mobile-size) {
+      @media screen and (max-device-width: $desktop-size) {
         width: 100%;
         text-align: center;
       }
 
       #logo-line-wrapper {
-        @media screen and (min-device-width: $tablet-size) {
+        @media screen and (min-device-width: $desktop-size) {
           width: 388px;
         }
-        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-        }
-        @media screen and (max-device-width: $mobile-size) {
+        @media screen and (max-device-width: $desktop-size) {
+          margin-top: 48px;
         }
         #logo-line {
-          @media screen and (min-device-width: $tablet-size) {
+          @media screen and (min-device-width: $desktop-size) {
             width: 300px;
           }
-          @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-          }
-          @media screen and (max-device-width: $mobile-size) {
-            margin-top: 48px;
+          @media screen and (max-device-width: $desktop-size) {
             width: 256px;
           }
         }
       }
       #social-part {
-        @media screen and (max-device-width: $mobile-size) {
+        @media screen and (max-device-width: $desktop-size) {
           margin-top: 32px;
         }
         .social-media-link {
-          @media screen and (min-device-width: $tablet-size) {
+          @media screen and (min-device-width: $desktop-size) {
             width: 40px;
             height: 40px;
             margin-right: 16px;
           }
-          @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-          }
-          @media screen and (max-device-width: $mobile-size) {
+          @media screen and (max-device-width: $desktop-size) {
             width: 40px;
             height: 40px;
             margin-right: 16px;
@@ -74,12 +64,10 @@
           }
         }
         :last-child {
-          @media screen and (min-device-width: $tablet-size) {
+          @media screen and (min-device-width: $desktop-size) {
             margin-right: 0px;
           }
-          @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-          }
-          @media screen and (max-device-width: $mobile-size) {
+          @media screen and (max-device-width: $desktop-size) {
             margin-right: 0px;
           }
         }
@@ -87,12 +75,10 @@
       #rights-part {
         font-size: 14px;
         color: $grey;
-        @media screen and (min-device-width: $tablet-size) {
+        @media screen and (min-device-width: $desktop-size) {
           width: 388px;
         }
-        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-        }
-        @media screen and (max-device-width: $mobile-size) {
+        @media screen and (max-device-width: $desktop-size) {
           width: 239px;
           margin: 32px calc((100% - 239px) / 2) 0px calc((100% - 239px) / 2);
           padding-bottom: 40px;
