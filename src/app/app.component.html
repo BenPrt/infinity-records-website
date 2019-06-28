@@ -5,9 +5,15 @@
       [typoState]="typoState"
       [mobileMenuIsDisplayed]="menuIsDisplayed"
       [@menuBorderFade]="menuIsDisplayed"
+      (tap)="parseTap($event)"
     ></header-mobile-menu-component>
 
-    <div id="mobile-page-content" [@contentFade] *ngIf="contentIsDisplayed" (swipeRight)="openMobileMenu()">
+    <div
+      id="mobile-page-content"
+      [@contentFade]
+      *ngIf="contentIsDisplayed"
+      (swipeRight)="openMobileMenu()"
+    >
       <router-outlet> </router-outlet>
       <footer-component [@contentFade]></footer-component>
     </div>

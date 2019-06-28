@@ -1,12 +1,4 @@
-import {
-  Component,
-  OnInit,
-  ChangeDetectorRef,
-  HostListener,
-  Inject,
-  PLATFORM_ID,
-  AfterViewInit,
-} from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, HostListener, Inject, PLATFORM_ID, AfterViewInit } from '@angular/core';
 import { Location, isPlatformBrowser } from '@angular/common';
 import { Router, RouterEvent, NavigationEnd } from '@angular/router';
 import { animate, style, transition, trigger, state } from '@angular/animations';
@@ -21,6 +13,10 @@ import { ScrollService } from './shared/services/scroll.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  host: {
+    '(window:scroll)': 'onWindowScroll()',
+    '(document:keydown.space)': 'interruptAnimation($event)',
+  },
   animations: [
     trigger('contentFade', [transition(':enter', [style({ opacity: 0 }), animate('1s', style({ opacity: 1 }))])]),
     trigger('overlayFade', [
@@ -47,6 +43,8 @@ export class AppComponent implements OnInit, AfterViewInit {
   isMobile: boolean = false;
   // Boolean defining is we trigger the animation, depending on which page the user access
   animateLogo: boolean = true;
+  // Table containing all occuring timeouts
+  timeouts = [];
   // Boolean and variable defining the states during the animation
   scaleState: string = 'normal';
   typoState: string = 'displayed';
@@ -58,17 +56,6 @@ export class AppComponent implements OnInit, AfterViewInit {
   mobileMenuIsDisplayed: boolean = false;
   // Offset amount to add to the page content when the header is sticky
   contentOffset: string = '0';
-
-  @HostListener('window:scroll', ['$event'])
-  onWindowScroll() {
-    this.scrolledAmount = window.pageYOffset;
-    this.scrollService.setScrolledAmount(this.scrolledAmount);
-    if (this.scrolledAmount >= 0 && this.scrolledAmount <= 68) {
-      this.contentOffset = '0';
-    } else if (this.scrolledAmount > 68 && this.scrolledAmount <= 156) {
-      this.contentOffset = '273px';
-    }
-  }
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
@@ -188,19 +175,25 @@ export class AppComponent implements OnInit, AfterViewInit {
       this.typoState = 'hidden';
       this.menuIsDisplayed = false;
       this.contentIsDisplayed = false;
-      setTimeout(() => {
-        // We display the typo
-        this.typoState = 'displayed';
+      this.timeouts.push(
         setTimeout(() => {
-          // We unscale the logo
-          this.scaleState = 'normal';
-          setTimeout(() => {
-            // We display menu and content
-            this.menuIsDisplayed = true;
-            this.contentIsDisplayed = true;
-          }, 1050);
-        }, 1000);
-      }, 5000);
+          // We display the typo
+          this.typoState = 'displayed';
+          this.timeouts.push(
+            setTimeout(() => {
+              // We unscale the logo
+              this.scaleState = 'normal';
+              this.timeouts.push(
+                setTimeout(() => {
+                  // We display menu and content
+                  this.menuIsDisplayed = true;
+                  this.contentIsDisplayed = true;
+                }, 1050),
+              );
+            }, 1000),
+          );
+        }, 5000),
+      );
     }
   }
 
@@ -223,6 +216,33 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.mobileMenuService.toggleMobileMenu.subscribe((displayValue: boolean) => {
       this.mobileMenuIsDisplayed = displayValue;
     });
+  }
+
+  onWindowScroll() {
+    this.scrolledAmount = window.pageYOffset;
+    this.scrollService.setScrolledAmount(this.scrolledAmount);
+    if (this.scrolledAmount >= 0 && this.scrolledAmount <= 68) {
+      this.contentOffset = '0';
+    } else if (this.scrolledAmount > 68 && this.scrolledAmount <= 156) {
+      this.contentOffset = '273px';
+    }
+  }
+
+  parseTap(evt) {
+    if (evt.tapCount === 2) {
+      this.interruptAnimation(evt);
+    }
+  }
+
+  interruptAnimation(event: PointerEvent | KeyboardEvent) {
+    event.preventDefault();
+    this.timeouts.forEach((timeout) => {
+      clearTimeout(timeout);
+    });
+    this.typoState = 'displayed';
+    this.scaleState = 'normal';
+    this.menuIsDisplayed = true;
+    this.contentIsDisplayed = true;
   }
 
   openMobileMenu(): void {

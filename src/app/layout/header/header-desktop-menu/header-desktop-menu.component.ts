@@ -14,9 +14,37 @@ import { ScrollService } from 'src/app/shared/services/scroll.service';
       state('displayed', style({ borderBottom: '1px solid #D8D8D8' })),
       transition('hidden <=> displayed', [animate('500ms')]),
     ]),
-    trigger('indicatorFade', [
-      transition(':enter', [style({ opacity: 0, width: 0 }), animate('300ms', style({ opacity: 1, width: '72px' }))]),
-      transition(':leave', [style({ opacity: 1, width: '72px' }), animate('300ms', style({ opacity: 0, width: 0 }))]),
+    trigger('indicatorAnim', [
+      state(
+        'true',
+        style({
+          opacity: 1,
+          width: '72px',
+        }),
+      ),
+      state(
+        'false',
+        style({
+          opacity: 1,
+          width: 0,
+        }),
+      ),
+      transition('true <=> false', [animate('300ms')]),
+    ]),
+    trigger('itemBoldAnim', [
+      state(
+        'true',
+        style({
+          fontWeight: 700,
+        }),
+      ),
+      state(
+        'false',
+        style({
+          fontWeight: 500,
+        }),
+      ),
+      transition('true <=> false', [animate('300ms')]),
     ]),
     trigger('logoFade', [transition(':enter', [style({ opacity: 0 }), animate('800ms', style({ opacity: 1 }))])]),
     trigger('menuFade', [
@@ -60,7 +88,7 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
   };
 
   menuLogoTypoStyle: any = {
-    fontSize : '20px',
+    fontSize: '20px',
     marginTop: '6px',
   };
 
@@ -138,8 +166,8 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
             height: '90px',
           };
           this.menuLogoTypoStyle = {
-            height : '28px',
-            fontSize : '20px',
+            height: '28px',
+            fontSize: '20px',
             marginTop: '6px',
           };
         } else if (scroll > 68 && scroll <= 104) {
@@ -156,8 +184,8 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
             height: '90px',
           };
           this.menuLogoTypoStyle = {
-            height : '28px',
-            fontSize : '20px',
+            height: '28px',
+            fontSize: '20px',
             marginTop: '6px',
           };
         } else if (scroll > 104 && scroll <= 130) {
@@ -174,7 +202,7 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
             height: '90px',
           };
           this.menuLogoTypoStyle = {
-            height : `calc(28px - ((${Math.round(scroll)}px - 104px) / 0.93))`,
+            height: `calc(28px - ((${Math.round(scroll)}px - 104px) / 0.93))`,
             fontSize: `calc(20px - ((${Math.round(scroll)}px - 104px) / 1.3))`,
             marginTop: `calc(6px - ((${Math.round(scroll)}px - 104px) / 4.33))`,
           };
@@ -192,7 +220,7 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
             height: `calc(90px - ((${Math.round(scroll)}px - 130px) / 1.18)`,
           };
           this.menuLogoTypoStyle = {
-            height : '0px',
+            height: '0px',
             fontSize: '0px',
             marginTop: '0px',
             display: 'none',
@@ -211,7 +239,7 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
             height: '68px',
           };
           this.menuLogoTypoStyle = {
-            height : '0px',
+            height: '0px',
             fontSize: '0px',
             marginTop: '0px',
             display: 'none',
@@ -227,8 +255,8 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
           paddingTop: '32px',
         };
         this.menuLogoTypoStyle = {
-          height : '28px',
-          fontSize : '20px',
+          height: '28px',
+          fontSize: '20px',
           marginTop: '6px',
         };
       }

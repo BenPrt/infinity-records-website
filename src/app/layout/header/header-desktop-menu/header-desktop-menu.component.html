@@ -8,17 +8,17 @@
   <div id="menu-container" [ngStyle]="menuContainerStyle">
     <div id="menu-left-part" [@menuFade] *ngIf="menuIsDisplayed">
       <a class="menu-link" routerLink="/home" routerLinkActive="active">
-        <h2 class="menu-item" [ngClass]="{ selected: isPageActive('home'), unselected: !isPageActive('home') }">
+        <h2 class="menu-item" [@itemBoldAnim]="isPageActive('home')">
           {{ 'HOME' | translation }}
         </h2>
-        <hr id="menu-indicator" [@menuFade] *ngIf="menuIsDisplayed" [ngClass]="{ indicated: isPageActive('home'), hidden: !isPageActive('home') }" />
+        <hr id="menu-indicator" [@indicatorAnim]="isPageActive('home')" />
       </a>
 
       <a class="menu-link" routerLink="/label" routerLinkActive="active">
-        <h2 class="menu-item" [ngClass]="{ selected: isPageActive('label'), unselected: !isPageActive('label') }">
+        <h2 class="menu-item" [@itemBoldAnim]="isPageActive('label')">
           {{ 'LABEL' | translation }}
         </h2>
-        <hr id="menu-indicator" [@menuFade] *ngIf="menuIsDisplayed" [ngClass]="{ indicated: isPageActive('label'), hidden: !isPageActive('label') }" />
+        <hr id="menu-indicator" [@indicatorAnim]="isPageActive('label')" />
       </a>
     </div>
 
@@ -97,17 +97,17 @@
 
     <div id="menu-right-part" [@menuFade] *ngIf="menuIsDisplayed">
       <a class="menu-link" routerLink="/artists" routerLinkActive="active">
-        <h2 class="menu-item" [ngClass]="{ selected: isPageActive('artists'), unselected: !isPageActive('artists') }">
+        <h2 class="menu-item" [@itemBoldAnim]="isPageActive('artists')">
           {{ 'ARTISTS' | translation }}
         </h2>
-        <hr id="menu-indicator" [@menuFade] *ngIf="menuIsDisplayed" [ngClass]="{ indicated: isPageActive('artists'), hidden: !isPageActive('artists') }" />
+        <hr id="menu-indicator" [@indicatorAnim]="isPageActive('artists')" />
       </a>
 
       <a class="menu-link" routerLink="/merch" routerLinkActive="active">
-        <h2 class="menu-item" [ngClass]="{ selected: isPageActive('merch'), unselected: !isPageActive('merch') }">
+        <h2 class="menu-item" [@itemBoldAnim]="isPageActive('merch')">
           {{ 'MERCH' | translation }}
         </h2>
-        <hr id="menu-indicator" [@menuFade] *ngIf="menuIsDisplayed" [ngClass]="{ indicated: isPageActive('merch'), hidden: !isPageActive('merch') }" />
+        <hr id="menu-indicator" [@indicatorAnim]="isPageActive('merch')" />
       </a>
     </div>
   </div>
