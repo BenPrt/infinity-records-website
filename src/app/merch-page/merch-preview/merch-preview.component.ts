@@ -99,24 +99,26 @@ export class MerchPreviewComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   manageTitlePositioning(scroll: number): void {
-    if (this.isMobile && this.isBrowser) {
-      const containerOffset = this.elRef.nativeElement.offsetTop - 81;
-      const thirdPreviewElement = document.getElementById(
-        `preview-image-${this.currentProduct.declinations.length - 1}`,
-      );
-      const thirdPreviewOffset = containerOffset + thirdPreviewElement.offsetTop;
-      if (scroll <= containerOffset) {
-        this.titleStyle = {
-          marginTop: '111px',
-        };
-      } else if (scroll > containerOffset && scroll <= thirdPreviewOffset) {
-        this.titleStyle = {
-          marginTop: `${scroll - containerOffset + 111}px`,
-        };
-      } else if (scroll > thirdPreviewOffset) {
-        this.titleStyle = {
-          marginTop: `${thirdPreviewOffset - containerOffset + 111}px`,
-        };
+    if (this.isBrowser) {
+      if (this.isMobile && document.querySelector('body').offsetWidth < 1300) {
+        const containerOffset = this.elRef.nativeElement.offsetTop - 81;
+        const thirdPreviewElement = document.getElementById(
+          `preview-image-${this.currentProduct.declinations.length - 1}`,
+        );
+        const thirdPreviewOffset = containerOffset + thirdPreviewElement.offsetTop;
+        if (scroll <= containerOffset) {
+          this.titleStyle = {
+            marginTop: '111px',
+          };
+        } else if (scroll > containerOffset && scroll <= thirdPreviewOffset) {
+          this.titleStyle = {
+            marginTop: `${scroll - containerOffset + 111}px`,
+          };
+        } else if (scroll > thirdPreviewOffset) {
+          this.titleStyle = {
+            marginTop: `${thirdPreviewOffset - containerOffset + 111}px`,
+          };
+        }
       }
     }
   }

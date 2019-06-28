@@ -6,9 +6,7 @@
     width: calc(100vw - 12.57vw - 2px);
     margin-left: 12.57vw;
   }
-  @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-  }
-  @media screen and (max-device-width: $mobile-size) {
+  @media screen and (max-device-width: $tablet-size) {
     width: calc(100vw - 12.23vw - 2px);
     margin-left: 12.23vw;
     margin-bottom: 1px;
@@ -23,9 +21,7 @@
       padding: 104px 48px;
       margin-left: calc(100vw - 12.57vw - 2px - 48px - 32.39vw - 48px - 4.86vw);
     }
-    @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-    }
-    @media screen and (max-device-width: $mobile-size) {
+    @media screen and (max-device-width: $tablet-size) {
       width: calc(51.59vw - 48px);
       margin-left: calc(100vw - 51.59vw - 12.23vw - 16px);
       margin-top: -24px;
@@ -39,9 +35,7 @@
         height: 56px;
         line-height: 1.27;
       }
-      @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-      }
-      @media screen and (max-device-width: $mobile-size) {
+      @media screen and (max-device-width: $tablet-size) {
         font-size: 32px;
         height: 40px;
         line-height: 1.25;
@@ -58,9 +52,7 @@
       margin-top: calc(-12px - 21.46vw - 167px - 104px);
       margin-left: calc(-12.57vw - 2px + 4.86vw);
     }
-    @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-    }
-    @media screen and (max-device-width: $mobile-size) {
+    @media screen and (max-device-width: $tablet-size) {
       flex-direction: column;
       width: calc(-16px + 100vw - 16px);
       margin-left: calc(-12.23vw - 2px + 16px);

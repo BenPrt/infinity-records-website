@@ -23,23 +23,19 @@
       </div>
     </div>
   </div>
-  <div id="preview-second-layer-wrapper">
-    <div id="preview-second-layer"></div>
-  </div>
-  <div id="previews-wrapper">
-    <div
-      id="previews"
-      [ngClass]="{
-        hidden: loading,
-        visible: !loading
-      }"
-    >
-      <merch-preview-image
-        *ngFor="let decli of currentProduct.declinations; let i = index"
-        id="{{ 'preview-image-' + i }}"
-        [declination]="decli"
-        [currentProduct]="currentProduct"
-      ></merch-preview-image>
-    </div>
+  <div id="preview-second-layer"></div>
+  <div
+    id="previews"
+    [ngClass]="{
+      hidden: loading,
+      visible: !loading
+    }"
+  >
+    <merch-preview-image
+      *ngFor="let decli of currentProduct.declinations; let i = index"
+      id="{{ 'preview-image-' + i }}"
+      [declination]="decli"
+      [currentProduct]="currentProduct"
+    ></merch-preview-image>
   </div>
 </div>

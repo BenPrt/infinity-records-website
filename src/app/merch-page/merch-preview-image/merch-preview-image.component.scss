@@ -2,24 +2,28 @@
 
 #preview-image-wrapper {
   overflow: hidden;
-  @media screen and (min-device-width: $tablet-size) {
-    height: 301px;
-    width: 301px;
+  @media screen and (min-device-width: $desktop-size) {
+    height: 20.9vw;
+    width: 20.9vw;
   }
-  @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+  @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
+    height: 57.5vw;
+    width: 57.5vw;
   }
-  @media screen and (max-device-width: $mobile-size) {
+  @media screen and (max-device-width: $tablet-size) {
     height: 67.5vw;
     width: 67.5vw;
   }
   .preview-picture {
-    @media screen and (min-device-width: $tablet-size) {
-      height: 301px;
-      width: 301px;
+    @media screen and (min-device-width: $desktop-size) {
+      height: 20.9vw;
+      width: 20.9vw;
     }
-    @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+    @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
+      height: 57.5vw;
+      width: 57.5vw;
     }
-    @media screen and (max-device-width: $mobile-size) {
+    @media screen and (max-device-width: $tablet-size) {
       height: 67.5vw;
       width: 67.5vw;
     }
@@ -29,14 +33,17 @@
   }
   .details-overlay {
     position: relative;
-    @media screen and (min-device-width: $tablet-size) {
-      height: 301px;
-      width: 301px;
-      margin-top: -305px;
+    @media screen and (min-device-width: $desktop-size) {
+      height: 20.9vw;
+      width: 20.9vw;
+      margin-top: calc(-20.9vw - 4px);
     }
-    @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+    @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
+      height: 57.5vw;
+      width: 57.5vw;
+      margin-top: calc(-57.5vw - 4px);
     }
-    @media screen and (max-device-width: $mobile-size) {
+    @media screen and (max-device-width: $tablet-size) {
       height: 67.5vw;
       width: 67.5vw;
       margin-top: calc(-67.5vw - 4px);
@@ -44,13 +51,15 @@
     .overlay {
       opacity: 0.6;
       background-color: $black;
-      @media screen and (min-device-width: $tablet-size) {
-        height: 301px;
-        width: 301px;
+      @media screen and (min-device-width: $desktop-size) {
+        height: 20.9vw;
+        width: 20.9vw;
       }
-      @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+      @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
+        height: 57.5vw;
+        width: 57.5vw;
       }
-      @media screen and (max-device-width: $mobile-size) {
+      @media screen and (max-device-width: $tablet-size) {
         height: 67.5vw;
         width: 67.5vw;
       }
@@ -59,14 +68,17 @@
       color: $white;
       position: relative;
       user-select: none;
-      @media screen and (min-device-width: $tablet-size) {
-        height: 301px;
-        width: 301px;
-        margin-top: -305px;
+      @media screen and (min-device-width: $desktop-size) {
+        height: 20.9vw;
+        width: 20.9vw;
+        margin-top: calc(-20.9vw - 4px);
       }
-      @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+      @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
+        height: 57.5vw;
+        width: 57.5vw;
+        margin-top: calc(-57.5vw - 4px);
       }
-      @media screen and (max-device-width: $mobile-size) {
+      @media screen and (max-device-width: $tablet-size) {
         height: 67.5vw;
         width: 67.5vw;
         margin-top: calc(-67.5vw - 4px);
@@ -76,13 +88,16 @@
         font-size: 14px;
         font-weight: bold;
         letter-spacing: 2px;
-        @media screen and (min-device-width: $tablet-size) {
-          margin-top: 109px;
+        @media screen and (min-device-width: $desktop-size) {
+          margin-top: 7.57vw;
           margin-bottom: 3px;
         }
-        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+        @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
+          margin-top: 20vw;          
+          font-size: 1.3em;
+          margin-bottom: 5px;
         }
-        @media screen and (max-device-width: $mobile-size) {
+        @media screen and (max-device-width: $tablet-size) {
           margin-top: 18vw;
           margin-bottom: 5px;
         }
@@ -93,6 +108,10 @@
         font-size: 24px;
         font-weight: 600;
         line-height: 1.33;
+        @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
+          margin-top : 8px;
+          font-size: 2em;
+        }
       }
       .sold-out-banner {
         width: 100%;
@@ -103,12 +122,16 @@
         font-weight: 600;
         background-color: $black;
         color: $gold;
-        @media screen and (min-device-width: $tablet-size) {
+        @media screen and (min-device-width: $desktop-size) {
           margin-top: 40px;
         }
-        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+        @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
+          height: 10vw;
+          line-height: 10vw;
+          margin-top: 9vw;
+          font-size: 1.8em;
         }
-        @media screen and (max-device-width: $mobile-size) {
+        @media screen and (max-device-width: $tablet-size) {
           height: 10vw;
           line-height: 10vw;
           font-size: 0.8em;

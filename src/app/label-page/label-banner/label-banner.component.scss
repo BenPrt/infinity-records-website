@@ -2,39 +2,33 @@
 
 #background-layer {
   border-left: 2px solid $very-light-grey;
-  @media screen and (min-device-width: $tablet-size) {
+  @media screen and (min-device-width: $desktop-size) {
     width: 74.6vw;
     margin-left: 12.7vw;
     border-right: 2px solid $very-light-grey;
   }
-  @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-  }
-  @media screen and (max-device-width: $mobile-size) {
+  @media screen and (max-device-width: $desktop-size) {
     width: calc(87.77vw - 2px);
     margin-left: 12.23vw;
   }
   #banner-picture-wrapper {
     overflow: hidden;
-    @media screen and (min-device-width: $tablet-size) {
+    @media screen and (min-device-width: $desktop-size) {
       margin-left: calc(-12.7vw - 2px);
       width: 72vw;
       height: 48vw;
     }
-    @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-    }
-    @media screen and (max-device-width: $mobile-size) {
+    @media screen and (max-device-width: $desktop-size) {
       margin-left: calc(-12.23vw - 2px);
       width: 100vw;
       height: 75vw;
     }
     #banner-picture {
-      @media screen and (min-device-width: $tablet-size) {
+      @media screen and (min-device-width: $desktop-size) {
         width: 72vw;
         height: 48vw;
       }
-      @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-      }
-      @media screen and (max-device-width: $mobile-size) {
+      @media screen and (max-device-width: $desktop-size) {
         height: 75vw;
       }
     }
@@ -42,15 +36,13 @@
   #banner-content {
     position: relative;
     background-color: $very-light-grey;
-    @media screen and (min-device-width: $tablet-size) {
+    @media screen and (min-device-width: $desktop-size) {
       width: calc(44vw - 80px - 80px);
       margin-left: 30.7vw;
       margin-top: -14.66vw;
       padding: 80px;
     }
-    @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-    }
-    @media screen and (max-device-width: $mobile-size) {
+    @media screen and (max-device-width: $desktop-size) {
       width: calc(67.55% - 32px - 32px);
       padding: 40px 32px;
       margin-top: -40px;
@@ -64,13 +56,11 @@
     }
     #banner-title {
       font-weight : normal;
-      @media screen and (min-device-width: $tablet-size) {
+      @media screen and (min-device-width: $desktop-size) {
         font-size: 44px;
         line-height: 1.27;
       }
-      @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-      }
-      @media screen and (max-device-width: $mobile-size) {
+      @media screen and (max-device-width: $desktop-size) {
         font-size: 32px;
         line-height: 1.25;
       }

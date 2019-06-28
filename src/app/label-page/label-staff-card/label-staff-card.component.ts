@@ -10,6 +10,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './label-staff-card.component.html',
   styleUrls: ['./label-staff-card.component.scss'],
   host: {
+    '(document:touchend)': 'displayQuote($event, false)',
     '(window:click)': 'displayQuote($event, false)',
   },
   animations: [
@@ -53,8 +54,8 @@ export class LabelStaffCardComponent {
     if (this.isBrowser) {
       if (this.isMobile) {
         if (
-          document.getElementById('member-picture-wrapper').contains(event.target as Node) ||
-          document.getElementById('member-name').contains(event.target as Node)
+          this.elRef.nativeElement.querySelector('#member-picture-wrapper').contains(event.target as Node) ||
+          this.elRef.nativeElement.querySelector('#member-name').contains(event.target as Node)
         ) {
           this.quoteIsDisplayed = true;
         } else {

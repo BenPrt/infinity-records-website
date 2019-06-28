@@ -2,42 +2,39 @@
 
 :host {
   display: block;
-  width: 100%;
+  width: 100vw;
   position : relative;
-  @media screen and (min-device-width: $tablet-size) {
+  @media screen and (min-device-width: $desktop-size) {
     height: 751px;
   }
-  @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-  }
-  @media screen and (max-device-width: $mobile-size) {
+  @media screen and (max-device-width: $desktop-size) {
     height: 501px;
   }
 
   #banner-image-container {
     position: absolute;
     z-index: 0;
-    width: 100%;
-    overflow-y: hidden;
-    @media screen and (min-device-width: $tablet-size) {
+    width: 100vw;
+    overflow: hidden;
+    @media screen and (min-device-width: $desktop-size) {
       height: 751px;
     }
-    @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-    }
-    @media screen and (max-device-width: $mobile-size) {
+    @media screen and (max-device-width: $desktop-size) {
       display: flex;
       justify-content: center;
       height: 501px;
     }
 
     #banner-image {
-      @media screen and (min-device-width: $tablet-size) {
-        width: 100%;
+      @media screen and (min-device-width: $desktop-size) {
+        width: 100vw;
         // change margin to recenter image in container
         margin: 0;
       }
-      @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
+      @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
+        width : 100vw;
       }
-      @media screen and (max-device-width: $mobile-size) {
+      @media screen and (max-device-width: $tablet-size) {
         height: 501px;
       }
     }
@@ -48,25 +45,21 @@
     width: 100%;
     display: flex;
     align-items: flex-end;
-    @media screen and (min-device-width: $tablet-size) {
+    @media screen and (min-device-width: $desktop-size) {
       height: 751px;
     }
-    @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-    }
-    @media screen and (max-device-width: $mobile-size) {
+    @media screen and (max-device-width: $desktop-size) {
       height: 501px;
     }
     #text-container {
       text-align: center;
       display: block;
       color: $white;
-      @media screen and (min-device-width: $tablet-size) {
+      @media screen and (min-device-width: $desktop-size) {
         width: 412px;
         margin: 0 auto 216px auto;
       }
-      @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-      }
-      @media screen and (max-device-width: $mobile-size) {
+      @media screen and (max-device-width: $desktop-size) {
         width: 324px;
         margin: 0 auto 59px auto;
       }
@@ -79,12 +72,10 @@
         margin-top: 10px;
         line-height: 1.27;
         font-weight: normal;
-        @media screen and (min-device-width: $tablet-size) {
+        @media screen and (min-device-width: $desktop-size) {
           font-size: 44px;
         }
-        @media screen and (max-device-width: $tablet-size) and (min-device-width: $mobile-size) {
-        }
-        @media screen and (max-device-width: $mobile-size) {
+        @media screen and (max-device-width: $desktop-size) {
           font-size: 32px;
         }
       }
