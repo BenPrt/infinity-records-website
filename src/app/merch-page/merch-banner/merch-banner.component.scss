@@ -15,7 +15,7 @@
     position: absolute;
     z-index: 0;
     width: 100vw;
-    overflow-y: hidden;
+    overflow: hidden;
     @media screen and (min-device-width: $desktop-size) {
       height: 751px;
     }

@@ -6,7 +6,7 @@ $totalHeight: 865px;
     background-color: $white;
     border-right: 2px solid $very-light-grey;
     @media screen and (min-device-width: $desktop-size) {
-      width: 87.5%;
+      width: 87.5vw;
       height: 683px;
     }
     @media screen and (max-device-width: $desktop-size) {

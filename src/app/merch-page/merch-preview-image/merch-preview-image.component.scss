@@ -3,8 +3,8 @@
 #preview-image-wrapper {
   overflow: hidden;
   @media screen and (min-device-width: $desktop-size) {
-    height: 301px;
-    width: 301px;
+    height: 20.9vw;
+    width: 20.9vw;
   }
   @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
     height: 57.5vw;
@@ -16,8 +16,8 @@
   }
   .preview-picture {
     @media screen and (min-device-width: $desktop-size) {
-      height: 301px;
-      width: 301px;
+      height: 20.9vw;
+      width: 20.9vw;
     }
     @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
       height: 57.5vw;
@@ -34,9 +34,9 @@
   .details-overlay {
     position: relative;
     @media screen and (min-device-width: $desktop-size) {
-      height: 301px;
-      width: 301px;
-      margin-top: -305px;
+      height: 20.9vw;
+      width: 20.9vw;
+      margin-top: calc(-20.9vw - 4px);
     }
     @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
       height: 57.5vw;
@@ -52,8 +52,8 @@
       opacity: 0.6;
       background-color: $black;
       @media screen and (min-device-width: $desktop-size) {
-        height: 301px;
-        width: 301px;
+        height: 20.9vw;
+        width: 20.9vw;
       }
       @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
         height: 57.5vw;
@@ -69,9 +69,9 @@
       position: relative;
       user-select: none;
       @media screen and (min-device-width: $desktop-size) {
-        height: 301px;
-        width: 301px;
-        margin-top: -305px;
+        height: 20.9vw;
+        width: 20.9vw;
+        margin-top: calc(-20.9vw - 4px);
       }
       @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
         height: 57.5vw;
@@ -89,7 +89,7 @@
         font-weight: bold;
         letter-spacing: 2px;
         @media screen and (min-device-width: $desktop-size) {
-          margin-top: 109px;
+          margin-top: 7.57vw;
           margin-bottom: 3px;
         }
         @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {

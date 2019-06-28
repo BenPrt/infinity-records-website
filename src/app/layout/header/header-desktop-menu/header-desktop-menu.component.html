@@ -11,14 +11,14 @@
         <h2 class="menu-item" [ngClass]="{ selected: isPageActive('home'), unselected: !isPageActive('home') }">
           {{ 'HOME' | translation }}
         </h2>
-        <hr id="menu-indicator" [ngClass]="{ indicated: isPageActive('home'), hidden: !isPageActive('home') }" />
+        <hr id="menu-indicator" [@menuFade] *ngIf="menuIsDisplayed" [ngClass]="{ indicated: isPageActive('home'), hidden: !isPageActive('home') }" />
       </a>
 
       <a class="menu-link" routerLink="/label" routerLinkActive="active">
         <h2 class="menu-item" [ngClass]="{ selected: isPageActive('label'), unselected: !isPageActive('label') }">
           {{ 'LABEL' | translation }}
         </h2>
-        <hr id="menu-indicator" [ngClass]="{ indicated: isPageActive('label'), hidden: !isPageActive('label') }" />
+        <hr id="menu-indicator" [@menuFade] *ngIf="menuIsDisplayed" [ngClass]="{ indicated: isPageActive('label'), hidden: !isPageActive('label') }" />
       </a>
     </div>
 
@@ -100,14 +100,14 @@
         <h2 class="menu-item" [ngClass]="{ selected: isPageActive('artists'), unselected: !isPageActive('artists') }">
           {{ 'ARTISTS' | translation }}
         </h2>
-        <hr id="menu-indicator" [ngClass]="{ indicated: isPageActive('artists'), hidden: !isPageActive('artists') }" />
+        <hr id="menu-indicator" [@menuFade] *ngIf="menuIsDisplayed" [ngClass]="{ indicated: isPageActive('artists'), hidden: !isPageActive('artists') }" />
       </a>
 
       <a class="menu-link" routerLink="/merch" routerLinkActive="active">
         <h2 class="menu-item" [ngClass]="{ selected: isPageActive('merch'), unselected: !isPageActive('merch') }">
           {{ 'MERCH' | translation }}
         </h2>
-        <hr id="menu-indicator" [ngClass]="{ indicated: isPageActive('merch'), hidden: !isPageActive('merch') }" />
+        <hr id="menu-indicator" [@menuFade] *ngIf="menuIsDisplayed" [ngClass]="{ indicated: isPageActive('merch'), hidden: !isPageActive('merch') }" />
       </a>
     </div>
   </div>

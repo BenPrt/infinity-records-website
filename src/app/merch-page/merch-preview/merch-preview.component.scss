@@ -5,8 +5,8 @@
     border-left: 2px solid $very-light-grey;
     border-right: 2px solid $very-light-grey;
     @media screen and (min-device-width: $desktop-size) {
-      width: calc(75% - 2px);
-      margin-left: 12.5%;
+      width: calc(75vw - 2px);
+      margin-left: 12.5vw;
       height: 729px;
     }
     @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
@@ -25,7 +25,7 @@
     border-right: 2px solid $very-light-grey;
     @media screen and (min-device-width: $desktop-size) {
       width: 297px;
-      height: 625px;
+      height: calc(104px + 20.9vw + 70px + 150px);
     }
     @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
       width: 102px;
@@ -62,7 +62,7 @@
         display: flex;
         justify-content: space-between;
         @media screen and (min-device-width: $desktop-size) {
-          margin-top: calc(625px - 150px);
+          margin-top: calc(104px + 20.9vw + 70px);
           margin-left: -2px;
           width: 301px;
           height: 150px;
@@ -115,61 +115,51 @@
     }
   }
 
-  #preview-second-layer-wrapper {
-    @media screen and (max-device-width: $desktop-size) {
-      position: relative;
+  #preview-second-layer {
+    position: relative;
+    background-color: $very-light-grey;
+    @media screen and (min-device-width: $desktop-size) {
+      width: 412px;
+      height: calc(104px + 20.9vw + 70px + 150px);
+      margin-top: calc(-104px - 20.9vw - 70px - 150px);
+      margin-left: calc(75vw - 301px - 2px);
     }
-    #preview-second-layer {
-      position: absolute;
-      background-color: $very-light-grey;
-      @media screen and (min-device-width: $desktop-size) {
-        width: 412px;
-        height: 625px;
-        margin-top: -625px;
-        margin-left: calc(75% - 301px - 2px);
-      }
-      @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
-        width: calc(12.23vw + 2px + 50px);
-        height: calc(64px + 57.5vw + 24px + 57.5vw + 24px + 57.5vw + 40px + 52px);
-        margin-top: calc(-64px - 57.5vw - 24px - 57.5vw - 24px - 57.5vw - 40px - 52px);
-        left: calc(100vw - 12.23vw - 2px - 50px - 12.23vw - 2px);
-      }
-      @media screen and (max-device-width: $tablet-size) {
-        width: calc(12.23vw + 2px + 50px);
-        height: calc(64px + 67.5vw + 24px + 67.5vw + 24px + 67.5vw + 40px + 52px);
-        margin-top: calc(-64px - 67.5vw - 24px - 67.5vw - 24px - 67.5vw - 40px - 52px);
-        left: calc(100vw - 12.23vw - 2px - 50px - 12.23vw - 2px);
-      }
+    @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
+      width: calc(12.23vw + 2px + 50px);
+      height: calc(64px + 57.5vw + 24px + 57.5vw + 24px + 57.5vw + 40px + 52px);
+      margin-top: calc(-64px - 57.5vw - 24px - 57.5vw - 24px - 57.5vw - 40px - 52px);
+      left: calc(100vw - 12.23vw - 2px - 50px - 12.23vw - 2px);
+    }
+    @media screen and (max-device-width: $tablet-size) {
+      width: calc(12.23vw + 2px + 50px);
+      height: calc(64px + 67.5vw + 24px + 67.5vw + 24px + 67.5vw + 40px + 52px);
+      margin-top: calc(-64px - 67.5vw - 24px - 67.5vw - 24px - 67.5vw - 40px - 52px);
+      left: calc(100vw - 12.23vw - 2px - 50px - 12.23vw - 2px);
     }
   }
-  #previews-wrapper {
-    @media screen and (max-device-width: $desktop-size) {
-      position: relative;
+  #previews {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (min-device-width: $desktop-size) {
+      width: calc(20.9vw + 32px + 20.9vw + 32px + 20.9vw);
+      height: 20.9vw;
+      margin-top: calc(-20.9vw - 70px - 150px);
+      margin-left: calc(75vw - 301px - 2px + 412px - 20.9vw - 32px - 20.9vw - 32px - 20.9vw);
     }
-    #previews {
-      position: absolute;
-      display: flex;
-      justify-content: space-between;
-      @media screen and (min-device-width: $desktop-size) {
-        width: 67.2%;
-        height: 302px;
-        margin-top: calc(-625px + 104px);
-        margin-left: calc(75% - 301px - 2px + 412px - 67.2%);
-      }
-      @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
-        width: 57.5vw;
-        height: calc(57.5vw + 24px + 57.5vw + 24px + 57.5vw);
-        margin-top: calc(-57.5vw - 24px - 57.5vw - 24px - 57.5vw - 40px - 52px);
-        margin-left: calc(100vw - 12.23vw - 2px - 57.5vw - 12.23vw);
-        flex-direction: column;
-      }
-      @media screen and (max-device-width: $tablet-size) {
-        width: 67.5vw;
-        height: calc(67.5vw + 24px + 67.5vw + 24px + 67.5vw);
-        margin-top: calc(-67.5vw - 24px - 67.5vw - 24px - 67.5vw - 40px - 52px);
-        margin-left: calc(100vw - 12.23vw - 2px - 67.5vw - 16px);
-        flex-direction: column;
-      }
+    @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
+      width: 57.5vw;
+      height: calc(57.5vw + 24px + 57.5vw + 24px + 57.5vw);
+      margin-top: calc(-57.5vw - 24px - 57.5vw - 24px - 57.5vw - 40px - 52px);
+      margin-left: calc(100vw - 12.23vw - 2px - 57.5vw - 12.23vw);
+      flex-direction: column;
+    }
+    @media screen and (max-device-width: $tablet-size) {
+      width: 67.5vw;
+      height: calc(67.5vw + 24px + 67.5vw + 24px + 67.5vw);
+      margin-top: calc(-67.5vw - 24px - 67.5vw - 24px - 67.5vw - 40px - 52px);
+      margin-left: calc(100vw - 12.23vw - 2px - 67.5vw - 16px);
+      flex-direction: column;
     }
   }
 }
