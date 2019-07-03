@@ -28,6 +28,38 @@
 	"COPYRIGHT_1" : "Copyright © ",
 	"COPYRIGHT_2" : " Infinity Records. Tous droits Réservés.",
 	
+	"LABEL_BANNER_TITLE" : "A propos d'Infinity Records",
+	"LABEL_BANNER_DESCRIPTION" : "Créé en 2017, Infinity Records est un label indépendant de production musicale basé en France.",
+	
+	"LABEL_TOP_DESCRIPTION" : "Motivé par le désir de produire notre propre musique de A à Z, nous accompagnons nos artistes dans toutes les étapes de leur développement.",
+	"LABEL_TOP_CREATION" :"Création",
+	"LABEL_TOP_RECORDING" :"Enregistrement",
+	"LABEL_TOP_MIXING" :"Mixage",
+	"LABEL_TOP_MASTERING" :"Mastering",
+	
+	"LABEL_RIGHT_DESCRIPTION": "We are also commited to advising and providing guidance to improve and develop the identity, communication and potential of our artists.",
+
+	"LABEL_WHERE_THE_MAGIC": "Where the magic happens.",
+	
+	"LABEL_STAFF_TITLE" : "L'équipe",
+	
+	"LABEL_ROLE_HEADMASTER" : "Président",
+	"LABEL_ROLE_PRODUCER" : "Producteur",
+	"LABEL_ROLE_ARTIST" : "Artiste",
+	"LABEL_ROLE_COMMUNITY_MANAGER" : "Community Manager",
+	"LABEL_ROLE_SOFTWARE_ENGINEER" : "Ingénieur Logiciel",
+    "LABEL_ROLE_DESIGNER" : "Designer",
+	"LABEL_ROLE_PHOTOGRAPHER" : "Photographe",
+	"LABEL_ROLE_VIDEOGRAPHER" : "Vidéaste",
+	
+	"LABEL_BUT_ALSO" : "mais aussi... ",
+	
+	
+	"ARTISTS_PRT-CREW_DESCRIPTION": "Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus.",
+	"ARTISTS_FRESH-BEN_DESCRIPTION": "Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus.",
+	
+	
+	
 	"MERCH_BANNER_SUBTITLE" : "Made in Infinity Records",
 	"MERCH_BANNER_DESCRIPTION" : "Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus.",
 	"MERCH_PRODUCTS_TITLE" : "Nos Produits",
@@ -55,31 +87,5 @@
 	"MERCH_LOGO_WHITE" : "Logo blanc",
 	"MERCH_LOGO_BLACK" : "Logo noir",
 	
-	"MERCH_COMING_SOON" : "BIENTÔT DISPONIBLE",
-	
-	"LABEL_BANNER_TITLE" : "A propos d'Infinity Records",
-	"LABEL_BANNER_DESCRIPTION" : "Créé en 2017, Infinity Records est un label indépendant de production musicale basé en France.",
-	
-	"LABEL_TOP_DESCRIPTION" : "Motivé par le désir de produire notre propre musique de A à Z, nous accompagnons nos artistes dans toutes les étapes de leur développement.",
-	"LABEL_TOP_CREATION" :"Création",
-	"LABEL_TOP_RECORDING" :"Enregistrement",
-	"LABEL_TOP_MIXING" :"Mixage",
-	"LABEL_TOP_MASTERING" :"Mastering",
-	
-	"LABEL_RIGHT_DESCRIPTION": "We are also commited to advising and providing guidance to improve and develop the identity, communication and potential of our artists.",
-
-	"LABEL_WHERE_THE_MAGIC": "Where the magic happens.",
-	
-	"LABEL_STAFF_TITLE" : "L'équipe",
-	
-	"LABEL_ROLE_HEADMASTER" : "Président",
-	"LABEL_ROLE_PRODUCER" : "Producteur",
-	"LABEL_ROLE_ARTIST" : "Artiste",
-	"LABEL_ROLE_COMMUNITY_MANAGER" : "Community Manager",
-	"LABEL_ROLE_SOFTWARE_ENGINEER" : "Ingénieur Logiciel",
-    "LABEL_ROLE_DESIGNER" : "Designer",
-	"LABEL_ROLE_PHOTOGRAPHER" : "Photographe",
-	"LABEL_ROLE_VIDEOGRAPHER" : "Vidéaste",
-	
-	"LABEL_BUT_ALSO" : "mais aussi... "
+	"MERCH_COMING_SOON" : "BIENTÔT DISPONIBLE"
 }

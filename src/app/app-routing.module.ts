@@ -7,6 +7,7 @@ import { ArtistsPageComponent } from './artists-page/artists-page.component';
 import { MerchPageComponent } from './merch-page/merch-page.component';
 import { DownloadPrtapeVol1Component } from './download-pages/download-prtape-vol-1/download-prtape-vol-1.component';
 import { DownloadPrtapeVol2Component } from './download-pages/download-prtape-vol-2/download-prtape-vol-2.component';
+import { PRTCrewPageComponent } from './artists-page/prt-crew-page/prt-crew-page.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,14 @@ const routes: Routes = [
   {
     path: 'artists',
     component: ArtistsPageComponent,
+  },
+  {
+    path: 'artists/prt-crew',
+    component: PRTCrewPageComponent,
+  },
+  {
+    path: 'artists/prt-crew/:project',
+    component: PRTCrewPageComponent,
   },
   {
     path: 'merch',
