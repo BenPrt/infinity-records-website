@@ -1,6 +1,6 @@
-import { ArtistInfo } from 'src/app/models/artists-info';
+import { ArtistInformations } from 'src/app/models/artists-info';
 
-export const staffInfos: ArtistInfo[] = [
+export const artistsInfos: ArtistInformations[] = [
   {
     id: 1,
     name: 'PRT Crew',

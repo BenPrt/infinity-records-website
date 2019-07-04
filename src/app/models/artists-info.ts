@@ -1,4 +1,4 @@
-export interface ArtistInfo {
+export interface ArtistInformations {
   id: number;
   name: string;
   type: string;
@@ -11,21 +11,21 @@ export interface ArtistInfo {
   url_spotify: string;
   url_deezer: string;
   description: string;
-  projects: ProjectInfo[];
+  projects: ProjectInformations[];
   clips: string[];
 }
 
-export interface ProjectInfo {
+export interface ProjectInformations {
   id: number;
   title: string;
   duration: string;
   releaseDate: string;
   coverPath: string;
   downloadPath: string;
-  tracks: TrackInfo[];
+  tracks: TrackInformations[];
 }
 
-export interface TrackInfo {
+export interface TrackInformations {
   id: number;
   title: string;
   soundcloudUrl: string;

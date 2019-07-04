@@ -5,10 +5,10 @@
 
 	"SOCIAL_MEDIA" : "Social Media",
 	
-	"HOME" : "HOME",
-	"LABEL" : "THE LABEL",
-	"ARTISTS" : "ARTISTS",
-	"MERCH" : "MERCH",
+	"HOME" : "Home",
+	"LABEL" : "The label",
+	"ARTISTS" : "Artists",
+	"MERCH" : "Merch",
 	
 	"MENU" : "Menu",
 	
@@ -54,6 +54,7 @@
 	
 	"LABEL_BUT_ALSO" : "mais aussi... ",
 	
+	"ARTISTS_BACK": "back",
 	
 	"ARTISTS_PRT-CREW_DESCRIPTION": "Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus.",
 	"ARTISTS_FRESH-BEN_DESCRIPTION": "Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus.",
