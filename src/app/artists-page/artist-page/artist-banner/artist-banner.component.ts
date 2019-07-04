@@ -7,7 +7,7 @@ import { ArtistInformations } from 'src/app/models/artists-info';
   styleUrls: ['./artist-banner.component.scss'],
 })
 export class ArtistBannerComponent {
-  @Input() artistInfos: ArtistInformations;
+  @Input() artist: ArtistInformations;
 
   constructor() {}
 }

@@ -9,7 +9,7 @@ import { artistsInfos } from 'src/assets/content/artists-content';
   styleUrls: ['./artist-page.component.scss'],
 })
 export class ArtistPageComponent implements OnInit {
-  artistInfos: ArtistInformations;
+  artist: ArtistInformations;
   currentProject: number;
   constructor(private route: ActivatedRoute) {}
 
@@ -20,7 +20,7 @@ export class ArtistPageComponent implements OnInit {
   initCurrentArtist(): void {
     this.route.params.subscribe((params) => {
       const artistName = decodeURI(params.artist);
-      this.artistInfos = artistsInfos.find((artist: ArtistInformations) => {
+      this.artist = artistsInfos.find((artist: ArtistInformations) => {
         return artist.name === artistName;
       });
       if (params.project) {

@@ -21,7 +21,7 @@ export const artistsInfos: ArtistInformations[] = [
         duration: '24:54',
         releaseDate: '2014/09/08',
         coverPath: 'assets/img/artists/prt_crew/prtape_1.jpg',
-        downloadPath: 'assets/img/artists/prt_crew/PRT_Crew-PRTape_Vol_1-2014.zip',
+        downloadPath: 'assets/downloads/prt_crew/PRT_Crew-PRTape_Vol_1-2014.zip',
         tracks: [
           {
             id: 1,
@@ -71,7 +71,7 @@ export const artistsInfos: ArtistInformations[] = [
         duration: '25:05',
         releaseDate: '2019/05/17',
         coverPath: 'assets/img/artists/prt_crew/prtape_2.jpg',
-        downloadPath: 'assets/img/artists/prt_crew/PRT_Crew-PRTape_Vol_2-2019.zip',
+        downloadPath: 'assets/downloads/prt_crew/PRT_Crew-PRTape_Vol_2-2019.zip',
         tracks: [
           {
             id: 1,

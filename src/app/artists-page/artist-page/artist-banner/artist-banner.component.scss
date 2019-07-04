@@ -6,6 +6,11 @@
   width: calc(100vw - 12.5vw - 2px - 35.69vw);
   border-left: 2px solid $very-light-grey;
   height: calc(122px + 42.15vw);
+  #artist-first-inside-layer {
+    width: calc(33.33vw - 12.5vw);
+    height: calc(122px + 42.15vw);
+    border-right: 2px solid $very-light-grey;
+  }
 }
 #artist-second-layer {
   display: inline-block;
@@ -14,59 +19,46 @@
   height: calc(122px + 42.15vw);
 }
 
-#navigation-wrapper {
-  outline: 1px solid blue;
+#artist-cover {
+  width: calc(100vw - 4.86vw - 4.86vw);
   margin-left: 4.86vw;
-  width: calc(100vw - 4.86vw - 12.56vw);
-  height: 74px;
-  margin-bottom: 16px;
+  height: calc(122px + 42.15vw - 91px);
+  margin-top: calc(-122px - 42.15vw + 91px);
+  outline: 1px solid red;
   position: absolute;
-  margin-top: calc(-126px - 42.15vw);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  #back-button {
-    img {
-      margin-right: 8px;
-    }
-    height: 24px;
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    cursor: pointer;
+  #artist-title-wrapper {
+    width: 28.61vw;
+    height: 10.14vw;
+    background-color: $black;
+    color: $white;
+    position: relative;
+    z-index: 2;
   }
-  #arborescence {
-    text-align: center;
-    width: 28.82vw;
-    position : absolute;
-    margin-left : calc(12.5vw - 4.86vw + (100vw - 12.5vw - 35.69vw) - 28.82vw);
-    #arbo-first{
-        font-size : 16px;
-        margin-right : 12px;
-        cursor : pointer;
-    }
-    #arbo-slash{
-        width :24px;
-        font-size : 16px;
-        margin-right : 12px;
-        color : $grey;
-        cursor : default;
-    }
-    #arbo-second{
-        font-size : 16px;
-        font-weight : 600;
-        cursor : default;
-    }
+  #artist-cover-picture {
+    margin-top: calc(-10.14vw + 32px);
+    margin-left : calc(12.5vw - 4.86vw);
+    height: 42.15vw;
+    width: 74.93vw;
   }
-  #next-artist-button{
-    height: 24px;
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    font-weight : 600;
-    cursor: pointer;
-    img{
-        margin-right : 8px;
-    }
+  #artist-description-wrapper{
+    width : 20.90vw;
+    height : 9.17vw;
+    outline : 1px solid purple;
+    margin-left : calc(43.40vw - 4.86vw);
+    margin-top : calc(-9.17vw - 4px - 4.44vw);
+  }
+  #artist-socials-wrapper{
+    width : 11.04vw;
+    height : calc(42.15vw - 20.90vw - 17px);
+    margin-top : calc(4.44vw - 42.15vw + 17px);
+    margin-left : calc(100vw - 4.86vw - 4.86vw - 11.04vw);
+    position :relative;
+    z-index : 2;
+    outline : 1px solid green;
+  }
+  #artist-logo-picture{
+    width : 20.90vw;
+    height : 20.90vw;
+    margin-left : calc(100vw - 4.86vw - 4.86vw - 20.90vw);
   }
 }

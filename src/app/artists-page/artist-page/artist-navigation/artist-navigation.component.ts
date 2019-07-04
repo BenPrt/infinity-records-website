@@ -9,7 +9,7 @@ import { artistsInfos } from 'src/assets/content/artists-content';
   styleUrls: ['./artist-navigation.component.scss'],
 })
 export class ArtistNavigationComponent implements OnChanges {
-  @Input() artistInfos: ArtistInformations;
+  @Input() artist: ArtistInformations;
   nextArtist: ArtistInformations;
   constructor(private router: Router) {}
 
@@ -18,7 +18,7 @@ export class ArtistNavigationComponent implements OnChanges {
   }
 
   getNextArtist(): void {
-    const indexOfCurrentArtist = artistsInfos.indexOf(this.artistInfos) + 1;
+    const indexOfCurrentArtist = artistsInfos.indexOf(this.artist) + 1;
 
     if (artistsInfos[indexOfCurrentArtist]) {
       this.nextArtist = artistsInfos[indexOfCurrentArtist];

@@ -1,8 +1,20 @@
-<div id="artist-first-layer"></div>
+<div id="artist-first-layer">
+  <div id="artist-first-inside-layer"></div>
+</div>
 <div id="artist-second-layer"></div>
 
-<artist-navigation [artistInfos]="artistInfos"></artist-navigation>
+<artist-navigation [artist]="artist"></artist-navigation>
 
-<div id="cover">
+<div id="artist-cover">
+  <div id="artist-title-wrapper">
 
+  </div>
+  <img id="artist-cover-picture" alt="{{artist.name}} cover picture" src="{{artist.cover_picture}}"/>
+  <div id="artist-description-wrapper">
+
+  </div>
+  <div id="artist-socials-wrapper">
+
+  </div>
+  <img id="artist-logo-picture" alt="{{artist.name}} logo picture" src="{{artist.logo_picture}}"/>
 </div>
