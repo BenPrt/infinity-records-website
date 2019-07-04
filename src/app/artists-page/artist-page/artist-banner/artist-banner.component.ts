@@ -1,37 +1,13 @@
-import { Component, Input, OnChanges } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ArtistInformations } from 'src/app/models/artists-info';
-import { Router } from '@angular/router';
-import { artistsInfos } from 'src/assets/content/artists-content';
 
 @Component({
   selector: 'artist-banner',
   templateUrl: './artist-banner.component.html',
   styleUrls: ['./artist-banner.component.scss'],
 })
-export class ArtistBannerComponent implements OnChanges {
+export class ArtistBannerComponent {
   @Input() artistInfos: ArtistInformations;
-  nextArtist: ArtistInformations;
-  constructor(private router: Router) {}
 
-  ngOnChanges() {
-    this.getNextArtist();
-  }
-
-  getNextArtist(): void {
-    const indexOfCurrentArtist = artistsInfos.indexOf(this.artistInfos) + 1;
-
-    if (artistsInfos[indexOfCurrentArtist]) {
-      this.nextArtist = artistsInfos[indexOfCurrentArtist];
-    } else {
-      this.nextArtist = artistsInfos[0];
-    }
-  }
-
-  goBackToArtistsList(): void {
-    this.router.navigateByUrl('/artists');
-  }
-
-  goToNextArtist() {
-    this.router.navigateByUrl(`/artists/${encodeURI(this.nextArtist.name)}`);
-  }
+  constructor() {}
 }
