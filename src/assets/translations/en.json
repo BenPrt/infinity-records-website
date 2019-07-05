@@ -59,7 +59,8 @@
 	"ARTISTS_PRT-CREW_DESCRIPTION": "Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus.",
 	"ARTISTS_FRESH-BEN_DESCRIPTION": "Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus.",
 	
-	
+	"ARTISTS_PROJECTS" : "Projects",
+	"ARTISTS_PROJECT_RELEASED_ON" : "Released on ",
 	
 	
 	"MERCH_BANNER_SUBTITLE" : "Made in Infinity Records",

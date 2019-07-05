@@ -7,11 +7,24 @@ import { ArtistsListPageComponent } from './artists-list-page.component';
 import { ArtistPageComponent } from './artist-page/artist-page.component';
 import { ArtistBannerComponent } from './artist-page/artist-banner/artist-banner.component';
 import { ArtistNavigationComponent } from './artist-page/artist-navigation/artist-navigation.component';
+import { ArtistProjectsComponent } from './artist-page/artist-projects/artist-projects.component';
 
 @NgModule({
   imports: [CommonModule, AngularModule],
-  declarations: [ArtistsListPageComponent, ArtistPageComponent, ArtistBannerComponent, ArtistNavigationComponent],
-  exports: [ArtistsListPageComponent, ArtistPageComponent, ArtistBannerComponent, ArtistNavigationComponent],
+  declarations: [
+    ArtistsListPageComponent,
+    ArtistPageComponent,
+    ArtistBannerComponent,
+    ArtistNavigationComponent,
+    ArtistProjectsComponent,
+  ],
+  exports: [
+    ArtistsListPageComponent,
+    ArtistPageComponent,
+    ArtistBannerComponent,
+    ArtistNavigationComponent,
+    ArtistProjectsComponent,
+  ],
   providers: [],
 })
 export class ArtistsModule {}

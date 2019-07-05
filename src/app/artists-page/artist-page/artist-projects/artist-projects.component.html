@@ -1,0 +1,24 @@
+<div id="projects-first-layer">
+  <div id="projects-second-layer">
+    <h2 id="projects-title">{{ 'ARTISTS_PROJECTS' | translation }}</h2>
+    <div id="projects-indicators">
+      <p
+        class="projects-indicator"
+        *ngFor="let project of getArtistProjects(); let i = index"
+        [@indicatorAnimation]="isCurrentProject(i)"
+        (click)="goToProject(i)"
+      >
+        {{ '0' + (i+1) }}
+      </p>
+      <div *ngIf="currentProject" id="project-container">
+        <div class="project-title-and-duration">
+          <h3 class="project-title">{{ currentProject.title }}</h3>
+          <p class="project-duration">{{ currentProject.duration }}</p>
+        </div>
+        <div class="project-release-date">
+          {{"ARTISTS_PROJECT_RELEASED_ON" | translation | uppercase }}{{currentProject.releaseDate | localeDate | uppercase}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

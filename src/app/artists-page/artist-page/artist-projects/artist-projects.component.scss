@@ -1,0 +1,68 @@
+@import 'src/app/utils/_styleVariables';
+
+@media screen and (min-device-width: $desktop-size) {
+}
+@media screen and (max-device-width: $desktop-size) {
+}
+:host {
+  #projects-first-layer {
+    width: calc(100vw - 12.57vw);
+    border-right: 2px solid $very-light-grey;
+    #projects-second-layer {
+      width: calc(64.31vw - 15.42vw - 70px);
+      background-color: $very-light-grey;
+      padding: 104px 15.42vw 104px 70px;
+
+      #projects-title {
+        font-size: 44px;
+        font-weight: normal;
+      }
+
+      #projects-indicators {
+        @media screen and (min-device-width: $desktop-size) {
+          margin-top: 32px;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          margin-top: 24px;
+        }
+        .projects-indicator {
+          display: inline-block;
+          cursor: pointer;
+          color: $black;
+          margin-right: 24px;
+          font-size: 18px;
+          line-height: 1.56;
+          user-select: none;
+        }
+      }
+
+      #project-container {
+        width: 100%;
+        margin-top: 56px;
+        .project-title-and-duration {
+          display: flex;
+          justify-content: space-between;
+          height: 40px;
+          align-items: center;
+          line-height: 1.25;
+          .project-title {
+            font-size: 32px;
+            font-weight: 600;
+          }
+          .project-duration {
+            font-size: 32px;
+            font-weight: normal;
+            color: $grey;
+          }
+        }
+        .project-release-date{
+          font-size : 18px;
+          color : $grey;
+          font-weight: 500;
+          line-height: 1.33;
+          margin-top : 8px;
+        }
+      }
+    }
+  }
+}

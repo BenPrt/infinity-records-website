@@ -12,7 +12,7 @@ import { DeviceService } from 'src/app/shared/services/device.service';
 })
 export class ArtistPageComponent implements OnInit {
   artist: ArtistInformations;
-  currentProject: number;
+  currentProjectId: number;
   isMobile: boolean;
   deviceTypeSubscription: Subscription;
 
@@ -38,12 +38,14 @@ export class ArtistPageComponent implements OnInit {
       });
       if (params.project) {
         this.initCurrentProject(parseInt(params.project, 10));
+      } else {
+        this.initCurrentProject(1);
       }
     });
   }
 
   initCurrentProject(projectId: number): void {
-    console.log(`Current Project : ${projectId}`);
+    this.currentProjectId = projectId;
   }
 
   ngOnDestroy(): void {

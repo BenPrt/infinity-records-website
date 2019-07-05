@@ -1,5 +1,5 @@
 import { HammerGestureConfig, HAMMER_GESTURE_CONFIG, BrowserModule } from '@angular/platform-browser';
-import { NgModule, APP_INITIALIZER } from '@angular/core';
+import { NgModule, APP_INITIALIZER, LOCALE_ID } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -49,6 +49,12 @@ export class MyHammerConfig extends HammerGestureConfig {
       useFactory: translationFactoryResources,
       deps: [TranslationService],
       multi: true,
+    },
+    { provide: LOCALE_ID, useValue: 'en-US' },
+    {
+      provide: LOCALE_ID,
+      deps: [TranslationService],
+      useFactory: (translationService: TranslationService) => translationService.getCurrentLanguage(),
     },
   ],
   bootstrap: [AppComponent],
