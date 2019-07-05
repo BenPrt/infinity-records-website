@@ -1,125 +1,263 @@
 @import 'src/app/utils/_styleVariables';
 
-#artist-first-layer {
-  display: inline-block;
-  margin-left: 12.5vw;
-  width: calc(100vw - 12.5vw - 2px - 35.69vw);
-  border-left: 2px solid $very-light-grey;
-  height: calc(122px + 42.15vw);
-  #artist-first-inside-layer {
-    width: calc(33.33vw - 12.5vw);
-    height: calc(122px + 42.15vw);
-    border-right: 2px solid $very-light-grey;
-  }
+@media screen and (min-device-width: $desktop-size) {
 }
-#artist-second-layer {
-  display: inline-block;
-  width: 35.69vw;
-  background-color: $very-light-grey;
-  height: calc(122px + 42.15vw);
+@media screen and (max-device-width: $desktop-size) {
 }
 
-#artist-cover {
-  width: calc(100vw - 4.86vw - 4.86vw);
-  margin-left: 4.86vw;
-  height: calc(122px + 42.15vw - 91px);
-  margin-top: calc(-122px - 42.15vw + 91px);
-  position: absolute;
-  #artist-title-wrapper {
-    width: calc(-32px + 28.61vw - 32px);
-    padding: 32px;
-    height: calc(1.81vw + 3vw);
-    background-color: $black;
-    color: $white;
-    position: relative;
-    z-index: 2;
-    #artist-type {
-      height: 1.81vw;
-      display: flex;
-      align-items: center;
-      font-size: 0.9em;
-      font-weight: bold;
-      line-height: 1.63;
-      letter-spacing: 2px;
+#artist-first-layer {
+  border-left: 2px solid $very-light-grey;
+  @media screen and (min-device-width: $desktop-size) {
+    display: inline-block;
+    margin-left: 12.5vw;
+    width: calc(100vw - 12.5vw - 2px - 35.69vw);
+    height: calc(122px + 42.15vw);
+  }
+  @media screen and (max-device-width: $desktop-size) {
+    margin-left: 12.23vw;
+    width: calc(100vw - 12.23vw - 2px - 12.23vw - 2px);
+    height: calc(74px + 65px + 91.49vw + 48px + 244px + 64px);
+    border-right: 2px solid $very-light-grey;
+  }
+
+  #artist-first-inside-layer {
+    border-right: 2px solid $very-light-grey;
+    @media screen and (min-device-width: $desktop-size) {
+      width: calc(33.33vw - 12.5vw);
+      height: calc(122px + 42.15vw);
     }
-    #artist-name {
-      height: 3vw;
-      display: flex;
-      align-items: center;
-      font-size: 2.5em;
-      font-weight: normal;
-      line-height: 1.27;
-      margin-left: 4px;
+    @media screen and (max-device-width: $desktop-size) {
+      width: 26.86vw;
+      height: calc(74px + 65px + 91.49vw + 48px + 244px + 64px);
     }
   }
-  #artist-cover-picture {
-    margin-top: calc(-32px - 1.81vw - 3vw);
-    margin-left: calc(12.5vw - 4.86vw);
-    height: 42.15vw;
-    width: 74.93vw;
+}
+#artist-second-layer-wrapper {
+  @media screen and (min-device-width: $desktop-size) {
+    display: inline-block;
   }
-  #artist-description-wrapper {
-    width: 20.9vw;
-    height: 9.17vw;
-    margin-left: calc(43.4vw - 4.86vw);
-    margin-top: calc(-9.17vw - 4px - 4.44vw);
+  @media screen and (max-device-width: $desktop-size) {
     position: relative;
-    #description-separator {
-      height: 4px;
-      border: none;
-      margin: 0;
-      background-color: $gold;
-      width: 40px;
+  }
+  #artist-second-layer {
+    background-color: $very-light-grey;
+    @media screen and (min-device-width: $desktop-size) {
+      height: calc(122px + 42.15vw);
+      width: 35.69vw;
     }
-    #artist-description {
-      width: 100%;
-      margin-top: 16px;
+    @media screen and (max-device-width: $desktop-size) {
+      position: absolute;
+      width: 60.37vw;
+      height: calc(74px + 65px + 91.49vw);
+      right: 0;
+      margin-top: calc(-74px - 65px - 91.49vw - 48px - 244px - 64px);
+    }
+  }
+}
+
+#artist-cover-wrapper {
+  position: relative;
+  #artist-cover {
+    position: absolute;
+    @media screen and (min-device-width: $desktop-size) {
+      width: calc(100vw - 4.86vw - 4.86vw);
+      margin-left: 4.86vw;
+      height: calc(122px + 42.15vw - 91px);
+      margin-top: calc(-122px - 42.15vw + 91px);
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      margin-top: calc(-65px - 91.49vw - 48px - 244px - 64px);
+      width: 100vw;
+      height: calc(65px + 91.49vw);
+    }
+    #artist-title-wrapper {
+      background-color: $black;
       color: $white;
-      font-size: 1em;
-      font-weight: 600;
-      line-height: 1.56;
-    }
-  }
-  #artist-socials-wrapper {
-    width: 11.04vw;
-    height: calc(42.15vw - 20.9vw - 17px);
-    margin-top: calc(4.44vw - 42.15vw + 17px);
-    margin-left: calc(100vw - 4.86vw - 4.86vw - 11.04vw);
-    position: relative;
-    z-index: 2;
-    #socials-separator {
-      display: inline-block;
-      vertical-align: top;
-      height: 4px;
-      border: none;
-      margin: 0;
-      margin-top: 14px;
-      background-color: $gold;
-      width: calc(11.04vw - 32px);
-    }
-    #socials-icons-wrapper {
-      display: inline-block;
-      vertical-align: top;
-      height: calc(42.15vw - 20.9vw - 17px);
-      width: 32px;
-      .social-link {
-        display : block;
-        width: 32px;
-        height: 32px;
-        margin-bottom: 24px;
-        &:last-of-type {
-          margin-bottom: 0;
+      position: relative;
+      z-index: 2;
+      @media screen and (min-device-width: $desktop-size) {
+        width: calc(-32px + 28.61vw - 32px);
+        padding: 32px;
+        height: calc(1.81vw + 3vw);
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        width: calc(-16px + 67.82vw - 16px);
+        padding: 12px 16px;
+        height: calc(6.91vw + 10.64vw + 3px);
+      }
+      #artist-type {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        @media screen and (min-device-width: $desktop-size) {
+          height: 1.81vw;
+          font-size: 0.9em;
+          letter-spacing: 2px;
+          line-height: 1.63;
         }
-        .social-icon {
-          width: 32px;
-          height: 32px;
+        @media screen and (max-device-width: $desktop-size) {
+          height: 6.91vw;
+          font-size: 0.66em;
+          letter-spacing: 1.5px;
+          line-height: 1.5;
+        }
+      }
+      #artist-name {
+        display: flex;
+        align-items: center;
+        font-weight: normal;
+
+        @media screen and (min-device-width: $desktop-size) {
+          height: 3vw;
+          font-size: 2.5em;
+          line-height: 1.27;
+          margin-left: 4px;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          height: 6.91vw;
+          font-size: 1.78em;
+          line-height: 1.25;
+          margin-left: 1px;
+          margin-top: 3px;
         }
       }
     }
-  }
-  #artist-logo-picture {
-    width: 20.9vw;
-    height: 20.9vw;
-    margin-left: calc(100vw - 4.86vw - 4.86vw - 20.9vw);
+    #artist-cover-picture {
+      @media screen and (min-device-width: $desktop-size) {
+        margin-top: calc(-32px - 1.81vw - 3vw);
+        margin-left: calc(12.5vw - 4.86vw);
+        height: 42.15vw;
+        width: 74.93vw;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        margin-top: -25px;
+        margin-left: calc((100vw - 91.49vw) / 2);
+        height: 91.49vw;
+        width: 91.49vw;
+      }
+    }
+
+    #artist-socials-wrapper {
+      position: relative;
+      z-index: 2;
+      @media screen and (min-device-width: $desktop-size) {
+        width: 11.04vw;
+        height: calc(42.15vw - 20.9vw - 17px);
+        margin-top: calc(-4px - 42.15vw + 17px);
+        margin-left: calc(100vw - 4.86vw - 4.86vw - 11.04vw);
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: calc(100vw - 23.4vw);
+        height: 32px;
+        margin-top: calc(-4px - 32px - 16px);
+      }
+      #socials-separator {
+        height: 4px;
+        border: none;
+        margin: 0;
+        background-color: $gold;
+        @media screen and (min-device-width: $desktop-size) {
+          width: calc(11.04vw - 32px);
+          margin-top: 14px;
+          display: inline-block;
+          vertical-align: top;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          width: 40px;
+          margin-right : 8px;
+        }
+      }
+      #socials-icons-wrapper {
+        @media screen and (min-device-width: $desktop-size) {
+          display: inline-block;
+          vertical-align: top;
+          height: calc(42.15vw - 20.9vw - 17px);
+          width: 32px;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          width: calc(100% - 40px);
+          height: 32px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+
+        .social-link {
+          display: block;
+          width: 32px;
+          height: 32px;
+
+          @media screen and (min-device-width: $desktop-size) {
+            margin-bottom: 24px;
+          }
+          @media screen and (max-device-width: $desktop-size) {
+            margin-right: 16px;
+          }
+          &:last-of-type {
+            @media screen and (min-device-width: $desktop-size) {
+              margin-bottom: 0px;
+            }
+            @media screen and (max-device-width: $desktop-size) {
+              margin-right: 0px;
+            }
+          }
+          .social-icon {
+            width: 32px;
+            height: 32px;
+          }
+        }
+      }
+    }
+    #artist-logo-picture {
+      @media screen and (min-device-width: $desktop-size) {
+        width: 20.9vw;
+        height: 20.9vw;
+        margin-left: calc(100vw - 4.86vw - 4.86vw - 20.9vw);  
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        width: 23.4vw;
+        height: 23.4vw;
+        margin-top : calc(16px - 23.4vw);
+        margin-left: calc(100vw - 23.4vw);  
+      }
+    }
+    #artist-description-wrapper {
+      position: relative;
+
+      @media screen and (min-device-width: $desktop-size) {
+        width: 20.9vw;
+        height: 9.17vw;
+        margin-left: calc(43.4vw - 4.86vw);
+        margin-top: calc(-9.17vw - 4px - 4.44vw);
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        width: 47.61vw;
+        height: 244px;
+        margin: 48px 0px 64px 48.14vw;
+      }
+      #description-separator {
+        height: 4px;
+        border: none;
+        margin: 0;
+        background-color: $gold;
+        width: 40px;
+      }
+      #artist-description {
+        font-weight: 600;
+        width: 100%;
+        margin-top: 16px;
+        font-size: 1em;
+        line-height: 1.56;
+        @media screen and (min-device-width: $desktop-size) {
+          color: $white;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          color: $black;
+        }
+      }
+    }
   }
 }

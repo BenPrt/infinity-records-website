@@ -3,6 +3,7 @@ export interface ArtistInformations {
   name: string;
   type: string;
   cover_picture: string;
+  cover_picture_mobile: string;
   logo_picture: string;
   url_facebook: string;
   url_instagram: string;

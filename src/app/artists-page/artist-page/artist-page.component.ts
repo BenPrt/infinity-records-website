@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ArtistInformations } from 'src/app/models/artists-info';
 import { artistsInfos } from 'src/assets/content/artists-content';
+import { Subscription } from 'rxjs';
+import { DeviceService } from 'src/app/shared/services/device.service';
 
 @Component({
   selector: 'app-artist-page',
@@ -11,10 +13,21 @@ import { artistsInfos } from 'src/assets/content/artists-content';
 export class ArtistPageComponent implements OnInit {
   artist: ArtistInformations;
   currentProject: number;
-  constructor(private route: ActivatedRoute) {}
+  isMobile: boolean;
+  deviceTypeSubscription: Subscription;
+
+  constructor(private route: ActivatedRoute, private deviceService: DeviceService) {}
 
   ngOnInit(): void {
+    this.initDeviceType();
     this.initCurrentArtist();
+  }
+
+  initDeviceType(): void {
+    this.isMobile = this.deviceService.getIsMobile();
+    this.deviceTypeSubscription = this.deviceService.deviceIsMobileHasChanged.subscribe((isMobile: boolean) => {
+      this.isMobile = isMobile;
+    });
   }
 
   initCurrentArtist(): void {
@@ -31,5 +44,9 @@ export class ArtistPageComponent implements OnInit {
 
   initCurrentProject(projectId: number): void {
     console.log(`Current Project : ${projectId}`);
+  }
+
+  ngOnDestroy(): void {
+    this.deviceTypeSubscription.unsubscribe();
   }
 }

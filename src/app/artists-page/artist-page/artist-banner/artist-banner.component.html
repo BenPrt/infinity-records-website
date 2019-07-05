@@ -1,42 +1,78 @@
 <div id="artist-first-layer">
   <div id="artist-first-inside-layer"></div>
 </div>
-<div id="artist-second-layer"></div>
+<div id="artist-second-layer-wrapper">
+  <div id="artist-second-layer"></div>
+</div>
 
-<artist-navigation [artist]="artist"></artist-navigation>
+<artist-navigation [isMobile]="isMobile" [artist]="artist"></artist-navigation>
 
-<div id="artist-cover">
-  <div id="artist-title-wrapper">
-    <p id="artist-type">{{ artist.type }}</p>
-    <h2 id="artist-name">{{ artist.name }}</h2>
-  </div>
-  <img id="artist-cover-picture" alt="{{ artist.name }} cover picture" src="{{ artist.cover_picture !== '' ? artist.cover_picture : 'assets/img/artists/default_cover.jpg'  }}" />
-  <div id="artist-description-wrapper">
-    <hr id="description-separator" />
-    <p id="artist-description">{{ artist.description | translation }}</p>
-  </div>
-  <div id="artist-socials-wrapper">
-    <hr id="socials-separator" />
-    <div id="socials-icons-wrapper">
-      <a *ngIf="artist.url_facebook !== ''" class="social-link" href="{{ artist.url_facebook }}" target="_blank">
-        <img class="social-icon" alt="Facebook Icon" src="assets/icons/social_facebook.svg" />
-      </a>
-      <a *ngIf="artist.url_instagram !== ''" class="social-link" href="{{ artist.url_instagram }}" target="_blank">
-        <img class="social-icon" alt="Instagram Icon" src="assets/icons/social_instagram.svg" />
-      </a>
-      <a *ngIf="artist.url_youtube !== ''" class="social-link" href="{{ artist.url_youtube }}" target="_blank">
-        <img class="social-icon" alt="Youtube Icon" src="assets/icons/social_youtube.svg" />
-      </a>
-      <a *ngIf="artist.url_soundcloud !== ''" class="social-link" href="{{ artist.url_soundcloud }}" target="_blank">
-        <img class="social-icon" alt="Soundcloud Icon" src="assets/icons/social_soundcloud.svg" />
-      </a>
-      <a *ngIf="artist.url_spotify !== ''" class="social-link" href="{{ artist.url_spotify }}" target="_blank">
-        <img class="social-icon" alt="Spotify Icon" src="assets/icons/social_spotify.svg" />
-      </a>
-      <a *ngIf="artist.url_deezer !== ''" class="social-link" href="{{ artist.url_deezer }}" target="_blank">
-        <img class="social-icon" alt="Deezer Icon" src="assets/icons/social_deezer.svg" />
-      </a>
+<div id="artist-cover-wrapper">
+  <div id="artist-cover">
+    <div id="artist-title-wrapper">
+      <p id="artist-type">{{ artist.type }}</p>
+      <h2 id="artist-name">{{ artist.name }}</h2>
+    </div>
+    <div id="artist-cover-picture-wrapper">
+      <img id="artist-cover-picture" alt="{{ artist.name }} cover picture" src="{{ getArtistCoverPicture() }}" />
+    </div>
+    <div id="artist-socials-wrapper">
+      <hr id="socials-separator" />
+      <div id="socials-icons-wrapper">
+        <a *ngIf="artist.url_facebook !== ''" class="social-link" href="{{ artist.url_facebook }}" target="_blank">
+          <img
+            class="social-icon"
+            alt="Facebook Icon"
+            src="{{ isMobile ? 'assets/icons/social_facebook_white.svg' : 'assets/icons/social_facebook_black.svg' }}"
+          />
+        </a>
+        <a *ngIf="artist.url_instagram !== ''" class="social-link" href="{{ artist.url_instagram }}" target="_blank">
+          <img
+            class="social-icon"
+            alt="Instagram Icon"
+            src="{{ isMobile ? 'assets/icons/social_instagram_white.svg' : 'assets/icons/social_instagram_black.svg' }}"
+          />
+        </a>
+        <a *ngIf="artist.url_youtube !== ''" class="social-link" href="{{ artist.url_youtube }}" target="_blank">
+          <img
+            class="social-icon"
+            alt="Youtube Icon"
+            src="{{ isMobile ? 'assets/icons/social_youtube_white.svg' : 'assets/icons/social_youtube_black.svg' }}"
+          />
+        </a>
+        <a *ngIf="artist.url_soundcloud !== ''" class="social-link" href="{{ artist.url_soundcloud }}" target="_blank">
+          <img
+            class="social-icon"
+            alt="Soundcloud Icon"
+            src="{{
+              isMobile ? 'assets/icons/social_soundcloud_white.svg' : 'assets/icons/social_soundcloud_black.svg'
+            }}"
+          />
+        </a>
+        <a *ngIf="artist.url_spotify !== ''" class="social-link" href="{{ artist.url_spotify }}" target="_blank">
+          <img
+            class="social-icon"
+            alt="Spotify Icon"
+            src="{{ isMobile ? 'assets/icons/social_spotify_white.svg' : 'assets/icons/social_spotify_black.svg' }}"
+          />
+        </a>
+        <a *ngIf="artist.url_deezer !== ''" class="social-link" href="{{ artist.url_deezer }}" target="_blank">
+          <img
+            class="social-icon"
+            alt="Deezer Icon"
+            src="{{ isMobile ? 'assets/icons/social_deezer_white.svg' : 'assets/icons/social_deezer_black.svg' }}"
+          />
+        </a>
+      </div>
+    </div>
+    <img
+      id="artist-logo-picture"
+      alt="{{ artist.name }} logo picture"
+      src="{{ artist.logo_picture !== '' ? artist.logo_picture : 'assets/img/artists/default_logo.jpg' }}"
+    />
+    <div id="artist-description-wrapper">
+      <hr id="description-separator" />
+      <p id="artist-description">{{ artist.description | translation }}</p>
     </div>
   </div>
-  <img id="artist-logo-picture" alt="{{ artist.name }} logo picture" src="{{ artist.logo_picture !== '' ? artist.logo_picture : 'assets/img/artists/default_logo.jpg'  }}" />
 </div>

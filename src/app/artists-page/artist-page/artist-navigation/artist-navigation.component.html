@@ -1,19 +1,21 @@
-<p id="back-button" (click)="goBackToArtistsList()">
-  <img alt="Back arrow" src="assets/icons/back_icon.svg" />
-  {{ 'ARTISTS_BACK' | translation }}
-</p>
+<div id="artist-navigation">
+  <p id="back-button" (click)="goBackToArtistsList()">
+    <img alt="Back arrow" src="assets/icons/back_icon.svg" />
+    {{ 'ARTISTS_BACK' | translation }}
+  </p>
 
-<p id="arborescence">
-  <span id="arbo-first" (click)="goBackToArtistsList()">
-    {{ 'ARTISTS' | translation }}
-  </span>
-  <span id="arbo-slash">/</span>
-  <span id="arbo-second">
-    {{ artist.name }}
-  </span>
-</p>
+  <p id="arborescence" *ngIf="!isMobile">
+    <span id="arbo-first" (click)="goBackToArtistsList()">
+      {{ 'ARTISTS' | translation }}
+    </span>
+    <span id="arbo-slash">/</span>
+    <span id="arbo-second">
+      {{ artist.name }}
+    </span>
+  </p>
 
-<p id="next-artist-button" (click)="goToNextArtist()">
-  {{ nextArtist.name | uppercase }}
-  <img alt="Next artist arrow" src="assets/icons/next_icon.svg" />
-</p>
+  <p id="next-artist-button" (click)="goToNextArtist()">
+    {{ nextArtist.name | uppercase }}
+    <img alt="Next artist arrow" src="assets/icons/next_icon.svg" />
+  </p>
+</div>

@@ -10,6 +10,7 @@ import { artistsInfos } from 'src/assets/content/artists-content';
 })
 export class ArtistNavigationComponent implements OnChanges {
   @Input() artist: ArtistInformations;
+  @Input() isMobile: boolean;
   nextArtist: ArtistInformations;
   constructor(private router: Router) {}
 

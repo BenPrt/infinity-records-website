@@ -1,57 +1,68 @@
 @import 'src/app/utils/_styleVariables';
 
 :host {
-  margin-left: 4.86vw;
-  width: calc(100vw - 4.86vw - 12.56vw);
-  height: 74px;
-  margin-bottom: 16px;
-  position: absolute;
-  margin-top: calc(-126px - 42.15vw);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  #back-button {
-    img {
-      margin-right: 8px;
-    }
-    height: 24px;
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  #arborescence {
-    text-align: center;
-    width: 28.82vw;
+  position : relative;
+  #artist-navigation {
     position: absolute;
-    margin-left: calc(12.5vw - 4.86vw + (100vw - 12.5vw - 35.69vw) - 28.82vw);
-    #arbo-first {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (min-device-width: $desktop-size) {
+      margin-left: 4.86vw;
+      margin-top: calc(-126px - 42.15vw);
+      width: calc(100vw - 4.86vw - 12.56vw);
+      height: 74px;
+      margin-bottom: 16px;
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      width : calc(-16px + 100vw - 16px);
+      height : 26px;
+      margin : calc(-74px - 65px - 91.49vw - 48px - 244px - 64px + 16px) 16px 32px 16px;
+    }
+
+    #back-button {
+      img {
+        margin-right: 8px;
+      }
+      height: 24px;
+      display: flex;
+      align-items: center;
       font-size: 16px;
-      margin-right: 12px;
       cursor: pointer;
     }
-    #arbo-slash {
-      width: 24px;
-      font-size: 16px;
-      margin-right: 12px;
-      color: $grey;
-      cursor: default;
+    #arborescence {
+      text-align: center;
+      width: 28.82vw;
+      position: absolute;
+      margin-left: calc(12.5vw - 4.86vw + (100vw - 12.5vw - 35.69vw) - 28.82vw);
+      #arbo-first {
+        font-size: 16px;
+        margin-right: 12px;
+        cursor: pointer;
+      }
+      #arbo-slash {
+        width: 24px;
+        font-size: 16px;
+        margin-right: 12px;
+        color: $grey;
+        cursor: default;
+      }
+      #arbo-second {
+        font-size: 16px;
+        font-weight: 600;
+        cursor: default;
+      }
     }
-    #arbo-second {
+    #next-artist-button {
+      height: 24px;
+      display: flex;
+      align-items: center;
       font-size: 16px;
       font-weight: 600;
-      cursor: default;
-    }
-  }
-  #next-artist-button {
-    height: 24px;
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    img {
-      margin-right: 8px;
+      cursor: pointer;
+      img {
+        margin-left: 8px;
+      }
     }
   }
 }
