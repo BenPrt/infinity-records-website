@@ -6,16 +6,32 @@
 }
 :host {
   #projects-first-layer {
-    width: calc(100vw - 12.57vw);
     border-right: 2px solid $very-light-grey;
+    @media screen and (min-device-width: $desktop-size) {
+      width: calc(100vw - 12.57vw);
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      width: calc(100vw - 12.23vw - 2px);
+    }
     #projects-second-layer {
-      width: calc(64.31vw - 15.42vw - 70px);
       background-color: $very-light-grey;
-      padding: 104px 15.42vw 104px 70px;
+      @media screen and (min-device-width: $desktop-size) {
+        padding: 104px 15.42vw 104px 70px;
+        width: calc(64.31vw - 15.42vw - 70px);
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        padding: 56px 16px;
+        width: calc(-16px + 100vw - 12.23vw - 2px - 13.3vw - 16px);
+      }
 
       #projects-title {
-        font-size: 44px;
         font-weight: normal;
+        @media screen and (min-device-width: $desktop-size) {
+          font-size: 44px;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          font-size: 2em;
+        }
       }
 
       #projects-indicators {
@@ -38,27 +54,54 @@
 
       #project-container {
         width: 100%;
-        margin-top: 56px;
-        .cover-and-player-container{
-          position : absolute;
-          width : 30.83vw;
-          height : calc(30.83vw + 16px + 11.32vw);
-          margin-left : calc(56.60vw - 70px);
-          .project-cover{
-            width : 30.83vw;
-            height : 30.83vw;
-            margin-bottom : 16px;
+        @media screen and (min-device-width: $desktop-size) {
+          margin-top: 56px;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          margin-top: 32px;
+        }
+        .cover-and-player-container {
+          @media screen and (min-device-width: $desktop-size) {
+            position: absolute;
+            width: 30.83vw;
+            height: calc(30.83vw + 16px + 11.32vw);
+            margin-left: calc(56.6vw - 70px);
+          }
+          @media screen and (max-device-width: $desktop-size) {
+            width: 75.53vw;
+            margin-left: calc(((100vw - 75.53vw) / 2) - 16px);
+          }
+          .project-cover {
+            margin-bottom: 16px;
+            @media screen and (min-device-width: $desktop-size) {
+              width: 30.83vw;
+              height: 30.83vw;
+            }
+            @media screen and (max-device-width: $desktop-size) {
+              width: 75.53vw;
+              height: 75.53vw;
+            }
           }
         }
         .project-title-and-duration {
-          display: flex;
-          justify-content: space-between;
-          height: 40px;
-          align-items: center;
-          line-height: 1.25;
+          @media screen and (min-device-width: $desktop-size) {
+            line-height: 1.25;
+            height: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+          @media screen and (max-device-width: $desktop-size) {
+            margin-top: 40px;
+          }
           .project-title {
-            font-size: 32px;
             font-weight: 600;
+            @media screen and (min-device-width: $desktop-size) {
+              font-size: 32px;
+            }
+            @media screen and (max-device-width: $desktop-size) {
+              font-size: 1.15em;
+            }
           }
           .project-duration {
             font-size: 32px;
@@ -67,24 +110,38 @@
           }
         }
         .project-release-date {
-          font-size: 18px;
           color: $grey;
           font-weight: 500;
-          line-height: 1.33;
-          margin-top: 8px;
+          @media screen and (min-device-width: $desktop-size) {
+            font-size: 18px;
+            line-height: 1.33;
+            letter-spacing: 2px;
+            margin-top: 8px;
+          }
+          @media screen and (max-device-width: $desktop-size) {
+            font-size: 14px;
+            line-height: 1.43;
+            letter-spacing: 1px;
+            margin-top: 4px;
+          }
         }
         .project-tracklist {
-          margin-top: 14px;
+          @media screen and (min-device-width: $desktop-size) {
+            margin-top: 14px;
+          }
+          @media screen and (max-device-width: $desktop-size) {
+            margin-top: 8px;
+          }
           .project-track-container {
             display: flex;
             align-items: center;
             justify-content: space-between;
             width: 100%;
-            height: 59px;
+            height: 58px;
             border-bottom: 1px solid $light-grey;
 
             .track-informations {
-              display : flex;
+              display: flex;
               align-items: center;
               font-size: 16px;
               font-weight: 600;
@@ -105,35 +162,48 @@
             }
 
             .playing-indicators {
-              font-size : 16px;
+              font-size: 16px;
 
               .play-button {
-                display : flex;
+                display: flex;
                 align-items: center;
-                img{
-                  width : 20px;
-                  height : 20px;
-                  margin-right : 5px;
+                cursor: pointer;
+                img {
+                  width: 20px;
+                  height: 20px;
                   text-decoration: none;
+                  @media screen and (min-device-width: $desktop-size) {
+                    margin-right: 5px;
+                  }
+                  @media screen and (max-device-width: $desktop-size) {
+                  }
                 }
-                cursor : pointer;
-                font-weight : normal;
-                text-decoration: underline;
+                span {
+                  @media screen and (max-device-width: $desktop-size) {
+                    display: none;
+                  }
+                  font-weight: normal;
+                  text-decoration: underline;
+                }
               }
               .listening-indicator {
-                display : flex;
+                display: flex;
                 align-items: center;
-                img{
-                  width : 24px;
-                  height : 24px;
+                img {
+                  width: 24px;
+                  height: 24px;
                 }
-                font-weight : 600;
+                span {
+                  @media screen and (max-device-width: $desktop-size) {
+                    display: none;
+                  }
+                  font-weight: 600;
+                }
               }
             }
           }
         }
         .project-download-button {
-          width: 171px;
           height: 40px;
           background-color: $black;
           color: $white;
@@ -143,12 +213,65 @@
           border: none;
           cursor: pointer;
           padding: none;
-          margin-top: 66px;
-          margin-left: calc(100% - 171px);
+          @media screen and (min-device-width: $desktop-size) {
+            width: 171px;
+            margin-top: 66px;
+            margin-left: calc(100% - 171px);
+          }
+          @media screen and (max-device-width: $desktop-size) {
+            margin-top: 48px;
+            width: 100%;
+          }
+        }
+      }
+      #projects-navigator {
+        background-color: $white;
+        display: flex;
+        justify-content: space-between;
+        width: calc(13.3vw + 13.3vw);
+        margin-top : 24px;
+        margin-left : calc(-16px + 100vw - 12.23vw - 2px - 13.3vw - 13.3vw);
+        height: 13.3vw;
+      }
+      #page-button-left {
+        cursor: pointer;
+        background-color: $light-grey;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+        height: 13.3vw;
+        width: 13.3vw;
+        .navigation-arrow {
+          height: 14px;
+          width: 14px;
+        }
+        &.disabled {
+          background-color: $white;
+          cursor: default;
+        }
+      }
+      #page-button-right {
+        cursor: pointer;
+        background-color: $light-grey;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+
+        height: 13.3vw;
+        width: 13.3vw;
+        .navigation-arrow {
+          height: 14px;
+          width: 14px;
+        }
+        &.disabled {
+          background-color: $very-light-grey;
+          cursor: default;
         }
       }
 
+      
     }
-
   }
 }

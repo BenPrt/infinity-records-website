@@ -17,7 +17,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
         'true',
         style({
           opacity: '1',
-          fontWeight: 'bold',
+          fontWeight: '600',
           borderBottom: '2px solid black',
         }),
       ),

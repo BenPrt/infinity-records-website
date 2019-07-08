@@ -29,11 +29,8 @@ export class SoundcloudPlayerComponent implements OnChanges {
       }
       if (urlPart.indexOf('color') !== -1) {
         let updateableUrlPart = String(urlPart);
-        console.log(updateableUrlPart);
         updateableUrlPart = urlPart.substring(0, 5);
-        console.log(updateableUrlPart);
         updateableUrlPart = updateableUrlPart.concat('=%23d7bf85');
-        console.log(updateableUrlPart);
       }
 
       parsedUrl = parsedUrl !== '' ? `${parsedUrl}&${urlPart}` : `${urlPart}`;

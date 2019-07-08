@@ -1,6 +1,8 @@
 <div id="projects-first-layer">
   <div id="projects-second-layer">
+    
     <h2 id="projects-title">{{ 'ARTISTS_PROJECTS' | translation }}</h2>
+    
     <div *ngIf="artist.projects.length > 1" id="projects-indicators">
       <p
         class="projects-indicator"
@@ -11,14 +13,15 @@
         {{ '0' + (idx + 1) }}
       </p>
     </div>
+    
     <div *ngIf="currentProject" id="project-container">
-        <div class="cover-and-player-container">
-          <img class="project-cover" alt="{{currentProject.title}} cover" src="{{currentProject.coverPath}}">
-          <soundcloud-player [trackUrl]='getSoundcloudUrl()' [autoplay]='isSoundcloudAutoplay()'></soundcloud-player>
-        </div>
+      <div class="cover-and-player-container">
+        <img class="project-cover" alt="{{ currentProject.title }} cover" src="{{ currentProject.coverPath }}" />
+        <soundcloud-player [trackUrl]="getSoundcloudUrl()" [autoplay]="isSoundcloudAutoplay()"></soundcloud-player>
+      </div>
       <div class="project-title-and-duration">
         <h3 class="project-title">{{ currentProject.title }}</h3>
-        <p class="project-duration">{{ currentProject.duration }}</p>
+        <p *ngIf="!isMobile" class="project-duration">{{ currentProject.duration }}</p>
       </div>
       <div *ngIf="currentProject.releaseDate !== ''" class="project-release-date">
         {{ 'ARTISTS_PROJECT_RELEASED_ON' | translation | uppercase
@@ -33,11 +36,11 @@
           </div>
           <div class="playing-indicators">
             <p *ngIf="!isTrackPlaying(track)" class="play-button" (click)="playTrack(track)">
-              <img alt="Play Icon" src="assets/icons/play_icon.svg" />{{ 'ARTISTS_PLAY' | translation }}
+              <img alt="Play Icon" src="assets/icons/play_icon.svg" /><span>{{ 'ARTISTS_PLAY' | translation }}</span>
             </p>
             <p *ngIf="isTrackPlaying(track)" class="listening-indicator">
               <img alt="Listening Icon" src="assets/icons/listening_icon.svg" />
-              {{ 'ARTISTS_LISTENING' | translation }}
+              <span>{{ 'ARTISTS_LISTENING' | translation }}</span>
             </p>
           </div>
         </li>
@@ -49,7 +52,37 @@
       >
         {{ 'ARTISTS_DOWNLOAD' | translation | uppercase }}
       </button>
+    </div>
 
+    <div *ngIf="isMobile" id="projects-navigator">
+      <div id="page-button-left" [ngClass]="{ disabled: isNavigatorDisabled('previous') }" (click)="goToPreviousProject()">
+        <img
+        *ngIf="!isNavigatorDisabled('previous')"
+        class="navigation-arrow"
+        alt="Previous Arrow Enabled"
+        src="assets/icons/merch_arrow_left_dark-grey.svg"
+      />
+      <img
+        *ngIf="isNavigatorDisabled('previous')"
+        class="navigation-arrow"
+        alt="Previous Arrow Disabled"
+        src="assets/icons/merch_arrow_left_light-grey.svg"
+      />
+      </div>
+      <div id="page-button-right" [ngClass]="{ disabled: isNavigatorDisabled('next') }" (click)="goToNextProject()">
+        <img
+        *ngIf="!isNavigatorDisabled('next')"
+        class="navigation-arrow"
+        alt="Next Arrow Enabled"
+        src="assets/icons/merch_arrow_right_dark-grey.svg"
+      />
+      <img
+        *ngIf="isNavigatorDisabled('next')"
+        class="navigation-arrow"
+        alt="Next Arrow Disabled"
+        src="assets/icons/merch_arrow_right_light-grey.svg"
+      />
+      </div>
     </div>
   </div>
 </div>

@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
         'true',
         style({
           opacity: '1',
-          fontWeight: 'bold',
+          fontWeight: '600',
           borderBottom: '2px solid black',
         }),
       ),
@@ -95,5 +95,30 @@ export class ArtistProjectsComponent implements AfterContentChecked {
 
   download(path: string): void {
     window.open(path, '_blank');
+  }
+
+  isNavigatorDisabled(direction: string): boolean {
+    const currentProjectIdx = this.getArtistProjects().indexOf(this.currentProject);
+    if (
+      (direction === 'previous' && currentProjectIdx === 0) ||
+      (direction === 'next' && currentProjectIdx === this.getArtistProjects().length - 1)
+    ) {
+      return true;
+    }
+    return false;
+  }
+
+  goToPreviousProject(): void {
+    const currentProjectIdx = this.getArtistProjects().indexOf(this.currentProject);
+    if (currentProjectIdx > 0) {
+      this.goToProject(currentProjectIdx - 1);
+    }
+  }
+
+  goToNextProject(): void {
+    const currentProjectIdx = this.getArtistProjects().indexOf(this.currentProject);
+    if (currentProjectIdx < this.getArtistProjects().length - 1) {
+      this.goToProject(currentProjectIdx + 1);
+    }
   }
 }
