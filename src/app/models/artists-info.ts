@@ -22,12 +22,12 @@ export interface ProjectInformations {
   duration: string;
   releaseDate: string;
   coverPath: string;
+  soundcloudUrl : string;
   downloadPath: string;
   tracks: TrackInformations[];
 }
 
 export interface TrackInformations {
-  id: number;
   title: string;
   soundcloudUrl: string;
 }

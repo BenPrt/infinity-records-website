@@ -1,24 +1,55 @@
 <div id="projects-first-layer">
   <div id="projects-second-layer">
     <h2 id="projects-title">{{ 'ARTISTS_PROJECTS' | translation }}</h2>
-    <div id="projects-indicators">
+    <div *ngIf="artist.projects.length > 1" id="projects-indicators">
       <p
         class="projects-indicator"
-        *ngFor="let project of getArtistProjects(); let i = index"
-        [@indicatorAnimation]="isCurrentProject(i)"
-        (click)="goToProject(i)"
+        *ngFor="let project of getArtistProjects(); let idx = index"
+        [@indicatorAnimation]="isCurrentProject(idx)"
+        (click)="goToProject(idx)"
       >
-        {{ '0' + (i+1) }}
+        {{ '0' + (idx + 1) }}
       </p>
-      <div *ngIf="currentProject" id="project-container">
-        <div class="project-title-and-duration">
-          <h3 class="project-title">{{ currentProject.title }}</h3>
-          <p class="project-duration">{{ currentProject.duration }}</p>
+    </div>
+    <div *ngIf="currentProject" id="project-container">
+        <div class="cover-and-player-container">
+          <img class="project-cover" alt="{{currentProject.title}} cover" src="{{currentProject.coverPath}}">
+          <soundcloud-player [trackUrl]='getSoundcloudUrl()' [autoplay]='isSoundcloudAutoplay()'></soundcloud-player>
         </div>
-        <div class="project-release-date">
-          {{"ARTISTS_PROJECT_RELEASED_ON" | translation | uppercase }}{{currentProject.releaseDate | localeDate | uppercase}}
-        </div>
+      <div class="project-title-and-duration">
+        <h3 class="project-title">{{ currentProject.title }}</h3>
+        <p class="project-duration">{{ currentProject.duration }}</p>
       </div>
+      <div *ngIf="currentProject.releaseDate !== ''" class="project-release-date">
+        {{ 'ARTISTS_PROJECT_RELEASED_ON' | translation | uppercase
+        }}{{ currentProject.releaseDate | localeDate | uppercase }}
+      </div>
+      <ul class="project-tracklist">
+        <li class="project-track-container" *ngFor="let track of currentProject.tracks; let idx = index">
+          <div class="track-informations">
+            <span class="track-number">{{ idx > 9 ? idx + 1 : '0' + (idx + 1) }}</span>
+            <hr class="track-separator" />
+            {{ track.title }}
+          </div>
+          <div class="playing-indicators">
+            <p *ngIf="!isTrackPlaying(track)" class="play-button" (click)="playTrack(track)">
+              <img alt="Play Icon" src="assets/icons/play_icon.svg" />{{ 'ARTISTS_PLAY' | translation }}
+            </p>
+            <p *ngIf="isTrackPlaying(track)" class="listening-indicator">
+              <img alt="Listening Icon" src="assets/icons/listening_icon.svg" />
+              {{ 'ARTISTS_LISTENING' | translation }}
+            </p>
+          </div>
+        </li>
+      </ul>
+      <button
+        *ngIf="currentProject.downloadPath !== ''"
+        class="project-download-button"
+        (click)="download(currentProject.downloadPath)"
+      >
+        {{ 'ARTISTS_DOWNLOAD' | translation | uppercase }}
+      </button>
+
     </div>
   </div>
 </div>

@@ -8,6 +8,7 @@ import { ArtistPageComponent } from './artist-page/artist-page.component';
 import { ArtistBannerComponent } from './artist-page/artist-banner/artist-banner.component';
 import { ArtistNavigationComponent } from './artist-page/artist-navigation/artist-navigation.component';
 import { ArtistProjectsComponent } from './artist-page/artist-projects/artist-projects.component';
+import { SoundcloudPlayerComponent } from './artist-page/soundcloud-player/soundcloud-player.component';
 
 @NgModule({
   imports: [CommonModule, AngularModule],
@@ -17,6 +18,7 @@ import { ArtistProjectsComponent } from './artist-page/artist-projects/artist-pr
     ArtistBannerComponent,
     ArtistNavigationComponent,
     ArtistProjectsComponent,
+    SoundcloudPlayerComponent,
   ],
   exports: [
     ArtistsListPageComponent,
@@ -24,6 +26,7 @@ import { ArtistProjectsComponent } from './artist-page/artist-projects/artist-pr
     ArtistBannerComponent,
     ArtistNavigationComponent,
     ArtistProjectsComponent,
+    SoundcloudPlayerComponent,
   ],
   providers: [],
 })

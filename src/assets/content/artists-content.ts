@@ -22,47 +22,49 @@ export const artistsInfos: ArtistInformations[] = [
         duration: '24:54',
         releaseDate: '2014/09/08',
         coverPath: 'assets/img/artists/prt_crew/prtape_1.jpg',
+        soundcloudUrl:
+          'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/59849462&color=%23d7bf85&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
         downloadPath: 'assets/downloads/prt_crew/PRT_Crew-PRTape_Vol_1-2014.zip',
         tracks: [
           {
-            id: 1,
             title: 'Introduction',
-            soundcloudUrl: 'https://soundcloud.com/prtcrew/introduction',
+            soundcloudUrl:
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/177375766&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
           },
           {
-            id: 2,
             title: 'Parce Que',
-            soundcloudUrl: 'https://soundcloud.com/prtcrew/parce-que',
+            soundcloudUrl:
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/177375769&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
           },
           {
-            id: 3,
             title: 'La Vie Est Une Toupie',
-            soundcloudUrl: 'https://soundcloud.com/prtcrew/la-vie-est-une-toupie',
+            soundcloudUrl:
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/177375774&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
           },
           {
-            id: 4,
             title: 'Tu Sais Qui Fait Ça',
-            soundcloudUrl: 'https://soundcloud.com/prtcrew/tu-sais-qui-fait-ca',
+            soundcloudUrl:
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/177375781&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
           },
           {
-            id: 5,
             title: 'A Fleur de Prose',
-            soundcloudUrl: 'https://soundcloud.com/prtcrew/a-fleur-de-prose',
+            soundcloudUrl:
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/177375795&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
           },
           {
-            id: 6,
             title: 'Rêve Aérien',
-            soundcloudUrl: 'https://soundcloud.com/prtcrew/reve-aerien',
+            soundcloudUrl:
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/177375804&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
           },
           {
-            id: 7,
             title: 'Poésie Moderne (feat Gus)',
-            soundcloudUrl: 'https://soundcloud.com/prtcrew/poesie-moderne-feat-gus',
+            soundcloudUrl:
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/177375813&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
           },
           {
-            id: 8,
             title: 'Spectateurs de nos Vies',
-            soundcloudUrl: 'https://soundcloud.com/prtcrew/spectateurs-de-nos-vies',
+            soundcloudUrl:
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/177375820&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
           },
         ],
       },
@@ -72,47 +74,49 @@ export const artistsInfos: ArtistInformations[] = [
         duration: '25:05',
         releaseDate: '2019/05/17',
         coverPath: 'assets/img/artists/prt_crew/prtape_2.jpg',
+        soundcloudUrl:
+          'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/780557970&color=%23d7bf85&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
         downloadPath: 'assets/downloads/prt_crew/PRT_Crew-PRTape_Vol_2-2019.zip',
         tracks: [
           {
-            id: 1,
             title: 'Sombres Lumières',
-            soundcloudUrl: 'https://soundcloud.com/prtcrew/sombres-lumieres',
+            soundcloudUrl:
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/621484557&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
           },
           {
-            id: 2,
             title: 'Un Truc Étrange',
-            soundcloudUrl: 'https://soundcloud.com/prtcrew/un-truc-etrange',
+            soundcloudUrl:
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/621484533&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
           },
           {
-            id: 3,
             title: 'Chimères',
-            soundcloudUrl: 'https://soundcloud.com/prtcrew/chimeres-1',
+            soundcloudUrl:
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/621484518&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
           },
           {
-            id: 4,
             title: 'Plaie Ouverte',
-            soundcloudUrl: 'https://soundcloud.com/prtcrew/plaie-ouverte',
+            soundcloudUrl:
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/621484494&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
           },
           {
-            id: 5,
             title: 'Commotion',
-            soundcloudUrl: 'https://soundcloud.com/prtcrew/commotion',
+            soundcloudUrl:
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/621484482&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
           },
           {
-            id: 6,
             title: 'Déversés',
-            soundcloudUrl: 'https://soundcloud.com/prtcrew/deverses-1',
+            soundcloudUrl:
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/621484449&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
           },
           {
-            id: 7,
             title: 'La Valse Remix',
-            soundcloudUrl: 'https://soundcloud.com/prtcrew/la-valse-remix',
+            soundcloudUrl:
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/621484254&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
           },
           {
-            id: 8,
             title: 'Une Seule Vie',
-            soundcloudUrl: 'https://soundcloud.com/prtcrew/une-seule-vie-1',
+            soundcloudUrl:
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/621484209&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
           },
         ],
       },
@@ -143,27 +147,34 @@ export const artistsInfos: ArtistInformations[] = [
         duration: '',
         releaseDate: '',
         coverPath: '',
+        soundcloudUrl:
+          'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/802309362&color=%23d7bf85&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
         downloadPath: '',
         tracks: [
           {
-            id: 1,
-            title: 'Something\'s Strange',
-            soundcloudUrl: 'https://soundcloud.com/fresh_ben/somethings-strange',
+            title: 'Lightrays',
+            soundcloudUrl:
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/646674960&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
           },
           {
-            id: 2,
-            title: 'This Was Fast',
-            soundcloudUrl: 'https://soundcloud.com/fresh_ben/this-was-fast',
-          },
-          {
-            id: 3,
-            title: 'August\'s Very Own',
-            soundcloudUrl: 'https://soundcloud.com/fresh_ben/augusts-very-own',
-          },
-          {
-            id: 4,
             title: 'Overstrain',
-            soundcloudUrl: 'https://soundcloud.com/fresh_ben/overstrain',
+            soundcloudUrl:
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/645223659&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
+          },
+          {
+            title: "August's Very Own",
+            soundcloudUrl:
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/635593890&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
+          },
+          {
+            title: 'This Was Fast',
+            soundcloudUrl:
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/644204853&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
+          },
+          {
+            title: "Something's Strange",
+            soundcloudUrl:
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/635591631&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
           },
         ],
       },

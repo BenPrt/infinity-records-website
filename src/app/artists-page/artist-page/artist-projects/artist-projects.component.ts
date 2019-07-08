@@ -1,5 +1,5 @@
 import { Component, Input, AfterViewInit, AfterContentChecked } from '@angular/core';
-import { ArtistInformations, ProjectInformations } from 'src/app/models/artists-info';
+import { ArtistInformations, ProjectInformations, TrackInformations } from 'src/app/models/artists-info';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Router } from '@angular/router';
 
@@ -33,6 +33,7 @@ export class ArtistProjectsComponent implements AfterContentChecked {
   @Input() artist: ArtistInformations;
   @Input() isMobile: boolean;
   @Input() currentProjectId: number;
+  playingTrack: TrackInformations;
   currentProject: ProjectInformations;
 
   constructor() {}
@@ -54,7 +55,7 @@ export class ArtistProjectsComponent implements AfterContentChecked {
   initCurrentProject(): void {
     const projectsList: ProjectInformations[] = this.getArtistProjects();
     this.currentProject = projectsList.find((project: ProjectInformations) => {
-      return (projectsList.indexOf(project) + 1) === this.currentProjectId;
+      return projectsList.indexOf(project) + 1 === this.currentProjectId;
     });
   }
 
@@ -65,5 +66,34 @@ export class ArtistProjectsComponent implements AfterContentChecked {
   goToProject(projectId: number): void {
     this.currentProjectId = projectId + 1;
     this.initCurrentProject();
+  }
+
+  getSoundcloudUrl(): string {
+    if (this.playingTrack) {
+      return this.playingTrack.soundcloudUrl;
+    }
+    return this.currentProject.soundcloudUrl;
+  }
+
+  isSoundcloudAutoplay(): boolean {
+    if (this.playingTrack !== undefined) {
+      return true;
+    }
+    return false;
+  }
+
+  playTrack(track: TrackInformations): void {
+    this.playingTrack = track;
+  }
+
+  isTrackPlaying(track: TrackInformations): boolean {
+    if (this.playingTrack === track) {
+      return true;
+    }
+    return false;
+  }
+
+  download(path: string): void {
+    window.open(path, '_blank');
   }
 }

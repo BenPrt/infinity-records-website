@@ -39,6 +39,17 @@
       #project-container {
         width: 100%;
         margin-top: 56px;
+        .cover-and-player-container{
+          position : absolute;
+          width : 30.83vw;
+          height : calc(30.83vw + 16px + 11.32vw);
+          margin-left : calc(56.60vw - 70px);
+          .project-cover{
+            width : 30.83vw;
+            height : 30.83vw;
+            margin-bottom : 16px;
+          }
+        }
         .project-title-and-duration {
           display: flex;
           justify-content: space-between;
@@ -55,14 +66,89 @@
             color: $grey;
           }
         }
-        .project-release-date{
-          font-size : 18px;
-          color : $grey;
+        .project-release-date {
+          font-size: 18px;
+          color: $grey;
           font-weight: 500;
           line-height: 1.33;
-          margin-top : 8px;
+          margin-top: 8px;
+        }
+        .project-tracklist {
+          margin-top: 14px;
+          .project-track-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 59px;
+            border-bottom: 1px solid $light-grey;
+
+            .track-informations {
+              display : flex;
+              align-items: center;
+              font-size: 16px;
+              font-weight: 600;
+              .track-number {
+                font-size: 18px;
+                font-weight: normal;
+                line-height: 1.56;
+                margin-right: 8px;
+              }
+              .track-separator {
+                height: 1px;
+                border: none;
+                margin: 0;
+                background-color: $gold;
+                width: 24px;
+                margin-right: 8px;
+              }
+            }
+
+            .playing-indicators {
+              font-size : 16px;
+
+              .play-button {
+                display : flex;
+                align-items: center;
+                img{
+                  width : 20px;
+                  height : 20px;
+                  margin-right : 5px;
+                  text-decoration: none;
+                }
+                cursor : pointer;
+                font-weight : normal;
+                text-decoration: underline;
+              }
+              .listening-indicator {
+                display : flex;
+                align-items: center;
+                img{
+                  width : 24px;
+                  height : 24px;
+                }
+                font-weight : 600;
+              }
+            }
+          }
+        }
+        .project-download-button {
+          width: 171px;
+          height: 40px;
+          background-color: $black;
+          color: $white;
+          font-family: 'Montserrat';
+          font-size: 16px;
+          font-weight: 500;
+          border: none;
+          cursor: pointer;
+          padding: none;
+          margin-top: 66px;
+          margin-left: calc(100% - 171px);
         }
       }
+
     }
+
   }
 }
