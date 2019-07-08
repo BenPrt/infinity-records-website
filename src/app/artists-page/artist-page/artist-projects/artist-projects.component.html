@@ -1,8 +1,6 @@
 <div id="projects-first-layer">
   <div id="projects-second-layer">
-    
     <h2 id="projects-title">{{ 'ARTISTS_PROJECTS' | translation }}</h2>
-    
     <div *ngIf="artist.projects.length > 1" id="projects-indicators">
       <p
         class="projects-indicator"
@@ -13,12 +11,11 @@
         {{ '0' + (idx + 1) }}
       </p>
     </div>
-    
     <div *ngIf="currentProject" id="project-container">
-      <div class="cover-and-player-container">
-        <img class="project-cover" alt="{{ currentProject.title }} cover" src="{{ currentProject.coverPath }}" />
-        <soundcloud-player [trackUrl]="getSoundcloudUrl()" [autoplay]="isSoundcloudAutoplay()"></soundcloud-player>
-      </div>
+        <div class="cover-and-player-container">
+          <img *ngIf="currentProject.coverPath !== ''" class="project-cover" alt="{{currentProject.title}} cover" src="{{currentProject.coverPath}}">
+          <soundcloud-player [trackUrl]='getSoundcloudUrl()' [autoplay]='isSoundcloudAutoplay()'></soundcloud-player>
+        </div>
       <div class="project-title-and-duration">
         <h3 class="project-title">{{ currentProject.title }}</h3>
         <p *ngIf="!isMobile" class="project-duration">{{ currentProject.duration }}</p>
@@ -53,36 +50,13 @@
         {{ 'ARTISTS_DOWNLOAD' | translation | uppercase }}
       </button>
     </div>
-
     <div *ngIf="isMobile" id="projects-navigator">
-      <div id="page-button-left" [ngClass]="{ disabled: isNavigatorDisabled('previous') }" (click)="goToPreviousProject()">
-        <img
-        *ngIf="!isNavigatorDisabled('previous')"
-        class="navigation-arrow"
-        alt="Previous Arrow Enabled"
-        src="assets/icons/merch_arrow_left_dark-grey.svg"
-      />
-      <img
-        *ngIf="isNavigatorDisabled('previous')"
-        class="navigation-arrow"
-        alt="Previous Arrow Disabled"
-        src="assets/icons/merch_arrow_left_light-grey.svg"
-      />
+        <div class="page-button" [ngClass]="{ disabled: isNavigatorDisabled('previous') }" (click)="goToPreviousProject()">
+          <img class="navigation-arrow" alt="Previous Arrow" src="assets/icons/merch_arrow_left_white.svg" />
+        </div>
+        <div class="page-button" [ngClass]="{ disabled: isNavigatorDisabled('next') }" (click)="goToNextProject()">
+          <img class="navigation-arrow" alt="Next Arrow" src="assets/icons/merch_arrow_right_white.svg" />
+        </div>
       </div>
-      <div id="page-button-right" [ngClass]="{ disabled: isNavigatorDisabled('next') }" (click)="goToNextProject()">
-        <img
-        *ngIf="!isNavigatorDisabled('next')"
-        class="navigation-arrow"
-        alt="Next Arrow Enabled"
-        src="assets/icons/merch_arrow_right_dark-grey.svg"
-      />
-      <img
-        *ngIf="isNavigatorDisabled('next')"
-        class="navigation-arrow"
-        alt="Next Arrow Disabled"
-        src="assets/icons/merch_arrow_right_light-grey.svg"
-      />
-      </div>
-    </div>
   </div>
 </div>

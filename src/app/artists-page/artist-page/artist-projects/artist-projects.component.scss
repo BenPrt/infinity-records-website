@@ -225,35 +225,17 @@
         }
       }
       #projects-navigator {
-        background-color: $white;
+        background-color: $grey;
         display: flex;
         justify-content: space-between;
-        width: calc(13.3vw + 13.3vw);
+        width: calc(13.3vw + 1px + 13.3vw);
         margin-top : 24px;
         margin-left : calc(-16px + 100vw - 12.23vw - 2px - 13.3vw - 13.3vw);
         height: 13.3vw;
       }
-      #page-button-left {
+      .page-button {
         cursor: pointer;
-        background-color: $light-grey;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        user-select: none;
-        height: 13.3vw;
-        width: 13.3vw;
-        .navigation-arrow {
-          height: 14px;
-          width: 14px;
-        }
-        &.disabled {
-          background-color: $white;
-          cursor: default;
-        }
-      }
-      #page-button-right {
-        cursor: pointer;
-        background-color: $light-grey;
+        background-color: $dark-grey;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -265,13 +247,12 @@
           height: 14px;
           width: 14px;
         }
-        &.disabled {
-          background-color: $very-light-grey;
-          cursor: default;
-        }
       }
 
-      
+      .disabled {
+        background-color: $grey;
+        cursor: default;
+      }
     }
   }
 }
