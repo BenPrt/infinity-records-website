@@ -1,0 +1,52 @@
+@import 'src/app/utils/_styleVariables';
+
+@media screen and (min-device-width: $desktop-size) {
+}
+@media screen and (max-device-width: $desktop-size) {
+}
+:host{
+  #clips-first-layer{
+    border-left : 2px solid $very-light-grey;
+    border-right : 2px solid $very-light-grey;
+    margin-left : 12.57vw;
+    width : calc(-12.57vw - 2px + 100vw - 12.57vw);
+    display : flex;
+    justify-content: space-between;
+    #clips-second-layer{
+      height : calc(104px + 20.42vw + 114px);      
+      width : 30.83vw;
+      margin-left : 20.49vw;
+      border-left : 2px solid $very-light-grey;
+    }
+    #clips-third-layer{
+      height : calc(104px + 20.42vw + 114px);
+      width : 23.125vw;
+      background-color : $very-light-grey;
+    }
+  }
+  #clips-content{
+    display : flex;
+    justify-content: space-between;
+    width : 82.29vw;
+    margin-left : calc(12.57vw + 2px);
+    padding-top : 104px;
+    padding-bottom : 114px; 
+    height : 20.42vw;
+    margin-top : calc(-104px - 20.42vw - 114px);
+
+    #clips-title{
+      height : 20px;
+      margin-left : -18px;
+      margin-top : 18px;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      transform: rotate(90deg);
+    }
+
+    .clips-clip{
+      height : 20.42vw;
+      width : 36.32vw;
+    }
+  }
+}

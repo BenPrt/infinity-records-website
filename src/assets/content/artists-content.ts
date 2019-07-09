@@ -121,7 +121,7 @@ export const artistsInfos: ArtistInformations[] = [
         ],
       },
     ],
-    clips: ['https://www.youtube.com/watch?v=0HSpX3JMqWM', 'https://www.youtube.com/watch?v=HVXCVzaPDWA'],
+    clips: ['https://www.youtube.com/embed/0HSpX3JMqWM', 'https://www.youtube.com/embed/HVXCVzaPDWA'],
   },
   {
     id: 2,
