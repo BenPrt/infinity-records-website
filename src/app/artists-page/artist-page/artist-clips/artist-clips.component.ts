@@ -1,4 +1,4 @@
-import { Component, Input, Inject, PLATFORM_ID, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ArtistInformations } from 'src/app/models/artists-info';
 import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 
@@ -14,7 +14,7 @@ export class ArtistClipsComponent implements OnInit {
 
   constructor(private sanitizer: DomSanitizer) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.parseClips();
   }
 

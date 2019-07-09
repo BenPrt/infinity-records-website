@@ -1,6 +1,46 @@
 @import 'src/app/utils/_styleVariables';
 
-@media screen and (min-device-width: $desktop-size) {
+#footer-first-layer {
+  border-left: 2px solid $very-light-grey;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 12.23vw;
+  width: calc(-12.23vw - 2px + 100vw);
+  #footer-second-layer {
+    border-left: 2px solid $very-light-grey;
+    height: 50px;
+    width: 34.04vw;
+    margin-left: 26.6vw;
+  }
+  #footer-third-layer {
+    background-color: $very-light-grey;
+    height: 50px;
+    width: 25.93vw;
+  }
 }
-@media screen and (max-device-width: $desktop-size) {
+#footer-content {
+    width : 100%;
+    height : 26px;
+    margin-top : -50px;
+    margin-bottom : 24px;
+    text-align : center;
+    #arborescence {
+        #arbo-first {
+          font-size: 16px;
+          margin-right: 12px;
+          cursor: pointer;
+        }
+        #arbo-slash {
+          width: 24px;
+          font-size: 16px;
+          margin-right: 12px;
+          color: $grey;
+          cursor: default;
+        }
+        #arbo-second {
+          font-size: 16px;
+          font-weight: 600;
+          cursor: default;
+        }
+      }
 }

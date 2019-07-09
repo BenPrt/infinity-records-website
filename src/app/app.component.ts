@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef, HostListener, Inject, PLATFORM_ID, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, Inject, PLATFORM_ID, AfterViewInit } from '@angular/core';
 import { Location, isPlatformBrowser } from '@angular/common';
 import { Router, RouterEvent, NavigationEnd } from '@angular/router';
 import { animate, style, transition, trigger, state } from '@angular/animations';

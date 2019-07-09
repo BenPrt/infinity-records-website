@@ -1,4 +1,12 @@
 <artist-banner [isMobile]="isMobile" [artist]="artist"></artist-banner>
-<artist-projects [isMobile]="isMobile" [artist]="artist" [currentProjectId]="currentProjectId"></artist-projects>
-<artist-clips [isMobile]="isMobile" [artist]="artist" ></artist-clips>
-<artist-footer [artist]="artist"></artist-footer>
+<artist-projects
+  [isMobile]="isMobile"
+  [artist]="artist"
+  [currentProjectId]="currentProjectId"
+></artist-projects>
+<artist-clips
+  *ngIf="artist.clips.length > 0"
+  [isMobile]="isMobile"
+  [artist]="artist"
+></artist-clips>
+<artist-footer *ngIf="isMobile" [artist]="artist"></artist-footer>

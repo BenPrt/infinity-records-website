@@ -4,49 +4,100 @@
 }
 @media screen and (max-device-width: $desktop-size) {
 }
-:host{
-  #clips-first-layer{
-    border-left : 2px solid $very-light-grey;
-    border-right : 2px solid $very-light-grey;
-    margin-left : 12.57vw;
-    width : calc(-12.57vw - 2px + 100vw - 12.57vw);
-    display : flex;
+:host {
+  #clips-first-layer {
+    border-left: 2px solid $very-light-grey;
+    display: flex;
     justify-content: space-between;
-    #clips-second-layer{
-      height : calc(104px + 20.42vw + 114px);      
-      width : 30.83vw;
-      margin-left : 20.49vw;
-      border-left : 2px solid $very-light-grey;
+    @media screen and (min-device-width: $desktop-size) {
+      border-right: 2px solid $very-light-grey;
+      margin-left: 12.57vw;
+      width: calc(-12.57vw - 2px + 100vw - 12.57vw);
     }
-    #clips-third-layer{
-      height : calc(104px + 20.42vw + 114px);
-      width : 23.125vw;
-      background-color : $very-light-grey;
+    @media screen and (max-device-width: $desktop-size) {
+      margin-left: 12.23vw;
+      width: calc(-12.23vw - 2px + 100vw);
+    }
+    #clips-second-layer {
+      border-left: 2px solid $very-light-grey;
+      @media screen and (min-device-width: $desktop-size) {
+        height: calc(104px + 20.42vw + 114px);
+        width: 30.83vw;
+        margin-left: 20.49vw;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        height: calc(64px + 42.82vw + 24px + 42.82vw + 64px);
+        width: 34.04vw;
+        margin-left: 26.6vw;
+      }
+    }
+    #clips-third-layer {
+      background-color: $very-light-grey;
+      @media screen and (min-device-width: $desktop-size) {
+        height: calc(104px + 20.42vw + 114px);
+        width: 23.125vw;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        height: calc(64px + 42.82vw + 24px + 42.82vw + 64px);
+        width: 25.93vw;
+      }
     }
   }
-  #clips-content{
-    display : flex;
+  #clips-content {
+    display: flex;
     justify-content: space-between;
-    width : 82.29vw;
-    margin-left : calc(12.57vw + 2px);
-    padding-top : 104px;
-    padding-bottom : 114px; 
-    height : 20.42vw;
-    margin-top : calc(-104px - 20.42vw - 114px);
 
-    #clips-title{
-      height : 20px;
-      margin-left : -18px;
-      margin-top : 18px;
+    @media screen and (min-device-width: $desktop-size) {
+      width: 82.29vw;
+      margin-left: calc(12.57vw + 2px);
+      padding-top: 104px;
+      padding-bottom: 114px;
+      height: 20.42vw;
+      margin-top: calc(-104px - 20.42vw - 114px);
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      margin-left: 12.23vw;
+      width: calc(-12.23vw - 2px + 100vw);
+      padding-top: 64px;
+      padding-bottom: 64px;
+      height: calc(42.82vw + 24px + 42.82vw);
+      margin-top : calc(-64px - 42.82vw - 24px - 42.82vw - 64px);
+    }
+    #clips-title {
+      height: 20px;
+      margin-left: -21px;
+      margin-top: 23px;
       font-size: 18px;
       font-weight: bold;
       letter-spacing: 2px;
       transform: rotate(90deg);
     }
 
-    .clips-clip{
-      height : 20.42vw;
-      width : 36.32vw;
+    #clips-clips-wrapper{
+      display : flex;
+      @media screen and (min-device-width: $desktop-size) {
+        width : calc(100% - 109px);
+        height : 20.42vw;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        width: 76.06vw;
+        height: calc(42.82vw + 24px + 42.82vw);
+        flex-direction : column;
+        justify-content: space-between;
+      }
+
+      .clips-clip {
+      @media screen and (min-device-width: $desktop-size) {
+        height: 20.42vw;
+        width: 36.32vw;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        width: 76.06vw;
+        height: 42.82vw;
+      }
+    }
     }
   }
 }
