@@ -50,7 +50,7 @@
         {{ 'ARTISTS_DOWNLOAD' | translation | uppercase }}
       </button>
     </div>
-    <div *ngIf="isMobile" id="projects-navigator">
+    <div *ngIf="isMobile && artist.projects.length > 1" id="projects-navigator">
         <div class="page-button" [ngClass]="{ disabled: isNavigatorDisabled('previous') }" (click)="goToPreviousProject()">
           <img class="navigation-arrow" alt="Previous Arrow" src="assets/icons/merch_arrow_left_white.svg" />
         </div>

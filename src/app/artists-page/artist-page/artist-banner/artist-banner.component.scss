@@ -122,17 +122,50 @@
         }
       }
     }
-    #artist-cover-picture {
+    #artist-cover-picture-wrapper {
+      display: flex;
+      overflow: hidden;
       @media screen and (min-device-width: $desktop-size) {
         margin-top: calc(-32px - 1.81vw - 3vw);
         margin-left: calc(12.5vw - 4.86vw);
         height: 42.15vw;
         width: 74.93vw;
+        align-items: center;
       }
       @media screen and (max-device-width: $desktop-size) {
         margin-top: -25px;
         margin-left: calc((100vw - 91.49vw) / 2);
         height: 91.49vw;
+        width: 91.49vw;
+        justify-content: center;
+      }
+
+      #artist-cover-picture {
+        @media screen and (min-device-width: $desktop-size) {
+          width: 74.93vw;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          height: 91.49vw;
+          width: 91.49vw;
+        }
+      }
+    }
+    #picture-gradient {
+      position: relative;
+      z-index: 1;
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.71));
+      @media screen and (min-device-width: $desktop-size) {
+        position: relative;
+        z-index: 1;
+        height: 21.1vw;
+        margin-top: -21.1vw;
+        margin-left: calc(12.5vw - 4.86vw);
+        width: 74.93vw;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        height: 31.1vw;
+        margin-top: -31.1vw;
+        margin-left: calc((100vw - 91.49vw) / 2);
         width: 91.49vw;
       }
     }
@@ -143,7 +176,7 @@
       @media screen and (min-device-width: $desktop-size) {
         width: 11.04vw;
         height: calc(42.15vw - 20.9vw - 17px);
-        margin-top: calc(-4px - 42.15vw + 17px);
+        margin-top: calc(-42.15vw + 17px);
         margin-left: calc(100vw - 4.86vw - 4.86vw - 11.04vw);
       }
       @media screen and (max-device-width: $desktop-size) {
@@ -152,7 +185,7 @@
         align-items: center;
         width: calc(100vw - 23.4vw);
         height: 32px;
-        margin-top: calc(-4px - 32px - 16px);
+        margin-top: calc(-32px - 16px);
       }
       #socials-separator {
         height: 4px;
@@ -167,7 +200,7 @@
         }
         @media screen and (max-device-width: $desktop-size) {
           width: 40px;
-          margin-right : 8px;
+          margin-right: 8px;
         }
       }
       #socials-icons-wrapper {
@@ -187,14 +220,16 @@
 
         .social-link {
           display: block;
-          width: 32px;
-          height: 32px;
 
           @media screen and (min-device-width: $desktop-size) {
             margin-bottom: 24px;
+            width: 32px;
+            height: 32px;
           }
           @media screen and (max-device-width: $desktop-size) {
-            margin-right: 16px;
+            margin-right: 4.26vw;
+            width: 8.51vw;
+            height: 8.51vw;
           }
           &:last-of-type {
             @media screen and (min-device-width: $desktop-size) {
@@ -205,27 +240,36 @@
             }
           }
           .social-icon {
-            width: 32px;
-            height: 32px;
+            @media screen and (min-device-width: $desktop-size) {
+              width: 32px;
+              height: 32px;
+            }
+            @media screen and (max-device-width: $desktop-size) {
+              width: 8.51vw;
+              height: 8.51vw;
+            }
           }
         }
       }
     }
     #artist-logo-picture {
+      position: relative;
+      z-index: 2;
       @media screen and (min-device-width: $desktop-size) {
         width: 20.9vw;
         height: 20.9vw;
-        margin-left: calc(100vw - 4.86vw - 4.86vw - 20.9vw);  
+        margin-left: calc(100vw - 4.86vw - 4.86vw - 20.9vw);
       }
       @media screen and (max-device-width: $desktop-size) {
         width: 23.4vw;
         height: 23.4vw;
-        margin-top : calc(16px - 23.4vw);
-        margin-left: calc(100vw - 23.4vw);  
+        margin-top: calc(16px - 23.4vw);
+        margin-left: calc(100vw - 23.4vw);
       }
     }
     #artist-description-wrapper {
       position: relative;
+      z-index: 2;
 
       @media screen and (min-device-width: $desktop-size) {
         width: 20.9vw;
