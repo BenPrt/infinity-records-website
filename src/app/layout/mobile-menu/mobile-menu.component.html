@@ -6,22 +6,22 @@
 <div id="menu-content">
   <div class="menu-item">
     <a class="menu-link" routerLink="/home" routerLinkActive="active" (click)="closeMenu()">
-      <h2>{{ 'HOME' | translation }}</h2>
+      <h2>{{ 'HOME' | translation | uppercase }}</h2>
     </a>
   </div>
   <div class="menu-item">
     <a class="menu-link" routerLink="/label" routerLinkActive="active" (click)="closeMenu()">
-      <h2>{{ 'LABEL' | translation }}</h2>
+      <h2>{{ 'LABEL' | translation | uppercase }}</h2>
     </a>
   </div>
   <div class="menu-item">
     <a class="menu-link" routerLink="/artists" routerLinkActive="active" (click)="closeMenu()">
-      <h2>{{ 'ARTISTS' | translation }}</h2>
+      <h2>{{ 'ARTISTS' | translation | uppercase}}</h2>
     </a>
   </div>
   <div class="menu-item">
     <a class="menu-link" routerLink="/merch" routerLinkActive="active" (click)="closeMenu()">
-      <h2>{{ 'MERCH' | translation }}</h2>
+      <h2>{{ 'MERCH' | translation | uppercase}}</h2>
     </a>
   </div>
   <language-menu-component id="language-menu"></language-menu-component>

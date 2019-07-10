@@ -54,9 +54,13 @@ export class ArtistProjectsComponent implements AfterContentChecked {
 
   initCurrentProject(): void {
     const projectsList: ProjectInformations[] = this.getArtistProjects();
-    this.currentProject = projectsList.find((project: ProjectInformations) => {
-      return projectsList.indexOf(project) + 1 === this.currentProjectId;
-    });
+    if (projectsList.length > 1) {
+      this.currentProject = projectsList.find((project: ProjectInformations) => {
+        return projectsList.indexOf(project) + 1 === this.currentProjectId;
+      });
+    } else {
+      this.currentProject = projectsList[0];
+    }
   }
 
   isCurrentProject(projectId: number): boolean {

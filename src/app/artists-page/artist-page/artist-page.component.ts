@@ -34,6 +34,7 @@ export class ArtistPageComponent implements OnInit {
   initCurrentArtist(): void {
     this.route.params.subscribe((params) => {
       this.playingTrack = undefined;
+      this.currentProjectId = undefined;
       const artistName = decodeURI(params.artist);
       this.artist = artistsInfos.find((artist: ArtistInformations) => {
         return artist.name === artistName;
@@ -51,6 +52,7 @@ export class ArtistPageComponent implements OnInit {
   }
 
   initCurrentProject(projectId: number): void {
+    console.log(projectId);
     this.currentProjectId = projectId;
   }
 
