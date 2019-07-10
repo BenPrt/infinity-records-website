@@ -6,6 +6,7 @@ import { NgxCaptchaModule } from 'ngx-captcha';
 
 import { TranslationPipe } from './shared/pipes/translation.pipe';
 import { LocaleDatePipe } from './shared/pipes/localeDate.pipe';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { LocaleDatePipe } from './shared/pipes/localeDate.pipe';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     NgxCaptchaModule,
+    RouterModule,
   ],
   exports: [
     HttpClientModule,
@@ -25,6 +27,7 @@ import { LocaleDatePipe } from './shared/pipes/localeDate.pipe';
     NgxCaptchaModule,
     TranslationPipe,
     LocaleDatePipe,
+    RouterModule,
   ],
 })
 export class AngularModule {}

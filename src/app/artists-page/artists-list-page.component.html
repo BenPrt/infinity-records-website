@@ -1,5 +1,33 @@
-<div id="content">ARTISTS LIST
-    <ul>
-        <li *ngFor='let artist of artistsInfos' (click)="goToArtist(artist)">{{artist.name}}</li>
-    </ul>
+<div id="artists-list-first-layer">
+  <h2 id="artists-list-title">{{ 'ARTISTS' | translation | uppercase }}</h2>
+  <div id="artists-list-second-layer">
+    <div id="artists-list-top-description">
+      <p id="top-description-title">{{ 'ARTISTS_LIST_TOP_TITLE' | translation }}</p>
+      <p id="top-description-content">{{ 'ARTISTS_LIST_TOP_CONTENT' | translation }}</p>
+    </div>
+    <div id="artists-list-third-layer">
+      <div id="artists-list-list-container">
+        <div *ngFor="let artist of artistsInfos" class="artists-list-list-item">
+          <a class="artist-item-link" [routerLink]="artist.name" routerLinkActive="active">
+            <div class="artist-item-picture-wrapper">
+              <img class="artist-item-picture" alt="{{ artist.name }} Picture" src="{{ artist.cover_picture }}" />
+              <div class="artist-item-picture-gradient"></div>
+            </div>
+            <div class="artist-item-content-wrapper">
+              <div class="artist-item-content">
+                  <hr class="artist-item-content-separator" />
+                  <p class="artist-item-type">{{artist.type | uppercase}}</p>
+                  <h2 class="artist-item-name">{{artist.name}}</h2>
+              </div>
+              <img
+                class="artist-item-logo"
+                alt="{{ artist.name }} Logo"
+                src="{{ artist.logo_picture !== '' ? artist.logo_picture : 'assets/img/artists/default_logo.jpg' }}"
+              />
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
