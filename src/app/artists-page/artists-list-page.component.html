@@ -1,0 +1,5 @@
+<div id="content">ARTISTS LIST
+    <ul>
+        <li *ngFor='let artist of artistsInfos' (click)="goToArtist(artist)">{{artist.name}}</li>
+    </ul>
+</div>

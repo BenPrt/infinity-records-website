@@ -1,7 +1,8 @@
 import { Injectable, EventEmitter, Inject, PLATFORM_ID } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Subscription } from 'rxjs';
-import { isPlatformBrowser } from '@angular/common';
+import { isPlatformBrowser, registerLocaleData } from '@angular/common';
+import fr from '@angular/common/locales/fr';
 
 export function translationFactoryResources(translationService: TranslationService) {
   return () => {
@@ -41,6 +42,17 @@ export class TranslationService {
   }
 
   setCurrentLanguage(languageCode: string): void {
+    switch (languageCode) {
+      case 'fr':
+        registerLocaleData(fr);
+        break;
+      case 'en':
+        registerLocaleData('en');
+        break;
+      default:
+        registerLocaleData('en');
+        break;
+    }
     this.currentLanguage = languageCode;
     this.getTranslationFile(languageCode);
   }

@@ -1,0 +1,14 @@
+@import 'src/app/utils/_styleVariables';
+
+:host {
+    iframe{
+        @media screen and (min-device-width: $desktop-size) {
+            width: 100%;
+            height: 164px;
+          }
+          @media screen and (max-device-width: $desktop-size) {
+            width: 100%;
+            height : 150px;
+          }
+    }
+}
