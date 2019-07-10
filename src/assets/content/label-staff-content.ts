@@ -4,7 +4,7 @@ export const staffInfos: StaffInfo[] = [
   {
     id: 0,
     name: 'Ben',
-    picture: 'assets/img/merch_hoodie_image.png',
+    picture: 'assets/img/label/staff_ben.jpg',
     quote: 'If time is money, I need a loan !',
     quoteAuthor: 'G-Eazy',
     mainRole: 'LABEL_ROLE_HEADMASTER',
@@ -18,7 +18,7 @@ export const staffInfos: StaffInfo[] = [
   {
     id: 1,
     name: 'Kate',
-    picture: 'assets/img/merch_hoodie_image.png',
+    picture: 'assets/img/label/staff_kate.jpg',
     quote: 'Graphic design will save the world right after rock and roll does.',
     quoteAuthor: 'David Carson',
     mainRole: 'LABEL_ROLE_DESIGNER',
@@ -27,7 +27,7 @@ export const staffInfos: StaffInfo[] = [
   {
     id: 2,
     name: 'Max',
-    picture: 'assets/img/merch_hoodie_image.png',
+    picture: 'assets/img/label/staff_max.jpg',
     quote: 'The music starts where the power of words stops.',
     quoteAuthor: 'Richard Wagner',
     mainRole: 'LABEL_ROLE_VIDEOGRAPHER',

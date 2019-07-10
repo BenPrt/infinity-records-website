@@ -34,12 +34,12 @@
         padding-left: 16px;
         margin-left: 24px;
       }
-      @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size){
-        width : 8vw;
+      @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
+        width: 8vw;
         height: calc(52px - 5px);
         padding: 5px 13px 0px 13px;
         margin-left: 24px;
-        }
+      }
       @media screen and (max-device-width: $tablet-size) {
         width: calc(23.14vw - 13px);
         height: calc(52px - 5px);
@@ -51,6 +51,11 @@
     #member-picture-wrapper {
       margin-top: -40px;
       overflow: hidden;
+      display : flex;
+      flex-direction : column;
+      align-items: center;
+      justify-content: center;
+
       @media screen and (min-device-width: $tablet-size) {
         width: 28.61vw;
         height: 21.46vw;
@@ -61,6 +66,7 @@
       }
 
       #member-picture {
+        display : block;
         @media screen and (min-device-width: $tablet-size) {
           width: 28.61vw;
           height: 21.46vw;
@@ -68,16 +74,35 @@
         @media screen and (max-device-width: $tablet-size) {
           height: 309px;
         }
+        
+        &.blurred {
+          filter : blur(5px);
+        }
       }
-      .blurred {
-        filter: blur(5px);
+
+      #member-picture-gradient {
+        position : relative;
+        z-index : 1;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.71));
+        @media screen and (min-device-width: $tablet-size) {
+          width: 28.61vw;
+          height: 7.71vw;
+          margin-top: -7.71vw;
+        }
+        @media screen and (max-device-width: $tablet-size) {
+          width: calc(100vw - 16px - 16px);
+          height: 29.52vw;
+          margin-top: -29.52vw;
+        }
       }
+
       #quote-overlay {
         position: relative;
+        z-index : 2;
         @media screen and (min-device-width: $tablet-size) {
           width: 28.61vw;
           height: 21.46vw;
-          margin-top: calc(-21.46vw - 4px);
+          margin-top: -21.46vw;
         }
         @media screen and (max-device-width: $tablet-size) {
           width: calc(100vw - 16px - 16px);
@@ -86,7 +111,7 @@
         }
         #overlay {
           position: relative;
-          z-index: 1;
+          z-index: 2;
           opacity: 0.6;
           background-color: $black;
           @media screen and (min-device-width: $tablet-size) {
@@ -100,7 +125,7 @@
         }
         #quote-container {
           position: relative;
-          z-index: 2;
+          z-index: 3;
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
@@ -122,12 +147,12 @@
             font-family: 'Hesterica';
             color: $gold;
             font-size: 40px;
-            font-weight : normal;
+            font-weight: normal;
             @media screen and (min-device-width: $desktop-size) {
               width: 17.57vw;
             }
             @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
-              width: 17.57vw;              
+              width: 17.57vw;
               font-size: 1.5em;
             }
             @media screen and (max-device-width: $tablet-size) {
@@ -141,7 +166,7 @@
             margin-top: 12px;
             color: $white;
             font-size: 14px;
-            font-weight : normal;
+            font-weight: normal;
             @media screen and (min-device-width: $desktop-size) {
               width: calc(17.57vw + 24px);
               margin-bottom: calc(51px + 32px);
@@ -168,7 +193,7 @@
     }
     #roles-wrapper {
       position: relative;
-      z-index: 3;
+      z-index: 4;
       background-color: $white;
       min-height: calc(-24px + 218px - 24px);
       padding: 24px;

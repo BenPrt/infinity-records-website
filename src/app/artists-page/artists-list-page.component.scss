@@ -114,7 +114,12 @@
             text-decoration: none;
 
             .artist-item-picture-wrapper {
+              display : flex;
+              flex-direction: column;
               overflow: hidden;
+              align-items: center;
+              justify-content: center;
+
               @media screen and (min-device-width: $desktop-size) {
                 width: 28.61vw;
                 height: 19.1vw;

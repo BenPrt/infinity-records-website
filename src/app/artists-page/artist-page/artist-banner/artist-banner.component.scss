@@ -122,20 +122,22 @@
     }
     #artist-cover-picture-wrapper {
       display: flex;
+      flex-direction: column;
       overflow: hidden;
+      justify-content: center;
+      align-items: center;
+
       @media screen and (min-device-width: $desktop-size) {
         margin-top: calc(-32px - 1.81vw - 3vw);
         margin-left: calc(12.5vw - 4.86vw);
         height: 42.15vw;
         width: 74.93vw;
-        align-items: center;
       }
       @media screen and (max-device-width: $desktop-size) {
         margin-top: -25px;
         margin-left: calc((100vw - 91.49vw) / 2);
         height: 91.49vw;
         width: 91.49vw;
-        justify-content: center;
       }
 
       #artist-cover-picture {
