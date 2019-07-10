@@ -10,7 +10,7 @@
         <div *ngFor="let artist of artistsInfos" class="artists-list-list-item">
           <a class="artist-item-link" [routerLink]="artist.name" routerLinkActive="active">
             <div class="artist-item-picture-wrapper">
-              <img class="artist-item-picture" alt="{{ artist.name }} Picture" src="{{ artist.cover_picture }}" />
+              <img class="artist-item-picture" alt="{{ artist.name }} Picture" [src]="getArtistPicture(artist)" />
               <div class="artist-item-picture-gradient"></div>
             </div>
             <div class="artist-item-content-wrapper">

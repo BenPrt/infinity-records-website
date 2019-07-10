@@ -1,10 +1,5 @@
 @import 'src/app/utils/_styleVariables';
 
-@media screen and (min-device-width: $desktop-size) {
-}
-@media screen and (max-device-width: $desktop-size) {
-}
-
 #artist-first-layer {
   border-left: 2px solid $very-light-grey;
   @media screen and (min-device-width: $desktop-size) {
