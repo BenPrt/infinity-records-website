@@ -1,7 +1,6 @@
-import { Component, Input, AfterViewInit, AfterContentChecked } from '@angular/core';
+import { Component, Input, AfterContentChecked, Output, EventEmitter } from '@angular/core';
 import { ArtistInformations, ProjectInformations, TrackInformations } from 'src/app/models/artists-info';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'artist-projects',
@@ -33,7 +32,8 @@ export class ArtistProjectsComponent implements AfterContentChecked {
   @Input() artist: ArtistInformations;
   @Input() isMobile: boolean;
   @Input() currentProjectId: number;
-  playingTrack: TrackInformations;
+  @Input() playingTrack: TrackInformations;
+  @Output() onPlay = new EventEmitter<TrackInformations>();
   currentProject: ProjectInformations;
 
   constructor() {}
@@ -83,7 +83,7 @@ export class ArtistProjectsComponent implements AfterContentChecked {
   }
 
   playTrack(track: TrackInformations): void {
-    this.playingTrack = track;
+    this.onPlay.emit(track);
   }
 
   isTrackPlaying(track: TrackInformations): boolean {

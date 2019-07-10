@@ -1,7 +1,6 @@
 import { Component, Inject, PLATFORM_ID, OnInit } from '@angular/core';
 import { ArtistInformations } from '../models/artists-info';
 import { artistsInfos } from 'src/assets/content/artists-content';
-import { Router } from '@angular/router';
 import { isPlatformBrowser } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { DeviceService } from '../shared/services/device.service';

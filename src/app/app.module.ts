@@ -14,7 +14,6 @@ import { HomeModule } from './home-page/home.module';
 import { LabelModule } from './label-page/label.module';
 import { ArtistsModule } from './artists-page/artists.module';
 import { MerchModule } from './merch-page/merch.module';
-import { DownloadModule } from './download-pages/download.module';
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -37,7 +36,6 @@ export class MyHammerConfig extends HammerGestureConfig {
     LabelModule,
     ArtistsModule,
     MerchModule,
-    DownloadModule,
   ],
   providers: [
     {

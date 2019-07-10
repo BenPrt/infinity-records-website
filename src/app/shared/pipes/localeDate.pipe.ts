@@ -1,4 +1,4 @@
-import { Pipe, PipeTransform, Inject, LOCALE_ID } from '@angular/core';
+import { Pipe, PipeTransform } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { TranslationService } from '../services/translation.service';
 

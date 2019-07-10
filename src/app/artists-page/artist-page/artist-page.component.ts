@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { ArtistInformations } from 'src/app/models/artists-info';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ArtistInformations, TrackInformations } from 'src/app/models/artists-info';
 import { artistsInfos } from 'src/assets/content/artists-content';
 import { Subscription } from 'rxjs';
 import { DeviceService } from 'src/app/shared/services/device.service';
@@ -13,10 +13,11 @@ import { DeviceService } from 'src/app/shared/services/device.service';
 export class ArtistPageComponent implements OnInit {
   artist: ArtistInformations;
   currentProjectId: number;
+  playingTrack: TrackInformations;
   isMobile: boolean;
   deviceTypeSubscription: Subscription;
 
-  constructor(private route: ActivatedRoute, private deviceService: DeviceService) {}
+  constructor(private route: ActivatedRoute, private deviceService: DeviceService, private router: Router) {}
 
   ngOnInit(): void {
     this.initDeviceType();
@@ -32,14 +33,19 @@ export class ArtistPageComponent implements OnInit {
 
   initCurrentArtist(): void {
     this.route.params.subscribe((params) => {
+      this.playingTrack = undefined;
       const artistName = decodeURI(params.artist);
       this.artist = artistsInfos.find((artist: ArtistInformations) => {
         return artist.name === artistName;
       });
-      if (params.project) {
-        this.initCurrentProject(parseInt(params.project, 10));
+      if (this.artist) {
+        if (params.project) {
+          this.initCurrentProject(parseInt(params.project, 10));
+        } else {
+          this.initCurrentProject(1);
+        }
       } else {
-        this.initCurrentProject(1);
+        this.router.navigateByUrl('/artists');
       }
     });
   }
@@ -50,5 +56,9 @@ export class ArtistPageComponent implements OnInit {
 
   ngOnDestroy(): void {
     this.deviceTypeSubscription.unsubscribe();
+  }
+
+  playTrack(track: TrackInformations): void {
+    this.playingTrack = track;
   }
 }
