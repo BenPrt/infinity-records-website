@@ -1,7 +1,6 @@
-import { Component, Input, AfterViewInit, AfterContentChecked } from '@angular/core';
+import { Component, Input, AfterContentChecked, Output, EventEmitter } from '@angular/core';
 import { ArtistInformations, ProjectInformations, TrackInformations } from 'src/app/models/artists-info';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'artist-projects',
@@ -33,7 +32,8 @@ export class ArtistProjectsComponent implements AfterContentChecked {
   @Input() artist: ArtistInformations;
   @Input() isMobile: boolean;
   @Input() currentProjectId: number;
-  playingTrack: TrackInformations;
+  @Input() playingTrack: TrackInformations;
+  @Output() onPlay = new EventEmitter<TrackInformations>();
   currentProject: ProjectInformations;
 
   constructor() {}
@@ -54,9 +54,13 @@ export class ArtistProjectsComponent implements AfterContentChecked {
 
   initCurrentProject(): void {
     const projectsList: ProjectInformations[] = this.getArtistProjects();
-    this.currentProject = projectsList.find((project: ProjectInformations) => {
-      return projectsList.indexOf(project) + 1 === this.currentProjectId;
-    });
+    if (projectsList.length > 1) {
+      this.currentProject = projectsList.find((project: ProjectInformations) => {
+        return projectsList.indexOf(project) + 1 === this.currentProjectId;
+      });
+    } else {
+      this.currentProject = projectsList[0];
+    }
   }
 
   isCurrentProject(projectId: number): boolean {
@@ -83,7 +87,7 @@ export class ArtistProjectsComponent implements AfterContentChecked {
   }
 
   playTrack(track: TrackInformations): void {
-    this.playingTrack = track;
+    this.onPlay.emit(track);
   }
 
   isTrackPlaying(track: TrackInformations): boolean {

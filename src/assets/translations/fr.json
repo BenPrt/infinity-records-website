@@ -28,6 +28,8 @@
 	"COPYRIGHT_1" : "Copyright © ",
 	"COPYRIGHT_2" : " Infinity Records. Tous droits Réservés.",
 	
+	
+	
 	"LABEL_BANNER_TITLE" : "A propos d'Infinity Records",
 	"LABEL_BANNER_DESCRIPTION" : "Créé en 2017, Infinity Records est un label indépendant de production musicale basé en France.",
 	
@@ -54,6 +56,13 @@
 	
 	"LABEL_BUT_ALSO" : "mais aussi... ",
 	
+	
+	
+	"ARTISTS_LIST_TOP_TITLE" : "They chose Infinity Records",
+	"ARTISTS_LIST_TOP_CONTENT" : "Discover the talented and diverse roster of artists who call Infinity Records home.",
+	
+	
+	
 	"ARTISTS_BACK": "retour",
 	
 	"ARTISTS_PRT-CREW_DESCRIPTION": "Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus.",
@@ -64,6 +73,8 @@
 	"ARTISTS_PLAY" : "Écouter",
 	"ARTISTS_LISTENING" : "En cours d'écoute...",
 	"ARTISTS_DOWNLOAD" : "Télécharger",
+	
+	
 	
 	"MERCH_BANNER_SUBTITLE" : "Made in Infinity Records",
 	"MERCH_BANNER_DESCRIPTION" : "Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus.",

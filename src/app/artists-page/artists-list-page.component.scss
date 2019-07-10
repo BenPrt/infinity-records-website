@@ -1,8 +1,229 @@
-@import "src/app/utils/_styleVariables";
+@import 'src/app/utils/_styleVariables';
 
-#content{
-    width : calc(100% - 80px);
-    padding : 40px;
-    height : 100vh;
-    text-align : center;
+#artists-list-first-layer {
+  border-left: 2px solid $very-light-grey;
+  border-right: 2px solid $very-light-grey;
+  display: flex;
+  justify-content: space-between;
+  @media screen and (min-device-width: $desktop-size) {
+    width: calc(-12.57vw - 2px + 100vw - 12.57vw);
+    margin-left: 12.57vw;
+  }
+  @media screen and (max-device-width: $desktop-size) {
+    width: calc(-12.23vw - 2px + 100vw - 12.23vw);
+    margin-left: 12.23vw;
+  }
+
+  #artists-list-title {
+    height: 20px;
+    margin-left: -40px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transform: rotate(90deg);
+    @media screen and (min-device-width: $desktop-size) {
+      margin-top: calc(43px + 56px);
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      margin-top: calc(43px + 48px);
+    }
+  }
+  #artists-list-second-layer {
+    border-left: 2px solid $very-light-grey;
+    @media screen and (min-device-width: $desktop-size) {
+      width: 53.82vw;
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      width: 47.34vw;
+    }
+
+    #artists-list-top-description {
+      @media screen and (min-device-width: $desktop-size) {
+        width: 412px;
+        margin-top: 56px;
+        margin-left: 17.64vw;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        width: 50.53vw;
+        margin-top: 48px;
+        margin-left: 4.26vw;
+      }
+      #top-description-title {
+        font-weight: normal;
+        @media screen and (min-device-width: $desktop-size) {
+          font-size: 44px;
+          line-height: 1.27;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          font-size: 1.78em;
+          line-height: 1.25;
+        }
+      }
+      #top-description-content {
+        margin-top: 16px;
+        font-weight: 500;
+        line-height: 1.56;
+        @media screen and (min-device-width: $desktop-size) {
+          font-size: 18px;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          font-size: 1em;
+        }
+      }
+    }
+
+    #artists-list-third-layer {
+      background-color: $very-light-grey;
+      @media screen and (min-device-width: $desktop-size) {
+        padding-top: 106px;
+        margin: 104px 0 104px 9.93vw;
+        height: 19.1vw;
+        width: calc(100vw - 12.57vw - 2px - 20.625vw - 2px - 9.93vw);
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        padding-top: 56px;
+        margin: 72px 0 104px -11.17vw;
+        height: calc(73.94vw + 40px + 73.94vw);
+        width: calc(100% + 11.17vw + 12.23vw);
+      }
+      #artists-list-list-container {
+        @media screen and (min-device-width: $desktop-size) {
+          height: 19.1vw;
+          width: calc(28.61vw + 32px + 5.49vw + 28.61vw + 32px);
+          margin-left: -15.42vw;
+          display: flex;
+          justify-content: space-between;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          height: calc(73.94vw + 40px + 73.94vw);
+          width: calc(100% + 7.98vw);
+          margin-left: -7.98vw;
+        }
+        .artists-list-list-item {
+          @media screen and (min-device-width: $desktop-size) {
+            width: calc(28.61vw + 32px);
+            height: 19.1vw;
+          }
+          @media screen and (max-device-width: $desktop-size) {
+            width: 100%;
+            height: 73.94vw;
+            margin-bottom: 40px;
+          }
+
+          .artist-item-link {
+            text-decoration: none;
+
+            .artist-item-picture-wrapper {
+              overflow: hidden;
+              @media screen and (min-device-width: $desktop-size) {
+                width: 28.61vw;
+                height: 19.1vw;
+              }
+              @media screen and (max-device-width: $desktop-size) {
+                width: 73.94vw;
+                height: 73.94vw;
+              }
+              .artist-item-picture {
+                @media screen and (min-device-width: $desktop-size) {
+                  height: 19.1vw;
+                }
+                @media screen and (max-device-width: $desktop-size) {
+                  height: 73.94vw;
+                }
+              }
+              .artist-item-picture-gradient {
+                position: relative;
+                z-index: 1;
+                background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.71));
+                @media screen and (min-device-width: $desktop-size) {
+                  height: 7.71vw;
+                  margin-top: -7.71vw;
+                  width: 28.61vw;
+                }
+                @media screen and (max-device-width: $desktop-size) {
+                  height: 29.52vw;
+                  margin-top: -29.52vw;
+                  width: 73.94vw;
+                }
+              }
+            }
+            .artist-item-content-wrapper {
+              position: relative;
+              z-index: 1;
+              display: flex;
+              justify-content: space-between;
+              @media screen and (min-device-width: $desktop-size) {
+                width: calc(28.61vw + 32px);
+                height: 7.71vw;
+                margin-top: -7.71vw;
+              }
+              @media screen and (max-device-width: $desktop-size) {
+                height: 29.52vw;
+                margin-top: calc(-29.52vw + 1px);
+                width: 100%;
+              }
+              .artist-item-content {
+                color: $white;
+                padding-left: 16px;
+
+                @media screen and (min-device-width: $desktop-size) {
+                  height: 7.71vw;
+                  width: calc(-16px + 100% - 32px - 7.71vw);
+                }
+                @media screen and (max-device-width: $desktop-size) {
+                  height: 29.52vw;
+                  width: calc(-16px + 100% - 32px - 29.52vw);
+                }
+                .artist-item-content-separator {
+                  height: 4px;
+                  border: none;
+                  margin: 0;
+                  background-color: $gold;
+                  margin-top: 19px;
+                  margin-bottom: 16px;
+                  @media screen and (min-device-width: $desktop-size) {
+                    width: 2.22vw;
+                  }
+                  @media screen and (max-device-width: $desktop-size) {
+                    width: 8.51vw;
+                  }
+                }
+                .artist-item-type {
+                  line-height: 1.71;
+                  height: 24px;
+                  @media screen and (min-device-width: $desktop-size) {
+                    font-size: 14px;
+                  }
+                  @media screen and (max-device-width: $desktop-size) {
+                    font-size: 0.78em;
+                  }
+                }
+                .artist-item-name {
+                  font-weight: 600;
+                  line-height: 1.33;
+                  height: 30px;
+                  @media screen and (min-device-width: $desktop-size) {
+                    font-size: 24px;
+                  }
+                  @media screen and (max-device-width: $desktop-size) {
+                    font-size: 1.345em;
+                  }
+                }
+              }
+              .artist-item-logo {
+                @media screen and (min-device-width: $desktop-size) {
+                  height: 7.71vw;
+                  width: 7.71vw;
+                }
+                @media screen and (max-device-width: $desktop-size) {
+                  height: 29.52vw;
+                  width: 29.52vw;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

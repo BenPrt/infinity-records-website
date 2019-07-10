@@ -10,9 +10,6 @@ import { ArtistPageComponent } from './artists-page/artist-page/artist-page.comp
 
 import { MerchPageComponent } from './merch-page/merch-page.component';
 
-import { DownloadPrtapeVol1Component } from './download-pages/download-prtape-vol-1/download-prtape-vol-1.component';
-import { DownloadPrtapeVol2Component } from './download-pages/download-prtape-vol-2/download-prtape-vol-2.component';
-
 const routes: Routes = [
   {
     path: '',
@@ -42,14 +39,6 @@ const routes: Routes = [
   {
     path: 'merch',
     component: MerchPageComponent,
-  },
-  {
-    path: 'download-prtape-vol-1',
-    component: DownloadPrtapeVol1Component,
-  },
-  {
-    path: 'download-prtape-vol-2',
-    component: DownloadPrtapeVol2Component,
   },
 ];
 
