@@ -19,6 +19,7 @@
       src="{{ member.picture }}"
       [ngClass]="{ blurred: quoteIsDisplayed }"
     />
+    <div id="member-picture-gradient"></div>
     <div id="quote-overlay" *ngIf="quoteIsDisplayed" [@quote-fade]>
       <div id="overlay"></div>
       <div id="quote-container">

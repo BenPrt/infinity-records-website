@@ -12,16 +12,19 @@
     margin-left: 12.23vw;
   }
   #banner-picture-wrapper {
+    display : flex;
     overflow: hidden;
     @media screen and (min-device-width: $desktop-size) {
       margin-left: calc(-12.7vw - 2px);
       width: 72vw;
       height: 48vw;
+      align-items: center;
     }
     @media screen and (max-device-width: $desktop-size) {
       margin-left: calc(-12.23vw - 2px);
       width: 100vw;
       height: 75vw;
+      justify-content: center;
     }
     #banner-picture {
       @media screen and (min-device-width: $desktop-size) {
