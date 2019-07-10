@@ -28,17 +28,20 @@
   }
 }
 #artist-second-layer-wrapper {
+  position : relative;
   @media screen and (min-device-width: $desktop-size) {
-    display: inline-block;
   }
   @media screen and (max-device-width: $desktop-size) {
-    position: relative;
   }
   #artist-second-layer {
     background-color: $very-light-grey;
     @media screen and (min-device-width: $desktop-size) {
-      height: calc(122px + 42.15vw);
+      position: absolute;
       width: 35.69vw;
+      height: calc(122px + 42.15vw);
+      right: 0;      
+      margin-top: calc(-127px - 42.15vw);
+
     }
     @media screen and (max-device-width: $desktop-size) {
       position: absolute;
