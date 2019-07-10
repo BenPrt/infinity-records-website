@@ -1,7 +1,8 @@
 @import 'src/app/utils/_styleVariables';
 
-:host {
-  position : relative;
+#artist-navigation-wrapper {
+  position: relative;
+
   #artist-navigation {
     position: absolute;
     display: flex;
@@ -15,9 +16,9 @@
       margin-bottom: 16px;
     }
     @media screen and (max-device-width: $desktop-size) {
-      width : calc(-16px + 100vw - 16px);
-      height : 26px;
-      margin : calc(-74px - 65px - 91.49vw - 48px - 244px - 64px + 16px) 16px 32px 16px;
+      width: calc(-16px + 100vw - 16px);
+      height: 26px;
+      margin: calc(-74px - 65px - 91.49vw - 48px - 244px - 64px + 16px) 16px 32px 16px;
     }
 
     #back-button {
