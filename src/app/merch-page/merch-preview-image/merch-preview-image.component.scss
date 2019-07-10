@@ -1,6 +1,10 @@
 @import 'src/app/utils/_styleVariables';
 
 #preview-image-wrapper {
+  display : flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
   @media screen and (min-device-width: $desktop-size) {
     height: 20.9vw;

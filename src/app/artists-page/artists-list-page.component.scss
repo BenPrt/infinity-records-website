@@ -115,16 +115,18 @@
 
             .artist-item-picture-wrapper {
               display : flex;
+              flex-direction: column;
               overflow: hidden;
+              align-items: center;
+              justify-content: center;
+
               @media screen and (min-device-width: $desktop-size) {
                 width: 28.61vw;
                 height: 19.1vw;
-                align-items: center;
               }
               @media screen and (max-device-width: $desktop-size) {
                 width: 73.94vw;
                 height: 73.94vw;
-                justify-content: center;
               }
               .artist-item-picture {
                 @media screen and (min-device-width: $desktop-size) {
