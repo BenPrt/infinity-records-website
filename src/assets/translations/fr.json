@@ -30,8 +30,9 @@
 	
 	
 	
-	"LABEL_BANNER_TITLE" : "A propos d'Infinity Records",
-	"LABEL_BANNER_DESCRIPTION" : "Créé en 2017, Infinity Records est un label indépendant de production musicale basé en France.",
+	"LABEL_BANNER_TITLE_1" : "A propos",
+	"LABEL_BANNER_TITLE_2" : "d'Infinity Records",
+	"LABEL_BANNER_DESCRIPTION" : "Créé en 2017, Infinity Records est un label indépendant de production musicale situé à Lille, en France.",
 	
 	"LABEL_TOP_DESCRIPTION" : "Motivé par le désir de produire notre propre musique de A à Z, nous accompagnons nos artistes dans toutes les étapes de leur développement.",
 	"LABEL_TOP_CREATION" :"Création",
@@ -39,7 +40,7 @@
 	"LABEL_TOP_MIXING" :"Mixage",
 	"LABEL_TOP_MASTERING" :"Mastering",
 	
-	"LABEL_RIGHT_DESCRIPTION": "We are also commited to advising and providing guidance to improve and develop the identity, communication and potential of our artists.",
+	"LABEL_RIGHT_DESCRIPTION": "Nous nous efforçons également d'aider et de conseiller nos artistes dans le développement de leur identité et de leur communication, et dans l'expression de leur potentiel.",
 
 	"LABEL_WHERE_THE_MAGIC": "Where the magic happens.",
 	
