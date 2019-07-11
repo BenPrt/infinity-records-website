@@ -13,9 +13,21 @@ export const merchInfos: MerchInfo[] = [
     ],
     picture: 'assets/img/merch/preview_hoodie.jpg',
     declinations: [
-      { mainColor: 'MERCH_MAIN_BLACK', logoColor: 'MERCH_LOGO_GOLD', picture: 'assets/img/merch/catalog.png' },
-      { mainColor: 'MERCH_MAIN_BLACK', logoColor: 'MERCH_LOGO_WHITE', picture: 'assets/img/merch/catalog.png' },
-      { mainColor: 'MERCH_MAIN_WHITE', logoColor: 'MERCH_LOGO_BLACK', picture: 'assets/img/merch/catalog.png' },
+      {
+        mainColor: 'MERCH_MAIN_BLACK',
+        logoColor: 'MERCH_LOGO_GOLD',
+        picture: 'assets/img/merch/Hoodie_Black_Gold.jpg',
+      },
+      {
+        mainColor: 'MERCH_MAIN_BLACK',
+        logoColor: 'MERCH_LOGO_WHITE',
+        picture: 'assets/img/merch/Hoodie_Black_White.jpg',
+      },
+      {
+        mainColor: 'MERCH_MAIN_WHITE',
+        logoColor: 'MERCH_LOGO_BLACK',
+        picture: 'assets/img/merch/Hoodie_White_Black.jpg',
+      },
     ],
   },
   {
@@ -30,9 +42,21 @@ export const merchInfos: MerchInfo[] = [
     ],
     picture: 'assets/img/merch/preview_t-shirt.jpg',
     declinations: [
-      { mainColor: 'MERCH_MAIN_BLACK', logoColor: 'MERCH_LOGO_GOLD', picture: 'assets/img/merch/catalog.png' },
-      { mainColor: 'MERCH_MAIN_BLACK', logoColor: 'MERCH_LOGO_WHITE', picture: 'assets/img/merch/catalog.png' },
-      { mainColor: 'MERCH_MAIN_WHITE', logoColor: 'MERCH_LOGO_BLACK', picture: 'assets/img/merch/catalog.png' },
+      {
+        mainColor: 'MERCH_MAIN_BLACK',
+        logoColor: 'MERCH_LOGO_GOLD',
+        picture: 'assets/img/merch/T-Shirt_Black_Gold.jpg',
+      },
+      {
+        mainColor: 'MERCH_MAIN_BLACK',
+        logoColor: 'MERCH_LOGO_WHITE',
+        picture: 'assets/img/merch/T-Shirt_Black_White.jpg',
+      },
+      {
+        mainColor: 'MERCH_MAIN_WHITE',
+        logoColor: 'MERCH_LOGO_BLACK',
+        picture: 'assets/img/merch/T-Shirt_White_Black.jpg',
+      },
     ],
   },
   {
@@ -47,9 +71,21 @@ export const merchInfos: MerchInfo[] = [
     ],
     picture: 'assets/img/merch/preview_crewneck.jpg',
     declinations: [
-      { mainColor: 'MERCH_MAIN_BLACK', logoColor: 'MERCH_LOGO_GOLD', picture: 'assets/img/merch/catalog.png' },
-      { mainColor: 'MERCH_MAIN_BLACK', logoColor: 'MERCH_LOGO_WHITE', picture: 'assets/img/merch/catalog.png' },
-      { mainColor: 'MERCH_MAIN_WHITE', logoColor: 'MERCH_LOGO_BLACK', picture: 'assets/img/merch/catalog.png' },
+      {
+        mainColor: 'MERCH_MAIN_BLACK',
+        logoColor: 'MERCH_LOGO_GOLD',
+        picture: 'assets/img/merch/Crewneck_Black_Gold.jpg',
+      },
+      {
+        mainColor: 'MERCH_MAIN_BLACK',
+        logoColor: 'MERCH_LOGO_WHITE',
+        picture: 'assets/img/merch/Crewneck_Black_White.jpg',
+      },
+      {
+        mainColor: 'MERCH_MAIN_WHITE',
+        logoColor: 'MERCH_LOGO_BLACK',
+        picture: 'assets/img/merch/Crewneck_White_Black.jpg',
+      },
     ],
   },
 ];
