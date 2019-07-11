@@ -30,31 +30,32 @@
 	
 
 
-	"LABEL_BANNER_TITLE" : "A propos d'Infinity Records",
-	"LABEL_BANNER_DESCRIPTION" : "Créé en 2017, Infinity Records est un label indépendant de production musicale basé en France.",
+	"LABEL_BANNER_TITLE_1" : "About",
+	"LABEL_BANNER_TITLE_2" : "Infinity Records",
+	"LABEL_BANNER_DESCRIPTION" : "Founded in 2017, Infinity Records is an independent record-label based in Lille, in France.",
 	
-	"LABEL_TOP_DESCRIPTION" : "Motivé par le désir de produire notre propre musique de A à Z, nous accompagnons nos artistes dans toutes les étapes de leur développement.",
-	"LABEL_TOP_CREATION" :"Création",
-	"LABEL_TOP_RECORDING" :"Enregistrement",
-	"LABEL_TOP_MIXING" :"Mixage",
+	"LABEL_TOP_DESCRIPTION" : "Dragged by the wish to produce our own music form A to Z, we accompany the artists in every step of their development.",
+	"LABEL_TOP_CREATION" :"Creation",
+	"LABEL_TOP_RECORDING" :"Recording",
+	"LABEL_TOP_MIXING" :"Mixing",
 	"LABEL_TOP_MASTERING" :"Mastering",
 	
 	"LABEL_RIGHT_DESCRIPTION": "We are also commited to advising and providing guidance to improve and develop the identity, communication and potential of our artists.",
 
 	"LABEL_WHERE_THE_MAGIC": "Where the magic happens.",
 	
-	"LABEL_STAFF_TITLE" : "L'équipe",
+	"LABEL_STAFF_TITLE" : "The Staff",
 	
-	"LABEL_ROLE_HEADMASTER" : "Président",
-	"LABEL_ROLE_PRODUCER" : "Producteur",
-	"LABEL_ROLE_ARTIST" : "Artiste",
+	"LABEL_ROLE_HEADMASTER" : "Headmaster",
+	"LABEL_ROLE_PRODUCER" : "Producer",
+	"LABEL_ROLE_ARTIST" : "Artist",
 	"LABEL_ROLE_COMMUNITY_MANAGER" : "Community Manager",
-	"LABEL_ROLE_SOFTWARE_ENGINEER" : "Ingénieur Logiciel",
+	"LABEL_ROLE_SOFTWARE_ENGINEER" : "Software Engineer",
     "LABEL_ROLE_DESIGNER" : "Designer",
-	"LABEL_ROLE_PHOTOGRAPHER" : "Photographe",
-	"LABEL_ROLE_VIDEOGRAPHER" : "Vidéaste",
+	"LABEL_ROLE_PHOTOGRAPHER" : "Photographer",
+	"LABEL_ROLE_VIDEOGRAPHER" : "Videographer",
 	
-	"LABEL_BUT_ALSO" : "mais aussi... ",
+	"LABEL_BUT_ALSO" : "but also... ",
 	
 	
 	

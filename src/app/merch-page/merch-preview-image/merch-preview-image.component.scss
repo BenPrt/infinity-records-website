@@ -40,17 +40,17 @@
     @media screen and (min-device-width: $desktop-size) {
       height: 20.9vw;
       width: 20.9vw;
-      margin-top: calc(-20.9vw - 4px);
+      margin-top: -20.9vw;
     }
     @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
       height: 57.5vw;
       width: 57.5vw;
-      margin-top: calc(-57.5vw - 4px);
+      margin-top: -57.5vw;
     }
     @media screen and (max-device-width: $tablet-size) {
       height: 67.5vw;
       width: 67.5vw;
-      margin-top: calc(-67.5vw - 4px);
+      margin-top: -67.5vw;
     }
     .overlay {
       opacity: 0.6;
