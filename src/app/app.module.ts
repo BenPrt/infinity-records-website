@@ -14,6 +14,8 @@ import { HomeModule } from './home-page/home.module';
 import { LabelModule } from './label-page/label.module';
 import { ArtistsModule } from './artists-page/artists.module';
 import { MerchModule } from './merch-page/merch.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -36,6 +38,7 @@ export class MyHammerConfig extends HammerGestureConfig {
     LabelModule,
     ArtistsModule,
     MerchModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
     {
