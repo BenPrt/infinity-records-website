@@ -24,7 +24,9 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.webmanifest",
+              "src/robots.txt"
             ],
             "styles": [
               "src/styles.scss"
@@ -55,7 +57,9 @@
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
                 }
-              ]
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "ngsw-config.json"
             }
           }
         },
@@ -89,7 +93,8 @@
             "scripts": [],
             "assets": [
               "src/assets",
-              {"glob": "robots.txt", "input": "src/assets", "output": "/"}
+              {"glob": "robots.txt", "input": "src/", "output": "/"},
+              "src/manifest.webmanifest"
             ]
           }
         },

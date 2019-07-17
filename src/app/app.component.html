@@ -1,4 +1,4 @@
-<ng-container *ngIf="!reloading">
+<ng-container #container *ngIf="!reloading">
   <ng-container *ngIf="isMobile; else desktopVersion">
     <header-mobile-menu-component
       [scaleState]="scaleState"
