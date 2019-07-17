@@ -1,13 +1,14 @@
-import { Component, OnInit, ChangeDetectorRef, Inject, PLATFORM_ID, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, Inject, PLATFORM_ID, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import { Location, isPlatformBrowser } from '@angular/common';
-import { Router, RouterEvent, NavigationEnd } from '@angular/router';
+import { Router, RouterEvent } from '@angular/router';
 import { animate, style, transition, trigger, state } from '@angular/animations';
-import { filter, first } from 'rxjs/operators';
+import { debounceTime } from 'rxjs/operators';
 
 import { TranslationService } from 'src/app/shared/services/translation.service';
 import { MobileMenuEventsService } from './shared/services/mobile-menu-events.service';
 import { DeviceService } from './shared/services/device.service';
 import { ScrollService } from './shared/services/scroll.service';
+import { fromEvent } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -35,6 +36,7 @@ import { ScrollService } from './shared/services/scroll.service';
   ],
 })
 export class AppComponent implements OnInit, AfterViewInit {
+  @ViewChild('container', { static: false }) content: ElementRef;
   // Boolean defining if the app is executed by browser and not by server
   isBrowser: boolean;
   // Boolean defining if the page is reloading (due to instant translation)
@@ -71,7 +73,6 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    this.initDisplay();
     this.initScrollOnRouteChange();
     this.initMobileStatus();
     this.initMobileSizing();
@@ -82,19 +83,13 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.initMobileScroll();
-  }
-
-  initDisplay(): void {
-    this.router.events
-      .pipe(
-        filter(event => event instanceof NavigationEnd),
-        first(),
-      )
-      .subscribe(() => {
-        if (this.isBrowser) {
-          document.getElementsByTagName('body')[0].style.visibility = 'initial';
-        }
+    if (!this.isBrowser) {
+      const source = fromEvent(this.content.nativeElement, 'load');
+      const result = source.pipe(debounceTime(1000)).subscribe(() => {
+        this.interruptAnimation();
+        result.unsubscribe();
       });
+    }
   }
 
   initScrollOnRouteChange(): void {
@@ -194,6 +189,11 @@ export class AppComponent implements OnInit, AfterViewInit {
           );
         }, 5000),
       );
+    } else {
+      this.scaleState = 'upscaled';
+      this.typoState = 'hidden';
+      this.menuIsDisplayed = false;
+      this.contentIsDisplayed = false;
     }
   }
 
@@ -234,8 +234,10 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
   }
 
-  interruptAnimation(event: PointerEvent | KeyboardEvent) {
-    event.preventDefault();
+  interruptAnimation(event?: PointerEvent | KeyboardEvent) {
+    if (event) {
+      event.preventDefault();
+    }
     this.timeouts.forEach((timeout) => {
       clearTimeout(timeout);
     });

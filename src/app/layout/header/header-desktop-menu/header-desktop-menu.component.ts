@@ -136,6 +136,7 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
 
   drawLogo(): void {
     if (this.isBrowser) {
+      document.getElementById('menu-logo-logo').style.visibility = 'initial';
       const paths = Array.from(document.querySelectorAll('#menu-logo-logo path'));
       paths.forEach((arrayPath) => {
         const path = <SVGPathElement>arrayPath;

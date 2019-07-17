@@ -25,7 +25,8 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/manifest.webmanifest"
+              "src/manifest.webmanifest",
+              "src/robots.txt"
             ],
             "styles": [
               "src/styles.scss"
@@ -92,7 +93,7 @@
             "scripts": [],
             "assets": [
               "src/assets",
-              {"glob": "robots.txt", "input": "src/assets", "output": "/"},
+              {"glob": "robots.txt", "input": "src/", "output": "/"},
               "src/manifest.webmanifest"
             ]
           }
