@@ -115,8 +115,11 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
   }
 
   initAnimation(): void {
-    if (!this.menuIsDisplayed) {
-      this.drawLogo();
+    if (this.isBrowser) {
+      document.getElementById('menu-logo-logo').style.visibility = 'initial';
+      if (!this.menuIsDisplayed) {
+        this.drawLogo();
+      }
     }
   }
 
@@ -135,20 +138,17 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
   }
 
   drawLogo(): void {
-    if (this.isBrowser) {
-      document.getElementById('menu-logo-logo').style.visibility = 'initial';
-      const paths = Array.from(document.querySelectorAll('#menu-logo-logo path'));
-      paths.forEach((arrayPath) => {
-        const path = <SVGPathElement>arrayPath;
-        const length = path.getTotalLength();
-        path.style.transition = path.style.webkitTransition = 'none';
-        path.style.strokeDasharray = `${length} ${length}`;
-        path.style.strokeDashoffset = String(length);
-        path.getBoundingClientRect();
-        path.style.transition = path.style.webkitTransition = 'stroke-dashoffset 4s ease-in-out';
-        path.style.strokeDashoffset = '0';
-      });
-    }
+    const paths = Array.from(document.querySelectorAll('#menu-logo-logo path'));
+    paths.forEach((arrayPath) => {
+      const path = <SVGPathElement>arrayPath;
+      const length = path.getTotalLength();
+      path.style.transition = path.style.webkitTransition = 'none';
+      path.style.strokeDasharray = `${length} ${length}`;
+      path.style.strokeDashoffset = String(length);
+      path.getBoundingClientRect();
+      path.style.transition = path.style.webkitTransition = 'stroke-dashoffset 4s ease-in-out';
+      path.style.strokeDashoffset = '0';
+    });
   }
 
   manageScrollAndClasses(scroll: number): void {
