@@ -60,14 +60,14 @@
 	
 	
 	"ARTISTS_LIST_TOP_TITLE" : "Découvrez nos talents...",
-	"ARTISTS_LIST_TOP_CONTENT" : "et apprenez-en plus sur nos artistes, leur univers musical et leur actualité",
+	"ARTISTS_LIST_TOP_CONTENT" : "et apprenez-en plus sur nos artistes, leur univers musical et leur actualité.",
 	
 	
 	
 	"ARTISTS_BACK": "retour",
 	
-	"ARTISTS_PRT-CREW_DESCRIPTION": "Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus.",
-	"ARTISTS_FRESH-BEN_DESCRIPTION": "Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus.",
+	"ARTISTS_PRT-CREW_DESCRIPTION": "Des textes techniques aux thèmes variés, enrichis d'une complicité remontant à de nombreuses années...",
+	"ARTISTS_FRESH-BEN_DESCRIPTION": "Des mélodies originales, des samples colorés et des rythmes percutants : Shit.. This is Fresh !",
 		
 	"ARTISTS_PROJECTS" : "Projets",
 	"ARTISTS_PROJECT_RELEASED_ON" : "Sorti le ",
@@ -77,8 +77,8 @@
 	
 	
 	
-	"MERCH_BANNER_SUBTITLE" : "Made in Infinity Records",
-	"MERCH_BANNER_DESCRIPTION" : "Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus.",
+	"MERCH_BANNER_SUBTITLE" : "The Infinity Records Look",
+	"MERCH_BANNER_DESCRIPTION" : "Découvrez les pièces Infinity Records. Un design épuré sur un textile de qualité, pour un confort et un style des plus soignés.",
 	"MERCH_PRODUCTS_TITLE" : "Nos Produits",
 	"MERCH_TITLE_HOODIES" : "Hoodies",
 	"MERCH_TITLE_TSHIRTS" : "T-Shirts",
