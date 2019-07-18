@@ -16,10 +16,10 @@
     background-color: $very-light-grey;
     @media screen and (min-device-width: $tablet-size) {
       width: 32.39vw;
-      height: calc(56px + 48px + 12px + 21.46vw + 167px);
-      margin-top: -48px;
-      padding: 104px 48px;
-      margin-left: calc(100vw - 12.57vw - 2px - 48px - 32.39vw - 48px - 4.86vw);
+      height: calc(3.89vw + 3.33vw + 0.83vw + 21.46vw + 11.60vw);
+      margin-top: -3.33vw;
+      padding: 7.22vw 3.33vw;
+      margin-left: calc(100vw - 12.57vw - 2px - 3.33vw - 32.39vw - 3.33vw - 4.86vw);
     }
     @media screen and (max-device-width: $tablet-size) {
       width: calc(51.59vw - 48px);
@@ -31,8 +31,8 @@
       font-weight: normal;
       margin: 0;
       @media screen and (min-device-width: $tablet-size) {
-        font-size: 44px;
-        height: 56px;
+        font-size: 2.44em;
+        height: 3.89vw;
         line-height: 1.27;
       }
       @media screen and (max-device-width: $tablet-size) {
@@ -48,8 +48,8 @@
     justify-content: space-between;
     @media screen and (min-device-width: $tablet-size) {
       width: calc(100vw - 4.86vw - 4.86vw);
-      height: calc(12px + 21.46vw + 167px);
-      margin-top: calc(-12px - 21.46vw - 167px - 104px);
+      height: calc(0.83vw + 21.46vw + 11.60vw);
+      margin-top: calc(-0.83vw - 21.46vw - 11.60vw - 7.22vw);
       margin-left: calc(-12.57vw - 2px + 4.86vw);
     }
     @media screen and (max-device-width: $tablet-size) {

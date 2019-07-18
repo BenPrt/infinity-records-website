@@ -41,11 +41,10 @@
     position: relative;
     background-color: $very-light-grey;
     @media screen and (min-device-width: $desktop-size) {
-      width: calc(44vw - 80px - 80px);
-      height : 25.69vw;
+      width: calc(44vw - 5.56vw - 5.56vw);
       margin-left: 30.7vw;
       margin-top: -14.66vw;
-      padding: 80px;
+      padding: 5.56vw;
     }
     @media screen and (max-device-width: $desktop-size) {
       width: calc(67.55% - 32px - 32px);
@@ -55,7 +54,7 @@
     }
     #banner-page-title {
       line-height: 1.63;
-      letter-spacing: 2px;
+      letter-spacing: 0.11em;
       font-weight: bold;
       font-size: 0.9em;
     }
@@ -71,7 +70,7 @@
       }
     }
     #banner-description {
-      margin-top: 16px;
+      margin-top: 1.11vw;
       font-size: 1em;
       font-weight: 500;
       line-height: 1.56;
