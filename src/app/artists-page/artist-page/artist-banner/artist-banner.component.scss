@@ -103,19 +103,17 @@
       #artist-name {
         display: flex;
         align-items: center;
-        font-weight: normal;
+        font-weight: 300;
 
         @media screen and (min-device-width: $desktop-size) {
           height: 3vw;
           font-size: 2.5em;
           line-height: 1.27;
-          margin-left: 4px;
         }
         @media screen and (max-device-width: $desktop-size) {
           height: 6.91vw;
           font-size: 1.78em;
           line-height: 1.25;
-          margin-left: 1px;
           margin-top: 3px;
         }
       }
@@ -290,7 +288,7 @@
         width: 40px;
       }
       #artist-description {
-        font-weight: 600;
+        font-weight: 500;
         width: 100%;
         margin-top: 16px;
         font-size: 1em;
