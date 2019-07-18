@@ -7,7 +7,7 @@
     @media screen and (min-device-width: $desktop-size) {
       width: calc(75vw - 2px);
       margin-left: 12.5vw;
-      height: 729px;
+      height: calc(104px + 20.9vw + 70px + 150px);
     }
     @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
       width: calc(100vw - 12.23vw - 2px - 12.23vw - 2px);

@@ -2,13 +2,13 @@
 
 :host {
   width: 100%;
-  height: 68px;
+  height: 4.72em;
 }
 
 #line-container {
-  margin-left: calc((100% - 1300px) / 2);
-  width: 1300px;
-  padding-top: 32px;
+  margin-left: calc((100% - 92.86vw) / 2);
+  width: 92.83vw;
+  padding-top: 2.22vw;
   display: flex;
   justify-content: space-between;
 
@@ -18,24 +18,25 @@
     justify-content: flex-end;
 
     #social-media-title {
-      margin-right: 16px;
+      margin-right: 1.11em;
       user-select: none;
     }
 
     #social-media-separator {
-      width: 80px;
-      height: 2px;
+      width: 5.55vw;
+      height: 0.14vw;
       border: none;
-      margin: 2px 4px 0px 0px;
+      margin: 0.14vw 0.28vw 0 0;
       background-color: $gold;
     }
 
     .social-media-link {
       user-select: none;
       &:focus {outline : none;}
-      .social-media-icons {
-        margin-right: 4px;
-      }
+      .social-media-icon {
+      height : 2.78vw;
+      width : 2.78vw;
+    }
     }
   }
 }

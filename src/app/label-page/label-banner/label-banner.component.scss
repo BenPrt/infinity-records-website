@@ -42,6 +42,7 @@
     background-color: $very-light-grey;
     @media screen and (min-device-width: $desktop-size) {
       width: calc(44vw - 80px - 80px);
+      height : 25.69vw;
       margin-left: 30.7vw;
       margin-top: -14.66vw;
       padding: 80px;
@@ -53,25 +54,25 @@
       left: calc(100% - 67.55% - 12.23vw);
     }
     #banner-page-title {
-      font-size: 16px;
       line-height: 1.63;
       letter-spacing: 2px;
       font-weight: bold;
+      font-size: 0.9em;
     }
     #banner-title {
       font-weight : normal;
       @media screen and (min-device-width: $desktop-size) {
-        font-size: 44px;
+        font-size: 2.45em;
         line-height: 1.27;
       }
       @media screen and (max-device-width: $desktop-size) {
-        font-size: 32px;
+        font-size: 1.8em;
         line-height: 1.25;
       }
     }
     #banner-description {
       margin-top: 16px;
-      font-size: 18px;
+      font-size: 1em;
       font-weight: 500;
       line-height: 1.56;
     }
