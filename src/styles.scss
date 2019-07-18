@@ -7,9 +7,14 @@ body {
   height: 100vh;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.25vw;
   overflow: overlay;
   overflow-x: hidden;
+  @media screen and (min-device-width: $tablet-size) {
+    font-size: 1.25vw;
+  }
+  @media screen and (max-device-width: $tablet-size) {
+    font-size: 4.79vw;
+  }
 }
 
 h1,

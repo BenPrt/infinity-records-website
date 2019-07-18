@@ -5,9 +5,9 @@
   background-color: $black;
 
   @media screen and (min-device-width: $desktop-size) {
-    padding-left: calc((100% - 1300px) / 2);
-    padding-right: calc((100% - 1300px) / 2);
-    width: 1300px;
+    padding-left: calc((100% - 90.28vw) / 2);
+    padding-right: calc((100% - 90.28vw) / 2);
+    width: 90.28vw;
     display: flex;
     justify-content: space-around;
   }
@@ -23,8 +23,8 @@
   }
   #contact-description {
     @media screen and (min-device-width: $desktop-size) {
-      width: 301px;
-      margin-top: 80px;
+      width: 20.9vw;
+      margin-top: 5.56vw;
     }
     @media screen and (max-device-width: $desktop-size) {
       width: 100%;
@@ -35,7 +35,7 @@
       color: $white;
       font-weight: normal;
       @media screen and (min-device-width: $desktop-size) {
-        font-size: 40px;
+        font-size: 2.2em;
       }
       @media screen and (max-device-width: $desktop-size) {
         font-size: 32px;
@@ -45,11 +45,11 @@
       border-left: 2px solid $gold;
       color: $white;
       line-height: 1.63;
-      font-size: 16px;
+      font-size: 0.9em;
       @media screen and (min-device-width: $desktop-size) {
-        margin-top: 40px;
-        width: 275px;
-        padding-left: 24px;
+        margin-top: 2.78em;
+        width: 19.1vw;
+        padding-left: 1.67vw;
       }
       @media screen and (max-device-width: $desktop-size) {
         margin-top: 32px;
@@ -62,7 +62,7 @@
   #contact-form {
     @media screen and (min-device-width: $desktop-size) {
       width: 44.03vw;
-      margin-top: 137px;
+      margin-top: 9.51vw;
     }
     @media screen and (max-device-width: $desktop-size) {
       width: 100%;
@@ -76,18 +76,18 @@
     // Field Label
     ::ng-deep .mat-form-field-label {
       color: $grey;
-      font-size: 14px;
+      font-size: 0.8em;
       font-family: 'Montserrat';
       font-weight: 600;
-      letter-spacing: 1px;
+      letter-spacing: 0.06em;
     }
     // Label when filled
     ::ng-deep .mat-form-field .mat-form-field-label {
-      font-size: 14px;
+      font-size: 0.8em;
     }
     // Label when empty
     ::ng-deep .mat-form-field.mat-form-field-empty .mat-form-field-label {
-      font-size: 16px;
+      font-size: 0.9em;
     }
     // Label when error
     ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
@@ -123,7 +123,7 @@
 
     #name-field {
       font-family: 'Montserrat';
-      font-size: 16px;
+      font-size: 0.9em;
       @media screen and (min-device-width: $desktop-size) {
         width: 47.5%;
         margin-right: 5%;
@@ -134,7 +134,7 @@
     }
     #email-field {
       font-family: 'Montserrat';
-      font-size: 16px;
+      font-size: 0.9em;
       @media screen and (min-device-width: $desktop-size) {
         width: 47.5%;
       }
@@ -145,11 +145,11 @@
     }
     #message-field {
       font-family: 'Montserrat';
-      font-size: 16px;
-      line-height: 20px;
+      font-size: 0.9em;
+      line-height: 1.63;
       @media screen and (min-device-width: $desktop-size) {
         width: 100%;
-        margin-top: 32px;
+        margin-top: 2.22em;
       }
       @media screen and (max-device-width: $desktop-size) {
         width: 100%;
@@ -162,15 +162,17 @@
         width: 100%;
         align-items: center;
         justify-content: space-between;
-        margin: 48px 0px 80px 0px;
+        margin: 3.33vw 0px 5.55vw 0px;
       }
-
       @media screen and (max-device-width: $desktop-size) {
         margin-top: 32px;
         width: 100%;
       }
 
       #captcha-field {
+        @media screen and (min-device-width: $desktop-size) {
+          width: 47.5%;
+        }
         @media screen and (max-device-width: $desktop-size) {
           width: 304px;
           padding-left: calc((100% - 304px) / 2);
@@ -182,30 +184,32 @@
         background-color: $black;
         color: $white;
         border-radius: 0;
-        font-size: 16px;
-        letter-spacing: 2px;
+        font-size: 0.9em;
+        letter-spacing: 0.11em;
         font-weight: 500;
-        height: 40px;
 
         @media screen and (min-device-width: $desktop-size) {
-          width: 128px;
+          width: 8.89vw;
           cursor: pointer;
+          height: 2.78vw;
         }
         @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
           margin: 40px 0px 56px calc((100% - 250px) / 2);
           width: 250px;
+          height: 40px;
         }
         @media screen and (max-device-width: $tablet-size) {
           width: 100%;
           margin-top: 40px;
           margin-bottom: 56px;
+          height: 40px;
         }
       }
       #sending-message-loader {
         color: $gold;
-        font-size: 25px;
+        font-size: 1.39em;
         @media screen and (min-device-width: $desktop-size) {
-          margin-right: 50px;
+          margin-right: 3.47vw;
         }
         @media screen and (max-device-width: $desktop-size) {
           width: 100%;
@@ -217,24 +221,35 @@
         }
       }
       #success-message {
-        height: 40px;
-        line-height: 40px;
         display: flex;
         @media screen and (min-device-width: $desktop-size) {
-          width: 160px;
+          height: 2.78vw;
+          line-height: 2.78vw;
+          width: 11.11vw;
         }
         @media screen and (max-device-width: $desktop-size) {
+          height: 40px;
+          line-height: 40px;
           margin-top: 40px;
           padding-bottom: 56px;
           width: 100%;
           justify-content: center;
         }
         #success-message-icon {
-          margin-right: 4px;
+          @media screen and (min-device-width: $desktop-size) {
+            height: 1.67vw;
+            width: 1.67vw;
+            margin-right: 0.28vw;
+          }
+          @media screen and (max-device-width: $desktop-size) {
+            height: 24px;
+            width: 24px;
+            margin-right: 4px;
+          }
         }
         #success-message-message {
           color: $gold;
-          font-size: 16px;
+          font-size: 0.9em;
         }
       }
     }

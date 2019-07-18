@@ -32,11 +32,13 @@
 
     .social-media-link {
       user-select: none;
-      &:focus {outline : none;}
+      &:focus {
+        outline: none;
+      }
       .social-media-icon {
-      height : 2.78vw;
-      width : 2.78vw;
-    }
+        height: 2.78vw;
+        width: 2.78vw;
+      }
     }
   }
 }
