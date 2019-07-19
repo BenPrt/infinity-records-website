@@ -6,7 +6,9 @@
         <p
           class="products-indicator"
           *ngFor="let product of allProducts"
-          [@indicatorAnimation]='(loading === "initial" || loading.substring(0,6) === "loaded") && isCurrentProduct(product.id)'
+          [@indicatorAnimation]="
+            (loading === 'initial' || loading.substring(0, 6) === 'loaded') && isCurrentProduct(product.id)
+          "
           (click)="goToProduct(product.id)"
         >
           {{ '0' + (product.id + 1) }}
@@ -21,7 +23,7 @@
           'visible-previous': loading === 'loaded-previous'
         }"
       >
-        {{ currentProduct.title | translation}}
+        {{ currentProduct.title | translation }}
       </h3>
       <ul
         id="product-informations"
@@ -61,7 +63,14 @@
       visible: loading === 'loaded-previous' || loading === 'loaded-next'
     }"
   >
-    <img id="product-picture" alt="{{ currentProduct.title }} picture" [src]="currentProduct.picture" />
+    <div id="product-picture-wrapper">
+      <img
+        id="product-picture"
+        alt="{{ currentProduct.title }} picture"
+        [defaultImage]="'assets/img/loading.gif'"
+        [lazyLoad]="currentProduct.picture"
+      />
+    </div>
     <div id="page-navigator" *ngIf="isMobile">
       <div class="page-button" [ngClass]="{ disabled: isDisabled('previous') }" (click)="goToPreviousPage()">
         <img

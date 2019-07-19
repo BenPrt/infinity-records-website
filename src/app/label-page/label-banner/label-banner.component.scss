@@ -29,7 +29,6 @@
     }
     #banner-picture {
       @media screen and (min-device-width: $desktop-size) {
-        width: 72vw;
         height: 48vw;
       }
       @media screen and (max-device-width: $desktop-size) {

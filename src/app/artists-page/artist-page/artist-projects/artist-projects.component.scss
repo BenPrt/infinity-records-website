@@ -72,7 +72,12 @@
           width: 75.53vw;
           margin-left: calc(((100vw - 75.53vw) / 2) - 16px);
         }
-        .project-cover {
+        .project-cover-wrapper {
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          justify-content: center;
+          align-items: center;
           @media screen and (min-device-width: $desktop-size) {
             margin-bottom: 1.11vw;
             width: 30.83vw;
@@ -82,6 +87,14 @@
             margin-bottom: 16px;
             width: 75.53vw;
             height: 75.53vw;
+          }
+          .project-cover {
+            @media screen and (min-device-width: $desktop-size) {
+              height: 30.83vw;
+            }
+            @media screen and (max-device-width: $desktop-size) {
+              height: 75.53vw;
+            }
           }
         }
       }

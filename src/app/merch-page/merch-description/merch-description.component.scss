@@ -178,7 +178,7 @@ $totalHeight: 865px;
         #see-more-button {
           border: 1px solid $black;
           color: $black;
-          font-family : 'Montserrat';
+          font-family: 'Montserrat';
           background-color: $very-light-grey;
           text-align: center;
           font-size: 0.9em;
@@ -226,7 +226,12 @@ $totalHeight: 865px;
         height: 213px;
       }
 
-      #product-picture {
+      #product-picture-wrapper {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
         @media screen and (min-device-width: $desktop-size) {
           width: 44.03vw;
           height: 32.99vw;
@@ -234,6 +239,14 @@ $totalHeight: 865px;
         @media screen and (max-device-width: $desktop-size) {
           width: 75.53vw;
           height: 56.65vw;
+        }
+        #product-picture {
+          @media screen and (min-device-width: $desktop-size) {
+            height: 32.99vw;
+          }
+          @media screen and (max-device-width: $desktop-size) {
+            height: 56.65vw;
+          }
         }
       }
       #page-navigator {
