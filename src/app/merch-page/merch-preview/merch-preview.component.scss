@@ -7,7 +7,7 @@
     @media screen and (min-device-width: $desktop-size) {
       width: calc(75vw - 2px);
       margin-left: 12.5vw;
-      height: 729px;
+      height: calc(7.22vw + 20.9vw + 4.86vw + 10.42vw);
     }
     @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
       width: calc(100vw - 12.23vw - 2px - 12.23vw - 2px);
@@ -24,8 +24,8 @@
   #page-navigator-container {
     border-right: 2px solid $very-light-grey;
     @media screen and (min-device-width: $desktop-size) {
-      width: 297px;
-      height: calc(104px + 20.9vw + 70px + 150px);
+      width: 20.625vw;
+      height: calc(7.22vw + 20.9vw + 4.86vw + 10.42vw);
     }
     @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
       width: 102px;
@@ -38,17 +38,18 @@
     #product-title-wrapper {
       position: relative;
       #product-title {
-        width: 120px;
-        font-size: 18px;
+        font-size: 1em;
         font-weight: bold;
-        letter-spacing: 2px;
+        letter-spacing: 0.11em;
         transform: rotate(90deg);
         position: absolute;
         @media screen and (min-device-width: $desktop-size) {
-          margin-left: -45px;
-          margin-top: 151px;
+          width: 8.33vw;
+          margin-left: -3.125vw;
+          margin-top: 10.49vw;
         }
         @media screen and (max-device-width: $desktop-size) {
+          width: 120px;
           margin-top: 111px;
           margin-left: -47px;
         }
@@ -62,10 +63,10 @@
         display: flex;
         justify-content: space-between;
         @media screen and (min-device-width: $desktop-size) {
-          margin-top: calc(104px + 20.9vw + 70px);
+          margin-top: calc(7.22vw + 20.9vw + 4.86vw);
           margin-left: -2px;
-          width: 301px;
-          height: 150px;
+          width: 20.9vw;
+          height: 10.42vw;
         }
         @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
           margin-top: calc(64px + 57.5vw + 24px + 57.5vw + 24px + 57.5vw + 40px);
@@ -89,8 +90,8 @@
         user-select: none;
 
         @media screen and (min-device-width: $desktop-size) {
-          height: 150px;
-          width: 150px;
+          height: 10.42vw;
+          width: 10.42vw;
         }
         @media screen and (max-device-width: $desktop-size) {
           height: 52px;
@@ -98,8 +99,8 @@
         }
         .navigation-arrow {
           @media screen and (min-device-width: $desktop-size) {
-            width: 40px;
-            height: 40px;
+            width: 2.78vw;
+            height: 2.78vw;
           }
           @media screen and (max-device-width: $desktop-size) {
             height: 14px;
@@ -119,10 +120,10 @@
     position: relative;
     background-color: $very-light-grey;
     @media screen and (min-device-width: $desktop-size) {
-      width: 412px;
-      height: calc(104px + 20.9vw + 70px + 150px);
-      margin-top: calc(-104px - 20.9vw - 70px - 150px);
-      margin-left: calc(75vw - 301px - 2px);
+      width: 28.61vw;
+      height: calc(7.22vw + 20.9vw + 4.86vw + 10.42vw);
+      margin-top: calc(-7.22vw - 20.9vw - 4.86vw - 10.42vw);
+      margin-left: calc(75vw - 20.9vw - 2px);
     }
     @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
       width: calc(12.23vw + 2px + 50px);
@@ -142,10 +143,10 @@
     display: flex;
     justify-content: space-between;
     @media screen and (min-device-width: $desktop-size) {
-      width: calc(20.9vw + 32px + 20.9vw + 32px + 20.9vw);
+      width: calc(20.9vw + 2.22vw + 20.9vw + 2.22vw + 20.9vw);
       height: 20.9vw;
-      margin-top: calc(-20.9vw - 70px - 150px);
-      margin-left: calc(75vw - 301px - 2px + 412px - 20.9vw - 32px - 20.9vw - 32px - 20.9vw);
+      margin-top: calc(-20.9vw - 4.86vw - 10.42vw);
+      margin-left: calc(75vw - 20.9vw - 2px + 28.61vw - 20.9vw - 2.22vw - 20.9vw - 2.22vw - 20.9vw);
     }
     @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
       width: 57.5vw;

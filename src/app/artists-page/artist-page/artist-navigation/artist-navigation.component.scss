@@ -10,10 +10,10 @@
     align-items: center;
     @media screen and (min-device-width: $desktop-size) {
       margin-left: 4.86vw;
-      margin-top: calc(-126px - 42.15vw);
+      margin-top: calc(-5.14vw - 1.11vw - 2.22vw - 42.15vw);
       width: calc(100vw - 4.86vw - 12.56vw);
-      height: 74px;
-      margin-bottom: 16px;
+      height: 5.14vw;
+      margin-bottom: 1.11vw;
     }
     @media screen and (max-device-width: $desktop-size) {
       width: calc(-16px + 100vw - 16px);
@@ -23,13 +23,25 @@
 
     #back-button {
       img {
-        margin-right: 8px;
+        @media screen and (min-device-width: $desktop-size) {
+          height : 1.66vw;
+          width : 1.66vw;
+          margin-right: 0.56vw;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          margin-right: 8px;
+        }
       }
-      height: 24px;
       display: flex;
       align-items: center;
-      font-size: 16px;
+      font-size: 0.9em;
       cursor: pointer;
+      @media screen and (min-device-width: $desktop-size) {
+        height: 1.67vw;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        height: 24px;
+      }
     }
     #arborescence {
       text-align: center;
@@ -37,32 +49,44 @@
       position: absolute;
       margin-left: calc(12.5vw - 4.86vw + (100vw - 12.5vw - 35.69vw) - 28.82vw);
       #arbo-first {
-        font-size: 16px;
-        margin-right: 12px;
+        font-size: 0.9em;
+        margin-right: 0.83vw;
         cursor: pointer;
       }
       #arbo-slash {
         width: 24px;
-        font-size: 16px;
-        margin-right: 12px;
+        font-size: 0.9em;
+        margin-right: 0.83vw;
         color: $grey;
         cursor: default;
       }
       #arbo-second {
-        font-size: 16px;
+        font-size: 0.9em;
         font-weight: 600;
         cursor: default;
       }
     }
     #next-artist-button {
-      height: 24px;
       display: flex;
       align-items: center;
-      font-size: 16px;
+      font-size: 0.9em;
       font-weight: 600;
       cursor: pointer;
+      @media screen and (min-device-width: $desktop-size) {
+        height: 1.67vw;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        height: 24px;
+      }
       img {
-        margin-left: 8px;
+        @media screen and (min-device-width: $desktop-size) {
+          height : 1.66vw;
+          width : 1.66vw;
+          margin-left: 0.56vw;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          margin-left: 8px;
+        }
       }
     }
   }

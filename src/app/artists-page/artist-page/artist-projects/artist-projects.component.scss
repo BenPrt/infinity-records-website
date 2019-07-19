@@ -11,8 +11,9 @@
   #projects-second-layer {
     background-color: $very-light-grey;
     @media screen and (min-device-width: $desktop-size) {
-      padding: 104px 15.42vw 104px 70px;
-      width: calc(64.31vw - 15.42vw - 70px);
+      padding: 7.22vw 15.42vw 7.22vw 4.86vw;
+      min-height: calc(30.83vw + 1.11vw + 11.32vw);
+      width: calc(64.31vw - 15.42vw - 4.86vw);
     }
     @media screen and (max-device-width: $desktop-size) {
       padding: 56px 16px;
@@ -22,7 +23,7 @@
     #projects-title {
       font-weight: normal;
       @media screen and (min-device-width: $desktop-size) {
-        font-size: 44px;
+        font-size: 2.44em;
       }
       @media screen and (max-device-width: $desktop-size) {
         font-size: 2em;
@@ -31,7 +32,7 @@
 
     #projects-indicators {
       @media screen and (min-device-width: $desktop-size) {
-        margin-top: 32px;
+        margin-top: 2.22vw;
       }
       @media screen and (max-device-width: $desktop-size) {
         margin-top: 24px;
@@ -40,17 +41,22 @@
         display: inline-block;
         cursor: pointer;
         color: $black;
-        margin-right: 24px;
-        font-size: 18px;
+        font-size: 1em;
         line-height: 1.56;
         user-select: none;
+        @media screen and (min-device-width: $desktop-size) {
+          margin-right: 1.66vw;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          margin-right: 24px;
+        }
       }
     }
 
     #project-container {
       width: 100%;
       @media screen and (min-device-width: $desktop-size) {
-        margin-top: 56px;
+        margin-top: 3.89vw;
       }
       @media screen and (max-device-width: $desktop-size) {
         margin-top: 32px;
@@ -59,20 +65,21 @@
         @media screen and (min-device-width: $desktop-size) {
           position: absolute;
           width: 30.83vw;
-          height: calc(30.83vw + 16px + 11.32vw);
-          margin-left: calc(56.6vw - 70px);
+          height: calc(30.83vw + 1.11vw + 11.32vw);
+          margin-left: calc(56.6vw - 4.79vw);
         }
         @media screen and (max-device-width: $desktop-size) {
           width: 75.53vw;
           margin-left: calc(((100vw - 75.53vw) / 2) - 16px);
         }
         .project-cover {
-          margin-bottom: 16px;
           @media screen and (min-device-width: $desktop-size) {
+            margin-bottom: 1.11vw;
             width: 30.83vw;
             height: 30.83vw;
           }
           @media screen and (max-device-width: $desktop-size) {
+            margin-bottom: 16px;
             width: 75.53vw;
             height: 75.53vw;
           }
@@ -81,7 +88,7 @@
       .project-title-and-duration {
         @media screen and (min-device-width: $desktop-size) {
           line-height: 1.25;
-          height: 40px;
+          height: 2.78vw;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -92,14 +99,14 @@
         .project-title {
           font-weight: 600;
           @media screen and (min-device-width: $desktop-size) {
-            font-size: 32px;
+            font-size: 2em;
           }
           @media screen and (max-device-width: $desktop-size) {
             font-size: 1.15em;
           }
         }
         .project-duration {
-          font-size: 32px;
+          font-size: 2em;
           font-weight: normal;
           color: $grey;
         }
@@ -108,21 +115,21 @@
         color: $grey;
         font-weight: 500;
         @media screen and (min-device-width: $desktop-size) {
-          font-size: 18px;
+          font-size: 1em;
           line-height: 1.33;
-          letter-spacing: 2px;
-          margin-top: 8px;
+          letter-spacing: 0.11em;
+          margin-top: 0.56vw;
         }
         @media screen and (max-device-width: $desktop-size) {
-          font-size: 14px;
+          font-size: 0.8em;
           line-height: 1.43;
-          letter-spacing: 1px;
-          margin-top: 4px;
+          letter-spacing: 0.06em;
+          margin-top: 0.56vw;
         }
       }
       .project-tracklist {
         @media screen and (min-device-width: $desktop-size) {
-          margin-top: 14px;
+          margin-top: 0.97vw;
         }
         @media screen and (max-device-width: $desktop-size) {
           margin-top: 8px;
@@ -132,45 +139,64 @@
           align-items: center;
           justify-content: space-between;
           width: 100%;
-          height: 58px;
           border-bottom: 1px solid $light-grey;
 
+          @media screen and (min-device-width: $desktop-size) {
+            height: 4.03vw;
+          }
+          @media screen and (max-device-width: $desktop-size) {
+            height: 58px;
+          }
           .track-informations {
             display: flex;
             align-items: center;
-            font-size: 16px;
+            font-size: 0.9em;
             font-weight: 600;
             .track-number {
-              font-size: 18px;
+              font-size: 1em;
               font-weight: normal;
               line-height: 1.56;
-              margin-right: 8px;
+              @media screen and (min-device-width: $desktop-size) {
+                margin-right: 0.56vw;
+              }
+              @media screen and (max-device-width: $desktop-size) {
+                margin-right: 8px;
+              }
             }
             .track-separator {
-              height: 1px;
               border: none;
               margin: 0;
               background-color: $gold;
-              width: 24px;
-              margin-right: 8px;
+              @media screen and (min-device-width: $desktop-size) {
+                width: 1.67vw;
+                margin-right: 0.56vw;
+                height: 0.07vw;
+              }
+              @media screen and (max-device-width: $desktop-size) {
+                width: 24px;
+                margin-right: 8px;
+                height: 1px;
+              }
             }
           }
 
           .playing-indicators {
-            font-size: 16px;
+            font-size: 0.9em;
 
             .play-button {
               display: flex;
               align-items: center;
               cursor: pointer;
               img {
-                width: 20px;
-                height: 20px;
                 text-decoration: none;
                 @media screen and (min-device-width: $desktop-size) {
+                  width: 1.39vw;
+                  height: 1.39vw;
                   margin-right: 5px;
                 }
                 @media screen and (max-device-width: $desktop-size) {
+                  width: 20px;
+                  height: 20px;
                 }
               }
               span {
@@ -185,8 +211,14 @@
               display: flex;
               align-items: center;
               img {
-                width: 24px;
-                height: 24px;
+                @media screen and (min-device-width: $desktop-size) {
+                  width: 1.67vw;
+                  height: 1.67vw;
+                }
+                @media screen and (max-device-width: $desktop-size) {
+                  width: 24px;
+                  height: 24px;
+                }
               }
               span {
                 @media screen and (max-device-width: $desktop-size) {
@@ -199,21 +231,22 @@
         }
       }
       .project-download-button {
-        height: 40px;
         background-color: $black;
         color: $white;
         font-family: 'Montserrat';
-        font-size: 16px;
+        font-size: 0.9em;
         font-weight: 500;
         border: none;
         cursor: pointer;
         padding: none;
         @media screen and (min-device-width: $desktop-size) {
-          width: 171px;
-          margin-top: 66px;
-          margin-left: calc(100% - 171px);
+          height: 2.78vw;
+          width: 11.875vw;
+          margin-top: 4.58vw;
+          margin-left: calc(100% - 11.875vw);
         }
         @media screen and (max-device-width: $desktop-size) {
+          height: 40px;
           margin-top: 48px;
           width: 100%;
         }
@@ -236,8 +269,6 @@
       justify-content: center;
       user-select: none;
 
-      height: 13.3vw;
-      width: 13.3vw;
       .navigation-arrow {
         height: 14px;
         width: 14px;

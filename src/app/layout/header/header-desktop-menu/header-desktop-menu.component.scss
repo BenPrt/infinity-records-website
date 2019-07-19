@@ -1,35 +1,31 @@
 @import 'src/app/utils/_styleVariables';
 
 :host {
-  margin-bottom: 200px;
+  margin-bottom: 13.89vw;
   #desktop-settings-wrapper {
     width: 100vw;
-    height: 68px;
+    height: 4.72vw;
   }
 
   #menu-wrapper {
     width: 100vw;
-    height: 204px;
+    height: 14.17vw;
     background-color: $white;
     border-bottom: 1px solid $light-grey;
 
     #menu-container {
-      width: 1300px;
-      height: 116px;
-      padding-top: 32px;
-      margin-left: calc((100% - 1300px) / 2);
+      width: 92.86vw;
+      height: 8.06vw;
+      padding-top: 2.22vw;
+      margin-left: calc((100% - 92.86vw) / 2);
       display: flex;
       justify-content: center;
       align-items: center;
 
-      &.sticky {
-        border: 1px solid red;
-      }
-
       #menu-left-part,
       #menu-right-part {
-        width: 500px;
-        height: 116px;
+        width: 34.72vw;
+        height: 8.06vw;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -39,7 +35,7 @@
         display: flex;
         flex-direction: column;
         text-decoration: none;
-        width: 132px;
+        width: 9.17vw;
         align-items: flex-end;
         &:focus {
           outline: none;
@@ -51,15 +47,15 @@
           color: $black;
           letter-spacing: 0.15em;
           line-height: 1.56;
-          height: 28px;
-          margin-top: 10px;
-          font-size : 18px;
+          height: 1.94vw;
+          margin-top: 0.69vw;
+          font-size : 1em;
         }
 
         #menu-indicator {
           position: relative;
-          width: 72px;
-          height: 4px;
+          width: 5vw;
+          height: 0.28vw;
           background-color: $gold;
           border: none;
           margin: 0;
@@ -69,7 +65,7 @@
       }
 
       #menu-logo {
-        width: 300px;
+        width: 20.83em;
         text-align: center;
 
         #menu-logo-logo {
@@ -81,11 +77,11 @@
           font-family: Kano;
           font-weight: normal;
           letter-spacing: 0.228em;
-          font-size: 20px;
+          font-size: 1.3125vw;
           user-select: none;
           display: block;
-          margin-top: 6px;
-          height: 28px;
+          margin-top: 0.42vw;
+          height: 1.94vw;
           line-height: 1.4;
         }
       }

@@ -6,7 +6,7 @@
   #footer-wrapper {
     background-color: $white;
     @media screen and (min-device-width: $desktop-size) {
-      height: 152px;
+      height: 10.56vw;
     }
     @media screen and (max-device-width: $desktop-size) {
       width: 100%;
@@ -14,9 +14,9 @@
 
     #footer-container {
       @media screen and (min-device-width: $desktop-size) {
-        height: 152px;
-        width: 1300px;
-        margin-left: calc((100% - 1300px) / 2);
+        height: 10.56vw;
+        width: 90.28vw;
+        margin-left: calc((100% - 90.28vw) / 2);
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -28,14 +28,14 @@
 
       #logo-line-wrapper {
         @media screen and (min-device-width: $desktop-size) {
-          width: 388px;
+          width: 26.95vw;
         }
         @media screen and (max-device-width: $desktop-size) {
           margin-top: 48px;
         }
         #logo-line {
           @media screen and (min-device-width: $desktop-size) {
-            width: 300px;
+            width: 20.83vw;
           }
           @media screen and (max-device-width: $desktop-size) {
             width: 256px;
@@ -48,9 +48,9 @@
         }
         .social-media-link {
           @media screen and (min-device-width: $desktop-size) {
-            width: 40px;
-            height: 40px;
-            margin-right: 16px;
+            width: 2.78vw;
+            height: 2.78vw;
+            margin-right: 1.11vw;
           }
           @media screen and (max-device-width: $desktop-size) {
             width: 40px;
@@ -59,24 +59,25 @@
           }
 
           .social-media-icon {
-            width: 40px;
-            height: 40px;
+            @media screen and (min-device-width: $desktop-size) {
+              width: 2.78vw;
+              height: 2.78vw;
+            }
+            @media screen and (max-device-width: $desktop-size) {
+              width: 40px;
+              height: 40px;
+            }
           }
         }
         :last-child {
-          @media screen and (min-device-width: $desktop-size) {
             margin-right: 0px;
-          }
-          @media screen and (max-device-width: $desktop-size) {
-            margin-right: 0px;
-          }
         }
       }
       #rights-part {
-        font-size: 14px;
+        font-size: 0.8em;
         color: $grey;
         @media screen and (min-device-width: $desktop-size) {
-          width: 388px;
+          width: 26.94vw;
         }
         @media screen and (max-device-width: $desktop-size) {
           width: 239px;

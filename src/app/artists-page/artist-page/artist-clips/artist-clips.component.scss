@@ -17,7 +17,7 @@
     #clips-second-layer {
       border-left: 2px solid $very-light-grey;
       @media screen and (min-device-width: $desktop-size) {
-        height: calc(104px + 20.42vw + 114px);
+        height: calc(104px + 20.42vw + 7.92vw);
         width: 30.83vw;
         margin-left: 20.49vw;
       }
@@ -30,7 +30,7 @@
     #clips-third-layer {
       background-color: $very-light-grey;
       @media screen and (min-device-width: $desktop-size) {
-        height: calc(104px + 20.42vw + 114px);
+        height: calc(104px + 20.42vw + 7.92vw);
         width: 23.125vw;
       }
       @media screen and (max-device-width: $desktop-size) {
@@ -46,10 +46,10 @@
     @media screen and (min-device-width: $desktop-size) {
       width: 82.29vw;
       margin-left: calc(12.57vw + 2px);
-      padding-top: 104px;
-      padding-bottom: 114px;
+      padding-top: 7.22vw;
+      padding-bottom: 7.92vw;
       height: 20.42vw;
-      margin-top: calc(-104px - 20.42vw - 114px);
+      margin-top: calc(-7.22vw - 20.42vw - 7.92vw);
     }
     @media screen and (max-device-width: $desktop-size) {
       margin-left: 12.23vw;
@@ -60,19 +60,26 @@
       margin-top : calc(-64px - 42.82vw - 24px - 42.82vw - 64px);
     }
     #clips-title {
-      height: 20px;
-      margin-left: -21px;
-      margin-top: 23px;
-      font-size: 18px;
+      font-size: 1em;
       font-weight: bold;
-      letter-spacing: 2px;
+      letter-spacing: 0.11em;
       transform: rotate(90deg);
+      @media screen and (min-device-width: $desktop-size) {
+        height: 1.39vw;
+        margin-left: -1.46vw;
+        margin-top: 1.60vw;  
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        height: 20px;
+        margin-left: -21px;
+        margin-top: 23px;  
+      }
     }
 
     #clips-clips-wrapper{
       display : flex;
       @media screen and (min-device-width: $desktop-size) {
-        width : calc(100% - 109px);
+        width : calc(100% - 7.57vw);
         height : 20.42vw;
         flex-direction: row;
         justify-content: space-between;
