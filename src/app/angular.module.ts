@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxCaptchaModule } from 'ngx-captcha';
+import { LazyLoadImageModule, intersectionObserverPreset } from 'ng-lazyload-image';
 
 import { TranslationPipe } from './shared/pipes/translation.pipe';
 import { LocaleDatePipe } from './shared/pipes/localeDate.pipe';
@@ -19,6 +20,9 @@ import { RouterModule } from '@angular/router';
     ReactiveFormsModule,
     NgxCaptchaModule,
     RouterModule,
+    LazyLoadImageModule.forRoot({
+      preset: intersectionObserverPreset,
+    }),
   ],
   exports: [
     HttpClientModule,
@@ -28,6 +32,7 @@ import { RouterModule } from '@angular/router';
     TranslationPipe,
     LocaleDatePipe,
     RouterModule,
+    LazyLoadImageModule,
   ],
 })
 export class AngularModule {}

@@ -226,7 +226,13 @@
                   }
                 }
               }
-              .artist-item-logo {
+              .artist-item-logo-wrapper {
+                display : flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                
                 @media screen and (min-device-width: $desktop-size) {
                   height: 7.71vw;
                   width: 7.71vw;
@@ -234,6 +240,14 @@
                 @media screen and (max-device-width: $desktop-size) {
                   height: 29.52vw;
                   width: 29.52vw;
+                }
+                .artist-item-logo {
+                  @media screen and (min-device-width: $desktop-size) {
+                    height: 7.71vw;
+                     }
+                  @media screen and (max-device-width: $desktop-size) {
+                    height: 29.52vw;
+                    }
                 }
               }
             }

@@ -139,7 +139,6 @@
         }
         @media screen and (max-device-width: $desktop-size) {
           height: 91.49vw;
-          width: 91.49vw;
         }
       }
     }
@@ -246,9 +245,15 @@
         }
       }
     }
-    #artist-logo-picture {
+    #artist-logo-picture-wrapper {
       position: relative;
       z-index: 2;
+      display : flex;
+      flex-direction: column;
+      overflow: hidden;
+      justify-content: center;
+      align-items: center;
+
       @media screen and (min-device-width: $desktop-size) {
         width: 20.9vw;
         height: 20.9vw;
@@ -260,6 +265,14 @@
         margin-top: calc(16px - 23.4vw);
         margin-left: calc(100vw - 23.4vw);
       }
+    #artist-logo-picture {
+      @media screen and (min-device-width: $desktop-size) {
+        height: 20.9vw;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        height: 23.4vw;
+      }
+    }
     }
     #artist-description-wrapper {
       position: relative;

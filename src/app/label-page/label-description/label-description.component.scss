@@ -43,7 +43,12 @@
         margin-left: calc((100% - 35.64vw - 16px - 35.64vw) / 2);
       }
 
-      .left-picture {
+      .left-picture-wrapper {
+        display : flex;
+        align-items: center;
+        overflow: hidden;
+        justify-content: center;
+        flex-direction : column;
         @media screen and (min-device-width: $desktop-size) {
           height: 20.9vw;
           width: 20.9vw;
@@ -52,6 +57,14 @@
           height: 35.64vw;
           width: 35.64vw;
         }
+        .left-picture {
+          @media screen and (min-device-width: $desktop-size) {
+            height: 20.9vw;
+          }
+          @media screen and (max-device-width: $desktop-size) {
+            height: 35.64vw;
+          }
+      }
       }
     }
 
@@ -187,10 +200,10 @@
 
   #description-bottom-picture {
     @media screen and (min-device-width: $desktop-size) {
-      width: 100vw;
+      height : 56.25vw;
     }
     @media screen and (max-device-width: $desktop-size) {
-      height: 100%;
+      height: 75vw;
     }
   }
   #bottom-picture-gradient {

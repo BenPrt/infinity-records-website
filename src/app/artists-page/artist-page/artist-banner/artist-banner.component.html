@@ -14,7 +14,7 @@
       <h2 id="artist-name">{{ artist.name }}</h2>
     </div>
     <div id="artist-cover-picture-wrapper">
-      <img id="artist-cover-picture" alt="{{ artist.name }} cover picture" src="{{ getArtistCoverPicture() }}" />
+      <img id="artist-cover-picture" alt="{{ artist.name }} cover picture" [defaultImage]="'assets/img/loading.gif'" [lazyLoad]="getArtistCoverPicture()" />
     </div>
     <div id="picture-gradient"></div>
     <div id="artist-socials-wrapper">
@@ -66,11 +66,14 @@
         </a>
       </div>
     </div>
+    <div id="artist-logo-picture-wrapper">
     <img
       id="artist-logo-picture"
       alt="{{ artist.name }} logo picture"
-      src="{{ artist.logo_picture !== '' ? artist.logo_picture : 'assets/img/artists/default_logo.jpg' }}"
+      [defaultImage]="'assets/img/loading.gif'" 
+      [lazyLoad]="artist.logo_picture !== '' ? artist.logo_picture : 'assets/img/artists/default_logo.jpg'"
     />
+  </div>
     <div id="artist-description-wrapper">
       <hr id="description-separator" />
       <p id="artist-description">{{ artist.description | translation }}</p>

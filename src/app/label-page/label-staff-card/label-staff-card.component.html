@@ -16,7 +16,7 @@
     <img
       id="member-picture"
       alt="{{ member.name }}\'s picture"
-      src="{{ member.picture }}"
+      [defaultImage]="'assets/img/loading.gif'" [lazyLoad]="member.picture"
       [ngClass]="{ blurred: quoteIsDisplayed }"
     />
     <div id="member-picture-gradient"></div>

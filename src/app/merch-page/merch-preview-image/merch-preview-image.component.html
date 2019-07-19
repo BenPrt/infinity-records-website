@@ -7,7 +7,7 @@
   <img
     class="preview-picture"
     alt="{{ currentProduct.title | translation }} preview {{ currentProduct.declinations.indexOf(declination) + 1 }}"
-    [src]="declination.picture"
+    [defaultImage]="'assets/img/loading.gif'" [lazyLoad]="declination.picture"
     [ngClass]="{ blurred: detailsAreDisplayed }"
   />
   <div class="details-overlay" *ngIf="detailsAreDisplayed" [@details-fade]>
