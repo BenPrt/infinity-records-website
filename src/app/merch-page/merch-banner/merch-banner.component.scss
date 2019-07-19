@@ -3,9 +3,9 @@
 :host {
   display: block;
   width: 100vw;
-  position : relative;
+  position: relative;
   @media screen and (min-device-width: $desktop-size) {
-    height: 751px;
+    height: 52.15vw;
   }
   @media screen and (max-device-width: $desktop-size) {
     height: 501px;
@@ -16,12 +16,12 @@
     z-index: 0;
     width: 100vw;
     overflow: hidden;
-    display : flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     @media screen and (min-device-width: $desktop-size) {
-      height: 751px;
+      height: 52.15vw;
     }
     @media screen and (max-device-width: $desktop-size) {
       display: flex;
@@ -32,11 +32,9 @@
     #banner-image {
       @media screen and (min-device-width: $desktop-size) {
         width: 100vw;
-        // change margin to recenter image in container
-        margin: 0;
       }
       @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
-        width : 100vw;
+        width: 100vw;
       }
       @media screen and (max-device-width: $tablet-size) {
         height: 501px;
@@ -50,7 +48,7 @@
     display: flex;
     align-items: flex-end;
     @media screen and (min-device-width: $desktop-size) {
-      height: 751px;
+      height: 52.15vw;
     }
     @media screen and (max-device-width: $desktop-size) {
       height: 501px;
@@ -60,7 +58,7 @@
       display: block;
       color: $white;
       @media screen and (min-device-width: $desktop-size) {
-        width: 412px;
+        width: 28.61vw;
         margin: 0 auto 216px auto;
       }
       @media screen and (max-device-width: $desktop-size) {
@@ -68,41 +66,47 @@
         margin: 0 auto 59px auto;
       }
       #text-title {
-        font-size: 16px;
+        font-size: 0.9em;
         font-weight: bold;
-        letter-spacing: 2px;
+        letter-spacing: 0.11em;
       }
       #text-subtitle {
-        margin-top: 10px;
         line-height: 1.27;
         font-weight: normal;
         @media screen and (min-device-width: $desktop-size) {
-          font-size: 44px;
+          margin-top: 0.69vw;
+          font-size: 2.44em;
         }
         @media screen and (max-device-width: $desktop-size) {
+          margin-top: 10px;
           font-size: 32px;
         }
       }
       #text-description {
-        margin-top: 15px;
-        font-size: 18px;
+        font-size: 1em;
         font-weight: 500;
         line-height: 1.56;
+        @media screen and (min-device-width: $desktop-size) {
+          margin-top: 1.04vw;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          margin-top: 15px;
+        }
       }
     }
 
     #page-navigator {
       position: absolute;
-      width: 301px;
-      height: 150px;
+      width: 20.9vw;
+      height: 10.42vw;
       right: 12.5%;
       background-color: $white;
       display: flex;
       justify-content: space-between;
 
       .page-button {
-        height: 150px;
-        width: 150px;
+        height: 10.42vw;
+        width: 10.42vw;
         cursor: pointer;
         background-color: $very-light-grey;
         display: flex;
@@ -110,8 +114,8 @@
         justify-content: center;
         user-select: none;
         .navigation-arrow {
-          width: 40px;
-          height: 40px;
+          width: 2.78vw;
+          height: 2.78vw;
         }
       }
 

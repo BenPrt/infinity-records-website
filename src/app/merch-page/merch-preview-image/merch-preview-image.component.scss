@@ -1,7 +1,7 @@
 @import 'src/app/utils/_styleVariables';
 
 #preview-image-wrapper {
-  display : flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -88,16 +88,16 @@
         margin-top: calc(-67.5vw - 4px);
       }
       .description-title {
-        margin-left: 32px;
-        font-size: 14px;
+        font-size: 0.8em;
         font-weight: bold;
-        letter-spacing: 2px;
+        letter-spacing: 0.11em;
         @media screen and (min-device-width: $desktop-size) {
+          margin-left: 2.22vw;
           margin-top: 7.57vw;
-          margin-bottom: 3px;
+          margin-bottom: 0.21vw;
         }
         @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
-          margin-top: 20vw;          
+          margin-top: 20vw;
           font-size: 1.3em;
           margin-bottom: 5px;
         }
@@ -107,27 +107,31 @@
         }
       }
       .description-color {
-        margin-left: 32px;
-        height: 32px;
-        font-size: 24px;
+        font-size: 1.33em;
         font-weight: 600;
         line-height: 1.33;
+        @media screen and (min-device-width: $desktop-size) {
+          margin-left: 2.22vw;
+          height: 2.22vw;
+        }
         @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
-          margin-top : 8px;
+          height: 32px;
+          margin-top: 8px;
+          margin-left: 32px;
           font-size: 2em;
         }
       }
       .sold-out-banner {
         width: 100%;
         text-align: center;
-        height: 40px;
-        line-height: 40px;
-        font-size: 18px;
+        font-size: 1em;
         font-weight: 600;
         background-color: $black;
         color: $gold;
         @media screen and (min-device-width: $desktop-size) {
-          margin-top: 40px;
+          height: 2.78vw;
+          line-height: 2.78vw;
+          margin-top: 2.78vw;
         }
         @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
           height: 10vw;

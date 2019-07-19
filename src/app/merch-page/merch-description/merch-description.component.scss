@@ -7,7 +7,7 @@ $totalHeight: 865px;
     border-right: 2px solid $very-light-grey;
     @media screen and (min-device-width: $desktop-size) {
       width: 87.5vw;
-      height: 683px;
+      height: 47.43vw;
     }
     @media screen and (max-device-width: $desktop-size) {
       width: calc(100vw - 12.23vw - 2px);
@@ -16,9 +16,9 @@ $totalHeight: 865px;
     #description-second-layer {
       background-color: $very-light-grey;
       @media screen and (min-device-width: $desktop-size) {
-        width: calc(100% - 301px);
-        height: calc(683px - 80px);
-        padding-top: 80px;
+        width: calc(100% - 20.9vw);
+        height: calc(47.43vw - 5.56vw);
+        padding-top: 5.56vw;
       }
       @media screen and (max-device-width: $desktop-size) {
         width: calc(100% - 50px);
@@ -27,8 +27,8 @@ $totalHeight: 865px;
 
       #text-zone {
         @media screen and (min-device-width: $desktop-size) {
-          width: 412px;
-          margin-left: calc((100vw - 1300px) / 2);
+          width: 28.61vw;
+          margin-left: calc((100vw - 90.28vw) / 2);
         }
         @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
           width: calc(100% - 32px);
@@ -42,15 +42,15 @@ $totalHeight: 865px;
           line-height: 1.27;
           font-weight: normal;
           @media screen and (min-device-width: $desktop-size) {
-            font-size: 44px;
+            font-size: 2.44em;
           }
           @media screen and (max-device-width: $desktop-size) {
-            font-size: 32px;
+            font-size: 2em;
           }
         }
         #products-indicators {
           @media screen and (min-device-width: $desktop-size) {
-            margin-top: 32px;
+            margin-top: 2.22vw;
           }
           @media screen and (max-device-width: $desktop-size) {
             margin-top: 24px;
@@ -59,17 +59,22 @@ $totalHeight: 865px;
             display: inline-block;
             cursor: pointer;
             color: $black;
-            margin-right: 24px;
-            font-size: 18px;
+            font-size: 1em;
             line-height: 1.56;
             user-select: none;
+            @media screen and (min-device-width: $desktop-size) {
+              margin-right: 1.67vw;
+            }
+            @media screen and (max-device-width: $desktop-size) {
+              margin-right: 24px;
+            }
           }
         }
         #product-title {
-          font-size: 32px;
+          font-size: 2em;
           font-weight: 600;
           @media screen and (min-device-width: $desktop-size) {
-            margin-top: 56px;
+            margin-top: 3.89vw;
           }
           @media screen and (max-device-width: $desktop-size) {
             margin-top: calc(32px + 56.65vw + 40px);
@@ -79,38 +84,47 @@ $totalHeight: 865px;
         #product-informations {
           list-style-type: none;
           padding: 0;
-          margin: 24px 0 0 0;
           @media screen and (min-device-width: $desktop-size) {
-            height: 94px;
-            width: 500px;
+            height: 6.67vw;
+            width: 34.72vw;
             columns: 2;
             -webkit-columns: 2;
             -moz-columns: 2;
+            margin: 1.67vw 0 0 0;
+          }
+          @media screen and (max-device-width: $desktop-size) {
+            margin: 24px 0 0 0;
           }
           .product-information {
-            font-size: 16px;
+            font-size: 0.9em;
             line-height: 1.63;
             @media screen and (min-device-width: $desktop-size) {
-              width: 250px;
-              margin: 0 0 8px 0;
+              height: 1.67vw;
+              width: 17.36vw;
+              margin: 0 0 0.56vw 0;
             }
             @media screen and (max-device-width: $desktop-size) {
               margin: 0 0 8px 0;
             }
             span {
               color: $gold;
-              margin-right: 5px;
+              @media screen and (min-device-width: $desktop-size) {
+                margin-right: 0.35vw;
+              }
+              @media screen and (max-device-width: $desktop-size) {
+                margin-right: 5px;
+              }
             }
           }
         }
         #product-colors {
-          height: 24px;
           display: flex;
           justify-content: space-between;
           align-items: center;
           @media screen and (min-device-width: $desktop-size) {
-            width: 440px;
-            margin-top: 50px;
+            height: 1.67vw;
+            width: 30.56vw;
+            margin-top: calc(3.47vw - 0.56vw);
           }
           @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
             width: 59.04vw;
@@ -123,47 +137,62 @@ $totalHeight: 865px;
           }
 
           #black-square {
-            width: 24px;
-            height: 24px;
             background-color: $black;
+            @media screen and (min-device-width: $desktop-size) {
+              width: 1.67vw;
+              height: 1.67vw;
+            }
+            @media screen and (max-device-width: $desktop-size) {
+              width: 24px;
+              height: 24px;
+            }
           }
           #white-square {
-            width: 24px;
-            height: 24px;
             background-color: $white;
+            @media screen and (min-device-width: $desktop-size) {
+              width: 1.67vw;
+              height: 1.67vw;
+            }
+            @media screen and (max-device-width: $desktop-size) {
+              width: 24px;
+              height: 24px;
+            }
           }
           #gold-separator {
-            height: 1px;
             border: none;
             margin: 0;
             background-color: $gold;
             @media screen and (min-device-width: $desktop-size) {
-              width: 185px;
+              height: 0.07vw;
+              width: 12.85vw;
             }
             @media screen and (max-device-width: $desktop-size) {
+              height: 1px;
               width: 17vw;
             }
           }
           #color-text {
-            font-size: 14px;
+            font-size: 0.8em;
           }
         }
         #see-more-button {
-          width: 140px;
-          height: 40px;
           border: 1px solid $black;
           color: $black;
           background-color: $very-light-grey;
           text-align: center;
-          font-size: 16px;
+          font-size: 0.9em;
           font-weight: 500;
-          letter-spacing: 2px;
+          letter-spacing: 0.11em;
           cursor: pointer;
 
           @media screen and (min-device-width: $desktop-size) {
-            margin-top: 72px;
+            width: 9.72vw;
+            height: 2.78vw;
+            margin-top: 5vw;
           }
           @media screen and (max-device-width: $desktop-size) {
+            width: 140px;
+            height: 40px;
             margin-top: 48px;
             margin-bottom: 56px;
           }
@@ -176,10 +205,10 @@ $totalHeight: 865px;
     #product-picture-container {
       @media screen and (min-device-width: $desktop-size) {
         position: relative;
-        margin-top: -545px;
-        margin-left: calc(100% - 633px);
-        width: 634px;
-        height: 475px;
+        margin-top: -37.85vw;
+        margin-left: calc(100% - 43.96vw);
+        width: 44.03vw;
+        height: 32.99vw;
       }
       @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
         position: relative;
@@ -198,8 +227,8 @@ $totalHeight: 865px;
 
       #product-picture {
         @media screen and (min-device-width: $desktop-size) {
-          width: 634px;
-          height: 475px;
+          width: 44.03vw;
+          height: 32.99vw;
         }
         @media screen and (max-device-width: $desktop-size) {
           width: 75.53vw;
@@ -265,7 +294,12 @@ $totalHeight: 865px;
   }
   100% {
     opacity: 0;
-    margin-left: -16px;
+    @media screen and (min-device-width: $desktop-size) {
+      margin-left: -1.11vw;
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      margin-left: -16px;
+    }
   }
 }
 @keyframes fadeOutPrevious {
@@ -275,7 +309,12 @@ $totalHeight: 865px;
   }
   100% {
     opacity: 0;
-    margin-left: 16px;
+    @media screen and (min-device-width: $desktop-size) {
+      margin-left: 1.11vw;
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      margin-left: 16px;
+    }
   }
 }
 
@@ -299,7 +338,12 @@ $totalHeight: 865px;
 @keyframes fadeInNext {
   0% {
     opacity: 0;
-    margin-left: 16px;
+    @media screen and (min-device-width: $desktop-size) {
+      margin-left: 1.11vw;
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      margin-left: 16px;
+    }
   }
   100% {
     opacity: 1;
@@ -309,7 +353,12 @@ $totalHeight: 865px;
 @keyframes fadeInPrevious {
   0% {
     opacity: 0;
-    margin-left: -16px;
+    @media screen and (min-device-width: $desktop-size) {
+      margin-left: -1.11vw;
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      margin-left: -16px;
+    }
   }
   100% {
     opacity: 1;
