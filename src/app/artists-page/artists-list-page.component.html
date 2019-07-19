@@ -15,16 +15,18 @@
             </div>
             <div class="artist-item-content-wrapper">
               <div class="artist-item-content">
-                  <hr class="artist-item-content-separator" />
-                  <p class="artist-item-type">{{artist.type | uppercase}}</p>
-                  <h2 class="artist-item-name">{{artist.name}}</h2>
+                <hr class="artist-item-content-separator" />
+                <p class="artist-item-type">{{ artist.type | uppercase }}</p>
+                <h2 class="artist-item-name">{{ artist.name }}</h2>
               </div>
-              <img
-                class="artist-item-logo"
-                alt="{{ artist.name }} Logo"
-                [defaultImage]="'assets/img/loading.gif'" 
-                [lazyLoad]="artist.logo_picture !== '' ? artist.logo_picture : 'assets/img/artists/default_logo.jpg'"
-              />
+              <div class="artist-item-logo-wrapper">
+                <img
+                  class="artist-item-logo"
+                  alt="{{ artist.name }} Logo"
+                  [defaultImage]="'assets/img/loading.gif'"
+                  [lazyLoad]="artist.logo_picture !== '' ? artist.logo_picture : 'assets/img/artists/default_logo.jpg'"
+                />
+              </div>
             </div>
           </a>
         </div>
