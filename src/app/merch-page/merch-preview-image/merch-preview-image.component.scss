@@ -98,12 +98,10 @@
         }
         @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
           margin-top: 20vw;
-          font-size: 1.3em;
           margin-bottom: 5px;
         }
         @media screen and (max-device-width: $tablet-size) {
-          margin-top: 18vw;
-          margin-bottom: 5px;
+          margin: 18.6vw 0 5px 32px;
         }
       }
       .description-color {
@@ -114,11 +112,10 @@
           margin-left: 2.22vw;
           height: 2.22vw;
         }
-        @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
+        @media screen and (max-device-width: $desktop-size) {
           height: 32px;
           margin-top: 8px;
           margin-left: 32px;
-          font-size: 2em;
         }
       }
       .sold-out-banner {
