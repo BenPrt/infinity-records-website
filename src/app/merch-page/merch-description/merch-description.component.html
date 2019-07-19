@@ -61,7 +61,7 @@
       visible: loading === 'loaded-previous' || loading === 'loaded-next'
     }"
   >
-    <img id="product-picture" alt="{{ currentProduct.title }} picture" [src]="currentProduct.picture" />
+    <img id="product-picture" alt="{{ currentProduct.title }} picture" [defaultImage]="'assets/img/loading.gif'" [lazyLoad]="currentProduct.picture" />
     <div id="page-navigator" *ngIf="isMobile">
       <div class="page-button" [ngClass]="{ disabled: isDisabled('previous') }" (click)="goToPreviousPage()">
         <img

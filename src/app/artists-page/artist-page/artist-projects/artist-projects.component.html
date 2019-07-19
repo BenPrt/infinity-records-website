@@ -13,7 +13,7 @@
     </div>
     <div *ngIf="currentProject" id="project-container">
         <div class="cover-and-player-container">
-          <img *ngIf="currentProject.coverPath !== ''" class="project-cover" alt="{{currentProject.title}} cover" src="{{currentProject.coverPath}}">
+          <img *ngIf="currentProject.coverPath !== ''" class="project-cover" alt="{{currentProject.title}} cover" [defaultImage]="'assets/img/loading.gif'" [lazyLoad]="currentProject.coverPath">
           <soundcloud-player [trackUrl]='getSoundcloudUrl()' [autoplay]='isSoundcloudAutoplay()'></soundcloud-player>
         </div>
       <div class="project-title-and-duration">

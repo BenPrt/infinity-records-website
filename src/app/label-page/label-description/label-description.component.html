@@ -1,8 +1,8 @@
 <div id="description-left-layer">
   <div id="left-content">
     <div id="left-pictures-wrapper">
-      <img class="left-picture" alt="Infinity Records Microphone Picture" src="assets/img/label/microphone.jpg" />
-      <img class="left-picture" alt="Infinity Records Desktop Picture" src="assets/img/label/desktop.jpg" />
+      <img class="left-picture" alt="Infinity Records Microphone Picture" [defaultImage]="'assets/img/loading.gif'" [lazyLoad]="'assets/img/label/microphone.jpg'" />
+      <img class="left-picture" alt="Infinity Records Desktop Picture" [defaultImage]="'assets/img/loading.gif'" [lazyLoad]="'assets/img/label/desktop.jpg'" />
     </div>
     <p id="left-description">{{ 'LABEL_TOP_DESCRIPTION' | translation }}</p>
     <ul id="left-description-list">
@@ -38,7 +38,7 @@
   <p id="right-description">{{ 'LABEL_RIGHT_DESCRIPTION' | translation }}</p>
 </div>
 <div id="description-bottom-wrapper">
-  <img id="description-bottom-picture" alt="Infinity Records Studio Picture" src="assets/img/label/studio.jpg" />
+  <img id="description-bottom-picture" alt="Infinity Records Studio Picture" [defaultImage]="'assets/img/loading.gif'" [lazyLoad]="'assets/img/label/studio.jpg'" />
   <div id="bottom-picture-gradient"></div>
 </div>
 <div id="bottom-picture-content">

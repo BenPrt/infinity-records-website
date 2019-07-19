@@ -1,6 +1,6 @@
 <div id="background-layer">
   <div id="banner-picture-wrapper">
-    <img id="banner-picture" alt="Banner Picture" src="assets/img/label/banner.jpg" />
+    <img id="banner-picture" alt="Banner Picture" [defaultImage]="'assets/img/loading.gif'" [lazyLoad]="'assets/img/label/banner.jpg'" />
   </div>
   <div id="banner-content">
     <h2 id="banner-page-title">{{ 'LABEL' | translation }}</h2>

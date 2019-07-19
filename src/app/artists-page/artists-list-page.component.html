@@ -22,7 +22,8 @@
               <img
                 class="artist-item-logo"
                 alt="{{ artist.name }} Logo"
-                src="{{ artist.logo_picture !== '' ? artist.logo_picture : 'assets/img/artists/default_logo.jpg' }}"
+                [defaultImage]="'assets/img/loading.gif'" 
+                [lazyLoad]="artist.logo_picture !== '' ? artist.logo_picture : 'assets/img/artists/default_logo.jpg'"
               />
             </div>
           </a>
