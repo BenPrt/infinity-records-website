@@ -151,7 +151,11 @@ export class AppComponent implements OnInit, AfterViewInit {
       if (this.isMobile) {
         this.defineViewPortSize();
         window.addEventListener('resize', () => {
-          console.log('resize triggered');
+          alert('resized');
+          this.defineViewPortSize();
+        });
+        window.addEventListener('orientationchange', () => {
+          alert('orientationchange');
           this.defineViewPortSize();
         });
 
@@ -162,7 +166,6 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   defineViewPortSize(): void {
-    alert('resized');
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
     const contentvh = (window.innerHeight - 81) * 0.01;
