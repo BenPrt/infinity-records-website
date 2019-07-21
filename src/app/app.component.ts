@@ -17,7 +17,7 @@ import { TranslationService } from 'src/app/shared/services/translation.service'
 import { MobileMenuEventsService } from './shared/services/mobile-menu-events.service';
 import { DeviceService } from './shared/services/device.service';
 import { ScrollService } from './shared/services/scroll.service';
-import { fromEvent } from 'rxjs';
+import { fromEvent, Subscription, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -68,6 +68,8 @@ export class AppComponent implements OnInit, AfterViewInit {
   // Offset amount to add to the page content when the header is sticky
   contentOffset: string = '0';
 
+  resizeSubscription: Subscription;
+
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
     private router: Router,
@@ -93,8 +95,8 @@ export class AppComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     this.initMobileScroll();
     if (!this.isBrowser) {
-      const source = fromEvent(this.content.nativeElement, 'load');
-      const result = source.pipe(debounceTime(1000)).subscribe(() => {
+      const source: Observable<any> = fromEvent(this.content.nativeElement, 'load');
+      const result : Subscription = source.pipe(debounceTime(1000)).subscribe(() => {
         this.interruptAnimation();
         result.unsubscribe();
       });
@@ -150,7 +152,9 @@ export class AppComponent implements OnInit, AfterViewInit {
     if (this.isBrowser) {
       if (this.isMobile) {
         this.defineViewPortSize();
-        window.addEventListener('resize', () => {
+        // window.addEventListener('resize', () => {});
+        const source = fromEvent(window, 'resize');
+        this.resizeSubscription = source.pipe(debounceTime(1000)).subscribe(() => {
           this.defineViewPortSize();
         });
 
