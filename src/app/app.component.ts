@@ -1,4 +1,13 @@
-import { Component, OnInit, ChangeDetectorRef, Inject, PLATFORM_ID, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ChangeDetectorRef,
+  Inject,
+  PLATFORM_ID,
+  AfterViewInit,
+  ElementRef,
+  ViewChild,
+} from '@angular/core';
 import { Location, isPlatformBrowser } from '@angular/common';
 import { Router, RouterEvent } from '@angular/router';
 import { animate, style, transition, trigger, state } from '@angular/animations';
@@ -140,21 +149,24 @@ export class AppComponent implements OnInit, AfterViewInit {
   initMobileSizing(): void {
     if (this.isBrowser) {
       if (this.isMobile) {
-        const vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-        const contentvh = (window.innerHeight - 81) * 0.01;
-        document.documentElement.style.setProperty('--contentvh', `${contentvh}px`);
+        this.defineViewPortSize();
         window.addEventListener('resize', () => {
-          const vh = window.innerHeight * 0.01;
-          document.documentElement.style.setProperty('--vh', `${vh}px`);
-          const contentvh = (window.innerHeight - 81) * 0.01;
-          document.documentElement.style.setProperty('--contentvh', `${contentvh}px`);
+          console.log('resize triggered');
+          this.defineViewPortSize();
         });
 
         const bodyElement = document.body;
         bodyElement.classList.add('mobile-body');
       }
     }
+  }
+
+  defineViewPortSize(): void {
+    alert('resized');
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    const contentvh = (window.innerHeight - 81) * 0.01;
+    document.documentElement.style.setProperty('--contentvh', `${contentvh}px`);
   }
 
   initAnimationState(): void {
