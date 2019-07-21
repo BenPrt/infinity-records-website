@@ -165,10 +165,6 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   defineViewPortSize(): void {
-    alert(window.innerHeight);
-    alert(self.innerHeight);
-    alert(parent.innerHeight);
-    alert(top.innerHeight);
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
     const contentvh = (window.innerHeight - 81) * 0.01;
