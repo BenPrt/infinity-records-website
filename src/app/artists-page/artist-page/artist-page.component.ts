@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ArtistInformations, TrackInformations } from 'src/app/models/artists-info';
 import { artistsInfos } from 'src/assets/content/artists-content';
 import { Subscription } from 'rxjs';
 import { DeviceService } from 'src/app/shared/services/device.service';
+import { ArtistsProjectsService } from 'src/app/shared/services/artists-projects.service';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-artist-page',
@@ -11,13 +13,24 @@ import { DeviceService } from 'src/app/shared/services/device.service';
   styleUrls: ['./artist-page.component.scss'],
 })
 export class ArtistPageComponent implements OnInit {
+  isBrowser: boolean;
+  loading: string = 'initial';
   artist: ArtistInformations;
   currentProjectId: number;
   playingTrack: TrackInformations;
   isMobile: boolean;
   deviceTypeSubscription: Subscription;
+  currentProjectIdSubscription: Subscription;
 
-  constructor(private route: ActivatedRoute, private deviceService: DeviceService, private router: Router) {}
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private route: ActivatedRoute,
+    private deviceService: DeviceService,
+    private router: Router,
+    private artistsService: ArtistsProjectsService,
+  ) {
+    this.isBrowser = isPlatformBrowser(platformId);
+  }
 
   ngOnInit(): void {
     this.initDeviceType();
@@ -52,12 +65,29 @@ export class ArtistPageComponent implements OnInit {
   }
 
   initCurrentProject(projectId: number): void {
-    console.log(projectId);
     this.currentProjectId = projectId;
+    this.artistsService.setCurrentProjectId(this.currentProjectId);
+    this.currentProjectIdSubscription = this.artistsService.currentProjectIdHasChanged.subscribe(
+      (currentId: number) => {
+        if (this.isBrowser) {
+          console.log(this.loading);
+          this.loading = currentId > this.currentProjectId ? 'loading-next' : 'loading-previous';
+          setTimeout(() => {
+            this.currentProjectId = currentId;
+            this.loading = this.loading === 'loading-next' ? 'loaded-next' : 'loaded-previous';
+          }, 300);
+        } else {
+          this.currentProjectId = currentId;
+        }
+      },
+    );
   }
 
   ngOnDestroy(): void {
     this.deviceTypeSubscription.unsubscribe();
+    if (this.currentProjectIdSubscription) {
+      this.currentProjectIdSubscription.unsubscribe();
+    }
   }
 
   playTrack(track: TrackInformations): void {

@@ -283,6 +283,7 @@ $totalHeight: 865px;
   }
 }
 
+
 // Animations part
 .hidden {
   animation: fadeOut 300ms linear;
@@ -301,32 +302,46 @@ $totalHeight: 865px;
     opacity: 0.2;
   }
 }
-@keyframes fadeOutNext {
-  0% {
-    opacity: 1;
-    margin-left: 0;
-  }
-  100% {
-    opacity: 0;
-    @media screen and (min-device-width: $desktop-size) {
+@media screen and (min-device-width: $desktop-size) {
+  @keyframes fadeOutNext {
+    0% {
+      opacity: 1;
+      margin-left: 0;
+    }
+    100% {
+      opacity: 0;
       margin-left: -1.11vw;
     }
-    @media screen and (max-device-width: $desktop-size) {
-      margin-left: -16px;
+  }
+  @keyframes fadeOutPrevious {
+    0% {
+      opacity: 1;
+      margin-left: 0;
+    }
+    100% {
+      opacity: 0;
+      margin-left: 1.11vw;
     }
   }
 }
-@keyframes fadeOutPrevious {
-  0% {
-    opacity: 1;
-    margin-left: 0;
-  }
-  100% {
-    opacity: 0;
-    @media screen and (min-device-width: $desktop-size) {
-      margin-left: 1.11vw;
+@media screen and (max-device-width: $desktop-size) {
+  @keyframes fadeOutNext {
+    0% {
+      opacity: 1;
+      margin-left: 0;
     }
-    @media screen and (max-device-width: $desktop-size) {
+    100% {
+      opacity: 0;
+      margin-left: -16px;
+    }
+  }
+  @keyframes fadeOutPrevious {
+    0% {
+      opacity: 1;
+      margin-left: 0;
+    }
+    100% {
+      opacity: 0;
       margin-left: 16px;
     }
   }
@@ -349,33 +364,47 @@ $totalHeight: 865px;
     opacity: 1;
   }
 }
-@keyframes fadeInNext {
-  0% {
-    opacity: 0;
-    @media screen and (min-device-width: $desktop-size) {
+@media screen and (min-device-width: $desktop-size) {
+  @keyframes fadeInNext {
+    0% {
+      opacity: 0;
       margin-left: 1.11vw;
     }
-    @media screen and (max-device-width: $desktop-size) {
-      margin-left: 16px;
+    100% {
+      opacity: 1;
+      margin-left: 0;
     }
   }
-  100% {
-    opacity: 1;
-    margin-left: 0;
-  }
-}
-@keyframes fadeInPrevious {
-  0% {
-    opacity: 0;
-    @media screen and (min-device-width: $desktop-size) {
+  @keyframes fadeInPrevious {
+    0% {
+      opacity: 0;
       margin-left: -1.11vw;
     }
-    @media screen and (max-device-width: $desktop-size) {
-      margin-left: -16px;
+    100% {
+      opacity: 1;
+      margin-left: 0;
     }
   }
-  100% {
-    opacity: 1;
-    margin-left: 0;
+}
+@media screen and (max-device-width: $desktop-size) {
+  @keyframes fadeInNext {
+    0% {
+      opacity: 0;
+      margin-left: 16px;
+    }
+    100% {
+      opacity: 1;
+      margin-left: 0;
+    }
+  }
+  @keyframes fadeInPrevious {
+    0% {
+      opacity: 0;
+      margin-left: -16px;
+    }
+    100% {
+      opacity: 1;
+      margin-left: 0;
+    }
   }
 }
