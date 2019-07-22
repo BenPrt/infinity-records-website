@@ -32,6 +32,15 @@
 	
 	"HOME_WELCOME" : "Welcome",
 	
+	"HOME_NEWS_TITLE" : "Stay up to date and check our latest news!",
+	
+	"HOME_NEWS_NEWS_TITLE" : "News",
+	"HOME_NEWS_NEWS_DESCRIPTION" : "Find out about our newest releases, new signatures and label actualities as soon as they're out!",	
+	"HOME_NEWS_EVENTS_TITLE" : "Events",
+	"HOME_NEWS_EVENTS_DESCRIPTION" : "Be aware of the upcoming concerts of our artists and tell us if you could make it !",	
+	"HOME_NEWS_CONTACT_TITLE" : "Contact",
+	"HOME_NEWS_CONTACT_DESCRIPTION" : "A question? A message for us ? Contact us through our social networks or through the form below !",
+	
 	
 
 	"LABEL_BANNER_TITLE_1" : "About",
