@@ -1,6 +1,7 @@
 import { Component, Input, AfterContentChecked, Output, EventEmitter } from '@angular/core';
 import { ArtistInformations, ProjectInformations, TrackInformations } from 'src/app/models/artists-info';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { ArtistsProjectsService } from 'src/app/shared/services/artists-projects.service';
 
 @Component({
   selector: 'artist-projects',
@@ -32,11 +33,12 @@ export class ArtistProjectsComponent implements AfterContentChecked {
   @Input() artist: ArtistInformations;
   @Input() isMobile: boolean;
   @Input() currentProjectId: number;
+  @Input() loading : string;
   @Input() playingTrack: TrackInformations;
   @Output() onPlay = new EventEmitter<TrackInformations>();
   currentProject: ProjectInformations;
 
-  constructor() {}
+  constructor(private artistsService : ArtistsProjectsService) {}
 
   ngAfterContentChecked(): void {
     this.initCurrentProject();
@@ -68,7 +70,7 @@ export class ArtistProjectsComponent implements AfterContentChecked {
   }
 
   goToProject(projectId: number): void {
-    this.currentProjectId = projectId + 1;
+    this.artistsService.setCurrentProjectId(projectId);
     this.initCurrentProject();
   }
 
@@ -115,14 +117,14 @@ export class ArtistProjectsComponent implements AfterContentChecked {
   goToPreviousProject(): void {
     const currentProjectIdx = this.getArtistProjects().indexOf(this.currentProject);
     if (currentProjectIdx > 0) {
-      this.goToProject(currentProjectIdx - 1);
+      this.artistsService.setCurrentProjectId(currentProjectIdx - 1);
     }
   }
 
   goToNextProject(): void {
     const currentProjectIdx = this.getArtistProjects().indexOf(this.currentProject);
     if (currentProjectIdx < this.getArtistProjects().length - 1) {
-      this.goToProject(currentProjectIdx + 1);
+      this.artistsService.setCurrentProjectId(currentProjectIdx + 1);
     }
   }
 }

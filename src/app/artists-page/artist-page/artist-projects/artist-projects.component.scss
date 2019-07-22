@@ -296,3 +296,106 @@
     }
   }
 }
+
+// Animations part
+.hidden-next {
+  animation: fadeOutNext 300ms linear;
+}
+.hidden-previous {
+  animation: fadeOutPrevious 300ms linear;
+}
+@media screen and (min-device-width: $desktop-size) {
+  @keyframes fadeOutNext {
+    0% {
+      opacity: 1;
+      margin-left: 0;
+    }
+    100% {
+      opacity: 0;
+      margin-left: -1.11vw;
+    }
+  }
+  @keyframes fadeOutPrevious {
+    0% {
+      opacity: 1;
+      margin-left: 0;
+    }
+    100% {
+      opacity: 0;
+      margin-left: 1.11vw;
+    }
+  }
+}
+@media screen and (max-device-width: $desktop-size) {
+  @keyframes fadeOutNext {
+    0% {
+      opacity: 1;
+      margin-left: 0;
+    }
+    100% {
+      opacity: 0;
+      margin-left: -16px;
+    }
+  }
+  @keyframes fadeOutPrevious {
+    0% {
+      opacity: 1;
+      margin-left: 0;
+    }
+    100% {
+      opacity: 0;
+      margin-left: 16px;
+    }
+  }
+}
+
+.visible-next {
+  animation: fadeInNext 300ms linear;
+}
+.visible-previous {
+  animation: fadeInPrevious 300ms linear;
+}
+@media screen and (min-device-width: $desktop-size) {
+  @keyframes fadeInNext {
+    0% {
+      opacity: 0;
+      margin-left: 1.11vw;
+    }
+    100% {
+      opacity: 1;
+      margin-left: 0;
+    }
+  }
+  @keyframes fadeInPrevious {
+    0% {
+      opacity: 0;
+      margin-left: -1.11vw;
+    }
+    100% {
+      opacity: 1;
+      margin-left: 0;
+    }
+  }
+}
+@media screen and (max-device-width: $desktop-size) {
+  @keyframes fadeInNext {
+    0% {
+      opacity: 0;
+      margin-left: 16px;
+    }
+    100% {
+      opacity: 1;
+      margin-left: 0;
+    }
+  }
+  @keyframes fadeInPrevious {
+    0% {
+      opacity: 0;
+      margin-left: -16px;
+    }
+    100% {
+      opacity: 1;
+      margin-left: 0;
+    }
+  }
+}

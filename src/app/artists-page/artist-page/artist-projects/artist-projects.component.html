@@ -5,13 +5,22 @@
       <p
         class="projects-indicator"
         *ngFor="let project of getArtistProjects(); let idx = index"
-        [@indicatorAnimation]="isCurrentProject(idx)"
+        [@indicatorAnimation]="(loading === 'initial' || loading.substring(0, 6) === 'loaded') && isCurrentProject(idx)"
         (click)="goToProject(idx)"
       >
         {{ '0' + (idx + 1) }}
       </p>
     </div>
-    <div *ngIf="currentProject" id="project-container">
+    <div
+      *ngIf="currentProject"
+      id="project-container"
+      [ngClass]="{
+        'hidden-next': loading === 'loading-next',
+        'visible-next': loading === 'loaded-next',
+        'hidden-previous': loading === 'loading-previous',
+        'visible-previous': loading === 'loaded-previous'
+      }"
+    >
       <div class="cover-and-player-container">
         <div *ngIf="currentProject.coverPath !== ''" class="project-cover-wrapper">
           <img
