@@ -5,7 +5,7 @@
         id="banner-picture"
         alt="Welcome Banner Picture"
         [defaultImage]="'assets/img/loading.gif'"
-        [lazyLoad]="'assets/img/home/banner.jpg'"
+        [lazyLoad]="isMobile ? 'assets/img/home/banner_mobile.jpg' : 'assets/img/home/banner.jpg'"
       />
       <div id="banner-picture-gradient"></div>
     </div>
