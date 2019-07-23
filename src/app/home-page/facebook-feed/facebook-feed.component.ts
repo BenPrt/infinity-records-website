@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, Inject, PLATFORM_ID, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, Inject, PLATFORM_ID, OnInit, ElementRef, Renderer } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { isPlatformBrowser } from '@angular/common';
 
@@ -19,7 +19,12 @@ export class FacebookFeedComponent implements OnInit {
     // tslint:disable-next-line:max-line-length
     'https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Finfinity.recxrds&tabs=timeline%2C%20events&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=474293569659442';
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object, private sanitizer: DomSanitizer) {
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private sanitizer: DomSanitizer,
+    private elRef: ElementRef,
+    private renderer: Renderer,
+  ) {
     this.isBrowser = isPlatformBrowser(platformId);
   }
 
@@ -65,6 +70,10 @@ export class FacebookFeedComponent implements OnInit {
     } else {
       this.finalWidth = String(pixelWidth);
     }
+
+    this.renderer.setElementStyle(this.elRef.nativeElement, 'width', `${this.finalWidth}px`);
+    this.renderer.setElementStyle(this.elRef.nativeElement, 'margin', `0 calc((100% - ${this.finalWidth}px) / 2)`);
+
     return this.finalWidth;
   }
 
