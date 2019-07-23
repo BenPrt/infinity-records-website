@@ -1,0 +1,21 @@
+<div id="news-first-layer">
+  <div id="news-second-layer">
+    <div id="news-content-layer">
+      <h2 id="news-content-title">{{ 'HOME_NEWS_TITLE' | translation }}</h2>
+      <div id="facebook-feed-container">
+        <div id="facebook-feed-wrapper">
+          <facebook-feed
+            [height]="isMobile ? '121.8vw' : '48.4vw'"
+            [width]="isMobile ? '84.04vw' : '36.32vw'"
+          ></facebook-feed>
+        </div>
+      </div>
+      <h3 class="news-content-item-title">{{ 'HOME_NEWS_NEWS_TITLE' | translation }}</h3>
+      <p class="news-content-item-description">{{ 'HOME_NEWS_NEWS_DESCRIPTION' | translation }}</p>
+      <h3 class="news-content-item-title">{{ 'HOME_NEWS_EVENTS_TITLE' | translation }}</h3>
+      <p class="news-content-item-description">{{ 'HOME_NEWS_EVENTS_DESCRIPTION' | translation }}</p>
+      <h3 class="news-content-item-title">{{ 'HOME_NEWS_CONTACT_TITLE' | translation }}</h3>
+      <p class="news-content-item-description">{{ 'HOME_NEWS_CONTACT_DESCRIPTION' | translation }}</p>
+    </div>
+  </div>
+</div>

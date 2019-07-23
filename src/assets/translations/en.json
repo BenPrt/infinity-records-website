@@ -28,7 +28,25 @@
 	"COPYRIGHT_1" : "Copyright © ",
 	"COPYRIGHT_2" : " Infinity Records. All rights reserved.",
 	
+	
+	
+	"HOME_WELCOME" : "Welcome",
+	
+	"HOME_NEWS_TITLE" : "Stay up to date and check our latest news!",
+	
+	"HOME_NEWS_NEWS_TITLE" : "News",
+	"HOME_NEWS_NEWS_DESCRIPTION" : "Find out about our newest releases, new signatures and label actualities as soon as they're out!",	
+	"HOME_NEWS_EVENTS_TITLE" : "Events",
+	"HOME_NEWS_EVENTS_DESCRIPTION" : "Be aware of the upcoming concerts of our artists and tell us if you could make it!",	
+	"HOME_NEWS_CONTACT_TITLE" : "Contact",
+	"HOME_NEWS_CONTACT_DESCRIPTION" : "A question? A message for us ? Contact us through our social networks or through the form below!",
+	
+	"HOME_LINKING_TITLE" : "Learn more about Infinity Records by browsing the other pages of the website.",
 
+	"HOME_LINKING_LABEL" : "Discover the label",
+	"HOME_LINKING_ARTISTS" : "Discover the artists",
+	"HOME_LINKING_MERCH" : "Discover our merch",
+		
 
 	"LABEL_BANNER_TITLE_1" : "About",
 	"LABEL_BANNER_TITLE_2" : "Infinity Records",
@@ -60,7 +78,7 @@
 	
 	
 	"ARTISTS_LIST_TOP_TITLE" : "Discover our talents...",
-	"ARTISTS_LIST_TOP_CONTENT" : "and check out about our artists, their musical universe and their actuality.",
+	"ARTISTS_LIST_TOP_CONTENT" : "Learn more about about our artists, their musical universe and their actuality.",
 	
 	
 	

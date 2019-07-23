@@ -1,0 +1,102 @@
+@import 'src/app/utils/_styleVariables';
+
+@media screen and (min-device-width: $desktop-size) {
+}
+@media screen and (max-device-width: $desktop-size) {
+}
+
+#news-first-layer {
+  border-left: 2px solid $very-light-grey;
+  border-right: 2px solid $very-light-grey;
+  @media screen and (min-device-width: $desktop-size) {
+    width: calc(-12.7vw - 2px + 100% - 2px - 12.7vw);
+    margin-left: 12.7vw;
+  }
+  @media screen and (max-device-width: $desktop-size) {
+    width: calc(-12.23vw - 2px + 100% - 2px - 12.23vw);
+    margin-left: 12.23vw;
+  }
+  #news-second-layer {
+    border-left: 2px solid $very-light-grey;
+
+    @media screen and (min-device-width: $desktop-size) {
+      margin-left: 20.625vw;
+      width: calc(-20.625vw - 2px + 100%);
+      padding-top: 10vw;
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      margin-left: 26.86vw;
+      width: calc(-26.86vw - 2px + 100%);
+      padding-top: 14.86vw;
+    }
+    #news-content-layer {
+      background-color: $very-light-grey;
+      @media screen and (min-device-width: $desktop-size) {
+        margin-left: calc(-20.625vw - 12.7vw - 2px + 25.76vw);
+        width: calc(-2px + 32.92vw - 2px);
+        padding: 6.11vw 6.67vw 6.11vw 22.08vw;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        margin-left: -2px;
+        width: 50vw;
+        padding: 14.86vw 6vw 14.86vw 4.26vw;
+      }
+
+      #news-content-title {
+        font-weight: 600;
+        line-height: 1.25;
+        @media screen and (min-device-width: $desktop-size) {
+          font-size: 32px;
+          margin-bottom: 1.67vw;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          font-size: 1.56em;
+        }
+      }
+
+      #facebook-feed-container {
+        @media screen and (min-device-width: $desktop-size) {
+          position: relative;
+        }
+        #facebook-feed-wrapper {
+          @media screen and (min-device-width: $desktop-size) {
+            position: absolute;
+            margin-top: calc(-1.67vw - 5.21vw - 6.11vw - 4.44vw);
+            margin-left: calc(-22.08vw - 25.76vw + 4.86vw);
+            width: 36.32vw;
+            height: 48.4vw;
+          }
+          @media screen and (max-device-width: $desktop-size) {
+            margin-top: 8.51vw;
+            margin-left: calc(-26.86vw - 2px - 12.23vw + 4.26vw);
+            width: 84.04vw;
+            height: 121.8vw;
+          }
+        }
+      }
+
+      .news-content-item-title {
+        font-size: 1.33em;
+        font-weight: 600;
+        line-height: 1.33;
+        @media screen and (min-device-width: $desktop-size) {
+          margin-top: 4.44vw;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          margin-top: 10.64vw;
+        }
+      }
+      .news-content-item-description {
+        font-size: 1em;
+        font-weight: normal;
+        line-height: 1.56;
+        @media screen and (min-device-width: $desktop-size) {
+          margin-top: 1.11vw;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          margin-top: 4.26vw;
+        }
+      }
+    }
+  }
+}
