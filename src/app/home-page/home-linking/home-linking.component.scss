@@ -1,0 +1,85 @@
+@import 'src/app/utils/_styleVariables';
+
+@media screen and (min-device-width: $desktop-size) {
+}
+@media screen and (max-device-width: $desktop-size) {
+}
+
+#linking-first-layer {
+  width: calc(100% - 12.7vw - 2px);
+  border-right: 2px solid $very-light-grey;
+  #linking-second-layer {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    height: calc(5.56vw + 5vw + 28.61vw + 2.22vw);
+    padding: 7.22vw 0 7.22vw 4.86vw;
+    width: calc(25.76vw + 2px - 4.86vw);
+    background-color: $very-light-grey;
+
+    #linking-title {
+      height: 5.56vw;
+      width: 51.74vw;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    #links-container {
+      margin-top: 5vw;
+      height: calc(28.61vw + 2.22vw);
+      width: calc(28.61vw + 2.22vw + 28.61vw + 2.22vw + 28.61vw);
+      display: flex;
+      justify-content: space-between;
+      .link-wrapper {
+        width: 28.61vw;
+        height: calc(28.61vw + 2.22vw);
+        margin-right: 2.22vw;
+        &:last-of-type {
+          margin-right: 0;
+        }
+        .link-router-link {
+          text-decoration: none;
+          .link-picture-wrapper {
+            width: 28.61vw;
+            height: 28.61vw;
+            display: flex;
+            overflow: hidden;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .link-picture {
+              width: 28.61vw;
+            }
+          }
+          .link-description {
+            position: relative;
+            width: 26.39vw;
+            margin-left: calc(100% - 26.39vw);
+            height: 5vw;
+            margin-top: calc(-5vw + 2.22vw);
+            background-color: $black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            h3 {
+              color: $white;
+              font-size: 0.9em;
+              letter-spacing: 0.11em;
+              font-weight: 500;
+              line-height: 1.63;
+            }
+          }
+        }
+      }
+    }
+  }
+  #linking-third-layer {
+    display: inline-block;
+    vertical-align: top;
+    height: calc(7.22vw + 5.56vw + 5vw + 28.61vw + 2.22vw + 7.22vw);
+    width: calc(-2px + 53.81vw - 2px);
+    margin-left: 7.57vw;
+    border-left: 2px solid $very-light-grey;
+  }
+}

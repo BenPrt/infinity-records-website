@@ -41,7 +41,12 @@
 	"HOME_NEWS_CONTACT_TITLE" : "Contact",
 	"HOME_NEWS_CONTACT_DESCRIPTION" : "A question? A message for us ? Contact us through our social networks or through the form below!",
 	
-	
+	"HOME_LINKING_TITLE" : "Learn more about Infinity Records by browsing the other pages of the website.",
+
+	"HOME_LINKING_LABEL" : "Discover the label",
+	"HOME_LINKING_ARTISTS" : "Discover the artists",
+	"HOME_LINKING_MERCH" : "Discover our merch",
+		
 
 	"LABEL_BANNER_TITLE_1" : "About",
 	"LABEL_BANNER_TITLE_2" : "Infinity Records",
