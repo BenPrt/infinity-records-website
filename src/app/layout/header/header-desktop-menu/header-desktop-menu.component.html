@@ -1,8 +1,4 @@
-<div id="desktop-settings-wrapper" [ngStyle]="settingsStyle">
-  <div id="desktop-settings-container" [@menuFade] *ngIf="menuIsDisplayed">
-    <desktop-settings-component></desktop-settings-component>
-  </div>
-</div>
+<desktop-settings-component [@menuFade] [ngStyle]="settingsStyle" *ngIf="menuIsDisplayed"></desktop-settings-component>
 
 <div id="menu-wrapper" [ngStyle]="menuWrapperStyle" [@menuBorderFade]="menuBorderState">
   <div id="menu-container" [ngStyle]="menuContainerStyle">
@@ -23,12 +19,7 @@
     </div>
 
     <div id="menu-logo" [@logoFade] [@scaleLogo]="scaleState">
-      <svg
-        id="menu-logo-logo"
-        [ngStyle]="menuLogoStyle"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 109 90"
-      >
+      <svg id="menu-logo-logo" [ngStyle]="menuLogoStyle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 109 90">
         <path
           stroke="#000"
           stroke-dashoffset="0"

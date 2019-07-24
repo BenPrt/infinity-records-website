@@ -235,11 +235,10 @@ export class AppComponent implements OnInit, AfterViewInit {
   onWindowScroll() {
     this.scrolledAmount = window.pageYOffset;
     this.scrollService.setScrolledAmount(this.scrolledAmount);
-    const scrollPercent = Math.round((this.scrolledAmount / document.body.clientWidth) * 100 * 100) / 100;
-    if (scrollPercent >= 0 && scrollPercent <= 4.72) {
+    if (this.scrolledAmount >= 0 && this.scrolledAmount <= 68) {
       this.contentOffset = '0';
-    } else if (scrollPercent > 4.72 && scrollPercent <= 10.83) {
-      this.contentOffset = '18.96vw';
+    } else if (this.scrolledAmount > 68 && this.scrolledAmount <= 156) {
+      this.contentOffset = '273px';
     }
   }
 

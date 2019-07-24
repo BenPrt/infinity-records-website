@@ -9,24 +9,20 @@
   #current-language-label {
     display: inline-block;
     font-weight: 500;
-    @media screen and (min-device-width: $tablet-size) {
-      margin-right: 0.83vw;
-    }
-    @media screen and (max-device-width: $tablet-size) {
-      margin-right: 12px;
-    }
+    font-size: 18px;
+    margin-right: 12px;
   }
   #current-language-arrow {
     display: inline-block;
     @media screen and (min-device-width: $tablet-size) {
       margin-right: 0.28vw;
-      width : 1.67vw;
-      height : 1.67vw;
+      width: 1.67vw;
+      height: 1.67vw;
     }
     @media screen and (max-device-width: $tablet-size) {
       margin-right: 4px;
-      width : 24px;
-      height : 24px;
+      width: 24px;
+      height: 24px;
     }
   }
 }
@@ -34,59 +30,30 @@
 #selection-menu-wrapper {
   position: absolute;
   z-index: 10;
-
-  @media screen and (min-device-width: $tablet-size) {
-    margin-top: 0.49vw;
-    margin-left: 1.04vw;
-    width: 10.56vw;
-  }
-  @media screen and (max-device-width: $tablet-size) {
-    margin-top: 7px;
-    margin-left: 15px;
-    width: 152px;
-  }
+  margin-top: 7px;
+  margin-left: 17px;
+  width: 152px;
   &.french {
-    @media screen and (min-device-width: $tablet-size) {
-      margin-left: 1.6vw;
-    }
-    @media screen and (max-device-width: $tablet-size) {
-      margin-left: 23px;
-    }
+    margin-left: 24px;
   }
   #selection-menu-roof {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    @media screen and (min-device-width: $tablet-size) {
-width : 1.67vw;
-    }
-    @media screen and (max-device-width: $tablet-size) {
-     width : 24px;
-    }
+    width: 24px;
   }
 
   #selection-menu-content {
     background-color: $black;
     color: $white;
-    @media screen and (min-device-width: $tablet-size) {
-      padding: 0.83vw 1.66vw;
-    }
-    @media screen and (max-device-width: $tablet-size) {
-      padding: 12px 24px;
-    }
+    padding: 12px 24px;
   }
 
   #selection-menu-title {
     font-weight: 600;
     font-size: 0.8em;
-    @media screen and (min-device-width: $tablet-size) {
-      margin-top: 0.83vw;
-      letter-spacing: 0.07vw;
-    }
-    @media screen and (max-device-width: $tablet-size) {
-      margin-top: 12px;
-      letter-spacing: 1px;
-    }
+    margin-top: 12px;
+    letter-spacing: 1px;
   }
 
   .selection-menu-item {
@@ -94,32 +61,15 @@ width : 1.67vw;
     align-items: center;
     border-bottom: 1px solid $dark-grey;
     cursor: pointer;
-    @media screen and (min-device-width: $tablet-size) {
-      padding: 0.83vw 0;
-    }
-    @media screen and (max-device-width: $tablet-size) {
-      padding: 12px 0;
-    }
+    padding: 12px 0;
 
     .selection-menu-item-icon-wrapper {
-      @media screen and (min-device-width: $tablet-size) {
-        width: 1.94vw;
-      }
-      @media screen and (max-device-width: $tablet-size) {
-        width: 28px;
-      }
+      width: 28px;
       .selection-menu-item-icon {
         display: inline-block;
-        @media screen and (min-device-width: $tablet-size) {
-          margin-right: 0.28vw;
-          width : 1.67vw;
-          height : 1.67vw;
-        }
-        @media screen and (max-device-width: $tablet-size) {
-          margin-right: 4px;
-          width : 24px;
-          height : 24px;
-        }
+        margin-right: 4px;
+        width: 24px;
+        height: 24px;
       }
     }
 
