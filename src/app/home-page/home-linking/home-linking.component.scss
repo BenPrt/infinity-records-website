@@ -1,14 +1,9 @@
 @import 'src/app/utils/_styleVariables';
 
-@media screen and (min-device-width: $desktop-size) {
-}
-@media screen and (max-device-width: $desktop-size) {
-}
-
 #linking-first-layer {
   border-right: 2px solid $very-light-grey;
   @media screen and (min-device-width: $desktop-size) {
-    width: calc(100% - 12.7vw - 2px);
+    width: calc(-2px + 100%);
   }
   @media screen and (max-device-width: $desktop-size) {
     width: calc(100% - 12.23vw - 2px);
@@ -19,9 +14,9 @@
     vertical-align: top;
     background-color: $very-light-grey;
     @media screen and (min-device-width: $desktop-size) {
-      height: calc(5.56vw + 5vw + 28.61vw + 2.22vw);
-      padding: 7.22vw 0 7.22vw 4.86vw;
-      width: calc(25.76vw + 2px - 4.86vw);
+      height: calc(72px + 65px + 372px + 28px);
+      padding: 94px 0 94px 62px;
+      width: calc(325px + 2px - 62px);
     }
     @media screen and (max-device-width: $desktop-size) {
       height: calc(47.87vw + 12.77vw + 79.79vw + 8.51vw + 14.89vw + 79.79vw + 8.51vw + 14.89vw + 79.79vw + 8.51vw);
@@ -33,8 +28,8 @@
       font-weight: 600;
       line-height: 1.25;
       @media screen and (min-device-width: $desktop-size) {
-        height: 5.56vw;
-        width: 51.74vw;
+        height: 72px;
+        width: 672px;
         font-size: 32px;
       }
       @media screen and (max-device-width: $desktop-size) {
@@ -48,9 +43,10 @@
       display: flex;
       justify-content: space-between;
       @media screen and (min-device-width: $desktop-size) {
-        margin-top: 5vw;
-        height: calc(28.61vw + 2.22vw);
-        width: calc(28.61vw + 2.22vw + 28.61vw + 2.22vw + 28.61vw);
+        margin-top: 65px;
+        height: calc(372px + 28px);
+        margin-left : calc(126px - 72px);
+        width: calc(372px + 34px + 372px + 34px + 372px)
       }
       @media screen and (max-device-width: $desktop-size) {
         flex-direction: column;
@@ -61,9 +57,9 @@
       }
       .link-wrapper {
         @media screen and (min-device-width: $desktop-size) {
-          width: 28.61vw;
-          height: calc(28.61vw + 2.22vw);
-          margin-right: 2.22vw;
+          width: 372px;
+          height: calc(372px + 28px);
+          margin-right: 28px;
         }
         @media screen and (max-device-width: $desktop-size) {
           width: 79.79vw;
@@ -87,8 +83,8 @@
             align-items: center;
             justify-content: center;
             @media screen and (min-device-width: $desktop-size) {
-              width: 28.61vw;
-              height: 28.61vw;
+              width: 372px;
+              height: 372px;
             }
             @media screen and (max-device-width: $desktop-size) {
               width: 79.79vw;
@@ -96,7 +92,7 @@
             }
             .link-picture {
               @media screen and (min-device-width: $desktop-size) {
-                width: 28.61vw;
+                width: 372px;
               }
               @media screen and (max-device-width: $desktop-size) {
                 width: 79.79vw;
@@ -110,10 +106,10 @@
             align-items: center;
             justify-content: center;
             @media screen and (min-device-width: $desktop-size) {
-              width: 26.39vw;
-              margin-left: calc(100% - 26.39vw);
-              height: 5vw;
-              margin-top: calc(-5vw + 2.22vw);
+              width: 343px;
+              margin-left: calc(100% - 343px);
+              height: 65px;
+              margin-top: calc(-65px + 28px);
             }
             @media screen and (max-device-width: $desktop-size) {
               width: 73.67vw;
@@ -138,9 +134,9 @@
       display: inline-block;
       vertical-align: top;
       border-left: 2px solid $very-light-grey;
-      height: calc(7.22vw + 5.56vw + 5vw + 28.61vw + 2.22vw + 7.22vw);
-      width: calc(-2px + 53.81vw - 2px);
-      margin-left: 7.57vw;
+      height: calc(94px + 72px + 65px + 372px + 28px + 94px);
+      width: calc(-2px + 700px - 2px);
+      margin-left: 98px;
     }
   }
 }

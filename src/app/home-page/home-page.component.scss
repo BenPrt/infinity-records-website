@@ -1,8 +1,10 @@
 @import "src/app/utils/_styleVariables";
 
-#content{
-    width : calc(100% - 80px);
-    padding : 40px;
-    height : 100vh;
-    text-align : center;
+#home-page-content{
+    @media screen and (min-device-width: $desktop-size) {
+        width : 1300px;
+        margin-left : calc((100% - 1300px) / 2);
+    }
+    @media screen and (max-device-width: $desktop-size) {
+    }
 }
