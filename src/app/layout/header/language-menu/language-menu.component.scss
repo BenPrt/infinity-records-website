@@ -14,16 +14,9 @@
   }
   #current-language-arrow {
     display: inline-block;
-    @media screen and (min-device-width: $tablet-size) {
-      margin-right: 0.28vw;
-      width: 1.67vw;
-      height: 1.67vw;
-    }
-    @media screen and (max-device-width: $tablet-size) {
-      margin-right: 4px;
-      width: 24px;
-      height: 24px;
-    }
+    margin-right: 4px;
+    width: 24px;
+    height: 24px;
   }
 }
 
