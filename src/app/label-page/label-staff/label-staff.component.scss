@@ -3,8 +3,8 @@
 #staff-first-layer {
   border-left: 2px solid $very-light-grey;
   @media screen and (min-device-width: $tablet-size) {
-    width: calc(100vw - 12.57vw - 2px);
-    margin-left: 12.57vw;
+    width : calc(100% - 163px);
+    margin-left : 165px;
   }
   @media screen and (max-device-width: $tablet-size) {
     width: calc(100vw - 12.23vw - 2px);
@@ -15,11 +15,11 @@
     position: relative;
     background-color: $very-light-grey;
     @media screen and (min-device-width: $tablet-size) {
-      width: 32.39vw;
-      height: calc(3.89vw + 3.33vw + 0.83vw + 21.46vw + 11.60vw);
-      margin-top: -3.33vw;
-      padding: 7.22vw 3.33vw;
-      margin-left: calc(100vw - 12.57vw - 2px - 3.33vw - 32.39vw - 3.33vw - 4.86vw);
+      width: calc(-48px + 472px - 48px);
+      height: calc(50px + 48px + 11px + 279px + 151px);
+      margin-top: -48px;
+      padding: 94px 48px;
+      margin-left: calc(100% - 472px - 64px);
     }
     @media screen and (max-device-width: $tablet-size) {
       width: calc(51.59vw - 48px);
@@ -31,8 +31,8 @@
       font-weight: normal;
       margin: 0;
       @media screen and (min-device-width: $tablet-size) {
-        font-size: 2.44em;
-        height: 3.89vw;
+        font-size: 44px;
+        height: 50px;
         line-height: 1.27;
       }
       @media screen and (max-device-width: $tablet-size) {
@@ -47,10 +47,10 @@
     display: flex;
     justify-content: space-between;
     @media screen and (min-device-width: $tablet-size) {
-      width: calc(100vw - 4.86vw - 4.86vw);
-      height: calc(0.83vw + 21.46vw + 11.60vw);
-      margin-top: calc(-0.83vw - 21.46vw - 11.60vw - 7.22vw);
-      margin-left: calc(-12.57vw - 2px + 4.86vw);
+      width: 1300px;
+      height: calc(11px + 279px + 151px);
+      margin-top: calc(-11px - 279px - 151px - 94px);
+      margin-left: -165px;
     }
     @media screen and (max-device-width: $tablet-size) {
       flex-direction: column;
