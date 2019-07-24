@@ -5,9 +5,9 @@
   background-color: $black;
 
   @media screen and (min-device-width: $desktop-size) {
-    padding-left: calc((100% - 90.28vw) / 2);
-    padding-right: calc((100% - 90.28vw) / 2);
-    width: 90.28vw;
+    padding-left: calc((100% - 1300px) / 2);
+    padding-right: calc((100% - 1300px) / 2);
+    width: 1300px;
     display: flex;
     justify-content: space-around;
   }
@@ -23,8 +23,8 @@
   }
   #contact-description {
     @media screen and (min-device-width: $desktop-size) {
-      width: 20.9vw;
-      margin-top: 5.56vw;
+      width: 300px;
+      margin-top: 80px;
     }
     @media screen and (max-device-width: $desktop-size) {
       width: 100%;
@@ -35,7 +35,7 @@
       color: $white;
       font-weight: normal;
       @media screen and (min-device-width: $desktop-size) {
-        font-size: 2.2em;
+        font-size: 44px;
       }
       @media screen and (max-device-width: $desktop-size) {
         font-size: 32px;
@@ -45,11 +45,11 @@
       border-left: 2px solid $gold;
       color: $white;
       line-height: 1.63;
-      font-size: 0.9em;
+      font-size: 16px;
       @media screen and (min-device-width: $desktop-size) {
-        margin-top: 2.78em;
-        width: 19.1vw;
-        padding-left: 1.67vw;
+        margin-top: 40px;
+        width: 275px;
+        padding-left: 24px;
       }
       @media screen and (max-device-width: $desktop-size) {
         margin-top: 32px;
@@ -61,8 +61,8 @@
 
   #contact-form {
     @media screen and (min-device-width: $desktop-size) {
-      width: 44.03vw;
-      margin-top: 9.51vw;
+      width: 632px;
+      margin-top: 137px;
     }
     @media screen and (max-device-width: $desktop-size) {
       width: 100%;
@@ -71,23 +71,23 @@
 
     // padding inside field
     ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-infix {
-      padding: 0.4em 0;
+      padding: 6px 0;
     }
     // Field Label
     ::ng-deep .mat-form-field-label {
       color: $grey;
-      font-size: 0.8em;
+      font-size: 14px;
       font-family: 'Montserrat';
       font-weight: 600;
-      letter-spacing: 0.06em;
+      letter-spacing: 1px;
     }
     // Label when filled
     ::ng-deep .mat-form-field .mat-form-field-label {
-      font-size: 0.8em;
+      font-size: 14px;
     }
     // Label when empty
     ::ng-deep .mat-form-field.mat-form-field-empty .mat-form-field-label {
-      font-size: 0.9em;
+      font-size: 16px;
     }
     // Label when error
     ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
@@ -123,10 +123,10 @@
 
     #name-field {
       font-family: 'Montserrat';
-      font-size: 0.9em;
+      font-size: 16px;
       @media screen and (min-device-width: $desktop-size) {
-        width: 47.5%;
-        margin-right: 5%;
+        width: 300px;
+        margin-right: 32px;
       }
       @media screen and (max-device-width: $desktop-size) {
         width: 100%;
@@ -134,9 +134,9 @@
     }
     #email-field {
       font-family: 'Montserrat';
-      font-size: 0.9em;
+      font-size: 16px;
       @media screen and (min-device-width: $desktop-size) {
-        width: 47.5%;
+        width: 300px;
       }
       @media screen and (max-device-width: $desktop-size) {
         width: 100%;
@@ -145,11 +145,11 @@
     }
     #message-field {
       font-family: 'Montserrat';
-      font-size: 0.9em;
+      font-size: 16px;
       line-height: 1.63;
       @media screen and (min-device-width: $desktop-size) {
         width: 100%;
-        margin-top: 2.22em;
+        margin-top: 32px;
       }
       @media screen and (max-device-width: $desktop-size) {
         width: 100%;
@@ -162,7 +162,7 @@
         width: 100%;
         align-items: center;
         justify-content: space-between;
-        margin: 3.33vw 0px 5.55vw 0px;
+        margin: 48px 0 80px 0;
       }
       @media screen and (max-device-width: $desktop-size) {
         margin-top: 32px;
@@ -170,11 +170,8 @@
       }
 
       #captcha-field {
-        @media screen and (min-device-width: $desktop-size) {
-          width: 47.5%;
-        }
+        width: 304px;
         @media screen and (max-device-width: $desktop-size) {
-          width: 304px;
           padding-left: calc((100% - 304px) / 2);
         }
       }
@@ -182,17 +179,17 @@
       #submit-button {
         border: 1px solid $white;
         background-color: $black;
-        font-family : 'Montserrat';
+        font-family: 'Montserrat';
         color: $white;
         border-radius: 0;
-        font-size: 0.9em;
-        letter-spacing: 0.11em;
+        font-size: 16px;
+        letter-spacing: 1px;
         font-weight: 500;
 
         @media screen and (min-device-width: $desktop-size) {
-          width: 8.89vw;
+          width: 128px;
           cursor: pointer;
-          height: 2.78vw;
+          height: 40px;
         }
         @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
           margin: 40px 0px 56px calc((100% - 250px) / 2);
@@ -208,9 +205,9 @@
       }
       #sending-message-loader {
         color: $gold;
-        font-size: 1.39em;
+        font-size: 25px;
         @media screen and (min-device-width: $desktop-size) {
-          margin-right: 3.47vw;
+          margin-right: 50px;
         }
         @media screen and (max-device-width: $desktop-size) {
           width: 100%;
@@ -224,9 +221,9 @@
       #success-message {
         display: flex;
         @media screen and (min-device-width: $desktop-size) {
-          height: 2.78vw;
-          line-height: 2.78vw;
-          width: 11.11vw;
+          height: 40px;
+          line-height: 40px;
+          width: 160px;
         }
         @media screen and (max-device-width: $desktop-size) {
           height: 40px;
@@ -238,9 +235,9 @@
         }
         #success-message-icon {
           @media screen and (min-device-width: $desktop-size) {
-            height: 1.67vw;
-            width: 1.67vw;
-            margin-right: 0.28vw;
+            height: 24px;
+            width: 24px;
+            margin-right: 4px;
           }
           @media screen and (max-device-width: $desktop-size) {
             height: 24px;
@@ -250,7 +247,7 @@
         }
         #success-message-message {
           color: $gold;
-          font-size: 0.9em;
+          font-size: 16px;
         }
       }
     }

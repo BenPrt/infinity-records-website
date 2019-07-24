@@ -96,7 +96,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.initMobileScroll();
     if (!this.isBrowser) {
       const source: Observable<any> = fromEvent(this.content.nativeElement, 'load');
-      const result : Subscription = source.pipe(debounceTime(1000)).subscribe(() => {
+      const result: Subscription = source.pipe(debounceTime(1000)).subscribe(() => {
         this.interruptAnimation();
         result.unsubscribe();
       });
@@ -242,23 +242,26 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
   }
 
-  parseTap(evt) {
+  parseTap(evt): void {
     if (evt.tapCount === 2) {
       this.interruptAnimation(evt);
     }
   }
 
-  interruptAnimation(event?: PointerEvent | KeyboardEvent) {
-    if (event) {
-      event.preventDefault();
+  interruptAnimation(event?: PointerEvent | KeyboardEvent): boolean {
+    if (!this.menuIsDisplayed) {
+      if (event) {
+        event.preventDefault();
+      }
+      this.timeouts.forEach((timeout) => {
+        clearTimeout(timeout);
+      });
+      this.typoState = 'displayed';
+      this.scaleState = 'normal';
+      this.menuIsDisplayed = true;
+      this.contentIsDisplayed = true;
     }
-    this.timeouts.forEach((timeout) => {
-      clearTimeout(timeout);
-    });
-    this.typoState = 'displayed';
-    this.scaleState = 'normal';
-    this.menuIsDisplayed = true;
-    this.contentIsDisplayed = true;
+    return true;
   }
 
   openMobileMenu(): void {
