@@ -1,7 +1,11 @@
 @import 'src/app/utils/_styleVariables';
 
 :host {
-  margin-bottom: 13.89vw;
+  margin-bottom: 200px;
+  #desktop-settings-wrapper {
+    width: 100vw;
+    height: 68px;
+  }
 
   #menu-wrapper {
     width: 100vw;

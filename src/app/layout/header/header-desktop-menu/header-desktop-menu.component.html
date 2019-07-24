@@ -1,4 +1,8 @@
-<desktop-settings-component [@menuFade] [ngStyle]="settingsStyle" *ngIf="menuIsDisplayed"></desktop-settings-component>
+<div id="desktop-settings-wrapper" [ngStyle]="settingsStyle">
+  <div id="desktop-settings-container" [@menuFade] *ngIf="menuIsDisplayed">
+    <desktop-settings-component></desktop-settings-component>
+  </div>
+</div>
 
 <div id="menu-wrapper" [ngStyle]="menuWrapperStyle" [@menuBorderFade]="menuBorderState">
   <div id="menu-container" [ngStyle]="menuContainerStyle">
