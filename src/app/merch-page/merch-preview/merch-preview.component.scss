@@ -5,9 +5,9 @@
     border-left: 2px solid $very-light-grey;
     border-right: 2px solid $very-light-grey;
     @media screen and (min-device-width: $desktop-size) {
-      width: calc(75vw - 2px);
-      margin-left: 12.5vw;
-      height: calc(7.22vw + 20.9vw + 4.86vw + 10.42vw);
+      width: calc(100% - 163px - 163px - 2px);
+      margin-left : 163px;
+      height: calc(94px + 272px + 63px + 135px + 94px);
     }
     @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
       width: calc(100vw - 12.23vw - 2px - 12.23vw - 2px);
@@ -24,8 +24,8 @@
   #page-navigator-container {
     border-right: 2px solid $very-light-grey;
     @media screen and (min-device-width: $desktop-size) {
-      width: 20.625vw;
-      height: calc(7.22vw + 20.9vw + 4.86vw + 10.42vw);
+      width: 268px;
+      height: calc(94px + 272px + 63px + 135px + 94px);
     }
     @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
       width: 102px;
@@ -38,17 +38,19 @@
     #product-title-wrapper {
       position: relative;
       #product-title {
-        font-size: 1em;
         font-weight: bold;
-        letter-spacing: 0.11em;
         transform: rotate(90deg);
         position: absolute;
         @media screen and (min-device-width: $desktop-size) {
-          width: 8.33vw;
-          margin-left: -3.125vw;
-          margin-top: 10.49vw;
+          font-size: 18px;
+          letter-spacing: 2px;
+          width: 108px;
+          margin-left: -41px;
+          margin-top: 136px;
         }
         @media screen and (max-device-width: $desktop-size) {
+          font-size: 1em;
+          letter-spacing: 0.11em;
           width: 120px;
           margin-top: 111px;
           margin-left: -47px;
@@ -63,10 +65,10 @@
         display: flex;
         justify-content: space-between;
         @media screen and (min-device-width: $desktop-size) {
-          margin-top: calc(7.22vw + 20.9vw + 4.86vw);
+          margin-top: calc(94px + 272px + 63px);
           margin-left: -2px;
-          width: 20.9vw;
-          height: 10.42vw;
+          width: 272px;
+          height: 135px;
         }
         @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
           margin-top: calc(64px + 57.5vw + 24px + 57.5vw + 24px + 57.5vw + 40px);
@@ -90,8 +92,8 @@
         user-select: none;
 
         @media screen and (min-device-width: $desktop-size) {
-          height: 10.42vw;
-          width: 10.42vw;
+          height: 135px;
+          width: 135px;
         }
         @media screen and (max-device-width: $desktop-size) {
           height: 52px;
@@ -99,8 +101,8 @@
         }
         .navigation-arrow {
           @media screen and (min-device-width: $desktop-size) {
-            width: 2.78vw;
-            height: 2.78vw;
+            width: 36px;
+            height: 36px;
           }
           @media screen and (max-device-width: $desktop-size) {
             height: 14px;
@@ -120,10 +122,10 @@
     position: relative;
     background-color: $very-light-grey;
     @media screen and (min-device-width: $desktop-size) {
-      width: 28.61vw;
-      height: calc(7.22vw + 20.9vw + 4.86vw + 10.42vw);
-      margin-top: calc(-7.22vw - 20.9vw - 4.86vw - 10.42vw);
-      margin-left: calc(75vw - 20.9vw - 2px);
+      width: 372px;
+      height: calc(94px + 272px + 63px + 135px);
+      margin-top: calc(-94px - 272px - 63px - 135px - 94px);
+      margin-left: calc(975px - 272px - 2px);
     }
     @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
       width: calc(12.23vw + 2px + 50px);
@@ -143,10 +145,10 @@
     display: flex;
     justify-content: space-between;
     @media screen and (min-device-width: $desktop-size) {
-      width: calc(20.9vw + 2.22vw + 20.9vw + 2.22vw + 20.9vw);
-      height: 20.9vw;
-      margin-top: calc(-20.9vw - 4.86vw - 10.42vw);
-      margin-left: calc(75vw - 20.9vw - 2px + 28.61vw - 20.9vw - 2.22vw - 20.9vw - 2.22vw - 20.9vw);
+      width: calc(272px + 29px + 272px + 29px + 272px);
+      height: 272px;
+      margin-top: calc(-272px - 63px - 135px);
+      margin-left: calc(975px - 272px - 2px + 372px - 272px - 29px - 272px - 29px - 272px);
     }
     @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
       width: 57.5vw;

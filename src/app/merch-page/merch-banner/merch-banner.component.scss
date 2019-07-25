@@ -2,37 +2,39 @@
 
 :host {
   display: block;
-  width: 100vw;
   position: relative;
   @media screen and (min-device-width: $desktop-size) {
-    height: 52.15vw;
+    width: 100%;
+    height: 678px;
   }
   @media screen and (max-device-width: $desktop-size) {
+    width: 100vw;
     height: 501px;
   }
 
   #banner-image-container {
     position: absolute;
     z-index: 0;
-    width: 100vw;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
     @media screen and (min-device-width: $desktop-size) {
-      height: 52.15vw;
+      width: 100%;
+      height: 678px;
     }
     @media screen and (max-device-width: $desktop-size) {
+      width: 100vw;
       height: 501px;
     }
 
     #banner-image {
       @media screen and (min-device-width: $desktop-size) {
-        width: 100vw;
+        width: 100%;
       }
       @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
-        width: 100vw;
+        width: 100%;
       }
       @media screen and (max-device-width: $tablet-size) {
         height: 501px;
@@ -42,12 +44,13 @@
       position: relative;
       z-index: 1;
       background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.71));
-      width: 100vw;
       @media screen and (min-device-width: $desktop-size) {
-        height: 31.53vw;
-        margin-top: -31.53vw;
+      width: 100vw;        
+        height: 410px;
+        margin-top: -410px;
       }
       @media screen and (max-device-width: $desktop-size) {
+      width: 100vw;
         height: 82.97vw;
         margin-top: -82.97vw;
       }
@@ -60,7 +63,7 @@
     display: flex;
     align-items: flex-end;
     @media screen and (min-device-width: $desktop-size) {
-      height: 52.15vw;
+      height: 678px;
     }
     @media screen and (max-device-width: $desktop-size) {
       height: 501px;
@@ -70,24 +73,30 @@
       display: block;
       color: $white;
       @media screen and (min-device-width: $desktop-size) {
-        width: 28.61vw;
-        margin: 0 auto 216px auto;
+        width: 372px;
+        margin: 0 auto 195px auto;
       }
       @media screen and (max-device-width: $desktop-size) {
         width: 324px;
         margin: 0 auto 59px auto;
       }
       #text-title {
-        font-size: 0.9em;
         font-weight: bold;
-        letter-spacing: 0.11em;
+        @media screen and (min-device-width: $desktop-size) {
+          font-size: 16px;
+          letter-spacing: 2px;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          font-size: 0.9em;
+          letter-spacing: 0.11em;
+        }
       }
       #text-subtitle {
         line-height: 1.27;
         font-weight: normal;
         @media screen and (min-device-width: $desktop-size) {
-          margin-top: 0.69vw;
-          font-size: 2.44em;
+          margin-top: 9px;
+          font-size: 44px;
         }
         @media screen and (max-device-width: $desktop-size) {
           margin-top: 10px;
@@ -95,13 +104,14 @@
         }
       }
       #text-description {
-        font-size: 1em;
         font-weight: 500;
         line-height: 1.56;
         @media screen and (min-device-width: $desktop-size) {
-          margin-top: 1.04vw;
+          font-size: 18px;
+          margin-top: 14px;
         }
         @media screen and (max-device-width: $desktop-size) {
+          font-size: 1em;
           margin-top: 15px;
         }
       }
@@ -109,16 +119,16 @@
 
     #page-navigator {
       position: absolute;
-      width: 20.9vw;
-      height: 10.42vw;
-      right: 12.5%;
+      width: 272px;
+      height: 135px;
+      right: 163px;
       background-color: $white;
       display: flex;
       justify-content: space-between;
 
       .page-button {
-        height: 10.42vw;
-        width: 10.42vw;
+        height: 135px;
+        width: 135px;
         cursor: pointer;
         background-color: $very-light-grey;
         display: flex;
@@ -126,8 +136,8 @@
         justify-content: center;
         user-select: none;
         .navigation-arrow {
-          width: 2.78vw;
-          height: 2.78vw;
+          width: 36px;
+          height: 36px;
         }
       }
 
