@@ -9,11 +9,10 @@
     justify-content: space-between;
     align-items: center;
     @media screen and (min-device-width: $desktop-size) {
-      margin-left: 4.86vw;
-      margin-top: calc(-5.14vw - 1.11vw - 2.22vw - 42.15vw);
-      width: calc(100vw - 4.86vw - 12.56vw);
-      height: 5.14vw;
-      margin-bottom: 1.11vw;
+      margin-top: calc(-67px - 14px - 29px - 607px);
+      width: 100%;
+      height: 67px;
+      margin-bottom: 14px;
     }
     @media screen and (max-device-width: $desktop-size) {
       width: calc(-16px + 100vw - 16px);
@@ -22,46 +21,49 @@
     }
 
     #back-button {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      @media screen and (min-device-width: $desktop-size) {
+        font-size: 16px;
+        height: 22px;
+        margin-left : 16px;
+        width : 150px;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        font-size: 0.9em;
+        height: 24px;
+      }
+
       img {
         @media screen and (min-device-width: $desktop-size) {
-          height : 1.66vw;
-          width : 1.66vw;
-          margin-right: 0.56vw;
+          height: 22px;
+          width: 22px;
+          margin-right: 7px;
         }
         @media screen and (max-device-width: $desktop-size) {
           margin-right: 8px;
         }
       }
-      display: flex;
-      align-items: center;
-      font-size: 0.9em;
-      cursor: pointer;
-      @media screen and (min-device-width: $desktop-size) {
-        height: 1.67vw;
-      }
-      @media screen and (max-device-width: $desktop-size) {
-        height: 24px;
-      }
     }
     #arborescence {
       text-align: center;
-      width: 28.82vw;
-      position: absolute;
-      margin-left: calc(12.5vw - 4.86vw + (100vw - 12.5vw - 35.69vw) - 28.82vw);
+      width: 375px;
+      margin-left : calc((100% - 1079px) / 2);
       #arbo-first {
-        font-size: 0.9em;
-        margin-right: 0.83vw;
+        font-size: 16px;
+        margin-right: 11px;
         cursor: pointer;
       }
       #arbo-slash {
         width: 24px;
-        font-size: 0.9em;
-        margin-right: 0.83vw;
+        font-size: 16px;
+        margin-right: 11px;
         color: $grey;
         cursor: default;
       }
       #arbo-second {
-        font-size: 0.9em;
+        font-size: 16px;
         font-weight: 600;
         cursor: default;
       }
@@ -69,20 +71,24 @@
     #next-artist-button {
       display: flex;
       align-items: center;
-      font-size: 0.9em;
+      justify-content: flex-end;
       font-weight: 600;
       cursor: pointer;
       @media screen and (min-device-width: $desktop-size) {
-        height: 1.67vw;
+        font-size: 16px;
+        height: 22px;
+        margin-right : calc((100% - 1079px) / 2);
+        width : 150px;
       }
       @media screen and (max-device-width: $desktop-size) {
+        font-size: 0.9em;
         height: 24px;
       }
       img {
         @media screen and (min-device-width: $desktop-size) {
-          height : 1.66vw;
-          width : 1.66vw;
-          margin-left: 0.56vw;
+          height: 22px;
+          width: 22px;
+          margin-left: 7px;
         }
         @media screen and (max-device-width: $desktop-size) {
           margin-left: 8px;
