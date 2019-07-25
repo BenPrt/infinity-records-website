@@ -6,6 +6,9 @@ import { Subscription } from 'rxjs';
 import { DeviceService } from 'src/app/shared/services/device.service';
 import { ArtistsProjectsService } from 'src/app/shared/services/artists-projects.service';
 import { isPlatformBrowser } from '@angular/common';
+import { Meta } from '@angular/platform-browser';
+import { TranslationService } from 'src/app/shared/services/translation.service';
+import { TranslationPipe } from 'src/app/shared/pipes/translation.pipe';
 
 @Component({
   selector: 'app-artist-page',
@@ -28,6 +31,8 @@ export class ArtistPageComponent implements OnInit {
     private deviceService: DeviceService,
     private router: Router,
     private artistsService: ArtistsProjectsService,
+    private meta: Meta,
+    private translationService: TranslationService,
   ) {
     this.isBrowser = isPlatformBrowser(platformId);
   }
@@ -35,6 +40,7 @@ export class ArtistPageComponent implements OnInit {
   ngOnInit(): void {
     this.initDeviceType();
     this.initCurrentArtist();
+    this.defineMetadata();
   }
 
   initDeviceType(): void {
@@ -81,6 +87,13 @@ export class ArtistPageComponent implements OnInit {
         }
       },
     );
+  }
+
+  defineMetadata(): void {
+    const translationPipe = new TranslationPipe(this.translationService);
+    this.meta.addTag({ name: 'description', content: `${translationPipe.transform('METADATA_ARTISTS_DESCRIPTION')}` });
+    this.meta.addTag({ name: 'keywords', content: `${translationPipe.transform('METADATA_ARTISTS_KEYWORDS')}` });
+    this.meta.addTag({ name: 'author', content: 'Infinity Records' });
   }
 
   ngOnDestroy(): void {

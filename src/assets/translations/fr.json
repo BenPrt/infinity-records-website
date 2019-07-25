@@ -30,6 +30,12 @@
 	
 	
 	
+	
+	
+	"METADATA_HOMEPAGE_DESCRIPTION":"",
+	"METADATA_HOMEPAGE_KEYWORDS":"",
+	
+	
 	"HOME_WELCOME" : "Welcome",
 	
 	"HOME_NEWS_TITLE" : "Restez à jour et découvrez nos dernières actus !",
@@ -46,8 +52,13 @@
 	"HOME_LINKING_LABEL" : "Découvrez le label",
 	"HOME_LINKING_ARTISTS" : "Découvrez les artistes",
 	"HOME_LINKING_MERCH" : "Découvrez le merch",
-
 		
+		
+		
+	
+	"METADATA_LABEL_DESCRIPTION":"",
+	"METADATA_LABEL_KEYWORDS":"",	
+	
 	
 	"LABEL_BANNER_TITLE_1" : "A propos",
 	"LABEL_BANNER_TITLE_2" : "d'Infinity Records",
@@ -78,9 +89,19 @@
 	
 	
 	
+	
+	"METADATA_ARTISTS_LIST_DESCRIPTION":"",
+	"METADATA_ARTISTS_LIST_KEYWORDS":"",
+	
+	
 	"ARTISTS_LIST_TOP_TITLE" : "Découvrez nos talents...",
 	"ARTISTS_LIST_TOP_CONTENT" : "Apprenez-en plus sur nos artistes, leur univers musical et leur actualité.",
 	
+	
+	
+	
+	"METADATA_ARTISTS_DESCRIPTION":"",
+	"METADATA_ARTISTS_KEYWORDS":"",
 	
 	
 	"ARTISTS_BACK": "retour",
@@ -94,6 +115,11 @@
 	"ARTISTS_LISTENING" : "En cours d'écoute...",
 	"ARTISTS_DOWNLOAD" : "Télécharger",
 	
+	
+	
+	
+	"METADATA_MERCH_DESCRIPTION":"",
+	"METADATA_MERCH_KEYWORDS":"",
 	
 	
 	"MERCH_BANNER_SUBTITLE" : "The Infinity Records Look",

@@ -30,6 +30,11 @@
 	
 	
 	
+	
+	"METADATA_HOMEPAGE_DESCRIPTION":"",
+	"METADATA_HOMEPAGE_KEYWORDS":"",
+	
+	
 	"HOME_WELCOME" : "Welcome",
 	
 	"HOME_NEWS_TITLE" : "Stay up to date and check our latest news!",
@@ -48,6 +53,12 @@
 	"HOME_LINKING_MERCH" : "Discover our merch",
 		
 
+
+
+	"METADATA_LABEL_DESCRIPTION":"",
+	"METADATA_LABEL_KEYWORDS":"",	
+	
+	
 	"LABEL_BANNER_TITLE_1" : "About",
 	"LABEL_BANNER_TITLE_2" : "Infinity Records",
 	"LABEL_BANNER_DESCRIPTION" : "Founded in 2017, Infinity Records is an independent record-label based in Lille, in France.",
@@ -75,11 +86,21 @@
 	
 	"LABEL_BUT_ALSO" : "but also... ",
 	
+
+
 	
+	"METADATA_ARTISTS_LIST_DESCRIPTION":"",
+	"METADATA_ARTISTS_LIST_KEYWORDS":"",
 	
+
 	"ARTISTS_LIST_TOP_TITLE" : "Discover our talents...",
 	"ARTISTS_LIST_TOP_CONTENT" : "Learn more about about our artists, their musical universe and their actuality.",
 	
+	
+	
+	
+	"METADATA_ARTISTS_DESCRIPTION":"",
+	"METADATA_ARTISTS_KEYWORDS":"",
 	
 	
 	"ARTISTS_BACK": "back",
@@ -93,6 +114,11 @@
 	"ARTISTS_LISTENING" : "Listening...",
 	"ARTISTS_DOWNLOAD" : "Download",
 	
+	
+	
+	
+	"METADATA_MERCH_DESCRIPTION":"",
+	"METADATA_MERCH_KEYWORDS":"",
 	
 	
 	"MERCH_BANNER_SUBTITLE" : "The Infinity Records Look",
