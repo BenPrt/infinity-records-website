@@ -96,7 +96,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.initMobileScroll();
     if (!this.isBrowser) {
       const source: Observable<any> = fromEvent(this.content.nativeElement, 'load');
-      const result : Subscription = source.pipe(debounceTime(1000)).subscribe(() => {
+      const result: Subscription = source.pipe(debounceTime(1000)).subscribe(() => {
         this.interruptAnimation();
         result.unsubscribe();
       });
@@ -235,31 +235,33 @@ export class AppComponent implements OnInit, AfterViewInit {
   onWindowScroll() {
     this.scrolledAmount = window.pageYOffset;
     this.scrollService.setScrolledAmount(this.scrolledAmount);
-    const scrollPercent = Math.round((this.scrolledAmount / document.body.clientWidth) * 100 * 100) / 100;
-    if (scrollPercent >= 0 && scrollPercent <= 4.72) {
+    if (this.scrolledAmount >= 0 && this.scrolledAmount <= 68) {
       this.contentOffset = '0';
-    } else if (scrollPercent > 4.72 && scrollPercent <= 10.83) {
-      this.contentOffset = '18.96vw';
+    } else if (this.scrolledAmount > 68 && this.scrolledAmount <= 156) {
+      this.contentOffset = '273px';
     }
   }
 
-  parseTap(evt) {
+  parseTap(evt): void {
     if (evt.tapCount === 2) {
       this.interruptAnimation(evt);
     }
   }
 
-  interruptAnimation(event?: PointerEvent | KeyboardEvent) {
-    if (event) {
-      event.preventDefault();
+  interruptAnimation(event?: PointerEvent | KeyboardEvent): boolean {
+    if (!this.menuIsDisplayed) {
+      if (event) {
+        event.preventDefault();
+      }
+      this.timeouts.forEach((timeout) => {
+        clearTimeout(timeout);
+      });
+      this.typoState = 'displayed';
+      this.scaleState = 'normal';
+      this.menuIsDisplayed = true;
+      this.contentIsDisplayed = true;
     }
-    this.timeouts.forEach((timeout) => {
-      clearTimeout(timeout);
-    });
-    this.typoState = 'displayed';
-    this.scaleState = 'normal';
-    this.menuIsDisplayed = true;
-    this.contentIsDisplayed = true;
+    return true;
   }
 
   openMobileMenu(): void {

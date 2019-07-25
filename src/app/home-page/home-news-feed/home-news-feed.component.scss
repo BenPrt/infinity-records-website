@@ -1,16 +1,10 @@
 @import 'src/app/utils/_styleVariables';
 
-@media screen and (min-device-width: $desktop-size) {
-}
-@media screen and (max-device-width: $desktop-size) {
-}
-
 #news-first-layer {
   border-left: 2px solid $very-light-grey;
   border-right: 2px solid $very-light-grey;
   @media screen and (min-device-width: $desktop-size) {
-    width: calc(-12.7vw - 2px + 100% - 2px - 12.7vw);
-    margin-left: 12.7vw;
+    width: calc(-2px + 100% - 2px);
   }
   @media screen and (max-device-width: $desktop-size) {
     width: calc(-12.23vw - 2px + 100% - 2px - 12.23vw);
@@ -20,9 +14,9 @@
     border-left: 2px solid $very-light-grey;
 
     @media screen and (min-device-width: $desktop-size) {
-      margin-left: 20.625vw;
-      width: calc(-20.625vw - 2px + 100%);
-      padding-top: 10vw;
+      margin-left: 325px;
+      width: calc(-325px - 2px + 100%);
+      padding-top: 130px;
     }
     @media screen and (max-device-width: $desktop-size) {
       margin-left: 26.86vw;
@@ -32,9 +26,7 @@
     #news-content-layer {
       background-color: $very-light-grey;
       @media screen and (min-device-width: $desktop-size) {
-        margin-left: calc(-20.625vw - 12.7vw - 2px + 25.76vw);
-        width: calc(-2px + 32.92vw - 2px);
-        padding: 6.11vw 6.67vw 6.11vw 22.08vw;
+        padding: 96px 105px 96px 325px;
       }
       @media screen and (max-device-width: $desktop-size) {
         margin-left: -2px;
@@ -47,7 +39,7 @@
         line-height: 1.25;
         @media screen and (min-device-width: $desktop-size) {
           font-size: 32px;
-          margin-bottom: 1.67vw;
+          margin-bottom: 24px;
         }
         @media screen and (max-device-width: $desktop-size) {
           font-size: 1.56em;
@@ -61,10 +53,10 @@
         #facebook-feed-wrapper {
           @media screen and (min-device-width: $desktop-size) {
             position: absolute;
-            margin-top: calc(-1.67vw - 5.21vw - 6.11vw - 4.44vw);
-            margin-left: calc(-22.08vw - 25.76vw + 4.86vw);
-            width: 36.32vw;
-            height: 48.4vw;
+            margin-top: -265px;
+            margin-left: calc(-325px - 325px - 2px);
+            width: 500px;
+            height: 630px;
           }
           @media screen and (max-device-width: $desktop-size) {
             margin-top: 8.51vw;
@@ -76,22 +68,22 @@
       }
 
       .news-content-item-title {
-        font-size: 1.33em;
+        font-size: 24px;
         font-weight: 600;
         line-height: 1.33;
         @media screen and (min-device-width: $desktop-size) {
-          margin-top: 4.44vw;
+          margin-top: 64px;
         }
         @media screen and (max-device-width: $desktop-size) {
           margin-top: 10.64vw;
         }
       }
       .news-content-item-description {
-        font-size: 1em;
+        font-size: 18px;
         font-weight: normal;
         line-height: 1.56;
         @media screen and (min-device-width: $desktop-size) {
-          margin-top: 1.11vw;
+          margin-top: 16px;
         }
         @media screen and (max-device-width: $desktop-size) {
           margin-top: 4.26vw;

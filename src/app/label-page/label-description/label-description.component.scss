@@ -1,129 +1,119 @@
 @import 'src/app/utils/_styleVariables';
 
-#description-left-layer {
-  display: inline-block;
-  vertical-align: top;
-  border-left: 2px solid $very-light-grey;
-  border-right: 2px solid $very-light-grey;
+#label-description-layer {
   @media screen and (min-device-width: $desktop-size) {
-    width: calc(53.96vw - 4px);
-    margin-left: 12.7vw;
+    width: calc(1300px + 2px);
+    border-right: 2px solid $very-light-grey;
   }
-  @media screen and (max-device-width: $desktop-size) {
-    width: calc(47.34vw - 4px);
-    margin-left: 12.23vw;
-  }
-
-  #left-content {
-    position: relative;
-    background-color: $very-light-grey;
+  #description-left-layer {
+    display: inline-block;
+    vertical-align: top;
+    border-left: 2px solid $very-light-grey;
+    border-right: 2px solid $very-light-grey;
     @media screen and (min-device-width: $desktop-size) {
-      width: calc(30.83vw - 1px);
-      padding-top: 5.56vw;
-      padding-bottom: 7.22vw;
+      width: calc(100% - 165px - ((70px + 530px + 70px) / 2));
+      margin-left: calc(165px - 2px);
     }
     @media screen and (max-device-width: $desktop-size) {
-      width: 59.57vw;
-      margin-top: 64px;
-      padding-top: 40px;
-      padding-bottom: 48px;
+      width: calc(47.34vw - 4px);
+      margin-left: 12.23vw;
     }
 
-    #left-pictures-wrapper {
-      display: flex;
-      justify-content: space-between;
+    #left-content {
+      position: relative;
+      background-color: $very-light-grey;
       @media screen and (min-device-width: $desktop-size) {
-        height: 20.9vw;
-        width: calc(20.9vw + 2.22vw + 20.9vw);
-        margin-left: calc((100% - 20.9vw - 2.22vw - 20.9vw) / 2);
+        width: calc(100% - ((70px + 530px + 70px) / 2));
+        margin-left: -2px;
+        padding-top: 72px;
+        padding-bottom: 94px;
       }
       @media screen and (max-device-width: $desktop-size) {
-        height: 35.64vw;
-        width: calc(35.64vw + 16px + 35.64vw);
-        margin-left: calc((100% - 35.64vw - 16px - 35.64vw) / 2);
+        width: 59.57vw;
+        margin-top: 64px;
+        padding-top: 40px;
+        padding-bottom: 48px;
       }
 
-      .left-picture-wrapper {
-        display : flex;
-        align-items: center;
-        overflow: hidden;
-        justify-content: center;
-        flex-direction : column;
+      #left-pictures-wrapper {
+        display: flex;
+        justify-content: space-between;
         @media screen and (min-device-width: $desktop-size) {
-          height: 20.9vw;
-          width: 20.9vw;
+          height: 272px;
+          width: calc(272px + 32px + 272px);
+          margin-left: calc((100% - 272px - 32px - 272px) / 2);
         }
         @media screen and (max-device-width: $desktop-size) {
           height: 35.64vw;
-          width: 35.64vw;
+          width: calc(35.64vw + 16px + 35.64vw);
+          margin-left: calc((100% - 35.64vw - 16px - 35.64vw) / 2);
         }
-        .left-picture {
+
+        .left-picture-wrapper {
+          display: flex;
+          align-items: center;
+          overflow: hidden;
+          justify-content: center;
+          flex-direction: column;
           @media screen and (min-device-width: $desktop-size) {
-            height: 20.9vw;
+            height: 272px;
+            width: 272px;
           }
           @media screen and (max-device-width: $desktop-size) {
             height: 35.64vw;
+            width: 35.64vw;
           }
-      }
-      }
-    }
-
-    #left-description {
-      font-size: 1em;
-      line-height: 1.56;
-      @media screen and (min-device-width: $desktop-size) {
-        width: 24.16vw;
-        margin-left: calc((100% - 24.16vw) / 2);
-        margin-top: 3.89vw;
-      }
-      @media screen and (max-device-width: $desktop-size) {
-        width: 46.8vw;
-        margin-left: calc((100% - 46.8vw) / 2);
-        margin-top: 32px;
-      }
-    }
-    #left-description-list {
-      list-style-type: none;
-      padding: 0;
-      @media screen and (min-device-width: $desktop-size) {
-        margin-top: 1.67vw;
-        width: 24.16vw;
-        margin-left: calc((100% - 24.16vw) / 2);
-      }
-      @media screen and (max-device-width: $desktop-size) {
-        margin-top: 24px;
-        width: 46.8vw;
-        margin-left: calc((100% - 46.8vw) / 2);
-      }
-      li {
-        h3 {
-          margin: 0;
-          display: flex;
-          align-items: center;
-          font-size: 0.9em;
-          font-weight: 600;
-          @media screen and (min-device-width: $desktop-size) {
-            height: 2.22vw;
-            margin-bottom: 1.11vw;
-          }
-          @media screen and (max-device-width: $desktop-size) {
-            height: 32px;
-            margin-bottom: 16px;
-          }
-          span {
+          .left-picture {
             @media screen and (min-device-width: $desktop-size) {
-              margin-right: 0.56vw;
+              height: 272px;
             }
             @media screen and (max-device-width: $desktop-size) {
-              margin-right: 8px;
+              height: 35.64vw;
             }
+          }
+        }
+      }
 
-            img {
-              @media screen and (min-device-width: $desktop-size) {
-                height: 2.22vw;
-                width: 2.22vw;
-              }
-              @media screen and (max-device-width: $desktop-size) {
+      #left-description {
+        font-size: 18px;
+        line-height: 1.56;
+        @media screen and (min-device-width: $desktop-size) {
+          width: 314px;
+          margin-left: calc((100% - 314px) / 2);
+          margin-top: 56px;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          width: 46.8vw;
+          margin-left: calc((100% - 46.8vw) / 2);
+          margin-top: 32px;
+        }
+      }
+      #left-description-list {
+        list-style-type: none;
+        padding: 0;
+        @media screen and (min-device-width: $desktop-size) {
+          margin-top: 24px;
+          width: 314px;
+          margin-left: calc((100% - 314px) / 2);
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          margin-top: 24px;
+          width: 46.8vw;
+          margin-left: calc((100% - 46.8vw) / 2);
+        }
+        li {
+          h3 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 600;
+            height: 32px;
+            margin-bottom: 16px;
+            span {
+              margin-right: 8px;
+
+              img {
                 height: 32px;
                 width: 32px;
               }
@@ -133,142 +123,142 @@
       }
     }
   }
-}
-#description-right-layer {
-  border-right: 2px solid $very-light-grey;
-  display: inline-block;
-  vertical-align: top;
-  @media screen and (min-device-width: $desktop-size) {
-    width: calc(20.9vw - 2px);
-    padding-top: calc(80px + (20.9vw / 2));
-  }
-  @media screen and (max-device-width: $desktop-size) {
-    width: calc(100% - 47.4vw - 1px - 12.23vw - 12.23vw);
-  }
-
-  #right-separator {
-    border: none;
-    margin: 0;
-    background-color: $gold;
+  #description-right-layer {
+    display: inline-block;
+    vertical-align: top;
     @media screen and (min-device-width: $desktop-size) {
-      height: 0.28vw;
-      width: 2.78vw;
-      margin-left: calc(100% - 16.46vw);
+      width: calc(100% - 165px - 2px - (100% - 167px - ((70px + 530px + 70px) / 2)) - 2px);
+      padding-top: 204px;
     }
     @media screen and (max-device-width: $desktop-size) {
-      height: 4px;
-      width: 10.64vw;
-      position: relative;
-      margin-left: calc(-12.23vw - 47.4vw + ((100vw - 10.64vw) / 2));
+      width: calc(100% - 47.4vw - 1px - 12.23vw - 12.23vw);
+      border-right: 2px solid $very-light-grey;
+    }
+
+    #right-separator {
+      border: none;
+      margin: 0;
+      background-color: $gold;
+      @media screen and (min-device-width: $desktop-size) {
+        height: 4px;
+        width: 40px;
+        margin-left: calc(100% - 250px);
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        height: 4px;
+        width: 10.64vw;
+        position: relative;
+        margin-left: calc(-12.23vw - 47.4vw + ((100vw - 10.64vw) / 2));
+      }
+    }
+
+    #right-description {
+      font-weight: 600;
+      @media screen and (min-device-width: $desktop-size) {
+        width: 232px;
+        margin-left: calc(100% - 250px);
+        margin-top: 8px;
+        font-size: 24px;
+        line-height: 1.33;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        width: 41.22vw;
+        position: relative;
+        margin-left: calc(-12.23vw - 47.4vw + ((100vw - 10.64vw) / 2));
+        margin-top: 12px;
+        font-size: 0.9em;
+        line-height: 1.56;
+      }
     }
   }
 
-  #right-description {
-    font-weight: 600;
+  #description-bottom-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
     @media screen and (min-device-width: $desktop-size) {
-      width: 15.97vw;
-      margin-left: calc(100% - 16.46vw);
-      margin-top: 0.55vw;
-      font-size: 1.33em;
-      line-height: 1.33;
+      width: calc(2px + 100% + 2px);
+      height: 732px;
     }
     @media screen and (max-device-width: $desktop-size) {
-      width: 41.22vw;
-      position: relative;
-      margin-left: calc(-12.23vw - 47.4vw + ((100vw - 10.64vw) / 2));
-      margin-top: 12px;
-      font-size: 0.9em;
-      line-height: 1.56;
-    }
-  }
-}
-
-#description-bottom-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  @media screen and (min-device-width: $desktop-size) {
-    width: 100vw;
-    height: 56.25vw;
-  }
-  @media screen and (max-device-width: $desktop-size) {
-    width: 100vw;
-    height: 75vw;
-  }
-
-  #description-bottom-picture {
-    @media screen and (min-device-width: $desktop-size) {
-      height : 56.25vw;
-    }
-    @media screen and (max-device-width: $desktop-size) {
+      width: 100vw;
       height: 75vw;
     }
-  }
-  #bottom-picture-gradient {
-    position: relative;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.71));
-    @media screen and (min-device-width: $desktop-size) {
-      margin-top: calc(-24.58vw - 4px);
-      height: 24.58vw;
-      width: 100vw;
-    }
-    @media screen and (max-device-width: $desktop-size) {
-      margin-top: calc(-43.09vw - 5px);
-      height: 43.09vw;
-      width: 100vw;
-    }
-  }
-}
-#bottom-picture-content {
-  position: relative;
-  @media screen and (min-device-width: $desktop-size) {
-    margin-top: calc(-8.33vw - 9.44vw);
-    margin-bottom: 9.44vw;
-    height: 8.33vw;
-    width: 33.47vw;
-  }
-  @media screen and (max-device-width: $desktop-size) {
-    margin-top: calc(-96px - 48px);
-    margin-bottom: 48px;
-    height: 96px;
-    width: 55.31vw;
-  }
-  #bottom-picture-separator {
-    display: inline-block;
-    vertical-align: top;
-    border: none;
-    margin: 0;
-    background-color: $gold;
-    @media screen and (min-device-width: $desktop-size) {
-      height: 0.28vw;
-      width: 18.05vw;
-      margin-top: 1.39vw;
-      margin-right: 2.22vw;
-    }
-    @media screen and (max-device-width: $desktop-size) {
-      height: 3px;
-      width: 7.97vw;
-      margin-top: 12px;
-      margin-right: 4.26vw;
-    }
-  }
-  #bottom-picture-description {
-    display: inline-block;
-    vertical-align: top;
-    color: $white;
-    font-weight: 600;
 
+    #description-bottom-picture {
+      @media screen and (min-device-width: $desktop-size) {
+        height: 732px;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        height: 75vw;
+      }
+    }
+    #bottom-picture-gradient {
+      position: relative;
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.71));
+      @media screen and (min-device-width: $desktop-size) {
+        margin-top: calc(-320px);
+        height: 320px;
+        width: calc(100% - 4px);
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        margin-top: calc(-43.09vw - 5px);
+        height: 43.09vw;
+        width: 100vw;
+      }
+    }
+  }
+  #bottom-picture-content {
+    position: relative;
     @media screen and (min-device-width: $desktop-size) {
-      width: calc(33.47vw - 18.05vw - 2.22vw);
-      font-size: 2em;
-      line-height: 1.25;
+      margin-top: calc(-121px - 122px);
+      margin-bottom: 122px;
+      height: 108px;
+      width: 435px;
     }
     @media screen and (max-device-width: $desktop-size) {
-      width: calc(55.31vw - 7.97vw - 4.26vw);
-      font-size: 1.33em;
-      line-height: 1.33;
+      margin-top: calc(-96px - 48px);
+      margin-bottom: 48px;
+      height: 96px;
+      width: 55.31vw;
+    }
+    #bottom-picture-separator {
+      display: inline-block;
+      vertical-align: top;
+      border: none;
+      margin: 0;
+      background-color: $gold;
+      @media screen and (min-device-width: $desktop-size) {
+        height: 4px;
+        width: 235px;
+        margin-top: 18px;
+        margin-right: 30px;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        height: 3px;
+        width: 7.97vw;
+        margin-top: 12px;
+        margin-right: 4.26vw;
+      }
+    }
+    #bottom-picture-description {
+      display: inline-block;
+      vertical-align: top;
+      color: $white;
+      font-weight: 600;
+
+      @media screen and (min-device-width: $desktop-size) {
+        width: calc(435px - 235px - 32px);
+        font-size: 32px;
+        line-height: 1.25;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        width: calc(55.31vw - 7.97vw - 4.26vw);
+        font-size: 1.33em;
+        line-height: 1.33;
+      }
     }
   }
 }

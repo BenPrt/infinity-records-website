@@ -19,7 +19,7 @@ import { ScrollService } from 'src/app/shared/services/scroll.service';
         'true',
         style({
           opacity: 1,
-          width: '5vw',
+          width: '72px',
         }),
       ),
       state(
@@ -57,7 +57,7 @@ import { ScrollService } from 'src/app/shared/services/scroll.service';
       transition('hidden <=> displayed', [animate('900ms')]),
     ]),
     trigger('scaleLogo', [
-      state('upscaled', style({ marginTop: '13.89vw', transform: 'scale(2)' })),
+      state('upscaled', style({ marginTop: '200px', transform: 'scale(2)' })),
       state('normal', style({ marginTop: '0', transform: 'scale(1)' })),
       transition('upscaled => normal', [animate('1000ms')]),
     ]),
@@ -76,20 +76,20 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
 
   menuWrapperStyle: any = {
     position: 'initial',
-    height: '14.17vw',
+    height: '204px',
   };
 
   menuContainerStyle: any = {
-    paddingBottom: '2.22vw',
+    paddingBottom: '32px',
   };
 
   menuLogoStyle: any = {
-    height: '6.25vw',
+    height: '90px',
   };
 
   menuLogoTypoStyle: any = {
-    fontSize: '1.3125vw',
-    marginTop: '0.42vw',
+    fontSize: '20px',
+    marginTop: '6px',
   };
 
   constructor(
@@ -153,77 +153,72 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
 
   manageScrollAndClasses(scroll: number): void {
     if (this.isBrowser) {
-      const scrollPercent = (scroll / document.body.clientWidth) * 100;
-      if (document.body.clientHeight < document.body.scrollHeight + (4.72 * document.body.clientWidth) / 100) {
-        if (scrollPercent >= 0 && scrollPercent <= 4.72) {
-          // X > 0 && < 4.72
+      if (document.body.clientHeight < document.body.scrollHeight + 68) {
+        if (scroll >= 0 && scroll <= 68) {
           this.settingsStyle = { display: 'block' };
           this.menuWrapperStyle = {
             position: 'initial',
-            height: '14.17vw',
+            height: '204px',
           };
           this.menuContainerStyle = {
-            paddingTop: '2.22vw',
+            paddingTop: '32px',
           };
           this.menuLogoStyle = {
-            height: '6.25vw',
+            height: '90px',
           };
           this.menuLogoTypoStyle = {
-            height: '1.94vw',
-            fontSize: '1.3125vw',
-            marginTop: '0.42vw',
+            height: '28px',
+            fontSize: '20px',
+            marginTop: '6px',
           };
-        } else if (scrollPercent > 4.72 && scrollPercent <= 7.22) {
-          // X > 4.72 && X<=7.22vw
+        } else if (scroll > 68 && scroll <= 104) {
           this.settingsStyle = { display: 'none' };
           this.menuWrapperStyle = {
             position: 'fixed',
             zIndex: '5',
-            height: `calc(14.17vw - (${ scrollPercent}vw - 4.72vw))`,
+            height: `calc(204px - (${Math.round(scroll)}px - 68px))`,
           };
           this.menuContainerStyle = {
-            paddingTop: '2.22vw',
+            paddingTop: '32px',
           };
           this.menuLogoStyle = {
-            height: '6.25vw',
+            height: '90px',
           };
           this.menuLogoTypoStyle = {
-            height: '1.94vw',
-            fontSize: '1.3125vw',
-            marginTop: '0.42vw',
+            height: '28px',
+            fontSize: '20px',
+            marginTop: '6px',
           };
-        } else if (scrollPercent > 7.22 && scrollPercent <= 9.03) {
-          // X > 7.22vw && X <= 9.03vw
+        } else if (scroll > 104 && scroll <= 130) {
           this.settingsStyle = { display: 'none' };
           this.menuWrapperStyle = {
             position: 'fixed',
             zIndex: '5',
-            height: `calc(14.17vw - (${scrollPercent}vw - 4.72vw))`,
+            height: `calc(204px - (${Math.round(scroll)}px - 68px))`,
           };
           this.menuContainerStyle = {
-            paddingTop: `calc(2.22vw - ((${scrollPercent}vw - 7.22vw) / 1.625)`,
+            paddingTop: `calc(32px - ((${Math.round(scroll)}px - 104px) / 1.625)`,
           };
           this.menuLogoStyle = {
-            height: '6.25vw',
+            height: '90px',
           };
           this.menuLogoTypoStyle = {
-            height: `calc(1.94vw - ((${scrollPercent}vw - 7.22vw) / 0.93))`,
-            fontSize: `calc(1.3125vw - ((${scrollPercent}vw - 7.22vw) / 1.38))`,
-            marginTop: `calc(0.42vw - ((${scrollPercent}vw - 7.22vw) / 4.33))`,
+            height: `calc(28px - ((${Math.round(scroll)}px - 104px) / 0.93))`,
+            fontSize: `calc(20px - ((${Math.round(scroll)}px - 104px) / 1.3))`,
+            marginTop: `calc(6px - ((${Math.round(scroll)}px - 104px) / 4.33))`,
           };
-        } else if (scrollPercent > 9.03 && scrollPercent <= 10.83) {
-          // X > 9.03vw && X <= 10.83vw
+        } else if (scroll > 130 && scroll <= 156) {
           this.settingsStyle = { display: 'none' };
           this.menuWrapperStyle = {
             position: 'fixed',
             zIndex: '5',
-            height: `calc(14.17vw - (${scrollPercent}vw - 4.72vw))`,
+            height: `calc(204px - (${Math.round(scroll)}px - 68px))`,
           };
           this.menuContainerStyle = {
-            paddingTop: `calc(2.22vw - ((${ scrollPercent}vw - 7.22vw) / 1.625)`,
+            paddingTop: `calc(32px - ((${Math.round(scroll)}px - 104px) / 1.625)`,
           };
           this.menuLogoStyle = {
-            height: `calc(6.25vw - ((${ scrollPercent}vw - 9.03vw) / 1.18)`,
+            height: `calc(90px - ((${Math.round(scroll)}px - 130px) / 1.18)`,
           };
           this.menuLogoTypoStyle = {
             height: '0px',
@@ -231,19 +226,18 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
             marginTop: '0px',
             display: 'none',
           };
-        } else if (scrollPercent > 10.83) {
-          // 10.83vw
+        } else if (scroll > 156) {
           this.settingsStyle = { display: 'none' };
           this.menuWrapperStyle = {
             position: 'fixed',
             zIndex: '5',
-            height: '8.05vw',
+            height: '116px',
           };
           this.menuContainerStyle = {
             paddingTop: '0px',
           };
           this.menuLogoStyle = {
-            height: '4.72vw',
+            height: '68px',
           };
           this.menuLogoTypoStyle = {
             height: '0px',
@@ -256,15 +250,15 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
         this.settingsStyle = { display: 'block' };
         this.menuWrapperStyle = {
           position: 'initial',
-          height: '14.17vw',
+          height: '204px',
         };
         this.menuContainerStyle = {
-          paddingTop: '2.22vw',
+          paddingTop: '32px',
         };
         this.menuLogoTypoStyle = {
-          height: '1.94vw',
-          fontSize: '1.3125vw',
-          marginTop: '0.42vw',
+          height: '28px',
+          fontSize: '20px',
+          marginTop: '6px',
         };
       }
     }

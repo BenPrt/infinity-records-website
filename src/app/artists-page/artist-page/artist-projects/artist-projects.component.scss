@@ -3,7 +3,7 @@
 #projects-first-layer {
   border-right: 2px solid $very-light-grey;
   @media screen and (min-device-width: $desktop-size) {
-    width: calc(100vw - 12.57vw);
+    width: calc(100% - ((100% - 1079px) / 2) - 2px);
   }
   @media screen and (max-device-width: $desktop-size) {
     width: calc(100vw - 12.23vw - 2px);
@@ -11,9 +11,9 @@
   #projects-second-layer {
     background-color: $very-light-grey;
     @media screen and (min-device-width: $desktop-size) {
-      padding: 7.22vw 15.42vw 7.22vw 4.86vw;
-      min-height: calc(30.83vw + 1.11vw + 11.32vw);
-      width: calc(64.31vw - 15.42vw - 4.86vw);
+      padding: 72px 200px 72px 63px;
+      min-height: calc(401px + 14px + 147px);
+      width: calc(836px - 200px - 63px);
     }
     @media screen and (max-device-width: $desktop-size) {
       padding: 56px 16px;
@@ -23,7 +23,7 @@
     #projects-title {
       font-weight: normal;
       @media screen and (min-device-width: $desktop-size) {
-        font-size: 2.44em;
+        font-size: 44px;
       }
       @media screen and (max-device-width: $desktop-size) {
         font-size: 2em;
@@ -32,7 +32,7 @@
 
     #projects-indicators {
       @media screen and (min-device-width: $desktop-size) {
-        margin-top: 2.22vw;
+        margin-top: 29px;
       }
       @media screen and (max-device-width: $desktop-size) {
         margin-top: 24px;
@@ -41,13 +41,14 @@
         display: inline-block;
         cursor: pointer;
         color: $black;
-        font-size: 1em;
         line-height: 1.56;
         user-select: none;
         @media screen and (min-device-width: $desktop-size) {
+          font-size: 18px;
           margin-right: 1.66vw;
         }
         @media screen and (max-device-width: $desktop-size) {
+          font-size: 1em;
           margin-right: 24px;
         }
       }
@@ -56,7 +57,7 @@
     #project-container {
       width: 100%;
       @media screen and (min-device-width: $desktop-size) {
-        margin-top: 3.89vw;
+        margin-top: 51px;
       }
       @media screen and (max-device-width: $desktop-size) {
         margin-top: 32px;
@@ -64,9 +65,9 @@
       .cover-and-player-container {
         @media screen and (min-device-width: $desktop-size) {
           position: absolute;
-          width: 30.83vw;
-          height: calc(30.83vw + 1.11vw + 11.32vw);
-          margin-left: calc(56.6vw - 4.79vw);
+          width: 401px;
+          height: calc(401px + 14px + 147px);
+          margin-left: calc(100% - (100% - 1300px) - 401px - 63px - ((1300px - 1079px) / 2));
         }
         @media screen and (max-device-width: $desktop-size) {
           width: 75.53vw;
@@ -79,9 +80,9 @@
           justify-content: center;
           align-items: center;
           @media screen and (min-device-width: $desktop-size) {
-            margin-bottom: 1.11vw;
-            width: 30.83vw;
-            height: 30.83vw;
+            margin-bottom: 14px;
+            width: 401px;
+            height: 401px;
           }
           @media screen and (max-device-width: $desktop-size) {
             margin-bottom: 16px;
@@ -90,7 +91,7 @@
           }
           .project-cover {
             @media screen and (min-device-width: $desktop-size) {
-              height: 30.83vw;
+              height: 401px;
             }
             @media screen and (max-device-width: $desktop-size) {
               height: 75.53vw;
@@ -101,7 +102,7 @@
       .project-title-and-duration {
         @media screen and (min-device-width: $desktop-size) {
           line-height: 1.25;
-          height: 2.78vw;
+          height: 36px;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -112,26 +113,31 @@
         .project-title {
           font-weight: 600;
           @media screen and (min-device-width: $desktop-size) {
-            font-size: 2em;
+            font-size: 32px;
           }
           @media screen and (max-device-width: $desktop-size) {
             font-size: 1.15em;
           }
         }
         .project-duration {
-          font-size: 2em;
           font-weight: normal;
           color: $grey;
+          @media screen and (min-device-width: $desktop-size) {
+            font-size: 32px;
+          }
+          @media screen and (max-device-width: $desktop-size) {
+            font-size: 2em;
+          }
         }
       }
       .project-release-date {
         color: $grey;
         font-weight: 500;
         @media screen and (min-device-width: $desktop-size) {
-          font-size: 1em;
+          font-size: 18px;
           line-height: 1.33;
-          letter-spacing: 0.11em;
-          margin-top: 0.56vw;
+          letter-spacing: 2px;
+          margin-top: 7px;
         }
         @media screen and (max-device-width: $desktop-size) {
           font-size: 0.8em;
@@ -142,7 +148,7 @@
       }
       .project-tracklist {
         @media screen and (min-device-width: $desktop-size) {
-          margin-top: 0.97vw;
+          margin-top: 13px;
         }
         @media screen and (max-device-width: $desktop-size) {
           margin-top: 8px;
@@ -155,7 +161,7 @@
           border-bottom: 1px solid $light-grey;
 
           @media screen and (min-device-width: $desktop-size) {
-            height: 4.03vw;
+            height: 52px;
           }
           @media screen and (max-device-width: $desktop-size) {
             height: 58px;
@@ -163,17 +169,23 @@
           .track-informations {
             display: flex;
             align-items: center;
-            font-size: 0.9em;
             font-weight: 600;
+            @media screen and (min-device-width: $desktop-size) {
+              font-size: 16px;
+            }
+            @media screen and (max-device-width: $desktop-size) {
+              font-size: 0.9em;
+            }
             .track-number {
-              font-size: 1em;
               font-weight: normal;
               line-height: 1.56;
               @media screen and (min-device-width: $desktop-size) {
-                margin-right: 0.56vw;
+                margin-right: 7px;
+                font-size: 18px;
               }
               @media screen and (max-device-width: $desktop-size) {
                 margin-right: 8px;
+                font-size: 1em;
               }
             }
             .track-separator {
@@ -181,9 +193,9 @@
               margin: 0;
               background-color: $gold;
               @media screen and (min-device-width: $desktop-size) {
-                width: 1.67vw;
-                margin-right: 0.56vw;
-                height: 0.07vw;
+                width: 22px;
+                margin-right: 7px;
+                height: 1px;
               }
               @media screen and (max-device-width: $desktop-size) {
                 width: 24px;
@@ -194,8 +206,12 @@
           }
 
           .playing-indicators {
-            font-size: 0.9em;
-
+            @media screen and (min-device-width: $desktop-size) {
+              font-size: 16px;
+            }
+            @media screen and (max-device-width: $desktop-size) {
+              font-size: 0.9em;
+            }
             .play-button {
               display: flex;
               align-items: center;
@@ -203,8 +219,8 @@
               img {
                 text-decoration: none;
                 @media screen and (min-device-width: $desktop-size) {
-                  width: 1.39vw;
-                  height: 1.39vw;
+                  width: 18px;
+                  height: 18px;
                   margin-right: 5px;
                 }
                 @media screen and (max-device-width: $desktop-size) {
@@ -225,8 +241,8 @@
               align-items: center;
               img {
                 @media screen and (min-device-width: $desktop-size) {
-                  width: 1.67vw;
-                  height: 1.67vw;
+                  width: 22px;
+                  height: 22px;
                 }
                 @media screen and (max-device-width: $desktop-size) {
                   width: 24px;
@@ -247,18 +263,19 @@
         background-color: $black;
         color: $white;
         font-family: 'Montserrat';
-        font-size: 0.9em;
         font-weight: 500;
         border: none;
         cursor: pointer;
         padding: none;
         @media screen and (min-device-width: $desktop-size) {
-          height: 2.78vw;
-          width: 11.875vw;
-          margin-top: 4.58vw;
-          margin-left: calc(100% - 11.875vw);
+          font-size: 16px;
+          height: 36px;
+          width: 154px;
+          margin-top: 60px;
+          margin-left: calc(100% - 154px);
         }
         @media screen and (max-device-width: $desktop-size) {
+          font-size: 0.9em;
           height: 40px;
           margin-top: 48px;
           width: 100%;
@@ -312,7 +329,7 @@
     }
     100% {
       opacity: 0;
-      margin-left: -1.11vw;
+      margin-left: -14px;
     }
   }
   @keyframes fadeOutPrevious {
@@ -322,7 +339,7 @@
     }
     100% {
       opacity: 0;
-      margin-left: 1.11vw;
+      margin-left: 14px;
     }
   }
 }
@@ -359,7 +376,7 @@
   @keyframes fadeInNext {
     0% {
       opacity: 0;
-      margin-left: 1.11vw;
+      margin-left: 14px;
     }
     100% {
       opacity: 1;
@@ -369,7 +386,7 @@
   @keyframes fadeInPrevious {
     0% {
       opacity: 0;
-      margin-left: -1.11vw;
+      margin-left: -14px;
     }
     100% {
       opacity: 1;

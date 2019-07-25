@@ -1,253 +1,264 @@
 @import 'src/app/utils/_styleVariables';
 
-#artists-list-first-layer {
-  border-left: 2px solid $very-light-grey;
-  border-right: 2px solid $very-light-grey;
-  display: flex;
-  justify-content: space-between;
+#artists-list-page-content {
   @media screen and (min-device-width: $desktop-size) {
-    width: calc(-12.57vw - 2px + 100vw - 12.57vw);
-    margin-left: 12.57vw;
+    width: 1300px;
+    margin-left: calc((100% - 1300px) / 2);
   }
   @media screen and (max-device-width: $desktop-size) {
-    width: calc(-12.23vw - 2px + 100vw - 12.23vw);
-    margin-left: 12.23vw;
   }
-
-  #artists-list-title {
-    font-size: 1em;
-    font-weight: bold;
-    letter-spacing: 0.11em;
-    transform: rotate(90deg);
-    @media screen and (min-device-width: $desktop-size) {
-      height: 1.39vw;
-      width: 7.29vw;
-      margin-left: -2.78vw;
-      margin-top: calc(2.99vw + 3.89vw);
-    }
-    @media screen and (max-device-width: $desktop-size) {
-      height: 20px;
-      width: 105px;
-      margin-left: -40px;
-      margin-top: calc(43px + 48px);
-    }
-  }
-  #artists-list-second-layer {
+  #artists-list-first-layer {
     border-left: 2px solid $very-light-grey;
+    border-right: 2px solid $very-light-grey;
+    display: flex;
+    justify-content: space-between;
     @media screen and (min-device-width: $desktop-size) {
-      width: 53.82vw;
+      width: calc(-163px - 2px + 100% - 163px);
+      margin-left: 163px;
     }
     @media screen and (max-device-width: $desktop-size) {
-      width: 47.34vw;
+      width: calc(-12.23vw - 2px + 100vw - 12.23vw);
+      margin-left: 12.23vw;
     }
 
-    #artists-list-top-description {
+    #artists-list-title {
+      font-weight: bold;
+      transform: rotate(90deg);
       @media screen and (min-device-width: $desktop-size) {
-        width: 28.61vw;
-        margin-top: 3.89vw;
-        margin-left: 17.64vw;
+        font-size: 18px;
+        letter-spacing: 2px;
+        height: 18px;
+        width: 95px;
+        margin-left: -36px;
+        margin-top: calc(39px + 51px);
       }
       @media screen and (max-device-width: $desktop-size) {
-        width: 50.53vw;
-        margin-top: 48px;
-        margin-left: 4.26vw;
-      }
-      #top-description-title {
-        font-weight: normal;
-        @media screen and (min-device-width: $desktop-size) {
-          font-size: 2.44em;
-          line-height: 1.27;
-        }
-        @media screen and (max-device-width: $desktop-size) {
-          font-size: 1.78em;
-          line-height: 1.25;
-        }
-      }
-      #top-description-content {
         font-size: 1em;
-        font-weight: 500;
-        line-height: 1.56;
-        @media screen and (min-device-width: $desktop-size) {
-          margin-top: 1.11vw;
-        }
-        @media screen and (max-device-width: $desktop-size) {
-          margin-top: 16px;
-        }
+        letter-spacing: 0.11em;
+        height: 20px;
+        width: 105px;
+        margin-left: -40px;
+        margin-top: calc(43px + 48px);
       }
     }
-
-    #artists-list-third-layer {
-      background-color: $very-light-grey;
+    #artists-list-second-layer {
+      border-left: 2px solid $very-light-grey;
       @media screen and (min-device-width: $desktop-size) {
-        padding-top: 7.36vw;
-        margin: 7.22vw 0 7.22vw 9.93vw;
-        height: 19.1vw;
-        width: calc(100vw - 12.57vw - 2px - 20.625vw - 2px - 9.93vw);
+        width: 700px;
       }
       @media screen and (max-device-width: $desktop-size) {
-        padding-top: 56px;
-        margin: 72px 0 104px -11.17vw;
-        height: calc(73.94vw + 40px + 73.94vw);
-        width: calc(100% + 11.17vw + 12.23vw);
+        width: 47.34vw;
       }
-      #artists-list-list-container {
+
+      #artists-list-top-description {
         @media screen and (min-device-width: $desktop-size) {
-          height: 19.1vw;
-          width: calc(28.61vw + 2.22vw + 5.49vw + 28.61vw + 2.22vw);
-          margin-left: -15.42vw;
-          display: flex;
-          justify-content: space-between;
+          width: 372px;
+          margin-top: 51px;
+          margin-left: 229px;
         }
         @media screen and (max-device-width: $desktop-size) {
-          height: calc(73.94vw + 40px + 73.94vw);
-          width: calc(100% + 7.98vw);
-          margin-left: -7.98vw;
+          width: 50.53vw;
+          margin-top: 48px;
+          margin-left: 4.26vw;
         }
-        .artists-list-list-item {
+        #top-description-title {
+          font-weight: normal;
           @media screen and (min-device-width: $desktop-size) {
-            width: calc(28.61vw + 2.22vw);
-            height: 19.1vw;
+            font-size: 44px;
+            line-height: 1.27;
           }
           @media screen and (max-device-width: $desktop-size) {
-            width: 100%;
-            height: 73.94vw;
-            margin-bottom: 40px;
+            font-size: 1.78em;
+            line-height: 1.25;
           }
+        }
+        #top-description-content {
+          font-weight: 500;
+          line-height: 1.56;
+          @media screen and (min-device-width: $desktop-size) {
+            margin-top: 14px;
+            font-size: 18px;
+          }
+          @media screen and (max-device-width: $desktop-size) {
+            margin-top: 16px;
+            font-size: 1em;
+          }
+        }
+      }
 
-          .artist-item-link {
-            text-decoration: none;
+      #artists-list-third-layer {
+        background-color: $very-light-grey;
+        @media screen and (min-device-width: $desktop-size) {
+          padding-top: 96px;
+          margin: 94px 0 94px 129px;
+          height: 248px;
+          width: calc(100% - 129px + 163px);
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          padding-top: 56px;
+          margin: 72px 0 104px -11.17vw;
+          height: calc(73.94vw + 40px + 73.94vw);
+          width: calc(100% + 11.17vw + 12.23vw);
+        }
+        #artists-list-list-container {
+          @media screen and (min-device-width: $desktop-size) {
+            height: 248px;
+            width: calc(372px + 29px + 71px + 372px + 29px);
+            margin-left: -200px;
+            display: flex;
+            justify-content: space-between;
+          }
+          @media screen and (max-device-width: $desktop-size) {
+            height: calc(73.94vw + 40px + 73.94vw);
+            width: calc(100% + 7.98vw);
+            margin-left: -7.98vw;
+          }
+          .artists-list-list-item {
+            @media screen and (min-device-width: $desktop-size) {
+              width: calc(372px + 29px);
+              height: 248px;
+            }
+            @media screen and (max-device-width: $desktop-size) {
+              width: 100%;
+              height: 73.94vw;
+              margin-bottom: 40px;
+            }
 
-            .artist-item-picture-wrapper {
-              display: flex;
-              flex-direction: column;
-              overflow: hidden;
-              align-items: center;
-              justify-content: center;
+            .artist-item-link {
+              text-decoration: none;
 
-              @media screen and (min-device-width: $desktop-size) {
-                width: 28.61vw;
-                height: 19.1vw;
-              }
-              @media screen and (max-device-width: $desktop-size) {
-                width: 73.94vw;
-                height: 73.94vw;
-              }
-              .artist-item-picture {
+              .artist-item-picture-wrapper {
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                align-items: center;
+                justify-content: center;
+
                 @media screen and (min-device-width: $desktop-size) {
-                  height: 19.1vw;
+                  width: 372px;
+                  height: 248px;
                 }
                 @media screen and (max-device-width: $desktop-size) {
+                  width: 73.94vw;
                   height: 73.94vw;
                 }
+                .artist-item-picture {
+                  @media screen and (min-device-width: $desktop-size) {
+                    height: 248px;
+                  }
+                  @media screen and (max-device-width: $desktop-size) {
+                    height: 73.94vw;
+                  }
+                }
+                .artist-item-picture-gradient {
+                  position: relative;
+                  z-index: 1;
+                  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.71));
+                  @media screen and (min-device-width: $desktop-size) {
+                    height: 100px;
+                    margin-top: -100px;
+                    width: 372px;
+                  }
+                  @media screen and (max-device-width: $desktop-size) {
+                    height: 33.78vw;
+                    margin-top: -29.52vw;
+                    width: 73.94vw;
+                  }
+                }
               }
-              .artist-item-picture-gradient {
+              .artist-item-content-wrapper {
                 position: relative;
                 z-index: 1;
-                background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.71));
+                display: flex;
+                justify-content: space-between;
                 @media screen and (min-device-width: $desktop-size) {
-                  height: 7.71vw;
-                  margin-top: -7.71vw;
-                  width: 28.61vw;
-                }
-                @media screen and (max-device-width: $desktop-size) {
-                  height: 33.78vw;
-                  margin-top: -29.52vw;
-                  width: 73.94vw;
-                }
-              }
-            }
-            .artist-item-content-wrapper {
-              position: relative;
-              z-index: 1;
-              display: flex;
-              justify-content: space-between;
-              @media screen and (min-device-width: $desktop-size) {
-                width: calc(28.61vw + 2.22vw);
-                height: 7.71vw;
-                margin-top: -7.71vw;
-              }
-              @media screen and (max-device-width: $desktop-size) {
-                height: 29.52vw;
-                margin-top: calc(-29.52vw + 1px);
-                width: 100%;
-              }
-              .artist-item-content {
-                color: $white;
-
-                @media screen and (min-device-width: $desktop-size) {
-                  padding-left: 1.11vw;
-                  height: 7.71vw;
-                  width: calc(-16px + 100% - 2.22vw - 7.71vw);
-                }
-                @media screen and (max-device-width: $desktop-size) {
-                  padding-left: 16px;
-                  height: 29.52vw;
-                  width: calc(-16px + 100% - 32px - 29.52vw);
-                }
-                .artist-item-content-separator {
-                  border: none;
-                  margin: 0;
-                  background-color: $gold;
-
-                  @media screen and (min-device-width: $desktop-size) {
-                    height: 0.28vw;
-                    width: 2.22vw;
-                    margin-top: 1.32vw;
-                    margin-bottom: 1.11vw;
-                  }
-                  @media screen and (max-device-width: $desktop-size) {
-                    height: 4px;
-                    width: 8.51vw;
-                    margin-top: 19px;
-                    margin-bottom: 16px;
-                  }
-                }
-                .artist-item-type {
-                  line-height: 1.71;
-                  @media screen and (min-device-width: $desktop-size) {
-                    height: 1.67vw;
-                    font-size: 0.8em;
-                  }
-                  @media screen and (max-device-width: $desktop-size) {
-                    height: 24px;
-                    font-size: 0.78em;
-                  }
-                }
-                .artist-item-name {
-                  font-weight: 600;
-                  line-height: 1.33;
-                  @media screen and (min-device-width: $desktop-size) {
-                    height: 2.08vw;
-                    font-size: 1.33em;
-                  }
-                  @media screen and (max-device-width: $desktop-size) {
-                    height: 30px;
-                    font-size: 1.345em;
-                  }
-                }
-              }
-              .artist-item-logo-wrapper {
-                display : flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                overflow: hidden;
-                
-                @media screen and (min-device-width: $desktop-size) {
-                  height: 7.71vw;
-                  width: 7.71vw;
+                  width: calc(372px + 29px);
+                  height: 100px;
+                  margin-top: -100px;
                 }
                 @media screen and (max-device-width: $desktop-size) {
                   height: 29.52vw;
-                  width: 29.52vw;
+                  margin-top: calc(-29.52vw + 1px);
+                  width: 100%;
                 }
-                .artist-item-logo {
+                .artist-item-content {
+                  color: $white;
+
                   @media screen and (min-device-width: $desktop-size) {
-                    height: 7.71vw;
-                     }
+                    padding-left: 14px;
+                    height: 100px;
+                    width: calc(-16px + 100% - 29px - 100px);
+                  }
+                  @media screen and (max-device-width: $desktop-size) {
+                    padding-left: 16px;
+                    height: 29.52vw;
+                    width: calc(-16px + 100% - 32px - 29.52vw);
+                  }
+                  .artist-item-content-separator {
+                    border: none;
+                    margin: 0;
+                    background-color: $gold;
+
+                    @media screen and (min-device-width: $desktop-size) {
+                      height: 4px;
+                      width: 29px;
+                      margin-top: 17px;
+                      margin-bottom: 14px;
+                    }
+                    @media screen and (max-device-width: $desktop-size) {
+                      height: 4px;
+                      width: 8.51vw;
+                      margin-top: 19px;
+                      margin-bottom: 16px;
+                    }
+                  }
+                  .artist-item-type {
+                    line-height: 1.71;
+                    @media screen and (min-device-width: $desktop-size) {
+                      height: 22px;
+                      font-size: 14px;
+                    }
+                    @media screen and (max-device-width: $desktop-size) {
+                      height: 24px;
+                      font-size: 0.78em;
+                    }
+                  }
+                  .artist-item-name {
+                    font-weight: 600;
+                    line-height: 1.33;
+                    @media screen and (min-device-width: $desktop-size) {
+                      height: 27px;
+                      font-size: 24px;
+                    }
+                    @media screen and (max-device-width: $desktop-size) {
+                      height: 30px;
+                      font-size: 1.345em;
+                    }
+                  }
+                }
+                .artist-item-logo-wrapper {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  overflow: hidden;
+
+                  @media screen and (min-device-width: $desktop-size) {
+                    height: 100px;
+                    width: 100px;
+                  }
                   @media screen and (max-device-width: $desktop-size) {
                     height: 29.52vw;
+                    width: 29.52vw;
+                  }
+                  .artist-item-logo {
+                    @media screen and (min-device-width: $desktop-size) {
+                      height: 100px;
                     }
+                    @media screen and (max-device-width: $desktop-size) {
+                      height: 29.52vw;
+                    }
+                  }
                 }
               }
             }

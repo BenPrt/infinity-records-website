@@ -3,8 +3,8 @@
 #background-layer {
   border-left: 2px solid $very-light-grey;
   @media screen and (min-device-width: $desktop-size) {
-    width: 74.6vw;
-    margin-left: 12.7vw;
+    width : calc(100% - 163px);
+    margin-left : 163px;
     border-right: 2px solid $very-light-grey;
   }
   @media screen and (max-device-width: $desktop-size) {
@@ -18,9 +18,9 @@
     justify-content: center;
     overflow: hidden;
     @media screen and (min-device-width: $desktop-size) {
-      margin-left: calc(-12.7vw - 2px);
-      width: 72vw;
-      height: 48vw;
+      margin-left: calc(-163px - 2px);
+      width: 1101px;
+      height: 734px;
     }
     @media screen and (max-device-width: $desktop-size) {
       margin-left: calc(-12.23vw - 2px);
@@ -29,7 +29,7 @@
     }
     #banner-picture {
       @media screen and (min-device-width: $desktop-size) {
-        height: 48vw;
+        height: 734px;
       }
       @media screen and (max-device-width: $desktop-size) {
         height: 75vw;
@@ -40,10 +40,10 @@
     position: relative;
     background-color: $very-light-grey;
     @media screen and (min-device-width: $desktop-size) {
-      width: calc(44vw - 5.56vw - 5.56vw);
-      margin-left: 30.7vw;
-      margin-top: -14.66vw;
-      padding: 5.56vw;
+      width: 530px;
+      margin-left: calc(100% - 72px - 530px - 72px);
+      margin-top: -200px;
+      padding: 72px;
     }
     @media screen and (max-device-width: $desktop-size) {
       width: calc(67.55% - 32px - 32px);
@@ -53,14 +53,14 @@
     }
     #banner-page-title {
       line-height: 1.63;
-      letter-spacing: 0.11em;
+      letter-spacing: 2px;
       font-weight: bold;
-      font-size: 0.9em;
+      font-size: 16px;
     }
     #banner-title {
       font-weight : normal;
       @media screen and (min-device-width: $desktop-size) {
-        font-size: 2.45em;
+        font-size: 44px;
         line-height: 1.27;
       }
       @media screen and (max-device-width: $desktop-size) {
@@ -69,8 +69,8 @@
       }
     }
     #banner-description {
-      margin-top: 1.11vw;
-      font-size: 1em;
+      margin-top: 16px;
+      font-size: 18px;
       font-weight: 500;
       line-height: 1.56;
     }

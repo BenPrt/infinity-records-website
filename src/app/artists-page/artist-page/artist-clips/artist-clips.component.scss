@@ -7,21 +7,21 @@
     justify-content: space-between;
     @media screen and (min-device-width: $desktop-size) {
       border-right: 2px solid $very-light-grey;
-      margin-left: 12.57vw;
-      width: calc(-12.57vw - 2px + 100vw - 12.57vw);
+      width: calc(100% - ((100% - 1079px) / 2) - ((100% - 1079px) / 2) - 2px - 2px);
+      margin-left: calc((100% - 1079px) / 2);
     }
     @media screen and (max-device-width: $desktop-size) {
       margin-left: 12.23vw;
       width: calc(-12.23vw - 2px + 100vw);
     }
     #clips-second-layer {
-      border-left: 2px solid $very-light-grey;
       @media screen and (min-device-width: $desktop-size) {
-        height: calc(104px + 20.42vw + 7.92vw);
-        width: 30.83vw;
-        margin-left: 20.49vw;
+        height: calc(104px + 265px + 103px);
+        width: calc(372px - ((1300px - 1079px) / 2) - 2px);
+        border-right: 2px solid $very-light-grey;
       }
       @media screen and (max-device-width: $desktop-size) {
+        border-left: 2px solid $very-light-grey;
         height: calc(64px + 42.82vw + 24px + 42.82vw + 64px);
         width: 34.04vw;
         margin-left: 26.6vw;
@@ -30,8 +30,8 @@
     #clips-third-layer {
       background-color: $very-light-grey;
       @media screen and (min-device-width: $desktop-size) {
-        height: calc(104px + 20.42vw + 7.92vw);
-        width: 23.125vw;
+        height: calc(104px + 265px + 103px);
+        width: 351px;
       }
       @media screen and (max-device-width: $desktop-size) {
         height: calc(64px + 42.82vw + 24px + 42.82vw + 64px);
@@ -44,12 +44,12 @@
     justify-content: space-between;
 
     @media screen and (min-device-width: $desktop-size) {
-      width: 82.29vw;
-      margin-left: calc(12.57vw + 2px);
-      padding-top: 7.22vw;
-      padding-bottom: 7.92vw;
-      height: 20.42vw;
-      margin-top: calc(-7.22vw - 20.42vw - 7.92vw);
+      width: calc(100% - ((100% - 1079px) / 2) - ((100% - 1079px) / 2) - 2px - 2px);
+      margin-left: calc(((100% - 1079px) / 2) + 2px);
+      padding-top: 94px;
+      padding-bottom: 103px;
+      height: 265px;
+      margin-top: calc(-94px - 265px - 103px);
     }
     @media screen and (max-device-width: $desktop-size) {
       margin-left: 12.23vw;
@@ -57,50 +57,51 @@
       padding-top: 64px;
       padding-bottom: 64px;
       height: calc(42.82vw + 24px + 42.82vw);
-      margin-top : calc(-64px - 42.82vw - 24px - 42.82vw - 64px);
+      margin-top: calc(-64px - 42.82vw - 24px - 42.82vw - 64px);
     }
     #clips-title {
-      font-size: 1em;
       font-weight: bold;
       letter-spacing: 0.11em;
       transform: rotate(90deg);
       @media screen and (min-device-width: $desktop-size) {
-        height: 1.39vw;
-        margin-left: -1.46vw;
-        margin-top: 1.60vw;  
+        font-size: 18px;
+        height: 18px;
+        margin-left: -19px;
+        margin-top: 21px;
       }
       @media screen and (max-device-width: $desktop-size) {
+        font-size: 1em;
         height: 20px;
         margin-left: -21px;
-        margin-top: 23px;  
+        margin-top: 23px;
       }
     }
 
-    #clips-clips-wrapper{
-      display : flex;
+    #clips-clips-wrapper {
+      display: flex;
       @media screen and (min-device-width: $desktop-size) {
-        width : calc(100% - 7.57vw);
-        height : 20.42vw;
+        width: calc(100% - 98px);
+        height: 265px;
         flex-direction: row;
         justify-content: space-between;
       }
       @media screen and (max-device-width: $desktop-size) {
         width: 76.06vw;
         height: calc(42.82vw + 24px + 42.82vw);
-        flex-direction : column;
+        flex-direction: column;
         justify-content: space-between;
       }
 
       .clips-clip {
-      @media screen and (min-device-width: $desktop-size) {
-        height: 20.42vw;
-        width: 36.32vw;
+        @media screen and (min-device-width: $desktop-size) {
+          height: 265px;
+          width: 472px;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          width: 76.06vw;
+          height: 42.82vw;
+        }
       }
-      @media screen and (max-device-width: $desktop-size) {
-        width: 76.06vw;
-        height: 42.82vw;
-      }
-    }
     }
   }
 }

@@ -1,1 +1,10 @@
 @import "src/app/utils/_styleVariables";
+
+#artist-page-content{
+    @media screen and (min-device-width: $desktop-size) {
+        width : 1300px;
+        margin-left : calc((100% - 1300px) / 2);
+    }
+    @media screen and (max-device-width: $desktop-size) {
+    }
+}
