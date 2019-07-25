@@ -15,9 +15,9 @@
       </span>
     </p>
 
-    <p id="next-artist-button" (click)="goToNextArtist()">
+    <a id="next-artist-link" [routerLink]="getNextArtist()" routerLinkActive="active">
       {{ nextArtist.name | uppercase }}
       <img alt="Next artist arrow" src="assets/icons/next_icon.svg" />
-    </p>
+    </a>
   </div>
 </div>

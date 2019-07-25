@@ -42,12 +42,15 @@ export class ArtistsListPageComponent implements OnInit {
 
   defineMetadata(): void {
     const translationPipe = new TranslationPipe(this.translationService);
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content: `${translationPipe.transform('METADATA_ARTISTS_LIST_DESCRIPTION')}`,
     });
-    this.meta.addTag({ name: 'keywords', content: `${translationPipe.transform('METADATA_ARTISTS_LIST_KEYWORDS')}` });
-    this.meta.addTag({ name: 'author', content: 'Infinity Records' });
+    this.meta.updateTag({
+      name: 'keywords',
+      content: `${translationPipe.transform('METADATA_ARTISTS_LIST_KEYWORDS')}`,
+    });
+    this.meta.updateTag({ name: 'author', content: 'Infinity Records' });
   }
 
   getArtistPicture(artist: ArtistInformations): string {

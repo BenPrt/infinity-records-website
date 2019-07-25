@@ -91,9 +91,12 @@ export class ArtistPageComponent implements OnInit {
 
   defineMetadata(): void {
     const translationPipe = new TranslationPipe(this.translationService);
-    this.meta.addTag({ name: 'description', content: `${translationPipe.transform('METADATA_ARTISTS_DESCRIPTION')}` });
-    this.meta.addTag({ name: 'keywords', content: `${translationPipe.transform('METADATA_ARTISTS_KEYWORDS')}` });
-    this.meta.addTag({ name: 'author', content: 'Infinity Records' });
+    this.meta.updateTag({
+      name: 'description',
+      content: `${translationPipe.transform('METADATA_ARTISTS_DESCRIPTION')}`,
+    });
+    this.meta.updateTag({ name: 'keywords', content: `${translationPipe.transform('METADATA_ARTISTS_KEYWORDS')}` });
+    this.meta.updateTag({ name: 'author', content: 'Infinity Records' });
   }
 
   ngOnDestroy(): void {
