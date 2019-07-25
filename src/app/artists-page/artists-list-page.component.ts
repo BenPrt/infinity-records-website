@@ -42,6 +42,7 @@ export class ArtistsListPageComponent implements OnInit {
 
   defineMetadata(): void {
     const translationPipe = new TranslationPipe(this.translationService);
+    console.log(translationPipe.transform('METADATA_ARTISTS_LIST_DESCRIPTION'));
     this.meta.updateTag({
       name: 'description',
       content: `${translationPipe.transform('METADATA_ARTISTS_LIST_DESCRIPTION')}`,
