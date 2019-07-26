@@ -89,24 +89,28 @@
 	
 	
 	
-	"METADATA_ARTISTS_LIST_DESCRIPTION":"Découvrez les artistes d'Infinity Records. Apprenez-en plus sur nos artistes, leur univers musical, leurs dernières actualités, ...",
+	"METADATA_ARTISTS_LIST_DESCRIPTION":"Découvrez les artistes d'Infinity Records. Apprenez-en plus sur nos talents, leur univers musical, leurs dernières actualités, ...",
 	"METADATA_ARTISTS_LIST_KEYWORDS":"Infinity Records, Artistes, Musique, Albums, Réseaux Sociaux, Photos, PRT Crew, Hip-hop, Fresh Ben, Beatmaking, Clips",
 	
 	
 	"ARTISTS_LIST_TOP_TITLE" : "Découvrez nos talents...",
 	"ARTISTS_LIST_TOP_CONTENT" : "Apprenez-en plus sur nos artistes, leur univers musical et leur actualité.",
 	
+
 	
-	
-	
-	"METADATA_ARTISTS_DESCRIPTION":"",
-	"METADATA_ARTISTS_KEYWORDS":"",
-	
+
 	
 	"ARTISTS_BACK": "retour",
 	
 	"ARTISTS_PRT-CREW_DESCRIPTION": "Des textes techniques aux thèmes variés, enrichis d'une complicité remontant à de nombreuses années...",
+	
+	"METADATA_ARTISTS_PRT-CREW_DESCRIPTION":"PRT Crew description",
+	"METADATA_ARTISTS_PRT-CREW_KEYWORDS":"PRT Crew keywords",
+	
 	"ARTISTS_FRESH-BEN_DESCRIPTION": "Des mélodies originales, des samples colorés et des rythmes percutants : Shit.. This is Fresh !",
+	
+	"METADATA_ARTISTS_FRESH-BEN_DESCRIPTION":"Fresh Ben description",
+	"METADATA_ARTISTS_FRESH-BEN_KEYWORDS":"Fresh Ben keywords",
 		
 	"ARTISTS_PROJECTS" : "Projets",
 	"ARTISTS_PROJECT_RELEASED_ON" : "Sorti le ",

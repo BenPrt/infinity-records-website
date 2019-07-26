@@ -58,6 +58,7 @@ export class ArtistPageComponent implements OnInit {
       this.artist = artistsInfos.find((artist: ArtistInformations) => {
         return artist.name === artistName;
       });
+      this.defineMetadata();
       if (this.artist) {
         if (params.project) {
           this.initCurrentProject(parseInt(params.project, 10));
@@ -93,9 +94,9 @@ export class ArtistPageComponent implements OnInit {
     const translationPipe = new TranslationPipe(this.translationService);
     this.meta.updateTag({
       name: 'description',
-      content: `${translationPipe.transform('METADATA_ARTISTS_DESCRIPTION')}`,
+      content: `${translationPipe.transform(this.artist.metadata_description)}`,
     });
-    this.meta.updateTag({ name: 'keywords', content: `${translationPipe.transform('METADATA_ARTISTS_KEYWORDS')}` });
+    this.meta.updateTag({ name: 'keywords', content: `${translationPipe.transform(this.artist.metadata_keywords)}` });
     this.meta.updateTag({ name: 'author', content: 'Infinity Records' });
   }
 

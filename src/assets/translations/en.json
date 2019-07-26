@@ -99,14 +99,18 @@
 	
 	
 	
-	"METADATA_ARTISTS_DESCRIPTION":"",
-	"METADATA_ARTISTS_KEYWORDS":"",
-	
 	
 	"ARTISTS_BACK": "back",
 	
 	"ARTISTS_PRT-CREW_DESCRIPTION": "Technicals texts about various themes, supplemented by an age-old complicity...",
+
+	"METADATA_ARTISTS_PRT-CREW_DESCRIPTION":"",
+	"METADATA_ARTISTS_PRT-CREW_KEYWORDS":"",
+	
 	"ARTISTS_FRESH-BEN_DESCRIPTION": "Original melodies, colorful samples, punchy rhythms: Shit.. This is Fresh!",
+		
+	"METADATA_ARTISTS_FRESH-BEN_DESCRIPTION":"",
+	"METADATA_ARTISTS_FRESH-BEN_KEYWORDS":"",
 	
 	"ARTISTS_PROJECTS" : "Projects",
 	"ARTISTS_PROJECT_RELEASED_ON" : "Released on ",
