@@ -102,15 +102,15 @@
 	
 	"ARTISTS_BACK": "back",
 	
-	"ARTISTS_PRT-CREW_DESCRIPTION": "Technicals texts about various themes, supplemented by an age-old complicity...",
-
-	"METADATA_ARTISTS_PRT-CREW_DESCRIPTION":"",
-	"METADATA_ARTISTS_PRT-CREW_KEYWORDS":"",
+	"ARTISTS_PRT-CREW_DESCRIPTION": "Technicals lyrics about various themes, supplemented by an age-old complicity...",
+	
+	"METADATA_ARTISTS_PRT-CREW_DESCRIPTION":"Discover the PRT Crew. Artists from the Infinity Records label, the PRT Crew is defined by technicals lyrics about various themes, supplemented by an age-old complicity...",
+	"METADATA_ARTISTS_PRT-CREW_KEYWORDS":"Infinity Records, PRT Crew, Hip-hop, Rap, Lille, France, Technical lyrics, Boombap, Trap, PRTape Vol. 1, PRTape Vol. 2, La Valse, Commotion, Un truc étrange, Sombres Lumières",
 	
 	"ARTISTS_FRESH-BEN_DESCRIPTION": "Original melodies, colorful samples, punchy rhythms: Shit.. This is Fresh!",
-		
-	"METADATA_ARTISTS_FRESH-BEN_DESCRIPTION":"",
-	"METADATA_ARTISTS_FRESH-BEN_KEYWORDS":"",
+
+	"METADATA_ARTISTS_FRESH-BEN_DESCRIPTION":"Discover Fresh Ben, the Infinity Records beatmaker. His music identifies itself by original melodies, colorful samples, punchy rhythms: Shit.. This is Fresh!",
+	"METADATA_ARTISTS_FRESH-BEN_KEYWORDS":"Infinity Records, Fresh Ben, Beatmaking, Producer, Trap, Rap, Hip-hop, Samples, Melodies, Lille, France, This is Fresh",
 	
 	"ARTISTS_PROJECTS" : "Projects",
 	"ARTISTS_PROJECT_RELEASED_ON" : "Released on ",
