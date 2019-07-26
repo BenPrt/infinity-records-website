@@ -15,6 +15,8 @@ export const artistsInfos: ArtistInformations[] = [
     url_spotify: 'https://open.spotify.com/artist/3bT1MhtM1FwJu8ksqxnMLO',
     url_deezer: 'https://www.deezer.com/fr/artist/15199683',
     description: 'ARTISTS_PRT-CREW_DESCRIPTION',
+    metadata_description: 'METADATA_ARTISTS_PRT-CREW_DESCRIPTION',
+    metadata_keywords: 'METADATA_ARTISTS_PRT-CREW_KEYWORDS',
     projects: [
       {
         id: 1,
@@ -138,6 +140,8 @@ export const artistsInfos: ArtistInformations[] = [
     url_spotify: '',
     url_deezer: '',
     description: 'ARTISTS_FRESH-BEN_DESCRIPTION',
+    metadata_description: 'METADATA_ARTISTS_FRESH-BEN_DESCRIPTION',
+    metadata_keywords: 'METADATA_ARTISTS_FRESH-BEN_KEYWORDS',
     projects: [
       {
         id: 1,

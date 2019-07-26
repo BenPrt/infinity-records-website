@@ -30,6 +30,11 @@
 	
 	
 	
+	
+	"METADATA_HOMEPAGE_DESCRIPTION":"Welcome to Infinity Records Website. Discover the label, our music, the artists who made it, and everything you need to know about us.",
+	"METADATA_HOMEPAGE_KEYWORDS":"Infinity Records, The Label, Music, Artists, Merch, Welcome, Facebook Feed, France, Contact form, Social media",
+	
+	
 	"HOME_WELCOME" : "Welcome",
 	
 	"HOME_NEWS_TITLE" : "Stay up to date and check our latest news!",
@@ -48,6 +53,12 @@
 	"HOME_LINKING_MERCH" : "Discover our merch",
 		
 
+
+
+	"METADATA_LABEL_DESCRIPTION":"Discover the Infinity Records label. Learn more about the means set up for our artists to develop their project and the way we conceive working with them.",
+	"METADATA_LABEL_KEYWORDS":"Infinity Records, Music Label, France, Artists development, The studio, Recording, Mixing, Mastering, The staff, Ben, Headmaster, Producer, Kate, Photographer, Max, Videographer",	
+	
+	
 	"LABEL_BANNER_TITLE_1" : "About",
 	"LABEL_BANNER_TITLE_2" : "Infinity Records",
 	"LABEL_BANNER_DESCRIPTION" : "Founded in 2017, Infinity Records is an independent record-label based in Lille, in France.",
@@ -75,17 +86,31 @@
 	
 	"LABEL_BUT_ALSO" : "but also... ",
 	
+
+
 	
+	"METADATA_ARTISTS_LIST_DESCRIPTION":"Discover the Infinity Records artists. Check out our talents, and learn more about their musical universes, their latest news, ...",
+	"METADATA_ARTISTS_LIST_KEYWORDS":"Infinity Records, Artists, Music, Albums, Social Media, Photos, PRT Crew, Hip-hop, Fresh Ben, Beatmaking, Clips",
 	
+
 	"ARTISTS_LIST_TOP_TITLE" : "Discover our talents...",
 	"ARTISTS_LIST_TOP_CONTENT" : "Learn more about about our artists, their musical universe and their actuality.",
 	
 	
 	
+	
+	
 	"ARTISTS_BACK": "back",
 	
-	"ARTISTS_PRT-CREW_DESCRIPTION": "Technicals texts about various themes, supplemented by an age-old complicity...",
+	"ARTISTS_PRT-CREW_DESCRIPTION": "Technicals lyrics about various themes, supplemented by an age-old complicity...",
+	
+	"METADATA_ARTISTS_PRT-CREW_DESCRIPTION":"Discover the PRT Crew. Artists from the Infinity Records label, the PRT Crew is defined by technicals lyrics about various themes, supplemented by an age-old complicity...",
+	"METADATA_ARTISTS_PRT-CREW_KEYWORDS":"Infinity Records, PRT Crew, Hip-hop, Rap, Lille, France, Technical lyrics, Boombap, Trap, PRTape Vol. 1, PRTape Vol. 2, La Valse, Commotion, Un truc étrange, Sombres Lumières",
+	
 	"ARTISTS_FRESH-BEN_DESCRIPTION": "Original melodies, colorful samples, punchy rhythms: Shit.. This is Fresh!",
+
+	"METADATA_ARTISTS_FRESH-BEN_DESCRIPTION":"Discover Fresh Ben, the Infinity Records beatmaker. His music identifies itself by original melodies, colorful samples, punchy rhythms: Shit.. This is Fresh!",
+	"METADATA_ARTISTS_FRESH-BEN_KEYWORDS":"Infinity Records, Fresh Ben, Beatmaking, Producer, Trap, Rap, Hip-hop, Samples, Melodies, Lille, France, This is Fresh",
 	
 	"ARTISTS_PROJECTS" : "Projects",
 	"ARTISTS_PROJECT_RELEASED_ON" : "Released on ",
@@ -93,6 +118,11 @@
 	"ARTISTS_LISTENING" : "Listening...",
 	"ARTISTS_DOWNLOAD" : "Download",
 	
+	
+	
+	
+	"METADATA_MERCH_DESCRIPTION":"Discover the Infinity Records apparel. A clean design printed on a quality textile, for the best wearing comfort and the neatest style.",
+	"METADATA_MERCH_KEYWORDS":"Infinity Records, clothes, merchandising, merch, sweater, hoodie, t-shirt, crewneck, 100% cotton, classical cut, catalog, products",
 	
 	
 	"MERCH_BANNER_SUBTITLE" : "The Infinity Records Look",

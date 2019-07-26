@@ -15,10 +15,10 @@ export class ArtistNavigationComponent implements OnChanges {
   constructor(private router: Router) {}
 
   ngOnChanges() {
-    this.getNextArtist();
+    this.fetchNextArtist();
   }
 
-  getNextArtist(): void {
+  fetchNextArtist(): void {
     const indexOfCurrentArtist = artistsInfos.indexOf(this.artist) + 1;
 
     if (artistsInfos[indexOfCurrentArtist]) {
@@ -32,7 +32,7 @@ export class ArtistNavigationComponent implements OnChanges {
     this.router.navigateByUrl('/artists');
   }
 
-  goToNextArtist() {
-    this.router.navigateByUrl(`/artists/${encodeURI(this.nextArtist.name)}`);
+  getNextArtist(): string {
+    return `../${encodeURI(this.nextArtist.name)}`;
   }
 }

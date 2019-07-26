@@ -3,6 +3,9 @@ import { MerchInfo } from 'src/app/models/merch-info';
 import { merchInfos } from 'src/assets/content/merch-content';
 import { MerchService } from 'src/app/shared/services/merch.service';
 import { Subscription } from 'rxjs';
+import { Meta } from '@angular/platform-browser';
+import { TranslationService } from 'src/app/shared/services/translation.service';
+import { TranslationPipe } from '../shared/pipes/translation.pipe';
 
 @Component({
   selector: 'app-merch',
@@ -12,10 +15,11 @@ import { Subscription } from 'rxjs';
 export class MerchPageComponent implements OnInit, OnDestroy {
   currentProduct: MerchInfo;
   currentProductIdSubscription: Subscription;
-  constructor(private merchService: MerchService) {}
+  constructor(private merchService: MerchService, private meta: Meta, private translationService: TranslationService) {}
 
   ngOnInit() {
     this.initCurrentProduct();
+    this.defineMetadata();
   }
 
   initCurrentProduct() {
@@ -25,7 +29,14 @@ export class MerchPageComponent implements OnInit, OnDestroy {
     this.merchService.setCurrentPageId(0);
   }
 
-  ngOnDestroy():void {
+  defineMetadata(): void {
+    const translationPipe = new TranslationPipe(this.translationService);
+    this.meta.updateTag({ name: 'description', content: `${translationPipe.transform('METADATA_MERCH_DESCRIPTION')}` });
+    this.meta.updateTag({ name: 'keywords', content: `${translationPipe.transform('METADATA_MERCH_KEYWORDS')}` });
+    this.meta.updateTag({ name: 'author', content: 'Infinity Records' });
+  }
+
+  ngOnDestroy(): void {
     this.currentProductIdSubscription.unsubscribe();
   }
 

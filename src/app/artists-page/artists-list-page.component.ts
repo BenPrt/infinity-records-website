@@ -1,9 +1,12 @@
 import { Component, Inject, PLATFORM_ID, OnInit } from '@angular/core';
-import { ArtistInformations } from '../models/artists-info';
+import { Meta } from '@angular/platform-browser';
+import { ArtistInformations } from 'src/app/models/artists-info';
 import { artistsInfos } from 'src/assets/content/artists-content';
 import { isPlatformBrowser } from '@angular/common';
 import { Subscription } from 'rxjs';
-import { DeviceService } from '../shared/services/device.service';
+import { DeviceService } from 'src/app/shared/services/device.service';
+import { TranslationService } from 'src/app/shared/services/translation.service';
+import { TranslationPipe } from 'src/app/shared/pipes/translation.pipe';
 
 @Component({
   selector: 'app-artists-list',
@@ -16,12 +19,18 @@ export class ArtistsListPageComponent implements OnInit {
   isMobile: boolean;
   deviceTypeSubscription: Subscription;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object, private deviceService: DeviceService) {
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private deviceService: DeviceService,
+    private meta: Meta,
+    private translationService: TranslationService,
+  ) {
     this.isBrowser = isPlatformBrowser(platformId);
   }
 
   ngOnInit(): void {
     this.initDeviceType();
+    this.defineMetadata();
   }
 
   initDeviceType(): void {
@@ -29,6 +38,19 @@ export class ArtistsListPageComponent implements OnInit {
     this.deviceTypeSubscription = this.deviceService.deviceIsMobileHasChanged.subscribe((isMobile: boolean) => {
       this.isMobile = isMobile;
     });
+  }
+
+  defineMetadata(): void {
+    const translationPipe = new TranslationPipe(this.translationService);
+    this.meta.updateTag({
+      name: 'description',
+      content: `${translationPipe.transform('METADATA_ARTISTS_LIST_DESCRIPTION')}`,
+    });
+    this.meta.updateTag({
+      name: 'keywords',
+      content: `${translationPipe.transform('METADATA_ARTISTS_LIST_KEYWORDS')}`,
+    });
+    this.meta.updateTag({ name: 'author', content: 'Infinity Records' });
   }
 
   getArtistPicture(artist: ArtistInformations): string {

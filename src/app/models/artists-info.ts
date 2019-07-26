@@ -12,6 +12,8 @@ export interface ArtistInformations {
   url_spotify: string;
   url_deezer: string;
   description: string;
+  metadata_description : string;
+  metadata_keywords : string;
   projects: ProjectInformations[];
   clips: string[];
 }

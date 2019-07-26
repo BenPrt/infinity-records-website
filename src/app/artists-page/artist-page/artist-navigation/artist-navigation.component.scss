@@ -27,8 +27,8 @@
       @media screen and (min-device-width: $desktop-size) {
         font-size: 16px;
         height: 22px;
-        margin-left : 16px;
-        width : 150px;
+        margin-left: 16px;
+        width: 150px;
       }
       @media screen and (max-device-width: $desktop-size) {
         font-size: 0.9em;
@@ -49,7 +49,7 @@
     #arborescence {
       text-align: center;
       width: 375px;
-      margin-left : calc((100% - 1079px) / 2);
+      margin-left: calc((100% - 1079px) / 2);
       #arbo-first {
         font-size: 16px;
         margin-right: 11px;
@@ -68,17 +68,18 @@
         cursor: default;
       }
     }
-    #next-artist-button {
+    #next-artist-link {
       display: flex;
       align-items: center;
       justify-content: flex-end;
       font-weight: 600;
-      cursor: pointer;
+      text-decoration: none;
+      color: $black;
       @media screen and (min-device-width: $desktop-size) {
         font-size: 16px;
         height: 22px;
-        margin-right : calc((100% - 1079px) / 2);
-        width : 150px;
+        margin-right: calc((100% - 1079px) / 2);
+        width: 150px;
       }
       @media screen and (max-device-width: $desktop-size) {
         font-size: 0.9em;
