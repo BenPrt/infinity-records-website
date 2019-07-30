@@ -14,7 +14,7 @@ export class ArtistNavigationComponent implements OnChanges {
   nextArtist: ArtistInformations;
   constructor(private router: Router) {}
 
-  ngOnChanges() {
+  ngOnChanges(): void {
     this.fetchNextArtist();
   }
 

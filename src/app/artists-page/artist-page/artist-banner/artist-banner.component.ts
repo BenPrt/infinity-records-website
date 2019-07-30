@@ -1,6 +1,6 @@
-import { Component, Input, Inject, PLATFORM_ID, OnInit, AfterViewInit } from '@angular/core';
+import { Component, Input, Inject, PLATFORM_ID } from '@angular/core';
 import { ArtistInformations } from 'src/app/models/artists-info';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { isPlatformBrowser } from '@angular/common';
 
 @Component({
@@ -13,7 +13,7 @@ export class ArtistBannerComponent {
   @Input() isMobile: boolean;
   isBrowser: boolean;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object, private route: ActivatedRoute, private router: Router) {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private router: Router) {
     this.isBrowser = isPlatformBrowser(platformId);
   }
 

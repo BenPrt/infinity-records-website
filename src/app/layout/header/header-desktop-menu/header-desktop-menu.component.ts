@@ -123,7 +123,7 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
     }
   }
 
-  initScrollSubscription() {
+  initScrollSubscription(): void {
     this.scrollSubscription = this.scrollService.scrollHappened.subscribe((amount: number) => {
       this.scrolledAmount = amount;
       this.manageScrollAndClasses(this.scrolledAmount);

@@ -4,7 +4,7 @@
     "max-line-length": {
       "options": [{ "limit": 120, "ignore-pattern": "^import |^export {(.*?)}" }]
     },
-    "align": [true, "parameters", "statements"]
+    "align": [true, "parameters", "statements"],
   },
   "jsRules": {
     "max-line-length": {

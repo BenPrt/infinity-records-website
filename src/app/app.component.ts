@@ -232,7 +232,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     });
   }
 
-  onWindowScroll() {
+  onWindowScroll(): void {
     this.scrolledAmount = window.pageYOffset;
     this.scrollService.setScrolledAmount(this.scrolledAmount);
     if (this.scrolledAmount >= 0 && this.scrolledAmount <= 68) {

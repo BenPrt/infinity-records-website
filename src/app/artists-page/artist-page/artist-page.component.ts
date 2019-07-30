@@ -98,7 +98,6 @@ export class ArtistPageComponent implements OnInit, AfterViewChecked {
     this.currentProjectIdSubscription = this.artistsService.currentProjectIdHasChanged.subscribe(
       (currentId: number) => {
         if (this.isBrowser) {
-          console.log(this.loading);
           this.loading = currentId > this.currentProjectId ? 'loading-next' : 'loading-previous';
           setTimeout(() => {
             this.currentProjectId = currentId;
