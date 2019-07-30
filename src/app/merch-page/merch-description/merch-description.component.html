@@ -15,7 +15,7 @@
         </p>
       </div>
       <h3
-        id="product-title"
+        id="product-title-description"
         [ngClass]="{
           'hidden-next': loading === 'loading-next',
           'visible-next': loading === 'loaded-next',
@@ -71,7 +71,7 @@
         [lazyLoad]="currentProduct.picture"
       />
     </div>
-    <div id="page-navigator" *ngIf="isMobile">
+    <div id="page-navigator-description" *ngIf="isMobile">
       <div class="page-button" [ngClass]="{ disabled: isDisabled('previous') }" (click)="goToPreviousPage()">
         <img
           *ngIf="!isDisabled('previous')"

@@ -71,7 +71,7 @@ $totalHeight: 865px;
             }
           }
         }
-        #product-title {
+        #product-title-description {
           font-weight: 600;
           @media screen and (min-device-width: $desktop-size) {
             font-size: 32px;
@@ -264,7 +264,7 @@ $totalHeight: 865px;
           }
         }
       }
-      #page-navigator {
+      #page-navigator-description {
         position: absolute;
         width: 105px;
         height: 52px;

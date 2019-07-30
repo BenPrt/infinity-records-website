@@ -76,7 +76,7 @@ export class ArtistPageComponent implements OnInit, AfterViewChecked {
   }
 
   defineBannerInsideLayerHeight(): void {
-    if (this.isBrowser) {
+    if (this.isBrowser && this.isMobile) {
       this.route.params.subscribe((params) => {
         const descriptionHeight = document.getElementById('artist-description-wrapper').offsetHeight;
         document.getElementById(
