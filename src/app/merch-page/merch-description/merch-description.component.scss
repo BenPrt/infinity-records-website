@@ -106,6 +106,9 @@ $totalHeight: 865px;
               font-size: 15px;
             }
             @media screen and (max-device-width: $desktop-size) {
+              height: 6.93vw;
+              display: flex;
+              align-items: center;
               font-size: 0.9em;
               margin: 0 0 8px 0;
             }
@@ -116,6 +119,8 @@ $totalHeight: 865px;
               }
               @media screen and (max-device-width: $desktop-size) {
                 margin-right: 5px;
+                display: flex;
+                align-items: center;
               }
             }
           }
@@ -230,10 +235,10 @@ $totalHeight: 865px;
       }
       @media screen and (max-device-width: $tablet-size) {
         position: relative;
-        margin-top: -683px;
+        margin-top: calc(-56px - 40px - 48px - 24px - 40px - 8px - 6.93vw - 8px - 6.93vw - 8px - 6.93vw - 8px - 6.93vw - 8px - 6.93vw - 24px - 40px - 32px - 56.65vw);
         margin-left: calc(((100vw - 75.53vw) / 2) - 1px);
         width: 75.53vw;
-        height: 213px;
+        height: 56.65vw;
       }
 
       #product-picture-wrapper {
