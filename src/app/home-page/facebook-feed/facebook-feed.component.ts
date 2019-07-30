@@ -58,7 +58,7 @@ export class FacebookFeedComponent implements OnInit {
     if (this.width.substring(this.width.length - 2, this.width.length) === 'vw') {
       if (this.isBrowser) {
         const relativeWidth = parseInt(this.width.substring(0, this.width.length - 2), 10);
-        pixelWidth = (document.body.clientWidth * relativeWidth) / 100;
+        pixelWidth = Math.round((document.body.clientWidth * relativeWidth) / 100);
       } else {
         pixelWidth = 500;
       }

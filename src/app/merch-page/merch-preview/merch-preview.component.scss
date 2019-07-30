@@ -37,7 +37,7 @@
     }
     #product-title-wrapper {
       position: relative;
-      #product-title {
+      #product-title-preview {
         font-weight: bold;
         transform: rotate(90deg);
         position: absolute;
@@ -59,7 +59,7 @@
     }
     #page-navigator-wrapper {
       position: relative;
-      #page-navigator {
+      #page-navigator-preview {
         position: absolute;
         background-color: $grey;
         display: flex;

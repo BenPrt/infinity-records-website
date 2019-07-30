@@ -52,7 +52,7 @@
       margin-top: calc(-94px - 265px - 103px);
     }
     @media screen and (max-device-width: $desktop-size) {
-      margin-left: 12.23vw;
+      margin-left: calc(12.23vw + 2px);
       width: calc(-12.23vw - 2px + 100vw);
       padding-top: 64px;
       padding-bottom: 64px;
@@ -63,16 +63,15 @@
       font-weight: bold;
       letter-spacing: 0.11em;
       transform: rotate(90deg);
+      margin-left: -19px;
       @media screen and (min-device-width: $desktop-size) {
         font-size: 18px;
         height: 18px;
-        margin-left: -19px;
         margin-top: 21px;
       }
       @media screen and (max-device-width: $desktop-size) {
         font-size: 1em;
         height: 20px;
-        margin-left: -21px;
         margin-top: 23px;
       }
     }
@@ -90,6 +89,7 @@
         height: calc(42.82vw + 24px + 42.82vw);
         flex-direction: column;
         justify-content: space-between;
+        margin-left : -4px;
       }
 
       .clips-clip {

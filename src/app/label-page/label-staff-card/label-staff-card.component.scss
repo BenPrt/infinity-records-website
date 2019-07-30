@@ -9,7 +9,7 @@
       margin-bottom: 0;
     }
   }
-  #staff-card-wrapper {
+  .staff-card-wrapper {
     @media screen and (min-device-width: $tablet-size) {
       width: 372px;
       height: calc(12px + 279px + 151px);
@@ -19,7 +19,7 @@
       height: calc(12px + 309px + 169px);
     }
 
-    #member-name {
+    .member-name {
       position: relative;
       z-index: 3;
       background-color: $black;
@@ -47,9 +47,10 @@
         padding-top: 5px;
         padding-left: 13px;
         margin-left: 24px;
+        font-size: 1.33em;
       }
     }
-    #member-picture-wrapper {
+    .member-picture-wrapper {
       overflow: hidden;
       display: flex;
       flex-direction: column;
@@ -67,7 +68,7 @@
         height: 309px;
       }
 
-      #member-picture {
+      .member-picture {
         display: block;
         @media screen and (min-device-width: $tablet-size) {
           width: 372px;
@@ -81,7 +82,7 @@
         }
       }
 
-      #member-picture-gradient {
+      .member-picture-gradient {
         position: relative;
         z-index: 1;
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.71));
@@ -97,7 +98,7 @@
         }
       }
 
-      #quote-overlay {
+      .quote-overlay {
         position: relative;
         z-index: 2;
         @media screen and (min-device-width: $tablet-size) {
@@ -110,7 +111,7 @@
           height: 309px;
           margin-top: -313px;
         }
-        #overlay {
+        .overlay {
           position: relative;
           z-index: 2;
           opacity: 0.6;
@@ -124,7 +125,7 @@
             height: 309px;
           }
         }
-        #quote-container {
+        .quote-container {
           position: relative;
           z-index: 3;
           display: flex;
@@ -143,7 +144,7 @@
             margin-top: -309px;
           }
 
-          #quote {
+          .quote {
             font-family: 'Hesterica';
             color: $gold;
             font-size: 38px;
@@ -163,7 +164,7 @@
               width: calc((100vw - 16px - 16px) - 24.47vw - 32px);
             }
           }
-          #quote-author {
+          .quote-author {
             display: flex;
             align-items: center;
             color: $white;
@@ -188,7 +189,7 @@
               width: calc(50.53vw + 24px);
               margin-bottom: calc(51px + 18px);
             }
-            #author-separator {
+            .author-separator {
               border: none;
               margin: 0;
               background-color: $gold;
@@ -208,7 +209,7 @@
         }
       }
     }
-    #roles-wrapper {
+    .roles-wrapper {
       position: relative;
       z-index: 4;
       background-color: $white;
@@ -226,14 +227,14 @@
         margin-left: 20.47vw;
         width: calc(-24px + 65.64vw - 24px);
       }
-      #member-main-role {
+      .member-main-role {
         margin: 0;
         font-size: 16px;
         font-weight: bold;
         line-height: 1.63;
         letter-spacing: 2px;
       }
-      #but-also-separator {
+      .but-also-separator {
         font-size: 14px;
         color: $grey;
         line-height: 1.71;

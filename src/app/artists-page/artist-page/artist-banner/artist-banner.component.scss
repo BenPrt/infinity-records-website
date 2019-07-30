@@ -11,7 +11,6 @@
   @media screen and (max-device-width: $desktop-size) {
     margin-left: 12.23vw;
     width: calc(100vw - 12.23vw - 2px - 12.23vw - 2px);
-    height: calc(74px + 65px + 91.49vw + 48px + 244px + 64px);
     border-right: 2px solid $very-light-grey;
   }
 
@@ -23,7 +22,6 @@
     }
     @media screen and (max-device-width: $desktop-size) {
       width: 26.86vw;
-      height: calc(74px + 65px + 91.49vw + 48px + 244px + 64px);
     }
   }
 }
@@ -41,7 +39,6 @@
     @media screen and (max-device-width: $desktop-size) {
       position: absolute;
       width: 60.37vw;
-      height: calc(74px + 65px + 91.49vw);
       right: 0;
       margin-top: calc(-74px - 65px - 91.49vw - 48px - 244px - 64px);
     }
@@ -58,7 +55,6 @@
       margin-top: calc(-28px - 607px);
     }
     @media screen and (max-device-width: $desktop-size) {
-      margin-top: calc(-65px - 91.49vw - 48px - 244px - 64px);
       width: 100vw;
       height: calc(65px + 91.49vw);
     }
@@ -283,7 +279,6 @@
       }
       @media screen and (max-device-width: $desktop-size) {
         width: 47.61vw;
-        height: 244px;
         margin: 48px 0px 64px 48.14vw;
       }
       #description-separator {

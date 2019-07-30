@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, OnInit, Inject, PLATFORM_ID, AfterViewChecked } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ArtistInformations, TrackInformations } from 'src/app/models/artists-info';
 import { artistsInfos } from 'src/assets/content/artists-content';
@@ -15,7 +15,7 @@ import { TranslationPipe } from 'src/app/shared/pipes/translation.pipe';
   templateUrl: './artist-page.component.html',
   styleUrls: ['./artist-page.component.scss'],
 })
-export class ArtistPageComponent implements OnInit {
+export class ArtistPageComponent implements OnInit, AfterViewChecked {
   isBrowser: boolean;
   loading: string = 'initial';
   artist: ArtistInformations;
@@ -41,6 +41,10 @@ export class ArtistPageComponent implements OnInit {
     this.initDeviceType();
     this.initCurrentArtist();
     this.defineMetadata();
+  }
+
+  ngAfterViewChecked(): void {
+    this.defineBannerInsideLayerHeight();
   }
 
   initDeviceType(): void {
@@ -69,6 +73,23 @@ export class ArtistPageComponent implements OnInit {
         this.router.navigateByUrl('/artists');
       }
     });
+  }
+
+  defineBannerInsideLayerHeight(): void {
+    if (this.isBrowser && this.isMobile) {
+      this.route.params.subscribe((params) => {
+        const descriptionHeight = document.getElementById('artist-description-wrapper').offsetHeight;
+        document.getElementById(
+          'artist-first-inside-layer',
+        ).style.height = `calc(74px + 65px + 91.49vw + 48px + ${descriptionHeight}px + 64px)`;
+        document.getElementById(
+          'artist-cover',
+        ).style.marginTop = `calc(-65px - 91.49vw - 48px - ${descriptionHeight}px - 64px)`;
+        document.getElementById(
+          'artist-navigation',
+        ).style.marginTop = `calc(-74px - 65px - 91.49vw - 48px - ${descriptionHeight}px - 64px + 16px)`;
+      });
+    }
   }
 
   initCurrentProject(projectId: number): void {
