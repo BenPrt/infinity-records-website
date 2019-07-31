@@ -13,11 +13,6 @@ import { MerchPageComponent } from './merch-page/merch-page.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
-    pathMatch: 'full',
-  },
-  {
-    path: 'home',
     component: HomePageComponent,
   },
   {

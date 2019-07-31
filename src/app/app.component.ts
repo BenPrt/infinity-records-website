@@ -173,7 +173,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   initAnimationState(): void {
     const path = this.location.path();
-    if (path === '/home' || path === '') {
+    if (path === '') {
       this.initMenuAnimation();
     }
   }
