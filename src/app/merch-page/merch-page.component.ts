@@ -31,6 +31,7 @@ export class MerchPageComponent implements OnInit, OnDestroy {
 
   defineMetadata(): void {
     const translationPipe = new TranslationPipe(this.translationService);
+    this.meta.updateTag({ name: 'title', content: 'Infinity Records - Merchandising' });
     this.meta.updateTag({ name: 'description', content: `${translationPipe.transform('METADATA_MERCH_DESCRIPTION')}` });
     this.meta.updateTag({ name: 'keywords', content: `${translationPipe.transform('METADATA_MERCH_KEYWORDS')}` });
     this.meta.updateTag({ name: 'author', content: 'Infinity Records' });

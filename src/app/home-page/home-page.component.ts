@@ -35,6 +35,10 @@ export class HomePageComponent implements OnInit, OnDestroy {
   defineMetadata(): void {
     const translationPipe = new TranslationPipe(this.translationService);
     this.meta.updateTag({
+      name: 'title',
+      content: `${translationPipe.transform('METADATA_HOMEPAGE_TITLE')}`,
+    });
+    this.meta.updateTag({
       name: 'description',
       content: `${translationPipe.transform('METADATA_HOMEPAGE_DESCRIPTION')}`,
     });

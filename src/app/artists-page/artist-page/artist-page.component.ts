@@ -113,6 +113,10 @@ export class ArtistPageComponent implements OnInit, AfterViewChecked {
   defineMetadata(): void {
     const translationPipe = new TranslationPipe(this.translationService);
     this.meta.updateTag({
+      name: 'title',
+      content: `Infinity Records - ${this.artist.name}`,
+    });
+    this.meta.updateTag({
       name: 'description',
       content: `${translationPipe.transform(this.artist.metadata_description)}`,
     });

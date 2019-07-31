@@ -31,6 +31,7 @@
 	
 	
 	
+	"METADATA_HOMEPAGE_TITLE":"Infinity Records - The Official Website of Infinity Records",
 	"METADATA_HOMEPAGE_DESCRIPTION":"Welcome to Infinity Records Website. Discover the label, our music, the artists who made it, and everything you need to know about us.",
 	"METADATA_HOMEPAGE_KEYWORDS":"Infinity Records, The Label, Music, Artists, Merch, Welcome, Facebook Feed, France, Contact form, Social media",
 	
@@ -55,6 +56,7 @@
 
 
 
+	"METADATA_LABEL_TITLE":"Infinity Records - The Label",
 	"METADATA_LABEL_DESCRIPTION":"Discover the Infinity Records label. Learn more about the means set up for our artists to develop their project and the way we conceive working with them.",
 	"METADATA_LABEL_KEYWORDS":"Infinity Records, Music Label, France, Artists development, The studio, Recording, Mixing, Mastering, The staff, Ben, Headmaster, Producer, Kate, Photographer, Max, Videographer",	
 	
@@ -89,13 +91,13 @@
 
 
 	
+	"METADATA_ARTISTS_LIST_TITLE":"Infinity Records - The Artists",
 	"METADATA_ARTISTS_LIST_DESCRIPTION":"Discover the Infinity Records artists. Check out our talents, and learn more about their musical universes, their latest news, ...",
 	"METADATA_ARTISTS_LIST_KEYWORDS":"Infinity Records, Artists, Music, Albums, Social Media, Photos, PRT Crew, Hip-hop, Fresh Ben, Beatmaking, Clips",
 	
 
 	"ARTISTS_LIST_TOP_TITLE" : "Discover our talents...",
 	"ARTISTS_LIST_TOP_CONTENT" : "Learn more about about our artists, their musical universe and their actuality.",
-	
 	
 	
 	
@@ -119,8 +121,9 @@
 	"ARTISTS_DOWNLOAD" : "Download",
 	
 	
-	
-	
+
+
+
 	"METADATA_MERCH_DESCRIPTION":"Discover the Infinity Records apparel. A clean design printed on a quality textile, for the best wearing comfort and the neatest style.",
 	"METADATA_MERCH_KEYWORDS":"Infinity Records, clothes, merchandising, merch, sweater, hoodie, t-shirt, crewneck, 100% cotton, classical cut, catalog, products",
 	

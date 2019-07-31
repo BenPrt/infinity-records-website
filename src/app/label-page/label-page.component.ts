@@ -20,6 +20,7 @@ export class LabelPageComponent implements OnInit {
 
   defineMetadata(): void {
     const translationPipe = new TranslationPipe(this.translationService);
+    this.meta.updateTag({ name: 'title', content: `${translationPipe.transform('METADATA_LABEL_TITLE')}` });
     this.meta.updateTag({ name: 'description', content: `${translationPipe.transform('METADATA_LABEL_DESCRIPTION')}` });
     this.meta.updateTag({ name: 'keywords', content: `${translationPipe.transform('METADATA_LABEL_KEYWORDS')}` });
     this.meta.updateTag({ name: 'author', content: 'Infinity Records' });
