@@ -7,11 +7,11 @@
 <div id="menu-wrapper" [ngStyle]="menuWrapperStyle" [@menuBorderFade]="menuBorderState">
   <div id="menu-container" [ngStyle]="menuContainerStyle">
     <div id="menu-left-part" [@menuFade] *ngIf="menuIsDisplayed">
-      <a class="menu-link" routerLink="/home" routerLinkActive="active">
-        <h2 class="menu-item" [@itemBoldAnim]="isPageActive('home')">
+      <a class="menu-link" routerLink="/" routerLinkActive="active">
+        <h2 class="menu-item" [@itemBoldAnim]="isPageActive()">
           {{ 'HOME' | translation | uppercase }}
         </h2>
-        <hr class="menu-indicator" [@indicatorAnim]="isPageActive('home')" />
+        <hr class="menu-indicator" [@indicatorAnim]="isPageActive()" />
       </a>
 
       <a class="menu-link" routerLink="/label" routerLinkActive="active">

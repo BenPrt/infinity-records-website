@@ -130,7 +130,7 @@ export class HeaderDesktopMenuComponent implements OnInit, OnChanges {
     });
   }
 
-  isPageActive(page: string): boolean {
+  isPageActive(page?: string): boolean {
     if (this.location.path().split('/')[1] === page) {
       return true;
     }
