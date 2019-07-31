@@ -6,6 +6,7 @@ import { ngExpressEngine } from '@nguniversal/express-engine';
 // Import module map for lazy loading
 import { provideModuleMap } from '@nguniversal/module-map-ngfactory-loader';
 
+import * as compression from 'compression';
 import * as express from 'express';
 import { join } from 'path';
 
@@ -14,6 +15,7 @@ enableProdMode();
 
 // Express server
 const app = express();
+app.use(compression());
 
 const PORT = process.env.PORT || 4200;
 const DIST_FOLDER = join(process.cwd(), 'dist/browser');
