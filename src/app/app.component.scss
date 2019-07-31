@@ -42,7 +42,7 @@
 
 .content-visible {
   animation: fadeIn 1s linear;
-  display : initial;
+  display : block;
 }
 @keyframes fadeIn {
   0% {
