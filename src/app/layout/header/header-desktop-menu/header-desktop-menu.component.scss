@@ -88,3 +88,32 @@
     }
   }
 }
+
+
+
+// Animations part
+.menu-hidden {
+  animation: fadeOut 1s linear;
+  visibility : hidden;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.menu-visible {
+  animation: fadeIn 1s linear;
+  visibility : initial;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -8,20 +8,14 @@
       (tap)="parseTap($event)"
     ></header-mobile-menu-component>
 
-    <div
-      id="mobile-page-content"
-      [@contentFade]
-      *ngIf="contentIsDisplayed"
-      (swipeRight)="openMobileMenu()"
-    >
+    <div id="mobile-page-content" [@contentFade] *ngIf="contentIsDisplayed" (swipeRight)="openMobileMenu()">
       <router-outlet> </router-outlet>
       <footer-component [@contentFade]></footer-component>
     </div>
 
     <div
       id="menu-overlay"
-      *ngIf="contentIsDisplayed && mobileMenuIsDisplayed"
-      [@overlayFade]
+      [ngClass]="{ 'content-visible': contentIsDisplayed && mobileMenuIsDisplayed, 'content-hidden': !contentIsDisplayed || !mobileMenuIsDisplayed }"
       (swipeLeft)="closeMobileMenu()"
       (click)="closeMobileMenu()"
     ></div>
@@ -39,7 +33,11 @@
       [typoState]="typoState"
       [menuIsDisplayed]="menuIsDisplayed"
     ></header-desktop-menu-component>
-    <div id="desktop-page-content" *ngIf="contentIsDisplayed" [ngStyle]="{ paddingTop: contentOffset }">
+    <div
+      id="desktop-page-content"
+      [ngClass]="{ 'content-visible': contentIsDisplayed, 'content-hidden': !contentIsDisplayed }"
+      [ngStyle]="{ paddingTop: contentOffset }"
+    >
       <router-outlet> </router-outlet>
       <footer-component></footer-component>
     </div>
