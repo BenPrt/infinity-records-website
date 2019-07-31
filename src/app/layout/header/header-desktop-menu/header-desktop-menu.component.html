@@ -1,12 +1,12 @@
 <div id="desktop-settings-wrapper" [ngStyle]="settingsStyle">
-  <div id="desktop-settings-container" [@menuFade] *ngIf="menuIsDisplayed">
+  <div id="desktop-settings-container" [ngClass]="{ 'menu-visible': menuIsDisplayed, 'menu-hidden': !menuIsDisplayed }">
     <desktop-settings-component></desktop-settings-component>
   </div>
 </div>
 
 <div id="menu-wrapper" [ngStyle]="menuWrapperStyle" [@menuBorderFade]="menuBorderState">
   <div id="menu-container" [ngStyle]="menuContainerStyle">
-    <div id="menu-left-part" [@menuFade] *ngIf="menuIsDisplayed">
+    <div id="menu-left-part" [ngClass]="{ 'menu-visible': menuIsDisplayed, 'menu-hidden': !menuIsDisplayed }">
       <a class="menu-link" routerLink="/" routerLinkActive="active">
         <h2 class="menu-item" [@itemBoldAnim]="isPageActive()">
           {{ 'HOME' | translation | uppercase }}
@@ -88,7 +88,7 @@
       <h1 id="menu-logo-typo" [ngStyle]="menuLogoTypoStyle" [@typoFade]="typoState">INFINITY RECORDS</h1>
     </div>
 
-    <div id="menu-right-part" [@menuFade] *ngIf="menuIsDisplayed">
+    <div id="menu-right-part" [ngClass]="{ 'menu-visible': menuIsDisplayed, 'menu-hidden': !menuIsDisplayed }">
       <a class="menu-link" routerLink="/artists" routerLinkActive="active">
         <h2 class="menu-item" [@itemBoldAnim]="isPageActive('artists')">
           {{ 'ARTISTS' | translation | uppercase }}

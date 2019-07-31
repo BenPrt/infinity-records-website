@@ -9,10 +9,21 @@ import { ScrollService } from 'src/app/shared/services/scroll.service';
   templateUrl: './header-desktop-menu.component.html',
   styleUrls: ['./header-desktop-menu.component.scss'],
   animations: [
+    trigger('logoFade', [transition(':enter', [style({ opacity: 0 }), animate('800ms', style({ opacity: 1 }))])]),
     trigger('menuBorderFade', [
       state('hidden', style({ borderBottom: '1px solid #FFFFFF' })),
       state('displayed', style({ borderBottom: '1px solid #D8D8D8' })),
       transition('hidden <=> displayed', [animate('500ms')]),
+    ]),
+    trigger('typoFade', [
+      state('hidden', style({ opacity: '0' })),
+      state('displayed', style({ opacity: '1' })),
+      transition('hidden <=> displayed', [animate('900ms')]),
+    ]),
+    trigger('scaleLogo', [
+      state('upscaled', style({ marginTop: '200px', transform: 'scale(2)' })),
+      state('normal', style({ marginTop: '0', transform: 'scale(1)' })),
+      transition('upscaled => normal', [animate('1000ms')]),
     ]),
     trigger('indicatorAnim', [
       state(
@@ -45,21 +56,6 @@ import { ScrollService } from 'src/app/shared/services/scroll.service';
         }),
       ),
       transition('true <=> false', [animate('300ms')]),
-    ]),
-    trigger('logoFade', [transition(':enter', [style({ opacity: 0 }), animate('800ms', style({ opacity: 1 }))])]),
-    trigger('menuFade', [
-      transition(':enter', [style({ opacity: 0 }), animate('1s', style({ opacity: 1 }))]),
-      transition(':leave', [style({ opacity: 1 }), animate('1s', style({ opacity: 0 }))]),
-    ]),
-    trigger('typoFade', [
-      state('hidden', style({ opacity: '0' })),
-      state('displayed', style({ opacity: '1' })),
-      transition('hidden <=> displayed', [animate('900ms')]),
-    ]),
-    trigger('scaleLogo', [
-      state('upscaled', style({ marginTop: '200px', transform: 'scale(2)' })),
-      state('normal', style({ marginTop: '0', transform: 'scale(1)' })),
-      transition('upscaled => normal', [animate('1000ms')]),
     ]),
   ],
 })

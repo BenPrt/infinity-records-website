@@ -24,3 +24,31 @@
 #desktop-page-content{
   width : 100%;
 }
+
+
+// Animations part
+.content-hidden {
+  animation: fadeOut 1s linear;
+  display : none;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.content-visible {
+  animation: fadeIn 1s linear;
+  display : initial;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
