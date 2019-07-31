@@ -5,7 +5,7 @@ import { MerchService } from 'src/app/shared/services/merch.service';
 import { Subscription } from 'rxjs';
 import { Meta } from '@angular/platform-browser';
 import { TranslationService } from 'src/app/shared/services/translation.service';
-import { TranslationPipe } from '../shared/pipes/translation.pipe';
+import { TranslationPipe } from 'src/app/shared/pipes/translation.pipe';
 
 @Component({
   selector: 'app-merch',
@@ -17,12 +17,12 @@ export class MerchPageComponent implements OnInit, OnDestroy {
   currentProductIdSubscription: Subscription;
   constructor(private merchService: MerchService, private meta: Meta, private translationService: TranslationService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.initCurrentProduct();
     this.defineMetadata();
   }
 
-  initCurrentProduct() {
+  initCurrentProduct(): void {
     this.currentProductIdSubscription = this.merchService.currentPageIdHasChanged.subscribe((currentId) => {
       this.displayProduct(currentId);
     });

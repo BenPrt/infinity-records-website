@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, Inject, PLATFORM_ID, OnInit, ElementRef, Renderer } from '@angular/core';
+import { Component, Input, Inject, PLATFORM_ID, OnInit, ElementRef, Renderer } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { isPlatformBrowser } from '@angular/common';
 

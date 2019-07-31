@@ -63,7 +63,7 @@ export class MerchPreviewComponent implements OnInit, AfterViewInit, OnDestroy {
     });
   }
 
-  initScrollSubscription() {
+  initScrollSubscription(): void {
     this.scrollSubscription = this.scrollService.scrollHappened.subscribe((amount: number) => {
       this.scrolledAmount = amount;
       this.manageTitlePositioning(this.scrolledAmount);

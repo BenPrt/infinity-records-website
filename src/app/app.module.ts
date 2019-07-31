@@ -15,7 +15,7 @@ import { LabelModule } from './label-page/label.module';
 import { ArtistsModule } from './artists-page/artists.module';
 import { MerchModule } from './merch-page/merch.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
+import { environment } from 'src/environments/environment';
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{

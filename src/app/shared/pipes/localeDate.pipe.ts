@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { DatePipe } from '@angular/common';
-import { TranslationService } from '../services/translation.service';
+import { TranslationService } from 'src/app/shared/services/translation.service';
 
 @Pipe({ name: 'localeDate' })
 export class LocaleDatePipe extends DatePipe implements PipeTransform {
