@@ -151,7 +151,6 @@ export class AppComponent implements OnInit, AfterViewInit {
     if (this.isBrowser) {
       if (this.isMobile) {
         this.defineViewPortSize();
-        // window.addEventListener('resize', () => {});
         const source = fromEvent(window, 'resize');
         this.resizeSubscription = source.pipe(debounceTime(100)).subscribe(() => {
           this.defineViewPortSize();
