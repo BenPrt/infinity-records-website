@@ -122,6 +122,22 @@ export class ArtistPageComponent implements OnInit, AfterViewChecked {
     });
     this.meta.updateTag({ name: 'keywords', content: `${translationPipe.transform(this.artist.metadata_keywords)}` });
     this.meta.updateTag({ name: 'author', content: 'Infinity Records' });
+    this.meta.updateTag({
+      property: 'og:url',
+      content: `https://www.infinity-records.fr/artists/${encodeURI(this.artist.name)}`,
+    });
+    this.meta.updateTag({
+      property: 'og:title',
+      content: `Infinity Records - ${this.artist.name}`,
+    });
+    this.meta.updateTag({
+      property: 'og:description',
+      content: `${translationPipe.transform(this.artist.metadata_description)}`,
+    });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: `https://www.infinity-records.fr/${this.artist.cover_picture}`,
+    });
   }
 
   ngOnDestroy(): void {
