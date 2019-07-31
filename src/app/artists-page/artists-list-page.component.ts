@@ -43,6 +43,10 @@ export class ArtistsListPageComponent implements OnInit {
   defineMetadata(): void {
     const translationPipe = new TranslationPipe(this.translationService);
     this.meta.updateTag({
+      name: 'title',
+      content: `${translationPipe.transform('METADATA_ARTISTS_LIST_TITLE')}`,
+    });
+    this.meta.updateTag({
       name: 'description',
       content: `${translationPipe.transform('METADATA_ARTISTS_LIST_DESCRIPTION')}`,
     });
@@ -51,6 +55,19 @@ export class ArtistsListPageComponent implements OnInit {
       content: `${translationPipe.transform('METADATA_ARTISTS_LIST_KEYWORDS')}`,
     });
     this.meta.updateTag({ name: 'author', content: 'Infinity Records' });
+    this.meta.updateTag({ property: 'og:url', content: 'https://www.infinity-records.fr/artists' });
+    this.meta.updateTag({
+      property: 'og:title',
+      content: `${translationPipe.transform('METADATA_ARTISTS_LIST_TITLE')}`,
+    });
+    this.meta.updateTag({
+      property: 'og:description',
+      content: `${translationPipe.transform('METADATA_ARTISTS_LIST_DESCRIPTION')}`,
+    });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: 'https://www.infinity-records.fr/assets/img/label/banner.jpg',
+    });
   }
 
   getArtistPicture(artist: ArtistInformations): string {
