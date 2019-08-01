@@ -110,13 +110,15 @@ $totalHeight: 865px;
             }
             span {
               color: $gold;
-              display: inline;
-              vertical-align: middle;
+              height : 22px;
+              display: inline-flex;
+              vertical-align: top;
+              align-items: center;
               margin-right: 5px;
             }
             p {
               display: inline;
-              vertical-align: middle;
+              vertical-align: top;
               @media screen and (min-device-width: $desktop-size) {
                 font-size: 15px;
                 height: 22px;
