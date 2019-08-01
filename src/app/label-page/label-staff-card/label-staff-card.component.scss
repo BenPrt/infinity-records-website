@@ -150,8 +150,8 @@
             font-size: 38px;
             font-weight: normal;
             @media screen and (min-device-width: $desktop-size) {
-              margin-left: 22px;
-              width: 230px;
+              margin-bottom: 8px;
+              width: 252px;
             }
             @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
               margin-left: 24px;
@@ -174,7 +174,7 @@
               height: 22px;
               margin-top: 10px;
               width: calc(228px + 22px);
-              margin-bottom: calc(46px + 12px);
+              margin-bottom: calc(46px + 16px);
             }
             @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
               height: 24px;

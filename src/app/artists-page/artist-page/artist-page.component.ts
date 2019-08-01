@@ -83,6 +83,12 @@ export class ArtistPageComponent implements OnInit, AfterViewChecked {
           'artist-first-inside-layer',
         ).style.height = `calc(74px + 65px + 91.49vw + 48px + ${descriptionHeight}px + 64px)`;
         document.getElementById(
+          'artist-second-layer',
+        ).style.marginTop = `calc(-74px - 65px - 91.49vw - 48px - ${descriptionHeight}px - 64px)`;
+        document.getElementById(
+          'artist-second-layer',
+        ).style.marginBottom = `calc(48px + ${descriptionHeight}px + 64px)`;
+        document.getElementById(
           'artist-cover',
         ).style.marginTop = `calc(-65px - 91.49vw - 48px - ${descriptionHeight}px - 64px)`;
         document.getElementById(

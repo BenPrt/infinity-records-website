@@ -35,7 +35,8 @@
         }"
       >
         <li *ngFor="let info of currentProduct.informations" class="product-information">
-          <span><img alt="Golden bullet point" src="assets/icons/list_bullet.svg"/></span> {{ info | translation }}
+          <span><img alt="Golden bullet point" src="assets/icons/list_bullet.svg"/></span>
+          <p>{{ info | translation }}</p>
         </li>
       </ul>
       <div
