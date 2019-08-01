@@ -1,159 +1,154 @@
 {
-	"LANGUAGE": "LANGUE",
-	"FRENCH_LANGUAGE": "Français",
-	"ENGLISH_LANGUAGE": "English",
+  "LANGUAGE": "LANGUE",
+  "FRENCH_LANGUAGE": "Français",
+  "ENGLISH_LANGUAGE": "English",
 
-    "SOCIAL_MEDIA": "Réseaux sociaux",
-	
-	"HOME" : "Accueil",
-	"LABEL" : "Le label",
-	"ARTISTS" : "Artistes",
-	"MERCH" : "Merch",
-	
-	"MENU" : "Menu",
-	
-	"CONTACT_TITLE" : "Get in touch",
-	"CONTACT_DESCRIPTION" : "T'as des questions? T'as flashé sur un beat? Une collab t'intéresse? Envoie-nous un message via ce formulaire et on te recontactera dès que possible!",
-	
-	"NAME" : "NOM",
-	"NAME_REQUIRED" : "Votre nom est requis",
-	"EMAIL" : "EMAIL",
-	"EMAIL_INCORRECT" : "Adresse email incorrecte",
-	"EMAIL_REQUIRED" : "Votre adresse email est requise",
-	"MESSAGE" : "MESSAGE",
-	"MESSAGE_REQUIRED" : "Votre message est requis",
-	"SEND" : "ENVOYER",
-	"MESSAGE_SENT" : "Message envoyé",
-	
-	"COPYRIGHT_1" : "Copyright © ",
-	"COPYRIGHT_2" : " Infinity Records. Tous droits Réservés.",
-	
-	
-	
-	
-	"METADATA_HOMEPAGE_TITLE":"Infinity Records - Le Site Officiel d'Infinity Records",
-	"METADATA_HOMEPAGE_DESCRIPTION":"Bienvenue sur le site d'Infinity Records. Découvrez le label, notre musique, les artistes qui la font, et tout ce que vous voudriez savoir sur nous",
-	"METADATA_HOMEPAGE_KEYWORDS":"Infinity Records, Le Label, Musique, Artistes, Merch, Bienvenue, Page Facebook, France, Formulaire de contact, Réseaux Sociaux",
+  "SOCIAL_MEDIA": "Réseaux sociaux",
 
-	
-	"HOME_WELCOME" : "Welcome",
-	
-	"HOME_NEWS_TITLE" : "Restez à jour et découvrez nos dernières actus !",
-	
-	"HOME_NEWS_NEWS_TITLE" : "Actualités",
-	"HOME_NEWS_NEWS_DESCRIPTION" : "Informez-vous sur les dernières sorties, les nouvelles signatures et les actualités du label !",	
-	"HOME_NEWS_EVENTS_TITLE" : "Événements",
-	"HOME_NEWS_EVENTS_DESCRIPTION" : "Soyez au courant des prochains concerts de nos artistes et dîtes-nous si vous y serez !",	
-	"HOME_NEWS_CONTACT_TITLE" : "Contact",
-	"HOME_NEWS_CONTACT_DESCRIPTION" : "Une question ? Un message à nous envoyer ? Contactez-nous sur les réseaux ou via le formulaire ci-dessous !",
-	
-	"HOME_LINKING_TITLE" : "Apprenez-en plus sur Infinity Records en parcourant les autres pages du site.",
+  "HOME": "Accueil",
+  "LABEL": "Le label",
+  "ARTISTS": "Artistes",
+  "MERCH": "Merch",
 
-	"HOME_LINKING_LABEL" : "Découvrez le label",
-	"HOME_LINKING_ARTISTS" : "Découvrez les artistes",
-	"HOME_LINKING_MERCH" : "Découvrez le merch",
-		
-		
-		
-	
-	"METADATA_LABEL_TITLE":"Infinity Records - Le Label",
-	"METADATA_LABEL_DESCRIPTION":"Découvrez le label Infinity Records. Apprenez-en plus sur les moyens mis à disposition de nos artistes pour développer leurs projets musicaux, et sur notre vision de leur développement.",
-	"METADATA_LABEL_KEYWORDS":"Infinity Records, Label Musical, France, Développement d'artistes, Le studio, Enregistrement, Mixage, Mastering, L'équipe, Ben, Président, Producteur, Kate, Photographe, Max, Vidéaste",	
-	
-	
-	"LABEL_BANNER_TITLE_1" : "A propos",
-	"LABEL_BANNER_TITLE_2" : "d'Infinity Records",
-	"LABEL_BANNER_DESCRIPTION" : "Créé en 2017, Infinity Records est un label indépendant de production musicale situé à Lille, en France.",
-	
-	"LABEL_TOP_DESCRIPTION" : "Motivé par le désir de produire notre propre musique de A à Z, nous accompagnons nos artistes dans toutes les étapes de leur développement.",
-	"LABEL_TOP_CREATION" :"Création",
-	"LABEL_TOP_RECORDING" :"Enregistrement",
-	"LABEL_TOP_MIXING" :"Mixage",
-	"LABEL_TOP_MASTERING" :"Mastering",
-	
-	"LABEL_RIGHT_DESCRIPTION": "Nous nous efforçons également d'aider et de conseiller nos artistes dans le développement de leur identité et de leur communication, et dans l'expression de leur potentiel.",
+  "MENU": "Menu",
 
-	"LABEL_WHERE_THE_MAGIC": "Where the magic happens.",
-	
-	"LABEL_STAFF_TITLE" : "L'équipe",
-	
-	"LABEL_ROLE_HEADMASTER" : "Président",
-	"LABEL_ROLE_PRODUCER" : "Producteur",
-	"LABEL_ROLE_ARTIST" : "Artiste",
-	"LABEL_ROLE_COMMUNITY_MANAGER" : "Community Manager",
-	"LABEL_ROLE_SOFTWARE_ENGINEER" : "Ingénieur Logiciel",
-    "LABEL_ROLE_DESIGNER" : "Designer",
-	"LABEL_ROLE_PHOTOGRAPHER" : "Photographe",
-	"LABEL_ROLE_VIDEOGRAPHER" : "Vidéaste",
-	
-	"LABEL_BUT_ALSO" : "mais aussi... ",
-	
-	
-	
-	
-	"METADATA_ARTISTS_LIST_TITLE":"Infinity Records - Les Artistes",
-	"METADATA_ARTISTS_LIST_DESCRIPTION":"Découvrez les artistes d'Infinity Records. Apprenez-en plus sur nos talents, leur univers musical, leurs dernières actualités, ...",
-	"METADATA_ARTISTS_LIST_KEYWORDS":"Infinity Records, Artistes, Musique, Albums, Réseaux Sociaux, Photos, PRT Crew, Hip-hop, Fresh Ben, Beatmaking, Clips",
-	
-	
-	"ARTISTS_LIST_TOP_TITLE" : "Découvrez nos talents...",
-	"ARTISTS_LIST_TOP_CONTENT" : "Apprenez-en plus sur nos artistes, leur univers musical et leur actualité.",
-	
+  "CONTACT_TITLE": "Get in touch",
+  "CONTACT_DESCRIPTION": "T'as des questions? T'as flashé sur un beat? Une collab t'intéresse? Envoie-nous un message via ce formulaire et on te recontactera dès que possible!",
 
-	
+  "NAME": "NOM",
+  "NAME_REQUIRED": "Votre nom est requis",
+  "EMAIL": "EMAIL",
+  "EMAIL_INCORRECT": "Adresse email incorrecte",
+  "EMAIL_REQUIRED": "Votre adresse email est requise",
+  "MESSAGE": "MESSAGE",
+  "MESSAGE_REQUIRED": "Votre message est requis",
+  "SEND": "ENVOYER",
+  "MESSAGE_SENT": "Message envoyé",
 
-	
-	"ARTISTS_BACK": "retour",
-	
-	"ARTISTS_PRT-CREW_DESCRIPTION": "Des textes techniques aux thèmes variés, enrichis d'une complicité remontant à de nombreuses années...",
-	
-	"METADATA_ARTISTS_PRT-CREW_DESCRIPTION":"Découvrez le PRT Crew. Artistes du label Infinity Records, le PRT Crew se définit par des textes techniques aux thèmes variés, enrichis d'une complicité remontant à de nombreuses années...",
-	"METADATA_ARTISTS_PRT-CREW_KEYWORDS":"Infinity Records, PRT Crew, Hip-hop, Rap, Lille, France, Textes techniques, Boombap, Trap, PRTape Vol. 1, PRTape Vol. 2, La Valse, Commotion, Un truc étrange, Sombres Lumières",
-	
-	"ARTISTS_FRESH-BEN_DESCRIPTION": "Des mélodies originales, des samples colorés et des rythmes percutants : Shit.. This is Fresh !",
-	
-	"METADATA_ARTISTS_FRESH-BEN_DESCRIPTION":"Découvrez Fresh Ben, le beatmaker d'Infinity Records. Sa musique se caractérise par des mélodies originales, des samples colorés et des rythmes percutants : Shit.. This is Fresh !",
-	"METADATA_ARTISTS_FRESH-BEN_KEYWORDS":"Infinity Records, Fresh Ben, Beatmaking, Producer, Trap, Rap, Hip-hop, Samples, Mélodies, Lille, France, This is Fresh",
-		
-	"ARTISTS_PROJECTS" : "Projets",
-	"ARTISTS_PROJECT_RELEASED_ON" : "Sorti le ",
-	"ARTISTS_PLAY" : "Écouter",
-	"ARTISTS_LISTENING" : "En cours d'écoute...",
-	"ARTISTS_DOWNLOAD" : "Télécharger",
-	
-	
-	
-	
-	"METADATA_MERCH_DESCRIPTION":"Découvrez les pièces Infinity Records. Un design épuré sur un textile de qualité, pour un confort et un style des plus soignés.",
-	"METADATA_MERCH_KEYWORDS":"Infinity Records, vêtements, merchandising, merch, sweat à capuche, hoodie, t-shirt, sweat sans capuche, crewneck, 100% coton, coupe classique, catalogue, produits",
-	
-	
-	"MERCH_BANNER_SUBTITLE" : "The Infinity Records Look",
-	"MERCH_BANNER_DESCRIPTION" : "Découvrez les pièces Infinity Records. Un design épuré sur un textile de qualité, pour un confort et un style des plus soignés.",
-	"MERCH_PRODUCTS_TITLE" : "Nos Produits",
-	"MERCH_TITLE_HOODIES" : "Hoodies",
-	"MERCH_TITLE_TSHIRTS" : "T-Shirts",
-	"MERCH_TITLE_CREWNECKS" : "Crewnecks",
-	
-	"MERCH_INFOS_DIGITAL_PRINTING" : "Impression digitale",
-	"MERCH_INFOS_FULL_COTTON" : "100% coton",
-	"MERCH_INFOS_COTTON_POLYESTER" : "80% coton / 20% Polyester",
-	"MERCH_INFOS_CLASSICAL_CUT" : "Coupe classique",
-	"MERCH_INFOS_CLASSICAT_CUT_ROUND" : "Coupe classique / Col rond",
-	"MERCH_INFOS_GRAMMING_180" : "Grammage : 180gr/m²",
-	"MERCH_INFOS_GRAMMING_280" : "Grammage : 280gr/m²",
-	"MERCH_INFOS_MACHINE_WASHABLE" : "Lavable en machine",
-	
-	"MERCH_TWO_COLORS" : "Existent en 2 couleurs",
-	"MERCH_TWO_COLORS_MIN" : "2 couleurs",
-	
-	"MERCH_SEE_MORE" : "VOIR PLUS",
-	
-	"MERCH_MAIN_BLACK" : "Tissu noir",
-	"MERCH_MAIN_WHITE" : "Tissu blanc",
-	"MERCH_LOGO_GOLD" : "Logo doré",
-	"MERCH_LOGO_WHITE" : "Logo blanc",
-	"MERCH_LOGO_BLACK" : "Logo noir",
-	
-	"MERCH_COMING_SOON" : "BIENTÔT DISPONIBLE"
+  "COPYRIGHT_1": "Copyright © ",
+  "COPYRIGHT_2": " Infinity Records. Tous droits Réservés.",
+
+
+
+
+  "METADATA_HOMEPAGE_TITLE": "Infinity Records - Le Site Officiel d'Infinity Records",
+  "METADATA_HOMEPAGE_DESCRIPTION": "Bienvenue sur le site d'Infinity Records. Découvrez le label, notre musique, les artistes qui la font, et tout ce que vous voudriez savoir sur nous",
+  "METADATA_HOMEPAGE_KEYWORDS": "Infinity Records, Le Label, Musique, Artistes, Merch, Bienvenue, Page Facebook, France, Formulaire de contact, Réseaux Sociaux",
+
+  "HOME_WELCOME": "Welcome",
+
+  "HOME_NEWS_TITLE": "Restez à jour et découvrez nos dernières actus !",
+
+  "HOME_NEWS_NEWS_TITLE": "Actualités",
+  "HOME_NEWS_NEWS_DESCRIPTION": "Informez-vous sur les dernières sorties, les nouvelles signatures et les actualités du label !",
+  "HOME_NEWS_EVENTS_TITLE": "Événements",
+  "HOME_NEWS_EVENTS_DESCRIPTION": "Soyez au courant des prochains concerts de nos artistes et dîtes-nous si vous y serez !",
+  "HOME_NEWS_CONTACT_TITLE": "Contact",
+  "HOME_NEWS_CONTACT_DESCRIPTION": "Une question ? Un message à nous envoyer ? Contactez-nous sur les réseaux ou via le formulaire ci-dessous !",
+
+  "HOME_LINKING_TITLE": "Apprenez-en plus sur Infinity Records en parcourant les autres pages du site.",
+
+  "HOME_LINKING_LABEL": "Découvrez le label",
+  "HOME_LINKING_ARTISTS": "Découvrez les artistes",
+  "HOME_LINKING_MERCH": "Découvrez le merch",
+
+
+
+
+  "METADATA_LABEL_TITLE": "Infinity Records - Le Label",
+  "METADATA_LABEL_DESCRIPTION": "Découvrez le label Infinity Records. Apprenez-en plus sur les moyens mis à disposition de nos artistes pour développer leurs projets musicaux, et sur notre vision de leur développement.",
+  "METADATA_LABEL_KEYWORDS": "Infinity Records, Label Musical, France, Développement d'artistes, Le studio, Enregistrement, Mixage, Mastering, L'équipe, Ben, Président, Producteur, Kate, Photographe, Max, Vidéaste",
+
+  "LABEL_BANNER_TITLE_1": "A propos",
+  "LABEL_BANNER_TITLE_2": "d'Infinity Records",
+  "LABEL_BANNER_DESCRIPTION": "Créé en 2017, Infinity Records est un label indépendant de production musicale situé à Lille, en France.",
+
+  "LABEL_TOP_DESCRIPTION": "Motivé par le désir de produire notre propre musique de A à Z, nous accompagnons nos artistes dans toutes les étapes de leur développement.",
+  "LABEL_TOP_CREATION": "Création",
+  "LABEL_TOP_RECORDING": "Enregistrement",
+  "LABEL_TOP_MIXING": "Mixage",
+  "LABEL_TOP_MASTERING": "Mastering",
+
+  "LABEL_RIGHT_DESCRIPTION": "Nous nous efforçons également d'aider et de conseiller nos artistes dans le développement de leur identité et de leur communication, et dans l'expression de leur potentiel.",
+
+  "LABEL_WHERE_THE_MAGIC": "Where the magic happens.",
+
+  "LABEL_STAFF_TITLE": "L'équipe",
+
+  "LABEL_ROLE_HEADMASTER": "Président",
+  "LABEL_ROLE_PRODUCER": "Producteur",
+  "LABEL_ROLE_ARTIST": "Artiste",
+  "LABEL_ROLE_COMMUNITY_MANAGER": "Community Manager",
+  "LABEL_ROLE_SOFTWARE_ENGINEER": "Ingénieur Logiciel",
+  "LABEL_ROLE_DESIGNER": "Designer",
+  "LABEL_ROLE_PHOTOGRAPHER": "Photographe",
+  "LABEL_ROLE_VIDEOGRAPHER": "Vidéaste",
+
+  "LABEL_BUT_ALSO": "mais aussi... ",
+
+
+
+
+  "METADATA_ARTISTS_LIST_TITLE": "Infinity Records - Les Artistes",
+  "METADATA_ARTISTS_LIST_DESCRIPTION": "Découvrez les artistes d'Infinity Records. Apprenez-en plus sur nos talents, leur univers musical, leurs dernières actualités, ...",
+  "METADATA_ARTISTS_LIST_KEYWORDS": "Infinity Records, Artistes, Musique, Albums, Réseaux Sociaux, Photos, PRT Crew, Hip-hop, Fresh Ben, Beatmaking, Clips",
+
+  "ARTISTS_LIST_TOP_TITLE": "Découvrez nos talents...",
+  "ARTISTS_LIST_TOP_CONTENT": "Apprenez-en plus sur nos artistes, leur univers musical et leur actualité.",
+
+
+
+
+  "ARTISTS_BACK": "retour",
+
+  "ARTISTS_PRT-CREW_DESCRIPTION": "Des textes techniques aux thèmes variés, enrichis d'une complicité remontant à de nombreuses années...",
+
+  "METADATA_ARTISTS_PRT-CREW_DESCRIPTION": "Découvrez le PRT Crew. Artistes du label Infinity Records, le PRT Crew se définit par des textes techniques aux thèmes variés, enrichis d'une complicité remontant à de nombreuses années...",
+  "METADATA_ARTISTS_PRT-CREW_KEYWORDS": "Infinity Records, PRT Crew, Hip-hop, Rap, Lille, France, Textes techniques, Boombap, Trap, PRTape Vol. 1, PRTape Vol. 2, La Valse, Commotion, Un truc étrange, Sombres Lumières",
+
+  "ARTISTS_FRESH-BEN_DESCRIPTION": "Des mélodies originales, des samples colorés et des rythmes percutants : Shit.. This is Fresh !",
+
+  "METADATA_ARTISTS_FRESH-BEN_DESCRIPTION": "Découvrez Fresh Ben, le beatmaker d'Infinity Records. Sa musique se caractérise par des mélodies originales, des samples colorés et des rythmes percutants : Shit.. This is Fresh !",
+  "METADATA_ARTISTS_FRESH-BEN_KEYWORDS": "Infinity Records, Fresh Ben, Beatmaking, Producer, Trap, Rap, Hip-hop, Samples, Mélodies, Lille, France, This is Fresh",
+
+  "ARTISTS_PROJECTS": "Projets",
+  "ARTISTS_PROJECT_RELEASED_ON": "Sorti le ",
+  "ARTISTS_PLAY": "Écouter",
+  "ARTISTS_LISTENING": "En cours d'écoute...",
+  "ARTISTS_DOWNLOAD": "Télécharger",
+
+
+
+  
+  "METADATA_MERCH_DESCRIPTION": "Découvrez les pièces Infinity Records. Un design épuré sur un textile de qualité, pour un confort et un style des plus soignés.",
+  "METADATA_MERCH_KEYWORDS": "Infinity Records, vêtements, merchandising, merch, sweat à capuche, hoodie, t-shirt, sweat sans capuche, crewneck, 100% coton, coupe classique, catalogue, produits",
+
+  "MERCH_BANNER_SUBTITLE": "The Infinity Records Look",
+  "MERCH_BANNER_DESCRIPTION": "Découvrez les pièces Infinity Records. Un design épuré sur un textile de qualité, pour un confort et un style des plus soignés.",
+  "MERCH_PRODUCTS_TITLE": "Nos Produits",
+  "MERCH_TITLE_HOODIES": "Hoodies",
+  "MERCH_TITLE_TSHIRTS": "T-Shirts",
+  "MERCH_TITLE_CREWNECKS": "Crewnecks",
+
+  "MERCH_INFOS_DIGITAL_PRINTING": "Impression digitale",
+  "MERCH_INFOS_FULL_COTTON": "100% coton",
+  "MERCH_INFOS_COTTON_POLYESTER": "80% coton / 20% Polyester",
+  "MERCH_INFOS_CLASSICAL_CUT": "Coupe classique",
+  "MERCH_INFOS_CLASSICAT_CUT_ROUND": "Coupe classique / Col rond",
+  "MERCH_INFOS_GRAMMING_180": "Grammage : 180gr/m²",
+  "MERCH_INFOS_GRAMMING_280": "Grammage : 280gr/m²",
+  "MERCH_INFOS_MACHINE_WASHABLE": "Lavable en machine",
+
+  "MERCH_TWO_COLORS": "Existent en 2 couleurs",
+  "MERCH_TWO_COLORS_MIN": "2 couleurs",
+
+  "MERCH_SEE_MORE": "VOIR PLUS",
+
+  "MERCH_MAIN_BLACK": "Tissu noir",
+  "MERCH_MAIN_WHITE": "Tissu blanc",
+  "MERCH_LOGO_GOLD": "Logo doré",
+  "MERCH_LOGO_WHITE": "Logo blanc",
+  "MERCH_LOGO_BLACK": "Logo noir",
+
+  "MERCH_COMING_SOON": "BIENTÔT DISPONIBLE"
 }
