@@ -6,7 +6,7 @@ $totalHeight: 865px;
     background-color: $white;
     border-right: 2px solid $very-light-grey;
     @media screen and (min-device-width: $desktop-size) {
-      width: calc(1137px - 2px);
+      width: calc(1137px - 1px);
       height: 617px;
     }
     @media screen and (max-device-width: $desktop-size) {
@@ -110,13 +110,15 @@ $totalHeight: 865px;
             }
             span {
               color: $gold;
-              display: inline;
-              vertical-align: middle;
+              height : 22px;
+              display: inline-flex;
+              vertical-align: top;
+              align-items: center;
               margin-right: 5px;
             }
             p {
               display: inline;
-              vertical-align: middle;
+              vertical-align: top;
               @media screen and (min-device-width: $desktop-size) {
                 font-size: 15px;
                 height: 22px;
