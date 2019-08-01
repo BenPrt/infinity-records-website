@@ -53,9 +53,11 @@ export class LabelStaffCardComponent {
   displayQuote(event: MouseEvent, displayValue?: boolean): void {
     if (this.isBrowser) {
       if (this.isMobile) {
+        const pictureWrapperEl = this.elRef.nativeElement.querySelector('#member-picture-wrapper');
+        const memberNameEl = this.elRef.nativeElement.querySelector('#member-name');
         if (
-          this.elRef.nativeElement.querySelector('#member-picture-wrapper').contains(event.target as Node) ||
-          this.elRef.nativeElement.querySelector('#member-name').contains(event.target as Node)
+          (pictureWrapperEl && pictureWrapperEl.contains(event.target as Node)) ||
+          (memberNameEl && memberNameEl.contains(event.target as Node))
         ) {
           this.quoteIsDisplayed = true;
         } else {

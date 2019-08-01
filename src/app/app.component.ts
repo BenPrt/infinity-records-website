@@ -8,7 +8,7 @@ import {
   ElementRef,
   ViewChild,
 } from '@angular/core';
-import { Location, isPlatformBrowser } from '@angular/common';
+import { Location, isPlatformBrowser, PlatformLocation } from '@angular/common';
 import { Router, RouterEvent } from '@angular/router';
 import { animate, style, transition, trigger, state } from '@angular/animations';
 import { debounceTime } from 'rxjs/operators';
@@ -78,8 +78,14 @@ export class AppComponent implements OnInit, AfterViewInit {
     private translationService: TranslationService,
     private mobileMenuService: MobileMenuEventsService,
     private scrollService: ScrollService,
+    private platformLocation: PlatformLocation,
   ) {
     this.isBrowser = isPlatformBrowser(platformId);
+    platformLocation.onPopState((event: PopStateEvent) => {
+      if (this.mobileMenuIsDisplayed) {
+        this.mobileMenuIsDisplayed = false;
+      }
+    });
   }
 
   ngOnInit(): void {
