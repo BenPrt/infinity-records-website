@@ -3,8 +3,8 @@
 #background-layer {
   border-left: 2px solid $very-light-grey;
   @media screen and (min-device-width: $desktop-size) {
-    width : calc(100% - 163px);
-    margin-left : 163px;
+    width: calc(100% - 163px);
+    margin-left: 163px;
     border-right: 2px solid $very-light-grey;
   }
   @media screen and (max-device-width: $desktop-size) {
@@ -12,7 +12,7 @@
     margin-left: 12.23vw;
   }
   #banner-picture-wrapper {
-    display : flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -41,7 +41,7 @@
     background-color: $very-light-grey;
     @media screen and (min-device-width: $desktop-size) {
       width: 530px;
-      margin-left: calc(100% - 72px - 530px - 72px);
+      margin-left: calc(100% - 72px - 530px - 72px + 2px);
       margin-top: -200px;
       padding: 72px;
     }
@@ -58,7 +58,7 @@
       font-size: 16px;
     }
     #banner-title {
-      font-weight : normal;
+      font-weight: normal;
       @media screen and (min-device-width: $desktop-size) {
         font-size: 44px;
         line-height: 1.27;

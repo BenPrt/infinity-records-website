@@ -54,7 +54,7 @@
           @media screen and (min-device-width: $desktop-size) {
             position: absolute;
             margin-top: -265px;
-            margin-left: calc(-325px - 325px - 2px);
+            margin-left: calc(-325px - 325px - 2px - 2px);
             width: 500px;
             height: 630px;
           }
