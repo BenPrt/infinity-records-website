@@ -153,13 +153,10 @@
               width: 252px;
             }
             @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
-              margin-left: 24px;
-              font-size: 2.2em;
               width: 17.57vw;
               font-size: 1.5em;
             }
             @media screen and (max-device-width: $tablet-size) {
-              margin-left: 24px;
               width: calc((100vw - 16px - 16px) - 24.47vw - 32px);
             }
           }

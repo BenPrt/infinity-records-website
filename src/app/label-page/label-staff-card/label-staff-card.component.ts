@@ -54,8 +54,8 @@ export class LabelStaffCardComponent {
     if (this.isBrowser) {
       if (this.isMobile) {
         if (
-          this.elRef.nativeElement.querySelector('#member-picture-wrapper').contains(event.target as Node) ||
-          this.elRef.nativeElement.querySelector('#member-name').contains(event.target as Node)
+          this.elRef.nativeElement.querySelector('.member-picture-wrapper').contains(event.target as Node) ||
+          this.elRef.nativeElement.querySelector('.member-name').contains(event.target as Node)
         ) {
           this.quoteIsDisplayed = true;
         } else {

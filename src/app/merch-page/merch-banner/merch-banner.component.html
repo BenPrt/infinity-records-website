@@ -1,5 +1,5 @@
 <div id="banner-image-container">
-  <img id="banner-image" alt="Merch Banner Image" [defaultImage]="'assets/img/loading.gif'" [lazyLoad]="'assets/img/merch/banner.jpg'" />
+  <img id="banner-image" alt="Merch Banner Image" [defaultImage]="'assets/img/loading.gif'" [lazyLoad]="isMobile ? 'assets/img/merch/banner_mobile.jpg' : 'assets/img/merch/banner.jpg'" />
   <div id="banner-image-gradient"></div>
 </div>
 <div id="content-over-image">

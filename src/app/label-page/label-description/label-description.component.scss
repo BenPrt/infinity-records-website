@@ -83,6 +83,7 @@
           margin-top: 56px;
         }
         @media screen and (max-device-width: $desktop-size) {
+          font-size: 1em;
           width: 46.8vw;
           margin-left: calc((100% - 46.8vw) / 2);
           margin-top: 32px;
@@ -110,6 +111,9 @@
             font-weight: 600;
             height: 32px;
             margin-bottom: 16px;
+            @media screen and (max-device-width: $desktop-size) {
+              font-size: 0.9em;
+            }
             span {
               margin-right: 8px;
 

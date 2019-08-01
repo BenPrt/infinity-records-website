@@ -22,10 +22,11 @@
       margin-left: calc(100% - 472px - 64px);
     }
     @media screen and (max-device-width: $tablet-size) {
-      width: calc(51.59vw - 48px);
+      width: 51.59vw;
       margin-left: calc(100vw - 51.59vw - 12.23vw - 16px);
       margin-top: -24px;
-      padding: 72px 24px;
+      padding: 72px 0px;
+      text-align: center;
     }
     #staff-title {
       font-weight: normal;
@@ -36,7 +37,7 @@
         line-height: 1.27;
       }
       @media screen and (max-device-width: $tablet-size) {
-        font-size: 32px;
+        font-size: 2em;
         height: 40px;
         line-height: 1.25;
       }
