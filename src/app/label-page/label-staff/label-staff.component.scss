@@ -3,8 +3,8 @@
 #staff-first-layer {
   border-left: 2px solid $very-light-grey;
   @media screen and (min-device-width: $tablet-size) {
-    width : calc(100% - 163px);
-    margin-left : 165px;
+    width: calc(100% - 163px);
+    margin-left: 165px;
   }
   @media screen and (max-device-width: $tablet-size) {
     width: calc(100vw - 12.23vw - 2px);
