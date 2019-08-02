@@ -46,9 +46,9 @@
       padding: 72px;
     }
     @media screen and (max-device-width: $desktop-size) {
-      width: calc(67.55% - 32px - 32px);
-      padding: 40px 32px;
-      margin-top: -40px;
+      width: calc(67.55% - 8.51vw - 8.51vw);
+      padding: 10.64vw 8.51vw;
+      margin-top: -10.64vw;
       left: calc(100% - 67.55% - 12.23vw);
     }
     #banner-page-title {
@@ -69,10 +69,16 @@
       }
     }
     #banner-description {
-      margin-top: 16px;
-      font-size: 18px;
       font-weight: 500;
       line-height: 1.56;
+      @media screen and (min-device-width: $desktop-size) {
+        margin-top: 16px;
+        font-size: 18px;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        margin-top: 4.26vw;
+        font-size: 1em;
+      }
     }
   }
 }

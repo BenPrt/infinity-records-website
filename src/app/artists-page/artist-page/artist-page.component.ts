@@ -81,19 +81,19 @@ export class ArtistPageComponent implements OnInit, AfterViewChecked {
         const descriptionHeight = document.getElementById('artist-description-wrapper').offsetHeight;
         document.getElementById(
           'artist-first-inside-layer',
-        ).style.height = `calc(74px + 65px + 91.49vw + 48px + ${descriptionHeight}px + 64px)`;
+        ).style.height = `calc(19.68vw + 17.29vw + 91.49vw + 12.77vw + ${descriptionHeight}px + 17.02vw)`;
         document.getElementById(
           'artist-second-layer',
-        ).style.marginTop = `calc(-74px - 65px - 91.49vw - 48px - ${descriptionHeight}px - 64px)`;
+        ).style.marginTop = `calc(-19.68vw - 17.29vw - 91.49vw - 12.77vw - ${descriptionHeight}px - 17.02vw)`;
         document.getElementById(
           'artist-second-layer',
-        ).style.marginBottom = `calc(48px + ${descriptionHeight}px + 64px)`;
+        ).style.marginBottom = `calc(12.77vw + ${descriptionHeight}px + 17.02vw)`;
         document.getElementById(
           'artist-cover',
-        ).style.marginTop = `calc(-65px - 91.49vw - 48px - ${descriptionHeight}px - 64px)`;
+        ).style.marginTop = `calc(-17.29vw - 91.49vw - 12.77vw - ${descriptionHeight}px - 17.02vw)`;
         document.getElementById(
           'artist-navigation',
-        ).style.marginTop = `calc(-74px - 65px - 91.49vw - 48px - ${descriptionHeight}px - 64px + 16px)`;
+        ).style.marginTop = `calc(-19.68vw - 17.29vw - 91.49vw - 12.77vw - ${descriptionHeight}px - 17.02vw + 4.26vw)`;
       });
     }
   }

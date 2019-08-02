@@ -21,8 +21,8 @@ $totalHeight: 865px;
         padding-top: 72px;
       }
       @media screen and (max-device-width: $desktop-size) {
-        width: calc(100% - 50px);
-        padding-top: 56px;
+        width: calc(100% - 13.3vw);
+        padding-top: 14.89vw;
       }
 
       #text-zone {
@@ -35,8 +35,8 @@ $totalHeight: 865px;
           margin-left: 32px;
         }
         @media screen and (max-device-width: $tablet-size) {
-          width: calc(100% - 16px);
-          margin-left: 16px;
+          width: calc(100% - 4.26vw);
+          margin-left: 4.26vw;
         }
         #description-title {
           line-height: 1.27;
@@ -53,7 +53,7 @@ $totalHeight: 865px;
             margin-top: 29px;
           }
           @media screen and (max-device-width: $desktop-size) {
-            margin-top: 24px;
+            margin-top: 6.38vw;
           }
           .products-indicator {
             display: inline-block;
@@ -67,7 +67,7 @@ $totalHeight: 865px;
             }
             @media screen and (max-device-width: $desktop-size) {
               font-size: 1em;
-              margin-right: 24px;
+              margin-right: 6.38vw;
             }
           }
         }
@@ -79,8 +79,8 @@ $totalHeight: 865px;
           }
           @media screen and (max-device-width: $desktop-size) {
             font-size: 2em;
-            margin-top: calc(32px + 56.65vw + 40px);
-            height: 40px;
+            margin-top: calc(8.51vw + 56.65vw + 10.64vw);
+            height: 10.64vw;
           }
         }
         #product-informations {
@@ -95,7 +95,7 @@ $totalHeight: 865px;
             margin: 22px 0 0 0;
           }
           @media screen and (max-device-width: $desktop-size) {
-            margin: 24px 0 0 0;
+            margin: 6.38vw 0 0 0;
           }
           .product-information {
             @media screen and (min-device-width: $desktop-size) {
@@ -105,16 +105,34 @@ $totalHeight: 865px;
               margin: 0 0 7px 0;
             }
             @media screen and (max-device-width: $desktop-size) {
-              height: 6.93vw;
-              margin: 0 0 8px 0;
+              height: 5.85vw;
+              line-height: 5.85vw;
+              width: calc(100% - 4.26vw);
+              margin: 0 0 1.86vw 0;
             }
             span {
               color: $gold;
-              height : 22px;
               display: inline-flex;
               vertical-align: top;
               align-items: center;
-              margin-right: 5px;
+              @media screen and (min-device-width: $desktop-size) {
+                height: 22px;
+                margin-right: 5px;
+              }
+              @media screen and (max-device-width: $desktop-size) {
+                height: 5.85vw;
+                margin-right: 1.33vw;
+              }
+              img{
+                @media screen and (min-device-width: $desktop-size) {
+                  height: 16px;
+                  width: 16px;
+                }
+                @media screen and (max-device-width: $desktop-size) {
+                  height: 4.26vw;
+                  width: 4.26vw;
+                } 
+              }
             }
             p {
               display: inline;
@@ -126,7 +144,8 @@ $totalHeight: 865px;
               }
               @media screen and (max-device-width: $desktop-size) {
                 font-size: 0.9em;
-                line-height: 6.93vw;
+                height: 5.85vw;
+                line-height: 5.85vw;
               }
             }
           }
@@ -146,8 +165,8 @@ $totalHeight: 865px;
             margin-top: 40px;
           }
           @media screen and (max-device-width: $tablet-size) {
-            width: calc(100% - 10px);
-            margin-top: 40px;
+            width: calc(100% - 4.26vw);
+            margin-top: 10.64vw;
           }
 
           #black-square {
@@ -157,8 +176,8 @@ $totalHeight: 865px;
               height: 22px;
             }
             @media screen and (max-device-width: $desktop-size) {
-              width: 24px;
-              height: 24px;
+              width: 6.38vw;
+              height: 6.38vw;
             }
           }
           #white-square {
@@ -168,8 +187,8 @@ $totalHeight: 865px;
               height: 22px;
             }
             @media screen and (max-device-width: $desktop-size) {
-              width: 24px;
-              height: 24px;
+              width: 6.38vw;
+              height: 6.38vw;
             }
           }
           #gold-separator {
@@ -181,7 +200,7 @@ $totalHeight: 865px;
               width: 167px;
             }
             @media screen and (max-device-width: $desktop-size) {
-              height: 1px;
+              height: 0.27vw;
               width: 17vw;
             }
           }
@@ -213,10 +232,10 @@ $totalHeight: 865px;
           @media screen and (max-device-width: $desktop-size) {
             font-size: 0.9em;
             letter-spacing: 0.11em;
-            width: 140px;
-            height: 40px;
-            margin-top: 48px;
-            margin-bottom: 56px;
+            width: 37.23vw;
+            height: 10.64vw;
+            margin-top: 12.77vw;
+            margin-bottom: 14.89vw;
           }
           &:focus {
             outline: none;
@@ -242,8 +261,8 @@ $totalHeight: 865px;
       @media screen and (max-device-width: $tablet-size) {
         position: relative;
         margin-top: calc(
-          -56px - 40px - 48px - 24px - 40px - 8px - 6.93vw - 8px - 6.93vw - 8px - 6.93vw - 8px - 6.93vw - 8px - 6.93vw -
-            24px - 40px - 32px - 56.65vw
+          -14.89vw - 10.64vw - 12.77vw - 6.38vw - 10.64vw - 1.86vw - 5.85vw - 1.86vw - 5.85vw - 1.86vw - 5.85vw - 1.86vw -
+            5.85vw - 1.86vw - 5.85vw - 6.38vw - 10.64vw - 8.51vw - 56.65vw
         );
         margin-left: calc(((100vw - 75.53vw) / 2) - 1px);
         width: 75.53vw;
@@ -275,17 +294,17 @@ $totalHeight: 865px;
       }
       #page-navigator-description {
         position: absolute;
-        width: 105px;
-        height: 52px;
-        margin-top: -52px;
-        right: -1px;
+        width: 27.93vw;
+        height: 13.83vw;
+        margin-top: -13.83vw;
+        right: -0.27vw;
         background-color: $white;
         display: flex;
         justify-content: space-between;
 
         .page-button {
-          height: 52px;
-          width: 52px;
+          height: 13.83vw;
+          width: 13.83vw;
           cursor: pointer;
           background-color: $very-light-grey;
           display: flex;
@@ -293,8 +312,8 @@ $totalHeight: 865px;
           justify-content: center;
           user-select: none;
           .navigation-arrow {
-            width: 14px;
-            height: 14px;
+            width: 3.72vw;
+            height: 3.72vw;
           }
         }
 

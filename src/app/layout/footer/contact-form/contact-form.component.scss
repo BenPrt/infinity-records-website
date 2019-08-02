@@ -11,15 +11,10 @@
     display: flex;
     justify-content: space-around;
   }
-  @media screen and (max-device-width: $desktop-size) and (min-device-width: 375px) {
+  @media screen and (max-device-width: $desktop-size) {
     width: 80.85vw;
     padding-left: calc((100vw - 80.85vw) / 2);
     padding-right: calc((100vw - 80.85vw) / 2);
-  }
-  @media screen and (max-device-width: 375px) {
-    width: 304px;
-    padding-left: calc((100vw - 304px) / 2);
-    padding-right: calc((100vw - 304px) / 2);
   }
   #contact-description {
     @media screen and (min-device-width: $desktop-size) {
@@ -28,7 +23,7 @@
     }
     @media screen and (max-device-width: $desktop-size) {
       width: 100%;
-      padding-top: 48px;
+      padding-top: 12.77vw;
     }
 
     #contact-description-title {
@@ -38,23 +33,24 @@
         font-size: 44px;
       }
       @media screen and (max-device-width: $desktop-size) {
-        font-size: 32px;
+        font-size: 2em;
       }
     }
     #contact-description-content {
       border-left: 2px solid $gold;
       color: $white;
       line-height: 1.63;
-      font-size: 16px;
       @media screen and (min-device-width: $desktop-size) {
+        font-size: 16px;
         margin-top: 40px;
         width: 275px;
         padding-left: 24px;
       }
       @media screen and (max-device-width: $desktop-size) {
-        margin-top: 32px;
-        width: calc(100% - 22px);
-        padding-left: 22px;
+        font-size: 0.9em;
+        margin-top: 8.51vw;
+        width: calc(100% - 5.85vw);
+        padding-left: 5.85vw;
       }
     }
   }
@@ -66,28 +62,49 @@
     }
     @media screen and (max-device-width: $desktop-size) {
       width: 100%;
-      margin-top: 48px;
+      margin-top: 12.77vw;
     }
 
     // padding inside field
     ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-infix {
-      padding: 6px 0;
+      @media screen and (min-device-width: $desktop-size) {
+        padding: 6px 0;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        padding: 1.6vw 0;
+      }
     }
     // Field Label
     ::ng-deep .mat-form-field-label {
       color: $grey;
-      font-size: 14px;
       font-family: 'Montserrat';
       font-weight: 600;
-      letter-spacing: 1px;
+      @media screen and (min-device-width: $desktop-size) {
+        font-size: 14px;
+        letter-spacing: 1px;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        font-size: 0.8em;
+        letter-spacing: 0.06em;
+      }
     }
     // Label when filled
     ::ng-deep .mat-form-field .mat-form-field-label {
-      font-size: 14px;
+      @media screen and (min-device-width: $desktop-size) {
+        font-size: 14px;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        font-size: 0.8em;
+      }
     }
     // Label when empty
     ::ng-deep .mat-form-field.mat-form-field-empty .mat-form-field-label {
-      font-size: 16px;
+      @media screen and (min-device-width: $desktop-size) {
+        font-size: 16px;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        font-size: 0.9em;
+      }
     }
     // Label when error
     ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
@@ -123,37 +140,40 @@
 
     #name-field {
       font-family: 'Montserrat';
-      font-size: 16px;
       @media screen and (min-device-width: $desktop-size) {
         width: 300px;
         margin-right: 32px;
+        font-size: 16px;
       }
       @media screen and (max-device-width: $desktop-size) {
         width: 100%;
+        font-size: 0.9em;
       }
     }
     #email-field {
       font-family: 'Montserrat';
-      font-size: 16px;
       @media screen and (min-device-width: $desktop-size) {
         width: 300px;
+        font-size: 16px;
       }
       @media screen and (max-device-width: $desktop-size) {
         width: 100%;
-        margin-top: 24px;
+        margin-top: 6.38vw;
+        font-size: 0.9em;
       }
     }
     #message-field {
       font-family: 'Montserrat';
-      font-size: 16px;
       line-height: 1.63;
       @media screen and (min-device-width: $desktop-size) {
         width: 100%;
         margin-top: 32px;
+        font-size: 16px;
       }
       @media screen and (max-device-width: $desktop-size) {
         width: 100%;
-        margin-top: 24px;
+        margin-top: 6.38vw;
+        font-size: 0.9em;
       }
     }
     #captcha-and-submit-container {
@@ -162,18 +182,16 @@
         width: 100%;
         align-items: center;
         justify-content: space-between;
-        margin: 48px 0 80px 0;
+        margin: 12.77vw 0 80px 0;
       }
       @media screen and (max-device-width: $desktop-size) {
-        margin-top: 32px;
+        margin-top: 8.51vw;
         width: 100%;
       }
 
       #captcha-field {
         width: 304px;
-        @media screen and (max-device-width: $desktop-size) {
-          padding-left: calc((100% - 304px) / 2);
-        }
+        margin-left: calc((100% - 304px) / 2);
       }
 
       #submit-button {
@@ -195,12 +213,14 @@
           margin: 40px 0px 56px calc((100% - 250px) / 2);
           width: 250px;
           height: 40px;
+          font-size: 0.9em;
         }
         @media screen and (max-device-width: $tablet-size) {
+          font-size: 0.9em;
           width: 100%;
-          margin-top: 40px;
-          margin-bottom: 56px;
-          height: 40px;
+          margin-top: 10.64vw;
+          margin-bottom: 14.89vw;
+          height: 10.64vw;
         }
       }
       #sending-message-loader {
@@ -211,11 +231,11 @@
         }
         @media screen and (max-device-width: $desktop-size) {
           width: 100%;
-          height: 40px;
-          line-height: 40px;
+          height: 10.64vw;
+          line-height: 10.64vw;
           text-align: center;
-          margin-top: 40px;
-          margin-bottom: 56px;
+          margin-top: 10.64vw;
+          margin-bottom: 14.89vw;
         }
       }
       #success-message {
@@ -226,10 +246,10 @@
           width: 160px;
         }
         @media screen and (max-device-width: $desktop-size) {
-          height: 40px;
-          line-height: 40px;
-          margin-top: 40px;
-          padding-bottom: 56px;
+          height: 10.64vw;
+          line-height: 10.64vw;
+          margin-top: 10.64vw;
+          padding-bottom: 14.89vw;
           width: 100%;
           justify-content: center;
         }
@@ -240,9 +260,9 @@
             margin-right: 4px;
           }
           @media screen and (max-device-width: $desktop-size) {
-            height: 24px;
-            width: 24px;
-            margin-right: 4px;
+            height: 6.38vw;
+            width: 6.38vw;
+            margin-right: 1.06vw;
           }
         }
         #success-message-message {

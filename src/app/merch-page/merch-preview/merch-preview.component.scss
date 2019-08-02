@@ -6,18 +6,13 @@
     border-right: 2px solid $very-light-grey;
     @media screen and (min-device-width: $desktop-size) {
       width: calc(100% - 163px - 163px - 2px);
-      margin-left : 163px;
+      margin-left: 163px;
       height: calc(94px + 272px + 63px + 135px + 94px);
     }
-    @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
+    @media screen and (max-device-width: $desktop-size) {
       width: calc(100vw - 12.23vw - 2px - 12.23vw - 2px);
       margin-left: 12.23vw;
-      height: calc(64px + 57.5vw + 24px + 57.5vw + 24px + 57.5vw + 40px + 52px + 104px);
-    }
-    @media screen and (max-device-width: $tablet-size) {
-      width: calc(100vw - 12.23vw - 2px - 12.23vw - 2px);
-      margin-left: 12.23vw;
-      height: calc(64px + 67.5vw + 24px + 67.5vw + 24px + 67.5vw + 40px + 52px + 104px);
+      height: calc(17.02vw + 67.5vw + 6.38vw + 67.5vw + 6.38vw + 67.5vw + 10.64vw + 13.83vw + 27.66vw);
     }
   }
 
@@ -27,13 +22,9 @@
       width: 268px;
       height: calc(94px + 272px + 63px + 135px + 94px);
     }
-    @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
-      width: 102px;
-      height: calc(64px + 57.5vw + 24px + 57.5vw + 24px + 57.5vw + 40px + 52px);
-    }
-    @media screen and (max-device-width: $tablet-size) {
-      width: 102px;
-      height: calc(64px + 67.5vw + 24px + 67.5vw + 24px + 67.5vw + 40px + 52px);
+    @media screen and (max-device-width: $desktop-size) {
+      width: 27.13vw;
+      height: calc(17.02vw + 67.5vw + 6.38vw + 67.5vw + 6.38vw + 67.5vw + 10.64vw + 13.83vw);
     }
     #product-title-wrapper {
       position: relative;
@@ -51,9 +42,9 @@
         @media screen and (max-device-width: $desktop-size) {
           font-size: 1em;
           letter-spacing: 0.11em;
-          width: 120px;
-          margin-top: 111px;
-          margin-left: -47px;
+          width: 31.91vw;
+          margin-top: 29.52vw;
+          margin-left: -12.5vw;
         }
       }
     }
@@ -70,17 +61,11 @@
           width: 272px;
           height: 135px;
         }
-        @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
-          margin-top: calc(64px + 57.5vw + 24px + 57.5vw + 24px + 57.5vw + 40px);
-          margin-left: -2px;
-          width: 105px;
-          height: 52px;
-        }
-        @media screen and (max-device-width: $tablet-size) {
-          margin-top: calc(64px + 67.5vw + 24px + 67.5vw + 24px + 67.5vw + 40px);
-          margin-left: -2px;
-          width: 105px;
-          height: 52px;
+        @media screen and (max-device-width: $desktop-size) {
+          margin-top: calc(17.02vw + 67.5vw + 6.38vw + 67.5vw + 6.38vw + 67.5vw + 10.64vw);
+          margin-left: -0.53vw;
+          width: 27.93vw;
+          height: 13.83vw;
         }
       }
       .page-button {
@@ -96,8 +81,8 @@
           width: 135px;
         }
         @media screen and (max-device-width: $desktop-size) {
-          height: 52px;
-          width: 52px;
+          height: 13.83vw;
+          width: 13.83vw;
         }
         .navigation-arrow {
           @media screen and (min-device-width: $desktop-size) {
@@ -105,8 +90,8 @@
             height: 36px;
           }
           @media screen and (max-device-width: $desktop-size) {
-            height: 14px;
-            width: 14px;
+            height: 3.72vw;
+            width: 3.72vw;
           }
         }
       }
@@ -127,17 +112,11 @@
       margin-top: calc(-94px - 272px - 63px - 135px - 94px);
       margin-left: calc(975px - 272px - 2px);
     }
-    @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
-      width: calc(12.23vw + 2px + 50px);
-      height: calc(64px + 57.5vw + 24px + 57.5vw + 24px + 57.5vw + 40px + 52px);
-      margin-top: calc(-64px - 57.5vw - 24px - 57.5vw - 24px - 57.5vw - 40px - 52px);
-      left: calc(100vw - 12.23vw - 2px - 50px - 12.23vw - 2px);
-    }
-    @media screen and (max-device-width: $tablet-size) {
-      width: calc(12.23vw + 2px + 50px);
-      height: calc(64px + 67.5vw + 24px + 67.5vw + 24px + 67.5vw + 40px + 52px);
-      margin-top: calc(-64px - 67.5vw - 24px - 67.5vw - 24px - 67.5vw - 40px - 52px);
-      left: calc(100vw - 12.23vw - 2px - 50px - 12.23vw - 2px);
+    @media screen and (max-device-width: $desktop-size) {
+      width: calc(12.23vw + 2px + 13.3vw);
+      height: calc(17.02vw + 67.5vw + 6.38vw + 67.5vw + 6.38vw + 67.5vw + 10.64vw + 13.83vw);
+      margin-top: calc(-17.02vw - 67.5vw - 6.38vw - 67.5vw - 6.38vw - 67.5vw - 10.64vw - 13.83vw);
+      left: calc(100vw - 12.23vw - 2px - 13.3vw - 12.23vw - 2px);
     }
   }
   #previews {
@@ -150,18 +129,11 @@
       margin-top: calc(-272px - 63px - 135px);
       margin-left: calc(975px - 272px - 2px + 372px - 272px - 29px - 272px - 29px - 272px);
     }
-    @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
-      width: 57.5vw;
-      height: calc(57.5vw + 24px + 57.5vw + 24px + 57.5vw);
-      margin-top: calc(-57.5vw - 24px - 57.5vw - 24px - 57.5vw - 40px - 52px);
-      margin-left: calc(100vw - 12.23vw - 2px - 57.5vw - 12.23vw);
-      flex-direction: column;
-    }
-    @media screen and (max-device-width: $tablet-size) {
+    @media screen and (max-device-width: $desktop-size) {
       width: 67.5vw;
-      height: calc(67.5vw + 24px + 67.5vw + 24px + 67.5vw);
-      margin-top: calc(-67.5vw - 24px - 67.5vw - 24px - 67.5vw - 40px - 52px);
-      margin-left: calc(100vw - 12.23vw - 2px - 67.5vw - 16px);
+      height: calc(67.5vw + 6.38vw + 67.5vw + 6.38vw + 67.5vw);
+      margin-top: calc(-67.5vw - 6.38vw - 67.5vw - 6.38vw - 67.5vw - 10.64vw - 13.83vw);
+      margin-left: calc(100vw - 12.23vw - 2px - 67.5vw - 4.26vw);
       flex-direction: column;
     }
   }

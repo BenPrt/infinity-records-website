@@ -35,10 +35,10 @@
       @media screen and (max-device-width: $desktop-size) {
         font-size: 1em;
         letter-spacing: 0.11em;
-        height: 20px;
-        width: 105px;
-        margin-left: -38px;
-        margin-top: calc(43px + 48px);
+        height: 5.32vw;
+        width: 27.93vw;
+        margin-left: -10.11vw;
+        margin-top: calc(11.44vw + 12.77vw);
       }
     }
     #artists-list-second-layer {
@@ -58,7 +58,7 @@
         }
         @media screen and (max-device-width: $desktop-size) {
           width: 50.53vw;
-          margin-top: 48px;
+          margin-top: 12.77vw;
           margin-left: 4.26vw;
         }
         #top-description-title {
@@ -80,7 +80,7 @@
             font-size: 18px;
           }
           @media screen and (max-device-width: $desktop-size) {
-            margin-top: 16px;
+            margin-top: 4.26vw;
             font-size: 1em;
           }
         }
@@ -95,9 +95,9 @@
           width: calc(100% - 129px + 163px);
         }
         @media screen and (max-device-width: $desktop-size) {
-          padding-top: 56px;
-          margin: 72px 0 104px -11.17vw;
-          height: calc(73.94vw + 40px + 73.94vw);
+          padding-top: 14.89vw;
+          margin: 19.15vw 0 27.66vw -11.17vw;
+          height: calc(73.94vw + 10.64vw + 73.94vw);
           width: calc(100% + 11.17vw + 12.23vw);
         }
         #artists-list-list-container {
@@ -109,7 +109,7 @@
             justify-content: space-between;
           }
           @media screen and (max-device-width: $desktop-size) {
-            height: calc(73.94vw + 40px + 73.94vw);
+            height: calc(73.94vw + 10.64vw + 73.94vw);
             width: calc(100% + 7.98vw);
             margin-left: -7.98vw;
           }
@@ -121,7 +121,7 @@
             @media screen and (max-device-width: $desktop-size) {
               width: 100%;
               height: 73.94vw;
-              margin-bottom: 40px;
+              margin-bottom: 10.64vw;
             }
 
             .artist-item-link {
@@ -192,7 +192,7 @@
                   @media screen and (max-device-width: $desktop-size) {
                     padding-left: 16px;
                     height: 29.52vw;
-                    width: calc(-16px + 100% - 32px - 29.52vw);
+                    width: calc(-4.26vw + 100% - 8.51vw - 29.52vw);
                   }
                   .artist-item-content-separator {
                     border: none;
@@ -208,8 +208,8 @@
                     @media screen and (max-device-width: $desktop-size) {
                       height: 4px;
                       width: 8.51vw;
-                      margin-top: 19px;
-                      margin-bottom: 16px;
+                      margin-top: 5.05vw;
+                      margin-bottom: 4.26vw;
                     }
                   }
                   .artist-item-type {
@@ -219,7 +219,7 @@
                       font-size: 14px;
                     }
                     @media screen and (max-device-width: $desktop-size) {
-                      height: 24px;
+                      height: 6.38vw;
                       font-size: 0.78em;
                     }
                   }
@@ -231,7 +231,7 @@
                       font-size: 24px;
                     }
                     @media screen and (max-device-width: $desktop-size) {
-                      height: 30px;
+                      height: 7.98vw;
                       font-size: 1.345em;
                     }
                   }
