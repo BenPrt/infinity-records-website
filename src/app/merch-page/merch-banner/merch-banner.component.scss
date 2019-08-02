@@ -33,10 +33,7 @@
       @media screen and (min-device-width: $desktop-size) {
         width: 100%;
       }
-      @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
-        width: 100%;
-      }
-      @media screen and (max-device-width: $tablet-size) {
+      @media screen and (max-device-width: $desktop-size) {
         height: 133.24vw;
       }
     }

@@ -1,13 +1,18 @@
 @import "src/app/utils/_styleVariables";
 
 #mobile-page-content{
-  margin-top : 21.54vw;
   width : 100%;
   height : 100vh;
   height: calc(var(--contentvh, 1vh) * 100);
   overflow-y: scroll;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  @media screen and (min-device-width: $desktop-size) {
+    margin-top : 10.77vw;
+  }
+  @media screen and (max-device-width: $desktop-size) {
+    margin-top : 21.54vw;
+  }
 }
 
 #menu-overlay{

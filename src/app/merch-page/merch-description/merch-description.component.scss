@@ -30,11 +30,7 @@ $totalHeight: 865px;
           width: 372px;
           margin-left: 63px;
         }
-        @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
-          width: calc(100% - 32px);
-          margin-left: 32px;
-        }
-        @media screen and (max-device-width: $tablet-size) {
+        @media screen and (max-device-width: $desktop-size) {
           width: calc(100% - 4.26vw);
           margin-left: 4.26vw;
         }
@@ -123,7 +119,7 @@ $totalHeight: 865px;
                 height: 5.85vw;
                 margin-right: 1.33vw;
               }
-              img{
+              img {
                 @media screen and (min-device-width: $desktop-size) {
                   height: 16px;
                   width: 16px;
@@ -131,7 +127,7 @@ $totalHeight: 865px;
                 @media screen and (max-device-width: $desktop-size) {
                   height: 4.26vw;
                   width: 4.26vw;
-                } 
+                }
               }
             }
             p {
@@ -159,12 +155,7 @@ $totalHeight: 865px;
             width: 397px;
             margin-top: calc(45px - 7px);
           }
-          @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
-            width: 59.04vw;
-            max-width: 335px;
-            margin-top: 40px;
-          }
-          @media screen and (max-device-width: $tablet-size) {
+          @media screen and (max-device-width: $desktop-size) {
             width: calc(100% - 4.26vw);
             margin-top: 10.64vw;
           }
@@ -251,14 +242,7 @@ $totalHeight: 865px;
         width: 572px;
         height: 429px;
       }
-      @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
-        position: relative;
-        margin-top: -1052px;
-        margin-left: calc(((100vw - 75.53vw) / 2) - 1px);
-        width: 75.53vw;
-        height: 213px;
-      }
-      @media screen and (max-device-width: $tablet-size) {
+      @media screen and (max-device-width: $desktop-size) {
         position: relative;
         margin-top: calc(
           -14.89vw - 10.64vw - 12.77vw - 6.38vw - 10.64vw - 1.86vw - 5.85vw - 1.86vw - 5.85vw - 1.86vw - 5.85vw - 1.86vw -

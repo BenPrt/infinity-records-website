@@ -209,13 +209,7 @@
           cursor: pointer;
           height: 40px;
         }
-        @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
-          margin: 40px 0px 56px calc((100% - 250px) / 2);
-          width: 250px;
-          height: 40px;
-          font-size: 0.9em;
-        }
-        @media screen and (max-device-width: $tablet-size) {
+        @media screen and (max-device-width: $desktop-size) {
           font-size: 0.9em;
           width: 100%;
           margin-top: 10.64vw;

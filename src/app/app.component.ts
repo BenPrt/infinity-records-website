@@ -51,6 +51,8 @@ export class AppComponent implements OnInit, AfterViewInit {
   reloading: boolean = false;
   // Boolean defining if the device is a mobile device or not
   isMobile: boolean = false;
+  // Boolean defining if the device is a tablet device or not
+  isTablet: boolean = false;
   // Boolean defining is we trigger the animation, depending on which page the user access
   animateLogo: boolean = true;
   // Table containing all occuring timeouts
@@ -132,12 +134,19 @@ export class AppComponent implements OnInit, AfterViewInit {
     if (this.isBrowser) {
       const userAgent = navigator.userAgent;
       if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(userAgent)) {
-        this.isMobile = true;
+        if (document.body.clientWidth > 1299) {
+          this.isTablet = true;
+          this.isMobile = false;
+        } else {
+          this.isTablet = false;
+          this.isMobile = true;
+        }
         this.initMobileScroll();
       } else {
         this.isMobile = false;
       }
       this.deviceService.setDeviceIsMobile(this.isMobile);
+      this.deviceService.setDeviceIsTablet(this.isTablet);
     }
   }
 
