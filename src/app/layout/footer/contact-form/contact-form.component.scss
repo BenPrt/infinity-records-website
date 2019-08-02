@@ -166,9 +166,7 @@
 
       #captcha-field {
         width: 304px;
-        @media screen and (max-device-width: $desktop-size) {
-          padding-left: calc((100% - 80.85vw) / 2);
-        }
+        margin-left: calc((100% - 304px) / 2);
       }
 
       #submit-button {
