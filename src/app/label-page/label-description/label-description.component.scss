@@ -30,9 +30,9 @@
       }
       @media screen and (max-device-width: $desktop-size) {
         width: 59.57vw;
-        margin-top: 64px;
-        padding-top: 40px;
-        padding-bottom: 48px;
+        margin-top: 17.02vw;
+        padding-top: 10.64vw;
+        padding-bottom: 12.77vw;
       }
 
       #left-pictures-wrapper {
@@ -45,8 +45,8 @@
         }
         @media screen and (max-device-width: $desktop-size) {
           height: 35.64vw;
-          width: calc(35.64vw + 16px + 35.64vw);
-          margin-left: calc((100% - 35.64vw - 16px - 35.64vw) / 2);
+          width: calc(35.64vw + 4.26vw + 35.64vw);
+          margin-left: calc((100% - 35.64vw - 4.26vw - 35.64vw) / 2);
         }
 
         .left-picture-wrapper {
@@ -75,9 +75,9 @@
       }
 
       #left-description {
-        font-size: 18px;
         line-height: 1.56;
         @media screen and (min-device-width: $desktop-size) {
+          font-size: 18px;
           width: 314px;
           margin-left: calc((100% - 314px) / 2);
           margin-top: 56px;
@@ -86,7 +86,7 @@
           font-size: 1em;
           width: 46.8vw;
           margin-left: calc((100% - 46.8vw) / 2);
-          margin-top: 32px;
+          margin-top: 8.51vw;
         }
       }
       #left-description-list {
@@ -98,7 +98,7 @@
           margin-left: calc((100% - 314px) / 2);
         }
         @media screen and (max-device-width: $desktop-size) {
-          margin-top: 24px;
+          margin-top: 6.38vw;
           width: 46.8vw;
           margin-left: calc((100% - 46.8vw) / 2);
         }
@@ -107,19 +107,34 @@
             margin: 0;
             display: flex;
             align-items: center;
-            font-size: 16px;
             font-weight: 600;
-            height: 32px;
-            margin-bottom: 16px;
+            @media screen and (min-device-width: $desktop-size) {
+              height: 32px;
+              margin-bottom: 16px;
+              font-size: 16px;
+            }
             @media screen and (max-device-width: $desktop-size) {
-              font-size: 0.9em;
+              height: 8.51vw;
+              margin-bottom: 4.26vw;
+              font-size: 1em;
             }
             span {
-              margin-right: 8px;
+              @media screen and (min-device-width: $desktop-size) {
+                margin-right: 8px;
+              }
+              @media screen and (max-device-width: $desktop-size) {
+                margin-right: 2.13vw;
+              }
 
               img {
-                height: 32px;
-                width: 32px;
+                @media screen and (min-device-width: $desktop-size) {
+                  height: 32px;
+                  width: 32px;
+                }
+                @media screen and (max-device-width: $desktop-size) {
+                  height: 8.51vw;
+                  width: 8.51vw;
+                }
               }
             }
           }
@@ -149,7 +164,7 @@
         margin-left: calc(100% - 250px);
       }
       @media screen and (max-device-width: $desktop-size) {
-        height: 4px;
+        height: 1.06vw;
         width: 10.64vw;
         position: relative;
         margin-left: calc(-12.23vw - 47.4vw + ((100vw - 10.64vw) / 2));
@@ -169,8 +184,8 @@
         width: 41.22vw;
         position: relative;
         margin-left: calc(-12.23vw - 47.4vw + ((100vw - 10.64vw) / 2));
-        margin-top: 12px;
-        font-size: 0.9em;
+        margin-top: 3.19vw;
+        font-size: 1em;
         line-height: 1.56;
       }
     }
@@ -223,9 +238,9 @@
       width: 435px;
     }
     @media screen and (max-device-width: $desktop-size) {
-      margin-top: calc(-96px - 48px);
-      margin-bottom: 48px;
-      height: 96px;
+      margin-top: calc(-25.53vw - 12.77vw);
+      margin-bottom: 12.77vw;
+      height: 25.53vw;
       width: 55.31vw;
     }
     #bottom-picture-separator {
@@ -241,9 +256,9 @@
         margin-right: 30px;
       }
       @media screen and (max-device-width: $desktop-size) {
-        height: 3px;
+        height: 0.8vw;
         width: 7.97vw;
-        margin-top: 12px;
+        margin-top: 3.19vw;
         margin-right: 4.26vw;
       }
     }

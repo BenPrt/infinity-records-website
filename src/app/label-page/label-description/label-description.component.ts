@@ -36,11 +36,11 @@ export class LabelDescriptionComponent implements OnInit, AfterViewInit, OnDestr
     if (this.isBrowser) {
       const leftHeight = document.getElementById('left-content').offsetHeight;
       if (this.isMobile && document.querySelector('body').offsetWidth < 1300) {
-        document.getElementById('right-separator').style.marginTop = `${leftHeight + 64 + 48}px`;
+        document.getElementById('right-separator').style.marginTop = `calc(${leftHeight}px  + 17.02vw + 12.77vw)`;
         const rightHeight = document.getElementById('right-description').offsetHeight;
-        const totalHeight = leftHeight + 64 + 48 + rightHeight + 72;
-        document.getElementById('description-left-layer').style.height = `${totalHeight}px`;
-        document.getElementById('description-right-layer').style.height = `${totalHeight}px`;
+        const totalHeight = `calc(${leftHeight}px  + 17.02vw + 12.77vw + ${rightHeight}px + 19.15vw )`;
+        document.getElementById('description-left-layer').style.height = totalHeight;
+        document.getElementById('description-right-layer').style.height = totalHeight;
       } else {
         document.getElementById('description-left-layer').style.height = `${leftHeight - 56}px`;
         document.getElementById('description-right-layer').style.height = `calc(${leftHeight -

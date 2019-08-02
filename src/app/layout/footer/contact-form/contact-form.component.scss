@@ -40,13 +40,14 @@
       border-left: 2px solid $gold;
       color: $white;
       line-height: 1.63;
-      font-size: 16px;
       @media screen and (min-device-width: $desktop-size) {
+        font-size: 16px;
         margin-top: 40px;
         width: 275px;
         padding-left: 24px;
       }
       @media screen and (max-device-width: $desktop-size) {
+        font-size: 0.9em;
         margin-top: 8.51vw;
         width: calc(100% - 5.85vw);
         padding-left: 5.85vw;
@@ -66,23 +67,44 @@
 
     // padding inside field
     ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-infix {
-      padding: 6px 0;
+      @media screen and (min-device-width: $desktop-size) {
+        padding: 6px 0;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        padding: 1.6vw 0;
+      }
     }
     // Field Label
     ::ng-deep .mat-form-field-label {
       color: $grey;
-      font-size: 14px;
       font-family: 'Montserrat';
       font-weight: 600;
-      letter-spacing: 1px;
+      @media screen and (min-device-width: $desktop-size) {
+        font-size: 14px;
+        letter-spacing: 1px;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        font-size: 0.8em;
+        letter-spacing: 0.06em;
+      }
     }
     // Label when filled
     ::ng-deep .mat-form-field .mat-form-field-label {
-      font-size: 14px;
+      @media screen and (min-device-width: $desktop-size) {
+        font-size: 14px;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        font-size: 0.8em;
+      }
     }
     // Label when empty
     ::ng-deep .mat-form-field.mat-form-field-empty .mat-form-field-label {
-      font-size: 16px;
+      @media screen and (min-device-width: $desktop-size) {
+        font-size: 16px;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        font-size: 0.9em;
+      }
     }
     // Label when error
     ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
@@ -118,37 +140,40 @@
 
     #name-field {
       font-family: 'Montserrat';
-      font-size: 16px;
       @media screen and (min-device-width: $desktop-size) {
         width: 300px;
         margin-right: 32px;
+        font-size: 16px;
       }
       @media screen and (max-device-width: $desktop-size) {
         width: 100%;
+        font-size: 0.9em;
       }
     }
     #email-field {
       font-family: 'Montserrat';
-      font-size: 16px;
       @media screen and (min-device-width: $desktop-size) {
         width: 300px;
+        font-size: 16px;
       }
       @media screen and (max-device-width: $desktop-size) {
         width: 100%;
         margin-top: 6.38vw;
+        font-size: 0.9em;
       }
     }
     #message-field {
       font-family: 'Montserrat';
-      font-size: 16px;
       line-height: 1.63;
       @media screen and (min-device-width: $desktop-size) {
         width: 100%;
         margin-top: 32px;
+        font-size: 16px;
       }
       @media screen and (max-device-width: $desktop-size) {
         width: 100%;
         margin-top: 6.38vw;
+        font-size: 0.9em;
       }
     }
     #captcha-and-submit-container {
@@ -188,8 +213,10 @@
           margin: 40px 0px 56px calc((100% - 250px) / 2);
           width: 250px;
           height: 40px;
+          font-size: 0.9em;
         }
         @media screen and (max-device-width: $tablet-size) {
+          font-size: 0.9em;
           width: 100%;
           margin-top: 10.64vw;
           margin-bottom: 14.89vw;

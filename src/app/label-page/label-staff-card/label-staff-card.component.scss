@@ -1,10 +1,8 @@
 @import 'src/app/utils/_styleVariables';
 
 :host {
-  @media screen and (min-device-width: $tablet-size) {
-  }
   @media screen and (max-device-width: $tablet-size) {
-    margin-bottom: 60px;
+    margin-bottom: 15.96vw;
     &:last-of-type {
       margin-bottom: 0;
     }
@@ -15,8 +13,8 @@
       height: calc(12px + 279px + 151px);
     }
     @media screen and (max-device-width: $tablet-size) {
-      width: calc(100vw - 16px - 16px);
-      height: calc(12px + 309px + 169px);
+      width: calc(100vw - 4.26vw - 4.26vw);
+      height: calc(3.19vw + 82.18vw + 44.95vw);
     }
 
     .member-name {
@@ -43,10 +41,10 @@
       }
       @media screen and (max-device-width: $tablet-size) {
         width: calc(23.14vw - 13px);
-        height: calc(52px - 5px);
-        padding-top: 5px;
-        padding-left: 13px;
-        margin-left: 24px;
+        height: calc(13.83vw - 1.33vw);
+        padding-top: 1.33vw;
+        padding-left: 3.46vw;
+        margin-left: 6.38vw;
         font-size: 1.33em;
       }
     }
@@ -63,9 +61,9 @@
         height: 279px;
       }
       @media screen and (max-device-width: $tablet-size) {
-        margin-top: -40px;
-        width: calc(100vw - 16px - 16px);
-        height: 309px;
+        margin-top: -10.64vw;
+        width: calc(100vw - 4.26vw - 4.26vw);
+        height: 82.18vw;
       }
 
       .member-picture {
@@ -74,7 +72,7 @@
           width: 372px;
         }
         @media screen and (max-device-width: $tablet-size) {
-          height: 309px;
+          height: 82.18vw;
         }
 
         &.blurred {
@@ -92,7 +90,7 @@
           margin-top: -100px;
         }
         @media screen and (max-device-width: $tablet-size) {
-          width: calc(100vw - 16px - 16px);
+          width: calc(100vw - 4.26vw - 4.26vw);
           height: 29.52vw;
           margin-top: -29.52vw;
         }
@@ -107,9 +105,9 @@
           margin-top: -279px;
         }
         @media screen and (max-device-width: $tablet-size) {
-          width: calc(100vw - 16px - 16px);
-          height: 309px;
-          margin-top: -313px;
+          width: calc(100vw - 4.26vw - 4.26vw);
+          height: 82.18vw;
+          margin-top: -83.24vw;
         }
         .overlay {
           position: relative;
@@ -121,8 +119,8 @@
             height: 279px;
           }
           @media screen and (max-device-width: $tablet-size) {
-            width: calc(100vw - 16px - 16px);
-            height: 309px;
+            width: calc(100vw - 4.26vw - 4.26vw);
+            height: 82.18vw;
           }
         }
         .quote-container {
@@ -138,18 +136,18 @@
             margin-top: -279px;
           }
           @media screen and (max-device-width: $tablet-size) {
-            height: 309px;
-            width: calc((100vw - 16px - 16px) - 24.47vw);
+            height: 82.18vw;
+            width: calc((100vw - 4.26vw - 4.26vw) - 24.47vw);
             margin-left: 24.47vw;
-            margin-top: -309px;
+            margin-top: -82.18vw;
           }
 
           .quote {
             font-family: 'Hesterica';
             color: $gold;
-            font-size: 38px;
             font-weight: normal;
             @media screen and (min-device-width: $desktop-size) {
+              font-size: 38px;
               width: 252px;
             }
             @media screen and (max-device-width: $desktop-size) and (min-device-width: $tablet-size) {
@@ -157,7 +155,8 @@
               font-size: 1.5em;
             }
             @media screen and (max-device-width: $tablet-size) {
-              width: calc((100vw - 16px - 16px) - 24.47vw - 32px);
+              font-size: 2.11em;
+              width: calc((100vw - 4.26vw - 4.26vw) - 24.47vw - 8.51vw);
             }
           }
           .quote-author {
@@ -180,10 +179,10 @@
             }
             @media screen and (max-device-width: $tablet-size) {
               font-size: 0.8em;
-              height: 24px;
-              margin-top: 12px;
-              width: calc(50.53vw + 24px);
-              margin-bottom: calc(51px + 18px);
+              height: 6.38vw;
+              margin-top: 3.19vw;
+              width: calc(50.53vw + 6.38vw);
+              margin-bottom: calc(13.56vw + 4.79vw);
             }
             .author-separator {
               border: none;
@@ -196,9 +195,9 @@
                 margin-right: 8px;
               }
               @media screen and (max-device-width: $tablet-size) {
-                height: 1px;
-                width: 16px;
-                margin-right: 8px;
+                height: 0.27vw;
+                width: 4.26vw;
+                margin-right: 2.13vw;
               }
             }
           }
@@ -217,30 +216,47 @@
         width: calc(-22px + 250px - 22px);
       }
       @media screen and (max-device-width: $tablet-size) {
-        min-height: calc(-24px + 218px - 24px);
-        padding: 24px;
-        margin-top: -51px;
+        min-height: calc(-6.38vw + 57.98vw - 6.38vw);
+        padding: 6.38vw;
+        margin-top: -13.56vw;
         margin-left: 20.47vw;
-        width: calc(-24px + 65.64vw - 24px);
+        width: calc(-6.38vw + 65.64vw - 6.38vw);
       }
       .member-main-role {
         margin: 0;
-        font-size: 16px;
         font-weight: bold;
         line-height: 1.63;
-        letter-spacing: 2px;
+        @media screen and (min-device-width: $tablet-size) {
+          letter-spacing: 2px;
+          font-size: 16px;
+        }
+        @media screen and (max-device-width: $tablet-size) {
+          letter-spacing: 0.11em;
+          font-size: 0.9em;
+        }
       }
       .but-also-separator {
-        font-size: 14px;
         color: $grey;
         line-height: 1.71;
-        margin-top: 16px;
+        @media screen and (min-device-width: $tablet-size) {
+          font-size: 14px;
+          margin-top: 16px;
+        }
+        @media screen and (max-device-width: $tablet-size) {
+          font-size: 0.8em;
+          margin-top: 4.26vw;
+        }
       }
       .additional-role {
         margin: 0;
-        font-size: 16px;
         font-weight: normal;
         line-height: 1.63;
+        @media screen and (min-device-width: $tablet-size) {
+          font-size: 16px;
+        }
+        @media screen and (max-device-width: $tablet-size) {
+          font-size: 0.9em;
+        }
       }
     }
   }

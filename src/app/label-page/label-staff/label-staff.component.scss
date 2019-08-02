@@ -23,9 +23,9 @@
     }
     @media screen and (max-device-width: $tablet-size) {
       width: 51.59vw;
-      margin-left: calc(100vw - 51.59vw - 12.23vw - 16px);
-      margin-top: -24px;
-      padding: 72px 0px;
+      margin-left: calc(100vw - 51.59vw - 12.23vw - 4.26vw - 2px);
+      margin-top: -6.38vw;
+      padding: 19.15vw 0;
       text-align: center;
     }
     #staff-title {
@@ -38,7 +38,7 @@
       }
       @media screen and (max-device-width: $tablet-size) {
         font-size: 2em;
-        height: 40px;
+        height: 10.64vw;
         line-height: 1.25;
       }
     }
@@ -55,8 +55,8 @@
     }
     @media screen and (max-device-width: $tablet-size) {
       flex-direction: column;
-      width: calc(-16px + 100vw - 16px);
-      margin-left: calc(-12.23vw - 2px + 16px);
+      width: calc(-4.26vw + 100vw - 4.26vw);
+      margin-left: calc(-12.23vw - 2px + 4.26vw);
     }
   }
 }
