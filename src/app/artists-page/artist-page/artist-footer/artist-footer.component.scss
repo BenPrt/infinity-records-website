@@ -8,37 +8,37 @@
   width: calc(-12.23vw - 2px + 100vw);
   #footer-second-layer {
     border-left: 2px solid $very-light-grey;
-    height: 70px;
+    height: 18.62vw;
     width: 34.04vw;
     margin-left: 26.6vw;
   }
   #footer-third-layer {
     background-color: $very-light-grey;
-    height: 70px;
+    height: 18.62vw;
     width: 25.93vw;
   }
 }
 #footer-content {
     width : 100%;
-    height : 26px;
-    margin-top : -50px;
-    margin-bottom : 24px;
+    height : 6.91vw;
+    margin-top : -13.30vw;
+    margin-bottom : 6.38vw;
     text-align : center;
     #arborescence {
         #arbo-first {
-          font-size: 16px;
-          margin-right: 12px;
+          font-size: 0.9em;
+          margin-right: 3.19vw;
           cursor: pointer;
         }
         #arbo-slash {
-          width: 24px;
-          font-size: 16px;
-          margin-right: 12px;
+          width: 6.38vw;
+          font-size: 0.9em;
+          margin-right: 3.19vw;
           color: $grey;
           cursor: default;
         }
         #arbo-second {
-          font-size: 16px;
+          font-size: 0.9em;
           font-weight: 600;
           cursor: default;
         }

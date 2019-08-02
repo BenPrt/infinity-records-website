@@ -39,7 +39,7 @@
   @media screen and (max-device-width: $desktop-size) {
     width: 60.37vw;
     margin-left: calc(100% - 60.37vw);
-    height: calc(74px + 65px + 91.49vw);
+    height: calc(19.68vw + 17.29vw + 91.49vw);
     right: 0;
   }
 }
@@ -55,8 +55,8 @@
     }
     @media screen and (max-device-width: $desktop-size) {
       width: 100vw;
-      height: calc(65px + 91.49vw);
-      margin-top: calc(-65px - 91.49vw);
+      height: calc(17.29vw + 91.49vw);
+      margin-top: calc(-17.29vw - 91.49vw);
     }
     #artist-title-wrapper {
       background-color: $black;
@@ -69,9 +69,9 @@
         height: calc(24px + 51px);
       }
       @media screen and (max-device-width: $desktop-size) {
-        width: calc(-16px + 67.82vw - 16px);
-        padding: 12px 16px;
-        height: calc(6.91vw + 10.64vw + 3px);
+        width: calc(-4.26vw + 67.82vw - 4.26vw);
+        padding: 3.19vw 4.26vw;
+        height: calc(6.91vw + 10.64vw + 0.8vw);
       }
       #artist-type {
         display: flex;
@@ -86,7 +86,7 @@
         @media screen and (max-device-width: $desktop-size) {
           height: 6.91vw;
           font-size: 0.66em;
-          letter-spacing: 1.5px;
+          letter-spacing: 0.08em;
           line-height: 1.5;
         }
       }
@@ -104,7 +104,7 @@
           height: 6.91vw;
           font-size: 1.78em;
           line-height: 1.25;
-          margin-top: 3px;
+          margin-top: 0.8vw;
         }
       }
     }
@@ -122,7 +122,7 @@
         width: 1079px;
       }
       @media screen and (max-device-width: $desktop-size) {
-        margin-top: -25px;
+        margin-top: -6.65vw;
         margin-left: calc((100vw - 91.49vw) / 2);
         height: 91.49vw;
         width: 91.49vw;
@@ -169,8 +169,8 @@
         flex-direction: row;
         align-items: center;
         width: calc(100vw - 23.4vw);
-        height: 32px;
-        margin-top: calc(-32px - 16px);
+        height: 8.51vw;
+        margin-top: calc(-8.51vw - 4.26vw);
       }
       #socials-separator {
         border: none;
@@ -184,9 +184,9 @@
           vertical-align: top;
         }
         @media screen and (max-device-width: $desktop-size) {
-          height: 4px;
-          width: 40px;
-          margin-right: 8px;
+          height: 1.06vw;
+          width: 10.64vw;
+          margin-right: 2.13vw;
         }
       }
       #socials-icons-wrapper {
@@ -197,8 +197,8 @@
           width: 28px;
         }
         @media screen and (max-device-width: $desktop-size) {
-          width: calc(100% - 40px);
-          height: 32px;
+          width: calc(100% - 10.64vw);
+          height: 8.51vw;
           display: flex;
           flex-direction: row;
           align-items: center;
@@ -255,7 +255,7 @@
       @media screen and (max-device-width: $desktop-size) {
         width: 23.4vw;
         height: 23.4vw;
-        margin-top: calc(16px - 23.4vw);
+        margin-top: calc(4.26vw - 23.4vw + 1px);
         margin-left: calc(100vw - 23.4vw);
       }
       #artist-logo-picture {
@@ -279,7 +279,7 @@
       }
       @media screen and (max-device-width: $desktop-size) {
         width: 47.61vw;
-        margin: 48px 0px 64px 48.14vw;
+        margin: 12.77vw 0 17.02vw 48.14vw;
       }
       #description-separator {
         border: none;
@@ -290,8 +290,8 @@
           width: 36px;
         }
         @media screen and (max-device-width: $desktop-size) {
-          height: 4px;
-          width: 40px;
+          height: 1.06vw;
+          width: 10.64vw;
         }
       }
       #artist-description {
@@ -305,7 +305,7 @@
         }
         @media screen and (max-device-width: $desktop-size) {
           font-weight: 600;
-          margin-top: 16px;
+          margin-top: 4.26vw;
           font-size: 1em;
           color: $black;
         }

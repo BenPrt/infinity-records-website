@@ -16,8 +16,8 @@
       width: calc(836px - 200px - 63px);
     }
     @media screen and (max-device-width: $desktop-size) {
-      padding: 56px 16px;
-      width: calc(-16px + 100vw - 12.23vw - 2px - 13.3vw - 16px);
+      padding: 14.89vw 4.26vw;
+      width: calc(-4.26vw + 100vw - 12.23vw - 2px - 13.3vw - 4.26vw);
     }
 
     #projects-title {
@@ -35,7 +35,7 @@
         margin-top: 29px;
       }
       @media screen and (max-device-width: $desktop-size) {
-        margin-top: 24px;
+        margin-top: 6.38vw;
       }
       .projects-indicator {
         display: inline-block;
@@ -49,7 +49,7 @@
         }
         @media screen and (max-device-width: $desktop-size) {
           font-size: 1em;
-          margin-right: 24px;
+          margin-right: 6.38vw;
         }
       }
     }
@@ -60,7 +60,7 @@
         margin-top: 51px;
       }
       @media screen and (max-device-width: $desktop-size) {
-        margin-top: 32px;
+        margin-top: 8.51vw;
       }
       .cover-and-player-container {
         @media screen and (min-device-width: $desktop-size) {
@@ -71,7 +71,7 @@
         }
         @media screen and (max-device-width: $desktop-size) {
           width: 75.53vw;
-          margin-left: calc(((100vw - 75.53vw) / 2) - 16px);
+          margin-left: calc(((100vw - 75.53vw) / 2) - 4.26vw);
         }
         .project-cover-wrapper {
           display: flex;
@@ -85,7 +85,7 @@
             height: 401px;
           }
           @media screen and (max-device-width: $desktop-size) {
-            margin-bottom: 16px;
+            margin-bottom: 4.26vw;
             width: 75.53vw;
             height: 75.53vw;
           }
@@ -108,7 +108,7 @@
           align-items: center;
         }
         @media screen and (max-device-width: $desktop-size) {
-          margin-top: 40px;
+          margin-top: 10.64vw;
         }
         .project-title {
           font-weight: 600;
@@ -151,7 +151,7 @@
           margin-top: 13px;
         }
         @media screen and (max-device-width: $desktop-size) {
-          margin-top: 8px;
+          margin-top: 2.13vw;
         }
         .project-track-container {
           display: flex;
@@ -164,7 +164,7 @@
             height: 52px;
           }
           @media screen and (max-device-width: $desktop-size) {
-            height: 58px;
+            height: 15.43vw;
           }
           .track-informations {
             display: flex;
@@ -198,9 +198,9 @@
                 height: 1px;
               }
               @media screen and (max-device-width: $desktop-size) {
-                width: 24px;
-                margin-right: 8px;
-                height: 1px;
+                width: 6.38vw;
+                margin-right: 2.13vw;
+                height: 0.27vw;
               }
             }
           }
@@ -224,8 +224,8 @@
                   margin-right: 5px;
                 }
                 @media screen and (max-device-width: $desktop-size) {
-                  width: 20px;
-                  height: 20px;
+                  width: 5.32vw;
+                  height: 5.32vw;
                 }
               }
               span {
@@ -245,8 +245,8 @@
                   height: 22px;
                 }
                 @media screen and (max-device-width: $desktop-size) {
-                  width: 24px;
-                  height: 24px;
+                  width: 6.38vw;
+                  height: 6.38vw;
                 }
               }
               span {
@@ -276,8 +276,8 @@
         }
         @media screen and (max-device-width: $desktop-size) {
           font-size: 0.9em;
-          height: 40px;
-          margin-top: 48px;
+          height: 10.64vw;
+          margin-top: 12.77vw;
           width: 100%;
         }
       }
@@ -287,8 +287,8 @@
       display: flex;
       justify-content: space-between;
       width: calc(13.3vw + 1px + 13.3vw);
-      margin-top: 24px;
-      margin-left: calc(-16px + 100vw - 12.23vw - 2px - 13.3vw - 13.3vw);
+      margin-top: 6.38vw;
+      margin-left: calc(-4.26vw + 100vw - 12.23vw - 2px - 13.3vw - 13.3vw);
       height: 13.3vw;
     }
     .page-button {
@@ -302,8 +302,8 @@
       width: 13.3vw;
 
       .navigation-arrow {
-        height: 14px;
-        width: 14px;
+        height: 3.72vw;
+        width: 3.72vw;
       }
     }
 

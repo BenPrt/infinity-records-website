@@ -15,9 +15,9 @@
       margin-bottom: 14px;
     }
     @media screen and (max-device-width: $desktop-size) {
-      width: calc(-16px + 100vw - 16px);
+      width: calc(-4.26vw + 100vw - 4.26vw);
       height: 26px;
-      margin: calc(-74px - 65px - 91.49vw - 48px - 244px - 64px + 16px) 16px 32px 16px;
+      margin: calc(-19.68vw - 17.29vw - 91.49vw - 12.77vw - 64.89vw - 17.02vw + 4.26vw) 4.26vw 32px 4.26vw;
     }
 
     #back-button {
@@ -32,7 +32,7 @@
       }
       @media screen and (max-device-width: $desktop-size) {
         font-size: 0.9em;
-        height: 24px;
+        height: 6.38vw;
       }
 
       img {
@@ -42,7 +42,9 @@
           margin-right: 7px;
         }
         @media screen and (max-device-width: $desktop-size) {
-          margin-right: 8px;
+          height: 5.85vw;
+          width: 5.85vw;
+          margin-right: 2.13vw;
         }
       }
     }
@@ -83,7 +85,7 @@
       }
       @media screen and (max-device-width: $desktop-size) {
         font-size: 0.9em;
-        height: 24px;
+        height: 6.38vw;
       }
       img {
         @media screen and (min-device-width: $desktop-size) {
@@ -92,6 +94,8 @@
           margin-left: 7px;
         }
         @media screen and (max-device-width: $desktop-size) {
+          height: 5.85vw;
+          width: 5.85vw;
           margin-left: 8px;
         }
       }

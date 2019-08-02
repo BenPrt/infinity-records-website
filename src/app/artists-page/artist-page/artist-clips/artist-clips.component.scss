@@ -22,7 +22,7 @@
       }
       @media screen and (max-device-width: $desktop-size) {
         border-left: 2px solid $very-light-grey;
-        height: calc(64px + 42.82vw + 24px + 42.82vw + 64px);
+        height: calc(17.02vw + 42.82vw + 6.38vw + 42.82vw + 17.02vw);
         width: 34.04vw;
         margin-left: 26.6vw;
       }
@@ -34,7 +34,7 @@
         width: 351px;
       }
       @media screen and (max-device-width: $desktop-size) {
-        height: calc(64px + 42.82vw + 24px + 42.82vw + 64px);
+        height: calc(17.02vw + 42.82vw + 6.38vw + 42.82vw + 17.02vw);
         width: 25.93vw;
       }
     }
@@ -54,25 +54,27 @@
     @media screen and (max-device-width: $desktop-size) {
       margin-left: calc(12.23vw + 2px);
       width: calc(-12.23vw - 2px + 100vw);
-      padding-top: 64px;
-      padding-bottom: 64px;
-      height: calc(42.82vw + 24px + 42.82vw);
-      margin-top: calc(-64px - 42.82vw - 24px - 42.82vw - 64px);
+      padding-top: 17.02vw;
+      padding-bottom: 17.02vw;
+      height: calc(42.82vw + 6.38vw + 42.82vw);
+      margin-top: calc(-17.02vw - 42.82vw - 6.38vw - 42.82vw - 17.02vw);
     }
     #clips-title {
       font-weight: bold;
-      letter-spacing: 0.11em;
       transform: rotate(90deg);
-      margin-left: -19px;
       @media screen and (min-device-width: $desktop-size) {
+        margin-left: -19px;
         font-size: 18px;
+        letter-spacing: 2px;
         height: 18px;
         margin-top: 21px;
       }
       @media screen and (max-device-width: $desktop-size) {
+        margin-left: -5.05vw;
         font-size: 1em;
-        height: 20px;
-        margin-top: 23px;
+        letter-spacing: 0.11em;
+        height: 5.32vw;
+        margin-top: 6.12vw;
       }
     }
 
@@ -86,7 +88,7 @@
       }
       @media screen and (max-device-width: $desktop-size) {
         width: 76.06vw;
-        height: calc(42.82vw + 24px + 42.82vw);
+        height: calc(42.82vw + 6.38vw + 42.82vw);
         flex-direction: column;
         justify-content: space-between;
         margin-left: -4px;
