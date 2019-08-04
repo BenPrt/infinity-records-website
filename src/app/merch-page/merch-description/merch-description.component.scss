@@ -188,7 +188,9 @@ $totalHeight: 865px;
             background-color: $gold;
             @media screen and (min-device-width: $desktop-size) {
               height: 1px;
-              width: 167px;
+              width: 175px;
+              margin-left : 16px;
+              margin-right : 16px;
             }
             @media screen and (max-device-width: $desktop-size) {
               height: 0.27vw;
