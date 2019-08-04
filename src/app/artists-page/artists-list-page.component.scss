@@ -153,15 +153,15 @@
                 .artist-item-picture-gradient {
                   position: relative;
                   z-index: 1;
-                  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.71));
+                  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
                   @media screen and (min-device-width: $desktop-size) {
                     height: 100px;
                     margin-top: -100px;
                     width: 372px;
                   }
                   @media screen and (max-device-width: $desktop-size) {
-                    height: 33.78vw;
-                    margin-top: -29.52vw;
+                    height: 43.78vw;
+                    margin-top: -39.52vw;
                     width: 73.94vw;
                   }
                 }

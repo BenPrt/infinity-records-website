@@ -101,10 +101,10 @@ $totalHeight: 865px;
               margin: 0 0 7px 0;
             }
             @media screen and (max-device-width: $desktop-size) {
-              height: 5.85vw;
-              line-height: 5.85vw;
+              height: 6.91vw;
+              line-height: 6.91vw;
               width: calc(100% - 4.26vw);
-              margin: 0 0 1.86vw 0;
+              margin: 0 0 2.13vw 0;
             }
             span {
               color: $gold;
@@ -116,8 +116,8 @@ $totalHeight: 865px;
                 margin-right: 5px;
               }
               @media screen and (max-device-width: $desktop-size) {
-                height: 5.85vw;
-                margin-right: 1.33vw;
+                height: 6.91vw;
+                margin-right: 2.13vw;
               }
               img {
                 @media screen and (min-device-width: $desktop-size) {
@@ -125,8 +125,8 @@ $totalHeight: 865px;
                   width: 16px;
                 }
                 @media screen and (max-device-width: $desktop-size) {
-                  height: 4.26vw;
-                  width: 4.26vw;
+                  height: 3.19vw;
+                  width: 3.19vw;
                 }
               }
             }
@@ -140,8 +140,8 @@ $totalHeight: 865px;
               }
               @media screen and (max-device-width: $desktop-size) {
                 font-size: 0.9em;
-                height: 5.85vw;
-                line-height: 5.85vw;
+                height: 6.91vw;
+                line-height: 6.91vw;
               }
             }
           }
@@ -156,7 +156,7 @@ $totalHeight: 865px;
             margin-top: calc(45px - 7px);
           }
           @media screen and (max-device-width: $desktop-size) {
-            width: calc(100% - 4.26vw);
+            width: calc(100% - 8vw);
             margin-top: 10.64vw;
           }
 
@@ -192,7 +192,7 @@ $totalHeight: 865px;
             }
             @media screen and (max-device-width: $desktop-size) {
               height: 0.27vw;
-              width: 17vw;
+              width: 19.15vw;
             }
           }
           #color-text {
@@ -245,8 +245,8 @@ $totalHeight: 865px;
       @media screen and (max-device-width: $desktop-size) {
         position: relative;
         margin-top: calc(
-          -14.89vw - 10.64vw - 12.77vw - 6.38vw - 10.64vw - 1.86vw - 5.85vw - 1.86vw - 5.85vw - 1.86vw - 5.85vw - 1.86vw -
-            5.85vw - 1.86vw - 5.85vw - 6.38vw - 10.64vw - 8.51vw - 56.65vw
+          -14.89vw - 10.64vw - 12.77vw - 6.38vw - 10.64vw - 2.13vw - 6.91vw - 2.13vw - 6.91vw - 2.13vw - 6.91vw - 2.13vw -
+            6.91vw - 2.13vw - 6.91vw - 6.38vw - 10.64vw - 8.51vw - 56.65vw
         );
         margin-left: calc(((100vw - 75.53vw) / 2) - 1px);
         width: 75.53vw;

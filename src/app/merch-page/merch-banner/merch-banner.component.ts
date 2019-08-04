@@ -13,7 +13,7 @@ export class MerchBannerComponent implements OnInit, OnDestroy {
   currentProductId: number;
   currentIdSubscription: Subscription;
   isMobile: boolean;
-  isTablet : boolean;
+  isTablet: boolean;
   mobileTypeSubscription: Subscription;
   tabletTypeSubscription: Subscription;
   constructor(private merchService: MerchService, private deviceService: DeviceService) {}

@@ -226,6 +226,9 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   initLanguageChangeSubscription(): void {
     this.translationService.resourcesLoaded.subscribe(() => {
+      if (this.mobileMenuIsDisplayed) {
+        this.mobileMenuIsDisplayed = false;
+      }
       this.reloading = true;
       this.cd.detectChanges();
       this.cd.markForCheck();
