@@ -38,20 +38,21 @@
   }
 
   #header-logo-container {
-    display : flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     @media screen and (min-device-width: $desktop-size) {
-      width : calc(100% - 7.445vw);
+      width: 100%;
+      margin-left: -7.445vw;
       height: 10.64vw;
     }
     @media screen and (max-device-width: $desktop-size) {
-      width : calc(100% - 14.89vw);
+      width: 100%;
+      margin-left: -14.89vw;
       height: 21.28vw;
     }
 
     #header-logo {
-      text-align: center;
       @media screen and (min-device-width: $desktop-size) {
         width: 62.5vw;
         height: 24.17vw;
@@ -77,16 +78,17 @@
         user-select: none;
         display: block;
         line-height: 1.4;
+        text-align: center;
         @media screen and (min-device-width: $desktop-size) {
-          letter-spacing: 0.1245em;
-          font-size: 0.88em;
+          letter-spacing: 0.22em;
+          font-size: 1.33em;
           margin-top: 0.665vw;
           height: 1.195vw;
         }
         @media screen and (max-device-width: $desktop-size) {
-          letter-spacing: 2px;
-          font-size: 24px;
-          margin-top: 4vw;
+          letter-spacing: 0.22em;
+          font-size: 1.33em;
+          margin-top: 1.33vw;
           height: 7.17vw;
         }
       }
