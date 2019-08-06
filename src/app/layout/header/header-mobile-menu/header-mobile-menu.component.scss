@@ -54,6 +54,10 @@
       @media screen and (max-device-width: $desktop-size) {
         width: 32.98vw;
         height: 12.77vw;
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: translateZ(0) scale(1, 1);
+        transform: translateZ(0);
+        -webkit-font-smoothing: antialiased !important;
       }
       #header-logo-logo {
         display: block;

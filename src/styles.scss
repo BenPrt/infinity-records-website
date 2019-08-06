@@ -15,10 +15,6 @@ body {
   @media screen and (max-device-width: $desktop-size) {
     font-size: 4.79vw;
   }
-  backface-visibility: hidden;
-  transform: translateZ(0) scale(1.0, 1.0);
-  font-smooth : auto;
-  -webkit-font-smoothing: antialiased !important;
 }
 
 h1,
