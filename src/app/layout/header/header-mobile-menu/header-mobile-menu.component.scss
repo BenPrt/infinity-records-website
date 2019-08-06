@@ -9,6 +9,7 @@
   top: 0;
   background-color: $white;
   z-index: 1;
+  -webkit-backface-visibility: hidden;
   @media screen and (min-device-width: $desktop-size) {
     height: 10.64vw;
   }
@@ -42,6 +43,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    -webkit-backface-visibility: hidden;
+
     @media screen and (min-device-width: $desktop-size) {
       width: 100%;
       margin-left: -7.445vw;
@@ -67,6 +70,7 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
+        -webkit-backface-visibility: hidden;
         @media screen and (min-device-width: $desktop-size) {
           height: 19.79vw;
         }
