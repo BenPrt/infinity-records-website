@@ -17,7 +17,7 @@
   }
 
   #burger-button {
-    position : relative;
+    position: relative;
     @media screen and (min-device-width: $desktop-size) {
       width: 7.445vw;
     }
@@ -54,6 +54,7 @@
     }
 
     #header-logo {
+      -webkit-backface-visibility: hidden;
       @media screen and (min-device-width: $desktop-size) {
         width: 62.5vw;
         height: 24.17vw;
@@ -80,6 +81,7 @@
         display: block;
         line-height: 1.4;
         text-align: center;
+        -webkit-backface-visibility: hidden;
         @media screen and (min-device-width: $desktop-size) {
           letter-spacing: 0.22em;
           font-size: 1.33em;
