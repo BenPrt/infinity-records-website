@@ -17,6 +17,7 @@
   }
 
   #burger-button {
+    position : relative;
     @media screen and (min-device-width: $desktop-size) {
       width: 7.445vw;
     }
