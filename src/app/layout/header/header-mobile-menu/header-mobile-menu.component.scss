@@ -38,34 +38,37 @@
   }
 
   #header-logo-container {
+    display : flex;
+    justify-content: center;
+    align-items: center;
     @media screen and (min-device-width: $desktop-size) {
-      margin-left: calc(((100% - 16.49vw) / 2) - 7.445vw);
+      width : calc(100% - 7.445vw);
+      height: 10.64vw;
     }
     @media screen and (max-device-width: $desktop-size) {
-      margin-left: calc(((100% - 32.98vw) / 2) - 14.89vw);
+      width : calc(100% - 14.89vw);
+      height: 21.28vw;
     }
 
     #header-logo {
       text-align: center;
       @media screen and (min-device-width: $desktop-size) {
-        width: 16.49vw;
-        height: 6.385vw;
+        width: 62.5vw;
+        height: 24.17vw;
       }
       @media screen and (max-device-width: $desktop-size) {
-        width: 32.98vw;
-        height: 12.77vw;
-        backface-visibility: hidden;
+        width: 100vw;
+        height: 38.31vw;
       }
       #header-logo-logo {
         display: block;
         margin-left: auto;
         margin-right: auto;
         @media screen and (min-device-width: $desktop-size) {
-          height: 4.655vw;
+          height: 19.79vw;
         }
         @media screen and (max-device-width: $desktop-size) {
-          backface-visibility: hidden;
-          height: 9.31vw;
+          height: 27.93vw;
         }
       }
       #header-logo-typo {
@@ -81,12 +84,10 @@
           height: 1.195vw;
         }
         @media screen and (max-device-width: $desktop-size) {
-          letter-spacing: 0.249em;
-          font-size: 0.44em;
-          margin-top: 1.33vw;
-          height: 2.39vw;
-          backface-visibility: hidden;
-          -webkit-font-smoothing: antialiased ;
+          letter-spacing: 2px;
+          font-size: 24px;
+          margin-top: 4vw;
+          height: 7.17vw;
         }
       }
     }
