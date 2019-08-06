@@ -133,7 +133,7 @@ export const artistsInfos: ArtistInformations[] = [
     cover_picture_mobile: 'assets/img/artists/fresh_ben/cover_mobile.jpg',
     // logo_picture: 'assets/img/artists/fresh_ben/logo.jpg',
     logo_picture: '',
-    url_facebook: 'https://www.facebook.com/Fresh-Ben-1054138974781049/',
+    url_facebook: 'https://www.facebook.com/freshbenofficial/',
     url_instagram: 'https://www.instagram.com/fresh__ben/',
     url_youtube: 'https://www.youtube.com/channel/UCWgQhN1vY41SbMJ18TzvoGA',
     url_soundcloud: 'https://soundcloud.com/fresh_ben',
