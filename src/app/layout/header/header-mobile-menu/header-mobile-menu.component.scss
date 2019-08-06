@@ -55,7 +55,6 @@
         width: 32.98vw;
         height: 12.77vw;
         backface-visibility: hidden;
-        -webkit-font-smoothing: antialiased !important;
       }
       #header-logo-logo {
         display: block;
@@ -65,6 +64,7 @@
           height: 4.655vw;
         }
         @media screen and (max-device-width: $desktop-size) {
+          backface-visibility: hidden;
           height: 9.31vw;
         }
       }
@@ -85,6 +85,8 @@
           font-size: 0.44em;
           margin-top: 1.33vw;
           height: 2.39vw;
+          backface-visibility: hidden;
+          -webkit-font-smoothing: antialiased ;
         }
       }
     }
