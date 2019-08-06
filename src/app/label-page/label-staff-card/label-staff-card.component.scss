@@ -140,12 +140,14 @@
             color: $gold;
             font-weight: normal;
             @media screen and (min-device-width: $desktop-size) {
+              margin-left: 24px;
               font-size: 38px;
-              width: 252px;
+              width: calc(252px - 24px);
             }
             @media screen and (max-device-width: $desktop-size) {
+              margin-left: calc(4.26vw + 2.13vw);
               font-size: 2.11em;
-              width: calc((100vw - 4.26vw - 4.26vw) - 24.47vw - 8.51vw);
+              width: calc((100vw - 4.26vw - 4.26vw) - 24.47vw - 8.51vw - 4.26vw - 2.13vw);
             }
           }
           .quote-author {
