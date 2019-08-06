@@ -20,8 +20,8 @@ import { isPlatformBrowser } from '@angular/common';
       transition('hidden <=> displayed', [animate('900ms')]),
     ]),
     trigger('scaleLogo', [
-      state('upscaled', style({ marginTop: '59.97vh', transform: 'scale(3)' })),
-      state('normal', style({ marginTop: '0', transform: 'scale(1)' })),
+      state('upscaled', style({ marginTop: '59.97vh', transform: 'scale(3) translateZ(0)' })),
+      state('normal', style({ marginTop: '0', transform: 'scale(1) translateZ(0)' })),
       transition('upscaled => normal', [animate('1000ms')]),
     ]),
   ],
