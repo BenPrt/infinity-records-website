@@ -10,7 +10,8 @@
 
     <div
       id="mobile-page-content"
-      [ngClass]="{ 'content-visible': contentIsDisplayed, 'content-hidden': !contentIsDisplayed }"
+      *ngIf="contentIsDisplayed"
+      [@contentFade]
       (swipeRight)="openMobileMenu()"
     >
       <router-outlet> </router-outlet>
@@ -40,7 +41,8 @@
     ></header-desktop-menu-component>
     <div
       id="desktop-page-content"
-      [ngClass]="{ 'content-visible': contentIsDisplayed, 'content-hidden': !contentIsDisplayed }"
+      *ngIf="contentIsDisplayed"
+      [@contentFade]
       [ngStyle]="{ paddingTop: contentOffset }"
     >
       <router-outlet> </router-outlet>

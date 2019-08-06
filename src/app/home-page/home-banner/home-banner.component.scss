@@ -35,10 +35,10 @@
       }
       #banner-picture {
         @media screen and (min-device-width: $desktop-size) {
-          width: 100%;
+          height: 673px;
         }
         @media screen and (max-device-width: $desktop-size) {
-          width: 100%;
+          height: 133vw;
         }
       }
       #banner-picture-gradient {

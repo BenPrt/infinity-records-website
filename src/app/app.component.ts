@@ -28,6 +28,10 @@ import { fromEvent, Subscription, Observable } from 'rxjs';
     '(document:keydown.space)': 'interruptAnimation($event)',
   },
   animations: [
+    trigger('contentFade', [
+      transition(':enter', [style({ opacity: '0' }), animate('1000ms', style({ opacity: '1' }))]),
+      transition(':leave', [style({ opacity: '1' }), animate('1000ms', style({ opacity: '0' }))]),
+    ]),
     trigger('overlayFade', [
       transition(':enter', [style({ opacity: '0' }), animate('300ms', style({ opacity: '0.6' }))]),
       transition(':leave', [style({ opacity: '0.6' }), animate('300ms', style({ opacity: '0' }))]),
