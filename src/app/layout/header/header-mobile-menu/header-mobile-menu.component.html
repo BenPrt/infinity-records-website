@@ -1,6 +1,3 @@
-<div id="burger-button" [@menuIconFade]="menuIconState" (click)="openMenu()">
-  <img id="burger-button-icon" alt="Burger Menu Icon" src="assets/icons/burger_icon.svg" />
-</div>
 <div id="header-logo-container">
   <div id="header-logo" [@logoFade] [@scaleLogo]="scaleState">
     <svg id="header-logo-logo" width="109" height="90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 109 90">
@@ -67,4 +64,7 @@
     </svg>
     <h1 id="header-logo-typo" [@typoFade]="typoState">INFINITY RECORDS</h1>
   </div>
+</div>
+<div id="burger-button" [@menuIconFade]="menuIconState" (click)="openMenu()">
+  <img id="burger-button-icon" alt="Burger Menu Icon" src="assets/icons/burger_icon.svg" />
 </div>

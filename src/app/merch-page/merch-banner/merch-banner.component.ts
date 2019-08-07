@@ -13,7 +13,9 @@ export class MerchBannerComponent implements OnInit, OnDestroy {
   currentProductId: number;
   currentIdSubscription: Subscription;
   isMobile: boolean;
-  deviceTypeSubscription: Subscription;
+  isTablet: boolean;
+  mobileTypeSubscription: Subscription;
+  tabletTypeSubscription: Subscription;
   constructor(private merchService: MerchService, private deviceService: DeviceService) {}
 
   ngOnInit(): void {
@@ -30,14 +32,18 @@ export class MerchBannerComponent implements OnInit, OnDestroy {
 
   initDeviceType(): void {
     this.isMobile = this.deviceService.getIsMobile();
-    this.deviceTypeSubscription = this.deviceService.deviceIsMobileHasChanged.subscribe((isMobile: boolean) => {
+    this.mobileTypeSubscription = this.deviceService.deviceIsMobileHasChanged.subscribe((isMobile: boolean) => {
       this.isMobile = isMobile;
+    });
+    this.tabletTypeSubscription = this.deviceService.deviceIsTabletHasChanged.subscribe((isTablet: boolean) => {
+      this.isTablet = isTablet;
     });
   }
 
   ngOnDestroy(): void {
     this.currentIdSubscription.unsubscribe();
-    this.deviceTypeSubscription.unsubscribe();
+    this.mobileTypeSubscription.unsubscribe();
+    this.tabletTypeSubscription.unsubscribe();
   }
 
   isDisabled(direction: string): boolean {

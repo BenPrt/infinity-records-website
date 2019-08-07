@@ -28,6 +28,10 @@ import { fromEvent, Subscription, Observable } from 'rxjs';
     '(document:keydown.space)': 'interruptAnimation($event)',
   },
   animations: [
+    trigger('contentFade', [
+      transition(':enter', [style({ opacity: '0' }), animate('1000ms', style({ opacity: '1' }))]),
+      transition(':leave', [style({ opacity: '1' }), animate('1000ms', style({ opacity: '0' }))]),
+    ]),
     trigger('overlayFade', [
       transition(':enter', [style({ opacity: '0' }), animate('300ms', style({ opacity: '0.6' }))]),
       transition(':leave', [style({ opacity: '0.6' }), animate('300ms', style({ opacity: '0' }))]),
@@ -51,6 +55,8 @@ export class AppComponent implements OnInit, AfterViewInit {
   reloading: boolean = false;
   // Boolean defining if the device is a mobile device or not
   isMobile: boolean = false;
+  // Boolean defining if the device is a tablet device or not
+  isTablet: boolean = false;
   // Boolean defining is we trigger the animation, depending on which page the user access
   animateLogo: boolean = true;
   // Table containing all occuring timeouts
@@ -91,13 +97,13 @@ export class AppComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.initScrollOnRouteChange();
     this.initMobileStatus();
-    this.initMobileSizing();
     this.initAnimationState();
     this.initLanguageChangeSubscription();
     this.initMobileMenuSubscription();
   }
 
   ngAfterViewInit(): void {
+    this.initMobileSizing();
     this.initMobileScroll();
     if (!this.isBrowser) {
       const source: Observable<any> = fromEvent(this.content.nativeElement, 'load');
@@ -132,12 +138,19 @@ export class AppComponent implements OnInit, AfterViewInit {
     if (this.isBrowser) {
       const userAgent = navigator.userAgent;
       if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(userAgent)) {
-        this.isMobile = true;
+        if (document.body.clientWidth > 1299) {
+          this.isTablet = true;
+          this.isMobile = false;
+        } else {
+          this.isTablet = false;
+          this.isMobile = true;
+        }
         this.initMobileScroll();
       } else {
         this.isMobile = false;
       }
       this.deviceService.setDeviceIsMobile(this.isMobile);
+      this.deviceService.setDeviceIsTablet(this.isTablet);
     }
   }
 
@@ -171,7 +184,8 @@ export class AppComponent implements OnInit, AfterViewInit {
   defineViewPortSize(): void {
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
-    const contentvh = (window.innerHeight - 81) * 0.01;
+    const headerHeight = document.getElementsByTagName('header-mobile-menu-component')[0].clientHeight;
+    const contentvh = (window.innerHeight - headerHeight) * 0.01;
     document.documentElement.style.setProperty('--contentvh', `${contentvh}px`);
   }
 
@@ -217,6 +231,9 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   initLanguageChangeSubscription(): void {
     this.translationService.resourcesLoaded.subscribe(() => {
+      if (this.mobileMenuIsDisplayed) {
+        this.mobileMenuIsDisplayed = false;
+      }
       this.reloading = true;
       this.cd.detectChanges();
       this.cd.markForCheck();
@@ -260,10 +277,18 @@ export class AppComponent implements OnInit, AfterViewInit {
       this.timeouts.forEach((timeout) => {
         clearTimeout(timeout);
       });
-      this.typoState = 'displayed';
       this.scaleState = 'normal';
-      this.menuIsDisplayed = true;
-      this.contentIsDisplayed = true;
+      if (this.isMobile) {
+        setTimeout(() => {
+          this.typoState = 'displayed';
+          this.menuIsDisplayed = true;
+          this.contentIsDisplayed = true;
+        }, 1000);
+      } else {
+        this.typoState = 'displayed';
+        this.menuIsDisplayed = true;
+        this.contentIsDisplayed = true;
+      }
     }
     return true;
   }

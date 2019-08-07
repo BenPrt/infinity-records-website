@@ -9,11 +9,12 @@ body {
   font-family: 'Montserrat', sans-serif;
   overflow: overlay;
   overflow-x: hidden;
-  @media screen and (min-device-width: $tablet-size) {
+  @media screen and (min-device-width: $desktop-size) {
     font-size: 1.25vw;
   }
-  @media screen and (max-device-width: $tablet-size) {
+  @media screen and (max-device-width: $desktop-size) {
     font-size: 4.79vw;
+    -webkit-transform:translate3d(0,0,0);
   }
 }
 
