@@ -209,6 +209,7 @@
     #description-bottom-picture {
       @media screen and (min-device-width: $desktop-size) {
         height: 732px;
+        width: 100%;
       }
       @media screen and (max-device-width: $desktop-size) {
         height: 75vw;
@@ -220,7 +221,7 @@
       @media screen and (min-device-width: $desktop-size) {
         margin-top: calc(-320px);
         height: 320px;
-        width: calc(100% - 4px);
+        width: 100%;
       }
       @media screen and (max-device-width: $desktop-size) {
         margin-top: calc(-43.09vw - 5px);

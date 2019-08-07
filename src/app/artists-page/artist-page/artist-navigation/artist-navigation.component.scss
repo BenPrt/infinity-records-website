@@ -9,10 +9,9 @@
     justify-content: space-between;
     align-items: center;
     @media screen and (min-device-width: $desktop-size) {
-      margin-top: calc(-67px - 14px - 29px - 607px);
+      margin-top: calc(-23px - 67px - 14px - 28px - 607px);
       width: 100%;
       height: 67px;
-      margin-bottom: 14px;
     }
     @media screen and (max-device-width: $desktop-size) {
       width: calc(-4.26vw + 100vw - 4.26vw);

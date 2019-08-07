@@ -10,7 +10,7 @@ body {
   overflow: overlay;
   overflow-x: hidden;
   @media screen and (min-device-width: $desktop-size) {
-    font-size: 1.25vw;
+    font-size: 18px;
   }
   @media screen and (max-device-width: $desktop-size) {
     font-size: 4.79vw;

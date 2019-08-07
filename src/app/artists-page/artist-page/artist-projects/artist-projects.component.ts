@@ -115,15 +115,15 @@ export class ArtistProjectsComponent implements AfterContentChecked {
   }
 
   goToPreviousProject(): void {
-    const currentProjectIdx = this.getArtistProjects().indexOf(this.currentProject);
-    if (currentProjectIdx > 0) {
+    const currentProjectIdx = this.getArtistProjects().indexOf(this.currentProject) + 1;
+    if (currentProjectIdx > 1) {
       this.artistsService.setCurrentProjectId(currentProjectIdx - 1);
     }
   }
 
   goToNextProject(): void {
-    const currentProjectIdx = this.getArtistProjects().indexOf(this.currentProject);
-    if (currentProjectIdx < this.getArtistProjects().length - 1) {
+    const currentProjectIdx = this.getArtistProjects().indexOf(this.currentProject) + 1;
+    if (currentProjectIdx < this.getArtistProjects().length) {
       this.artistsService.setCurrentProjectId(currentProjectIdx + 1);
     }
   }
