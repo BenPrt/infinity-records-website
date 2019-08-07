@@ -101,27 +101,27 @@ export class MerchPreviewComponent implements OnInit, AfterViewInit, OnDestroy {
   manageTitlePositioning(scroll: number): void {
     if (this.isBrowser) {
       if (this.isMobile && document.querySelector('body').offsetWidth < 1300) {
-        const containerOffset = this.elRef.nativeElement.offsetTop - ((21.54 / 100) * document.body.clientWidth);
+        const containerOffset = this.elRef.nativeElement.offsetTop - (21.54 / 100) * document.body.clientWidth;
         const thirdPreviewElement = document.getElementById(
           `preview-image-${this.currentProduct.declinations.length - 1}`,
         );
         const thirdPreviewOffset = containerOffset + thirdPreviewElement.offsetTop;
         if (scroll <= containerOffset) {
           this.titleStyle = {
-            position : 'absolute',
-            top : 'initial',
+            position: 'absolute',
+            top: 'initial',
             marginTop: '29.52vw',
           };
         } else if (scroll > containerOffset && scroll <= thirdPreviewOffset) {
           this.titleStyle = {
-            position : 'fixed',
-            top : 'calc(29.52vw + 21.28vw)',
+            position: 'fixed',
+            top: 'calc(29.52vw + 21.28vw)',
             marginTop: 0,
           };
         } else if (scroll > thirdPreviewOffset) {
           this.titleStyle = {
-            position : 'absolute',
-            top : 'initial',
+            position: 'absolute',
+            top: 'initial',
             marginTop: `calc(${thirdPreviewOffset - containerOffset}px + 29.52vw)`,
           };
         }

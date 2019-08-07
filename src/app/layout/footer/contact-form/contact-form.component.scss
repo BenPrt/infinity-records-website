@@ -2,7 +2,7 @@
 
 :host {
   display: block;
-  position : relative;
+  position: relative;
   background-color: $black;
 
   @media screen and (min-device-width: $desktop-size) {
@@ -192,7 +192,11 @@
 
       #captcha-field {
         width: 304px;
-        margin-left: calc((100% - 304px) / 2);
+        @media screen and (min-device-width: $desktop-size) {
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          margin-left: calc((100% - 304px) / 2);
+        }
       }
 
       #submit-button {
