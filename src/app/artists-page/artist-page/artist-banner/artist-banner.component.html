@@ -5,6 +5,7 @@
 
 <artist-navigation [isMobile]="isMobile" [artist]="artist"></artist-navigation>
 
+<div id="artist-cover-wrapper">
 <div id="artist-cover">
   <div id="artist-title-wrapper">
     <p id="artist-type">{{ artist.type | uppercase }}</p>
@@ -114,4 +115,5 @@
     <hr id="description-separator" />
     <p id="artist-description">{{ artist.description | translation }}</p>
   </div>
+</div>
 </div>

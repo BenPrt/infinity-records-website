@@ -47,268 +47,274 @@
   }
 }
 
-#artist-cover {
-  position: relative;
-  @media screen and (min-device-width: $desktop-size) {
-    width: 100%;
-    height: calc(28px + 607px);
-    margin-top: calc(-23px - 28px - 607px);
-  }
+#artist-cover-wrapper {
   @media screen and (max-device-width: $desktop-size) {
-    width: 100vw;
-    height: calc(17.29vw + 91.49vw);
-    margin-top: calc(-17.29vw - 91.49vw);
-  }
-  #artist-title-wrapper {
-    background-color: $black;
-    color: $white;
     position: relative;
-    z-index: 2;
-    @media screen and (min-device-width: $desktop-size) {
-      width: calc(-28px + 372px - 28px + 2px);
-      padding: 28px;
-      height: calc(24px + 51px);
-    }
-    @media screen and (max-device-width: $desktop-size) {
-      width: calc(-4.26vw + 67.82vw - 4.26vw);
-      padding: 3.19vw 4.26vw;
-      height: calc(6.91vw + 10.64vw + 0.8vw);
-    }
-    #artist-type {
-      display: flex;
-      align-items: center;
-      font-weight: bold;
-      @media screen and (min-device-width: $desktop-size) {
-        height: 24px;
-        font-size: 16px;
-        letter-spacing: 2px;
-        line-height: 1.63;
-      }
-      @media screen and (max-device-width: $desktop-size) {
-        height: 6.91vw;
-        font-size: 0.66em;
-        letter-spacing: 0.08em;
-        line-height: 1.5;
-      }
-    }
-    #artist-name {
-      display: flex;
-      align-items: center;
-      font-weight: 300;
-
-      @media screen and (min-device-width: $desktop-size) {
-        height: 51px;
-        font-size: 40px;
-        line-height: 1.27;
-      }
-      @media screen and (max-device-width: $desktop-size) {
-        height: 6.91vw;
-        font-size: 1.78em;
-        line-height: 1.25;
-        margin-top: 0.8vw;
-      }
-    }
   }
-  #artist-cover-picture-wrapper {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
-
+  #artist-cover {
     @media screen and (min-device-width: $desktop-size) {
-      margin-top: calc(-28px - 24px - 51px);
-      margin-left: calc((100% - 1079px) / 2);
-      height: 607px;
-      width: 1079px;
+    position: relative;
+      width: 100%;
+      height: calc(28px + 607px);
+      margin-top: calc(-23px - 28px - 607px);
     }
     @media screen and (max-device-width: $desktop-size) {
-      margin-top: -6.65vw;
-      margin-left: calc((100vw - 91.49vw) / 2);
-      height: 91.49vw;
-      width: 91.49vw;
+      position : absolute;
+      width: 100vw;
+      height: calc(17.29vw + 91.49vw);
+      margin-top: calc(-17.29vw - 91.49vw);
     }
-
-    #artist-cover-picture {
+    #artist-title-wrapper {
+      background-color: $black;
+      color: $white;
+      position: relative;
+      z-index: 2;
       @media screen and (min-device-width: $desktop-size) {
+        width: calc(-28px + 372px - 28px + 2px);
+        padding: 28px;
+        height: calc(24px + 51px);
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        width: calc(-4.26vw + 67.82vw - 4.26vw);
+        padding: 3.19vw 4.26vw;
+        height: calc(6.91vw + 10.64vw + 0.8vw);
+      }
+      #artist-type {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        @media screen and (min-device-width: $desktop-size) {
+          height: 24px;
+          font-size: 16px;
+          letter-spacing: 2px;
+          line-height: 1.63;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          height: 6.91vw;
+          font-size: 0.66em;
+          letter-spacing: 0.08em;
+          line-height: 1.5;
+        }
+      }
+      #artist-name {
+        display: flex;
+        align-items: center;
+        font-weight: 300;
+
+        @media screen and (min-device-width: $desktop-size) {
+          height: 51px;
+          font-size: 40px;
+          line-height: 1.27;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          height: 6.91vw;
+          font-size: 1.78em;
+          line-height: 1.25;
+          margin-top: 0.8vw;
+        }
+      }
+    }
+    #artist-cover-picture-wrapper {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      justify-content: center;
+      align-items: center;
+
+      @media screen and (min-device-width: $desktop-size) {
+        margin-top: calc(-28px - 24px - 51px);
+        margin-left: calc((100% - 1079px) / 2);
+        height: 607px;
         width: 1079px;
       }
       @media screen and (max-device-width: $desktop-size) {
+        margin-top: -6.65vw;
+        margin-left: calc((100vw - 91.49vw) / 2);
         height: 91.49vw;
+        width: 91.49vw;
       }
-    }
-  }
-  #picture-gradient {
-    position: relative;
-    z-index: 1;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.71));
-    @media screen and (min-device-width: $desktop-size) {
-      height: 274px;
-      margin-top: -274px;
-      margin-left: calc((100% - 1079px) / 2);
-      width: 1079px;
-    }
-    @media screen and (max-device-width: $desktop-size) {
-      height: 31.1vw;
-      margin-top: -31.1vw;
-      margin-left: calc((100vw - 91.49vw) / 2);
-      width: 91.49vw;
-    }
-  }
 
-  #artist-socials-wrapper {
-    position: relative;
-    z-index: 2;
-    @media screen and (min-device-width: $desktop-size) {
-      width: 144px;
-      height: calc(607px - 272px - 15px);
-      margin-top: calc(-607px + 15px);
-      margin-left: calc(100% - 144px - 24px);
+      #artist-cover-picture {
+        @media screen and (min-device-width: $desktop-size) {
+          width: 1079px;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          height: 91.49vw;
+        }
+      }
     }
-    @media screen and (max-device-width: $desktop-size) {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      width: calc(100vw - 23.4vw);
-      height: 8.51vw;
-      margin-top: calc(-8.51vw - 4.26vw);
-    }
-    #socials-separator {
-      border: none;
-      margin: 0;
-      background-color: $gold;
+    #picture-gradient {
+      position: relative;
+      z-index: 1;
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.71));
       @media screen and (min-device-width: $desktop-size) {
-        height: 2px;
-        width: calc(144px - 28px);
-        margin-top: 14px;
-        display: inline-block;
-        vertical-align: top;
+        height: 274px;
+        margin-top: -274px;
+        margin-left: calc((100% - 1079px) / 2);
+        width: 1079px;
       }
       @media screen and (max-device-width: $desktop-size) {
-        height: 1.06vw;
-        width: 10.64vw;
-        margin-right: 2.13vw;
+        height: 31.1vw;
+        margin-top: -31.1vw;
+        margin-left: calc((100vw - 91.49vw) / 2);
+        width: 91.49vw;
       }
     }
-    #socials-icons-wrapper {
+
+    #artist-socials-wrapper {
+      position: relative;
+      z-index: 2;
       @media screen and (min-device-width: $desktop-size) {
-        display: inline-block;
-        vertical-align: top;
+        width: 144px;
         height: calc(607px - 272px - 15px);
-        width: 28px;
+        margin-top: calc(-607px + 15px);
+        margin-left: calc(100% - 144px - 24px);
       }
       @media screen and (max-device-width: $desktop-size) {
-        width: calc(100% - 10.64vw);
-        height: 8.51vw;
         display: flex;
         flex-direction: row;
         align-items: center;
+        width: calc(100vw - 23.4vw);
+        height: 8.51vw;
+        margin-top: calc(-8.51vw - 4.26vw);
       }
-
-      .social-link {
-        display: block;
-
+      #socials-separator {
+        border: none;
+        margin: 0;
+        background-color: $gold;
         @media screen and (min-device-width: $desktop-size) {
-          margin-bottom: 22px;
-          width: 28px;
-          height: 28px;
+          height: 2px;
+          width: calc(144px - 28px);
+          margin-top: 14px;
+          display: inline-block;
+          vertical-align: top;
         }
         @media screen and (max-device-width: $desktop-size) {
-          margin-right: 4.26vw;
-          width: 8.51vw;
+          height: 1.06vw;
+          width: 10.64vw;
+          margin-right: 2.13vw;
+        }
+      }
+      #socials-icons-wrapper {
+        @media screen and (min-device-width: $desktop-size) {
+          display: inline-block;
+          vertical-align: top;
+          height: calc(607px - 272px - 15px);
+          width: 28px;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          width: calc(100% - 10.64vw);
           height: 8.51vw;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
         }
-        &:last-of-type {
+
+        .social-link {
+          display: block;
+
           @media screen and (min-device-width: $desktop-size) {
-            margin-bottom: 0px;
-          }
-          @media screen and (max-device-width: $desktop-size) {
-            margin-right: 0px;
-          }
-        }
-        .social-icon {
-          @media screen and (min-device-width: $desktop-size) {
+            margin-bottom: 22px;
             width: 28px;
             height: 28px;
           }
           @media screen and (max-device-width: $desktop-size) {
+            margin-right: 4.26vw;
             width: 8.51vw;
             height: 8.51vw;
+          }
+          &:last-of-type {
+            @media screen and (min-device-width: $desktop-size) {
+              margin-bottom: 0px;
+            }
+            @media screen and (max-device-width: $desktop-size) {
+              margin-right: 0px;
+            }
+          }
+          .social-icon {
+            @media screen and (min-device-width: $desktop-size) {
+              width: 28px;
+              height: 28px;
+            }
+            @media screen and (max-device-width: $desktop-size) {
+              width: 8.51vw;
+              height: 8.51vw;
+            }
           }
         }
       }
     }
-  }
-  #artist-logo-picture-wrapper {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
+    #artist-logo-picture-wrapper {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      justify-content: center;
+      align-items: center;
 
-    @media screen and (min-device-width: $desktop-size) {
-      width: 272px;
-      height: 272px;
-      margin-left: calc(100% - 272px - 24px);
-    }
-    @media screen and (max-device-width: $desktop-size) {
-      width: 23.4vw;
-      height: 23.4vw;
-      margin-top: calc(4.26vw - 23.4vw + 1px);
-      margin-left: calc(100vw - 23.4vw);
-    }
-    #artist-logo-picture {
       @media screen and (min-device-width: $desktop-size) {
+        width: 272px;
         height: 272px;
+        margin-left: calc(100% - 272px - 24px);
       }
       @media screen and (max-device-width: $desktop-size) {
+        width: 23.4vw;
         height: 23.4vw;
+        margin-top: calc(4.26vw - 23.4vw + 1px);
+        margin-left: calc(100vw - 23.4vw);
+      }
+      #artist-logo-picture {
+        @media screen and (min-device-width: $desktop-size) {
+          height: 272px;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          height: 23.4vw;
+        }
       }
     }
-  }
-  #artist-description-wrapper {
-    position: relative;
-    z-index: 2;
+    #artist-description-wrapper {
+      position: relative;
+      z-index: 2;
 
-    @media screen and (min-device-width: $desktop-size) {
-      width: 272px;
-      height: 119px;
-      margin-left: calc(564px - 63px);
-      margin-top: calc(-119px - 4px - 58px);
-    }
-    @media screen and (max-device-width: $desktop-size) {
-      width: 47.61vw;
-      margin: 12.77vw 0 17.02vw 48.14vw;
-    }
-    #description-separator {
-      border: none;
-      margin: 0;
-      background-color: $gold;
       @media screen and (min-device-width: $desktop-size) {
-        height: 4px;
-        width: 36px;
+        width: 272px;
+        height: 119px;
+        margin-left: calc(564px - 63px);
+        margin-top: calc(-119px - 4px - 58px);
       }
       @media screen and (max-device-width: $desktop-size) {
-        height: 1.06vw;
-        width: 10.64vw;
+        width: 47.61vw;
+        margin: 12.77vw 0 17.02vw 48.14vw;
       }
-    }
-    #artist-description {
-      width: 100%;
-      line-height: 1.56;
-      @media screen and (min-device-width: $desktop-size) {
-        font-weight: 500;
-        margin-top: 14px;
-        font-size: 18px;
-        color: $white;
+      #description-separator {
+        border: none;
+        margin: 0;
+        background-color: $gold;
+        @media screen and (min-device-width: $desktop-size) {
+          height: 4px;
+          width: 36px;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          height: 1.06vw;
+          width: 10.64vw;
+        }
       }
-      @media screen and (max-device-width: $desktop-size) {
-        font-weight: 600;
-        margin-top: 4.26vw;
-        font-size: 1em;
-        color: $black;
+      #artist-description {
+        width: 100%;
+        line-height: 1.56;
+        @media screen and (min-device-width: $desktop-size) {
+          font-weight: 500;
+          margin-top: 14px;
+          font-size: 18px;
+          color: $white;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          font-weight: 600;
+          margin-top: 4.26vw;
+          font-size: 1em;
+          color: $black;
+        }
       }
     }
   }
