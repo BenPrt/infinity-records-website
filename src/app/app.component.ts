@@ -276,10 +276,18 @@ export class AppComponent implements OnInit, AfterViewInit {
       this.timeouts.forEach((timeout) => {
         clearTimeout(timeout);
       });
-      this.typoState = 'displayed';
       this.scaleState = 'normal';
-      this.menuIsDisplayed = true;
-      this.contentIsDisplayed = true;
+      if (this.isMobile) {
+        setTimeout(() => {
+          this.typoState = 'displayed';
+          this.menuIsDisplayed = true;
+          this.contentIsDisplayed = true;
+        }, 1000);
+      } else {
+        this.typoState = 'displayed';
+        this.menuIsDisplayed = true;
+        this.contentIsDisplayed = true;
+      }
     }
     return true;
   }

@@ -17,28 +17,6 @@
     height: 21.28vw;
   }
 
-  #burger-button {
-    position: relative;
-    @media screen and (min-device-width: $desktop-size) {
-      width: 7.445vw;
-    }
-    @media screen and (max-device-width: $desktop-size) {
-      width: 14.89vw;
-    }
-    #burger-button-icon {
-      @media screen and (min-device-width: $desktop-size) {
-        margin-left: 2.125vw;
-        height: 5.32vw;
-        width: 5.32vw;
-      }
-      @media screen and (max-device-width: $desktop-size) {
-        margin-left: 4.25vw;
-        height: 10.64vw;
-        width: 10.64vw;
-      }
-    }
-  }
-
   #header-logo-container {
     display: flex;
     justify-content: center;
@@ -47,12 +25,10 @@
 
     @media screen and (min-device-width: $desktop-size) {
       width: 100%;
-      margin-left: -7.445vw;
       height: 10.64vw;
     }
     @media screen and (max-device-width: $desktop-size) {
       width: 100%;
-      margin-left: -14.89vw;
       height: 21.28vw;
     }
 
@@ -98,6 +74,29 @@
           margin-top: 1.33vw;
           height: 7.17vw;
         }
+      }
+    }
+  }
+  
+  #burger-button {
+    position: relative;
+    margin-left : -100%;
+    @media screen and (min-device-width: $desktop-size) {
+      width: 7.445vw;
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      width: 14.89vw;
+    }
+    #burger-button-icon {
+      @media screen and (min-device-width: $desktop-size) {
+        margin-left: 2.125vw;
+        height: 5.32vw;
+        width: 5.32vw;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        margin-left: 4.25vw;
+        height: 10.64vw;
+        width: 10.64vw;
       }
     }
   }
