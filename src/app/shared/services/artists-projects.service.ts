@@ -9,12 +9,11 @@ export class ArtistsProjectsService {
   currentProjectIdHasChanged: EventEmitter<number> = new EventEmitter<number>();
 
   setCurrentProjectId(id: number): void {
-    this.currentProjectId = id + 1;
+    this.currentProjectId = id;
     this.currentProjectIdHasChanged.emit(this.currentProjectId);
   }
 
   getCurrentProjectId(): number {
     return this.currentProjectId;
   }
-
 }

@@ -3,6 +3,79 @@ import { ArtistInformations } from 'src/app/models/artists-info';
 export const artistsInfos: ArtistInformations[] = [
   {
     id: 1,
+    name: 'Fresh Ben',
+    type: 'Beatmaking',
+    cover_picture: 'assets/img/artists/fresh_ben/cover.jpg',
+    cover_picture_mobile: 'assets/img/artists/fresh_ben/cover_mobile.jpg',
+    // logo_picture: 'assets/img/artists/fresh_ben/logo.jpg',
+    logo_picture: '',
+    url_facebook: 'https://www.facebook.com/freshbenofficial/',
+    url_instagram: 'https://www.instagram.com/fresh__ben/',
+    url_youtube: 'https://www.youtube.com/channel/UCWgQhN1vY41SbMJ18TzvoGA',
+    url_soundcloud: 'https://soundcloud.com/fresh_ben',
+    url_spotify: '',
+    url_deezer: '',
+    description: 'ARTISTS_FRESH-BEN_DESCRIPTION',
+    metadata_description: 'METADATA_ARTISTS_FRESH-BEN_DESCRIPTION',
+    metadata_keywords: 'METADATA_ARTISTS_FRESH-BEN_KEYWORDS',
+    projects: [
+      {
+        id: 1,
+        title: 'Fresh Beats',
+        duration: '',
+        releaseDate: '',
+        coverPath: '',
+        soundcloudUrl:
+          'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/802309362&color=%23d7bf85&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
+        downloadPath: '',
+        tracks: [
+          {
+            title: 'No Distraction',
+            soundcloudUrl:
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/661877189%3Fsecret_token%3Ds-T2XXw&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
+          },
+          {
+            title: 'Mindblown',
+            soundcloudUrl:
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/661875353%3Fsecret_token%3Ds-BjeYH&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
+          },
+          {
+            title: 'Out of Nothing',
+            soundcloudUrl:
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/661863728&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
+          },
+          {
+            title: 'Lightrays',
+            soundcloudUrl:
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/646674960&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
+          },
+          {
+            title: 'Overstrain',
+            soundcloudUrl:
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/645223659&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
+          },
+          {
+            title: "August's Very Own",
+            soundcloudUrl:
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/635593890&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
+          },
+          {
+            title: 'This Was Fast',
+            soundcloudUrl:
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/644204853&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
+          },
+          {
+            title: "Something's Strange",
+            soundcloudUrl:
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/635591631&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
+          },
+        ],
+      },
+    ],
+    clips: [],
+  },
+  {
+    id: 2,
     name: 'PRT Crew',
     type: 'Hip-Hop / Rap',
     cover_picture: 'assets/img/artists/prt_crew/cover.jpg',
@@ -124,63 +197,5 @@ export const artistsInfos: ArtistInformations[] = [
       },
     ],
     clips: ['https://www.youtube.com/embed/0HSpX3JMqWM', 'https://www.youtube.com/embed/HVXCVzaPDWA'],
-  },
-  {
-    id: 2,
-    name: 'Fresh Ben',
-    type: 'Beatmaking',
-    cover_picture: 'assets/img/artists/fresh_ben/cover.jpg',
-    cover_picture_mobile: 'assets/img/artists/fresh_ben/cover_mobile.jpg',
-    // logo_picture: 'assets/img/artists/fresh_ben/logo.jpg',
-    logo_picture: '',
-    url_facebook: 'https://www.facebook.com/freshbenofficial/',
-    url_instagram: 'https://www.instagram.com/fresh__ben/',
-    url_youtube: 'https://www.youtube.com/channel/UCWgQhN1vY41SbMJ18TzvoGA',
-    url_soundcloud: 'https://soundcloud.com/fresh_ben',
-    url_spotify: '',
-    url_deezer: '',
-    description: 'ARTISTS_FRESH-BEN_DESCRIPTION',
-    metadata_description: 'METADATA_ARTISTS_FRESH-BEN_DESCRIPTION',
-    metadata_keywords: 'METADATA_ARTISTS_FRESH-BEN_KEYWORDS',
-    projects: [
-      {
-        id: 1,
-        title: 'Fresh Beats',
-        duration: '',
-        releaseDate: '',
-        coverPath: '',
-        soundcloudUrl:
-          'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/802309362&color=%23d7bf85&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
-        downloadPath: '',
-        tracks: [
-          {
-            title: 'Lightrays',
-            soundcloudUrl:
-              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/646674960&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
-          },
-          {
-            title: 'Overstrain',
-            soundcloudUrl:
-              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/645223659&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
-          },
-          {
-            title: "August's Very Own",
-            soundcloudUrl:
-              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/635593890&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
-          },
-          {
-            title: 'This Was Fast',
-            soundcloudUrl:
-              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/644204853&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
-          },
-          {
-            title: "Something's Strange",
-            soundcloudUrl:
-              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/635591631&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
-          },
-        ],
-      },
-    ],
-    clips: [],
   },
 ];

@@ -33,12 +33,12 @@ export class ArtistProjectsComponent implements AfterContentChecked {
   @Input() artist: ArtistInformations;
   @Input() isMobile: boolean;
   @Input() currentProjectId: number;
-  @Input() loading : string;
+  @Input() loading: string;
   @Input() playingTrack: TrackInformations;
   @Output() onPlay = new EventEmitter<TrackInformations>();
   currentProject: ProjectInformations;
 
-  constructor(private artistsService : ArtistsProjectsService) {}
+  constructor(private artistsService: ArtistsProjectsService) {}
 
   ngAfterContentChecked(): void {
     this.initCurrentProject();
@@ -70,7 +70,7 @@ export class ArtistProjectsComponent implements AfterContentChecked {
   }
 
   goToProject(projectId: number): void {
-    this.artistsService.setCurrentProjectId(projectId);
+    this.artistsService.setCurrentProjectId(projectId + 1);
     this.initCurrentProject();
   }
 
