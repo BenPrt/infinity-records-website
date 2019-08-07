@@ -2,6 +2,7 @@
 
 :host {
   display: block;
+  position : relative;
   background-color: $black;
 
   @media screen and (min-device-width: $desktop-size) {
