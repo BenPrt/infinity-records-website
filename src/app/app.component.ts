@@ -97,13 +97,13 @@ export class AppComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.initScrollOnRouteChange();
     this.initMobileStatus();
-    this.initMobileSizing();
     this.initAnimationState();
     this.initLanguageChangeSubscription();
     this.initMobileMenuSubscription();
   }
 
   ngAfterViewInit(): void {
+    this.initMobileSizing();
     this.initMobileScroll();
     if (!this.isBrowser) {
       const source: Observable<any> = fromEvent(this.content.nativeElement, 'load');
@@ -184,7 +184,8 @@ export class AppComponent implements OnInit, AfterViewInit {
   defineViewPortSize(): void {
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
-    const contentvh = (window.innerHeight - 81) * 0.01;
+    const headerHeight = document.getElementsByTagName('header-mobile-menu-component')[0].clientHeight;
+    const contentvh = (window.innerHeight - headerHeight) * 0.01;
     document.documentElement.style.setProperty('--contentvh', `${contentvh}px`);
   }
 
