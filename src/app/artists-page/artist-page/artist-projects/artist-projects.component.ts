@@ -1,4 +1,4 @@
-import { Component, Input, AfterContentChecked, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnChanges } from '@angular/core';
 import { ArtistInformations, ProjectInformations, TrackInformations } from 'src/app/models/artists-info';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { ArtistsProjectsService } from 'src/app/shared/services/artists-projects.service';
@@ -29,7 +29,7 @@ import { ArtistsProjectsService } from 'src/app/shared/services/artists-projects
     ]),
   ],
 })
-export class ArtistProjectsComponent implements AfterContentChecked {
+export class ArtistProjectsComponent implements OnChanges {
   @Input() artist: ArtistInformations;
   @Input() isMobile: boolean;
   @Input() currentProjectId: number;
@@ -40,7 +40,7 @@ export class ArtistProjectsComponent implements AfterContentChecked {
 
   constructor(private artistsService: ArtistsProjectsService) {}
 
-  ngAfterContentChecked(): void {
+  ngOnChanges(): void {
     this.initCurrentProject();
   }
 
@@ -71,7 +71,6 @@ export class ArtistProjectsComponent implements AfterContentChecked {
 
   goToProject(projectId: number): void {
     this.artistsService.setCurrentProjectId(projectId + 1);
-    this.initCurrentProject();
   }
 
   getSoundcloudUrl(): string {
