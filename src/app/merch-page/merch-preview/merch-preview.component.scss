@@ -33,13 +33,12 @@
       @media screen and (max-device-width: $desktop-size) {
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
-        transform  : translate3d(0,0,0);
       }
       #product-title-preview {
         font-weight: bold;
-        transform: translate3d(0,0,0) rotate(90deg);
         position: absolute;
         @media screen and (min-device-width: $desktop-size) {
+          transform: rotate(90deg);
           font-size: 18px;
           letter-spacing: 2px;
           width: 108px;
@@ -47,6 +46,7 @@
           margin-top: 136px;
         }
         @media screen and (max-device-width: $desktop-size) {
+          transform: translate3d(0, 0, 0) rotate(90deg);
           font-size: 1em;
           letter-spacing: 0.11em;
           width: 31.91vw;
@@ -153,7 +153,7 @@
 // Animations part
 .hidden {
   animation: fadeOut 300ms linear;
-  opacity : 0.2;
+  opacity: 0.2;
 }
 @keyframes fadeOut {
   0% {
@@ -168,7 +168,7 @@
 
 .visible {
   animation: fadeIn 300ms linear;
-  opacity : 1;
+  opacity: 1;
 }
 @keyframes fadeIn {
   0% {
