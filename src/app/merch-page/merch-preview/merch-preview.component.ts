@@ -6,11 +6,32 @@ import { DeviceService } from 'src/app/shared/services/device.service';
 import { MerchInfo } from 'src/app/models/merch-info';
 import { ScrollService } from 'src/app/shared/services/scroll.service';
 import { isPlatformBrowser } from '@angular/common';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'merch-preview',
   templateUrl: './merch-preview.component.html',
   styleUrls: ['./merch-preview.component.scss'],
+  animations: [
+    trigger('titleAnimation', [
+      state(
+        'moving',
+        style({
+          position: 'fixed',
+          top: 'calc(29.52vw + 21.28vw)',
+          marginTop : '0',
+        }),
+      ),
+      state(
+        'fixed',
+        style({
+          position: 'absolute',
+          top: 'initial',
+        }),
+      ),
+      transition('* <=> *', [animate('10ms')]),
+    ]),
+  ],
 })
 export class MerchPreviewComponent implements OnInit, AfterContentChecked, OnDestroy {
   loading: boolean;
@@ -20,7 +41,7 @@ export class MerchPreviewComponent implements OnInit, AfterContentChecked, OnDes
   isMobile: boolean;
   deviceTypeSubscription: Subscription;
   scrollSubscription: Subscription;
-  titleStyle = {};
+  titleAnimationState: string = 'fixed';
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
     private merchService: MerchService,
@@ -64,7 +85,6 @@ export class MerchPreviewComponent implements OnInit, AfterContentChecked, OnDes
 
   initScrollSubscription(): void {
     this.scrollSubscription = this.scrollService.scrollHappened.subscribe((amount: number) => {
-      console.log(amount);
       this.manageTitlePositioning(amount);
     });
   }
@@ -106,23 +126,13 @@ export class MerchPreviewComponent implements OnInit, AfterContentChecked, OnDes
         );
         const lastPreviewOffset = containerOffset + lastPreviewElement.offsetTop;
         if (scroll <= containerOffset) {
-          this.titleStyle = {
-            position: 'absolute',
-            top: 'initial',
-            marginTop: '29.52vw',
-          };
+          this.titleAnimationState = 'fixed';
         } else if (scroll > containerOffset && scroll <= lastPreviewOffset) {
-          this.titleStyle = {
-            position: 'fixed',
-            top: 'calc(29.52vw + 21.28vw)',
-            marginTop: 0,
-          };
+          this.titleAnimationState = 'moving';
         } else if (scroll > lastPreviewOffset) {
-          this.titleStyle = {
-            position: 'absolute',
-            top: 'initial',
-            marginTop: `calc(${lastPreviewOffset - containerOffset}px + 29.52vw)`,
-          };
+          this.titleAnimationState = 'fixed';
+          document.getElementById('product-title-preview').style.marginTop = `calc(${lastPreviewOffset -
+            containerOffset}px + 29.52vw)`;
         }
       }
     }

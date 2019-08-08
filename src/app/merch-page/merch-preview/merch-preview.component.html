@@ -3,11 +3,11 @@
     <div id="product-title-wrapper">
       <h3
         id="product-title-preview"
+        [@titleAnimation]="titleAnimationState"
         [ngClass]="{
           hidden: loading,
           visible: !loading
         }"
-        [ngStyle]="titleStyle"
       >
         {{ currentProduct.title | translation | uppercase }}
       </h3>
