@@ -105,15 +105,18 @@ export class MerchPreviewComponent implements OnInit, AfterContentChecked, OnDes
         );
         const lastPreviewOffset = containerOffset + lastPreviewElement.offsetTop;
         if (scroll <= containerOffset) {
-          document.getElementById('product-title-preview').style.transform = 'rotate(90deg) translate(0)';
+          document.getElementById('product-title-preview').style.position = 'absolute';
+          (document.getElementById('product-title-preview').style.top = '0'),
+            (document.getElementById('product-title-preview').style.marginTop = '29.52vw');
         } else if (scroll > containerOffset && scroll <= lastPreviewOffset) {
-          document.getElementById('product-title-preview').style.transform = `rotate(90deg) translate(${Math.round(
-            scroll - containerOffset,
-          )}px)`;
+          document.getElementById('product-title-preview').style.position = 'fixed';
+          (document.getElementById('product-title-preview').style.top = 'calc(29.52vw + 21.28vw)'),
+            (document.getElementById('product-title-preview').style.marginTop = '0');
         } else if (scroll > lastPreviewOffset) {
-          document.getElementById(
-            'product-title-preview',
-          ).style.transform = `rotate(90deg) translate(${lastPreviewOffset - containerOffset}px)`;
+          document.getElementById('product-title-preview').style.position = 'absolute';
+          (document.getElementById('product-title-preview').style.top = '0'),
+            (document.getElementById('product-title-preview').style.marginTop = `calc(${lastPreviewOffset -
+              containerOffset}px + 29.52vw)`);
         }
       }
     }
