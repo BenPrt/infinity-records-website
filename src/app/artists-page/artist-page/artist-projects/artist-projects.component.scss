@@ -18,6 +18,8 @@
     @media screen and (max-device-width: $desktop-size) {
       padding: 14.89vw 4.26vw;
       width: calc(-4.26vw + 100vw - 12.23vw - 2px - 13.3vw - 4.26vw);
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
     }
 
     #projects-title {
@@ -61,6 +63,8 @@
       }
       @media screen and (max-device-width: $desktop-size) {
         margin-top: 8.51vw;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
       }
       .cover-and-player-container {
         @media screen and (min-device-width: $desktop-size) {
@@ -72,6 +76,8 @@
         @media screen and (max-device-width: $desktop-size) {
           width: 75.53vw;
           margin-left: calc(((100vw - 75.53vw) / 2) - 4.26vw);
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
         }
         .project-cover-wrapper {
           display: flex;
@@ -88,6 +94,8 @@
             margin-bottom: 4.26vw;
             width: 75.53vw;
             height: 75.53vw;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
           }
           .project-cover {
             @media screen and (min-device-width: $desktop-size) {
@@ -95,6 +103,8 @@
             }
             @media screen and (max-device-width: $desktop-size) {
               height: 75.53vw;
+              backface-visibility: hidden;
+              -webkit-backface-visibility: hidden;
             }
           }
         }
@@ -109,6 +119,8 @@
         }
         @media screen and (max-device-width: $desktop-size) {
           margin-top: 10.64vw;
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
         }
         .project-title {
           font-weight: 600;
@@ -117,6 +129,8 @@
           }
           @media screen and (max-device-width: $desktop-size) {
             font-size: 1.15em;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
           }
         }
         .project-duration {
@@ -127,6 +141,8 @@
           }
           @media screen and (max-device-width: $desktop-size) {
             font-size: 2em;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
           }
         }
       }
@@ -144,6 +160,8 @@
           line-height: 1.43;
           letter-spacing: 0.06em;
           margin-top: 0.56vw;
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
         }
       }
       .project-tracklist {
@@ -152,6 +170,8 @@
         }
         @media screen and (max-device-width: $desktop-size) {
           margin-top: 2.13vw;
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
         }
         .project-track-container {
           display: flex;
@@ -165,6 +185,8 @@
           }
           @media screen and (max-device-width: $desktop-size) {
             height: 15.43vw;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
           }
           .track-informations {
             display: flex;
@@ -175,6 +197,8 @@
             }
             @media screen and (max-device-width: $desktop-size) {
               font-size: 0.9em;
+              backface-visibility: hidden;
+              -webkit-backface-visibility: hidden;
             }
             .track-number {
               font-weight: normal;
@@ -186,6 +210,8 @@
               @media screen and (max-device-width: $desktop-size) {
                 margin-right: 2.13vw;
                 font-size: 1em;
+                backface-visibility: hidden;
+                -webkit-backface-visibility: hidden;
               }
             }
             .track-separator {
@@ -201,6 +227,8 @@
                 width: 6.38vw;
                 margin-right: 2.13vw;
                 height: 0.27vw;
+                backface-visibility: hidden;
+                -webkit-backface-visibility: hidden;
               }
             }
           }
@@ -211,6 +239,8 @@
             }
             @media screen and (max-device-width: $desktop-size) {
               font-size: 0.9em;
+              backface-visibility: hidden;
+              -webkit-backface-visibility: hidden;
             }
             .play-button {
               display: flex;
@@ -226,6 +256,8 @@
                 @media screen and (max-device-width: $desktop-size) {
                   width: 5.32vw;
                   height: 5.32vw;
+                  backface-visibility: hidden;
+                  -webkit-backface-visibility: hidden;
                 }
               }
               span {
@@ -234,6 +266,8 @@
                 }
                 font-weight: normal;
                 text-decoration: underline;
+                backface-visibility: hidden;
+                -webkit-backface-visibility: hidden;
               }
             }
             .listening-indicator {
@@ -247,6 +281,8 @@
                 @media screen and (max-device-width: $desktop-size) {
                   width: 6.38vw;
                   height: 6.38vw;
+                  backface-visibility: hidden;
+                  -webkit-backface-visibility: hidden;
                 }
               }
               span {
@@ -254,6 +290,8 @@
                   display: none;
                 }
                 font-weight: 600;
+                backface-visibility: hidden;
+                -webkit-backface-visibility: hidden;
               }
             }
           }
@@ -279,6 +317,8 @@
           height: 10.64vw;
           margin-top: 12.77vw;
           width: 100%;
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
         }
       }
     }
@@ -317,9 +357,13 @@
 // Animations part
 .hidden-next {
   animation: fadeOutNext 300ms linear;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 .hidden-previous {
   animation: fadeOutPrevious 300ms linear;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 @media screen and (min-device-width: $desktop-size) {
   @keyframes fadeOutNext {
@@ -368,9 +412,13 @@
 
 .visible-next {
   animation: fadeInNext 300ms linear;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 .visible-previous {
   animation: fadeInPrevious 300ms linear;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 @media screen and (min-device-width: $desktop-size) {
   @keyframes fadeInNext {

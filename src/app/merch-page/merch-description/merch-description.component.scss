@@ -83,7 +83,7 @@ $totalHeight: 865px;
           list-style-type: none;
           padding: 0;
           @media screen and (min-device-width: $desktop-size) {
-            height: 87px;
+            height: 99px;
             width: 451px;
             columns: 2;
             -webkit-columns: 2;
@@ -95,8 +95,8 @@ $totalHeight: 865px;
           }
           .product-information {
             @media screen and (min-device-width: $desktop-size) {
-              height: 22px;
-              line-height: 22px;
+              height: 26px;
+              line-height: 26px;
               width: 230px;
               margin: 0 0 7px 0;
             }
@@ -112,7 +112,7 @@ $totalHeight: 865px;
               vertical-align: top;
               align-items: center;
               @media screen and (min-device-width: $desktop-size) {
-                height: 22px;
+                height: 26px;
                 margin-right: 5px;
               }
               @media screen and (max-device-width: $desktop-size) {
@@ -135,8 +135,8 @@ $totalHeight: 865px;
               vertical-align: top;
               @media screen and (min-device-width: $desktop-size) {
                 font-size: 15px;
-                height: 22px;
-                line-height: 22px;
+                height: 26px;
+                line-height: 26px;
               }
               @media screen and (max-device-width: $desktop-size) {
                 font-size: 0.9em;

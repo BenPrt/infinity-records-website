@@ -9,6 +9,7 @@
   top: 0;
   background-color: $white;
   z-index: 1;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   @media screen and (min-device-width: $desktop-size) {
     height: 10.64vw;
@@ -21,6 +22,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
 
     @media screen and (min-device-width: $desktop-size) {
@@ -33,6 +35,7 @@
     }
 
     #header-logo {
+      backface-visibility: hidden;
       -webkit-backface-visibility: hidden;
       @media screen and (min-device-width: $desktop-size) {
         width: 62.5vw;
@@ -46,6 +49,7 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
+        backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
         @media screen and (min-device-width: $desktop-size) {
           height: 19.79vw;
@@ -61,6 +65,7 @@
         display: block;
         line-height: 1.4;
         text-align: center;
+        backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
         @media screen and (min-device-width: $desktop-size) {
           letter-spacing: 0.22em;
