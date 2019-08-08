@@ -64,6 +64,7 @@ export class MerchPreviewComponent implements OnInit, AfterContentChecked, OnDes
 
   initScrollSubscription(): void {
     this.scrollSubscription = this.scrollService.scrollHappened.subscribe((amount: number) => {
+      console.log(amount);
       this.manageTitlePositioning(amount);
     });
   }
