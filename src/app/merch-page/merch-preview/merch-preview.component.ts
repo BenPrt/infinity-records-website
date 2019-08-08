@@ -105,13 +105,15 @@ export class MerchPreviewComponent implements OnInit, AfterContentChecked, OnDes
         );
         const lastPreviewOffset = containerOffset + lastPreviewElement.offsetTop;
         if (scroll <= containerOffset) {
-          document.getElementById('product-title-preview').style.marginTop = '29.52vw';
+          document.getElementById('product-title-preview').style.transform = 'rotate(90deg) translate(0)';
         } else if (scroll > containerOffset && scroll <= lastPreviewOffset) {
-          document.getElementById('product-title-preview').style.marginTop = `calc(${Math.round(scroll -
-            containerOffset)}px + 29.52vw)`;
+          document.getElementById('product-title-preview').style.transform = `rotate(90deg) translate(${Math.round(
+            scroll - containerOffset,
+          )}px)`;
         } else if (scroll > lastPreviewOffset) {
-          document.getElementById('product-title-preview').style.marginTop = `calc(${lastPreviewOffset -
-            containerOffset}px + 29.52vw)`;
+          document.getElementById(
+            'product-title-preview',
+          ).style.transform = `rotate(90deg) translate(${lastPreviewOffset - containerOffset}px)`;
         }
       }
     }
