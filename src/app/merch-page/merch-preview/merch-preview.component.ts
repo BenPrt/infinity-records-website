@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, ElementRef, Inject, PLATFORM_ID, AfterViewInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, ElementRef, Inject, PLATFORM_ID, AfterContentChecked } from '@angular/core';
 import { MerchService } from 'src/app/shared/services/merch.service';
 import { Subscription } from 'rxjs';
 import { merchInfos } from 'src/assets/content/merch-content';
@@ -12,14 +12,13 @@ import { isPlatformBrowser } from '@angular/common';
   templateUrl: './merch-preview.component.html',
   styleUrls: ['./merch-preview.component.scss'],
 })
-export class MerchPreviewComponent implements OnInit, AfterViewInit, OnDestroy {
+export class MerchPreviewComponent implements OnInit, AfterContentChecked, OnDestroy {
   loading: boolean;
   isBrowser: boolean;
   currentProduct: MerchInfo;
   currentIdSubscription: Subscription;
   isMobile: boolean;
   deviceTypeSubscription: Subscription;
-  scrolledAmount: number;
   scrollSubscription: Subscription;
   titleStyle = {};
   constructor(
@@ -37,7 +36,7 @@ export class MerchPreviewComponent implements OnInit, AfterViewInit, OnDestroy {
     this.initDeviceType();
   }
 
-  ngAfterViewInit(): void {
+  ngAfterContentChecked(): void {
     this.initScrollSubscription();
   }
 
@@ -65,8 +64,7 @@ export class MerchPreviewComponent implements OnInit, AfterViewInit, OnDestroy {
 
   initScrollSubscription(): void {
     this.scrollSubscription = this.scrollService.scrollHappened.subscribe((amount: number) => {
-      this.scrolledAmount = amount;
-      this.manageTitlePositioning(this.scrolledAmount);
+      this.manageTitlePositioning(amount);
     });
   }
 
@@ -102,27 +100,27 @@ export class MerchPreviewComponent implements OnInit, AfterViewInit, OnDestroy {
     if (this.isBrowser) {
       if (this.isMobile && document.querySelector('body').offsetWidth < 1300) {
         const containerOffset = this.elRef.nativeElement.offsetTop - (21.54 / 100) * document.body.clientWidth;
-        const thirdPreviewElement = document.getElementById(
+        const lastPreviewElement = document.getElementById(
           `preview-image-${this.currentProduct.declinations.length - 1}`,
         );
-        const thirdPreviewOffset = containerOffset + thirdPreviewElement.offsetTop;
+        const lastPreviewOffset = containerOffset + lastPreviewElement.offsetTop;
         if (scroll <= containerOffset) {
           this.titleStyle = {
             position: 'absolute',
             top: 'initial',
             marginTop: '29.52vw',
           };
-        } else if (scroll > containerOffset && scroll <= thirdPreviewOffset) {
+        } else if (scroll > containerOffset && scroll <= lastPreviewOffset) {
           this.titleStyle = {
             position: 'fixed',
             top: 'calc(29.52vw + 21.28vw)',
             marginTop: 0,
           };
-        } else if (scroll > thirdPreviewOffset) {
+        } else if (scroll > lastPreviewOffset) {
           this.titleStyle = {
             position: 'absolute',
             top: 'initial',
-            marginTop: `calc(${thirdPreviewOffset - containerOffset}px + 29.52vw)`,
+            marginTop: `calc(${lastPreviewOffset - containerOffset}px + 29.52vw)`,
           };
         }
       }
