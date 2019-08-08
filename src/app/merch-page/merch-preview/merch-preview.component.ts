@@ -107,8 +107,8 @@ export class MerchPreviewComponent implements OnInit, AfterContentChecked, OnDes
         if (scroll <= containerOffset) {
           document.getElementById('product-title-preview').style.marginTop = '29.52vw';
         } else if (scroll > containerOffset && scroll <= lastPreviewOffset) {
-          document.getElementById('product-title-preview').style.marginTop = `calc(${scroll -
-            containerOffset}px + 29.52vw)`;
+          document.getElementById('product-title-preview').style.marginTop = `calc(${Math.round(scroll -
+            containerOffset)}px + 29.52vw)`;
         } else if (scroll > lastPreviewOffset) {
           document.getElementById('product-title-preview').style.marginTop = `calc(${lastPreviewOffset -
             containerOffset}px + 29.52vw)`;
