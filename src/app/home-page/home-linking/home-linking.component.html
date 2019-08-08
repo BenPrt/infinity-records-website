@@ -1,0 +1,53 @@
+<div id="linking-first-layer">
+  <div id="linking-second-layer">
+    <h2 id="linking-title">{{ 'HOME_LINKING_TITLE' | translation }}</h2>
+    <div id="links-container">
+      <div class="link-wrapper">
+        <a class="link-router-link" routerLink="/label" routerLinkActive="active">
+          <div class="link-picture-wrapper">
+            <img
+              class="link-picture"
+              alt="Label Link Picture"
+              [defaultImage]="'assets/img/loading.gif'"
+              [lazyLoad]="'assets/img/home/link_label.jpg'"
+            />
+          </div>
+          <div class="link-description">
+            <h3>{{ 'HOME_LINKING_LABEL' | translation | uppercase }}</h3>
+          </div>
+        </a>
+      </div>
+      <div class="link-wrapper">
+        <a class="link-router-link" routerLink="/artists" routerLinkActive="active">
+          <div class="link-picture-wrapper">
+            <img
+              class="link-picture"
+              alt="Label Link Picture"
+              [defaultImage]="'assets/img/loading.gif'"
+              [lazyLoad]="'assets/img/home/link_artists.jpg'"
+            />
+          </div>
+          <div class="link-description">
+            <h3>{{ 'HOME_LINKING_ARTISTS' | translation | uppercase }}</h3>
+          </div>
+        </a>
+      </div>
+      <div class="link-wrapper">
+        <a class="link-router-link" routerLink="/merch" routerLinkActive="active">
+          <div class="link-picture-wrapper">
+            <img
+              class="link-picture"
+              alt="Label Link Picture"
+              [defaultImage]="'assets/img/loading.gif'"
+              [lazyLoad]="'assets/img/home/link_merch.jpg'"
+            />
+          </div>
+          <div class="link-description">
+            <h3>{{ 'HOME_LINKING_MERCH' | translation | uppercase }}</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="linking-third-layer"></div>
+</div>

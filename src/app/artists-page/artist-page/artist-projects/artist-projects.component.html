@@ -1,0 +1,82 @@
+<div id="projects-first-layer">
+  <div id="projects-second-layer">
+    <h2 id="projects-title">{{ 'ARTISTS_PROJECTS' | translation }}</h2>
+    <div *ngIf="artist.projects.length > 1" id="projects-indicators">
+      <p
+        class="projects-indicator"
+        *ngFor="let project of getArtistProjects(); let idx = index"
+        [@indicatorAnimation]="(loading === 'initial' || loading.substring(0, 6) === 'loaded') && isCurrentProject(idx)"
+        (click)="goToProject(idx)"
+      >
+        {{ '0' + (idx + 1) }}
+      </p>
+    </div>
+    <div
+      *ngIf="currentProject"
+      id="project-container"
+      [ngClass]="{
+        'hidden-next': loading === 'loading-next',
+        'visible-next': loading === 'loaded-next',
+        'hidden-previous': loading === 'loading-previous',
+        'visible-previous': loading === 'loaded-previous'
+      }"
+    >
+      <div class="cover-and-player-container">
+        <div *ngIf="currentProject.coverPath !== ''" class="project-cover-wrapper">
+          <img
+            class="project-cover"
+            alt="{{ currentProject.title }} cover"
+            [defaultImage]="'assets/img/loading.gif'"
+            [lazyLoad]="currentProject.coverPath"
+          />
+        </div>
+        <soundcloud-player [trackUrl]="getSoundcloudUrl()" [autoplay]="isSoundcloudAutoplay()"></soundcloud-player>
+      </div>
+      <div class="project-title-and-duration">
+        <h3 class="project-title">{{ currentProject.title }}</h3>
+        <p *ngIf="!isMobile" class="project-duration">{{ currentProject.duration }}</p>
+      </div>
+      <div *ngIf="currentProject.releaseDate !== ''" class="project-release-date">
+        {{ 'ARTISTS_PROJECT_RELEASED_ON' | translation | uppercase
+        }}{{ currentProject.releaseDate | localeDate | uppercase }}
+      </div>
+      <ul class="project-tracklist">
+        <li class="project-track-container" *ngFor="let track of currentProject.tracks; let idx = index">
+          <div class="track-informations">
+            <span class="track-number">{{ idx > 9 ? idx + 1 : '0' + (idx + 1) }}</span>
+            <hr class="track-separator" />
+            {{ track.title }}
+          </div>
+          <div class="playing-indicators">
+            <p *ngIf="!isTrackPlaying(track)" class="play-button" (click)="playTrack(track)">
+              <img alt="Play Icon" src="assets/icons/play_icon.svg" /><span>{{ 'ARTISTS_PLAY' | translation }}</span>
+            </p>
+            <p *ngIf="isTrackPlaying(track)" class="listening-indicator">
+              <img alt="Listening Icon" src="assets/icons/listening_icon.svg" />
+              <span>{{ 'ARTISTS_LISTENING' | translation }}</span>
+            </p>
+          </div>
+        </li>
+      </ul>
+      <button
+        *ngIf="currentProject.downloadPath !== ''"
+        class="project-download-button"
+        (click)="download(currentProject.downloadPath)"
+      >
+        {{ 'ARTISTS_DOWNLOAD' | translation | uppercase }}
+      </button>
+    </div>
+    <div *ngIf="isMobile && artist.projects.length > 1" id="projects-navigator">
+      <div
+        class="page-button"
+        [ngClass]="{ disabled: isNavigatorDisabled('previous') }"
+        (click)="goToPreviousProject()"
+      >
+        <img class="navigation-arrow" alt="Previous Arrow" src="assets/icons/merch_arrow_left_white.svg" />
+      </div>
+      <div class="page-button" [ngClass]="{ disabled: isNavigatorDisabled('next') }" (click)="goToNextProject()">
+        <img class="navigation-arrow" alt="Next Arrow" src="assets/icons/merch_arrow_right_white.svg" />
+      </div>
+    </div>
+  </div>
+</div>

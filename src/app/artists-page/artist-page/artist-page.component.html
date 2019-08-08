@@ -1,0 +1,14 @@
+<div id="artist-page-content">
+  <artist-banner *ngIf="artist" [isMobile]="isMobile" [artist]="artist"></artist-banner>
+  <artist-projects
+    *ngIf="artist"
+    [isMobile]="isMobile"
+    [artist]="artist"
+    [loading]="loading"
+    [currentProjectId]="currentProjectId"
+    [playingTrack]="playingTrack"
+    (onPlay)="playTrack($event)"
+  ></artist-projects>
+  <artist-clips *ngIf="artist && artist.clips.length > 0" [isMobile]="isMobile" [artist]="artist"></artist-clips>
+  <artist-footer *ngIf="artist && isMobile" [artist]="artist"></artist-footer>
+</div>

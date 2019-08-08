@@ -1,0 +1,62 @@
+@import 'src/app/utils/_styleVariables';
+
+#staff-first-layer {
+  border-left: 2px solid $very-light-grey;
+  @media screen and (min-device-width: $desktop-size) {
+    width: calc(100% - 163px);
+    margin-left: 165px;
+  }
+  @media screen and (max-device-width: $desktop-size) {
+    width: calc(100vw - 12.23vw - 2px);
+    margin-left: 12.23vw;
+    margin-bottom: 1px;
+  }
+  #staff-second-layer {
+    position: relative;
+    background-color: $very-light-grey;
+    @media screen and (min-device-width: $desktop-size) {
+      width: calc(-48px + 472px - 48px);
+      height: calc(50px + 48px + 11px + 279px + 151px);
+      margin-top: -48px;
+      padding: 94px 48px;
+      margin-left: calc(100% - 472px - 64px);
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      width: 51.59vw;
+      margin-left: calc(100vw - 51.59vw - 12.23vw - 4.26vw - 2px);
+      margin-top: -6.38vw;
+      padding: 19.15vw 0;
+      text-align: center;
+    }
+    #staff-title {
+      font-weight: normal;
+      margin: 0;
+      @media screen and (min-device-width: $desktop-size) {
+        font-size: 44px;
+        height: 50px;
+        line-height: 1.27;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        font-size: 2em;
+        height: 10.64vw;
+        line-height: 1.25;
+      }
+    }
+  }
+  #staff-cards-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (min-device-width: $desktop-size) {
+      width: 1300px;
+      height: calc(11px + 279px + 151px);
+      margin-top: calc(-11px - 279px - 151px - 94px);
+      margin-left: -165px;
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      flex-direction: column;
+      width: calc(-4.26vw + 100vw - 4.26vw);
+      margin-left: calc(-12.23vw - 2px + 4.26vw);
+    }
+  }
+}

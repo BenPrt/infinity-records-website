@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://infinity-records.fr/sitemap.xml

@@ -1,0 +1,114 @@
+@import 'src/app/utils/_styleVariables';
+
+.preview-image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  @media screen and (min-device-width: $desktop-size) {
+    height: 272px;
+    width: 272px;
+  }
+  @media screen and (max-device-width: $desktop-size) {
+    height: 67.5vw;
+    width: 67.5vw;
+  }
+  .preview-picture {
+    @media screen and (min-device-width: $desktop-size) {
+      height: 272px;
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      height: 67.5vw;
+    }
+  }
+  .blurred {
+    filter: blur(5px);
+  }
+  .details-overlay {
+    position: relative;
+    @media screen and (min-device-width: $desktop-size) {
+      height: 272px;
+      width: 272px;
+      margin-top: -272px;
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      height: 67.5vw;
+      width: 67.5vw;
+      margin-top: -67.5vw;
+    }
+    .overlay {
+      opacity: 0.6;
+      background-color: $black;
+      @media screen and (min-device-width: $desktop-size) {
+        height: 272px;
+        width: 272px;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        height: 67.5vw;
+        width: 67.5vw;
+      }
+    }
+    .description {
+      color: $white;
+      position: relative;
+      user-select: none;
+      @media screen and (min-device-width: $desktop-size) {
+        height: 272px;
+        width: 272px;
+        margin-top: calc(-272px - 4px);
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        height: 67.5vw;
+        width: 67.5vw;
+        margin-top: calc(-67.5vw - 4px);
+      }
+      .description-title {
+        font-weight: bold;
+        @media screen and (min-device-width: $desktop-size) {
+          font-size: 14px;
+          letter-spacing: 2px;
+          margin: 98px 0 3px 29px;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          font-size: 0.8em;
+          letter-spacing: 0.11em;
+          margin: 22.87vw 0 0.8vw 7.71vw;
+        }
+      }
+      .description-color {
+        font-weight: 600;
+        line-height: 1.33;
+        @media screen and (min-device-width: $desktop-size) {
+          font-size: 24px;
+          margin-left: 29px;
+          height: 29px;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          font-size: 1.33em;
+          margin-left: 7.71vw;
+          height: 7.71vw;
+        }
+      }
+      .sold-out-banner {
+        width: 100%;
+        text-align: center;
+        font-weight: 600;
+        background-color: $black;
+        color: $gold;
+        @media screen and (min-device-width: $desktop-size) {
+          font-size: 18px;
+          height: 36px;
+          line-height: 36px;
+          margin-top: 36px;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          font-size: 1em;
+          height: 9.57vw;
+          line-height: 9.57vw;
+          margin-top: 5.32vw;
+        }
+      }
+    }
+  }
+}

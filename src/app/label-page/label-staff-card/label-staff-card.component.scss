@@ -1,0 +1,248 @@
+@import 'src/app/utils/_styleVariables';
+
+:host {
+  @media screen and (max-device-width: $desktop-size) {
+    margin-bottom: 15.96vw;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  .staff-card-wrapper {
+    @media screen and (min-device-width: $desktop-size) {
+      width: 372px;
+      height: calc(12px + 279px + 151px);
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      width: calc(100vw - 4.26vw - 4.26vw);
+      height: calc(3.19vw + 82.18vw + 44.95vw);
+    }
+
+    .member-name {
+      position: relative;
+      z-index: 3;
+      background-color: $black;
+      color: $white;
+      font-weight: 600;
+      margin: 0;
+      @media screen and (min-device-width: $desktop-size) {
+        font-size: 24px;
+        width: calc(96px - 16px);
+        height: calc(47px - 8px);
+        padding-top: 8px;
+        padding-left: 16px;
+        margin-left: 24px;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        width: calc(23.14vw - 13px);
+        height: calc(13.83vw - 1.33vw);
+        padding-top: 1.33vw;
+        padding-left: 3.46vw;
+        margin-left: 6.38vw;
+        font-size: 1.33em;
+      }
+    }
+    .member-picture-wrapper {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      @media screen and (min-device-width: $desktop-size) {
+        margin-top: -36px;
+        width: 372px;
+        height: 279px;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        margin-top: -10.64vw;
+        width: calc(100vw - 4.26vw - 4.26vw);
+        height: 82.18vw;
+      }
+
+      .member-picture {
+        display: block;
+        @media screen and (min-device-width: $desktop-size) {
+          width: 372px;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          height: 82.18vw;
+        }
+
+        &.blurred {
+          filter: blur(5px);
+        }
+      }
+
+      .member-picture-gradient {
+        position: relative;
+        z-index: 1;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.71));
+        @media screen and (min-device-width: $desktop-size) {
+          width: 372px;
+          height: 100px;
+          margin-top: -100px;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          width: calc(100vw - 4.26vw - 4.26vw);
+          height: 29.52vw;
+          margin-top: -29.52vw;
+        }
+      }
+
+      .quote-overlay {
+        position: relative;
+        z-index: 2;
+        @media screen and (min-device-width: $desktop-size) {
+          width: 372px;
+          height: 279px;
+          margin-top: -279px;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          width: calc(100vw - 4.26vw - 4.26vw);
+          height: 82.18vw;
+          margin-top: -83.24vw;
+        }
+        .overlay {
+          position: relative;
+          z-index: 2;
+          opacity: 0.6;
+          background-color: $black;
+          @media screen and (min-device-width: $desktop-size) {
+            width: 372px;
+            height: 279px;
+          }
+          @media screen and (max-device-width: $desktop-size) {
+            width: calc(100vw - 4.26vw - 4.26vw);
+            height: 82.18vw;
+          }
+        }
+        .quote-container {
+          position: relative;
+          z-index: 3;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          @media screen and (min-device-width: $desktop-size) {
+            height: 279px;
+            width: calc(372px - 100px);
+            margin-left: 100px;
+            margin-top: -279px;
+          }
+          @media screen and (max-device-width: $desktop-size) {
+            height: 82.18vw;
+            width: calc((100vw - 4.26vw - 4.26vw) - 24.47vw);
+            margin-left: 24.47vw;
+            margin-top: -82.18vw;
+          }
+
+          .quote {
+            font-family: 'Hesterica';
+            color: $gold;
+            font-weight: normal;
+            @media screen and (min-device-width: $desktop-size) {
+              margin-left: 24px;
+              font-size: 38px;
+              width: calc(252px - 24px);
+            }
+            @media screen and (max-device-width: $desktop-size) {
+              margin-left: calc(4.26vw + 2.13vw);
+              font-size: 2.11em;
+              width: calc((100vw - 4.26vw - 4.26vw) - 24.47vw - 8.51vw - 4.26vw - 2.13vw);
+            }
+          }
+          .quote-author {
+            display: flex;
+            align-items: center;
+            color: $white;
+            font-size: 14px;
+            font-weight: normal;
+            @media screen and (min-device-width: $desktop-size) {
+              height: 22px;
+              margin-top: 10px;
+              width: calc(228px + 22px);
+              margin-bottom: calc(46px + 16px);
+            }
+            @media screen and (max-device-width: $desktop-size) {
+              font-size: 0.8em;
+              height: 6.38vw;
+              margin-top: 3.19vw;
+              width: calc(50.53vw + 6.38vw);
+              margin-bottom: calc(13.56vw + 4.79vw);
+            }
+            .author-separator {
+              border: none;
+              margin: 0;
+              background-color: $gold;
+
+              @media screen and (min-device-width: $desktop-size) {
+                height: 1px;
+                width: 16px;
+                margin-right: 8px;
+              }
+              @media screen and (max-device-width: $desktop-size) {
+                height: 0.27vw;
+                width: 4.26vw;
+                margin-right: 2.13vw;
+              }
+            }
+          }
+        }
+      }
+    }
+    .roles-wrapper {
+      position: relative;
+      z-index: 4;
+      background-color: $white;
+      @media screen and (min-device-width: $desktop-size) {
+        min-height: calc(-22px + 196px - 22px);
+        padding: 22px;
+        margin-top: -46px;
+        margin-left: 100px;
+        width: calc(-22px + 250px - 22px);
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        min-height: calc(-6.38vw + 57.98vw - 6.38vw);
+        padding: 6.38vw;
+        margin-top: -13.56vw;
+        margin-left: 20.47vw;
+        width: calc(-6.38vw + 65.64vw - 6.38vw);
+      }
+      .member-main-role {
+        margin: 0;
+        font-weight: bold;
+        line-height: 1.63;
+        @media screen and (min-device-width: $desktop-size) {
+          letter-spacing: 2px;
+          font-size: 16px;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          letter-spacing: 0.11em;
+          font-size: 0.9em;
+        }
+      }
+      .but-also-separator {
+        color: $grey;
+        line-height: 1.71;
+        @media screen and (min-device-width: $desktop-size) {
+          font-size: 14px;
+          margin-top: 16px;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          font-size: 0.8em;
+          margin-top: 4.26vw;
+        }
+      }
+      .additional-role {
+        margin: 0;
+        font-weight: normal;
+        line-height: 1.63;
+        @media screen and (min-device-width: $desktop-size) {
+          font-size: 16px;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          font-size: 0.9em;
+        }
+      }
+    }
+  }
+}

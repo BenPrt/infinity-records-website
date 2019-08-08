@@ -4,6 +4,8 @@
 
 export const environment = {
   production: false,
+  apiUrl: 'https://api.infinity-records.fr',
+  contactFormRecaptchaKey: '6LeZs6QUAAAAACihintSSAc_48B3Llh3kclMBFAV',
 };
 
 /*

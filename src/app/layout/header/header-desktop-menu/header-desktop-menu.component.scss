@@ -1,0 +1,119 @@
+@import 'src/app/utils/_styleVariables';
+
+:host {
+  margin-bottom: 200px;
+  #desktop-settings-wrapper {
+    width: 100vw;
+    height: 68px;
+  }
+
+  #menu-wrapper {
+    width: 100vw;
+    height: 204px;
+    background-color: $white;
+    border-bottom: 1px solid $light-grey;
+
+    #menu-container {
+      width: 1300px;
+      height: 116px;
+      padding-top: 32px;
+      margin-left: calc((100% - 1300px) / 2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      #menu-left-part,
+      #menu-right-part {
+        width: 500px;
+        height: 116px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .menu-link {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        width: 132px;
+        align-items: flex-end;
+        &:focus {
+          outline: none;
+        }
+
+        .menu-item {
+          cursor: pointer;
+          user-select: none;
+          color: $black;
+          letter-spacing: 3px;
+          line-height: 1.56;
+          height: 28px;
+          margin-top: 10px;
+          font-size : 18px;
+        }
+
+        .menu-indicator {
+          position: relative;
+          width: 72px;
+          height: 4px;
+          background-color: $gold;
+          border: none;
+          margin: 0;
+          margin-left: calc(100% - 72px);
+          margin-top: 6px;
+        }
+      }
+
+      #menu-logo {
+        width: 300px;
+        text-align: center;
+
+        #menu-logo-logo {
+          width: 100%;
+          visibility : hidden;
+        }
+
+        #menu-logo-typo {
+          font-family: Kano;
+          font-weight: normal;
+          letter-spacing: 0.228em;
+          font-size: 20px;
+          user-select: none;
+          display: block;
+          margin-top: 6px;
+          height: 28px;
+          line-height: 1.4;
+        }
+      }
+    }
+  }
+}
+
+
+
+// Animations part
+.menu-hidden {
+  animation: fadeOut 1s linear;
+  visibility : hidden;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.menu-visible {
+  animation: fadeIn 1s linear;
+  visibility : initial;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

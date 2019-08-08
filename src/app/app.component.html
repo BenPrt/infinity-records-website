@@ -1,1 +1,52 @@
-<router-outlet></router-outlet>
+<ng-container #container *ngIf="!reloading">
+  <ng-container *ngIf="isMobile; else desktopVersion">
+    <header-mobile-menu-component
+      [scaleState]="scaleState"
+      [typoState]="typoState"
+      [mobileMenuIsDisplayed]="menuIsDisplayed"
+      [@menuBorderFade]="menuIsDisplayed"
+      (tap)="parseTap($event)"
+    ></header-mobile-menu-component>
+
+    <div
+      id="mobile-page-content"
+      *ngIf="contentIsDisplayed"
+      [@contentFade]
+      (swipeRight)="openMobileMenu()"
+    >
+      <router-outlet> </router-outlet>
+      <footer-component></footer-component>
+    </div>
+
+    <div
+      id="menu-overlay"
+      *ngIf="contentIsDisplayed && mobileMenuIsDisplayed"
+      [@overlayFade]
+      (swipeLeft)="closeMobileMenu()"
+      (click)="closeMobileMenu()"
+    ></div>
+
+    <mobile-menu-component
+      *ngIf="mobileMenuIsDisplayed"
+      [@mobileMenuFade]
+      (swipeLeft)="closeMobileMenu()"
+    ></mobile-menu-component>
+  </ng-container>
+
+  <ng-template #desktopVersion>
+    <header-desktop-menu-component
+      [scaleState]="scaleState"
+      [typoState]="typoState"
+      [menuIsDisplayed]="menuIsDisplayed"
+    ></header-desktop-menu-component>
+    <div
+      id="desktop-page-content"
+      *ngIf="contentIsDisplayed"
+      [@contentFade]
+      [ngStyle]="{ paddingTop: contentOffset }"
+    >
+      <router-outlet> </router-outlet>
+      <footer-component></footer-component>
+    </div>
+  </ng-template>
+</ng-container>

@@ -1,0 +1,158 @@
+@import 'src/app/utils/_styleVariables';
+
+:host {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  position: fixed;
+  z-index: 15;
+  top: 0;
+  left: 0;
+  background-color: $white;
+  @media screen and (min-device-width: $desktop-size) {
+    width: 46.01vw;
+  }
+  @media screen and (max-device-width: $desktop-size) {
+    width: 92.02vw;
+  }
+
+  #menu-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    @media screen and (min-device-width: $desktop-size) {
+      margin-top: 2.13vw;
+      height: 5.32vw;
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      margin-top: 4.26vw;
+      height: 10.64vw;
+    }
+
+    #menu-header-back {
+      @media screen and (min-device-width: $desktop-size) {
+        margin-left: 2.13vw;
+        margin-right: 1.595vw;
+        width: 3.19vw;
+        height: 3.19vw;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        margin-left: 4.26vw;
+        margin-right: 3.19vw;
+        width: 6.38vw;
+        height: 6.38vw;
+      }
+    }
+    #menu-header-title {
+      @media screen and (min-device-width: $desktop-size) {
+        font-size: 4em;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        font-size: 2em;
+      }
+    }
+  }
+
+  #menu-content {
+    width: 100%;
+    @media screen and (min-device-width: $desktop-size) {
+      margin: 3.195vw 2.13vw 0 2.13vw;
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      margin: 6.39vw 4.26vw 0 4.26vw;
+    }
+
+    .menu-item {
+      border-bottom: 1px solid $light-grey;
+      @media screen and (min-device-width: $desktop-size) {
+        height: 7.715vw;
+        width: 41.755vw;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        height: 15.43vw;
+        width: 83.51vw;
+      }
+      .menu-link {
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        @media screen and (min-device-width: $desktop-size) {
+          height: 7.715vw;
+          line-height: 7.715vw;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          height: 15.43vw;
+          line-height: 15.43vw;
+        }
+        h2 {
+          user-select: none;
+          font-weight: 500;
+          color: $black;
+          @media screen and (min-device-width: $desktop-size) {
+            letter-spacing: 0.11em;
+            font-size: 1.8em;
+          }
+          @media screen and (max-device-width: $desktop-size) {
+            letter-spacing: 0.06em;
+            font-size: 0.9em;
+          }
+        }
+      }
+    }
+    #language-menu {
+      display: block;
+      @media screen and (min-device-width: $desktop-size) {
+        margin-top: 3.195vw;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        margin-top: 6.39vw;
+      }
+    }
+  }
+
+  #menu-footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @media screen and (min-device-width: $desktop-size) {
+      margin-left: 2.13vw;
+      margin-bottom: 2.26vw;
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      margin-left: 4.26vw;
+      margin-bottom: 4.52vw;
+    }
+
+    #social-media-separator {
+      border: none;
+      background-color: $gold;
+      @media screen and (min-device-width: $desktop-size) {
+        margin: 0.265vw 1.595vw 0 0;
+        width: 23.14vw;
+        height: 0.265vw;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        margin: 0.53vw 3.19vw 0 0;
+        width: 46.28vw;
+        height: 0.53vw;
+      }
+    }
+
+    .social-media-link {
+      user-select: none;
+      .social-media-icon {
+        @media screen and (min-device-width: $desktop-size) {
+          margin-right: 0.53vw;
+          height: 5.32vw;
+          width: 5.32vw;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          margin-right: 1.06vw;
+          height: 10.64vw;
+          width: 10.64vw;
+        }
+      }
+    }
+  }
+}

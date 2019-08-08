@@ -1,0 +1,40 @@
+<div id="preview-first-layer">
+  <div id="page-navigator-container">
+    <div id="product-title-wrapper">
+      <h3
+        id="product-title-preview"
+        [ngClass]="{
+          hidden: loading,
+          visible: !loading
+        }"
+      >
+        {{ currentProduct.title | translation | uppercase }}
+      </h3>
+    </div>
+    <div id="page-navigator-wrapper">
+      <div id="page-navigator-preview">
+        <div class="page-button" [ngClass]="{ disabled: isDisabled('previous') }" (click)="goToPreviousPage()">
+          <img class="navigation-arrow" alt="Previous Arrow" src="assets/icons/merch_arrow_left_white.svg" />
+        </div>
+        <div class="page-button" [ngClass]="{ disabled: isDisabled('next') }" (click)="goToNextPage()">
+          <img class="navigation-arrow" alt="Next Arrow" src="assets/icons/merch_arrow_right_white.svg" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="preview-second-layer"></div>
+  <div
+    id="previews"
+    [ngClass]="{
+      hidden: loading,
+      visible: !loading
+    }"
+  >
+    <merch-preview-image
+      *ngFor="let decli of currentProduct.declinations; let i = index"
+      id="{{ 'preview-image-' + i }}"
+      [declination]="decli"
+      [currentProduct]="currentProduct"
+    ></merch-preview-image>
+  </div>
+</div>

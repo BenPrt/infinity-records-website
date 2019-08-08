@@ -1,0 +1,68 @@
+<div id="label-description-layer">
+  <div id="description-left-layer">
+    <div id="left-content">
+      <div id="left-pictures-wrapper">
+        <div class="left-picture-wrapper">
+          <img
+            class="left-picture"
+            alt="Infinity Records Microphone Picture"
+            [defaultImage]="'assets/img/loading.gif'"
+            [lazyLoad]="'assets/img/label/microphone.jpg'"
+          />
+        </div>
+        <div class="left-picture-wrapper">
+          <img
+            class="left-picture"
+            alt="Infinity Records Desktop Picture"
+            [defaultImage]="'assets/img/loading.gif'"
+            [lazyLoad]="'assets/img/label/desktop.jpg'"
+          />
+        </div>
+      </div>
+      <p id="left-description">{{ 'LABEL_TOP_DESCRIPTION' | translation }}</p>
+      <ul id="left-description-list">
+        <li>
+          <h3>
+            <span><img alt="Creation pictogram" src="assets/icons/label_creation_icon.svg"/></span
+            >{{ 'LABEL_TOP_CREATION' | translation }}
+          </h3>
+        </li>
+        <li>
+          <h3>
+            <span><img alt="Recording pictogram" src="assets/icons/label_recording_icon.svg"/></span
+            >{{ 'LABEL_TOP_RECORDING' | translation }}
+          </h3>
+        </li>
+        <li>
+          <h3>
+            <span><img alt="Mixing pictogram" src="assets/icons/label_mixing_icon.svg"/></span
+            >{{ 'LABEL_TOP_MIXING' | translation }}
+          </h3>
+        </li>
+        <li>
+          <h3>
+            <span><img alt="Mastering pictogram" src="assets/icons/label_mastering_icon.svg"/></span
+            >{{ 'LABEL_TOP_MASTERING' | translation }}
+          </h3>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="description-right-layer">
+    <hr id="right-separator" />
+    <p id="right-description">{{ 'LABEL_RIGHT_DESCRIPTION' | translation }}</p>
+  </div>
+  <div id="description-bottom-wrapper">
+    <img
+      id="description-bottom-picture"
+      alt="Infinity Records Studio Picture"
+      [defaultImage]="'assets/img/loading.gif'"
+      [lazyLoad]="'assets/img/label/studio.jpg'"
+    />
+    <div id="bottom-picture-gradient"></div>
+  </div>
+  <div id="bottom-picture-content">
+    <hr id="bottom-picture-separator" />
+    <h3 id="bottom-picture-description">{{ 'LABEL_WHERE_THE_MAGIC' | translation }}</h3>
+  </div>
+</div>

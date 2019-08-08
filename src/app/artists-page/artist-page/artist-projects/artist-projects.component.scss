@@ -1,0 +1,466 @@
+@import 'src/app/utils/_styleVariables';
+
+#projects-first-layer {
+  border-right: 2px solid $very-light-grey;
+  @media screen and (min-device-width: $desktop-size) {
+    width: calc(100% - ((100% - 1079px) / 2) - 2px);
+  }
+  @media screen and (max-device-width: $desktop-size) {
+    width: calc(100vw - 12.23vw - 2px);
+  }
+  #projects-second-layer {
+    background-color: $very-light-grey;
+    @media screen and (min-device-width: $desktop-size) {
+      padding: 72px 200px 72px 63px;
+      min-height: calc(401px + 14px + 147px);
+      width: calc(836px - 200px - 63px);
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      padding: 14.89vw 4.26vw;
+      width: calc(-4.26vw + 100vw - 12.23vw - 2px - 13.3vw - 4.26vw);
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+
+    #projects-title {
+      font-weight: normal;
+      @media screen and (min-device-width: $desktop-size) {
+        font-size: 44px;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        font-size: 2em;
+      }
+    }
+
+    #projects-indicators {
+      @media screen and (min-device-width: $desktop-size) {
+        margin-top: 29px;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        margin-top: 6.38vw;
+      }
+      .projects-indicator {
+        display: inline-block;
+        cursor: pointer;
+        color: $black;
+        line-height: 1.56;
+        user-select: none;
+        @media screen and (min-device-width: $desktop-size) {
+          font-size: 18px;
+          margin-right: 1.66vw;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          font-size: 1em;
+          margin-right: 6.38vw;
+        }
+      }
+    }
+
+    #project-container {
+      width: 100%;
+      @media screen and (min-device-width: $desktop-size) {
+        margin-top: 51px;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        margin-top: 8.51vw;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+      }
+      .cover-and-player-container {
+        @media screen and (min-device-width: $desktop-size) {
+          position: absolute;
+          width: 401px;
+          height: calc(401px + 14px + 147px);
+          margin-left: calc(100% - (100% - 1300px) - 401px - 63px - ((1300px - 1079px) / 2));
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          width: 75.53vw;
+          margin-left: calc(((100vw - 75.53vw) / 2) - 4.26vw);
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+        }
+        .project-cover-wrapper {
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          justify-content: center;
+          align-items: center;
+          @media screen and (min-device-width: $desktop-size) {
+            margin-bottom: 14px;
+            width: 401px;
+            height: 401px;
+          }
+          @media screen and (max-device-width: $desktop-size) {
+            margin-bottom: 4.26vw;
+            width: 75.53vw;
+            height: 75.53vw;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+          }
+          .project-cover {
+            @media screen and (min-device-width: $desktop-size) {
+              height: 401px;
+            }
+            @media screen and (max-device-width: $desktop-size) {
+              height: 75.53vw;
+              backface-visibility: hidden;
+              -webkit-backface-visibility: hidden;
+            }
+          }
+        }
+      }
+      .project-title-and-duration {
+        @media screen and (min-device-width: $desktop-size) {
+          line-height: 1.25;
+          height: 36px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          margin-top: 10.64vw;
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+        }
+        .project-title {
+          font-weight: 600;
+          @media screen and (min-device-width: $desktop-size) {
+            font-size: 32px;
+          }
+          @media screen and (max-device-width: $desktop-size) {
+            font-size: 1.15em;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+          }
+        }
+        .project-duration {
+          font-weight: normal;
+          color: $grey;
+          @media screen and (min-device-width: $desktop-size) {
+            font-size: 32px;
+          }
+          @media screen and (max-device-width: $desktop-size) {
+            font-size: 2em;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+          }
+        }
+      }
+      .project-release-date {
+        color: $grey;
+        font-weight: 500;
+        @media screen and (min-device-width: $desktop-size) {
+          font-size: 18px;
+          line-height: 1.33;
+          letter-spacing: 2px;
+          margin-top: 7px;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          font-size: 0.8em;
+          line-height: 1.43;
+          letter-spacing: 0.06em;
+          margin-top: 0.56vw;
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+        }
+      }
+      .project-tracklist {
+        @media screen and (min-device-width: $desktop-size) {
+          margin-top: 13px;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          margin-top: 2.13vw;
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+        }
+        .project-track-container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          border-bottom: 1px solid $light-grey;
+
+          @media screen and (min-device-width: $desktop-size) {
+            height: 52px;
+          }
+          @media screen and (max-device-width: $desktop-size) {
+            height: 15.43vw;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+          }
+          .track-informations {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            @media screen and (min-device-width: $desktop-size) {
+              font-size: 16px;
+            }
+            @media screen and (max-device-width: $desktop-size) {
+              font-size: 0.9em;
+              backface-visibility: hidden;
+              -webkit-backface-visibility: hidden;
+            }
+            .track-number {
+              font-weight: normal;
+              line-height: 1.56;
+              @media screen and (min-device-width: $desktop-size) {
+                margin-right: 7px;
+                font-size: 18px;
+              }
+              @media screen and (max-device-width: $desktop-size) {
+                margin-right: 2.13vw;
+                font-size: 1em;
+                backface-visibility: hidden;
+                -webkit-backface-visibility: hidden;
+              }
+            }
+            .track-separator {
+              border: none;
+              margin: 0;
+              background-color: $gold;
+              @media screen and (min-device-width: $desktop-size) {
+                width: 22px;
+                margin-right: 7px;
+                height: 1px;
+              }
+              @media screen and (max-device-width: $desktop-size) {
+                width: 6.38vw;
+                margin-right: 2.13vw;
+                height: 0.27vw;
+                backface-visibility: hidden;
+                -webkit-backface-visibility: hidden;
+              }
+            }
+          }
+
+          .playing-indicators {
+            @media screen and (min-device-width: $desktop-size) {
+              font-size: 16px;
+            }
+            @media screen and (max-device-width: $desktop-size) {
+              font-size: 0.9em;
+              backface-visibility: hidden;
+              -webkit-backface-visibility: hidden;
+            }
+            .play-button {
+              display: flex;
+              align-items: center;
+              cursor: pointer;
+              img {
+                text-decoration: none;
+                @media screen and (min-device-width: $desktop-size) {
+                  width: 18px;
+                  height: 18px;
+                  margin-right: 5px;
+                }
+                @media screen and (max-device-width: $desktop-size) {
+                  width: 5.32vw;
+                  height: 5.32vw;
+                  backface-visibility: hidden;
+                  -webkit-backface-visibility: hidden;
+                }
+              }
+              span {
+                @media screen and (max-device-width: $desktop-size) {
+                  display: none;
+                }
+                font-weight: normal;
+                text-decoration: underline;
+                backface-visibility: hidden;
+                -webkit-backface-visibility: hidden;
+              }
+            }
+            .listening-indicator {
+              display: flex;
+              align-items: center;
+              img {
+                @media screen and (min-device-width: $desktop-size) {
+                  width: 22px;
+                  height: 22px;
+                }
+                @media screen and (max-device-width: $desktop-size) {
+                  width: 6.38vw;
+                  height: 6.38vw;
+                  backface-visibility: hidden;
+                  -webkit-backface-visibility: hidden;
+                }
+              }
+              span {
+                @media screen and (max-device-width: $desktop-size) {
+                  display: none;
+                }
+                font-weight: 600;
+                backface-visibility: hidden;
+                -webkit-backface-visibility: hidden;
+              }
+            }
+          }
+        }
+      }
+      .project-download-button {
+        background-color: $black;
+        color: $white;
+        font-family: 'Montserrat';
+        font-weight: 500;
+        border: none;
+        cursor: pointer;
+        padding: none;
+        @media screen and (min-device-width: $desktop-size) {
+          font-size: 16px;
+          height: 36px;
+          width: 154px;
+          margin-top: 60px;
+          margin-left: calc(100% - 154px);
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          font-size: 0.9em;
+          height: 10.64vw;
+          margin-top: 12.77vw;
+          width: 100%;
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+        }
+      }
+    }
+    #projects-navigator {
+      background-color: $grey;
+      display: flex;
+      justify-content: space-between;
+      width: calc(13.3vw + 1px + 13.3vw);
+      margin-top: 6.38vw;
+      margin-left: calc(-4.26vw + 100vw - 12.23vw - 2px - 13.3vw - 13.3vw);
+      height: 13.3vw;
+    }
+    .page-button {
+      cursor: pointer;
+      background-color: $dark-grey;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+      height: 13.3vw;
+      width: 13.3vw;
+
+      .navigation-arrow {
+        height: 3.72vw;
+        width: 3.72vw;
+      }
+    }
+
+    .disabled {
+      background-color: $grey;
+      cursor: default;
+    }
+  }
+}
+
+// Animations part
+.hidden-next {
+  animation: fadeOutNext 300ms linear;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.hidden-previous {
+  animation: fadeOutPrevious 300ms linear;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+@media screen and (min-device-width: $desktop-size) {
+  @keyframes fadeOutNext {
+    0% {
+      opacity: 1;
+      margin-left: 0;
+    }
+    100% {
+      opacity: 0;
+      margin-left: -14px;
+    }
+  }
+  @keyframes fadeOutPrevious {
+    0% {
+      opacity: 1;
+      margin-left: 0;
+    }
+    100% {
+      opacity: 0;
+      margin-left: 14px;
+    }
+  }
+}
+@media screen and (max-device-width: $desktop-size) {
+  @keyframes fadeOutNext {
+    0% {
+      opacity: 1;
+      margin-left: 0;
+    }
+    100% {
+      opacity: 0;
+      margin-left: -16px;
+    }
+  }
+  @keyframes fadeOutPrevious {
+    0% {
+      opacity: 1;
+      margin-left: 0;
+    }
+    100% {
+      opacity: 0;
+      margin-left: 16px;
+    }
+  }
+}
+
+.visible-next {
+  animation: fadeInNext 300ms linear;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.visible-previous {
+  animation: fadeInPrevious 300ms linear;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+@media screen and (min-device-width: $desktop-size) {
+  @keyframes fadeInNext {
+    0% {
+      opacity: 0;
+      margin-left: 14px;
+    }
+    100% {
+      opacity: 1;
+      margin-left: 0;
+    }
+  }
+  @keyframes fadeInPrevious {
+    0% {
+      opacity: 0;
+      margin-left: -14px;
+    }
+    100% {
+      opacity: 1;
+      margin-left: 0;
+    }
+  }
+}
+@media screen and (max-device-width: $desktop-size) {
+  @keyframes fadeInNext {
+    0% {
+      opacity: 0;
+      margin-left: 16px;
+    }
+    100% {
+      opacity: 1;
+      margin-left: 0;
+    }
+  }
+  @keyframes fadeInPrevious {
+    0% {
+      opacity: 0;
+      margin-left: -16px;
+    }
+    100% {
+      opacity: 1;
+      margin-left: 0;
+    }
+  }
+}

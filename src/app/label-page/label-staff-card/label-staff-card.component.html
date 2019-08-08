@@ -1,0 +1,38 @@
+<div class="staff-card-wrapper">
+  <h3
+    class="member-name"
+    (mouseover)="displayQuote($event, true)"
+    (mouseleave)="displayQuote($event, false)"
+    (click)="displayQuote($event)"
+  >
+    {{ member.name }}
+  </h3>
+  <div
+    class="member-picture-wrapper"
+    (mouseover)="displayQuote($event, true)"
+    (mouseleave)="displayQuote($event, false)"
+    (click)="displayQuote($event)"
+  >
+    <img
+      class="member-picture"
+      alt="{{ member.name }}\'s picture"
+      [defaultImage]="'assets/img/loading.gif'" [lazyLoad]="member.picture"
+      [ngClass]="{ blurred: quoteIsDisplayed }"
+    />
+    <div class="member-picture-gradient"></div>
+    <div class="quote-overlay" *ngIf="quoteIsDisplayed" [@quote-fade]>
+      <div class="overlay"></div>
+      <div class="quote-container">
+        <h4 class="quote">{{ member.quote }}</h4>
+        <h4 class="quote-author">
+          <span><hr class="author-separator"/></span>{{ member.quoteAuthor }}
+        </h4>
+      </div>
+    </div>
+  </div>
+  <div class="roles-wrapper">
+    <h4 class="member-main-role">{{ member.mainRole | translation | uppercase }}</h4>
+    <p class="but-also-separator">{{ 'LABEL_BUT_ALSO' | translation }}</p>
+    <h5 *ngFor="let role of member.otherRoles" class="additional-role">{{ role | translation }}</h5>
+  </div>
+</div>

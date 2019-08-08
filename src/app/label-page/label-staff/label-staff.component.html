@@ -1,0 +1,8 @@
+<div id="staff-first-layer">
+    <div id="staff-second-layer">
+        <h3 id="staff-title">{{"LABEL_STAFF_TITLE" | translation}}</h3>
+    </div>
+    <div id="staff-cards-wrapper" >
+        <label-staff-card *ngFor="let member of staffMembers" [member]="member"></label-staff-card>
+    </div>
+</div>

@@ -1,0 +1,103 @@
+@import 'src/app/utils/_styleVariables';
+
+#artist-navigation-wrapper {
+  position: relative;
+
+  #artist-navigation {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (min-device-width: $desktop-size) {
+      margin-top: calc(-23px - 67px - 14px - 28px - 607px);
+      width: 100%;
+      height: 67px;
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      width: calc(-4.26vw + 100vw - 4.26vw);
+      height: 6.91vw;
+      margin: calc(-19.68vw - 17.29vw - 91.49vw - 12.77vw - 64.89vw - 17.02vw + 4.26vw) 4.26vw 32px 4.26vw;
+    }
+
+    #back-button {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      @media screen and (min-device-width: $desktop-size) {
+        font-size: 16px;
+        height: 22px;
+        margin-left: 16px;
+        width: 150px;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        font-size: 0.9em;
+        height: 6.38vw;
+      }
+
+      img {
+        @media screen and (min-device-width: $desktop-size) {
+          height: 22px;
+          width: 22px;
+          margin-right: 7px;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          height: 5.85vw;
+          width: 5.85vw;
+          margin-right: 2.13vw;
+        }
+      }
+    }
+    #arborescence {
+      text-align: center;
+      width: 375px;
+      margin-left: calc((100% - 1079px) / 2);
+      #arbo-first {
+        font-size: 16px;
+        margin-right: 11px;
+        cursor: pointer;
+      }
+      #arbo-slash {
+        width: 24px;
+        font-size: 16px;
+        margin-right: 11px;
+        color: $grey;
+        cursor: default;
+      }
+      #arbo-second {
+        font-size: 16px;
+        font-weight: 600;
+        cursor: default;
+      }
+    }
+    #next-artist-link {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      font-weight: 600;
+      text-decoration: none;
+      color: $black;
+      @media screen and (min-device-width: $desktop-size) {
+        font-size: 16px;
+        height: 22px;
+        margin-right: calc((100% - 1079px) / 2);
+        width: 150px;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        font-size: 0.9em;
+        height: 6.38vw;
+      }
+      img {
+        @media screen and (min-device-width: $desktop-size) {
+          height: 22px;
+          width: 22px;
+          margin-left: 7px;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          height: 5.85vw;
+          width: 5.85vw;
+          margin-left: 2.13vw;
+        }
+      }
+    }
+  }
+}

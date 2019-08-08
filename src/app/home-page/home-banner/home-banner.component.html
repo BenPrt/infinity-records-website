@@ -1,0 +1,20 @@
+<div id="banner-first-layer">
+  <div id="banner-wrapper">
+    <div id="picture-wrapper">
+      <img
+        id="banner-picture"
+        alt="Welcome Banner Picture"
+        [defaultImage]="'assets/img/loading.gif'"
+        [lazyLoad]="isMobile ? 'assets/img/home/banner_mobile.jpg' : 'assets/img/home/banner.jpg'"
+      />
+      <div id="banner-picture-gradient"></div>
+    </div>
+    <div id="welcome-message-container">
+      <div id="welcome-message-wrapper">
+        <h2 id="welcome-message">{{ 'HOME_WELCOME' | translation }}</h2>
+        <hr id="welcome-separator" />
+      </div>
+    </div>
+  </div>
+  <div id="banner-second-layer"></div>
+</div>

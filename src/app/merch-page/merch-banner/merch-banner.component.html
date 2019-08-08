@@ -1,0 +1,46 @@
+<div id="banner-image-container">
+  <img
+    id="banner-image"
+    alt="Merch Banner Image"
+    [defaultImage]="'assets/img/loading.gif'"
+    [lazyLoad]="isMobile && !isTablet ? 'assets/img/merch/banner_mobile.jpg' : 'assets/img/merch/banner.jpg'"
+  />
+  <div id="banner-image-gradient"></div>
+</div>
+<div id="content-over-image">
+  <div id="text-container">
+    <h2 id="text-title">{{ 'MERCH' | translation | uppercase }}</h2>
+    <h2 id="text-subtitle">{{ 'MERCH_BANNER_SUBTITLE' | translation }}</h2>
+    <p id="text-description">{{ 'MERCH_BANNER_DESCRIPTION' | translation }}</p>
+  </div>
+  <div id="page-navigator-banner" *ngIf="!isMobile">
+    <div class="page-button" [ngClass]="{ disabled: isDisabled('previous') }" (click)="goToPreviousPage()">
+      <img
+        *ngIf="!isDisabled('previous')"
+        class="navigation-arrow"
+        alt="Previous Arrow Enabled"
+        src="assets/icons/merch_arrow_left_dark-grey.svg"
+      />
+      <img
+        *ngIf="isDisabled('previous')"
+        class="navigation-arrow"
+        alt="Previous Arrow Disabled"
+        src="assets/icons/merch_arrow_left_light-grey.svg"
+      />
+    </div>
+    <div class="page-button" [ngClass]="{ disabled: isDisabled('next') }" (click)="goToNextPage()">
+      <img
+        *ngIf="!isDisabled('next')"
+        class="navigation-arrow"
+        alt="Next Arrow Enabled"
+        src="assets/icons/merch_arrow_right_dark-grey.svg"
+      />
+      <img
+        *ngIf="isDisabled('next')"
+        class="navigation-arrow"
+        alt="Next Arrow Disabled"
+        src="assets/icons/merch_arrow_right_light-grey.svg"
+      />
+    </div>
+  </div>
+</div>

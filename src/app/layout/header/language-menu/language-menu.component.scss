@@ -1,0 +1,140 @@
+@import 'src/app/utils/_styleVariables';
+
+#current-language {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+
+  #current-language-label {
+    display: inline-block;
+    font-weight: 500;
+    @media screen and (min-device-width: $desktop-size) {
+      font-size: 18px;
+      margin-right: 12px;
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      font-size: 1em;
+      margin-right: 3.19vw;
+    }
+  }
+  #current-language-arrow {
+    display: inline-block;
+    @media screen and (min-device-width: $desktop-size) {
+      margin-right: 4px;
+      width: 24px;
+      height: 24px;
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      margin-right: 1.06vw;
+      width: 6.38vw;
+      height: 6.38vw;
+    }
+  }
+}
+
+#selection-menu-wrapper {
+  position: absolute;
+  z-index: 10;
+  @media screen and (min-device-width: $desktop-size) {
+    margin-top: 7px;
+    margin-left: 17px;
+    width: 152px;
+  }
+  @media screen and (max-device-width: $desktop-size) {
+    margin-top: 1.86vw;
+    margin-left: 4.52vw;
+    width: 40.43vw;
+  }
+  &.french {
+    @media screen and (min-device-width: $desktop-size) {
+      margin-left: 24px;
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      margin-left: 6.38vw;
+    }
+  }
+  #selection-menu-roof {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (min-device-width: $desktop-size) {
+      width: 24px;
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      width: 6.38vw;
+    }
+  }
+
+  #selection-menu-content {
+    background-color: $black;
+    color: $white;
+    @media screen and (min-device-width: $desktop-size) {
+      padding: 12px 24px;
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      padding: 3.19vw 6.38vw;
+    }
+  }
+
+  #selection-menu-title {
+    font-weight: 600;
+    @media screen and (min-device-width: $desktop-size) {
+      font-size: 14px;
+      margin-top: 12px;
+      letter-spacing: 1px;
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      font-size: 0.78em;
+      margin-top: 3.19vw;
+      letter-spacing: 0.06em;
+    }
+  }
+
+  .selection-menu-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $dark-grey;
+    cursor: pointer;
+    @media screen and (min-device-width: $desktop-size) {
+      padding: 12px 0;
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      padding: 3.19vw 0;
+    }
+
+    .selection-menu-item-icon-wrapper {
+      width: 28px;
+      .selection-menu-item-icon {
+        display: inline-block;
+        @media screen and (min-device-width: $desktop-size) {
+          margin-right: 4px;
+          width: 24px;
+          height: 24px;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          margin-right: 1.06vw;
+          width: 6.38vw;
+          height: 6.38vw;
+        }
+      }
+    }
+
+    .selection-menu-item-label {
+      display: inline-block;
+      @media screen and (min-device-width: $desktop-size) {
+        font-size: 16px;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        font-size: 0.9em;
+      }
+    }
+    .selected {
+      color: $gold;
+    }
+  }
+
+  .selection-menu-item:last-child {
+    border-bottom: none;
+  }
+}

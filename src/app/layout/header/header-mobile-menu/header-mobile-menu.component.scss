@@ -1,0 +1,108 @@
+@import 'src/app/utils/_styleVariables';
+
+:host {
+  width: 100%;
+  border-bottom: 1px solid $light-grey;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background-color: $white;
+  z-index: 1;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  @media screen and (min-device-width: $desktop-size) {
+    height: 10.64vw;
+  }
+  @media screen and (max-device-width: $desktop-size) {
+    height: 21.28vw;
+  }
+
+  #header-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    @media screen and (min-device-width: $desktop-size) {
+      width: 100%;
+      height: 10.64vw;
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      width: 100%;
+      height: 21.28vw;
+    }
+
+    #header-logo {
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      @media screen and (min-device-width: $desktop-size) {
+        width: 62.5vw;
+        height: 24.17vw;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        width: 100vw;
+        height: 38.31vw;
+      }
+      #header-logo-logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        @media screen and (min-device-width: $desktop-size) {
+          height: 19.79vw;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          height: 27.93vw;
+        }
+      }
+      #header-logo-typo {
+        font-family: Kano;
+        font-weight: normal;
+        user-select: none;
+        display: block;
+        line-height: 1.4;
+        text-align: center;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        @media screen and (min-device-width: $desktop-size) {
+          letter-spacing: 0.22em;
+          font-size: 1.33em;
+          margin-top: 0.665vw;
+          height: 1.195vw;
+        }
+        @media screen and (max-device-width: $desktop-size) {
+          letter-spacing: 0.22em;
+          font-size: 1.33em;
+          margin-top: 1.33vw;
+          height: 7.17vw;
+        }
+      }
+    }
+  }
+  
+  #burger-button {
+    position: relative;
+    margin-left : -100%;
+    @media screen and (min-device-width: $desktop-size) {
+      width: 7.445vw;
+    }
+    @media screen and (max-device-width: $desktop-size) {
+      width: 14.89vw;
+    }
+    #burger-button-icon {
+      @media screen and (min-device-width: $desktop-size) {
+        margin-left: 2.125vw;
+        height: 5.32vw;
+        width: 5.32vw;
+      }
+      @media screen and (max-device-width: $desktop-size) {
+        margin-left: 4.25vw;
+        height: 10.64vw;
+        width: 10.64vw;
+      }
+    }
+  }
+}

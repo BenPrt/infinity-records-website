@@ -1,0 +1,8 @@
+@import 'src/app/utils/_styleVariables';
+
+:host {
+  iframe {
+    width: 100%;
+    height: 150px;
+  }
+}
