@@ -13,6 +13,8 @@
       width: calc(100vw - 12.23vw - 2px - 12.23vw - 2px);
       margin-left: 12.23vw;
       height: calc(17.02vw + 67.5vw + 6.38vw + 67.5vw + 6.38vw + 67.5vw + 10.64vw + 13.83vw + 27.66vw);
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
     }
   }
 
@@ -28,6 +30,10 @@
     }
     #product-title-wrapper {
       position: relative;
+      @media screen and (max-device-width: $desktop-size) {
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+      }
       #product-title-preview {
         font-weight: bold;
         transform: rotate(90deg);
@@ -45,6 +51,8 @@
           width: 31.91vw;
           margin-top: 29.52vw;
           margin-left: -12.5vw;
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
         }
       }
     }
@@ -135,6 +143,8 @@
       margin-top: calc(-67.5vw - 6.38vw - 67.5vw - 6.38vw - 67.5vw - 10.64vw - 13.83vw);
       margin-left: calc(100vw - 12.23vw - 2px - 67.5vw - 4.26vw);
       flex-direction: column;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
     }
   }
 }
@@ -142,6 +152,7 @@
 // Animations part
 .hidden {
   animation: fadeOut 300ms linear;
+  opacity : 0.2;
 }
 @keyframes fadeOut {
   0% {
@@ -156,6 +167,7 @@
 
 .visible {
   animation: fadeIn 300ms linear;
+  opacity : 1;
 }
 @keyframes fadeIn {
   0% {
