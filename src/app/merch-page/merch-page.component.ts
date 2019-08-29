@@ -35,15 +35,26 @@ export class MerchPageComponent implements OnInit, OnDestroy {
     this.meta.updateTag({ name: 'description', content: `${translationPipe.transform('METADATA_MERCH_DESCRIPTION')}` });
     this.meta.updateTag({ name: 'keywords', content: `${translationPipe.transform('METADATA_MERCH_KEYWORDS')}` });
     this.meta.updateTag({ name: 'author', content: 'Infinity Records' });
-    this.meta.updateTag({ property: 'og:url', content: 'https://www.infinity-records.fr/merch' });
-    this.meta.updateTag({ property: 'og:title', content: 'Infinity Records - Merchandising' });
     this.meta.updateTag({
+      prefix: 'og: http://ogp.me/ns#',
+      property: 'og:url',
+      content: 'https://infinity-records.fr/merch',
+    });
+    this.meta.updateTag({ prefix: 'og: http://ogp.me/ns#', property: 'og:type', content: 'website' });
+    this.meta.updateTag({
+      prefix: 'og: http://ogp.me/ns#',
+      property: 'og:title',
+      content: 'Infinity Records - Merchandising',
+    });
+    this.meta.updateTag({
+      prefix: 'og: http://ogp.me/ns#',
       property: 'og:description',
       content: `${translationPipe.transform('METADATA_MERCH_DESCRIPTION')}`,
     });
     this.meta.updateTag({
+      prefix: 'og: http://ogp.me/ns#',
       property: 'og:image',
-      content: 'https://www.infinity-records.fr/assets/img/merch/banner.jpg',
+      content: 'https://infinity-records.fr/assets/img/merch/banner.jpg',
     });
   }
 
