@@ -31,13 +31,13 @@ export const artistsInfos: ArtistInformations[] = [
           {
             title: 'No Distraction',
             soundcloudUrl:
-              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/661877189%3Fsecret_token%3Ds-T2XXw&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/661877189&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
           },
           {
             title: 'Mindblown',
             soundcloudUrl:
-              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/661875353%3Fsecret_token%3Ds-BjeYH&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
-          },
+              'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/661875353&color=%23d7bf85&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true'
+            },
           {
             title: 'Out of Nothing',
             soundcloudUrl:

@@ -9,10 +9,7 @@ import { TranslationPipe } from 'src/app/shared/pipes/translation.pipe';
   styleUrls: ['./label-page.component.scss'],
 })
 export class LabelPageComponent implements OnInit {
-  constructor(
-    private meta: Meta,
-    private translationService: TranslationService,
-  ) {}
+  constructor(private meta: Meta, private translationService: TranslationService) {}
 
   ngOnInit(): void {
     this.defineMetadata();
@@ -24,15 +21,26 @@ export class LabelPageComponent implements OnInit {
     this.meta.updateTag({ name: 'description', content: `${translationPipe.transform('METADATA_LABEL_DESCRIPTION')}` });
     this.meta.updateTag({ name: 'keywords', content: `${translationPipe.transform('METADATA_LABEL_KEYWORDS')}` });
     this.meta.updateTag({ name: 'author', content: 'Infinity Records' });
-    this.meta.updateTag({ property: 'og:url', content: 'https://www.infinity-records.fr/label' });
-    this.meta.updateTag({ property: 'og:title', content: `${translationPipe.transform('METADATA_LABEL_TITLE')}` });
     this.meta.updateTag({
+      prefix: 'og: http://ogp.me/ns#',
+      property: 'og:url',
+      content: 'https://infinity-records.fr/label',
+    });
+    this.meta.updateTag({ prefix: 'og: http://ogp.me/ns#', property: 'og:type', content: 'website' });
+    this.meta.updateTag({
+      prefix: 'og: http://ogp.me/ns#',
+      property: 'og:title',
+      content: `${translationPipe.transform('METADATA_LABEL_TITLE')}`,
+    });
+    this.meta.updateTag({
+      prefix: 'og: http://ogp.me/ns#',
       property: 'og:description',
       content: `${translationPipe.transform('METADATA_LABEL_DESCRIPTION')}`,
     });
     this.meta.updateTag({
+      prefix: 'og: http://ogp.me/ns#',
       property: 'og:image',
-      content: 'https://www.infinity-records.fr/assets/img/label/studio.jpg',
+      content: 'https://infinity-records.fr/assets/img/label/studio.jpg',
     });
   }
 }
