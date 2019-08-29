@@ -47,7 +47,7 @@ export class HomePageComponent implements OnInit, OnDestroy {
     this.meta.updateTag({
       prefix: 'og: http://ogp.me/ns#',
       property: 'og:url',
-      content: 'https://infinity-records.fr',
+      content: 'https://infinity-records.fr/',
     });
     this.meta.updateTag({ prefix: 'og: http://ogp.me/ns#', property: 'og:type', content: 'website' });
     this.meta.updateTag({
