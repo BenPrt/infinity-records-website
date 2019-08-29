@@ -33,6 +33,10 @@ export class ArtistNavigationComponent implements OnChanges {
   }
 
   getNextArtist(): string {
+    const urlSegments = this.router.url.split('/');
+    if (urlSegments.length > 3) {
+      return `../../${encodeURI(this.nextArtist.name)}`;
+    }
     return `../${encodeURI(this.nextArtist.name)}`;
   }
 }
