@@ -194,7 +194,6 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   initAnimationState(): void {
     const path = this.location.path();
-    alert(path);
     if (path === '' || path.substring(0, 1) === '?') {
       this.initMenuAnimation();
       this.defineMetadata();
