@@ -13,11 +13,13 @@ import { Router, RouterEvent } from '@angular/router';
 import { animate, style, transition, trigger, state } from '@angular/animations';
 import { debounceTime } from 'rxjs/operators';
 
+import { TranslationPipe } from 'src/app/shared/pipes/translation.pipe';
 import { TranslationService } from 'src/app/shared/services/translation.service';
 import { MobileMenuEventsService } from './shared/services/mobile-menu-events.service';
 import { DeviceService } from './shared/services/device.service';
 import { ScrollService } from './shared/services/scroll.service';
 import { fromEvent, Subscription, Observable } from 'rxjs';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -85,6 +87,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     private mobileMenuService: MobileMenuEventsService,
     private scrollService: ScrollService,
     private platformLocation: PlatformLocation,
+    private meta: Meta,
   ) {
     this.isBrowser = isPlatformBrowser(platformId);
     platformLocation.onPopState((event: PopStateEvent) => {
@@ -191,9 +194,45 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   initAnimationState(): void {
     const path = this.location.path();
-    if (path === '') {
+    if (path === '' || path.substring(0, 1) === '?') {
       this.initMenuAnimation();
+      this.defineMetadata();
     }
+  }
+
+  defineMetadata(): void {
+    const translationPipe = new TranslationPipe(this.translationService);
+    this.meta.updateTag({
+      name: 'title',
+      content: `${translationPipe.transform('METADATA_HOMEPAGE_TITLE')}`,
+    });
+    this.meta.updateTag({
+      name: 'description',
+      content: `${translationPipe.transform('METADATA_HOMEPAGE_DESCRIPTION')}`,
+    });
+    this.meta.updateTag({ name: 'keywords', content: `${translationPipe.transform('METADATA_HOMEPAGE_KEYWORDS')}` });
+    this.meta.updateTag({ name: 'author', content: 'Infinity Records' });
+    this.meta.updateTag({
+      prefix: 'og: http://ogp.me/ns#',
+      property: 'og:url',
+      content: 'https://infinity-records.fr/',
+    });
+    this.meta.updateTag({ prefix: 'og: http://ogp.me/ns#', property: 'og:type', content: 'website' });
+    this.meta.updateTag({
+      prefix: 'og: http://ogp.me/ns#',
+      property: 'og:title',
+      content: `${translationPipe.transform('METADATA_HOMEPAGE_TITLE')}`,
+    });
+    this.meta.updateTag({
+      prefix: 'og: http://ogp.me/ns#',
+      property: 'og:description',
+      content: `${translationPipe.transform('METADATA_HOMEPAGE_DESCRIPTION')}`,
+    });
+    this.meta.updateTag({
+      prefix: 'og: http://ogp.me/ns#',
+      property: 'og:image',
+      content: 'https://infinity-records.fr/assets/img/home/banner.jpg',
+    });
   }
 
   initMenuAnimation(): void {
