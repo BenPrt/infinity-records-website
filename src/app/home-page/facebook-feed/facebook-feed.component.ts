@@ -1,4 +1,4 @@
-import { Component, Input, Inject, PLATFORM_ID, OnInit, ElementRef, Renderer } from '@angular/core';
+import { Component, Input, Inject, PLATFORM_ID, OnInit, ElementRef, Renderer2 } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { isPlatformBrowser } from '@angular/common';
 
@@ -23,7 +23,7 @@ export class FacebookFeedComponent implements OnInit {
     @Inject(PLATFORM_ID) private platformId: Object,
     private sanitizer: DomSanitizer,
     private elRef: ElementRef,
-    private renderer: Renderer,
+    private renderer: Renderer2,
   ) {
     this.isBrowser = isPlatformBrowser(platformId);
   }
@@ -71,8 +71,8 @@ export class FacebookFeedComponent implements OnInit {
       this.finalWidth = String(pixelWidth);
     }
 
-    this.renderer.setElementStyle(this.elRef.nativeElement, 'width', `${this.finalWidth}px`);
-    this.renderer.setElementStyle(this.elRef.nativeElement, 'margin', `0 calc((100% - ${this.finalWidth}px) / 2)`);
+    this.renderer.setStyle(this.elRef.nativeElement, 'width', `${this.finalWidth}px`);
+    this.renderer.setStyle(this.elRef.nativeElement, 'margin', `0 calc((100% - ${this.finalWidth}px) / 2)`);
 
     return this.finalWidth;
   }
