@@ -20,7 +20,9 @@
     "start_server": "pm2 start server.js --name infinity-records_uat && pm2 logs infinity-records_uat --lines 100 &",
     "restart_server": "pm2 restart infinity-records_uat  && pm2 logs infinity-records_uat",
     "flush_server_logs": "pm2 flush",
-    "stop_server": "pm2 stop infinity-records_uat"
+    "stop_server": "pm2 stop infinity-records_uat",
+    "start:heroku": "node dist/server",
+    "postinstall": "npm run build:ssr"
   },
   "private": true,
   "dependencies": {
