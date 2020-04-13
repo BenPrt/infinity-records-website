@@ -1,6 +1,6 @@
 ![Infinity Records Logo](/src/assets/img/Readme_banner_logo.png)
 
-# [Infinity Records](http://www.infinity-records.fr/)
+# <center> Check the website [here](http://www.infinity-records.fr/) </center>
 
 *Huge thanks to [Katheleen LEMAIRE](https://www.linkedin.com/in/katheleenlmr) for designing the website, go check all of her other works [here](https://www.behance.net/KatheleenLmr) !*
 
