@@ -21,7 +21,7 @@ The four pages of the application describe :
 
 The whole application is available in two languages (English and French) and have a responsive web-mobile version. The application is also a Progressive Web App, so you can even pin the website as an app on your phone.
 
-When I developed and first deployed the application, I used to use my personal Git platform on my own server, and Jenkins to automate the builds and deployments of the application on my Nginx server with Virtual Hosts. But as having my own server was costing me much, I finally decided to migrate everything on Heroku on a free plan.
+When I developed and first deployed the application, I used to use my personal Git platform on my own server, and Jenkins to automate the builds and deployments of the application on my Nginx server with Virtual Hosts. But since having my own server was costing me much, I finally decided to migrate everything to Heroku on a free plan.
 
 ## Organisation
 
