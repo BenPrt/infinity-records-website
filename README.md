@@ -1,27 +1,45 @@
-# InfinityRecordsWebsite
+![Infinity Records Logo](/src/assets/img/Readme_banner_logo.png)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
+<h1 align="center">Check the website <a href="http://www.infinity-records.fr/">here</a></h1>
 
-## Development server
+_Huge thanks to [Katheleen LEMAIRE](https://www.linkedin.com/in/katheleenlmr) for designing the website, go check all of her other projects [here](https://www.behance.net/KatheleenLmr) !_
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Presentation and History
 
-## Code scaffolding
+This repository contains the Infinity Records Website code. Infinity Records is a music record-label that I started few years ago. Last year, I decided to formalize this institution by creating a website showcasing the scope of our resources, our mindset, and our present accomplishements.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Composition
 
-## Build
+The application is divided in four parts within a main container. This container is composed by a header (triggering an entering animation when you're loading the home page), a contact form and an informative footer.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+The four pages of the application describe :
 
-## Running unit tests
+* A **Home** page, presenting news of the label, and the website content
+* **The Label** presentation, where you can learn about who we are and what we do
+* **The Artists** presentation, introducing artists we manage and their accomplishments
+* A **Merch** section, where you can see our branded clothing
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The whole application is available in two languages (English and French) and have a responsive web-mobile version. The application is also a Progressive Web App, so you can even pin the website as an app on your phone.
 
-## Running end-to-end tests
+When I developed and first deployed the application, I used to use my personal Git platform on my own server, and Jenkins to automate the builds and deployments of the application on my Nginx server with Virtual Hosts. But as having my own server was costing me much, I finally decided to migrate everything on Heroku on a free plan.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Organisation
 
-## Further help
+Based on my previous experiences, I organized this development as an agile team in which I covered several positions:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* as the **Product Owner** : carrying the product vision and conceiving the Product Backlog
+* as the **Scrum Master** : setting-up the visual management with an Asana board, and facilitating the development team
+* as the main member of the **Development Team** : even though the visual conception was made by my girlfriend who is UI Designer, I developed the whole application on my own : from conception to automated deployment, passing by application engineering.
+
+## Used Technologies and Libraries
+
+* [Angular 9](https://github.com/angular/angular)
+* [Angular Universal](https://github.com/angular/universal) (Server Side Rendering distributing the app through Express Server)
+* [Angular Material](https://material.angular.io/)
+* [Hammerjs](https://github.com/hammerjs/hammer.js)
+* [Heroku](https://www.heroku.com/)
+* [Progressive Web App](https://web.dev/progressive-web-apps/)
+* [ng-lazyload-image](https://github.com/tjoskar/ng-lazyload-image)
+* [ngx-captcha](https://github.com/Enngage/ngx-captcha)
+* [Typescript](https://www.typescriptlang.org/)
+* [TSLint](https://github.com/palantir/tslint) (Airbnb-based config)
