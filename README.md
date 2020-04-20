@@ -2,7 +2,7 @@
 
 <h1 align="center">Check the website <a href="http://www.infinity-records.fr/">here</a></h1>
 
-_Huge thanks to [Katheleen LEMAIRE](https://www.linkedin.com/in/katheleenlmr) for designing the website, go check all of her other projects [here](https://www.behance.net/KatheleenLmr) !_
+_Huge thanks to [Katheleen LEMAIRE](https://www.linkedin.com/in/katheleenlmr) for designing the website, go check all of her shots at Dribble [here](https://dribbble.com/katheleen-lmr) !_
 
 ## Presentation and History
 
@@ -41,5 +41,6 @@ Based on my previous experiences, I organized this development as an agile team 
 * [Progressive Web App](https://web.dev/progressive-web-apps/)
 * [ng-lazyload-image](https://github.com/tjoskar/ng-lazyload-image)
 * [ngx-captcha](https://github.com/Enngage/ngx-captcha)
+* [Sass](https://sass-lang.com/)
 * [Typescript](https://www.typescriptlang.org/)
 * [TSLint](https://github.com/palantir/tslint) (Airbnb-based config)
